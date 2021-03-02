@@ -1,15 +1,15 @@
 // Desafio 1
-function compareTrue(firtsName, midleName) {
-  firtsName = "Carlos";
-  midleName = "Henrique";
+function compareTrue(firstName, midleName) {
 
-  if(firtsName == "Carlos" && midleName == "Henrique")
+  if(firstName == "Carlos" && midleName == "Henrique"){
     return true;
-  else{
+  }else{
     return false;
   }
 }
-
+  console.log(compareTrue("Carlos", "Henrique"))
+  
+ 
 // Desafio 2
 function calcArea() {
   // seu código aqui
