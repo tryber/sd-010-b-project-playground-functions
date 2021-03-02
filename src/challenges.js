@@ -14,8 +14,8 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concatName) {
+  return concatName[concatName.length-1]+", " + concatName[0]
 }
 
 // Desafio 5
@@ -46,7 +46,7 @@ function decode() {
   // seu código aqui
 }
 
-  console.log(splitSentence("foguete"));
+  console.log(concatName(['captain', 'my', 'captain']));
 
 module.exports = {
   calcArea,
