@@ -12,15 +12,34 @@ console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea(base, height) {
   let triangulo = base * height / 2;
-  return triangulo;
+  return triangulo; 
 }
 
 console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let arrayString = [];
+  let word = "";
+  for (let key in string) {
+    if (string[key] != " ") {    
+      word += string[key]
+    } else if (string[key] == " "){
+      arrayString.push(word);
+      word = "";
+    }   
+  }  
+
+  arrayString.push(word);
+  return arrayString;
 }
+
+console.log(splitSentence("go Trybe"));
+console.log(splitSentence("vamo que vamo"));
+console.log(splitSentence("foguete"));
+
 
 // Desafio 4
 function concatName() {
