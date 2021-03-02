@@ -22,7 +22,7 @@ function splitSentence(string) {
     if (string[indexString] === " " || indexString === string.length) {
       array.push(palavra);
       palavra = "";
-    }else {
+    }else  {
       palavra = palavra + string[indexString];
     }
   }
@@ -31,10 +31,10 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
-  let primeiro = arrayString[0] + ", ";
+  let primeiro = arrayString[0];
   let ultimo = arrayString[arrayString.length - 1];
 
-  return ultimo + primeiro;
+  return ultimo  + ", " + primeiro;
 }
 // Desafio 5
 function footballPoints() {
@@ -71,4 +71,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+ console.log(concatName(["captain", "my", "captain"]));
