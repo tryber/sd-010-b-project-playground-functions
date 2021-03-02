@@ -18,9 +18,10 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  let novaFrase = frase.splitSentence();
+  let novaFrase = frase.split(" ");
   return novaFrase;
 }
+
 
 // Desafio 4
 function concatName(arrayStrings) {
@@ -33,7 +34,7 @@ function concatName(arrayStrings) {
   let arrayConcatenado = [];
   arrayConcatenado.push(ultimoTermo,primeiroTermo);
 
-  return console.log(arrayConcatenado);
+  return arrayConcatenado;
 }
 
 
@@ -72,8 +73,28 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(mouse, cat1, cat2) {
   // seu código aqui
+  let mouseCat1 = 0;
+  let mouseCat2 = 0;
+
+  if(mouse > cat1){
+    mouseCat1 = mouse - cat1;
+  }else{
+    mouseCat1 = cat1 - mouse;
+  }
+
+  if(mouse > cat2){
+    mouseCat2 = mouse - cat2;
+  }else{
+    mouseCat2 = cat2 - mouse;
+  }
+
+  if(mouseCat1 > mouseCat2){
+    return mouseCat1;
+  }else{
+    return mouseCat2;
+  }
 }
 
 // Desafio 9
