@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if(bool1 === true && bool2 === true){
+  if (bool1 === true && bool2 === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -16,14 +16,14 @@ function calcArea(base, height) {
 function splitSentence(anyString) {
   let array = [];
   let word = '';
-  for(let index = 0; index < anyString.length; index +=1){
-    if(anyString[index] === ' '){
+  for (let index = 0; index < anyString.length; index += 1) {
+    if (anyString[index] === ' ') {
       array.push(word);
       word = '';
-    }else if(index == (anyString.length-1)){
+    } else if (index == (anyString.length - 1)) {
       word = word + anyString[index];
       array.push(word);
-    }else{
+    } else {
       word = word + anyString[index];
     }
   }
@@ -34,10 +34,10 @@ function splitSentence(anyString) {
 function concatName(arrayString) {
   let firstItem = '';
   let lastItem = '';
-  for(let index in arrayString){
-    if(index == 0){
+  for (let index in arrayString) {
+    if (index == 0) {
       firstItem = arrayString[index];
-    } else if (index == (arrayString.length -1)){
+    } else if (index == (arrayString.length - 1)) {
       lastItem = arrayString[index];
     }
   }
@@ -56,26 +56,33 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNumber) {
   let highestNumber = 0;
-  for(let index in arrayNumber){
-    if(arrayNumber[index] > highestNumber){
+  for (let index in arrayNumber) {
+    if (arrayNumber[index] > highestNumber) {
       highestNumber = arrayNumber[index];
     }
   }
   let quantityHighestNumber = 0;
-  for(let index in arrayNumber){
-    if(highestNumber == arrayNumber[index]){
-      quantityHighestNumber  += 1;
+  for (let index in arrayNumber) {
+    if (highestNumber == arrayNumber[index]) {
+      quantityHighestNumber += 1;
     }
   }
 
   return quantityHighestNumber;
 }
-console.log(highestCount([0, 0, 0]))
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < cat2) {
+    return 'cat1';
+  } else if (cat2 < cat1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
+console.log(catAndMouse(0, 2, 2))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -85,6 +92,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
