@@ -23,8 +23,8 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let result;
-  return result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  let result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];;
+  return result;
 }
 
 // Desafio 5
