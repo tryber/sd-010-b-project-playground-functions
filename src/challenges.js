@@ -1,10 +1,13 @@
+/* eslint-disable complexity */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable eqeqeq */
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -21,10 +24,10 @@ function splitSentence(anyString) {
       array.push(word);
       word = '';
     } else if (index == (anyString.length - 1)) {
-      word = word + anyString[index];
+      word += anyString[index];
       array.push(word);
     } else {
-      word = word + anyString[index];
+      word += anyString[index];
     }
   }
   return array;
@@ -41,8 +44,10 @@ function concatName(arrayString) {
       lastItem = arrayString[index];
     }
   }
-  finalString = lastItem + ", " + firstItem;
-  return finalString
+  // eslint-disable-next-line no-undef
+  finalString = `${lastItem}, ${firstItem}`;
+  // eslint-disable-next-line no-undef
+  return finalString;
 }
 
 // Desafio 5
@@ -72,17 +77,40 @@ function highestCount(arrayNumber) {
 }
 
 // Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2) {
-    return 'cat1';
-  } else if (cat2 < cat1) {
+  let cat1Steps = 0;
+  let cat2Steps = 0;
+
+  if (cat1 < mouse) {
+    for (let index = 0; index < (mouse - cat1); index += 1) {
+      cat1Steps += 1;
+    }
+  }
+  if (cat2 < mouse) {
+    for (let index = 0; index < (mouse - cat2); index += 1) {
+      cat2Steps += 1;
+    }
+  }
+  if (cat1 > mouse) {
+    for (let index = 0; index < (cat1 - mouse); index += 1) {
+      cat1Steps += 1;
+    }
+  }
+  if (cat2 > mouse) {
+    for (let index = 0; index < (cat2 - mouse); index += 1) {
+      cat2Steps += 1;
+    }
+  }
+  if (cat1Steps > cat2Steps) {
     return 'cat2';
+  } if (cat2Steps > cat1Steps) {
+    return 'cat1';
   } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
-console.log(catAndMouse(0, 2, 2))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
