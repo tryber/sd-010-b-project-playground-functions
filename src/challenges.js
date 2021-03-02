@@ -25,7 +25,7 @@ function splitSentence(string) {
 function concatName(array) {
   let ultimoItem = array[array.length - 1];
   let primeiroItem = array[0];
-  let string = (ultimoItem + ', ' + primeiroItem); 
+  let string = (ultimoItem + ', ' + primeiroItem);
   return string;
 }
 
@@ -43,9 +43,9 @@ function highestCount(array) {
     if (array[index] > maior) {
       maior = index;
     }
-    if (array[index] == maior) {
+    if (array[index] === maior) {
       repete += 1;
-    }    
+    }   
   }
   return repete;
 }
