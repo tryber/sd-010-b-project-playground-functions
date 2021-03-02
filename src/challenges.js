@@ -26,9 +26,20 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+let splitor = " ";
+let arrayString = [];
+function splitSentence(frase) {
   // seu código aqui
+  for (let index = 0; index < frase.length; index++) {
+    arrayString = frase.split(splitor);
+  }
+ return arrayString;
 }
+//
+console.log(splitSentence("foguete"))
+console.log(splitSentence("go Trybe"))
+console.log(splitSentence("vamo que vamo tribo"))
+console.log(splitSentence("O rato roeu a roupa do rei de Roma"))
 
 // Desafio 4
 function concatName() {
