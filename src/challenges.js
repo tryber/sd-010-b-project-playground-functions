@@ -2,8 +2,11 @@ const { TestScheduler } = require("jest");
 
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
-  teste
+  if (true && true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
