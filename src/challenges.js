@@ -37,12 +37,22 @@ function footballPoints(wins, ties) {
   return wins * 3 + ties * 1;
 }
 
-console.log(footballPoints(0, 0))
+console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNum) {
+  let qtd = 0;
+  let maior = Math.max.apply(null, arrayNum);
+
+  for (let i = 0; i < arrayNum.length; i++) {
+    if (arrayNum[i] == maior) {
+      qtd = qtd + 1
+    }
+  }
+  return qtd;
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
