@@ -31,12 +31,10 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
-  let primeiro = arrayString[0];
+  let primeiro = arrayString[0] + ", ";
   let ultimo = arrayString[arrayString.length - 1];
-  let uniao = [];
-  uniao.push(primeiro);
-  uniao.push(ultimo);
-  return uniao.toString();
+
+  return primeiro + ultimo;
 }
 // Desafio 5
 function footballPoints() {
