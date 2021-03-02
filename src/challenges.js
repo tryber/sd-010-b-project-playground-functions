@@ -2,7 +2,6 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo === true) return true;
   return false;
-  return compareTrue;
   }
 
   function calcArea(base, heigth) {
@@ -12,29 +11,23 @@ function compareTrue(valueOne, valueTwo) {
 
 // Desafio 3
 function splitSentence(text) {
-  let phrases = text;
   let result = text.split(" ");
-
   return result 
 }
 
 // Desafio 4
 function concatName(words) {
   return `${words[words.length - 1]}, ${words[0]}`;
-
-  
-
 }
 // Desafio  
 function footballPoints(wins, ties) {
   let totalPoints = ((wins * 3) + ties);
-
   return totalPoints;
 }
 
 // Desafio 6
 function highestCount(arrayGrande) {
-  let contador = arrayGrande.length
+  let contador = arrayGrande.length;
 }
 
 // Desafio 7
