@@ -49,12 +49,26 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encod) {
+  let vogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let key in vogais) {
+    if (vogais.hasOwnProperty(key)) {
+      while (encod.includes(key)) {
+        encod = encod.replace(key, vogais[key]);
+      }
+    }
+  }
+  return encod;
 }
 function decode() {
   // seu código aqui
