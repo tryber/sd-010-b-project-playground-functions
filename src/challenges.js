@@ -1,10 +1,6 @@
 // Desafio 1 esio-nascimento
 function compareTrue(a, b) {
-  let confirma=false;
-  if (a === b && !confirma) {
-    confirma = true;
-  }
-  return confirma;
+  return a === true && b === true ? true : false;
 }
 
 // Desafio 2
