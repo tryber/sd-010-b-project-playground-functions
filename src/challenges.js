@@ -22,10 +22,13 @@ console.log(splitSentence('go Trybe')); // -> ['go', 'Trybe']
 console.log(splitSentence('vamo que vamo')); // -> ['vamo', 'que', 'vamo']
 console.log(splitSentence('foguete')); // -> ['foguete']
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+// Requisito 4 - Receber uma array de strings e retornar uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+function concatName(names) {
+  return `${names[names.length - 1]}, ${names[0]}`;
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); // -> Paolillo, Lucas
+console.log(concatName(['foguete', 'não', 'tem', 'ré'])); // -> 'ré, foguete'
+console.log(concatName(['captain', 'my', 'captain'])); // -> 'captain, captain'
 
 // Desafio 5
 function footballPoints() {
