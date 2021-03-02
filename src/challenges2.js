@@ -74,7 +74,8 @@ function hydrate(string) {
   for (let cup = 0; cup < cups.length; cup += 1) {
     sum += parseInt(cups[cup], 10);
   }
-  return `${sum} copo de água`;
+  if (sum === 1) return `${sum} copo de água`;
+  return `${sum} copos de água`;
 }
 console.log(hydrate('1 cerveja')); // -> '1 copo de água'
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // -> '7 copo de água'
