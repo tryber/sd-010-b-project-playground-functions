@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
   let response = valueOne && valueTwo;
-  console.log(response);
+  console.log("Resultado da comparação: " + response);
 
   return response;
 }
@@ -9,14 +9,17 @@ function compareTrue(valueOne, valueTwo) {
 // Desafio 2
 function calcArea(base, height) {
   let response = (base * height) / 2;
-  console.log(response);
+  console.log("Área do Triângulo: "+ response);
 
   return response;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringSplit) {
+  let arrayStrings = stringSplit.split(" ");
+  console.log("Conteúdo do array: " + arrayStrings.join('/'));
+
+  return arrayStrings;
 }
 
 // Desafio 4
@@ -53,7 +56,8 @@ function decode() {
 }
 
 compareTrue(false, false);
-calcArea(10,50);
+calcArea(10, 50);
+splitSentence("Teste de Split");
 
 module.exports = {
   calcArea,
