@@ -60,7 +60,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
     let mensagem = "";
    if (cat1 == cat2){
-      mensagem = "cat1"
+      mensagem = "os gatos trombam e o rato foge"
    } else if (cat1 - mouse < cat2 - mouse){
       mensagem = "cat1"
    } else {
