@@ -32,9 +32,20 @@ function splitSentence(frase) {
 // console.log(splitSentence("Eu sou um teste"));
 
 // Desafio 4
-function concatName() {
+function concatName(arrayDeStrings) {
   // seu código aqui
+
+  //Somente para finalidade de teste:
+  //arrayDeStrings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
+  let first = arrayDeStrings[0] + "'";
+  let last = "'" + arrayDeStrings[arrayDeStrings.length - 1];
+
+  return (last + ", " + first);
 }
+
+// O console.log() abaixo serve somente para finalidade de teste.
+//console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
 
 // Desafio 5
 function footballPoints() {
