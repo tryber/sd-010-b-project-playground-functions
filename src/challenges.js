@@ -1,10 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if(a === true && b === true){
-    return 'true'
-  }else{
-    return 'false'
+  if (a === true && b === true) {
+    return 'true';
   }
+
+  return 'false';
+
 }
 
 // Desafio 2
