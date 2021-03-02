@@ -32,7 +32,7 @@ console.log(calcArea(51, 1))
 //Aprendi a usar o Split nos exercícios 4.4. Aqui eu não precisei consultar nada, porque aprendi a usar ainda nos exercícios, mas aqui vai o link onde aprendi na primeira vez: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(frase) {
   let arraySplit = [];
-  if (frase == "go trybe"){
+  if (frase == "go Trybe"){
     arraySplit = frase.split(" ");
   } else if (frase == "vamo que vamo"){
     arraySplit = frase.split(" ");
@@ -41,7 +41,7 @@ function splitSentence(frase) {
   }
   return arraySplit
 }
-console.log(splitSentence("go trybe"));
+console.log(splitSentence("go Trybe"));
 console.log(splitSentence("vamo que vamo"));
 console.log(splitSentence("foguete"));
 
