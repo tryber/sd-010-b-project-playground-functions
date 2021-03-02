@@ -1,13 +1,12 @@
 // Desafio 1
-function compareTrue(num1, num2) {
-  if (num1 % 2 === 0 && num2 % 2 === 0) {
-    return 'true';
+function compareTrue(cond1, cond2) {
+  let condicao;
+  if (cond1 === true && cond2 === true) {
+    condicao = true;
   } else {
-    return 'false';
+      condicao = false;
+    }
   }
-  return compareTrue;
-}
-compareTrue(7, 20);
 
 // Desafio 2
 function calcArea(base , height) {
