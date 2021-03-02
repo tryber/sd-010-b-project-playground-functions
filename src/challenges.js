@@ -56,10 +56,12 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode( {
+function encode( ) {
+  
+}
   
 
-function decode() {
+function decode () {
   // seu código aqui
 }
 
