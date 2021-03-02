@@ -63,15 +63,20 @@ function generatePhoneNumber(array) {
 // array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
 // console.log(generatePhoneNumber(array3));
 
-
-
-
-
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let flag = false;
+  if((Math.abs(lineB - lineC) < lineA < lineB + lineC) && (Math.abs(lineA - lineC) < lineB < lineA + lineC) && (Math.abs(lineA - lineB) < lineC < lineA + lineB)) {
+    flag = true;
+  }
+  return flag;
 }
+
+// teste itam 12
+// console.log(triangleCheck(10, 14,8));
+// console.log(triangleCheck(3, 4, 5 ));
+// console.log(triangleCheck(5, 12,13));
+
 
 // Desafio 13
 function hydrate() {
