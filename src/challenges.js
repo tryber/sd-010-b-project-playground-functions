@@ -22,7 +22,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arr) {
   tam = arr.length;
-  conc = arr[a-1] + ", " + arr[0];
+  conc = arr[tam-1] + ", " + arr[0];
   return conc;
 }
 
