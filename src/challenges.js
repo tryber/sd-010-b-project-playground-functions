@@ -1,24 +1,21 @@
 // Desafio 1
 function compareTrue(first, second) {
-let resultCompare;
-  if (first == true && second == true) {
-
+  let resultCompare;
+  if (first && second === true) {
     resultCompare = true;
-
-  } else if (first == true && second == false) {
-    
+  } else if (first && second === false) {
     resultCompare = false;
   } else {
     resultCompare = false;
   }
   return resultCompare;
-
 }
-console.log(compareTrue)
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
 }
+
 
 // Desafio 3
 function splitSentence() {
