@@ -24,11 +24,10 @@ function concatName(name) {
   let separation = name.split(' ')
   let first = separation[0]
   let last = separation[separation.length - 1]
-  let concatenation = last + ' ' + first
+  let concatenation = last + ', ' + first
 
   return concatenation
 }
-
 
 // Desafio 5
 function footballPoints() {
