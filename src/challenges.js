@@ -11,21 +11,31 @@ function compareTrue(valor1, valor2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  area = (base*height)/2;
+  let area = (base*height)/2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  novaFrase = frase.splitSentence;
+  let novaFrase = frase.splitSentence();
   return novaFrase;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayStrings) {
   // seu código aqui
+
+  let primeiroTermo = arrayStrings[0];
+  let novoArray = arrayStrings.reverse();
+  let ultimoTermo = novoArray[0];
+  
+  arrayConcatenado = [];
+  arrayConcatenado.push(ultimoTermo,primeiroTermo);
+
+  return console.log(arrayConcatenado);
 }
+
 
 // Desafio 5
 function footballPoints() {
