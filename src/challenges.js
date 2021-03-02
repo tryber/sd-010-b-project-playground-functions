@@ -1,7 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  INICIOOO!!!
+let check1 = true;
+let check2 = true;
+console.log(compareTrue(check1, check2));
+function compareTrue(check1, check2) {
+  if((check1 === true)&&(check2 === true)) {
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
