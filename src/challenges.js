@@ -87,16 +87,18 @@ function fizzBuzz(arrayDeNumeros) {
 function encode(frase) {
   let separado = frase.split('');
   for (let caracter in separado) {
+    if ({}.hasOwnProperty.call(separado, caracter)) {
       if (separado[caracter] === 'a') {
-      separado[caracter] = 1;
-    } if (separado[caracter] === 'e') {
-      separado[caracter] = 2;
-    } if (separado[caracter] === 'i') {
-      separado[caracter] = 3;
-    } if (separado[caracter] === 'o') {
-      separado[caracter] = 4;
-    } if (separado[caracter] === 'u') {
-      separado[caracter] = 5;
+        separado[caracter] = 1;
+      } if (separado[caracter] === 'e') {
+        separado[caracter] = 2;
+      } if (separado[caracter] === 'i') {
+        separado[caracter] = 3;
+      } if (separado[caracter] === 'o') {
+        separado[caracter] = 4;
+      } if (separado[caracter] === 'u') {
+        separado[caracter] = 5;
+      }
     }
   }
   let juntoEncode = separado.join('');
