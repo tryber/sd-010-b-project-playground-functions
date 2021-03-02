@@ -8,7 +8,7 @@ function compareTrue(a, b) {
    false
  }
 }
- console.log(compareTrue(true,true))
+ 
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,7 +21,7 @@ function splitSentence(string) {
   arrayString = string.split(" ");
   return arrayString;
 }
-console.log(splitSentence('go Trybe'));
+
 
 // Desafio 4
 function concatName(array) {
@@ -30,7 +30,7 @@ function concatName(array) {
   let stringConcat = "'" + lastElement + ", " + fiirstElement + "'";
   return stringConcat;
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']))
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -38,7 +38,7 @@ function footballPoints(wins, ties) {
   totalOfPoints = pointsWins + ties;
   return totalOfPoints
 }
-console.log(footballPoints(0,0));
+
 
 // Desafio 6
 function highestCount() {
