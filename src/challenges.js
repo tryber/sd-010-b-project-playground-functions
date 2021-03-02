@@ -2,8 +2,6 @@
 function compareTrue(x, y) {
   if(x === true && y === true){
     comparacao = true;
-  } else {
-    comparacao = false;
   }
   return comparacao;
 }
