@@ -12,10 +12,9 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array;
 }
 
@@ -26,23 +25,21 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + ties;
+  let points = wins * 3 + ties;
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-
-}
+function highestCount() {}
 
 // Desafio 7
-function catAndMouse(mouse_position, cat1_position, cat2_position) {
-  if (cat1_position == cat2_position){
-    return "os gatos trombam e o rato foge";
-  } else if (mouse_position - cat1_position < mouse_position - cat2_position) {
-    return "cat1";
+function catAndMouse(mousePosition, cat1Position, cat2Position) {
+  if (cat1Position === cat2Position) {
+    return 'os gatos trombam e o rato foge';
+  } else if (mousePosition - cat1Position < mousePosition - cat2Position) {
+    return 'cat1';
   } else {
-    return "cat2";
+    return 'cat2';
   }
 }
 // Desafio 8
@@ -50,13 +47,13 @@ function fizzBuzz(array_number) {
   let array = [];
   for (index = 0; index < array_number.length; index += 1) {
     if (array_number[index] % 3 == 0 && array_number[index] % 5 == 0) {
-      array[index] = "fizzBuzz";
+      array[index] = 'fizzBuzz';
     } else if (array_number[index] % 3 == 0) {
-      array[index] = "fizz";
+      array[index] = 'fizz';
     } else if (array_number[index] % 5 == 0) {
-      array[index] = "buzz";
+      array[index] = 'buzz';
     } else {
-      array[index] = "bug!";
+      array[index] = 'bug!';
     }
   }
   return array;
@@ -64,40 +61,40 @@ function fizzBuzz(array_number) {
 
 // Desafio 9
 function encode(string) {
-  let encoded = " ";
+  let encoded = ' ';
   for (index = 0; index < string.length; index += 1) {
-    if (string[index] === "a") {
+    if (string[index] === 'a') {
       encoded += 1;
-    } else if (string[index] === "e") {
+    } else if (string[index] === 'e') {
       encoded += 2;
-    } else if (string[index] === "i") {
+    } else if (string[index] === 'i') {
       encoded += 3;
-    } else if (string[index] === "o") {
+    } else if (string[index] === 'o') {
       encoded += 4;
-    } else if (string[index] === "u") {
+    } else if (string[index] === 'u') {
       encoded += 5;
     } else {
-      encoded += string[index]
+      encoded += string[index];
     }
   }
   return encoded;
 }
 
 function decode(string) {
-  let decoded = " ";
+  let decoded = ' ';
   for (index = 0; index < string.length; index += 1) {
     if (string[index] == 1) {
-      decoded += "a";
+      decoded += 'a';
     } else if (string[index] == 2) {
-      decoded += "e";
+      decoded += 'e';
     } else if (string[index] == 3) {
-      decoded += "i";
+      decoded += 'i';
     } else if (string[index] == 4) {
-      decoded += "o";
+      decoded += 'o';
     } else if (string[index] == 5) {
-      decoded += "u";
+      decoded += 'u';
     } else {
-      decoded += string[index]
+      decoded += string[index];
     }
   }
   return decoded;
