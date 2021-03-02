@@ -1,28 +1,28 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  // seu código aqui
-  
+    
   if (boolean1 === boolean2 && boolean2 === boolean1) {
     return true;
   }
-  else {
     return false;
-  }
+  
 }
-console.log(compareTrue(false, true));
+console.log(compareTrue('thiago', 'thiago'));
 
 // Desafio 2
 function calcArea(base, altura) {
-  // seu código aqui
+  
   return (base * altura) / 2;
 }
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-
+function splitSentence(a) {
+  frase = a
+  return a.split(" ")
 }
+
+console.log(splitSentence('Mais um teste aleatório'))
 
 // Desafio 4
 function concatName() {
