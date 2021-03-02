@@ -100,9 +100,24 @@ function catAndMouse(mouse, cat1, cat2) {
 //	console.log(catAndMouse(100, 99, 99))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  	for (let index in numbers) {
+	  	if (numbers[index]%3 == 0 && numbers[index]%5 == 0) {
+		  	numbers[index] = "fizzBuzz"
+	  	} else if (numbers[index]%3 == 0 && numbers[index]%5 != 0) {
+		  	numbers[index] = "fizz"
+	  	} else if (numbers[index]%3 != 0 && numbers[index]%5 == 0) {
+			numbers[index] = "Buzz"
+	  	} else {
+			numbers[index] = "bug!"
+		}
+  }
+
+  return numbers
+
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
