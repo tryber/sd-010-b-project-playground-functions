@@ -10,15 +10,18 @@ function compareTrue(fisrtValue, secondValue) {
 }
 
 // Desafio 2
-// let base = 10, height = 15;
+// let base = 51, height = 1;
 // console.log(calcArea(base, height));
 function calcArea(base, height) {
   return ((base * height)/2);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+// let sentence = "vamo que vamo";
+// console.log(splitSentence(sentence));
+function splitSentence(sentence) {
+  let words = [];
+  return words = sentence.split(" ");
 }
 
 // Desafio 4
