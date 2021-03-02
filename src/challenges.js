@@ -20,12 +20,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array[0] + ", " + array[array.length-1];
-} 
+  return `${array[0]}, ${array[array.length -1]}`;
+}  console.log(concatName(["Anderson", "Pedro", "Erivaldo"]));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
+  return pontos;
 }
 
 // Desafio 6
