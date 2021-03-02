@@ -3,11 +3,9 @@ function compareTrue(param1, param2) {
   if (param1 && param2) {
     return true;
   }
-  else {
-    return false;
-  }
+  return false;
 }
-console.log(compareTrue(false, false));
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
