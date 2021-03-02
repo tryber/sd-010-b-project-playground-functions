@@ -28,7 +28,7 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  return array[array.length - 1] + ', ' + array[0];
+  return array[array.length - 1] + `, ` + array[0];
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
