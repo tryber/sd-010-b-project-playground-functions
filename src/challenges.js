@@ -19,13 +19,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(/**/) {
-  let lastFirst = arguments;
-  console.log(typeof lastFirst)
-  return;
+function concatName(array) {
+  return `${array[array.length - 1]},  ${array[0]}`;
 }
-
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+console.log(concatName(['captain', 'my', 'captain']))
 
 // Desafio 5
 function footballPoints() {
