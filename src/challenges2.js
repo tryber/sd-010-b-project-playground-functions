@@ -11,6 +11,10 @@ function techList(array, name) {
     list.push(object);
   }
 
+  if (list.length === 0) {
+    list = 'Vazio!';
+  }
+
   return list;
 }
 
