@@ -20,11 +20,10 @@ function splitSentence(string) {
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Desafio 4
-function concatName() {
-  let arrayString = ["Lucas", "Marcos", "João"];
-  return arrayString[0] + " " + arrayString[2];
+function concatName(array) {
+  let resultado  =  array [ array . lenth - 1 ]  +  ','  +  matriz [ 0 ] ;
+  return resultado;
 }
-concatName();
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Desafio 5
