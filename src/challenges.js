@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
   if (bol1 === true && bol2 === true) {
-    console.log('true');
+    return true;
   } else {
-    console.log('false');
+    return false;
   }
-} compareTrue(true, true);
+} console,log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
