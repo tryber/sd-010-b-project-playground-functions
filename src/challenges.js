@@ -135,11 +135,43 @@ return (arrayFizzBuzz);
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let finalString = '';
+  for (let counter = 0; counter < string.length; counter += 1) {
+    if (string[counter] == 'a') {
+      finalString += '1';
+    } else if (string[counter] == 'e') {
+      finalString += '2';
+    } else if (string[counter] == 'i') {
+      finalString += '3';
+    } else if (string[counter] == 'o') {
+      finalString += '4';
+    } else if (string[counter] == 'u') {
+      finalString += '5';
+    } else {
+      finalString += string[counter];
+    }
+  }
 }
-function decode() {
+function decode(string) {
   // seu código aqui
+  let finalString = '';
+  for (let counter = 0; counter < string.length; counter += 1) {
+    if (string[counter] == '1') {
+      finalString += 'a';
+    } else if (string[counter] == '2') {
+      finalString += 'e';
+    } else if (string[counter] == '3') {
+      finalString += 'i';
+    } else if (string[counter] == '4') {
+      finalString += 'o';
+    } else if (string[counter] == '5') {
+      finalString += 'u';
+    } else {
+      finalString += string[counter];
+    }
+  }
 }
 
 module.exports = {
