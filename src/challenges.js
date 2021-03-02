@@ -2,20 +2,18 @@
 function compareTrue(v1, v2) {
   if (v1 && v2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } 
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  var area = (base * height) / 2;
+  area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(str) {
-  var split = str.split('');
+  split = str.split('');
   return split;
 }
 
