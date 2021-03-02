@@ -47,7 +47,6 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
@@ -63,14 +62,28 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let arrayOrdenado = arrayNumbers.sort().reverse();
+  let cont = 1;
+  for(index = 0; index < arrayNumbers.length; index += 1) {
+    if(arrayNumbers[index] === arrayNumbers[index+1]) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2) {
+  let positionMouse = 1;
+  if(cat1)
 }
+console.log(catAndMouse(3, 2));
+console.log(catAndMouse(6, 12));
+console.log(catAndMouse(0, 0));
 
 // Desafio 8
 function fizzBuzz() {
