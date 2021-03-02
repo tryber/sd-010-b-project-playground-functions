@@ -5,7 +5,7 @@ function compareTrue(boolean1, boolean2) {
   }
   return false;
 }
-console.log(compareTrue(true, false));
+
 // Desafio 2
 function calcArea(base, heigth) {
   let calculo = (base * heigth) / 2;
