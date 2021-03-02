@@ -93,7 +93,8 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-  let array = [2, 15, 7, 9, 45];
+
+  let array =   [9, 25] ;
   let fizzBuzz = [];
   for(let index = 0; index < array.length; index += 1){
     if((array[index] % 3 == 0) && (array[index] % 5 != 0)){
@@ -107,13 +108,54 @@ function fizzBuzz() {
     }
     }
   console.log(fizzBuzz)
+
   }
 
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
+let string = ("hi there!").split('')
+let frase =""
+
+for(let index = 0; index < string.length; index++){
+  switch (string[index]){
+
+    case "a" :
+      string[index] = "1"
+    break
+
+    case "e" :
+      string[index] = "2"
+    break
+
+    case "i" :
+      string[index] = "3"
+    break
+
+    case "o" :
+      string[index] = "4"
+    break
+
+    case "u" :
+      string[index] = "5"
+    break
+  }
+
+
 }
+for(let index = 0; index < string.length; index +=1){
+  frase += string[index]
+}
+console.log(frase)
+}
+
+
+
+
+
+
+
 function decode() {
   // seu código aqui
 }
