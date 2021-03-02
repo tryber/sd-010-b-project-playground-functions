@@ -5,7 +5,7 @@ function compareTrue(boolean1, boolean2) {
     return (true);
   } else if (boolean1 === false && boolean2 === false){
     return (false);
-  } else if ((boolean1 === false && boolean2 === true) || (boolean1 == true && boolean2 == false)){
+  } else if ((boolean1 === false && boolean2 === true) || (boolean1 === true && boolean2 === false)){
     return (false);
   }
 
