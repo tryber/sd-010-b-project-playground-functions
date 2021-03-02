@@ -77,24 +77,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Steps = 0;
 
   if (cat1 < mouse) {
-    for (let index = 0; index < (mouse - cat1); index += 1) {
-      cat1Steps += 1;
-    }
+      cat1Steps = mouse - cat1;
   }
   if (cat2 < mouse) {
-    for (let index = 0; index < (mouse - cat2); index += 1) {
-      cat2Steps += 1;
-    }
+      cat2Steps = mouse - cat2;
   }
   if (cat1 > mouse) {
-    for (let index = 0; index < (cat1 - mouse); index += 1) {
-      cat1Steps += 1;
-    }
+      cat1Steps = cat1 - mouse;
   }
   if (cat2 > mouse) {
-    for (let index = 0; index < (cat2 - mouse); index += 1) {
-      cat2Steps += 1;
-    }
+      cat2Steps = cat2 - mouse;
   }
   if (cat1Steps > cat2Steps) {
     return 'cat2';
