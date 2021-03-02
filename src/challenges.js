@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(a,b) {
+function compareTrue(a, b) {
   if (a == true && b == true) {
     return true;
   } else {
@@ -14,23 +14,33 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-array = [];
-splittedString = '';
-for (let index in string) {
-    if (string[index] == ' '){
-    array.push(splittedString);
-    splittedString = ''
+  array = [];
+  splittedString = '';
+  for (let index in string) {
+    if (string[index] == ' ') {
+      array.push(splittedString);
+      splittedString = ''
     } else {
-        splittedString += string[index]
+      splittedString += string[index]
     }
-}
-array.push(splittedString);
-return array
+  }
+  array.push(splittedString);
+  return array
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  firstName = '';
+  lastName = '';
+  for (let index in array) {
+      if (index == 0) {
+          lastName = array[index];
+      } else if (index == array.length - 1) {
+          firstName = array[index]
+      }
+  }
+  let newName = `${firstName}, ${lastName}`;
+  return newName;
 }
 
 // Desafio 5
@@ -57,6 +67,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }

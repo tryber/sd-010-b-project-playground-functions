@@ -1,13 +1,15 @@
-function splitSentence(string) {
-array = [];
-splittedString = '';
-for (let index in string) {
-    if (string[index] == ' '){
-    array.push(splittedString);
-    splittedString = ''
-    } else {
-        splittedString += string[index]
+function concatName(array) {
+    firstName = '';
+    lastName = '';
+    for (let index in array) {
+        if (index == 0) {
+            lastName = array[index];
+        } else if (index == array.length - 1) {
+            firstName = array[index]
+        }
     }
-}
-array.push(splittedString)
-return array }
+    let newName = `${firstName}, ${lastName}`;
+    return newName;
+  }
+console.log(concatName(['captain', 'my', 'captain']));
+  
