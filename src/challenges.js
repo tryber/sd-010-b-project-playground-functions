@@ -13,7 +13,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   let name = "";
-  let result = "";
+  let result = [null];
   for (let index = 0; index < sentence.length; index++){
     if(sentence[index] === " "){
       
@@ -51,16 +51,21 @@ function highestCount(array) {
       max = array[key+1];
     }
   }
-  
+
   for(let key in array)
     if(array[key] === max) nVezes++;
 
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
+    return "cat1";
+  }
+  else if((Math.abs(mouse - cat1) > Math.abs(mouse - cat2))){
+    return "cat2";
+  }
+  else return "os gatos trombam e o rato foge";
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
