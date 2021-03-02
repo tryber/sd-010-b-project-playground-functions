@@ -24,7 +24,7 @@ function concatName(array) {
   let concat = `${array[array.length - 1]}, ${array[0]}`;
   return concat;
 }
-console.log(concatName(['captain', 'my', 'captain']));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = wins * 3 + ties;
@@ -41,7 +41,7 @@ function highestCount(array) {
   }
   let counter = 0;
   for (let i2 = 0; i2 < array.length; i2 += 1) {
-    if (greatestNumber == array[i2]) {
+    if (greatestNumber === array[i2]) {
       counter += 1;
     }
   }
@@ -49,15 +49,29 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  //seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let feedback = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      feedback.push('fizzBuzz');
+    } else {
+      if (array[i] % 3 === 0) {
+        feedback.push('fizz');
+      } else if (array[i] % 5 === 0) {
+        feedback.push('buzz');
+      } else {
+        feedback.push('bug!');
+      }
+    }
+  }
+  return feedback;
 }
-
+console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode() {
   // seu código aqui
