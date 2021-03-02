@@ -61,9 +61,9 @@ let numeros = [9, 1, 2, 3, 9, 5, 7];
 // console.log(highestCount(numeros));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) { // 1 5 12 
-  let distaciaCat1Mouse = cat1 - mouse; //4
-  let distaciaCat2Mouse = cat2 - mouse; //11
+function catAndMouse(mouse, cat1, cat2) { 
+  let distaciaCat1Mouse = cat1 - mouse; 
+  let distaciaCat2Mouse = cat2 - mouse; 
   let winerCat;
   if (distaciaCat1Mouse > distaciaCat2Mouse) {
     winerCat = "cat2";
