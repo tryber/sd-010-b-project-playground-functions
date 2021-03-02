@@ -61,12 +61,9 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-console.log(catAndMouse(10, 4, 22));
-
 // Desafio 8
 function fizzBuzz(arrayOfNum) {
   let fizzBuzzArray = arrayOfNum.map((element) => {
-
     if (element % 3 === 0 && element % 5 === 0) {
       return 'fizzBuzz';
     }
@@ -86,12 +83,50 @@ function fizzBuzz(arrayOfNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function changeCharacterCode(string, characters, codes) {
+  for (let code in codes) {
+    if (characters === code) {
+      string = string.replace(characters, codes[code]);
+    }
+  }
+
+  return string;
 }
 
-function decode() {
-  // seu código aqui
+function encode(string) {
+  const codes = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  let encoded = string;
+
+  for (let letter of encoded) {
+    encoded = changeCharacterCode(encoded, letter, codes);
+  }
+
+  return encoded;
+}
+
+function decode(string) {
+  const codes = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  let decoded = string;
+
+  for (let letter of decoded) {
+    decoded = changeCharacterCode(decoded, letter, codes);
+  }
+
+  return decoded;
 }
 
 module.exports = {
