@@ -64,14 +64,16 @@ function highestCount(repeteMaior) {
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   if(cat1 - mouse > cat2 - mouse){
-    let ganhardorCat1 = "cat1";
-    return ganhardorCat1;
-  
-  } else if (cat1 - mouse < cat2 - mouse){
+    
     let ganhardorCat2 = "cat2";
     return ganhardorCat2;
+  
+  } else if (cat1 - mouse < cat2 - mouse){
+    
+    let ganhardorCat1 = "cat1";
+    return ganhardorCat1;
 
-  } else{
+  } else if (cat1 - mouse == cat2 -mouse){
     let ratoFoge = "os gatos trombam e o rato foge";
     return ratoFoge;
   }
