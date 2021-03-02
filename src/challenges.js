@@ -11,14 +11,14 @@ function compareTrue(valor1, valor2) {
 console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2)
+  return ((base * height) / 2);
 }
 // console.log(calcArea(10,50));
 
 // Desafio 3
-function splitSentence(str) {
+function splitSentence(fraseADividir) {
   // Busquei orientação para resolver o item no site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
-  let fraseDividida = str.split(" ");
+  let fraseDividida = fraseADividir.split(" ");
   return fraseDividida;
 }
 // console.log(splitSentence("Mariana Mohr Silveira"));
@@ -74,8 +74,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return winerCat;
 }
-let cat1 = 12;
-let cat2 = 12;
+let cat1 = 0;
+let cat2 = 2;
 let mouse = 1;
 console.log(catAndMouse(mouse, cat1, cat2));
 
@@ -99,30 +99,31 @@ function fizzBuzz(numeros) {
 let numerosfizzbuz = [2, 15, 7, 9, 45];
 // console.log(fizzBuzz(numeros));
 
-// Desafio 9
+// Desafio 9 Busquei orientação para resolver o item no site: https://pt.stackoverflow.com/questions/170/qual-a-forma-correta-de-se-fazer-uma-substitui%C3%A7%C3%A3o-regular-em-javascript-para-tod
 function encode(frase) {
   let fraseTrocada;
-  fraseTrocada = frase.replace("a", 1);
-  fraseTrocada = fraseTrocada.replace("e", 2);
-  fraseTrocada = fraseTrocada.replace("i", 3);
-  fraseTrocada = fraseTrocada.replace("o", 4);
-  fraseTrocada = fraseTrocada.replace("u", 5);
+  
+  fraseTrocada = frase.split("a").join(1);
+  fraseTrocada = fraseTrocada.split("e").join(2);
+  fraseTrocada = fraseTrocada.split("i").join(3);
+  fraseTrocada = fraseTrocada.split("o").join(4);
+  fraseTrocada = fraseTrocada.split("u").join(5);
   return fraseTrocada;
 }
-let frase1 = "hi there";
+let frase1 = "How are you today?";
 console.log(encode(frase1));
 
 
 function decode(frase) {
   let fraseTrocada;
-  fraseTrocada = frase.replace(1, "a");
-  fraseTrocada = fraseTrocada.replace(2, "e");
-  fraseTrocada = fraseTrocada.replace(3, "i");
-  fraseTrocada = fraseTrocada.replace(4, "o");
-  fraseTrocada = fraseTrocada.replace(5, 'u');
+  fraseTrocada = frase.split(1).join("a");
+  fraseTrocada = fraseTrocada.split(2).join("e");
+  fraseTrocada = fraseTrocada.split(3).join("i");
+  fraseTrocada = fraseTrocada.split(4).join("o");
+  fraseTrocada = fraseTrocada.split(5).join("u");
   return fraseTrocada;
 }
-let frase2 = "h3 th2re";
+let frase2 = "H4w 1r2 y45 t4d1y?";
 console.log(decode(frase2));
 
 module.exports = {
