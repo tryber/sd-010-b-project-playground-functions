@@ -24,20 +24,24 @@ return splits;
 
 // Desafio 4
 function concatName(frase) {
-  var ultimoItem = frase[frase.length-1];
-  var primeiroItem = frase[0]
+  let ultimoItem = frase[frase.length-1];
+  let primeiroItem = frase[0]
   const splits = ultimoItem + " " + primeiroItem
-return splits
-} console.log(concatName(['foguete', 'não', 'tem', 'ré']))
-  // seu código aqui
-
+return splits;
+// seu código aqui
+} 
+console.log(concatName(['foguete', 'não', 'tem', 'ré']))
+  
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+let total = (wins * 3) + (ties * 1);
+return total;
+} 
+console.log(footballPoints(5, 3))
   // seu código aqui
-}
 
-// Desafio 6
+  // Desafio 6
 function highestCount() {
   // seu código aqui
 }
