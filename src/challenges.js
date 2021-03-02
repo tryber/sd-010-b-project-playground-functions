@@ -60,8 +60,20 @@ else{
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let fizbuzzArray =[]
+function fizzBuzz(arr) {
+  for(num in arr){
+    if(arr[num] % 5 == 0 && arr[num] % 3 == 0) {
+      fizbuzzArray.push("fizzbuzz")
+    } else if(arr[num] % 5 == 0) {
+      fizbuzzArray.push("buzz")
+    } else if(arr[num] % 3 == 0) {
+      fizbuzzArray.push("fizz")
+    } else {
+      fizbuzzArray.push("bug")
+    }
+  }
+  return fizbuzzArray
 }
 
 // Desafio 9
