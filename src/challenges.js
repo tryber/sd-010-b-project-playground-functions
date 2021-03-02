@@ -70,8 +70,22 @@ function encode(encod) {
   }
   return encod;
 }
-function decode() {
-  // seu código aqui
+function decode(encod) {
+  let vogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let key in vogais) {
+    if (vogais.hasOwnProperty(key)) {
+      while (encod.includes(vogais[key])) {
+        encod = encod.replace(vogais[key], key);
+      }
+    }
+  }
+  return encod;
 }
 
 module.exports = {
