@@ -54,6 +54,8 @@ function highestCount(array) {
 
   for(let key in array)
     if(array[key] === max) nVezes++;
+  
+  return nVezes;
 
 }
 // Desafio 7
