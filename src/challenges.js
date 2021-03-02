@@ -8,14 +8,12 @@ function compareTrue(value1,value2) {
   }
   return result;
 }
-console.log(compareTrue(false,false))
 
 // Desafio 2
 function calcArea(base,height) {
   let area = base*height/2;
   return area; 
 }
-console.log(calcArea(51,1));
 
 // Desafio 3 ==>>>>> Nao terminei essa ainda!!! Voltar nela!!!<<<<<<==
 function splitSentence(string) {
@@ -28,7 +26,6 @@ function splitSentence(string) {
     }
   } return arrayDeStrings;
 }
-console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
@@ -40,7 +37,6 @@ function concatName(array) {
   }
   return ultimoItem +', ' + primeiroItem;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -48,7 +44,7 @@ function footballPoints(wins, ties) {
   points = 3*wins + ties;
   return points;
 }
-console.log(footballPoints(0,0));
+
 
 // Desafio 6
 function highestCount(arrayOfValues) {
@@ -66,7 +62,7 @@ function highestCount(arrayOfValues) {
   }
   return sum;
 }
-console.log(highestCount([0, 0, 0]));
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -82,7 +78,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return lesserDistance;
 }
-console.log(catAndMouse(1,6,6));
 
 // Desafio 8
 function fizzBuzz(arrayOfNumbers) {
@@ -105,8 +100,6 @@ function fizzBuzz(arrayOfNumbers) {
   }
   return result;
 }
-console.log(fizzBuzz([9,25]));
-
 
 // Desafio 9
 function encode(string) {
@@ -134,7 +127,6 @@ function encode(string) {
   }
   return result;
 }
-console.log(encode('hi there!'));
 
 function decode(stringWithNumbers) {
   let result = [];
@@ -153,7 +145,7 @@ function decode(stringWithNumbers) {
         result += 'o';
         break;
       case (stringWithNumbers[key]  == 5):
-        rresult += 'u';
+        result += 'u';
         break;
       default:
         result += stringWithNumbers[key];      
@@ -161,7 +153,7 @@ function decode(stringWithNumbers) {
   }
   return result;
 }
-console.log(decode("h3 th2r2!"));
+
 
 module.exports = {
   calcArea,
