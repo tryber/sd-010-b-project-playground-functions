@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true){
+  if (param1 === true && param2 === true) {
     return true;
-  }else{
+  }
     return false;
-  }  
 }
 
 // Desafio 2
@@ -22,8 +21,9 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let ultimoArray = array.length - 1;
+  return array[ultimoArray] + ' ' + array [0]
 }
 
 // Desafio 5
