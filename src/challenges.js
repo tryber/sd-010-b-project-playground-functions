@@ -99,8 +99,38 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fNbTest(number) {
+  let result = '';
+  if (number % 3 === 0 && number % 5 !== 0) {
+    result = 'fizz';
+  } else if (number % 5 === 0 && number % 3 !== 0) {
+    result = 'buzz';
+  }
+  return result;
+}
+
+function fbTest(number) {
+  let result = '';
+  if (number % 3 === 0 && number % 5 === 0) {
+    result = 'fizzBuzz';
+  } else if (number % 3 !== 0 && number % 5 !== 0) {
+    result = 'bug!';
+  }
+  return result;
+}
+
+function fizzBuzz(fbList) {
+  let result = [];
+  for (let i in fbList) {
+    if (fNbTest(fbList[i]) === 'fizz') {
+      result.push('fizz');
+    } else if (fNbTest(fbList[i]) === 'buzz') {
+      result.push('buzz');
+    } else {
+      result.push(fbTest(fbList[i]));
+    }
+  }
+  return result;
 }
 
 // Desafio 9
