@@ -44,10 +44,20 @@ function highestCount(numArray) {
       repeatedNumbers[numArray[index]] += 1;
     }
   }
-  return repeatedNumbers;
+  let bigNum = Object.keys(repeatedNumbers)[0];
+  let repeatedBigNum = 0;
+  for(let key in repeatedNumbers){
+    if (bigNum < key){
+      repeatedBigNum = repeatedNumbers[key];
+    } else {
+      repeatedBigNum = repeatedBigNum;
+    }
+  }
+  return repeatedBigNum;
 }
 //REFERENCIA => Primeira parte do Gabarito do course da Trybe em exercício similar 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+//REFERENCIA => https://pt.stackoverflow.com/questions/134393/como-obter-o-primeiro-item-de-um-objeto-em-javascript
+console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse() {
