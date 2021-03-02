@@ -80,8 +80,14 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(toReplace) {
+  // meu código aqui
+  let toSum = (toReplace.replace(/\D/g,"")).split('');
+  let result = 0;
+  for (let i = 0; i < toSum.length; i++) {
+    result += parseInt(toSum[i]);    
+  }
+  return result;
 }
 
 module.exports = {
