@@ -12,7 +12,7 @@ function compareTrue(boolean1, boolean2) {
 // Desafio 2
 function calcArea(base, height) {
   let areaTriangulo;
-  areaTriangulo = (base*height)/2;
+  areaTriangulo = (base*height) / 2;
   
   return areaTriangulo;
 }
@@ -24,11 +24,10 @@ function splitSentence(frase) {
   return arrayFrase;
   }
 
-
 // Desafio 4
-function concatName(ultimoPrimeiroItem) {
+function concatName(primeiroItem) {
   
-  let conectaItem = (ultimoPrimeiroItem[ultimoPrimeiroItem.length - 1]) + ", " + (ultimoPrimeiroItem[0]);
+  let conectaItem = (primeiroItem[primeiroItem.length - 1]) + ", " + (primeiroItem[0]);
   return conectaItem;
 
 }
@@ -62,27 +61,25 @@ function highestCount(repeteMaior) {
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  if(cat1 - mouse > cat2 - mouse){
-    
-    let ganhardorCat2 = "cat2";
-    return ganhardorCat2;
-  
-  } else if (cat1 - mouse < cat2 - mouse){
-    
-    let ganhardorCat1 = "cat1";
-    return ganhardorCat1;
 
-  } else if (cat1 - mouse == cat2 -mouse){
-    let ratoFoge = "os gatos trombam e o rato foge";
-    return ratoFoge;
-  }
 
-}
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(divisivelArray) {
+  for(let key in divisivelArray){
+
+  }
+
 }
 
 // Desafio 9
