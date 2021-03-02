@@ -41,12 +41,21 @@ function footballPoints(wins, ties) {
 
   return points;
 }
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let max = array[0];
+  let nVezes = 0;
+  //Verificar qual maior número
+  for(let key in array){
+    if(array[key+1] >= max){
+      max = array[key+1];
+    }
+  }
+  for(let key in array)
+    if(array[key] === max) nVezes++;
+  
+  console.log(nVezes);
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
