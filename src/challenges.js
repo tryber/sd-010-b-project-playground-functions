@@ -62,7 +62,11 @@ return phraseOfElements;
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+let pointsWins = (wins * 3);
+let pointsTies = (ties * 1)
+let pointsTotal = (pointsTies + pointsWins)
+
+return pointsTotal;
 }
 
 // Desafio 6
