@@ -7,8 +7,9 @@ function compareTrue(boolean1, boolean2) {
 }
 console.log(compareTrue(true, false));
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let calculo = (base * heigth) / 2;
+  return calculo;
 }
 
 // Desafio 3
