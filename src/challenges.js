@@ -112,7 +112,7 @@ function decode(decodeArray) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < string.length; index += 1) {
     for (let cont = 0; cont < vogais.length; cont += 1) {
-      if (string[index] == (cont+1)) {
+      if (string[index] === (cont + 1)) {
         string = string.replace(string[index], vogais[cont]);
       }
     }
