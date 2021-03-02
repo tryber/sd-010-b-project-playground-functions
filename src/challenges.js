@@ -1,9 +1,8 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  return valor1 && valor2;
-  
+  return valor1 && valor2;  
 }
-compareTrue();
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 // Desafio 2
