@@ -25,15 +25,17 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-let array = ['captain', 'my', 'captain'];
-console.log(concatName(array));
+// let array = ['captain', 'my', 'captain'];
+// console.log(concatName(array));
 function concatName(contact) {
-  return contact[contact.length - 1].concat(', ',  contact[0]); // I founf the concat() function at https://www.w3schools.com/jsref/jsref_concat_string.asp
+  return contact[contact.length - 1].concat(', ',  contact[0]); // I found the concat() function at https://www.w3schools.com/jsref/jsref_concat_string.asp
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+// let win = 0, tie = 0;
+// console.log(footballPoints(win, tie));
+function footballPoints(wins, ties) {
+  return ((wins * 3) + tie);
 }
 
 // Desafio 6
