@@ -7,14 +7,14 @@ function compareTrue(boolean1, boolean2) {
     return false;
   
 }
-console.log(compareTrue('thiago', 'thiago'));
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, altura) {
   
   return (base * altura) / 2;
 }
-console.log(calcArea(51, 1));
+console.log(calcArea(10, 5));
 
 // Desafio 3
 function splitSentence(a) {
@@ -22,11 +22,11 @@ function splitSentence(a) {
   return a.split(" ")
 }
 
-console.log(splitSentence('Mais um teste aleatório'))
+console.log(splitSentence('foguete'))
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
 }
 
 // Desafio 5
