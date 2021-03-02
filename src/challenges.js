@@ -4,7 +4,7 @@ function compareTrue(x, y) {
 
   if (x === true && y === true) {
     isTrue = true;
-  };
+  }
 
   return isTrue;
 }
