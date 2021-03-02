@@ -15,19 +15,32 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    return arr[arr.length - 1] + ', ' + arr[0];
+  for (let i = 0; i < arr.length; i += 1) {
+    return `${arr[arr.length - 1]}, ${arr[0]}`;
   }
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let result = 0;
+  let count = 0;
+
+  for (let item of arr) {
+    if (item > result) {
+      result = item;
+    }
+  }
+  for (let num of arr) {
+    if (num === result) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
