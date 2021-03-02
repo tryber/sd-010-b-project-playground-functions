@@ -5,15 +5,17 @@ function compareTrue(valor1, valor2) {
   return bool;
 }
 
-const bool1 = true;
-const bool2 = true;
-
-console.log(compareTrue(bool1, bool2));
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  const area = (base * height) / 2;
+
+  return area;
 }
+
+const base = 1;
+const altura = 51;
+
+console.log(calcArea(base, altura));
 
 // Desafio 3
 function splitSentence() {
