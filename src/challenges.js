@@ -19,9 +19,21 @@ let height = 1;
 console.log(calcArea(base, height));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  let help = "";
+  for (let i = 0; i <= string.length; i += 1){
+    if(string[i] === " " || string[i] === undefined){
+      array.push(help);
+      help = "";
+    } else if (string[i] !== " ") {
+      help += string[i];
+    }    
+  }
+  return array;
 }
+let string = " trybe";
+console.log(splitSentence(string));
 
 // Desafio 4
 function concatName() {
