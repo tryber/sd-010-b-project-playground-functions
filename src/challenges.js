@@ -13,7 +13,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   let name = "";
-  let result = [null];
+  let result = [];
   for (let index = 0; index < sentence.length; index++){
     if(sentence[index] === " "){
       
