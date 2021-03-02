@@ -32,7 +32,7 @@ console.log(splitSentence());
 function concatName(arrayStrings) {
   let resultado = '';
   let last = arrayStrings.length - 1;
-  resultado = arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
+  resultado = arrayStrings[last] + ', ' + arrayStrings[0];
   return resultado;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
