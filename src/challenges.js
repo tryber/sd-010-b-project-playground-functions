@@ -16,10 +16,16 @@ function splitSentence(string) {
   let array = string.split(' ');
   return array;
 }
-console.log(splitSentence('olá trybe'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let response = [];
+  for (let index = (array.length - 1); index >= 0; index -= 1) {
+    if ((index === 0) || (index === (array.length - 1))) {
+      response.push(array[index]);
+    }
+  }
+  return response;
 }
 
 // Desafio 5
