@@ -67,4 +67,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- console.log(splitSentence('go trybe'));
+ //console.log(splitSentence('vamo que vamo'));
