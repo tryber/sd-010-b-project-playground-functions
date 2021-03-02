@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui - começando...
+  
 }
 
 // Desafio 2
@@ -23,7 +24,7 @@ function concatName() {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  totalPoints = (wins * 3) + ties;
+  let totalPoints = (wins * 3) + ties;
   return totalPoints;
 }
 
