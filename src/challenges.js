@@ -22,10 +22,11 @@ function splitSentence(array) {
 console.log(splitSentence("vamo que vamo"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let nomes = string[string.length - 1] + ", " + string[0];
+  return nomes
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
