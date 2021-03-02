@@ -75,36 +75,21 @@ function generatePhoneNumber(arr) {
   return parenthesis + firstPart + lastPart;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
-// Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
-
-// Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
-
-// Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
-
-// Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
-
-// O que será verificado:
-
-// Retorne a string "Array com tamanho incorreto." caso o array tenha o tamanho diferente de 11
-
-// Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum dos números da array seja menor que 0
-
-// Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array seja maior que 9
-
-// Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array se repeti 3 vezes ou mais
-
-// Retorne um número de telefone, respeitando parênteses, traços e espaços caso os números da array estejam de acordo com as restrições
-
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  const validA = b + c > a && Math.abs(b - c) < a;
+  const validB = a + c > b && Math.abs(c - a) < b;
+  const validC = a + b > c && Math.abs(b - a) < c;
+  return validA && validB && validC;
 }
 
+console.log(triangleCheck(10, 14, 8));
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  const drankTimes = string.match(/\d+/g).reduce((acc, curr) => {
+    return parseInt(acc) + parseInt(curr);
+  }, 0);
+  return `${drankTimes} copo${drankTimes > 1 ? 's' : ''} de água`;
 }
 
 module.exports = {
