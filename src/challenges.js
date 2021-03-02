@@ -2,15 +2,13 @@
 let a = true;
 let b = true;
 function compareTrue(num1, num2) {
-   if (a === true && b === true){
+   if (num1 === true && num2 === true){
    return true;
- } else if (a === false && b === false) { 
-   return false;
- } else {
+  } else {
    return false;
  }
 }
-console.log(compareTrue())
+console.log(compareTrue(a, b))
 
 // Desafio 2
 let base = 10
