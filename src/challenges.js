@@ -59,10 +59,21 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); // -> 2
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1])); // -> 1
 console.log(highestCount([0, 0, 0])); // -> 3
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Requisito 7 - Ver qual gato chegará primeiro no rato ou se ele vai fugir
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = Math.abs(mouse - cat1);
+  let dist2 = Math.abs(mouse - cat2);
+  if (dist1 < dist2) {
+    return 'cat1';
+  }
+  if (dist1 > dist2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
+console.log(catAndMouse(0, 3, 2)); // -> 'cat2
+console.log(catAndMouse(0, 6, 12)); // -> 'cat1'
+console.log(catAndMouse(0, 5, 5)); // -> 'os gatos trombam e o rato foge'
 
 // Desafio 8
 function fizzBuzz() {
