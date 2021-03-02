@@ -94,50 +94,58 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(arrayString) {
-  let result = '';
-  let change = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  for (let index in arrayString) {
-    let status = false;
-    for (let item in change) {
-      if (arrayString[index] === item) {
-        result += change[item];
-        status = true;
-      }
-    } if (status === false) {
-      result += arrayString[index];
+  let coding = '';
+  for (let index = 0; index < arrayString.length; index += 1) {
+    switch (arrayString[index]) {
+      case 'a':
+        coding += 1;
+        break;
+      case 'e':
+        coding += 2;
+        break;
+      case 'i':
+        coding += 3;
+        break;
+      case 'o':
+        coding += 4;
+        break
+      case 'u':
+        coding += 5;
+        break;
+      default:
+        coding += arrayString[index];
+        break;
     }
   }
-  return result;
+  return coding;
 }
 console.log(encode('hi there!'));
 
-function decode(arrayString) {
-  let result = '';
-  let change = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
-  for (let index in arrayString) {
-    let status = false;
-    for (let item in change) {
-      if (arrayString[index] === item) {
-        result += change[item];
-        status = true;
-      }
-    } if (status === false) {
-      result += arrayString[index];
+function decode(decodeArray) {
+  let decoding = '';
+  for (let index = 0; index < decodeArray.length; index += 1) {
+    switch (decodeArray[index]) {
+      case '1':
+        decoding += 'a';
+        break;
+      case '2':
+        decoding += 'e';
+        break;
+      case '3':
+        decoding += 'i';
+        break;
+      case '4':
+        decoding += 'o';
+        break
+      case '5':
+        decoding += 'u';
+        break;
+      default:
+        decoding += decodeArray[index];
+        break;
     }
   }
-  return result;
+  return decoding;
 }
 console.log(decode('h3 th2r2!'));
 
