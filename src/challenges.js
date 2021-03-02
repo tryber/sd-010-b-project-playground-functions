@@ -1,21 +1,28 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(value1, value2) {
   // meu código aqui
+  if( (value1 == true) && (value2 == true) ){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  // meu código aqui
+  return ((base*height)/2);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(toSplit) {
+  // meu código aqui
+  return toSplit.split(" ");
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  // meu código aqui
 }
 
 // Desafio 5
