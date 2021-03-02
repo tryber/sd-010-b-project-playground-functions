@@ -19,8 +19,8 @@ function concatName(concatName) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3)+ties;
 }
 
 // Desafio 6
@@ -46,7 +46,7 @@ function decode() {
   // seu código aqui
 }
 
-  console.log(concatName(['captain', 'my', 'captain']));
+  console.log(footballPoints(0,0));
 
 module.exports = {
   calcArea,
