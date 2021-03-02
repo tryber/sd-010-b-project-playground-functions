@@ -17,28 +17,20 @@ function splitSentence(frase) {
   let split = [];
   let temp = [];
   for (let cont = 0; cont < frase.length; cont += 1) {
-    if (" " ===frase[cont]) {
+    if (' ' === frase[cont]) {
       split.push(temp);
       temp = [];
       cont += 1;
-    } 
+    }
     temp += frase[cont];
   }
   split.push(temp);
   return split;
 }
 
-// Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
-
-// Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
-
-// Retorne o valor ['foguete'] se a função receber a string 'foguete'
-
-
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome) {
+  return(nome[nome.length -1] + ', ' + nome[0]);
 }
 
 // Desafio 5
@@ -51,12 +43,12 @@ function highestCount(numeros) {
   let maior = 0;
   let contador = 0;
   for (let cont = 0; cont < numeros.length; cont += 1) {
-    if (numeros[cont] > maior){
+    if (numeros[cont] > maior) {
       maior = numeros[cont];
     }
   }
   for (let cont = 0; cont < numeros.length; cont += 1) {
-    if (numeros[cont] == maior){;
+    if (numeros[cont] === maior) {
       contador += 1;
     }
   }
