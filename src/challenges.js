@@ -1,26 +1,30 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  // seu código aqui teste
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  
+  return (base*height)/2;
 }
+
+console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(word) {
+ let arrayWord = word.split(" ");
+ return arrayWord
+} //https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return [array.length-1, 0]
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3, ties*1)
 }
 
 // Desafio 6
@@ -29,20 +33,34 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < cat2){
+    return cat1;
+  } else if (cat1 > cat2 ) {
+      return cat2
+  } else { return "os gatos trombam e o rato foge"}
+
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  for (index = 0; index < fizzBuzz.length; index =+1){
+    if (fizzBuzz[index] %% 3 ==0) {
+      return "fizz"
+    } else if (fizzBuzz[index] %% 5 === 0) {
+      return "buzz"
+    } else if (fizzBuzz[index] %% 5 === 0 && fizzBuzz[index] %% 3 === 0) {
+      return "fizzBuzz"
+    } else {
+      return "bug!"
+    }
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
+function encode(word1) {
+  let 
+function decode(word2) {
   // seu código aqui
 }
 
