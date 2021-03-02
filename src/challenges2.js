@@ -1,5 +1,6 @@
 // Desafio 10
 function techList(array, name) {
+  if(array!=''){
   array.sort(); //Source: https://www.w3schools.com/jsref/jsref_sort.asp
 
   let ar = [];
@@ -11,7 +12,13 @@ function techList(array, name) {
       ar.push(ob); //Source: https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
       ob={};
     }
+  //   if(array.tech){
+  //     return ("Vazio!");
+  //   }
 return (ar);
+  }else{
+      return ("Vazio!");
+  }
 }
 
 // Desafio 11
