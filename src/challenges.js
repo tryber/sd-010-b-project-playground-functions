@@ -13,11 +13,11 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-// Desafio 4
 function concatName(names) {
   let firstElement = names.shift();
+  let space = " "
   let lastElement = names.pop();
-  let newArr = [lastElement, firstElement];
+  let newArr = [lastElement, [space,firstElement].join("")];
   return newArr.toString();
 }
 
