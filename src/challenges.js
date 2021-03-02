@@ -63,6 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1Mouse = mouse - cat1
   let distanceCat2Mouse = mouse - cat2
+
   if (distanceCat1Mouse < 0) {
     distanceCat1Mouse = - (distanceCat1Mouse)
   }
@@ -81,9 +82,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNum) {
   // seu código aqui
+  let result = ["i"];
+  for (index = 0; index < arrayNum.length; index += 1) {
+    if (arrayNum[index] % 3 == 0 && arrayNum[index] % 5 == 0) {
+      result.push("fizzBuzz")
+    }
+    if (arrayNum[index] % 3 == 0 && arrayNum[index] % 5 != 0) {
+      result.push("fizz")
+    }
+    if (arrayNum[index] % 5 == 0 && arrayNum[index] % 3 != 0) {
+      result.push("buzz")
+    }
+    if (arrayNum[index] % 3 != 0 && arrayNum[index] % 5 != 0) {
+      result.push("bug!")
+    }
+  }
+  result.splice(0,1)
+  return result
 }
+
+console.log(fizzBuzz([9, 25]))
 
 // Desafio 9
 function encode() {
