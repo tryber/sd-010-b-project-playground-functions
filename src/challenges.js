@@ -59,9 +59,9 @@ obtive a função "math.abs" no endereço: https://github.com/tryber/sd-09-proje
       if(moduloCat1-moduloCat2==0){
           return "os gatos trombam e o rato foge"
       } else if (moduloCat1<moduloCat2){
-          return "Cat1"
+          return "cat1"
       } else {
-          return "Cat2"
+          return "cat2"
       } 
   }
 
