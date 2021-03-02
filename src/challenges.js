@@ -38,14 +38,30 @@ console.log(splitSentence('vamo que vamo tribo'));
 console.log(splitSentence('O rato roeu a roupa do rei de Roma'));
 
 // Desafio 4
-function concatName() {
+let last;
+function concatName(fullName) {
   // seu código aqui
+  for (let index = 0; index < fullName.length; index += 1) {
+    last = index;
+  }
+  return `${fullName[last]}, ${fullName[0]}`;
 }
+// console log
+console.log(concatName(['Angelo', 'Gabriel', 'Pires', 'Bittencourt', 'Lordello']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + ties;
 }
+// console log
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
+console.log(footballPoints(7, 20));
 
 // Desafio 6
 function highestCount() {
