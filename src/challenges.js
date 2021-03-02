@@ -24,13 +24,10 @@ function splitSentence(Strings) {
 
 
 // Desafio 4
-function concatName() {
-  return `${array[0]}, ${array[array.length -1]}`;
- console.log(concatName(["Lucas", "Cassiano", "Ferraz" ,"paolilo"]));
-
+function concatName(array) {
+  return `${array[array.length -1]} ,${array[0]}
 }
-
-
+console.log(concatName(["Lucas", "Cassiano", "Ferraz" ,"paolilo"]));
 
 
 // Desafio 5
