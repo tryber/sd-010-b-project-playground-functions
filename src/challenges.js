@@ -1,14 +1,15 @@
 //Abimael Rocha - T10 Tribo B
-
 // Desafio 1
-function compareTrue(a,b) {
-  return a&&b
+function compareTrue(a, b) {
+  return a && b;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height/2);
 }
+
 
 // Desafio 3
 function splitSentence() {
