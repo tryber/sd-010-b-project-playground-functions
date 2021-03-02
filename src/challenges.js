@@ -1,17 +1,19 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if (num1 == true && num2 == true) {
-    return true;
-  } else {
-    return false;
+  let valor = false;
+  if (num1 === true && num2 === true) {
+    valor = true;
   }
+  return valor;
 }
 
 console.log(compareTrue(true, true));
+console.log(compareTrue(false, true));
+console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  let triangulo = base * height / 2;
+  let triangulo = (base * height) / 2;
   return triangulo; 
 }
 
@@ -86,9 +88,19 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return "cat1";
+  } else if ((cat1 - mouse) > (cat2 - mouse)) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge"
+  };
+};
+
+console.log(catAndMouse(1, 3, 2));
+console.log(catAndMouse(1, 6, 12));
+console.log(catAndMouse(1, 3, 3));
 
 // Desafio 8
 function fizzBuzz() {
