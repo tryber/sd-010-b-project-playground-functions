@@ -31,7 +31,8 @@ function generatePhoneNumber(numbers) {
       if (num === 2) phone += ') ';
       else if (num === 7) phone += '-';
       phone += numbers[num];
-    } return phone;
+    }
+    return phone;
   }
   return 'Array com tamanho incorreto.';
 }
@@ -47,10 +48,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 console.log(triangleCheck(10, 14, 8)); // -> trues
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Requisito 13 - Recebe uma string e retorne a sugestão de quantos copos de água você deve beber
+function hydrate(string) {
+  let reg = /\d+/g;
+  let cups = string.match(reg);
+  let sum = 0;
+  for (const cup in cups) {
+    sum += parseInt(cups[cup], 10);
+  }
+  return `${sum} copos de água`;
 }
+console.log(hydrate('1 cerveja')); // -> '1 copo de água'
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // -> '7 copos de água'
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // -> '7 copos de água'
 
 module.exports = {
   generatePhoneNumber,
