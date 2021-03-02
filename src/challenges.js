@@ -46,17 +46,15 @@ return count;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let saida;
-  if( cat1 > cat2 ) {
-    saida = "cat2"
-  } else if ( cat1 < cat2 ){
-    saida = "cat1"
-  }else {
-    saida = "os gatos trombam e o rato foge"
-  }
-  return saida
+if((mouse - cat1) > (mouse - cat2)){
+  return 'cat2'
 }
+else if((mouse - cat1) == (mouse - cat2)){
+  return "os gatos trombam e o rato foge"
+}
+else{
+  return 'cat1'
+} 
 
 // Desafio 8
 function fizzBuzz() {
