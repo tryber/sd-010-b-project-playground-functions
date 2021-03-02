@@ -61,14 +61,18 @@ function fizzBuzz(parametro) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encode) {
+  let retorno = encode;
+  for (let index = 0; index < encode.length; index++) {
+    retorno = retorno.replace("a", 1).replace("e", 2).replace("i", 3).replace("o", 4).replace("u", 5);    
+  }
+  return retorno;
 }
 function decode() {
   // seu código aqui
 }
 
-console.log(fizzBuzz([9, 25]));
+console.log(encode("hi there!"));
 
 module.exports = {
   calcArea,
