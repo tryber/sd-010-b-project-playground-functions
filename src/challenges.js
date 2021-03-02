@@ -45,18 +45,24 @@ function highestCount(numArray) {
     }
   }
   let bigNum = Object.keys(repeatedNumbers)[0];
+  let sizeRepeatedNumbers = Object.keys(repeatedNumbers).length;
   let repeatedBigNum = 0;
-  for(let key in repeatedNumbers){
-    if (bigNum < key){
-      repeatedBigNum = repeatedNumbers[key];
-    } else {
-      repeatedBigNum = repeatedBigNum;
+  if(sizeRepeatedNumbers != 1){
+    for(let key in repeatedNumbers){
+      if (bigNum < key){
+        repeatedBigNum = repeatedNumbers[key];
+      } else {
+        repeatedBigNum = repeatedBigNum;
+      }
     }
+  } else {
+    repeatedBigNum = repeatedNumbers[Object.keys(repeatedNumbers)[0]]
   }
   return repeatedBigNum;
 }
 //REFERENCIA => Primeira parte do Gabarito do course da Trybe em exercício similar 
 //REFERENCIA => https://pt.stackoverflow.com/questions/134393/como-obter-o-primeiro-item-de-um-objeto-em-javascript
+//REFERENCIA => https://pt.stackoverflow.com/questions/15058/como-saber-o-tamanho-quantidade-de-propriedades-atributos-de-um-objeto-em-ja
 console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
