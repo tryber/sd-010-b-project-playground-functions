@@ -88,7 +88,7 @@ function fizzBuzz(arrNumbers) {
   }
   for (let i in arrNumbers){
     if (arrNumbers[i] % 5 == 0){
-      arrResult[i] = "Buzz"
+      arrResult[i] = "buzz"
     }  
   }
   for (let i in arrNumbers){
