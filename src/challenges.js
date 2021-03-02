@@ -20,7 +20,7 @@ console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(arrayDePalavras) {
-  let resposta = `${arrayDePalavras[arrayDePalavras.length - 1]} , ${arrayDePalavras[0]}`;
+  let resposta = `${arrayDePalavras[arrayDePalavras.length - 1]}, ${arrayDePalavras[0]}`;
   return resposta;
 }
 
@@ -40,9 +40,9 @@ function highestCount(arrayDeNumeros) {
   for (let itens of arrayDeNumeros) {
     contagem[itens] += 1;
   }
-  for (let itens in arrayDeNumeros) {
+  for (let itens of arrayDeNumeros) {
     if (itens > maiorNumero) {
-      itens = maiorNumero;
+      maiorNumero = itens;
     }
   }
   return contagem[maiorNumero];
@@ -67,8 +67,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayDeNumeros) {
+  let resposta = [];
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    if ((arrayDeNumeros[index] % 3 === 0) && (arrayDeNumeros[index] % 5 === 0)){
+      resposta.push('fizzbuzz');
+    }
+    else if (arrayDeNumeros[index] % 3 === 0){
+      resposta.push('fizz');
+    }
+    else if (arrayDeNumeros[index] % 5 === 0){
+      resposta.push('buzz');
+    }
+    else {
+      resposta.push('bug!');
+    }
+  }
+  return resposta;
 }
 
 // Desafio 9
