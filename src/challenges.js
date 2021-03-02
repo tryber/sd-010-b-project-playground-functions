@@ -81,6 +81,7 @@ for (let i in maior) {
     repeticao++
   }
 }
+return repeticao
 }
 // Desafio 7
 function catAndMouse() {
