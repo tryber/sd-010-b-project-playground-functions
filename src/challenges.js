@@ -56,11 +56,11 @@ function footballPoints(wins, ties) {
   // seu código aqui
   const pontos = {
     eachWin: 3,
-    eachTie: 1
-  }
+    eachTie: 1,
+  };
 
   const points = ((wins * pontos.eachWin) + (ties * pontos.eachTie));
-    return points;
+  return points;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
