@@ -25,7 +25,7 @@ function concatName(words) {
   
 
 }
-// Desafio 
+// Desafio  
 function footballPoints(wins, ties) {
   let totalPoints = ((wins * 3) + ties);
 
@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayGrande) {
-  let contador = arrayGrande.length[]
+  let contador = arrayGrande.length
 }
 
 // Desafio 7
