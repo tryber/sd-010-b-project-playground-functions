@@ -39,11 +39,8 @@ console.log(footballPoints(0, 0))
 function highestCount(valores) {
   for (let iArray = 0; iArray < valores.length; iArray += 1) {
     let repete = 0
-      if  {
-        return repete += 1
       }
     }
-  }
 
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
