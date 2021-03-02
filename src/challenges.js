@@ -85,7 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
@@ -108,3 +108,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
