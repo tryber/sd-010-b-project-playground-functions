@@ -14,9 +14,6 @@ function techList(arrayTech,name) {
   }
 }
 
-console.log(generatePhoneNumber([]));
-
-
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // meu código aqui
@@ -63,9 +60,8 @@ function verifyNum(toVerify){
 }
 
 function verifyLength(toVerify){
-  let sizeNum = toVerify.length;
   let lengthWrong = false; 
-  if( sizeNum.length > 11 || toVerify.length < 11 || toVerify.length === 0){
+  if( toVerify.length > 11 || toVerify.length < 11 || toVerify.length === 0){
     lengthWrong = true;
   }      
   return lengthWrong;
