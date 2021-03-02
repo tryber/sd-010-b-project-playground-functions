@@ -82,7 +82,7 @@ function fizzBuzz(entrada) {
       saida.push("fizz");
     }
     else if(entrada[key] % 5 == 0 && entrada[key]%2 != 0) {
-      saida.push("Buzz");
+      saida.push("buzz");
     }
     else {
       saida.push("bug!");
