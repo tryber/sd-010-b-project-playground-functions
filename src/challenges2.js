@@ -91,7 +91,7 @@ function hydrate(toReplace) {
   let toSum = (toReplace.replace(/\D/g, '')).split('');
   let result = 0;
   for (let i = 0; i < toSum.length; i += 1) {
-    result += parseInt(toSum[i], 2);
+    result += parseInt(toSum[i], 10);
   }
   if (result === 1) {
     toReturn = `${result} copo de água`;
@@ -100,6 +100,8 @@ function hydrate(toReplace) {
   }
   return toReturn;
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
 
 module.exports = {
   generatePhoneNumber,
