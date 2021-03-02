@@ -68,12 +68,7 @@ function highestCount(arrayNumeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
-
-// Desafio 8
-function fizzBuzz(mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let mouseCat1 = 0;
   let mouseCat2 = 0;
@@ -95,6 +90,12 @@ function fizzBuzz(mouse, cat1, cat2) {
   }else{
     return mouseCat2;
   }
+}
+
+// Desafio 8
+function fizzBuzz() {
+  // seu código aqui
+  
 }
 
 // Desafio 9
