@@ -44,12 +44,39 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return condicao;
 }
-console.log(triangleCheck(10,14,8));
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+
+function splitSentence(sentence) {
+  let name = "";
+  let result = [];
+  for (let index = 0; index < sentence.length; index++){
+    if(sentence[index] === " "){
+      
+      result.push(name);
+      name = "";
+      continue;
+    }
+    name += sentence[index];
+  }
+  result.push(name);
+  return result;
 }
 
+// Desafio 13
+function hydrate(pedido) {
+  let agua = 0;
+  let array = splitSentence(pedido);
+  for(let key in array){
+    if(parseInt(array[key])>= 0){
+      agua += parseInt(array[key]);
+    }
+  }
+  if(agua > 1) return(agua + " copos de água");
+  
+  return(agua + " copo de água");
+  
+  // seu código aqui
+}
+console.log(hydrate("1 cachaça"));
 module.exports = {
   generatePhoneNumber,
   techList,
