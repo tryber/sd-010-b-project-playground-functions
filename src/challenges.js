@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(1, 0, 2));
+
 // auxiliary functions Desafio 8
 function divisibleByThree(number) {
   if (number % 3 === 0) {
@@ -99,15 +99,31 @@ function fizzBuzz(array) {
   return output;
   // seu código aqui
 }
-
+function findVowel(char) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < vowels.length; index += 1) {
+    if (char === vowels[index]) {
+      return index + 1;
+    }
+  }
+}
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let answer = '';
+  for (let letter in string) {
+    if (findVowel(string[letter])) {
+      answer += findVowel(string[letter]);
+    } else {
+      answer += (string[letter]);
+    }
+  }
+  return answer;
 }
-function decode() {
-  // seu código aqui
-}
+console.log(encode('hi there!'));
 
+function decode(string) {
+  // seu código aqui
+}
 module.exports = {
   calcArea,
   catAndMouse,
