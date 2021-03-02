@@ -39,12 +39,13 @@ function concatName(arrayDeStrings) {
   // arrayDeStrings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 
   let first = [];
-    first.push(arrayDeStrings[0]);
-  let last = [];
-    last.push(arrayDeStrings[arrayDeStrings.length - 1]);
+  first.push(arrayDeStrings[0]);
 
-  const arrayFinal = last + ', ' + first;
-    return arrayFinal;
+  let last = [];
+  last.push(arrayDeStrings[arrayDeStrings.length - 1]);
+
+  const arrayFinal = last + first;
+  return arrayFinal;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
