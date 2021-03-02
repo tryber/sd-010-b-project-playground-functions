@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   let resultado = '';
-  if(bool1 && bool2 === true){
+  if(bool1 && bool2 === true) {
     resultado = true;
-  } else if (bool1 && bool2 === false){
+  } else if (bool1 && bool2 === false) {
     resultado = false;
-  } else{
+  } else {
     resultado = false;
   }
   return resultado;
@@ -13,10 +13,11 @@ function compareTrue(bool1, bool2) {
 // console.log(compareTrue(false, false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  let area = (base * altura) / 2;
+  return area;
 }
-
+console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
