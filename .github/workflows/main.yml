@@ -18,7 +18,6 @@ jobs:
   evaluator_job:
     runs-on: ubuntu-18.04
     name: Evaluator job
-    needs: [eslint]
     steps:
       - uses: actions/checkout@v2
       - name: Evaluator step
