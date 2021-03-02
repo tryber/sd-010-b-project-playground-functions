@@ -44,12 +44,13 @@ function concatName(arrayDeStrings) {
   let last = [];
   last.push(arrayDeStrings[arrayDeStrings.length - 1]);
 
-  const arrayFinal = last + first;
+  const arrayFinal = last + first
+  arrayFinal.toString();
   return arrayFinal;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
-// console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
+console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
 
 // Desafio 5
 function footballPoints(wins, ties) {
