@@ -10,7 +10,7 @@ console.log("Resultado do Desafio 1: " + compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  
 }
 
 // Desafio 3
