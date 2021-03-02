@@ -51,19 +51,23 @@ function splitSentence(string) {
 function concatName(listname) {
   // seu código aqui
   let nomes 
-  for ( let i in listname ) {
-    if( i === listname.length -1 ) {
-    nomes.push ( listname.length -1 ) }
-    if (i === 0){
-    nomes.push(listname.length[0])}
+  
+    nomes.push ( listname[-1]) 
+   
+    nomes.push(listname[0])
     
-  }
+  
   return nomes
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins ,ties ) {
   // seu código aqui
+  let vitorias = wins * 3;
+  let empates = ties  * 1;
+  let pontos = vitorias + empates;
+
+  return pontos;
 }
 
 // Desafio 6
