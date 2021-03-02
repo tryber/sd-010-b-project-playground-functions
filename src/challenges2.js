@@ -1,6 +1,6 @@
 // Desafio 10
-function techList(parametro) {
-  let lista = parametro.sort();
+function techList(tech) {
+  let lista = tech.sort();
   let nome = "Lucas";
   let retorno = [];
 
