@@ -35,6 +35,7 @@ function splitSentence(phrase) {
 function concatName(namesArray) {
   let arrayConcat = [];
   let lastName = namesArray.length - 1;
+  let names = "";
   for (index = lastName; index >= 0; index -= 1) {
     if (index === lastName) {
       arrayConcat.push(namesArray[index]);
@@ -42,8 +43,10 @@ function concatName(namesArray) {
       arrayConcat.push(namesArray[index]);
     }
   }
-  return arrayConcat;
+  names = arrayConcat[0] + ", " + arrayConcat[1];
+  return names;
 }
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
