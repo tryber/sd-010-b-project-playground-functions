@@ -62,8 +62,10 @@ let numeros = [9, 1, 2, 3, 9, 5, 7];
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distaciaCat1Mouse = cat1 - mouse;
-  let distaciaCat2Mouse = cat2 - mouse;
+  let distaciaCat1Mouse = Math.abs(cat1 - mouse);
+  let distaciaCat2Mouse = Math.abs(cat2 - mouse);
+  console.log(distaciaCat1Mouse);
+  console.log(distaciaCat2Mouse);
   let winerCat;
   if (distaciaCat1Mouse > distaciaCat2Mouse) {
     winerCat = "cat2";
@@ -74,9 +76,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return winerCat;
 }
+let mouse = 1;
 let cat1 = 0;
 let cat2 = 2;
-let mouse = 1;
+
 console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
@@ -103,11 +106,11 @@ let numerosfizzbuz = [2, 15, 7, 9, 45];
 function encode(frase) {
   let fraseTrocada;
   
-  fraseTrocada = frase.split("a").join(1);
-  fraseTrocada = fraseTrocada.split("e").join(2);
-  fraseTrocada = fraseTrocada.split("i").join(3);
-  fraseTrocada = fraseTrocada.split("o").join(4);
-  fraseTrocada = fraseTrocada.split("u").join(5);
+  fraseTrocada = frase.split('a').join(1);
+  fraseTrocada = fraseTrocada.split('e').join(2);
+  fraseTrocada = fraseTrocada.split('i').join(3);
+  fraseTrocada = fraseTrocada.split('o').join(4);
+  fraseTrocada = fraseTrocada.split('u').join(5);
   return fraseTrocada;
 }
 let frase1 = "How are you today?";
@@ -116,11 +119,11 @@ console.log(encode(frase1));
 
 function decode(frase) {
   let fraseTrocada;
-  fraseTrocada = frase.split(1).join("a");
-  fraseTrocada = fraseTrocada.split(2).join("e");
-  fraseTrocada = fraseTrocada.split(3).join("i");
-  fraseTrocada = fraseTrocada.split(4).join("o");
-  fraseTrocada = fraseTrocada.split(5).join("u");
+  fraseTrocada = frase.split(1).join('a');
+  fraseTrocada = fraseTrocada.split(2).join('e');
+  fraseTrocada = fraseTrocada.split(3).join('i');
+  fraseTrocada = fraseTrocada.split(4).join('o');
+  fraseTrocada = fraseTrocada.split(5).join('u');
   return fraseTrocada;
 }
 let frase2 = "H4w 1r2 y45 t4d1y?";
