@@ -43,20 +43,24 @@ function highestCount() {
 }
 
 // Desafio 7
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse,cat1,cat2) {
-  // seu código aqui
-  if ((cat1)>(cat2)){
-    return "cat2";
-  }
 
-  else if ((cat1)<(cat2)){
-    return "cat1";
-  }
-  else if ((cat1) === (cat2)){
-    return "os gatos trombam e o rato foge";
-  }
+  let catone = Math.abs(cat1-mouse);
+  let catwo = Math.abs(cat2-mouse);
+  
+    if(catone<catwo){
+      return "cat1";
+    }
+    else if (catone>catwo){
+      return "cat2";
+    }
+    else if (catone === catwo) {
+      return "os gatos trombam e o rato foge";
+    }
 
 }
+
 
 // Desafio 8
 function fizzBuzz(vetor) {
