@@ -54,18 +54,25 @@ function highestCount(array) {
 function catAndMouse(cat1, cat2, mouse) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
+  let string;
   if (distCat1 === distCat2) {
-    return 'os gatos trombam e o rato foge';
+    string = 'os gatos trombam e o rato foge';
   } else if (distCat1 < distCat2) {
-    return 'cat1';
+    string = 'cat1';
   } else {
-    return 'cat2';
+    string = 'cat2';
   }
-}
+  return string;
+} 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let novaArray = [];
+  for (let i = 0; i <= array.length; i += 1) {
+    if ((i % 3 == 0) && (i % 5 != 0) {
+      novaArray.push = 
+    }
+  }
 }
 
 // Desafio 9
