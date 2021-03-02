@@ -28,6 +28,12 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+  if (splitSentence.length == 2 ) {
+  return toSplit.split(" " + ", " + " " + ", " + " ");
+  }
+  if (splitSentence.length == 1 ) {
+  return toSplit.split(" " + ", " + " ");
+  }
 }
 
 // Desafio 4
