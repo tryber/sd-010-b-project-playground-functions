@@ -84,16 +84,19 @@ function catAndMouse(mouse,cat1,cat2) {
 // Desafio 8
 function fizzBuzz(divisivelArray) {
   for(let cont=0; cont < divisivelArray.length; cont += 1){
+    let resultadoDividir = [];
+
     if(divisivelArray[cont] % 3 == 0){
-      return "fizz";
+      resultadoDividir.push = "fizz";
     } else if (divisivelArray[cont] % 5 == 0){
-      return "buzz";
+      resultadoDividir.push = "buzz";
     } else if (divisivelArray[cont] % 3 == 0 && divisivelArray[cont] % 5 == 0){
-      return "fizzBuzz";
+      resultadoDividir.push = "fizzBuzz";
     } else {
-      return "bug!";
+      resultadoDividir.push = "bug!";
     }
-    
+    return resultadoDividir;
+    console.log(resultadoDividir);
   }
 
 }
