@@ -55,17 +55,7 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
-for (let i = 0; i < repeatM.length; i += 1) {
-  if (repeatM[i] > maiorN) {
-    qMaior = repeatM[i];
-  }
-}
-for (let j = 0; j < repeatM.length; j += 1) {
-  if (repeatM[j] === maiorN) {
-    qMaior += 1;
-  }
-}
-return qMaior;
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) !== Math.abs(mouse - cat2)) {
