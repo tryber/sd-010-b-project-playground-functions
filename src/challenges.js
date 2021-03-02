@@ -7,7 +7,7 @@ function compareTrue(num1, num2) {
   }
 }
 
-let verificaNum = compareTrue(10, 20);
+let verificaNum = compareTrue(7, 20);
 console.log (verificaNum);
 
 // Desafio 2
