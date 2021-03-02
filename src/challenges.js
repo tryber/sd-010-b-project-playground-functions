@@ -26,7 +26,7 @@ return splits;
 function concatName(frase) {
   let ultimoItem = frase[frase.length-1];
   let primeiroItem = frase[0]
-  const splits = ultimoItem + " " + primeiroItem
+  const splits = ultimoItem + ", " + primeiroItem
 return splits;
 } 
 console.log(concatName(['foguete', 'não', 'tem', 'ré']))
@@ -48,18 +48,19 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let a = cat1 + mouse;
-     let b = cat2 + mouse;
-    
-        if (a > b) {
-            return "cat1"
-        } else if(b > a){
-            return "cat2"
-        } else{
-          return "os gatos trombam e o rato foge"
+  let a = mouse - cat1;
+     let b = mouse - cat2;
+     if (a - b !== 0 && b - a !== 0 ){
+      if (a > b ) {
+        return "cat1"
+    } else if(b > a){
+        return "cat2"
+    } 
+  }  else {
+          return "os gatos trombam e o rato foge";          
         }
-}
- console.log(catAndMouse(6, 4, 4))
+      }
+ console.log(catAndMouse(1, 0, 2))
  
 
 
