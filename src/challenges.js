@@ -21,11 +21,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let ultimo = [array[array.length - 1] , array[0]]
-   
-
-  return ultimo ;
-
+  let ultimo = [array[array.length - 1], array[0]];
+  return ultimo;
 }
 // Desafio 5
 function footballPoints() {
