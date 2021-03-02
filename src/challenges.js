@@ -69,18 +69,27 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let a = mouse - cat1;
-     let b = mouse - cat2;
-     if (a - b !== 0 && b - a !== 0 ){
-      if (a > b ) {
+  let distanciaCat1 = mouse - cat1; 
+  
+  if (distanciaCat1 < 0){
+    distanciaCat1 = cat1 - mouse
+  }
+  console.log(distanciaCat1)
+     let distanciaCat2 = mouse - cat2;
+     if (distanciaCat2 < 0){
+      distanciaCat2 = cat2 - mouse
+    }
+     console.log(distanciaCat2)
+    if(distanciaCat1 - mouse === distanciaCat2 - mouse) {
+      return "os gatos trombam e o rato foge";          
+    }   
+     else if (distanciaCat1 > distanciaCat2 ) {
         return "cat1"
-    } else if(b > a){
+    } else{
         return "cat2"
     } 
-  }  else {
-          return "os gatos trombam e o rato foge";          
-        }
-      }
+  }   
+  
  console.log(catAndMouse(1, 0, 2))
  
 
