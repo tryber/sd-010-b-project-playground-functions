@@ -13,30 +13,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-// Jeito 1:
 function splitSentence(string) {
   let arrayOfStrings = string.split(' ');
 
   return arrayOfStrings;
 }
-
-// Jeito 2:
-/* function splitSentence(string) {
-  let arrayOfStrings = [];
-  let word = '';
-
-  for (let index in string) {
-    if (string[index] === ' ') {
-      arrayOfStrings.push(word);
-      word = '';
-    } else {
-      word += string[index];
-    }
-  }
-  arrayOfStrings.push(word);
-
-  return arrayOfStrings;
-} */
 
 // Desafio 4
 function concatName(array) {
@@ -53,7 +34,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Jeito 1:
 function highestCount(arrayOfNum) {
   //  Procura o maior valor
   let highestNum = arrayOfNum.reduce((num1, num2) => Math.max(num1, num2));
@@ -65,28 +45,19 @@ function highestCount(arrayOfNum) {
   return count.length;
 }
 
-// Jeito 2:
-/* function highestCount(arrayOfNum) {
-  let highestNumber = 0;
-  let counter = 0;
-  for (let number in arrayOfNum) {
-    if (arrayOfNum[number] > highestNumber) {
-      highestNumber = arrayOfNum[number];
-    }
-  }
-
-  for (let number in arrayOfNum) {
-    if (highestNumber == arrayOfNum[number]) {
-      counter += 1;
-    }
-  }
-
-  return counter;
-} */
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  const catDistance1 = mouse - cat1;
+  const catDistance2 = mouse - cat2;
+
+  if (catDistance1 > catDistance2) {
+    return 'cat1';
+  }
+  if (catDistance1 < catDistance2) {
+    return 'cat2';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
