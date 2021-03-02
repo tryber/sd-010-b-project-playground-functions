@@ -19,22 +19,28 @@ function calcArea(height, base) {
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  let split = str.split(" ")  //Fonte do ".split" = <https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254>
-  return split
-} */
+  let split = str.split(" ");  //Fonte do ".split" = <https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254>
+  return split;
+}
 
 // Desafio 4
 function concatName(fullName) {
   // seu código aqui
-  let firstLastName = fullName[fullName.length - 1] + ", " + fullName[0]
+  let firstLastName = fullName[fullName.length - 1] + ', ' + fullName[0];
 
-  return firstLastName
+  return firstLastName;
 }
-  console.log(concatName(["Joana", "da Silva", "Pereira"]));
-
+ */
 // Desafio 5
-function footballPoints() {
+function footballPoints(vitoria, empate) {
   // seu código aqui
+  let wins = 3;
+  let ties = 1;
+  let points = (wins + ties);
+
+  return points;
+  }
+console.log(footballPoints(14, 8))
 }
 
 // Desafio 6
