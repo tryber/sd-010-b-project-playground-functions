@@ -1,15 +1,14 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 && boolean2) {
-    return true;    
-  } else {
-    return false;    
-  }
+  //Ref: https://stackoverflow.com/questions/45817581/replace-this-if-then-else-statement-by-a-single-return-statement
+  //Após sugestão do ESlint, usei a referência acima para refatoração do cógico, antes implementado com uso do IF/ELSE
+  return boolean1 === boolean2;
 }
-console.log("Resultado do Desafio 1: " + compareTrue(true, true));
+console.log('Resultado do Desafio 1: ' + compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
+
   
 }
 
