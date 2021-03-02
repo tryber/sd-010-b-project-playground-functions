@@ -1,7 +1,12 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  // comment
+let a = 1, b = 1;
+// console.log(compareTrue(a, b));
+function compareTrue(fisrtValue, secondValue) {
+  if ((fisrtValue == true) && (secondValue == true)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
