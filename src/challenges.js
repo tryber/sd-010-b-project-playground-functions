@@ -2,22 +2,22 @@
 function compareTrue(b1, b2) {
   if (b1 && b2 === true) {
     return true;
-  } return false
+  } return false;
 }
-console.log(compareTrue(true,false))
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  return (base * height / 2);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+    return (string[0] + ", " + string[string.length-1]);
 }
 
 // Desafio 5
