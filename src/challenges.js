@@ -13,10 +13,8 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-// Desafio 4
 function concatName(array) {
-  let newArray = [array[array.length - 1], array[0]];
-  newArray = newArray.toString();
+  let newArray = `${array[array.length - 1]} ${array[0]}`;
   return newArray;
 }
 
@@ -31,12 +29,12 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let position;
-  if (cat1 > cat2 && cat1 <= mouse) {
-    position = 'cat1';
-  } else if (cat2 > cat1 && cat2 <= mouse) {
-    position = 'cat2';
-  } else {
+  if (cat2 === mouse && cat1 === mouse) {
     position = 'os gatos trombam e o rato foge';
+  } else if (cat1 > cat2 && cat1 <= mouse) {
+    position = 'cat1';
+  } else {
+    position = 'cat2';
   }
   return position;
 }
