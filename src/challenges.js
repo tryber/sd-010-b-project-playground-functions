@@ -1,6 +1,10 @@
 // Desafio 1 esio-nascimento
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  let confirma=false
+  if(a==true && b==true){
+      confirma=true;
+  }
+  return confirma;
 }
 
 // Desafio 2
