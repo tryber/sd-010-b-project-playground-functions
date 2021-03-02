@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(parameter1, parameter2) {
   // seu código aqui
   let resultCompare = null;
   if (parameter1 === true && parameter2 === true) {
@@ -10,8 +10,8 @@ function compareTrue() {
     return resultCompare;
   } else {
     resultCompare = false;
-    return resultCompare;
   }
+  return resultCompare;
 }
 
 // Desafio 2
