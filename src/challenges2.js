@@ -19,8 +19,9 @@ function techList(arrayTech, nam) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayPhoneNumber) //{
+function generatePhoneNumber() {
   // seu código aqui
+}
 //   for (index = 0; index < arrayPhoneNumber.length; index += 1) {
 //     if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9 ||)
 //   }
