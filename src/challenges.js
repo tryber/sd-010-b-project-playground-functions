@@ -47,9 +47,7 @@ function highestCount(numbers) {
       higherNumber = numbers[i];
       counter = 0;
     }
-  }
-  for (const i in numbers) {
-    if (numbers[i] == higherNumber) {
+    if (numbers[i] === higherNumber) {
       counter += 1;
     }
   }
@@ -98,7 +96,7 @@ console.log(fizzBuzz([9, 25])); // -> ['fizz', 'buzz']
 // Requisito 9 - Criar duas funções, uma que codifica trocando vogais por números e outra que decodifica a mensagem
 function encode(string) {
   string = string.split('');
-  for (const char in string) {
+  for (let char = 0; char < string.length; char += 1) {
     if (string[char] === 'a') string[char] = '1';
     if (string[char] === 'e') string[char] = '2';
     if (string[char] === 'i') string[char] = '3';
@@ -110,7 +108,7 @@ function encode(string) {
 
 function decode(string) {
   string = string.split('');
-  for (const char in string) {
+  for (let char = 0; char < string.length; char += 1) {
     if (string[char] === '1') string[char] = 'a';
     if (string[char] === '2') string[char] = 'e';
     if (string[char] === '3') string[char] = 'i';

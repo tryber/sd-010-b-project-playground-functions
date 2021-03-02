@@ -5,14 +5,12 @@ function techList(array, name) {
   if (array.length === 0) return 'Vazio!';
   array = array.sort();
   let list = [];
-  for (const tech in array) {
+  for (let tech = 0; tech < array.length; tech += 1) {
     list.push({ tech: array[tech], name });
   }
   return list;
 }
-console.log(
-  techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Gustavo')
-); // -> [{ tech: 'CSS', name: 'Gustavo' },{ tech: 'HTML', name: 'Gustavo' },{ tech: 'JavaScript', name: 'Gustavo' },{ tech: 'Jest', name: Gustavo' },{ tech: 'React', name: 'Gustavo' }]
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Gustavo')); // -> [{ tech: 'CSS', name: 'Gustavo' },{ tech: 'HTML', name: 'Gustavo' },{ tech: 'JavaScript', name: 'Gustavo' },{ tech: 'Jest', name: Gustavo' },{ tech: 'React', name: 'Gustavo' }]
 console.log(techList([], 'Gustavo')); // -> 'Vazio!'
 
 // Requisitos Bônus
@@ -53,7 +51,7 @@ function hydrate(string) {
   let reg = /\d+/g;
   let cups = string.match(reg);
   let sum = 0;
-  for (const cup in cups) {
+  for (let cup = 0; cup < cups.length; cup += 1) {
     sum += parseInt(cups[cup], 10);
   }
   return `${sum} copos de água`;
