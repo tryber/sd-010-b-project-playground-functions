@@ -57,8 +57,6 @@ function catAndMouse(mouse,cat1,cat2) {
 
 }
 
-
-
 // Desafio 8
 function fizzBuzz(vetor) {
   // seu código aqui
@@ -80,8 +78,6 @@ function fizzBuzz(vetor) {
     }
  return vetorderetorno;
 }
-let vetnumber = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(vetnumber));
 
 // Desafio 9
 function encode() {
