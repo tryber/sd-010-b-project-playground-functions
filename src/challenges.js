@@ -7,6 +7,7 @@ function compareTrue(valorUm, valorDois) {
     console.log(false);
   }
 }
+console.log(compareTrue);
 
 // Desafio 2
 function calcArea(base, height) {
