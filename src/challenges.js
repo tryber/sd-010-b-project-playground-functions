@@ -54,12 +54,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
   if (distanceCat1 < distanceCat2) {
-    return "cat1";
+    return 'cat1';
   }
   if (distanceCat2 < distanceCat1) {
-    return "cat2";
+    return 'cat2';
   }
-  return "os gatos trombam e o rato foge";
+  return 'os gatos trombam e o rato foge';
 }
 
 // auxiliary functions Desafio 8
@@ -99,7 +99,7 @@ function fizzBuzz(array) {
   return output;
   // seu código aqui
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode() {
   // seu código aqui
