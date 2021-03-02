@@ -4,7 +4,7 @@ function compareTrue(firstValue, secondValue) {
     return true;
   } else {
     return false;
-  };
+  }
 }
 
 // Desafio 2
@@ -20,8 +20,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstIndex = array[0];
+  let lastIndex = array[array.length - 1];
+  let concat = `${lastIndex}, ${firstIndex}`;
+  return concat;
 }
 
 // Desafio 5
