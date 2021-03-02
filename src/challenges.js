@@ -66,10 +66,29 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   else return "os gatos trombam e o rato foge";
 }
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(entrada) {
+  let saida = [];
+
+  for(let key = 0; key < entrada.length; key++){
+    if(entrada[key] % 3 == 0 && entrada[key] % 5 == 0 && entrada[key]%2 != 0){
+      saida.push("fizzBuzz")
+    }
+    else if(entrada[key] % 3 == 0 && entrada[key]%2 != 0) 
+    {
+      saida.push("fizz");
+    }
+    else if(entrada[key] % 5 == 0 && entrada[key]%2 != 0) {
+      saida.push("Buzz");
+    }
+    else {
+      saida.push("bug!");
+    }  
+  }
+  return saida;
 }
+
 
 // Desafio 9
 function encode() {
