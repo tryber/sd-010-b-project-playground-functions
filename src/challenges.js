@@ -1,8 +1,6 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(valor1,valor2) {
   // seu código aqui
-  let valor1 = true;
-  let valor2 = false;
   let compardor = false;
   if(valor1 == true && valor2 == true){
     compardor = true;
@@ -56,4 +54,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-//console.log(compareTrue());
+//console.log(compareTrue(false,false));
