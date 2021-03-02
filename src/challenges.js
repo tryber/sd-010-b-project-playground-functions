@@ -33,7 +33,7 @@ function splitSentence(umaFrase) {
 
 // Desafio 4
 function concatName(umaLista) {
-  let concat = umaLista[umaLista.length -1] + ", " + umaLista[0];
+  let concat = umaLista[umaLista.length - 1] + ", " + umaLista[0];
   return concat;
 }
 
@@ -48,7 +48,7 @@ function concatName(umaLista) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3 ) + (ties * 1));
+  return ((wins * 3) + (ties * 1));
 }
 
 // teste item 5
@@ -68,8 +68,8 @@ function highestCount(numbers) {
   //contar quantas vezes ele aparece
   let counter = 0;
   for (let key in numbers) {
-    if ( numbers[key] === bigger) {
-      counter ++;
+    if (numbers[key] === bigger) {
+      counter++;
     }
   }
   return counter;
@@ -89,9 +89,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaMouse1 < distanciaMouse2) {
     return "cat1"
-  }else if ( distanciaMouse2 < distanciaMouse1) {
+  } else if (distanciaMouse2 < distanciaMouse1) {
     return "cat2"
-  }else{
+  } else {
     return "os gatos trombam e o rato foge"
   }
 }
@@ -105,13 +105,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(umaLista) {
   let out = [];
   for (let key in umaLista) {
-    if (umaLista[key] % 3 == 0 && umaLista[key] % 5 == 0){
+    if (umaLista[key] % 3 == 0 && umaLista[key] % 5 == 0) {
       out.push("fizzBuzz");
-    }else if (umaLista[key] % 3 == 0){
+    } else if (umaLista[key] % 3 == 0) {
       out.push("fizz");
-    }else if (umaLista[key] % 5 == 0){
+    } else if (umaLista[key] % 5 == 0) {
       out.push("buzz");
-    }else{
+    } else {
       out.push("bug!")
     }
   }
@@ -119,23 +119,71 @@ function fizzBuzz(umaLista) {
 }
 
 // teste intem 8
-array0 = [2, 15, 7, 9, 45];
-array1 = [7, 9];
-array2 = [9, 25];
-console.log(fizzBuzz(array0));
-console.log(fizzBuzz(array1));
-console.log(fizzBuzz(array2));
+// array0 = [2, 15, 7, 9, 45];
+// array1 = [7, 9];
+// array2 = [9, 25];
+// console.log(fizzBuzz(array0));
+// console.log(fizzBuzz(array1));
+// console.log(fizzBuzz(array2));
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(umaFrase) {
+  lista = umaFrase.split("");
+
+  for (let key in lista) {
+    switch(lista[key]) {
+      case "a":
+      lista[key] = 1;
+      break;
+      case "e":
+      lista[key] = 2;
+      break;
+      case "i":
+      lista[key] = 3;
+      break;
+      case "o":
+      lista[key] = 4;
+      break;
+      case "u":
+      lista[key] = 5;
+      break;
+    }
+  }
+  return lista.join("");
+}
+function decode(umaFrase) {
+  lista = umaFrase.split("");
+
+  for (let key in lista) {
+    switch(lista[key]) {
+      case "1":
+      lista[key] = "a";
+      break;
+      case "2":
+      lista[key] = "e";
+      break;
+      case "3":
+      lista[key] = "i";
+      break;
+      case "4":
+      lista[key] = "o";
+      break;
+      case "5":
+      lista[key] = "u";
+      break;
+    }
+  }
+  return lista.join("");
+  
 }
 
-function decode() {
-  // seu código aqui
-}
+// teste item 9
+// console.log(encode("hi there!"));
+// console.log(decode("h3 th2r2!"));
 
+
+// NÂO MEXER ABAIXO!
 module.exports = {
   calcArea,
   catAndMouse,
