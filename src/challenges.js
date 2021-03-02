@@ -18,7 +18,7 @@ function compareTrue(first,second) {
   // Retorne true quando se chamar a função compareTrue com dois parâmetros de valor true
   if (first == true && second == true){
     return true;
-  } if else (first == true && second == false) {
+  } else if (first == true && second == false) {
     return false;
   } else {
     return false;
