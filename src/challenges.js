@@ -1,10 +1,10 @@
 // Desafio 1
-function compareTrue(boola , boolb) {
-  if ((boola === true) && (boolb === true)){
-    return true
+function compareTrue(boola, boolb) {
+  if ((boola === true) && (boolb === true)) {
+    return true;
   }
   else {
-    return false
+    return false;
   } 
 }
 
