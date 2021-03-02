@@ -27,7 +27,7 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(arra) {
   let string = `${arra[arra.length - 1]}, ${arra[0]}`;
-  return string;
+  return string;  
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -80,13 +80,13 @@ function fizzBuzz(fiz) {
     } else if (fiz[index] % 3 === 0) {
       result.push('fizz');
     } else if (fiz[index] % 5 === 0) {
-      result.push('buzz')
+      result.push('buzz');
     } else {
       result.push('bug!');
     }
   }
   return result;
-}
+};
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
@@ -133,14 +133,13 @@ function decode(arrayString) {
         result += change[item];
         status = true;
       }
-    }
-    if (status === false) {
+    } if (status === false) {
       result += arrayString[index];
     }
   }
   return result;
 }
-console.log(decode("h3 th2r2!"))
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
