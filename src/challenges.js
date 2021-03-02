@@ -1,11 +1,13 @@
 // Desafio 1
 function compareTrue(x, y) {
+  let isTrue = false;
+  
   if (x === true && y === true) {
-    return true
-  } else {
-    return false
-  }
-};
+    isTrue = true;
+  };
+
+  return isTrue;
+}
 
 // Desafio 2
 function calcArea() {
