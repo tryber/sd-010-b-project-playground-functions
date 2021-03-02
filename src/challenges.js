@@ -58,24 +58,26 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-   if (cat1 - mouse < cat2 - mouse){
-      return "cat1"
-   } else if (cat1 === cat2){
-      return "Os gatos trombam e o rato foge"
+    let mensagem = "";
+   if (cat1 == cat2){
+      mensagem = "cat1"
+   } else if (cat1 - mouse < cat2 - mouse){
+      mensagem = "cat1"
    } else {
-      return "cat2"
+      mensagem = "cat2"
    }
+   return mesagem
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let arrayFinal = [];
   for (let i = 0; i < array.length; i++){
-      if(array[i] % 3 === 0 && array[i] % 5 === 0){
+      if(array[i] % 3 == 0 && array[i] % 5 == 0){
        arrayFinal.push("fizzbuzz");
-   } else if (array[i] % 5 === 0) {
+   } else if (array[i] % 5 == 0) {
        arrayFinal.push("buzz");
-   } else if (array[i] % 3 === 0) {
+   } else if (array[i] % 3 == 0) {
        arrayFinal.push("fizz");
    } else {
        arrayFinal.push("bug!");
