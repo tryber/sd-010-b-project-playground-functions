@@ -2,14 +2,16 @@
 function compareTrue() {
   if (a === true && b === true ) {
     return true;
-  } else (a === false || b === false ) {
+  } else (a === false || b === false )
     false;
-  }
 }
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
+  let result = (base*height) / 2;
+  return result;
 }
+
+console.log
 
 // Desafio 3
 function splitSentence() {
