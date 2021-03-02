@@ -17,7 +17,7 @@ function splitSentence(sentence) {
   // seu código aqui
   let separedeSentence = sentence;
   let resultSentence = separedeSentence.split(' ');
-  return console.log(resultSentence);
+  return resultSentence;
 }
 
 // Desafio 4
