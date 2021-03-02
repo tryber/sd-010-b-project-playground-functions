@@ -1,6 +1,4 @@
 // Desafio 1
-let check1 = true;
-let check2 = false;
 function compareTrue(check1, check2) {
   let check3 = false;
   if ((check1 === true) && (check2 === true)) {
@@ -8,6 +6,8 @@ function compareTrue(check1, check2) {
   } 
   return check3;
 }
+let check1 = true;
+let check2 = false;
 console.log(compareTrue(check1, check2));
 
 // Desafio 2
