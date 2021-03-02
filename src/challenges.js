@@ -8,13 +8,25 @@ function compareTrue(valor1, valor2) {
   return compardor
 }
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
 }
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  // go trybe
+  let array = [];
+  let palavra = "";
+  for (indexString = 0; indexString <= string.length ; indexString += 1) {
+    if (string[indexString] === " " || indexString === string.length) {
+      array.push(palavra);
+      palavra = "";
+    }else {
+      palavra = palavra + string[indexString];
+    }
+  }
+  return array;
 }
 // Desafio 4
 function concatName() {
@@ -55,4 +67,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- //console.log(calcArea(51,1));
+ console.log(splitSentence('go trybe'));
