@@ -39,7 +39,7 @@ function highestCount(num) {
   max = Math.max(...num);
   vezes = 0;
   for (const key in num) {
-    if (max = key) {
+    if (key == max) {
       vezes += 1;
     }
   }
@@ -47,8 +47,20 @@ function highestCount(num) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(rat, c1, c2) {
+  mouse = rat;
+  cat1 = c1;
+  cat2 = c2;
+  ca1 = 'cat1';
+  ca2 = 'cat2';
+  emp = 'os gatos trombam e o rato foge'
+  if (cat1 < cat2) {
+    return ca1;
+  } else if (cat2 < cat1) {
+    return ca2;
+  } else {
+    return emp;
+  }
 }
 
 // Desafio 8
