@@ -24,7 +24,7 @@ function splitSentence(toSplit) {
 function concatName(reordArray) {
   // meu código aqui
   let arrayRet = [reordArray[reordArray.length - 1], reordArray[0]];
-  return arrayRet;
+  return arrayRet.join(',');
 }
 
 // Desafio 5
