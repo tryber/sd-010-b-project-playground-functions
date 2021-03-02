@@ -65,8 +65,16 @@ function highestCount(numArray) {
 //  REFERENCIA => https://pt.stackoverflow.com/questions/15058/como-saber-o-tamanho-quantidade-de-propriedades-atributos-de-um-objeto-em-ja
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCa1 = mouse - cat1;
+  let distanceCa2 = mouse - cat2;
+  if (distanceCa1 < distanceCa2) {
+    return 'cat2';
+  } else if (distanceCa1 > distanceCa2) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
