@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return saida;
 }
 
-console.log(catAndMouse(5, 3, 3));
+console.log(catAndMouse(2, 5, 6));
 
 // Desafio 8
 function fizzBuzz() {
