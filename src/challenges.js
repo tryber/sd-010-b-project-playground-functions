@@ -21,10 +21,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let concat = `${array[array.length]}, ${array[0]}`;
+  let concat = `${array[array.length - 1]}, ${array[0]}`;
   return concat;
 }
-
+console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = wins * 3 + ties;
@@ -32,8 +32,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let greatestNumber = array[0];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > greatestNumber) {
+      greatestNumber = array[i];
+    }
+  }
+  let counter = 0;
+  for (let i2 = 0; i2 < array.length; i2 += 1) {
+    if (greatestNumber == array[i2]) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
