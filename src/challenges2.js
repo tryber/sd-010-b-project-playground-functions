@@ -1,18 +1,18 @@
 // Desafio 10
 function techList(arr, name) {
   arr.sort();
-  result = [];
+  let result = [];
 
   if (arr.length === 0) {
     return 'Vazio';
-  } else {
-    for (let tech of arr) {
-      result.push({
-        tech: `${tech}`,
-        name: `${name}`,
-      });
-    }
   }
+  for (let tech of arr) {
+    result.push({
+      tech: `${tech}`,
+      name: `${name}`,
+    });
+  }
+
   return result;
 }
 
