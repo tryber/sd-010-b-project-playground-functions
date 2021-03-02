@@ -25,8 +25,8 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName(array) {
-  let string = `${array[array.length - 1]}, ${array[0]}`;
+function concatName(arra) {
+  let string = `${arra[arra.length - 1]}, ${arra[0]}`;
   return string;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -43,10 +43,10 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount(array) {
+function highestCount(maxN) {
   let helper = 0;
-  for (const i of array) {
-    if (Math.max.apply(null, array) === i) {
+  for (const i of maxN) {
+    if (Math.max.apply(null, maxN) === i) {
       helper += 1;
     }
   }
@@ -72,14 +72,14 @@ console.log(catAndMouse(0, 0, 0));
 // https://www.w3schools.com/js/js_math.asp
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz(fiz) {
   let result = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+  for (let index = 0; index < fiz.length; index += 1) {
+    if (fiz[index] % 3 === 0 && fiz[index] % 5 === 0) {
       result.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
+    } else if (fiz[index] % 3 === 0) {
       result.push('fizz');
-    } else if (array[index] % 5 === 0) {
+    } else if (fiz[index] % 5 === 0) {
       result.push('buzz')
     } else {
       result.push('bug!');
