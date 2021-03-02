@@ -2,12 +2,12 @@
 
 // Challenge 1
 function compareTrue(value1, value2) {
-  return value1 === true && value2 === true ? true : false;
+  return value1 && value2;
 }
 
 // Challenge 2
 function calcArea(base, height) {
-  if (base == 0 || height == 0) return 'invalid base or heigth';
+  if (base === 0 || height === 0) return 'invalid base or heigth';
   return (base * height) / 2;
 }
 
@@ -41,16 +41,16 @@ function highestCount(arr) {
 
 // Challenge 7
 function catAndMouse(mouse, cat1, cat2) {
-  //abs method found researching in w3 about Math methods in js
+  // Abs method found researching in w3 about Math methods in js
   const cat1Distance = Math.abs(cat1 - mouse);
   const cat2Distance = Math.abs(cat2 - mouse);
   if (cat1Distance < cat2Distance) {
     return 'cat1';
-  } else if (cat2Distance < cat1Distance) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  if (cat2Distance < cat1Distance) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Challenge 8
@@ -58,13 +58,14 @@ function fizzBuzz(arr) {
   return arr.map((number) => {
     if (number % 3 === 0 && number % 5 === 0) {
       return 'fizzBuzz';
-    } else if (number % 3 === 0) {
-      return 'fizz';
-    } else if (number % 5 === 0) {
-      return 'buzz';
-    } else {
-      return 'bug!';
     }
+    if (number % 3 === 0) {
+      return 'fizz';
+    }
+    if (number % 5 === 0) {
+      return 'buzz';
+    }
+    return 'bug!';
   });
 }
 
