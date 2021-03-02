@@ -13,11 +13,15 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// Jeito 1:
 function splitSentence(string) {
-  /* //Jeito simples:
-  const arrayOfStrings = string.split("");
-  */
-  //Jeito menos simples:  
+  let arrayOfStrings = string.split(' ');
+
+  return arrayOfStrings;
+}
+
+// Jeito 2:
+/* function splitSentence(string) {
   let arrayOfStrings = [];
   let word = '';
 
@@ -32,7 +36,7 @@ function splitSentence(string) {
   arrayOfStrings.push(word);
 
   return arrayOfStrings;
-}
+} */
 
 // Desafio 4
 function concatName(array) {
@@ -49,21 +53,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(highestCount) {
-  //Procura o maior valor 
-  let highestNum = highestCount.reduce((num1, num2) => {
-    return Math.max(num1, num2)
-  })
+// Jeito 1:
+function highestCount(arrayOfNum) {
+  //  Procura o maior valor
+  let highestNum = arrayOfNum.reduce((num1, num2) => Math.max(num1, num2));
 
-  //Filtra os valores que são iguais ao maior valor 
-  let count = highestCount.filter(value => {
-    return value == highestNum;
-  })
+  //  Filtra os valores que são iguais ao maior valor
+  let count = arrayOfNum.filter((value) => value === highestNum);
 
-  //Retorna o tamanho do array do count 
+  //  Retorna o tamanho do array do count
   return count.length;
 }
 
+// Jeito 2:
 /* function highestCount(arrayOfNum) {
   let highestNumber = 0;
   let counter = 0;
