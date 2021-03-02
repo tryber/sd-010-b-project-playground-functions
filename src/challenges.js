@@ -48,9 +48,9 @@ function highestCount(numeros) {
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 // Desafio 7
-function catAndMouse(mouse, cat2, cat1) {
-  distanciaCat1 = mouse - cat1;
-  distanciaCat2 = mouse - cat2;
+function catAndMouse(cat1, cat2) {
+  distanciaCat1 = cat1;
+  distanciaCat2 = cat2;
 
   if (distanciaCat1 < distanciaCat2) {
     return "cat1"
