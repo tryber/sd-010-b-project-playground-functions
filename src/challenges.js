@@ -25,9 +25,9 @@ function concatName(array) {
       response.push(array[index]);
     }
   }
-  return response.join(' ');
+  return response.join(', ');
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (3 * wins) + (1 * ties);
