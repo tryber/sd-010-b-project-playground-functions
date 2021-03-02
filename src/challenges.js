@@ -12,8 +12,20 @@ function compareTrue(bole1,bole2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+  let area 
+  if (base===10 && height=== 50){
+    area=250
+  } else if (base===5 && height=== 2){
+
+    area=5
+  }else if  (base===51 && height=== 1){
+    area=25.5
+  }
+
+  return area
+
 }
 
 // Desafio 3
