@@ -10,10 +10,15 @@ function compareTrue(info1, info2) {
 }
 console.log(compareTrue('maria','maria'));
 
-/* // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+// Desafio 2
+function calcArea(base,heigth) {
+    let triangleArea = (base*heigth)/2;
+    return triangleArea;
+} 
+console.log(calcArea(10,50));
+console.log(calcArea(5,2));
+console.log(calcArea(51,1));
+
 
 // Desafio 3
 function splitSentence() {
