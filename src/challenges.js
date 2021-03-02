@@ -1,6 +1,12 @@
 // Desafio 1
-function compareTrue() {
-  // commit
+function compareTrue(x, y) {
+  let isTrue = false;
+
+  if (x === true && y === true) {
+    isTrue = true;
+  };
+
+  return isTrue;
 }
 
 // Desafio 2
