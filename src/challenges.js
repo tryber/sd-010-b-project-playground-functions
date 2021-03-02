@@ -41,13 +41,13 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 == cat2){
     return 'os gatos trombam e o rato foge';
-  } else if ((mouse - cat1) < (mouse - cat2)){
+  } else if ((cat1 - mouse) < (cat2 - mouse)){
     return 'cat1';
   } else{
     return 'cat2';
   }
 }
-
+console,console.log(catAndMouse(1, 4, 4));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
