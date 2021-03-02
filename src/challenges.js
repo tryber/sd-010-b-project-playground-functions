@@ -1,25 +1,25 @@
 // Desafio 1
 function compareTrue(a,b) {
-  if(a==true && b==true){
-    return true
-  }else{
-    return false
+  if (a == true && b == true){
+    return true;
+  }else {
+    return false;
   }
 }
 // Desafio 2
 function calcArea(base,height) {
 
-  let area = (base*height)/2
-    return area
+  let area = ( base * height)/2
+    return area;
 }
 // Desafio 3
 function splitSentence(frase) {
-     frase = ("foguete").split(" ")
-      return frase
+     frase = ("foguete").split('');
+      return frase;
 }
 // Desafio 4
 function concatName(array) {
-  eturn (array[array.length -1] + ", " + array[0])
+  return (array[array.length -1] +  ', ' + array[0])
 }
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -29,30 +29,30 @@ let points = wins*3 + ties*1;
 // Desafio 6
 function highestCount(array) {
   let maior = 0
-let count = 0
-for(let index = 0; index < array.length; index +=1 ){
+  let count = 0
+    for(let index = 0; index < array.length; index +=1 ){
 
-  if(maior < array[index]){
-    maior = array[index]
+      if(maior < array[index]){
+        maior = array[index]
   }
 }
-for(let index = 0;index < array.length; index +=1){
-  if(maior == array[index]){
-    count += 1
+  for(let index = 0;index < array.length; index +=1){
+    if(maior == array[index]){
+      count += 1
   }
 }
-  return count
+return count
 }
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-let distcat1 = (mouse-cat1);
+  let distcat1 = (mouse-cat1);
   let distcat2 = (mouse-cat2) ;
-  if(distcat1 < distcat2){
-    return ("cat1")
-  }else if( distcat2 < distcat1){
-    return ("cat2")
-  }else{
-    return ("os gatos trombam e o rato foge")
+  if (distcat1 < distcat2){
+    return ('cat1')
+  }else if ( distcat2 < distcat1){
+    return ('cat2')
+  }else {
+    return ('os gatos trombam e o rato foge');
   }
 
 }
@@ -61,13 +61,13 @@ function fizzBuzz(array) {
   let fizzBuzz = [];
   for(let index = 0; index < array.length; index += 1){
     if((array[index] % 3 == 0) && (array[index] % 5 != 0)){
-      fizzBuzz.push("fizz")
-    }else if((array[index] % 5 == 0) && (array[index] % 3 != 0)){
-      fizzBuzz.push('buzz')
-    }else if((array[index] % 3 == 0) && (array[index] % 5 == 0)){
-      fizzBuzz.push('fizzBuzz')
-    }else{
-      fizzBuzz.push("bug!")
+      fizzBuzz.push("fizz");
+    } else if ((array[index] % 5 == 0) && (array[index] % 3 != 0)){
+      fizzBuzz.push('buzz');
+    } else if ((array[index] % 3 == 0) && (array[index] % 5 == 0)){
+      fizzBuzz.push('fizzBuzz');
+    } else {
+      fizzBuzz.push("bug!");
     }
     }
   return (fizzBuzz)
@@ -76,10 +76,9 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
 string.split('')
-let frase =""
+let frase = ""
 for(let index = 0; index < string.length; index++){
   switch (string[index]){
-
     case "a" :
       string[index] = "1"
     break
