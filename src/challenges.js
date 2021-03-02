@@ -83,8 +83,17 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(divisivelArray) {
-  for(let key in divisivelArray){
-
+  for(let cont=0; cont < divisivelArray.length; cont += 1){
+    if(divisivelArray[cont] % 3 == 0){
+      return "fizz";
+    } else if (divisivelArray[cont] % 5 == 0){
+      return "buzz";
+    } else if (divisivelArray[cont] % 3 == 0 && divisivelArray[cont] % 5 == 0){
+      return "fizzBuzz";
+    } else {
+      return "bug!";
+    }
+    
   }
 
 }
