@@ -10,19 +10,24 @@ function compareTrue(valor1, valor2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, heigh) {
   let areaTriangulo = (base * heigh)/2;
   return areaTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentenca) {
+  let separatedSentence = sentenca.split(' ');
+  return separatedSentence;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  ultimoItem = array[array.length-1];
+  primeiroItem = array[0];
+  ultimoPrimeiro = ultimoItem + " " + primeiroItem;
+  return ultimoPrimeiro;
 }
 
 // Desafio 5
