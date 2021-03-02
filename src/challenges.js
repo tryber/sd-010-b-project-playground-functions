@@ -2,9 +2,9 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
-  // } else {
-  //   return false;
-  // }
+  } else {
+    return false;
+  }
 }
 
 // teste item 1
@@ -111,7 +111,7 @@ function fizzBuzz(umaLista) {
     } else if (umaLista[key] % 5 === 0) {
       out.push("buzz");
     } else {
-      out.push("bug!")
+      out.push("bug!");
     }
   }
   return out;
