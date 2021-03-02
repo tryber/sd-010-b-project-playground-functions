@@ -1,6 +1,6 @@
 function techList(array,name) {
   let futureLearning = [];
-for (index in array) {
+for (index in array.sort()) {
   let addFutureLearning = {}
   addFutureLearning.tech = array[index];
   addFutureLearning.name = name;

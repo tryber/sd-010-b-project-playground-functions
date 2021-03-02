@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(array,name) {
   let futureLearning = [];
-for (index in array) {
+for (index in array.sort()) {
   let addFutureLearning = {}
   addFutureLearning.tech = array[index];
   addFutureLearning.name = name;
@@ -14,6 +14,7 @@ for (index in array) {
     return futureLearning;
   } 
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
