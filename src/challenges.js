@@ -68,11 +68,15 @@ function encode(encode) {
   }
   return retorno;
 }
-function decode() {
-  // seu código aqui
+function decode(decode) {
+    let retorno = decode;
+    for (let index = 0; index < decode.length; index++) {
+    retorno = retorno.replace(1 , "a").replace(2, "e").replace(3, "i").replace(4, "o").replace(5, "u");    
+  }
+  return retorno;
 }
 
-console.log(encode("hi there!"));
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
