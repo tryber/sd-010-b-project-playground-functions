@@ -3,8 +3,6 @@ function compareTrue(first, second) {
   let resultCompare;
   if (first && second === true) {
     resultCompare = true;
-  } else if (first && second === false) {
-    resultCompare = false;
   } else {
     resultCompare = false;
   }
@@ -12,10 +10,11 @@ function compareTrue(first, second) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, height) {
+  let result = base * height / 2;
+  return result;
 
+}
 
 // Desafio 3
 function splitSentence() {
