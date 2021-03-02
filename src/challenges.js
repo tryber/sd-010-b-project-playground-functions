@@ -19,14 +19,18 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  const concatenated = `${array[(array.length - 1)]}, ${array[0]}`;
+
+  return concatenated;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  const totalpoints = (wins * 3) + ties;
+
+  return totalpoints;
+
 
 // Desafio 6
 function highestCount() {
