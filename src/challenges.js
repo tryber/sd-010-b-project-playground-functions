@@ -53,11 +53,11 @@ function concatName(listname) {
   let nomes =[]
 
   for ( let i=0 ; i < listname.length ; i ++ ) {
-    if( i = -1 ) {
-    nomes.push ( listname[listname.length[-1]]) ;
+     if( i = listname.length -1 ) {
+    nomes.push ( listname[-1]) ;
   }
-    else if (i = 0) {
-    nomes.push (listname[ listname.length[0] ] ) ;
+     else if (i = listname[0]) {
+    nomes.push (listname[ 0 ] ) ;
   }
     
   }
