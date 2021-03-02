@@ -52,7 +52,7 @@ function highestCount(array) {
    return cont;
   }
 }
-
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
