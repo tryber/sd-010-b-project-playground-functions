@@ -35,17 +35,20 @@ function splitSentence(frase) {
 function concatName(arrayDeStrings) {
   // seu código aqui
 
-  //Somente para finalidade de teste:
-  //arrayDeStrings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  // Somente para finalidade de teste:
+  // arrayDeStrings = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 
-  let first = arrayDeStrings[0] + "'";
-  let last = "'" + arrayDeStrings[arrayDeStrings.length - 1];
+  let first = [];
+    first.push(arrayDeStrings[0]);
+  let last = [];
+    last.push(arrayDeStrings[arrayDeStrings.length - 1]);
 
-  return (last + ", " + first);
+  const arrayFinal = last + ', ' + first;
+    return arrayFinal;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
-//console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
+// console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'));
 
 // Desafio 5
 function footballPoints() {
