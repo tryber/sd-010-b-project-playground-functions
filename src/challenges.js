@@ -1,7 +1,8 @@
 // Desafio 1
-function compareTrue(valor1 , valor2) {
+function compareTrue(valor1, valor2) {
+
   if (valor1 === true && valor2 === true) {
-      return true;
+    return true;
   } else {
     return false;
   }
@@ -10,14 +11,18 @@ function compareTrue(valor1 , valor2) {
 // Desafio 2
 function calcArea(base, height) {
 
-  return((base*height)/2)
+  return ((base * height) / 2)
 }
-console.log(calcArea(10,50));
+//console.log(calcArea(10,50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+
+ let array = str.split(" ");
+    return array;
 }
+
+//console.log(splitSentence("Mariana Mohr Silveira"));
 
 // Desafio 4
 function concatName() {
@@ -48,6 +53,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
