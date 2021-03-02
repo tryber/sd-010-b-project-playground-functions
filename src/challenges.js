@@ -1,12 +1,13 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 > param2 && param2 < param1){
-    console.log("Isso é verdade");
+  if (param1 == true && param2 == true){
+   return true
   }
   else {
-    console.log("Isso é falso");
+    return false
   }
 }
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea() {
