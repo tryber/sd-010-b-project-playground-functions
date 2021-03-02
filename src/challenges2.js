@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(tec,name) {
   let saida = [];
-
+  if(tec.length == 0) return('Vazio!')
   for(let index = 0; index < tec.length; index++){
     const info ={
       tech: tec[index],
@@ -11,6 +11,7 @@ function techList(tec,name) {
   }
   return(saida);
 }
+console.log(techList([],"Abimael"));
 
 // Desafio 11
 function generatePhoneNumber() {
