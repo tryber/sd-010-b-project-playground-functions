@@ -22,8 +22,8 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(contacts) {
   let fistLast = contacts.split(" ");
-  let string = `${fistLast[fistLast.length -1]}, ${fistLast[0]}`;
-  return string;
+  
+  return fistLast[fistLast.length -1] + ', ' + fistLast[0];
 }
 
 // Desafio 5
@@ -32,8 +32,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(highNumber) {
+  
 }
 
 // Desafio 7
