@@ -1,4 +1,4 @@
-// Desafio 1
+/* // Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
   let compara;
@@ -21,14 +21,16 @@ function splitSentence(str) {
   // seu código aqui
   let split = str.split(" ")  //Fonte do ".split" = <https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254>
   return split
-}
-
-console.log(splitSentence("go Trybe"))
+} */
 
 // Desafio 4
-function concatName() {
+function concatName(fullName) {
   // seu código aqui
+  let firstLastName = fullName[fullName.length - 1] + ", " + fullName[0]
+
+  return firstLastName
 }
+  console.log(concatName(["Joana", "da Silva", "Pereira"]));
 
 // Desafio 5
 function footballPoints() {
