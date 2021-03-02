@@ -52,6 +52,7 @@ function highestCount(array) {
     if (maiorValor < array[index]) {
       maiorValor = array[index];
     }
+  }
   for (let value = 0; value < array.length; value += 1) { // pego as ocorrencias dele no array
     if (maiorValor === array[value]) {
       aparicoes += 1;
