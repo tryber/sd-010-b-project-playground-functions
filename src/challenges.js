@@ -24,16 +24,23 @@ function splitSentence(frase) {
   arrayFrase[key] = frase.split(" ");
   return arrayFrase;
   }
-}
+
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(ultimoPrimeiroItem) {
+  
+  let conectaItem = (ultimoPrimeiroItem.length-1) + (ultimoPrimeiroItem[0]);
+  return conectaItem;
+
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  pontosWins = wins * 3;
+  pontosTies = ties * 1;
+  pontosTotais = pontosTies + pontosWins;
+  
+  return pontosTotais;
 }
 
 // Desafio 6
