@@ -17,9 +17,10 @@ function splitSentence(str) {
 } // Resposta: Nesse requisito criei um parametro str na function para receber qualquer string. Dentro da function criei uma variavel para receber a string tranformada em uma array de string. Para fazer isso usei o metodo split(), e usei o separador com uma string vazia. Fiz o return da variavel newArray. Link que tirei como base a minha solução:https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(arrayStr) {
+  let strConcat = arrayStr[0].concat(arrayStr[arrayStr.length - 1]);
+  return strConcat;
+}// Resposta: Tentativa de concatenat o primeiro elemento com o ultimo usando o metodo concat(). Usando concat(), tentei fazer a concatenação acesando o primeiro elemento da array(arrayStr[0]) e acessando o ultimo elemento da array(arrayStr.length - 1).
 
 // Desafio 5
 function footballPoints() {
