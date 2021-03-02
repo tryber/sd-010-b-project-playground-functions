@@ -53,18 +53,16 @@ function catAndMouse (mouse, cat1, cat2){
 /** Consultei o repositório do ArlessonMoura para conhecer a função "math.abs()", que me dá o módulo do número dentro do ().
 obtive a função "math.abs" no endereço: https://github.com/tryber/sd-09-project-playground-functions/pull/134/files
 */
-      
-      
-      let moduloCat1 = Math.abs(mouse - cat1);
-      let moduloCat2 = Math.abs(mouse - cat2);
+      let moduloCat1 = Math.abs(cat1-mouse);
+      let moduloCat2 = Math.abs(cat2-mouse);
       
       if(moduloCat1-moduloCat2==0){
           return "os gatos trombam e o rato foge"
       } else if (moduloCat1<moduloCat2){
-          return "Cat2"
-      } else {
           return "Cat1"
-      }
+      } else {
+          return "Cat2"
+      } 
   }
 
 // Desafio 8
