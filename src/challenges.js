@@ -21,9 +21,13 @@ function splitSentence(sentence) {
   return splitedSentence;
 }
 // Desafio 4
-function concatName() {
- 
+function concatName(words) {
+  let result = words[words.length - 1] + words[0];
+  return result;
 }
+console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo')) // CORRIGIR ERRO. RETORNANDO "sl"
+
+
 
 
 
