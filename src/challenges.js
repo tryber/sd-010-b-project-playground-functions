@@ -5,7 +5,7 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * heigth) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -25,10 +25,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(values) {
-  max = Math.max(...values); // https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript
-  var i = values.indexOf(max),
+  let max = Math.max(...values); // https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript
+  let i = values.indexOf(max);
   // a seguir: https://stackoverflow.com/questions/36631641/javascript-indexof-method-with-multiple-values
-  indexes = [];
+  let indexes = [];
   while (i !== -1) {
     indexes.push(i);
     i = values.indexOf(max, ++i);
@@ -37,8 +37,8 @@ function highestCount(values) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  return (cat1 - mouse != cat2 - mouse ? (cat1 - mouse < cat2 - mouse ? "cat1" : "cat2") : "os gatos trombam e o rato foge");
 }
 
 // Desafio 8
