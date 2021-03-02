@@ -2,7 +2,7 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -27,14 +27,24 @@ function splitSentence(umaFrase) {
 }
 
 // teste item 3
-console.log(splitSentence("go Trybe"))
-console.log(splitSentence("vamo que vamo"))
-console.log(splitSentence("foguete"))
+// console.log(splitSentence("go Trybe"))
+// console.log(splitSentence("vamo que vamo"))
+// console.log(splitSentence("foguete"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(umaLista) {
+  let concat = umaLista[umaLista.length -1] + ", " + umaLista[0];
+  return concat;
 }
+
+// teste item 4
+// array0 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// array1 = ['foguete', 'não', 'tem', 'ré'];
+// array2 = ['captain', 'my', 'captain'];
+// console.log(concatName(array0));
+// console.log(concatName(array1));
+// console.log(concatName(array2));
+
 
 // Desafio 5
 function footballPoints() {
@@ -60,6 +70,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
