@@ -19,13 +19,21 @@ function concatName(fulName) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(values) {
+  max = Math.max(...values); // https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript
+  var i = values.indexOf(max),
+  // a seguir: https://stackoverflow.com/questions/36631641/javascript-indexof-method-with-multiple-values
+  indexes = [];
+  while (i !== -1) {
+    indexes.push(i);
+    i = values.indexOf(max, ++i);
+  }
+  return indexes.length;
 }
 
 // Desafio 7
