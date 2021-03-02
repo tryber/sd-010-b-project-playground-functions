@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  teste
+function compareTrue(active, connected) {
+  if (active === true && connected === true) {
+    return true
+  } else {
+    return false
+  }
 }
 
 // Desafio 2
