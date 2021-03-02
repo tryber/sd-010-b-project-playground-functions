@@ -47,15 +47,7 @@ return count;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-if(Math.abs((mouse - cat1)) > Math.abs((mouse - cat2))){
-  return 'cat2'
-}
-else if((mouse - cat1) === (mouse - cat2)){
-  return "os gatos trombam e o rato foge"
-}
-else{
-  return 'cat1'
-} 
+  return Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse) ? "cat1" : Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse) ? "cat2" : "os gatos trombam e o rato foge"
 }
 
 
@@ -70,7 +62,7 @@ function fizzBuzz(arr) {
     } else if(arr[num] % 3 == 0) {
       fizbuzzArray.push("fizz")
     } else {
-      fizbuzzArray.push("bug")
+      fizbuzzArray.push("bug!")
     }
   }
   return fizbuzzArray
