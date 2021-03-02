@@ -19,7 +19,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arr) {
   // seu código aqui
-  let stringResult = arr[arr.length - 1] + "," + arr[0];
+  let stringResult = arr[arr.length - 1] + ',' + arr[0];
   return stringResult;
 }
 
