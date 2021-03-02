@@ -29,15 +29,17 @@ function splitSentence(string) {
 // const array = ['captain', 'my', 'captain'];
 
 function concatName(array) {
-  let resultado = array[array.length -1] + ', ' + array[0];
+  let resultado = `${array[array.length-1]}, ${array[0]}`;
   return resultado;
 }
 // console.log(concatName(array));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = (wins * 3) + (ties * 1);
+  return resultado;
 }
+// console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
