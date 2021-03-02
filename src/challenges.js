@@ -34,10 +34,10 @@ function footballPoints(wins, ties) {
 }//console.log(footballPoints(14,8));
 
 // Desafio 6
-let cont = 0;
-let maior = 0;
 function highestCount(array) {
   // seu código aqui
+  let cont = 0;
+  let maior = 0;
   for(let index=0; index < array.length; index++){
     if(array[index] > maior){
        maior = array[index];
@@ -49,7 +49,7 @@ function highestCount(array) {
     }
   }
   return cont;
-}//console.log(highestCount( [0, 0, 0]));
+}//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -87,12 +87,52 @@ function fizzBuzz(array) {
 }//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-}
-function decode() {
+  let array = string.split('');
+  for(let index in array){
+    if(array[index] == 'a'){
+      array[index] = '1';
+    }
+    if(array[index] == 'e'){
+      array[index] = '2';
+    }
+    if(array[index] == 'i'){
+      array[index] = '3';
+    }
+    if(array[index] == 'o'){
+      array[index] = '4';
+    }
+    if(array[index] == 'u'){
+      array[index] = '5';
+    }
+  }
+  return array.join(''); 
+}//console.log(encode("hi there!"));
+
+function decode(string) {
   // seu código aqui
-}
+   // seu código aqui
+   let array = string.split('');
+   for(let index in array){
+     if(array[index] == '1'){
+       array[index] = 'a';
+     }
+     if(array[index] == '2'){
+       array[index] = 'e';
+     }
+     if(array[index] == '3'){
+       array[index] = 'i';
+     }
+     if(array[index] == '4'){
+       array[index] = 'o';
+     }
+     if(array[index] == '5'){
+       array[index] = 'u';
+     }
+   }
+   return array.join(''); 
+}//console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
