@@ -14,10 +14,13 @@ console.log(calcArea(10, 50)); // -> 250
 console.log(calcArea(5, 2)); // -> 5
 console.log(calcArea(51, 1)); // -> 25.5
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Requisito 3 - Dividir a frase nos espaços entre as palavras
+function splitSentence(sentence) {
+  return sentence.split(' ');
 }
+console.log(splitSentence('go Trybe')); // -> ['go', 'Trybe']
+console.log(splitSentence('vamo que vamo')); // -> ['vamo', 'que', 'vamo']
+console.log(splitSentence('foguete')); // -> ['foguete']
 
 // Desafio 4
 function concatName() {
