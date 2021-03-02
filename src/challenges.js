@@ -129,7 +129,7 @@ function decode(frase) {
           fraseCovertida += "i";
       } else if (frase[i]=="4") {
           fraseCovertida += "o";
-      } else if (frase[i=="5"]) {
+      } else if (frase[i]=="5") {
           fraseCovertida += "u";
       }
   }
