@@ -70,16 +70,13 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayDeNumeros) {
   let resposta = [];
   for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    if ((arrayDeNumeros[index] % 3 === 0) && (arrayDeNumeros[index] % 5 === 0)){
+    if ((arrayDeNumeros[index] % 3 === 0) && (arrayDeNumeros[index] % 5 === 0)) {
       resposta.push('fizzbuzz');
-    }
-    else if (arrayDeNumeros[index] % 3 === 0){
+    } else if (arrayDeNumeros[index] % 3 === 0) {
       resposta.push('fizz');
-    }
-    else if (arrayDeNumeros[index] % 5 === 0){
+    } else if (arrayDeNumeros[index] % 5 === 0) {
       resposta.push('buzz');
-    }
-    else {
+    } else {
       resposta.push('bug!');
     }
   }
@@ -87,9 +84,25 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let separado = frase.split('');
+  for (let caracter in separado) {
+      if (separado[caracter] === 'a') {
+      separado[caracter] = 1;
+    } if (separado[caracter] === 'e') {
+      separado[caracter] = 2;
+    } if (separado[caracter] === 'i') {
+      separado[caracter] = 3;
+    } if (separado[caracter] === 'o') {
+      separado[caracter] = 4;
+    } if (separado[caracter] === 'u') {
+      separado[caracter] = 5;
+    }
+  }
+  let junto = separado.join('');
+  return junto;
 }
+
 function decode() {
   // seu código aqui
 }
