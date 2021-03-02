@@ -20,8 +20,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  
-    
+  let arrayFrase=[];
+  arrayFrase[key] = frase.split(" ");
+  return arrayFrase;
   }
 }
 
