@@ -5,7 +5,6 @@ function compareTrue(valorUm, valorDois) {
     return true;
   }
 }
-return compareTrue;
 
 // Desafio 2
 function calcArea() {
