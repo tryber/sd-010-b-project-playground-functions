@@ -21,18 +21,30 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   return `${array[0]}, ${array[array.length -1]}`;
-}  console.log(concatName(["Anderson", "Pedro", "Erivaldo"]));
+}  
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
 }
-
+let array = [9, 3, 5, 6, 8, 9, 4, 3, 9];
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+  let count = 0;
+  let compar = 0;
+  let vezes = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    for (let compare = 0; compare < array.length; compare += 1){
+      if (array[index] === array[compare]) {
+        count = array[index];
+        vezes += 1;
+      }
+    if (array[index] === array[compare]) {
+      count = array[index];
+    }
+  } return count;
+} console.log(highestCount(array));
 
 // Desafio 7
 function catAndMouse() {
