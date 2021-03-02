@@ -17,7 +17,7 @@ function calcArea(base, altura) {
   let area = (base * altura) / 2;
   return area;
 }
-console.log(calcArea(51, 1));
+// console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
@@ -52,6 +52,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
