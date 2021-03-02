@@ -23,8 +23,8 @@ console.log(splitSentence('vamo que vamo!'));
 
 // Desafio 4
 function concatName(name) {
-  name = ['foguete', 'não', 'tem', 'ré']
-  return name[name.length -1] + name[0];
+  name = ['foguete', 'não', 'tem', 'ré'];
+  return name[name.length - 1] + name[0];
 }
 
 console.log(concatName());
@@ -38,18 +38,12 @@ console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount(numbers) {
-  numbers = [9, 1, 2, 3, 9, 5, 7]
-  let highNumber = 0;
-  let counter = 0;
-
-  for (let i = 0; i < numbers.length; i++) {
+  numbers = [9, 1, 2, 3, 9, 5, 7];
+  let highNumber = 0; let counter = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > highNumber) highNumber = numbers[i];
-  }
-
-  for (let j = 0; j < numbers.length; j++) {
-    if (highNumber === numbers[j]) counter++;
-  }
-
+    if (highNumber === numbers[i]) counter += 1;
+  };
   return counter;
 }
 
