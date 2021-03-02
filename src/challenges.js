@@ -1,19 +1,20 @@
 // Desafio 1
 function compareTrue(first, second) {
-
+let resultCompare;
   if (first == true && second == true) {
 
-    compareTrue = true;
+    resultCompare = true;
 
   } else if (first == true && second == false) {
-    compareTrue = false;
+    
+    resultCompare = false;
   } else {
-    compareTrue = false;
+    resultCompare = false;
   }
-  return compareTrue;
+  return resultCompare;
 
 }
-
+console.log(compareTrue)
 // Desafio 2
 function calcArea() {
   // seu código aqui
