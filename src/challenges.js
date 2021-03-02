@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   distance1 = larger1 === mouse ? mouse - cat1 : cat1 - mouse;
   distance2 = larger2 === mouse ? mouse - cat2 : cat2 - mouse;
 
-  response = distance1 > distance2 ? 'cat1' : 'cat2';
+  response = distance1 < distance2 ? 'cat1' : 'cat2';
   if (distance1 === distance2) { response = 'os gatos trombam e o rato foge'; }
   console.log(`Gato 1: ${distance1} | Gato 2: ${distance2} | Resultado: ${response}`);
 
@@ -96,7 +96,7 @@ splitSentence('Teste de Split');
 concatName(concat);
 footballPoints(14, 8);
 highestCount(numbers);
-catAndMouse(8, 5, 4);
+catAndMouse(0, 3, 2);
 
 module.exports = {
   calcArea,
