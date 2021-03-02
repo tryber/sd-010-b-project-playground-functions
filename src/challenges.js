@@ -23,9 +23,14 @@ return splits;
 } console.log(splitSentence("go trybe mano"))
 
 // Desafio 4
-function concatName() {
+function concatName(frase) {
+  var ultimoItem = frase[frase.length-1];
+  var primeiroItem = frase[0]
+  const splits = ultimoItem + " " + primeiroItem
+return splits
+} console.log(concatName(['foguete', 'não', 'tem', 'ré']))
   // seu código aqui
-}
+
 
 // Desafio 5
 function footballPoints() {
