@@ -1,3 +1,5 @@
+//Abimael Rocha - T10 Tribo B
+
 // Desafio 1
 function compareTrue() {
   // seu código aqui
