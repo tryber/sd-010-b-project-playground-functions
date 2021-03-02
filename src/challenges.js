@@ -73,13 +73,27 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return ataqueBemSucedido;
 }
-// console.log(catAndMouse(2, 12, 12));
+// console.log(catAndMouse(2, 19, 18));
 
 // Desafio 8
-function fizzBuzz() {
-  
-}
+const array =  [2, 15, 7, 9, 45];
 
+function fizzBuzz(array) {
+  let resultado = [];
+  for (let index = 0; index < array.length; index +=1) {
+      if (array[index] % 3 == 0 && array[index] % 5 == 0) {
+        resultado.push('fizzBuzz');
+      } else if (array[index] % 3 == 0 && array[index] % 5 !== 0) {
+        resultado.push('fizz');
+      } else if (array[index] % 5 == 0 && array[index] % 3 !== 0) {
+        resultado.push('Buzz');
+      } else {
+        resultado.push('bug!');
+      }
+    }
+  return resultado;
+}
+// console.log(fizzBuzz(array));
 // Desafio 9
 function encode() {
   // seu código aqui
