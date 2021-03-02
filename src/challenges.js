@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(num1, num2) {
   // seu código aquiaa
-  if((num1%2==0) && (num2%2==0)){
+  if((num1==num2) && (num2==num1)){
     return true;
   }else
   return false;
 }
-console.log(compareTrue(8,8));
+
 
 // Desafio 2
 function calcArea() {
