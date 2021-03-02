@@ -23,7 +23,7 @@ function generatePhoneNumber(n) {
   let numbers = [0,0,0,0,0,0,0,0,0,0];
   for(let index = 0; index < 11; index++){
     numbers[numero[index]]++;
-    if(numero[index] < 0 ) return("não é possível gerar um número de telefone com esses valores");
+    if(numero[index] < 0 ||  numero[index] > 9) return("não é possível gerar um número de telefone com esses valores");
   }
   //Verificar se há algum número repetido
   for(let index = 0; index < 10; index++){
@@ -38,7 +38,6 @@ function generatePhoneNumber(n) {
 
 }
 
-console.log(generatePhoneNumber([0, 2, 1, 3, 4, 2, 7, 8, 1, 0, 1, 0, 4]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
