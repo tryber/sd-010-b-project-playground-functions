@@ -62,8 +62,29 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let ataqueBemSucedido = '';
-  let ataqueGato1 = cat1 - mouse;
-  let ataqueGato2 = cat2 - mouse;
+  let ataqueGato1 = 0;
+  let ataqueGato2 = 0;
+
+  if (mouse > cat1) {
+    for (let gato1 = cat1; gato1 !== mouse; gato1 += 1) {
+      ataqueGato1 += 1;
+    }
+  } else {
+    for (let gato1 = cat1; gato1 !== mouse; gato1 -= 1) {
+      ataqueGato1 += 1;
+    }
+  }
+
+  if (mouse > cat2) {
+    for (let gato2 = cat2; gato2 !== mouse; gato2 += 1) {
+      ataqueGato2 += 1;
+    }
+  } else {
+    for (let gato2 = cat2; gato2 !== mouse; gato2 -= 1) {
+      ataqueGato2 += 1;
+    }
+  }
+  // o post do Renan Atunes que me deu uma luz nesses if's acima
   if (ataqueGato1 < ataqueGato2) {
     ataqueBemSucedido = 'cat1';
   } else if (ataqueGato1 > ataqueGato2) {
@@ -73,24 +94,24 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return ataqueBemSucedido;
 }
-// console.log(catAndMouse(2, 19, 18));
+// console.log(catAndMouse(30, 20, 20));
 
 // Desafio 8
-const array =  [2, 15, 7, 9, 45];
+const array = [2, 15, 7, 9, 45];
 
 function fizzBuzz(array) {
   let resultado = [];
-  for (let index = 0; index < array.length; index +=1) {
-      if (array[index] % 3 == 0 && array[index] % 5 == 0) {
-        resultado.push('fizzBuzz');
-      } else if (array[index] % 3 == 0 && array[index] % 5 !== 0) {
-        resultado.push('fizz');
-      } else if (array[index] % 5 == 0 && array[index] % 3 !== 0) {
-        resultado.push('Buzz');
-      } else {
-        resultado.push('bug!');
-      }
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+      resultado.push('fizz');
+    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
+      resultado.push('Buzz');
+    } else {
+      resultado.push('bug!');
     }
+  }
   return resultado;
 }
 // console.log(fizzBuzz(array));
