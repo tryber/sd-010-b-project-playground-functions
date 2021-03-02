@@ -90,8 +90,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(array) {
+  let fb = [];
+  for(let i=0; i<array.length; i++){
+      if(array[i]%3==0){
+        fb[i]='fizz';
+      }
+      if(array[i]%5==0){
+        fb[i]='buzz';
+      }
+      if(array[i]%3==0 && array[i]%5==0){
+        fb[i]='fizzBuzz';
+      }
+      if(array[i]%3!=0 && array[i]%5!=0){
+        fb[i]='bug!';
+      }
+  }
+  return (fb);
 }
 
 // Desafio 9
