@@ -51,9 +51,23 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentence) {
+  let vowels = 'aeiou';
+  let replace = '';
+  let regex;
+  for (let i = 0; i < vowels.length; i++) {
+    for (let j = 0; j < sentence.length; j++) {
+      replace = sentence[j];
+      regex = new RegExp(replace,"g");
+      if (sentence[j] == vowels[i]) {
+        sentence = sentence.replace(regex, i + 1);
+        break;
+      }
+    }
+  }
+  return sentence;
 }
+
 function decode() {
   // seu código aqui
 }
