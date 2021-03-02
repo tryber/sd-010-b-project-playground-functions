@@ -21,11 +21,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(contacts) {
-  let fistLast = contacts.split(" ");
-  
-  return fistLast[fistLast.length -1] + ', ' + fistLast[0];
+  return contacts[contacts.length -1] + ', ' + contacts[0];
 }
-console.log (concatName('eder jota tiago rafa'));
 
 // Desafio 5
 function footballPoints(wins, ties) {
