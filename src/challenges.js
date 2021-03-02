@@ -1,9 +1,16 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+let message;
+function compareTrue(info1, info2) {
+  if (info1 == info2 && info2 == info1) {
+    message = 'true';
+  } else {
+    message = 'false';
+  }
+  return message;
 }
+console.log(compareTrue('maria','maria'));
 
-// Desafio 2
+/* // Desafio 2
 function calcArea() {
   // seu código aqui
 }
@@ -58,3 +65,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+ */
