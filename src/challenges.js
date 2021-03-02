@@ -1,17 +1,21 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if(num1 == true && num2 == true) {
+  if (num1 == true && num2 == true) {
     return true;
   } else {
     return false;
   }
 }
 
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangulo = base * height / 2;
+  return triangulo;
 }
+
+console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence() {
