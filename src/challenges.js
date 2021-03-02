@@ -12,14 +12,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split('');
+  return string.split(' ');
 }
+console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName(string) {
   return (`${string[string.length - 1]}, ${string[0]}`);
 }
-console.log(concatName(["Fernando","Maia"]))
 
 // Desafio 5
 function footballPoints() {
