@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
   let resposta;
-  if (a  === true && b === true) {
+  if (a === true && b === true) {
     resposta = true;
   } else {
     resposta = false;
@@ -12,9 +12,13 @@ console.log(compareTrue(true, true));
 console.log(compareTrue(false, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height)/2;
+  return area;
 }
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
