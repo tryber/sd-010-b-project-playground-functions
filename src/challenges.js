@@ -30,7 +30,6 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); // -> Paol
 console.log(concatName(['foguete', 'não', 'tem', 'ré'])); // -> 'ré, foguete'
 console.log(concatName(['captain', 'my', 'captain'])); // -> 'captain, captain'
 
-
 // Requisito 5 - retornar a pontuação de um time a partir do número de vitórias(3pts) e empates(1pt)
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
@@ -39,11 +38,26 @@ console.log(footballPoints(14, 8)); // -> 50
 console.log(footballPoints(1, 2)); // -> 5
 console.log(footballPoints(0, 0)); // -> 0
 
-
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Requisito 6 - Retornar a quantidades de vezes que o maior número de um array se repete
+function highestCount(numbers) {
+  let higherNumber = 0;
+  let counter = 0;
+  for (const i in numbers) {
+    if (numbers[i] > higherNumber) {
+      higherNumber = numbers[i];
+      counter = 0;
+    }
+  }
+  for (const i in numbers) {
+    if (numbers[i] == higherNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); // -> 2
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1])); // -> 1
+console.log(highestCount([0, 0, 0])); // -> 3
 
 // Desafio 7
 function catAndMouse() {
