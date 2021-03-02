@@ -29,8 +29,9 @@ return finalString;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = (wins*3)+ties;
+  return totalPoints;
 }
 
 // Desafio 6
