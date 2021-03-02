@@ -94,47 +94,46 @@ function fizzBuzz(arrayEntrada) {
 }
 
 // Desafio 9
+function encode(frase) {
+  let fraseCovertida = "";
 
-/*
-  APENAS UM TESTE!!!
-  Estou testando o código do meu irmão pois o meu também resolve (avaliado pelo Zezé) e o Evaluator Job aponta que minha solução está incorreta, logo, vou testar outro código que funciona para ver o que o corretor aponta. 
-*/
-
-function encode(stringstron){
-  let stringEncodada = "";
-  for(i=0;i<stringstron.length;i++){
-      if(stringstron[i] == "a"){
-          stringEncodada += "1";
-      } else if(stringstron[i] == "e"){
-          stringEncodada += "2";
-      } else if(stringstron[i] == "i"){
-          stringEncodada += "3";
-      } else if(stringstron[i] == "o"){
-          stringEncodada += "4";
-      } else if(stringstron[i] == "u"){
-          stringEncodada += "5";
+  for (i=0; i<frase.length; i++) {
+      if (frase[i]!="a" && frase[i]!="e" && frase[i]!="i" && frase[i]!="o" && frase[i]!="u") {
+          fraseCovertida += frase[i];
+      } else if (frase[i]=="a") {
+          fraseCovertida += "1";
+      } else if (frase[i]=="e") {
+          fraseCovertida += "2";
+      } else if (frase[i]=="i") {
+          fraseCovertida += "3";
+      } else if (frase[i]=="o") {
+          fraseCovertida += "4";
       } else {
-          stringEncodada += stringstron[i]
+          fraseCovertida += "5";
       }
-  }return stringEncodada
+  }
+  return fraseCovertida;
 }
-function decode(stringstron){
-let stringEncodada = "";
-for(i=0;i<stringstron.length;i++){
-    if(stringstron[i] == "1"){
-        stringEncodada += "a";
-    } else if(stringstron[i] == "2"){
-        stringEncodada += "e";
-    } else if(stringstron[i] == "3"){
-        stringEncodada += "i";
-    } else if(stringstron[i] == "4"){
-        stringEncodada += "o";
-    } else if(stringstron[i] == "5"){
-        stringEncodada += "u";
-    } else {
-        stringEncodada += stringstron[i]
-    }
-}return stringEncodada
+
+function decode(frase) {
+  let fraseCovertida = "";
+
+  for (i=0; i<frase.length; i++) {
+      if (frase[i]!="1" && frase[i]!="2" && frase[i]!="3" && frase[i]!="4" && frase[i]!="5") {
+          fraseCovertida += frase[i];
+      } else if (frase[i]=="1") {
+          fraseCovertida += "a";
+      } else if (frase[i]=="2") {
+          fraseCovertida += "e";
+      } else if (frase[i]=="3") {
+          fraseCovertida += "i";
+      } else if (frase[i]=="4") {
+          fraseCovertida += "o";
+      } else if (frase[i=="5"]) {
+          fraseCovertida += "u";
+      }
+  }
+  return fraseCovertida;
 }
 
 module.exports = {
