@@ -4,15 +4,16 @@ function compareTrue(cond1, cond2) {
   if (cond1 === true && cond2 === true) {
     condicao = true;
   } else {
-      condicao = false;
-    }
-    return condicao;
+    condicao = false;
   }
+  return condicao;
+}
 
 // Desafio 2
-function calcArea(base , height) {
-
-}
+function calcArea (base, height) {
+  let area = (base*height/2);
+  return area;
+  }
 
 // Desafio 3
 function splitSentence() {
