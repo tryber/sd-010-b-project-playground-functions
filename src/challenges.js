@@ -1,9 +1,9 @@
 // Desafio 1
-function compareTrue(operando1, operando2) {
+function compareTrue(booleano1, booleano2) {
   /*
-   Essa função recebe dois operandos (operandos) e retorna true se ambos os valores booleanos são iguais e falso, caso contrário.
+   Essa função recebe dois booleano e retorna true se ambos os valores booleanos são verdadeiros e falso, caso contrário.
    */
-  return operando1 && operando2;
+  return booleano1 && booleano2;
 }
 
 // console.log(`compareTrue(true, true) = ${compareTrue(true, true)}`);
@@ -13,9 +13,16 @@ function compareTrue(operando1, operando2) {
 // console.log(`compareTrue(false, false) = ${compareTrue(false, false)}`);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  /*
+   Essa função recebe dois valores numéricos, a base e altura de um triangulo, calcula e retorna a area deste triangulo.
+   */
+  return (base * height) / 2;
 }
+
+// console.log(`calcArea(3, 4) = ${calcArea(3, 4)}`);
+
+// console.log(`calcArea(2, 3) = ${calcArea(2, 3)}`);
 
 // Desafio 3
 function splitSentence() {
