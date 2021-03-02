@@ -1,9 +1,7 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 == true && bool2 == false) {
+  if (bool1 === true && bool2 === false) {
     return true;
-  } else {
-    return false;
   }
 }
 
@@ -62,4 +60,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- 
