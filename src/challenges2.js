@@ -94,11 +94,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(parametro) {
+  let numbers = parametro.replace(/[^0-9]/g,'');
+  let arrayNumeros = numbers.split("");
+  let somaNumeros = 0;
+
+  for (let index = 0; index < arrayNumeros.length; index++) {
+    somaNumeros += parseInt(arrayNumeros[index]);    
+  }
+
+  return somaNumeros === 1 ? somaNumeros+" copo de água" : somaNumeros +" copos de água";
 }
 
-console.log(triangleCheck(30, 14, 8));
+console.log(hydrate("1 cachaça"));
 
 module.exports = {
   generatePhoneNumber,
