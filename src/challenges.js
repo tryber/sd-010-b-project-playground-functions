@@ -50,11 +50,11 @@ function highestCount(arei) {
 // Desafio 7
 function catAndMouse (mouse, cat1, cat2){
     
-  /** Consultei o repositório do ArlessonMoura para conhecer a função "math.abs()", que me dá o módulo do número dentro do ().
-  https://github.com/tryber/sd-09-project-playground-functions/pull/134/files
-  */
+/** Consultei o repositório do ArlessonMoura para conhecer a função "math.abs()", que me dá o módulo do número dentro do ().
+obtive a função "math.abs" no endereço: https://github.com/tryber/sd-09-project-playground-functions/pull/134/files
+*/
       
-      //obtive a função "math.abs" no endereço 
+      
       let moduloCat1 = Math.abs(mouse - cat1);
       let moduloCat2 = Math.abs(mouse - cat2);
       
