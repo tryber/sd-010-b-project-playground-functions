@@ -14,14 +14,16 @@ function techList(arrayTech,name) {
   }
 }
 
-console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // meu código aqui
-  if(verifycaOccurr(arrayNumber)||verifyNum(arrayNumber)){
-    return "não é possível gerar um número de telefone com esses valores";
-  } else{
+  if(verifyLength(arrayNumber)){
+    return "Array com tamanho incorreto."
+  }else if(verifycaOccurr(arrayNumber)||verifyNum(arrayNumber)){
+    return "não é possível gerar um número de telefone com esses valores.";
+  }else{
     let numJoin = arrayNumber.join('')
     return `(${numJoin.slice(0,2)}) ${numJoin.slice(2,7)}-${numJoin.slice(7)}`;
   }
@@ -51,7 +53,7 @@ function verifycaOccurr(toVerify){
 function verifyNum(toVerify){
   let existsZero = false; 
   for (let i = 0; i < toVerify.length; i++) {
-    if(toVerify[i] < 0 || toVerify[i] > 9 || toVerify.length > 11 || toVerify.length < 11){
+    if(toVerify[i] < 0 || toVerify[i] > 9 ){
       existsZero = true;
       break;
     }    
@@ -59,11 +61,24 @@ function verifyNum(toVerify){
   return existsZero;
 }
 
+function verifyLength(toVerify){
+  let lengthWrong = false; 
+  for (let i = 0; i < toVerify.length; i++) {
+    if( toVerify.length > 11 || toVerify.length < 11){
+      lengthWrong = true;
+      break;
+    }    
+  }
+  return lengthWrong;
+}
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // meu código aqui
-  if(lineA < lineB + lineC){
-    
+  if( (lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))){
+    return true;
+  }else{
+    return false;
   }
 }
 
