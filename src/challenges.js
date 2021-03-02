@@ -1,15 +1,13 @@
 // Desafio 1
-function compareTrue(a,b) {
-  a = ''
-  b = ''
-  if (compareTrue = true && true) {
+function compareTrue(text1, text2) {
+  if (text1 === true && text2 === true) {
     return true
-  } else if (compareTrue = true && false) {
+  } else if ( text1 === true && text2 === false) {
     return false
-  } else if (compareTrue = false && false) {
+  } else if (text1 === false && text2 === false) {
     return false
   }
-} 
+}
 
 // Desafio 2
 function calcArea() {
