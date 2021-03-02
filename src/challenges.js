@@ -12,14 +12,29 @@ function calcArea(base, height) {
   return area;
 }
 
-const base = 1;
-const altura = 51;
-
-console.log(calcArea(base, altura));
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  /* //Jeito simples:
+  const arrayOfStrings = string.split("");
+  */
+
+  //Jeito menos simples:
+  let arrayOfStrings = [];
+  let word = "";
+
+  for (let index in string) {
+    if (string[index] === " ") {
+      arrayOfStrings.push(word);
+      word = "";
+      continue;
+    }
+
+    word += string[index];
+  }
+  arrayOfStrings.push(word);
+
+  return arrayOfStrings;
+
 }
 
 // Desafio 4
