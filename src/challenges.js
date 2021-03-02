@@ -20,6 +20,7 @@ function splitSentence(string) {
   let array = string.split(' ');
   return array;
 }
+
 console.log(splitSentence('go trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
