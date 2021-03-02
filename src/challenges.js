@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(bole1 , bole2) {
+function compareTrue(bole1 ,bole2) {
   let resultado
   if (bole1 === true && bole2 === true ) {
 
@@ -48,8 +48,17 @@ function splitSentence(string) {
   
 
 // Desafio 4
-function concatName() {
+function concatName(listname) {
   // seu código aqui
+  let nomes 
+  for ( let i in listname ) {
+    if( i === listname.length -1 ) {
+    nomes.push ( listname.length -1 ) }
+    if (i === 0){
+    nomes.push(listname.length[0])}
+    
+  }
+  return nomes
 }
 
 // Desafio 5
