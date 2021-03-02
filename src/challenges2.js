@@ -20,20 +20,18 @@ function techList(arr, name) {
 function generatePhoneNumber(arr) {
   let numbers = {};
 
-  // verifica a quantidade de elementos no array
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  // "Preenche" o objeto numbers com os elementos do array e passa o value de 0 pra todos.
   for (let item of arr) {
     numbers[item] = 0;
   }
-  // conta o número de ocorrências de cada elemento do array comparando com o objeto numbers.
+
   for (let num of arr) {
     numbers[num] += 1;
   }
-  // verifica se os números passados estão dentro das condições exigidas.
+
   for (let occ of arr) {
     if (occ < 0 || occ > 9 || numbers[occ] >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -54,8 +52,16 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  } else if (lineC + lineA > lineB && lineB > Math.abs(lineC - lineA)) {
+    return true;
+  } else if (lineB + lineC > lineA && lineA > Math.abs(lineC - lineB)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
