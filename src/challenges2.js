@@ -14,7 +14,8 @@ function techList(arrayTech,name) {
   }
 }
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(generatePhoneNumber([]));
+
 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
@@ -22,7 +23,7 @@ function generatePhoneNumber(arrayNumber) {
   if(verifyLength(arrayNumber)){
     return "Array com tamanho incorreto."
   }else if(verifycaOccurr(arrayNumber)||verifyNum(arrayNumber)){
-    return "não é possível gerar um número de telefone com esses valores.";
+    return "não é possível gerar um número de telefone com esses valores";
   }else{
     let numJoin = arrayNumber.join('')
     return `(${numJoin.slice(0,2)}) ${numJoin.slice(2,7)}-${numJoin.slice(7)}`;
@@ -62,15 +63,14 @@ function verifyNum(toVerify){
 }
 
 function verifyLength(toVerify){
+  let sizeNum = toVerify.length;
   let lengthWrong = false; 
-  for (let i = 0; i < toVerify.length; i++) {
-    if( toVerify.length > 11 || toVerify.length < 11){
-      lengthWrong = true;
-      break;
-    }    
-  }
+  if( sizeNum.length > 11 || toVerify.length < 11 || toVerify.length === 0){
+    lengthWrong = true;
+  }      
   return lengthWrong;
 }
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -81,6 +81,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
+
 
 // Desafio 13
 function hydrate() {
