@@ -5,17 +5,14 @@ function compareTrue(boolean1, boolean2) {
   }
   return false;
 }
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-
 // Desafio 3
 function splitSentence(frase) {
   let palavras = frase.split(' ');
   return palavras;
-
 }
 
 // Desafio 4
@@ -30,7 +27,7 @@ function footballPoints(wins, ties) {
   const totalpoints = (wins * 3) + ties;
 
   return totalpoints;
-
+}
 
 // Desafio 6
 function highestCount() {
@@ -65,5 +62,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
+  splitSentence, 
 };
