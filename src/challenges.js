@@ -34,11 +34,16 @@ function splitSentence(string) {
     }
   }
   return resultArray;
+
+// Referencia:dev.to/imakki/how-to-split-string-without-using-js-s-inbuilt-spit-function-261b
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let a = array;
+  let tempString = '';
+  tempString = `${a[a.length - 1]}, ${a[0]}`;
+  return tempString;
 }
 
 // Desafio 5
