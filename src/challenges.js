@@ -22,7 +22,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arr) {
   tam = arr.length;
-  conc = arr[tam-1] + ", " + arr[0];
+  conc = arr[tam - 1] + ", " + arr[0];
   return conc;
 }
 
@@ -39,8 +39,8 @@ function highestCount(num) {
   max = Math.max(...num);
   vezes = 0;
   for (const key in num) {
-    if (max = num[key]) {
-      vezes = vezes + 1;
+    if (max = key) {
+      vezes += 1;
     }
   }
   return vezes;
