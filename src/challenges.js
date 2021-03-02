@@ -54,8 +54,8 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0])); 
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  return  Math . abs ( cat1  -  rato )  <  Matem . abs ( cat2  -  rato ) ? "cat1" : Matemática . abs ( cat2  -  rato )  <  Matem . abs ( cat1  -  rato ) ? "cat2" : "os gatos trombam e o rato foge" ;
+function catAndMouse() {
+  
 }
 
 // Desafio 8
@@ -77,28 +77,7 @@ function fizzBuzz(umaLista) {
 
 // Desafio 9
 function encode(umaFrase) {
-  lista = umaFrase.split("");
-
-  for (let key in lista) {
-    switch(lista[key]) {
-      case "a":
-      lista[key] = 1;
-      break;
-      case "e":
-      lista[key] = 2;
-      break;
-      case "i":
-      lista[key] = 3;
-      break;
-      case "o":
-      lista[key] = 4;
-      break;
-      case "u":
-      lista[key] = 5;
-      break;
-    }
-  }
-  return lista.join("");
+  ////
 }
 function decode() {
   // seu código aqui
