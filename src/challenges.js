@@ -69,9 +69,35 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumeros) {
   // seu código aqui
+
+  // O array abaixo serve apenas para fins de teste:
+  // arrayNumeros = [0, 0, 0];
+
+  let armazenaMaiorNumero = 0;
+  let contador = 0;
+
+  // Loop form para achar qual é o maior número:
+  for (indexMaior = 0; indexMaior < arrayNumeros.length; indexMaior += 1) {
+    if(arrayNumeros[indexMaior] > armazenaMaiorNumero) {
+      armazenaMaiorNumero = arrayNumeros[indexMaior];
+    } else {
+      armazenaMaiorNumero = armazenaMaiorNumero;
+    }
+  }
+
+  // Loop for para cverificar quantas vezes o maior número aparece no array:
+  for (indexContador = 0; indexContador < arrayNumeros.length; indexContador += 1) {
+    if (arrayNumeros[indexContador] === armazenaMaiorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
+
+// O console.log() abaixo serve somente para finalidade de teste.
+// console.log(highestCount());
 
 // Desafio 7
 function catAndMouse() {
