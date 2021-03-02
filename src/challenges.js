@@ -1,15 +1,16 @@
 // Desafio 1
-function compareTrue(valor1,valor2) {
+function compareTrue(valor1, valor2) {
   // seu código aqui
   let compardor = false;
-  if(valor1 == true && valor2 == true){
+  if (valor1 === true && valor2 === true){
     compardor = true;
   }
   return compardor
 }
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+  return (base * height) / 2;
 }
 // Desafio 3
 function splitSentence() {
@@ -54,4 +55,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-//console.log(compareTrue(false,false));
+ //console.log(calcArea(51,1));
