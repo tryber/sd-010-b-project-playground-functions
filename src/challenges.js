@@ -3,9 +3,8 @@ function compareTrue(a, b) {
 // seu código aqui
   if (a === true && b === true) {
     return true;
-  }  else {
-    return false;
   }
+  return false;
 }
 // console log
 console.log(compareTrue(true, false));
@@ -33,10 +32,10 @@ function splitSentence(frase) {
   return arrayString;
 }
 //
-console.log(splitSentence('foguete'))
-console.log(splitSentence('go Trybe'))
-console.log(splitSentence('vamo que vamo tribo'))
-console.log(splitSentence('O rato roeu a roupa do rei de Roma'))
+console.log(splitSentence('foguete'));
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo tribo'));
+console.log(splitSentence('O rato roeu a roupa do rei de Roma'));
 
 // Desafio 4
 function concatName() {
