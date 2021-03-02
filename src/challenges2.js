@@ -29,6 +29,7 @@ function hydrate("string") {
   let sum =0;
   for (index =0; index < number.lenght; index =+1){
     sum =+
+    return sum + "copo(s) de água"
   }
 }
 //https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
