@@ -9,8 +9,7 @@ function techList(array, name) {
   }
   return listOfObjetcts;
 }
-let teste = [1, 2, 3, 4, 5, 6, 7];
-techList(teste, 'Renan');
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
