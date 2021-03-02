@@ -1,4 +1,4 @@
-//Abimael Rocha - T10 Tribo B
+// Abimael Rocha - T10 Tribo B
 // Desafio 1
 function compareTrue(a, b) {
   return a && b;
@@ -7,16 +7,16 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height/2);
+  return ((base * height)/2);
 }
-
 
 // Desafio 3
 function splitSentence(sentence) {
   let name = "";
-  let result = [];
-  for(let index = 0; index < sentence.length; index++){
+  let result = "";
+  for (let index = 0; index < sentence.length; index++){
     if(sentence[index] === " "){
+      
       result.push(name);
       name = "";
       continue;
@@ -32,12 +32,12 @@ function concatName(names) {
   let result = "";
   result += names[names.length - 1] + ", ";
   result += names[0];
-  
+
   return result;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins*3 + ties;
+  let points = wins * 3 + ties;
 
   return points;
 }
@@ -51,10 +51,10 @@ function highestCount(array) {
       max = array[key+1];
     }
   }
+  
   for(let key in array)
     if(array[key] === max) nVezes++;
-  
-  console.log(nVezes);
+
 }
 // Desafio 7
 function catAndMouse() {
