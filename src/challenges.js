@@ -8,12 +8,12 @@ function compareTrue(number1, number2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
-} 
+  return (base * height) / 2;
+}
+
 console.log(calcArea(10, 50));
 console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
-
 
 // Desafio 3
 function splitSentence(string) {
@@ -27,10 +27,10 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(concatString) {
   let array = concatString.pop();
-  return (array + ', ' + concatString[0]); 
+  return (array + ' , ' + concatString[0]); 
 }
 
-console.log(concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
@@ -41,7 +41,7 @@ function footballPoints(wins, ties) {
 
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0))
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(repeatM) {
@@ -49,7 +49,7 @@ function highestCount(repeatM) {
   let qMaior = 0;
   for (let i = 0; i < repeatM.length; i += 1) {
     if (repeatM[i] > maiorN) {
-      qMaior = repeatM[i]
+      qMaior = repeatM[i];
     }
   }
   for (let j = 0; j < repeatM.length; j += 1) {
@@ -76,11 +76,23 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(2, 0, 3));
 console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 0, 0));
-//https://www.w3schools.com/js/js_math.asp
+// https://www.w3schools.com/js/js_math.asp
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let array = [];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      array.push('fizzBuzz');
+    } else if (array[i] % 3 === 0){
+      array.push('fizz');
+    } else if (array[i] % 5 === 0) {
+      array.push('buzz');
+    } else {
+      array.push('bug');
+    }
+  }
+  return array;
 }
 
 // Desafio 9
