@@ -1,6 +1,7 @@
-// Desafio 1
+// Desafio 1 iniciado no dia 02 de março de 2021 as 14:58 h
 function compareTrue() {
   // seu código aqui
+  inicando o primeiro git add . e primeiro commit
 }
 
 // Desafio 2
