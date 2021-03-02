@@ -19,8 +19,11 @@ function splitSentence(words) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  let first = name.shift();
+  let last = name.pop();
+  let juncao = last + ', ' + first;
+  return juncao;
 }
 
 // Desafio 5
