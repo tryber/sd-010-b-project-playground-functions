@@ -20,7 +20,6 @@ function splitSentence(string) {
   let frase = string.split(' ');
   return frase;
 }
-console.log(splitSentence("go trybe"));
 
 // Desafio 4
 function concatName() {
