@@ -14,7 +14,7 @@ function techList(array, name) {
     return listOfObjetcts;
   }
 }
-
+console.log(techList([], 'Renan'));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
