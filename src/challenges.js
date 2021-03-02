@@ -19,11 +19,12 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName(Frase) {
-  let resultado = Frase.split(" ");
-  return resultado;
+function concatName(words) {
+  return `${words[words.length - 1]}, ${words[0]}`;
+
+  
+
 }
-console.log(concatName("Johnny Rubi SChreiner"));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
