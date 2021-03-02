@@ -44,15 +44,17 @@ function generatePhoneNumber(parametro) {
           if (numeroCheck === parametro[verifica]) {
             verificaRepeticao++;
           }
-        }
+        } //[0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]
+        console.log("O número "+numeroCheck+", repetiu "+verificaRepeticao+" vezes");
 
         // Verifica se algum número se repete mais que 3x
         if (verificaRepeticao >= 3) {
           continua = false;
-          retorno =
-            'não é possível gerar um número de telefone com esses valores';
+          retorno = 'não é possível gerar um número de telefone com esses valores';
           break;
-        } else {
+        } 
+      }
+        if (continua) {
           return (
             '(' +
             parametro[0] +
@@ -70,8 +72,9 @@ function generatePhoneNumber(parametro) {
             parametro[9] +
             parametro[10]
           );
+        } else {
+          retorno = 'não é possível gerar um número de telefone com esses valores';
         }
-      }
     }
   } else {
     retorno = 'Array com tamanho incorreto.';
@@ -106,7 +109,7 @@ function hydrate(parametro) {
   return somaNumeros === 1 ? somaNumeros+" copo de água" : somaNumeros +" copos de água";
 }
 
-console.log(hydrate("1 cachaça"));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 module.exports = {
   generatePhoneNumber,
