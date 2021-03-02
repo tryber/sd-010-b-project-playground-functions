@@ -36,7 +36,7 @@ function highestCount(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (comparison < array[i]) {
       comparison = array[i];
-    } 
+    }
   }
 
   let count = 0;
@@ -51,8 +51,18 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let response = '';
+
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+    response = 'os gatos trombam e o rato foge';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    response = 'cat2';
+  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    response = 'cat1';
+  }
+
+  return response;
 }
 
 // Desafio 8
