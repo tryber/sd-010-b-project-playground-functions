@@ -2,7 +2,6 @@
 function techList() {
   // seu código aqui
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
