@@ -51,9 +51,10 @@ function highestCount(array) {
 }
 
 // Desafio 7
+//Pesquisei o Math.abs no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs(cat1 - mouse); //Pesquisei o Math.abs no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-  let distCat2 = Math.abs(cat2 - mouse); //Pesquisei o Math.abs no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
   let string;
   if (distCat1 === distCat2) {
     string = 'os gatos trombam e o rato foge';
@@ -99,10 +100,10 @@ function encode(string) {
       trocaCaracter += '5';
     } else {
       trocaCaracter += novaString[i];
-    }      
+    }
   }
   return trocaCaracter;
-} 
+}
 function decode(string) {
   let novaString = string.split('');
   let trocaCaracter = '';
@@ -119,7 +120,7 @@ function decode(string) {
       trocaCaracter += 'u';
     } else {
       trocaCaracter += novaString[i];
-    }     
+    }
   }
   return trocaCaracter;
 }
