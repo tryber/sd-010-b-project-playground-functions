@@ -1,14 +1,16 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === false) {
+  if (bool1 === true && bool2 === true) {
     return true;
   }
+  // ESlint made me write my else like this
   return false;
 }
 
 // Desafio 2
-function calcArea() {
-
+function calcArea(base, heigh) {
+  let ret = (base * heigh) / 2;
+  return ret;
 }
 
 // Desafio 3
