@@ -1,14 +1,14 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
+  let resultado ;
   if (valor1 === true && valor2 === true) {
-    return true;
+    resultado =  true;
   } else {
-    return false;
+    resultado =  false;
   }
-
-}
+  return resultado;
+  }
  console.log(compareTrue(true,true));
-
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2)
@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
 let cat1 = 12;
 let cat2 = 12;
 let mouse = 0;
-// console.log(catAndMouse(mouse, cat1, cat2));
+console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -99,35 +99,29 @@ let numerosfizzbuz = [2, 15, 7, 9, 45];
 
 // Desafio 9
 function encode(frase) {
-  for (let i = 0; i < frase.length; i += 1) {
-    switch (frase[i]) {
-      case "a":
-        frase[i] = 1;
-        break;
-      case "2":
-        frase[i] = 2;
-        break;
-      case "1":
-        frase[i] = 3;
-        break;
-      case "o":
-        frase[i] = 4;
-        break;
-      case "u":
-        frase[i] = 5;
-        break;
-        default:
-          console.log("vogal nao encontrads");
-    }
-  }
-  return frase;
+  let fraseTrocada;
+        fraseTrocada = frase.replace("a", 1);
+        fraseTrocada = fraseTrocada.replace("e", 2);
+        fraseTrocada = fraseTrocada.replace("i", 3);
+        fraseTrocada = fraseTrocada.replace("o", 4);
+        fraseTrocada = fraseTrocada.replace("u", 5);
+  return fraseTrocada;
 }
-let frase = "hi there";
-console.log(encode(frase));
+let frase1 = "hi there";
+console.log(encode(frase1));
 
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let fraseTrocada;
+        fraseTrocada = frase.replace(1, "a");
+        fraseTrocada = fraseTrocada.replace(2, "e");
+        fraseTrocada = fraseTrocada.replace(3, "i");
+        fraseTrocada = fraseTrocada.replace(4, "o");
+        fraseTrocada = fraseTrocada.replace(5, 'u');
+  return fraseTrocada;
 }
+let frase1 = "h3 th2re";
+console.log(decode(frase1));
 
 module.exports = {
   calcArea,
@@ -141,3 +135,6 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
+
