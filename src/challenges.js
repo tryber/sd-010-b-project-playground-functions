@@ -1,7 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  aaaaaaaaa
+function compareTrue(valorUm, valorDois) {
+  if ((valorUm) && (valorDois)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
