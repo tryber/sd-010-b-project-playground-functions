@@ -18,7 +18,7 @@ function concatName(names) {
   let firstElement = names.shift();
   let lastElement = names.pop();
   let newArr = [lastElement, firstElement];
-  return newArr;
+  return newArr.toString();
 }
 
 // Desafio 5
