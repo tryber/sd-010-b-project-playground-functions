@@ -5,14 +5,14 @@ function compareTrue(valorUm, valorDois) {
   if (valorUm === true && valorDois === true) {
     trueOrFalse = true;
   }
-  return trueOrFalse; 
+  return trueOrFalse;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let formula = base * height / 2;
-  return formula;  
+  let formula = (base * height / 2);
+  return formula;
 }
 
 // Desafio 3
