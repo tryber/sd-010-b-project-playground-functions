@@ -11,9 +11,14 @@ function compareTrue(firstCondition, secondCondition) {
 // console.log(compareTrue(1 + 2 === 3, true));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let calculadora = (base * height) / 2;
+    return calculadora;
 }
+
+// O console.log() abaixo serve somente para finalidade de teste.
+//console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
