@@ -2,13 +2,9 @@
 function compareTrue(valor1, valor2) {
   if( valor1 === true && valor2 === true) {
     return true;
-  } 
-  else if( valor1 === true && valor2 === false || valor1 === false && valor2 === true || valor1 === false && valor2 === false  ){
+  } else if( valor1 === true && valor2 === false||valor1 === false && valor2 === true||valor1 === false && valor2 === false  ){
     return false;
   }
-  else{
-    return "Invalido.";
-  }   
 }
 console.log(compareTrue(true,true)); 
 // Desafio 2
