@@ -1,7 +1,11 @@
 // Desafio 1
 function compareTrue(boola , boolb) {
-  return boola === boolb;
-  
+  if ((boola === true) && (boolb === true)){
+    return true
+  }
+  else {
+    return false
+  } 
 }
 
 // Desafio 2
@@ -61,4 +65,3 @@ module.exports = {
 };
 
 
-console.log(compareTrue( true, false))
