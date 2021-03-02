@@ -25,8 +25,10 @@ function splitSentence(phrase) {
 //(PT-BR): Para executar esse exercício fiz pesquisas e encontrei um material muito bom explicando como utilizar o .split no seguinte site: https://www.w3schools.com/jsref/jsref_split.asp
 
 // Desafio 4
-function concatName() {
+function concatName(arrayStrings) {
   // seu código aqui
+  let last = (arrayStrings.length) - 1
+  return (`${arrayStrings[last]}, ${arrayStrings[0]}`)
 }
 
 // Desafio 5
