@@ -1,7 +1,10 @@
-// Desafio 1
-function compareTrue() {
-  // seu código aqui
+// Requisito 1 - Verificar se dois valores são verdadeiros
+function compareTrue(param1, param2) {
+  return param1 === true && param2 === true;
 }
+console.log(compareTrue(false, true)); // -> false
+console.log(compareTrue(false, false)); // -> false
+console.log(compareTrue(true, true)); // -> true
 
 // Desafio 2
 function calcArea() {
