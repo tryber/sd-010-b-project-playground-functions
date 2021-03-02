@@ -63,24 +63,24 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(num) {
   const valores = num.map( function( number ) {
     if(number % 3 === 0 && number % 5 === 0) {
-      return 'FizzBuzz'
-    } else if (number % 5 === 0) {
-      return 'Buzz'
+      return 'fizzBuzz';
     } else if (number % 3 === 0) {
-      return 'Fizz'
+      return 'fizz';
+    } else if (number % 5 === 0) {
+      return 'buzz';
     } else {
-      return 'Bug!'
+      return 'bug!';
     }
-  })
+  });
 
-  return valores
+  return valores;
 }
 
-console.log(fizzBuzz([9, 25]))
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
 }
 function decode() {
   // seu código aqui
