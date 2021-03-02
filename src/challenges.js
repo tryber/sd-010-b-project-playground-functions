@@ -6,12 +6,20 @@ function compareTrue(a, b) {
     console.log(false)
   }
 }
-compareTrue(true, false)
+compareTrue(false, true)
+compareTrue(false, false)
+compareTrue(true, true)
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = (base * height / 2)
+  console.log(result)
 }
+calcArea(10, 50)
+calcArea(5, 2)
+calcArea(51, 1)
+
 
 // Desafio 3
 function splitSentence() {
