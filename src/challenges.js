@@ -43,12 +43,19 @@ console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
-    // seu código aqui
+function footballPoints(wins, ties) {
+    let vitoria = wins * 3;
+    let empate = ties * 1;
+    let resultado = vitoria + empate;
+    return resultado;
 }
+console.log(footballPoints(14, 8))
+console.log(footballPoints(1, 2))
+console.log(footballPoints(0, 0))
 
 // Desafio 6
 function highestCount() {
+
     // seu código aqui
 }
 
