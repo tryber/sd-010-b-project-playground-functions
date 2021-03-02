@@ -72,6 +72,28 @@ return pointsTotal;
 // Desafio 6
 function highestCount() {
   // seu código aqui
+  //variavel que vai armazenar qual maior numero.
+  let highestNumber = 0;
+  //vai armazenar o tamanho do array porque estava dando algum erro usando o length
+  let arraySize = arrayNumbers.length - 1
+  //variavel que vai contar quantas vezes o numero se repete
+  let repeatedNumbers = 0;
+  //vai contar em cada numero do array apresentado.
+  for (let counterNumbers = 0; counterNumbers < arraySize; counterNumbers += 1) {
+    
+    if (highestNumber < arrayNumbers[counterNumbers]) {
+
+      highestNumber = arrayNumbers[counterNumbers];
+    }
+  }
+  //vai contar cada numero do array novamente
+  for (let arrayCounter = 0; arrayCounter < arrayNumbers.length; arrayCounter += 1) {
+
+    //compara o maior numero com os numeros do array
+    if (highestNumber === arrayNumbers[arrayCounter]){
+      repeatedNumbers += 1;
+    }
+  }
 }
 
 // Desafio 7
