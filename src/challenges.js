@@ -109,9 +109,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let result = '';
 
   if ((positionCat1 - positionMouse) > (positionCat2 - positionMouse)) {
-    result = 'cat1';
-  } else if ((positionMouse - positionCat1) < (positionMouse - positionCat2)) {
     result = 'cat2';
+  } else if ((positionMouse - positionCat1) < (positionMouse - positionCat2)) {
+    result = 'cat1';
   } else if ((positionMouse - positionCat1) == (positionMouse - positionCat2)){
     result = 'os gatos trombam e o rato foge';
   }
