@@ -4,13 +4,15 @@ function techList(array, string) {
   if (array !== []) {
     for (let key in array) {
       if (string !== '') {
-        output.push({ tech: array[key], name: string});
+        output.push({ tech: array[key], name: string });
       }
     }
+  } else {
+    return 'Vazio!';
   }
   return output;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Thiago"));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
