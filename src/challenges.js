@@ -1,11 +1,10 @@
 // Desafio 1
 
-
 function compareTrue(boolean1, boolean2) {
 
-  if(boolean1 === true && boolean2 === true){
+  if (boolean1 === true && boolean2 === true){
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -47,16 +46,16 @@ function footballPoints(wins, ties) {
 
 function highestCount(repeteMaior) {
   
-  let maiorNumero = 0;
-  let qntNumeroMaior;
-  for(let cont=0;cont < repeteMaior.length; cont+=1){
-    if(repeteMaior[cont] > repeteMaior.length-1){
+  let maiorNumero;
+  let qntNumeroMaior = 1;
+  for(let cont=0;cont < repeteMaior.length; cont += 1){
+    if(repeteMaior[cont] > repeteMaior[repeteMaior.length-1]){
       maiorNumero = repeteMaior[cont];
     }
   }
   for(let cont=0;cont < repeteMaior.length; cont+=1){
     if(maiorNumero === repeteMaior[cont]){
-      qntNumeroMaior +=1;
+      qntNumeroMaior += 1;
     }
   }
   return qntNumeroMaior;
