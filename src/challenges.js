@@ -68,7 +68,7 @@ function highestCount(numbers) {
   let counter = 0;
   for (let key in numbers) {
     if (numbers[key] === bigger) {
-      counter ++;
+      counter++;
     }
   }
   return counter;
@@ -87,11 +87,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouse2 = Math.abs(mouse - cat2);
 
   if (distanciaMouse1 < distanciaMouse2) {
-    return "cat1";
+    return 'cat1';
   } else if (distanciaMouse2 < distanciaMouse1) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -105,13 +105,13 @@ function fizzBuzz(umaLista) {
   let out = [];
   for (let key in umaLista) {
     if (umaLista[key] % 3 === 0 && umaLista[key] % 5 === 0) {
-      out.push("fizzBuzz");
+      out.push('fizzBuzz');
     } else if (umaLista[key] % 3 === 0) {
-      out.push("fizz");
+      out.push('fizz');
     } else if (umaLista[key] % 5 === 0) {
-      out.push("buzz");
+      out.push('buzz');
     } else {
-      out.push("bug!");
+      out.push('bug!');
     }
   }
   return out;
@@ -128,53 +128,54 @@ function fizzBuzz(umaLista) {
 
 // Desafio 9
 function encode(umaFrase) {
-  let lista = umaFrase.split("");
+  let lista = umaFrase.split('');
 
   for (let key in lista) {
-    switch(lista[key]) {
-      case "a":
-      lista[key] = 1;
-      break;
-      case "e":
-      lista[key] = 2;
-      break;
-      case "i":
-      lista[key] = 3;
-      break;
-      case "o":
-      lista[key] = 4;
-      break;
-      case "u":
-      lista[key] = 5;
-      break;
+    switch (lista[key]) {
+      case 'a':
+        lista[key] = 1;
+        break;
+      case 'e':
+        lista[key] = 2;
+        break;
+      case 'i':
+        lista[key] = 3;
+        break;
+      case 'o':
+        lista[key] = 4;
+        break;
+      case 'u':
+        lista[key] = 5;
+        break;
     }
   }
-  return lista.join("");
+  return lista.join('');
 }
+
 function decode(umaFrase) {
-  let lista = umaFrase.split("");
+  let lista = umaFrase.split('');
 
   for (let key in lista) {
-    switch(lista[key]) {
-      case "1":
-      lista[key] = "a";
-      break;
-      case "2":
-      lista[key] = "e";
-      break;
-      case "3":
-      lista[key] = "i";
-      break;
-      case "4":
-      lista[key] = "o";
-      break;
-      case "5":
-      lista[key] = "u";
-      break;
+    switch (lista[key]) {
+      case '1':
+        lista[key] = 'a';
+        break;
+      case '2':
+        lista[key] = 'e';
+        break;
+      case '3':
+        lista[key] = 'i';
+        break;
+      case '4':
+        lista[key] = 'o';
+        break;
+      case '5':
+        lista[key] = 'u';
+        break;
     }
   }
-  return lista.join("");
-  
+  return lista.join('');
+
 }
 
 // teste item 9
