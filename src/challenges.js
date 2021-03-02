@@ -26,7 +26,7 @@ function concatName(array) {
   // seu código aqui
   ultimoItem = array[array.length-1];
   primeiroItem = array[0];
-  ultimoPrimeiro = ultimoItem + " " + primeiroItem;
+  ultimoPrimeiro = ultimoItem + ", " + primeiroItem;
   return ultimoPrimeiro;
 }
 
