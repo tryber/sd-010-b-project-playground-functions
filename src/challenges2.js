@@ -40,9 +40,9 @@ function generatePhoneNumber(array) {
       return 'Não é possível gerar um número de telefone com esses valores.';
     }
   }
-  let telefoneDDD = '(' + array[0].toString() + array[1].toString() + ')';
-  let telefoneParteUm = array[2].toString() + array[3].toString() + array[4].toString() + array[5].toString() + array[6].toString();
-  let telefoneParteDois = array[7].toString() + array[8].toString() + array[9].toString() + array[10].toString();
+  let telefoneDDD = '(' + array[0] + array[1] + ')';
+  let telefoneParteUm = '' + array[2] + array[3] + array[4] + array[5] + array[6];
+  let telefoneParteDois = '' + array[7] + array[8] + array[9] + array[10];
   numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
   return numTelefone;
 }
@@ -63,8 +63,8 @@ function triangleCheck(lineA, lineB, lineC) {
 } 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(String) {
+  
 }
 
 module.exports = {
