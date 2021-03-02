@@ -19,13 +19,13 @@ function splitSentence(myString) {
 
 // Desafio 4
 function concatName(myArray) {
-  return myArray[myArray.length -1] + ', ' + myArray[0];
+  return myArray[myArray.length - 1] + ', ' + myArray[0];
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  return 3 * wins + 1 * ties;
 }
 
 
