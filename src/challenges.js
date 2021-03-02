@@ -22,9 +22,8 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(contacts) {
   let fistLast = contacts.split(" ");
-  return `${fistLast[0]}, ${fistLast[fistLast.length -1]}`;
+  return `${fistLast[fistLast.length -1]}, ${fistLast[0]}`;
 }
-console.log (concatName('ederson rafael lucas tiago'));
 
 // Desafio 5
 function footballPoints() {
