@@ -1,7 +1,6 @@
 // Desafio 1
 
-let boolean1 = true;
-let boolean2 = true; 
+
 function compareTrue(boolean1, boolean2) {
 
   if(boolean1 === true && boolean2 === true){
