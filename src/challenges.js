@@ -39,7 +39,7 @@ function highestCount(num) {
   max = Math.max(...num);
   vezes = 0;
   for (let key in num) {
-    if (num[key] = max) {
+    if (num[key] == max) {
       vezes = vezes + 1;
     }
   }
