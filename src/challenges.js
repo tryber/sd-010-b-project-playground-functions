@@ -67,7 +67,7 @@ console.log(footballPoints(7, 20));
 function highestCount(arrayNumber) {
   // seu código aqui
   let maior = 0;
-  let contador = 1;
+  let contador = 0;
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (maior === arrayNumber[index]) {
       contador += 1;
@@ -81,8 +81,8 @@ function highestCount(arrayNumber) {
 // console log
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0, 0, 0, 0]));
-console.log(highestCount([1, 2, 3, 4, 5, 4, 3, 2, 1]));
+console.log(highestCount([0, 0, 0]));
+console.log(highestCount([1, 2, 2, 2, 2, 2, 2, 2, 1]));
 
 // Desafio 7
 function catAndMouse() {
