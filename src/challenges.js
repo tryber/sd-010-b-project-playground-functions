@@ -10,6 +10,7 @@ function compareTrue(bool1, bool2) {
   }
   return resultado;
 }
+// novo push
 // console.log(compareTrue(false, false));
 
 // Desafio 2
