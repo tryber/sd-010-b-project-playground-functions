@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   // seu código aqui
-  if(bool1 === true && bool2 === true){
+  if (bool1 === true && bool2 === true){
     return true;
   }else{
     return false;
@@ -10,9 +10,11 @@ function compareTrue(bool1, bool2) {
 
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return area = (base * height) / 2
 }
+
 
 // Desafio 3
 function splitSentence() {
