@@ -14,7 +14,7 @@ function calcArea(base, height) {
 /////////////////////////////////////////////////////////////////////////////////////
 // Desafio 3
 function splitSentence(string) {
-  for  ( let  index  =  0 ;  index  <  frase . length ;  index ++ )  {
+  for  ( let  index  =  0 ;  index  <  frase . length ;  index += 1 )  {
     arrayString  =  frase . split ( split ) ;
   }
  return  arrayString ;
