@@ -43,7 +43,7 @@ function generatePhoneNumber(array) {
   let telefoneDDD = '(' + array[0] + array[1] + ')';
   let telefoneParteUm = '' + array[2] + array[3] + array[4] + array[5] + array[6];
   let telefoneParteDois = '' + array[7] + array[8] + array[9] + array[10];
-  numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
+  let numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
   return numTelefone;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
