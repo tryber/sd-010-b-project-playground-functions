@@ -1,7 +1,7 @@
 // Desafio 1
 let a = true;
 let b = true;
-function compareTrue() {
+function compareTrue(num1, num2) {
    if (a === true && b === true){
    return true;
  } else if (a === false && b === false) { 
@@ -13,7 +13,9 @@ function compareTrue() {
 console.log(compareTrue())
 
 // Desafio 2
-function calcArea() {
+let base = 10
+let height = 50
+function calcArea(a, b) {
   // seu código aqui
 }
 
