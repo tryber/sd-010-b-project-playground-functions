@@ -109,12 +109,59 @@ console.log(fizzBuzz([9,25]));
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let result = [];
+  for(let key in string){
+    switch (true){
+      case (string[key] == 'a'):
+        result += 1;
+        break;
+      case (string[key] == 'e'):
+        result += 2;
+        break;
+      case (string[key] == 'i'):
+        result += 3;
+        break;
+      case (string[key] == 'o'):
+        result += 4;
+        break;
+      case (string[key] == 'u'):
+        rresult += 5;
+        break;
+      default:
+        result += string[key];      
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there!'));
+
+function decode(stringWithNumbers) {
+  let result = [];
+  for(let key in stringWithNumbers){
+    switch (true){
+      case (stringWithNumbers[key] == 1):
+        result += 'a';
+        break;
+      case (stringWithNumbers[key]  == 2):
+        result += 'e';
+        break;
+      case (stringWithNumbers[key]  == 3):
+        result += 'i';
+        break;
+      case (stringWithNumbers[key]  == 4):
+        result += 'o';
+        break;
+      case (stringWithNumbers[key]  == 5):
+        rresult += 'u';
+        break;
+      default:
+        result += stringWithNumbers[key];      
+    }
+  }
+  return result;
 }
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
