@@ -47,9 +47,9 @@ function footballPoints(wins, ties) {
 function highestCount(repeteMaior) {
   
   let maiorNumero;
-  let qntNumeroMaior = 1;
+  let qntNumeroMaior = 0;
   for(let cont=0;cont < repeteMaior.length-1; cont += 1) {
-    if (repeteMaior[cont] > repeteMaior[cont+1]) {
+    if (repeteMaior[cont] >= repeteMaior[cont+1]) {
       maiorNumero = repeteMaior[cont];
     }
   }
