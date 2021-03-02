@@ -34,7 +34,7 @@ function highestCount(count) {
       maior = count[index];
       contador = 1;
     } else if (maior === count[index]) {
-      contador+=;
+      contador += 1;
     }
   }
   return contador;
@@ -84,7 +84,7 @@ function fizzBuzz(divisivel) {
   }
   return fizzBuster;
 }
-console.log(fizzBuzz([15,2,6,10]))
+
 // Desafio 9
 function encode() {
   // seu código aqui
