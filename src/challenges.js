@@ -21,14 +21,17 @@ function splitSentence(string) {
 function concatName(items) {
   let lastItem = items[items.lenght - 1];
   let firstItem = items[0];
-  let lastAndFirstItems = lastItem + ', ' + firstItem;
-
+  let lastAndFirstItems = `${lastItem}, ${firstItem}`;
+  
   return lastAndFirstItems;
 }
 
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = ((wins * 3) + ties);
+
+  return totalPoints;
 }
 
 // Desafio 6
