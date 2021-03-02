@@ -4,9 +4,9 @@ function compareTrue() {
   function compareTrue(parameter1, parameter2) {
     return parameter1 === true && parameter2 === true;
   }
-  console.log(compareTrue(false, true))
-  console.log(compareTrue(false, false))
-  console.log(compareTrue (true,true))
+  console.log(compareTrue(false, true));
+  console.log(compareTrue(false, false));
+  console.log(compareTrue (true,true));
 }
 
 // Desafio 2
