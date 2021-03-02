@@ -1,21 +1,42 @@
-function fizzBuzz(array) {
-  resultArray = [];
-  stringLoop = ''
-  for (let index in array) {
-    if (array[index] % 3 == 0) {
-      stringLoop = "fizz";
+function encode(string) {
+  newString = '';
+  string = string.split('');
+  for (let index in string) {
+    if (string[index] == 'a') {
+      string[index] = '1';
+    } else if (string[index] == 'e') {
+      string[index] = '2';
+    } else if (string[index] == 'i') {
+      string[index] = '3';
+    } else if (string[index] == 'o') {
+      string[index] = '4';
+    } else if (string[index] == 'u') {
+      string[index] = '5';
     }
-    if (array[index] % 5 == 0) {
-      stringLoop = "buzz"
-    }
-    if (array[index] % 15 == 0) {
-      stringLoop = "fizzBuzz"
-    }
-    if (array[index] % 3 != 0 && array[index] % 5 != 0) {
-      stringLoop = "bug!"
-    }
-    resultArray.push(stringLoop)
+    newString += string[index];
   }
-  return resultArray;
+  return newString;
 }
-console.log(fizzBuzz([9, 25]));
+
+function decode(string) {
+  newString = '';
+  string = string.split('');
+  for (let index in string) {
+    if (string[index] == '1') {
+      string[index] = 'a';
+    } else if (string[index] == '2') {
+      string[index] = 'e';
+    } else if (string[index] == '3') {
+      string[index] = 'i';
+    } else if (string[index] == '4') {
+      string[index] = 'o';
+    } else if (string[index] == '5') {
+      string[index] = 'u';
+    }
+    newString += string[index];
+  }
+  return newString;
+}
+
+console.log(encode("hi there aeiou idhawhdoadhojfoeof!"));
+console.log(decode(encode("hi there aeiou idhawhdoadhojfoeof!")))

@@ -33,11 +33,11 @@ function concatName(array) {
   firstName = '';
   lastName = '';
   for (let index in array) {
-      if (index == 0) {
-          lastName = array[index];
-      } else if (index == array.length - 1) {
-          firstName = array[index]
-      }
+    if (index == 0) {
+      lastName = array[index];
+    } else if (index == array.length - 1) {
+      firstName = array[index]
+    }
   }
   let newName = `${firstName}, ${lastName}`;
   return newName;
@@ -55,16 +55,16 @@ function highestCount(array) {
   let biggestNumber = 0;
   let bigNumberReps = 0;
   for (let index in array) {
-      if (index == 0) {
-          biggestNumber = array[index]
-      } else if (biggestNumber < array[index]) {
-          biggestNumber = array[index]
-      }
+    if (index == 0) {
+      biggestNumber = array[index]
+    } else if (biggestNumber < array[index]) {
+      biggestNumber = array[index]
+    }
   }
   for (let index in array) {
-      if (array[index] == biggestNumber) {
-          bigNumberReps += 1
-      }
+    if (array[index] == biggestNumber) {
+      bigNumberReps += 1
+    }
   }
   return bigNumberReps;
 }
@@ -110,30 +110,62 @@ function fizzBuzz(array) {
   resultArray = [];
   stringLoop = ''
   for (let index in array) {
-      if (array[index] % 3 == 0) {
-          stringLoop = "fizz";
-      }
-      if (array[index] % 5 == 0) {
-          stringLoop = "buzz"
-      }
-      if (array[index] % 15 == 0) {
-          stringLoop = "fizzBuzz"
-      }
-      if (array[index] % 3 != 0 && array[index] % 5 != 0) {
-          stringLoop = "bug!"
-      }
-      resultArray.push(stringLoop)
+    if (array[index] % 3 == 0) {
+      stringLoop = "fizz";
+    }
+    if (array[index] % 5 == 0) {
+      stringLoop = "buzz"
+    }
+    if (array[index] % 15 == 0) {
+      stringLoop = "fizzBuzz"
+    }
+    if (array[index] % 3 != 0 && array[index] % 5 != 0) {
+      stringLoop = "bug!"
+    }
+    resultArray.push(stringLoop)
   }
   return resultArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  newString = '';
+  string = string.split('');
+  for (let index in string) {
+    if (string[index] == 'a') {
+      string[index] = '1';
+    } else if (string[index] == 'e') {
+      string[index] = '2';
+    } else if (string[index] == 'i') {
+      string[index] = '3';
+    } else if (string[index] == 'o') {
+      string[index] = '4';
+    } else if (string[index] == 'u') {
+      string[index] = '5';
+    }
+    newString += string[index];
+  }
+  return newString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  newString = '';
+  string = string.split('');
+  for (let index in string) {
+    if (string[index] == '1') {
+      string[index] = 'a';
+    } else if (string[index] == '2') {
+      string[index] = 'e';
+    } else if (string[index] == '3') {
+      string[index] = 'i';
+    } else if (string[index] == '4') {
+      string[index] = 'o';
+    } else if (string[index] == '5') {
+      string[index] = 'u';
+    }
+    newString += string[index];
+  }
+  return newString;
 }
 
 module.exports = {
