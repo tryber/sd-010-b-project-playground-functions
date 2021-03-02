@@ -18,8 +18,8 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrayStr) {
-  let palavra1 = ' ';
-  let palavra2 = ' ';
+  let palavra1 = '';
+  let palavra2 = '';
   let separador = ', ';
   for (let index = 0; index < arrayStr.length - 1; index += 1) {
     palavra1 = arrayStr.shift();
@@ -28,7 +28,7 @@ function concatName(arrayStr) {
   return palavra1 + separador + palavra2;
 }// Resposta: Nessa tentativa de solução do requisito 4, usei os metodos shift e pop. Ao remover o primeiro elemento do array com o metodo shift(), coloco esse elemento na var. palavra1, faço o mesmo com o metodo pop(), onde ele remove o ultimo elemento. O return é a concatenação da palavra, separador(usei a ,) e palavra2.
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
