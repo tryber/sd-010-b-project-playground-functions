@@ -34,6 +34,7 @@ function generatePhoneNumber(parametro) {
   // Se for maior ou igual a 0, menor ou igual a 9
     if (continua) {
       for (let check = 0; check < parametro.length; check++) {
+
         // Pega o valor do número o array na posição check
         let numeroCheck = parametro[check];
         let verificaRepeticao = 0;
@@ -49,6 +50,7 @@ function generatePhoneNumber(parametro) {
         if (verificaRepeticao >= 3) {
           continua = false;
           retorno = "não é possível gerar um número de telefone com esses valores";
+          break;
         } else {
             return "("+parametro[0]+parametro[1]+")"+" "+parametro[2]+parametro[3]+parametro[4]+parametro[5]+parametro[6]+"-"+parametro[7]+parametro[8]+parametro[9]+parametro[10]
         }
