@@ -1,42 +1,18 @@
-function encode(string) {
-  newString = '';
-  string = string.split('');
-  for (let index in string) {
-    if (string[index] == 'a') {
-      string[index] = '1';
-    } else if (string[index] == 'e') {
-      string[index] = '2';
-    } else if (string[index] == 'i') {
-      string[index] = '3';
-    } else if (string[index] == 'o') {
-      string[index] = '4';
-    } else if (string[index] == 'u') {
-      string[index] = '5';
-    }
-    newString += string[index];
-  }
-  return newString;
+function techList(array,name) {
+  let futureLearning = [];
+for (index in array) {
+  let addFutureLearning = {}
+  addFutureLearning.tech = array[index];
+  addFutureLearning.name = name;
+  futureLearning.push(addFutureLearning);
 }
 
-function decode(string) {
-  newString = '';
-  string = string.split('');
-  for (let index in string) {
-    if (string[index] == '1') {
-      string[index] = 'a';
-    } else if (string[index] == '2') {
-      string[index] = 'e';
-    } else if (string[index] == '3') {
-      string[index] = 'i';
-    } else if (string[index] == '4') {
-      string[index] = 'o';
-    } else if (string[index] == '5') {
-      string[index] = 'u';
-    }
-    newString += string[index];
-  }
-  return newString;
+  if (array.length === 0){
+    return "Vazio!";
+  } else {
+    return futureLearning;
+  } 
 }
 
-console.log(encode("hi there aeiou idhawhdoadhojfoeof!"));
-console.log(decode(encode("hi there aeiou idhawhdoadhojfoeof!")))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+"Lucas"))

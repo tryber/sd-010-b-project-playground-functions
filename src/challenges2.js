@@ -1,6 +1,18 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array,name) {
+  let futureLearning = [];
+for (index in array) {
+  let addFutureLearning = {}
+  addFutureLearning.tech = array[index];
+  addFutureLearning.name = name;
+  futureLearning.push(addFutureLearning);
+}
+
+  if (array.length === 0){
+    return "Vazio!";
+  } else {
+    return futureLearning;
+  } 
 }
 
 // Desafio 11
