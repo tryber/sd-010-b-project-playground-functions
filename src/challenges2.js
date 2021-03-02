@@ -101,8 +101,6 @@ function hydrate(toReplace) {
   return toReturn;
 }
 
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'))
-
 module.exports = {
   generatePhoneNumber,
   techList,
