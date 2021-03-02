@@ -22,7 +22,7 @@ function splitSentence(string) {
     if (string[indexString] === " " || indexString === string.length) {
       array.push(palavra);
       palavra = "";
-    }else  {
+    } else {
       palavra = palavra + string[indexString];
     }
   }
@@ -37,8 +37,10 @@ function concatName(arrayString) {
   return ultimo  + ", " + primeiro;
 }
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontos = ((wins * 3 ) + (ties * 1));
+  return pontos; 
 }
 // Desafio 6
 function highestCount() {
@@ -71,4 +73,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- console.log(concatName(["captain", "my", "captain"]));
+ console.log(footballPoints(1,2));
