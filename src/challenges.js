@@ -53,16 +53,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(listOfNum) {
-  let hNumber = 0;
-  let repeatCount = 0;
-  for (let i = 0; i < listOfNum.length; i += 1) {
-    if (listOfNum[i] > hNumber) {
-      hNumber = listOfNum[i];
+function highNumber(arrayNumber) {
+  let highNum = 0;
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+    if (arrayNumber[i] > highNum) {
+      highNum = arrayNumber[i];
     }
   }
-  for (let j = 0; j < listOfNum.length; j += 1) {
-    if (listOfNum[j] === hNumber) {
+  return highNum;
+}
+
+function highestCount(listOfNum) {
+  let hNumber = highNumber(listOfNum);
+  let repeatCount = 0;
+  for (let i = 0; i < listOfNum.length; i += 1) {
+    if (listOfNum[i] === hNumber) {
       repeatCount += 1;
     }
   }
@@ -70,8 +75,27 @@ function highestCount(listOfNum) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function calcDist(mouse, cat) {
+  let dist = 0;
+  if (mouse > cat) {
+    dist = mouse - cat;
+  } else {
+    dist = cat - mouse;
+  }
+  return dist;
+}
+function catAndMouse(mouse, cat1, cat2) {
+  let dis1 = calcDist(mouse, cat1);
+  let dis2 = calcDist(mouse, cat2);
+  let result = '';
+  if (dis1 < dis2) {
+    result = 'cat1';
+  } else if (dis1 === dis2) {
+    result = 'os gatos trombam e o rato foge';
+  } else {
+    result = 'cat2';
+  }
+  return result;
 }
 
 // Desafio 8
