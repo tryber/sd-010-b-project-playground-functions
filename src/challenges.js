@@ -39,25 +39,23 @@ function footballPoints(wins, ties) {
 }
 // console.log(footballPoints(1, 2));
 
-// Desafio 6
+// Desafio 6 dica de pegar maior com função no site: https://backefront.com.br/encontrar-maior-numero-array/
 function highestCount(numeros) {
-  let maiorNumero = numeros[0];
+  let maiorNumero = Math.max(...numeros);
   let contadorMaiorNumero = 0;
-
-  for (let i = 0; i < numeros.length; i += 1) {
-    if (maiorNumero > numeros[i]) {
-      maiorNumero = numeros[i];
-      contadorMaiorNumero = 1;
-    } else if (maiorNumero === numeros[i]) {
-      maiorNumero = numeros[i];
-      contadorMaiorNumero += 1;
-    } else if (maiorNumero < numeros[i]) {
-      contadorMaiorNumero = contadorMaiorNumero;
+  console.log(maiorNumero);
+  for (key in numeros) {
+    if (numeros[key] == maiorNumero) {
+      contadorMaiorNumero +=1;
     }
   }
+
   return contadorMaiorNumero;
 }
-let numeros = [9, 1, 2, 3, 9, 5, 7];
+let numero = [9, 1, 9, 3, 9, 5, 7];
+console.log(highestCount(numero));
+
+
 // console.log(highestCount(numeros));
 
 // Desafio 7
@@ -105,7 +103,7 @@ let numerosfizzbuz = [2, 15, 7, 9, 45];
 // Desafio 9 Busquei orientação para resolver o item no site: https://pt.stackoverflow.com/questions/170/qual-a-forma-correta-de-se-fazer-uma-substitui%C3%A7%C3%A3o-regular-em-javascript-para-tod
 function encode(frase) {
   let fraseTrocada;
-  
+
   fraseTrocada = frase.split('a').join(1);
   fraseTrocada = fraseTrocada.split('e').join(2);
   fraseTrocada = fraseTrocada.split('i').join(3);
