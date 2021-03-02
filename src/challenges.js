@@ -11,14 +11,15 @@ function compareTrue(first, second) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let result = base * height / 2;
+  let result = (base * height) / 2;
   return result;
-
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(fullWord) {
+  // função split aprendida junto ao site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings
+let arrayWord = fullWord.split("");
+return arrayWord;
 }
 
 // Desafio 4
