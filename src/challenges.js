@@ -19,9 +19,12 @@ function calcArea(base, height) {
 console.log(calcArea(c, d))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Entendimento com o Plantão e com link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split#usando_split
+function splitSentence(string) {
+  let fraseSeparada = string.split(" ");
+  return fraseSeparada
 }
+console.log(splitSentence("vamo que vamo"))
 
 // Desafio 4
 function concatName() {
