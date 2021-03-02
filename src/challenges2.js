@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techs, name) {
   let ordenedList = techs.sort();
-  resultList = [];
+  let resultList = [];
   for (let index = 0; index < ordenedList.length; index += 1) {
     resultList.push(list = {
       tech: techs[index],
@@ -10,7 +10,6 @@ function techList(techs, name) {
   }
   return resultList;
 }
-
 
 
 
