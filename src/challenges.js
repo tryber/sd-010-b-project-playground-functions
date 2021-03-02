@@ -6,21 +6,21 @@ function compareTrue(valor1, valor2) {
     return false;
   }
 }
-//console.log(compareTrue(false,true));
+// console.log(compareTrue(false,true));
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2)
 }
-//console.log(calcArea(10,50));
+// console.log(calcArea(10,50));
 
 // Desafio 3
 function splitSentence(str) {
 
-  //Busquei orientação para resolver o item no site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
+  // Busquei orientação para resolver o item no site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
   let fraseDividida = str.split(" ");
   return fraseDividida;
 }
-//console.log(splitSentence("Mariana Mohr Silveira"));
+// console.log(splitSentence("Mariana Mohr Silveira"));
 
 // Desafio 4
 function concatName(listaNomes) {
@@ -28,20 +28,37 @@ function concatName(listaNomes) {
   let nomes = listaNomes[tamanhoLista - 1] + ", " + listaNomes[0];
   return nomes;
 }
-//let listaNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-//console.log(concatName(listaNomes));
+// let listaNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// console.log(concatName(listaNomes));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontosTotais = ((wins * 3) + (ties * 1))
   return pontosTotais;
 }
-console.log(footballPoints(1, 2));
+// console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maiorNumero = numeros[0];
+  let contadorMaiorNumero = 0;
+
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (maiorNumero > numeros[i]) {
+      maiorNumero = numeros[i];
+      contadorMaiorNumero = 1;
+    } else if(maiorNumero ==  numeros[i]) {
+      maiorNumero = numeros[i];
+      contadorMaiorNumero += 1;
+    }else if(maiorNumero < numeros[i]){
+  contadorMaiorNumero = contadorMaiorNumero;
+
+    }
+  }
+  return contadorMaiorNumero;
 }
+// let numeros = [0, 0, 0];
+// console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse() {
