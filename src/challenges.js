@@ -72,11 +72,43 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let vowels = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let result = '';
+
+  for (let letter of word) {
+    if (vowels[letter]) {
+      result += vowels[letter];
+    } else {
+      result += letter;
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+function decode(word) {
+  let vowels = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let result = '';
+
+  for (let letter of word) {
+    if (vowels[letter]) {
+      result += vowels[letter];
+    } else {
+      result += letter;
+    }
+  }
+  return result;
 }
 
 module.exports = {
