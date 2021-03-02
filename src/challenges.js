@@ -16,10 +16,10 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arr) {
   let qtt = arr.length;
-  let firstString = arr[0]
-  let lastString = arr[qtt-1]
+  let firstString = arr[0];
+  let lastString = arr[qtt - 1];
 
-  return `${lastString}, ${firstString}`
+  return `${lastString}, ${firstString}`;
 }
 
 // Desafio 5
