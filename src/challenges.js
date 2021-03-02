@@ -1,19 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  let subject = 'javaScript';
-  let subject2 = 'unix';
-  let psubject3 = 'cobol';
-  let subject4 = 'php';
-
-  let curriculoTrybe = ''
-
-  if (curriculoTrybe = subject && subject2) {
+function compareTrue(a,b) {
+  a = ''
+  b = ''
+  if (compareTrue = true && true) {
     return true
-  } else {
+  } else if (compareTrue = true && false) {
+    return false
+  } else if (compareTrue = false && false) {
     return false
   }
-  
-}
+} 
 
 // Desafio 2
 function calcArea() {
@@ -54,6 +50,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
