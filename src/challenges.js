@@ -4,11 +4,11 @@ function compareTrue(boolean1, boolean2) {
 
   if (boolean1 === boolean2 && boolean2 === boolean1) {
     return true;
-
-  }else if (boolean1 !== boolean2 && boolean2 !== boolean1) {
-    return false
-  }
-};
+  }else if(boolean1 !== boolean2 && boolean2 !== boolean1) {
+    return false;
+  }else {
+    return false;
+  };
 
 // Desafio 2
 function calcArea() {
