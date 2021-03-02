@@ -1,4 +1,6 @@
 // Desafio 1
+console.log ("Hello World!")
+
 function compareTrue() {
   // seu código aqui
 }
