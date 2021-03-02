@@ -15,7 +15,6 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-
   // Busquei orientação para resolver o item no site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
   let fraseDividida = str.split(" ");
   return fraseDividida;
@@ -47,12 +46,11 @@ function highestCount(numeros) {
     if (maiorNumero > numeros[i]) {
       maiorNumero = numeros[i];
       contadorMaiorNumero = 1;
-    } else if(maiorNumero ==  numeros[i]) {
+    } else if (maiorNumero === numeros[i]) {
       maiorNumero = numeros[i];
       contadorMaiorNumero += 1;
-    }else if(maiorNumero < numeros[i]){
-  contadorMaiorNumero = contadorMaiorNumero;
-
+    } else if (maiorNumero < numeros[i]) {
+      contadorMaiorNumero = contadorMaiorNumero;
     }
   }
   return contadorMaiorNumero;
@@ -61,9 +59,21 @@ function highestCount(numeros) {
 // console.log(highestCount(numeros));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let winerCat;
+  if (cat1 > cat2) {
+    winerCat = "cat2";
+  } else if (cat1 < cat2) {
+    winerCat = "cat1";
+  } else {
+    winerCat = "Os gatos trombam e o rato foge!";
+  }
+  return winerCat;
 }
+let cat1 = 5;
+let cat2 = 5;
+let mouse = 0;
+console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
 function fizzBuzz() {
