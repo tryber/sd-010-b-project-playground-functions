@@ -15,10 +15,15 @@ function calcArea(base, height) {
 result = calcArea(10, 50);
 console.log(result);
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Desafio 3 - Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+let phrase = 'go Trybe';
+function splitSentence(string) {
+  let splitWord = string.split(' ');
+  return splitWord;
 }
+result = splitSentence(phrase);
+console.log(result);
 
 // Desafio 4
 function concatName() {
