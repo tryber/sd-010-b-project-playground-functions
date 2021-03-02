@@ -98,12 +98,12 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(cat1, cat2) {
   // seu código aqui
   //variaveis que receberao as posições dos gatos e do rato
   let positionCat1 = cat1;
   let positionCat2 = cat2;
-  let positionMouse = 0;
+  let mouse = 0;
 
   if ((mouse - positionCat1) > (mouse - positionCat2)) {
     return ('cat2');
