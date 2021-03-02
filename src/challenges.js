@@ -29,12 +29,20 @@ function splitSentence(anyString) {
   }
   return array;
 }
-let string = 'go Trybe';
-console.log(splitSentence(string));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let firstItem = '';
+  let lastItem = '';
+  for(let index in arrayString){
+    if(index == 0){
+      firstItem = arrayString[index];
+    } else if (index == (arrayString.length -1)){
+      lastItem = arrayString[index];
+    }
+  }
+  finalString = lastItem + ", " + firstItem;
+  return finalString
 }
 
 // Desafio 5
