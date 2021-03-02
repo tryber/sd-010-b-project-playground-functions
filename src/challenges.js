@@ -1,23 +1,13 @@
 // Desafio 1 iniciado no dia 02 de março de 2021 as 14:58 h
-function compareTrue(valorUm, valor2) {
+function compareTrue(valorUm, valorDois) {
   // seu código aqui
-  let trueOrFalse;
   if (valorUm && valorDois == true) {
-    console.log(trueOrFalse = true);
-    return trueOrFalse = true;
+    return true;
   } else {
-    console.log(trueOrFalse = false);
-    return trueOrFalse = false;
+    return false;
   }
 }
-
-function compareTrue(value1, value2) {
-  let checker = false;
-  if (value1 && value2) {
-    checker = true;
-  }
-  return checker;
-}
+console.log(trueOrFalse);
 
 // Desafio 2
 function calcArea() {
