@@ -94,6 +94,7 @@ function highestCount(arrayNumbers) {
       repeatedNumbers += 1;
     }
   }
+  return (repeatedNumbers);
 }
 
 // Desafio 7
