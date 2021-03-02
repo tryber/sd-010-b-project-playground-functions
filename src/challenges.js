@@ -2,7 +2,7 @@
 function compareTrue(valor1, valor2) {
   // seu código aqui
   let compardor = false;
-  if (valor1 === true && valor2 === true){
+  if (valor1 === true && valor2 === true) {
     compardor = true;
   }
   return compardor
@@ -18,7 +18,7 @@ function splitSentence(string) {
   // go trybe
   let array = [];
   let palavra = "";
-  for (indexString = 0; indexString <= string.length ; indexString += 1) {
+  for (let indexString = 0; indexString <= string.length ; indexString += 1) {
     if (string[indexString] === " " || indexString === string.length) {
       array.push(palavra);
       palavra = "";
@@ -29,8 +29,14 @@ function splitSentence(string) {
   return array;
 }
 // Desafio 4
-function concatName() {
+function concatName(arrayString) {
   // seu código aqui
+  let primeiro = arrayString[0];
+  let ultimo = arrayString[arrayString.length - 1];
+  let uniao = [];
+  uniao.push(primeiro);
+  uniao.push(ultimo);
+  return uniao.toString();
 }
 // Desafio 5
 function footballPoints() {
@@ -67,4 +73,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- //console.log(splitSentence('vamo que vamo'));
+ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
