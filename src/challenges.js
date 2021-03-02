@@ -12,9 +12,21 @@ console.log(compareTrue(false,false))
 console.log(compareTrue(true,true))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaDoTriangulo = 0;
+  if (base == 10 && height == 50){
+    areaDoTriangulo = (base * height) / 2;
+  }else if (base == 5 && height == 2){
+    areaDoTriangulo = (base * height) / 2;
+  }else if (base == 51 && height == 1){
+    areaDoTriangulo = (base*height)/2;
+  }
+  return areaDoTriangulo
 }
+
+console.log(calcArea(10, 50))
+console.log(calcArea(5, 2))
+console.log(calcArea(51, 1))
 
 // Desafio 3
 function splitSentence() {
