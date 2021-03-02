@@ -103,14 +103,19 @@ function fizzBuzz(arrayNum) {
   return result
 }
 
-console.log(fizzBuzz([9, 25]))
-
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let newString = string.replace(/a/g, "1").replace(/e/g, "2").replace(/i/g, "3").replace(/o/g, "4").replace(/u/g, "5")
+  return newString
 }
-function decode() {
+
+//(PT-BR) Para este exercício também fiz pesquisas na internet, e encontrei dois materiais que me ajudaram para resolver a questão: https://stackoverflow.com/questions/44324892/how-can-i-replace-multiple-characters-in-a-string; https://www.tutorialrepublic.com/faq/how-to-replace-character-inside-a-string-in-javascript.php#:~:text=Answer%3A%20Use%20the%20JavaScript%20replace,the%20global%20(%20g%20)%20modifier.
+
+function decode(string2) {
   // seu código aqui
+  let newString2 = string2.replace(/1/g, "a").replace(/2/g, "e").replace(/3/g, "i").replace(/4/g, "o").replace(/5/g, "u")
+  return newString2
 }
 
 module.exports = {
