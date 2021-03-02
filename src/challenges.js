@@ -21,9 +21,9 @@ console.log(splitSentence ( "go Trybe" ));
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Desafio 4
-function concatName(array) {
-  let resultado  =  array [ array . lenth - 1 ]  +  ','  +  matriz [ 0 ] ;
-  return resultado;
+function concatName(lista) {
+  let concat = lista[lista.length -1] + ", " + lista[0];
+  return concat;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
