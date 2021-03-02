@@ -1,21 +1,18 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
-  if (param1 === true && param2 === true) {
-    return true;
-  }
-
-  else {
-    return false;
-  }
-  console.log(compareTrue(param1, param2));
+    if(param1 === param2) {
+      return true;
+    }else
+      return false;
 }
-
+ 
 // Desafio 2
-function calcArea() {
-  
+function calcArea(height, base) {
+  // seu código aqui
+  return (height * base) / 2;
 }
-
+ 
 // Desafio 3
 function splitSentence() {
   // seu código aqui
