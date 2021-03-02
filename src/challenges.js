@@ -1,20 +1,20 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  let result = false;
+  result = false;
   if (a === b && b === a) {
-    return result = true;
+    result = true;
   }
-  return result
+  return result;
 }
-console.log(compareTrue('thiago', 'thiago'))
+console.log(compareTrue('jonas', 'thiago'));
 
 // Desafio 2
 function calcArea(base, altura) {
   // seu código aqui
-  return (base*altura)/2
+  return (base * altura) / 2;
 }
-console.log(calcArea(51,1))
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
