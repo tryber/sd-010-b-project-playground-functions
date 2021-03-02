@@ -26,8 +26,8 @@ function concatName(contacts) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (ties + (wins * 3));
 }
 
 // Desafio 6
