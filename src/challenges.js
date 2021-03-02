@@ -51,15 +51,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1;
-  let distanceCat2;
-  if (cat1 <= 0 || cat2 <= 0) {
-    distanceCat1 = cat1 + mouse;
-    distanceCat2 = cat2 + mouse;
-  } else {
-    distanceCat1 = cat1 - mouse;
-    distanceCat2 = cat2 - mouse;
-  }
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
@@ -68,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-
+console.log(catAndMouse(1, 0, 2));
 // auxiliary functions Desafio 8
 function divisibleByThree(number) {
   if (number % 3 === 0) {
