@@ -1,32 +1,40 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   let isTrue = false;
-  if ((valor1 && valor2)){
+  if ((valor1 && valor2)) {
     isTrue = true;
-  } 
-    return isTrue;
+  }
+  return isTrue;
 }
 
 // Desafio 2
-function calcArea(base, height) { 
+function calcArea(base, height) {
   return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  let split = []
-  let temp = []
-  for(cont=0;cont<frase.length;cont++) {
-    if (" " == frase[cont]) {
-      split.push(temp)
-      temp=[]
-      cont+=1
+  let split = [];
+  let temp = [];
+  for (let cont = 0; cont < frase.length; cont += 1) {
+    if (" " ===frase[cont]) {
+      split.push(temp);
+      temp = [];
+      cont += 1;
     } 
-    temp+=frase[cont];
+    temp += frase[cont];
   }
   split.push(temp);
-  console.log(split);
+  return split;
 }
+
+// Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
+
+// Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
+
+// Retorne o valor ['foguete'] se a função receber a string 'foguete'
+
+
 
 // Desafio 4
 function concatName() {
@@ -39,8 +47,20 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maior = 0;
+  let contador = 0;
+  for (let cont = 0; cont < numeros.length; cont += 1) {
+    if (numeros[cont] > maior){
+      maior = numeros[cont];
+    }
+  }
+  for (let cont = 0; cont < numeros.length; cont += 1) {
+    if (numeros[cont] == maior){;
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
