@@ -1,14 +1,14 @@
 // Desafio 1
 function compareTrue() {
     // Desafio 1 por Barrisenn Gonçalo
-function compareTrue(a, b) {
-  let confirma=false;
-  if (a === b && !confirma) {
-    confirma = true;
+  if (a === true && b === true) {
+    return true;
   }
-  return confirma;
-  return a === true && b === true ? true : false;
-    
+
+  else {
+    return false;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -66,4 +66,4 @@ module.exports = {
     footballPoints,
     highestCount,
     splitSentence,
-};
+}
