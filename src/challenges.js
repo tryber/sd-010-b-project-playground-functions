@@ -29,7 +29,6 @@ function concatName(concatString) {
   let array = concatString.pop();
   return (array + ' , ' + concatString[0]); 
 }
-
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
@@ -79,29 +78,75 @@ console.log(catAndMouse(0, 0, 0));
 // https://www.w3schools.com/js/js_math.asp
 
 // Desafio 8
-function fizzBuzz(arr) {
-  let array = [];
-  for (let i = 0; i < arr.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      array.push('fizzBuzz');
-    } else if (array[i] % 3 === 0){
-      array.push('fizz');
-    } else if (array[i] % 5 === 0) {
-      array.push('buzz');
+function fizzBuzz(array) {
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      result.push('buzz')
     } else {
-      array.push('bug');
+      result.push('bug!');
     }
   }
-  return array;
+  return result;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrayString) {
+  let result = '';
+  let change = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let index in arrayString) {
+    let status = false;
+    for (let item in change) {
+      if (arrayString[index] === item) {
+        result += change[item];
+        status = true;
+      }
+    }
+    if (status === false) {
+      result += arrayString[index];
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"))
+
+function decode(arrayString) {
+  let result = '';
+  let change = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let index in arrayString) {
+    let status = false;
+    for (let item in change) {
+      if (arrayString[index] === item) {
+        result += change[item];
+        status = true;
+      }
+    }
+    if (status === false) {
+      result += arrayString[index];
+    }
+  }
+  return result;
 }
+console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
