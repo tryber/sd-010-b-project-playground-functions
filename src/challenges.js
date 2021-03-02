@@ -27,10 +27,10 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
-  for(let index = 0;index < wins;index ++){
+  for (let index = 0; index < wins; index++) {
     pontos = pontos + 3;
   }
-  for(let index = 0;index < ties;index ++){
+  for (let index = 0; index < ties; index++) {
     pontos = pontos + 1;
   }
   return pontos;
