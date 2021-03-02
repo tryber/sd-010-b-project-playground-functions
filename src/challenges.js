@@ -55,7 +55,7 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
+  return  Math . abs ( cat1  -  rato )  <  Matem . abs ( cat2  -  rato ) ? "cat1" : Matemática . abs ( cat2  -  rato )  <  Matem . abs ( cat1  -  rato ) ? "cat2" : "os gatos trombam e o rato foge" ;
 }
 
 // Desafio 8
