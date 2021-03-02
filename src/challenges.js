@@ -2,11 +2,16 @@
 function compareTrue(valueOne, valueTwo) {
   let response = valueOne && valueTwo;
   console.log(response);
+
+  return response;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  let response = (base * height) / 2;
+  console.log(response);
 
+  return response;
 }
 
 // Desafio 3
@@ -47,7 +52,8 @@ function decode() {
   // seu código aqui
 }
 
-compareTrue(true, true);
+compareTrue(false, false);
+calcArea(10,50);
 
 module.exports = {
   calcArea,
