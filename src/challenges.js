@@ -9,7 +9,7 @@ function compareTrue(valor1, valor2) {
     return false;
   }
 }
-console.log(compareTrue());
+compareTrue();
 
 ////////////////////////////////////////////////////////////////////////////////////
 // Desafio 2
