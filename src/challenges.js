@@ -1,15 +1,16 @@
 // Desafio 1
 function compareTrue() {
 // Desafio 1 por Barrisenn Gonçalo
-function compareTrue(firstCondition, secondCondition) {
-  if (firstCondition === true && secondCondition === true) {
-    return true;
-  }
+function  compareTrue ( valor1 ,  valor2 )  {
+  const  bool  =  valor1  &&  valor2 ;
 
-  else {
-    return false;
-  }
-  return false;
+  return  bool ;
+}
+
+const  bool1  =  true ;
+const  bool2  =  true ;
+
+console . log ( compareTrue ( bool1 ,  bool2 ) ) ;
 }
 
 // Desafio 2
