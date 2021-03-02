@@ -75,11 +75,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayFinal = [];
   for (let i = 0; i < array.length; i++){
-      if(array[i] % 3 === 0 && array[i] % 5 === 0){
+      if(array[i] % 3 == 0 && array[i] % 5 == 0){
        arrayFinal.push("fizzbuzz");
-   } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+   } else if (array[i] % 5 == 0 && array[i] % 3 != 0) {
        arrayFinal.push("buzz");
-   } else if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+   } else if (array[i] % 3 == 0 && array[i] % 5 != 0) {
        arrayFinal.push("fizz");
    } else {
        arrayFinal.push("bug!");
@@ -89,9 +89,10 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  
 }
+
 function decode() {
   // seu código aqui
 }
