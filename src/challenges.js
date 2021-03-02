@@ -25,10 +25,13 @@ function splitSentence(Strings) {
 
 // Desafio 4
 function concatName() {
-  return (`${array[array.length -1]},${array[0]}`);
+  return `${array[0]}, ${array[array.length -1]}`;
  console.log(concatName(["Lucas", "Cassiano", "Ferraz" ,"paolilo"]));
 
 }
+
+
+
 
 // Desafio 5
 function footballPoints() {
