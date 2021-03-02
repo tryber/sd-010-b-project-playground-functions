@@ -27,38 +27,88 @@ function splitSentence() {
 // Desafio 4
 function concatName() {
 
-  let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
-  let newArray = []
+  let array = ['captain', 'my', 'captain'];
+  let newArray = [];
   for(let index =0; index < array.length; index += 1){
 
     if(index==0 || (index == (array.length -1))){
-      newArray.unshift(array[index])
+      newArray.unshift(array[index]);
     }
   }
-  console.log(newArray)
-  console.log(array.length -1)
+  console.log(newArray);
+
 
 }
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+
+let wins = 1;
+let ties = 2;
+let points = wins*3 + ties*1;
+console.log(`${points} pontos.`);
+
+
+
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
+let array = [0,0,0]
+let maior = 0
+let count = 0
+for(let index = 0; index < array.length; index +=1 ){
+
+  if(maior < array[index]){
+    maior = array[index]
+  }
 }
+for(let index = 0;index < array.length; index +=1){
+  if(maior == array[index]){
+    count += 1
+  }
+}
+console.log(count)
+}
+
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+
+  let cat1 = 1;
+  let cat2 = 2;
+  let mouse = 5;
+  let distcat1 = (mouse-cat1);
+  let distcat2 = (mouse-cat2) ;
+  if(distcat1 < distcat2){
+    console.log("cat1")
+  }else if( distcat2 < distcat1){
+    console.log("cat2")
+  }else{
+    console.log("os gatos trombam e o rato foge")
+  }
+
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
-}
+  let array = [2, 15, 7, 9, 45];
+  let fizzBuzz = [];
+  for(let index = 0; index < array.length; index += 1){
+    if((array[index] % 3 == 0) && (array[index] % 5 != 0)){
+      fizzBuzz.push("fizz")
+    }else if((array[index] % 5 == 0) && (array[index] % 3 != 0)){
+      fizzBuzz.push('buzz')
+    }else if((array[index] % 3 == 0) && (array[index] % 5 == 0)){
+      fizzBuzz.push('fizzBuzz')
+    }else{
+      fizzBuzz.push("bug!")
+    }
+    }
+  console.log(fizzBuzz)
+  }
+
 
 // Desafio 9
 function encode() {
