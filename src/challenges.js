@@ -1,7 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1,bool2) {
+  if(bool1 === bool2){
+    bool3 = true;
+  }else{
+    bool3 = false;
+  }
+  console.log(bool3);
 }
+
+compareTrue(-0,-0);
 
 // Desafio 2
 function calcArea() {
@@ -14,9 +21,13 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nome1,nome2) {
+  let nome3 = "";
+  nome3 = nome1 + " " + nome2;
+  console.log(nome3);
 }
+
+//concatName("Aderson Santos","da Silva");
 
 // Desafio 5
 function footballPoints() {
