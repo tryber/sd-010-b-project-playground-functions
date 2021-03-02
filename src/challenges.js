@@ -4,14 +4,11 @@ function compareTrue(firstCondition, secondCondition) {
   if (firstCondition === true && secondCondition === true) {
     return true;
   }
-
-  else {
-    return false;
-  }
+  return false;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
-// console.log(compareTrue(1 + 2 === 4, false));
+// console.log(compareTrue(1 + 2 === 3, true));
 
 // Desafio 2
 function calcArea() {
