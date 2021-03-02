@@ -43,8 +43,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(umaLista) {
+  let out = [];
+  for (let key in umaLista) {
+    if (umaLista[key] % 3 == 0 && umaLista[key] % 5 == 0){
+      out.push("fizzBuzz");
+    }else if (umaLista[key] % 3 == 0){
+      out.push("fizz");
+    }else if (umaLista[key] % 5 == 0){
+      out.push("buzz");
+    }else{
+      out.push("bug!")
+    }
+  }
+  return out;
 }
 
 // Desafio 9
