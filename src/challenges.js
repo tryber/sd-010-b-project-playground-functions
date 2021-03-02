@@ -25,9 +25,9 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName(concatString) {
-  let array = concatString.pop();
-  return (array + ' , ' + concatString[0]); 
+function concatName(array) {
+  let string = `${array[array.length - 1]}, ${array[0]}`;
+  return string;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -43,25 +43,29 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount(repeatM) {
-  let maiorN = repeatM[0];
-  let qMaior = 0;
-  for (let i = 0; i < repeatM.length; i += 1) {
-    if (repeatM[i] > maiorN) {
-      qMaior = repeatM[i];
+function highestCount(array) {
+  let helper = 0;
+  for (const i of array) {
+    if (Math.max.apply(null, array) === i) {
+      helper += 1;
     }
   }
-  for (let j = 0; j < repeatM.length; j += 1) {
-    if (repeatM[j] === maiorN) {
-      qMaior += 1;
-    }
-  }
-  return qMaior;
+  return helper;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
-
+for (let i = 0; i < repeatM.length; i += 1) {
+  if (repeatM[i] > maiorN) {
+    qMaior = repeatM[i];
+  }
+}
+for (let j = 0; j < repeatM.length; j += 1) {
+  if (repeatM[j] === maiorN) {
+    qMaior += 1;
+  }
+}
+return qMaior;
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) !== Math.abs(mouse - cat2)) {
