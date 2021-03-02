@@ -1,5 +1,5 @@
 // Desafio 1
-let a = 1, b = 1;
+// let a = 1, b = 1;
 // console.log(compareTrue(a, b));
 function compareTrue(fisrtValue, secondValue) {
   if ((fisrtValue == true) && (secondValue == true)) {
@@ -10,8 +10,10 @@ function compareTrue(fisrtValue, secondValue) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+// let base = 10, height = 15;
+// console.log(calcArea(base, height));
+function calcArea(base, height) {
+  return ((base * height)/2);
 }
 
 // Desafio 3
