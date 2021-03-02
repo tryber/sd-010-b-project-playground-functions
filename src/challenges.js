@@ -96,10 +96,20 @@ console.log(fizzBuzz([2, 15, 7, 9, 45])); // -> ['bug!', 'fizzBuzz', 'bug!', 'fi
 console.log(fizzBuzz([7, 9])); // ->  ['bug!', 'fizz']
 console.log(fizzBuzz([9, 25])); // -> ['fizz', 'buzz']
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Requisito 9 - Criar duas funções, uma que codifica trocando vogais por números e outra que decodifica a mensagem
+function encode(string) {
+  string = string.split('').map((char) => {
+    if (char === 'a') char = '1';
+    if (char === 'e') char = '2';
+    if (char === 'i') char = '3';
+    if (char === 'o') char = '4';
+    if (char === 'u') char = '5';
+    return char;
+  }).join('');
+  return string;
 }
+console.log(encode('hi there!')); // -> 'h3 th2r2!'
+
 function decode() {
   // seu código aqui
 }
