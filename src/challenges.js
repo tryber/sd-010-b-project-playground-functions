@@ -1,9 +1,13 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 === true && boolean2 === false) {
-    return true;
+  let bolfalse = false;
+  if (boolean1 === true && boolean2 === true) {
+    bolfalse = true;
   }
+  return bolfalse;
 }
+console.log(compareTrue(true, false));
+
 
 // Desafio 2
 function calcArea(base, height) {
