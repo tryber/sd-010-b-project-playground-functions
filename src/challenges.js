@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(a,b) {
-  if(a === true && b === true){
+function compareTrue(a, b) {
+  if (a === true && b === true){
     return true;
   } else {
     return false;
@@ -8,14 +8,13 @@ function compareTrue(a,b) {
 }
 // Desafio 2
 function calcArea(base,height) {
-
   let area = ( base * height)/2
     return area;
 }
 // Desafio 3
-function splitSentence(frase) {
-     frase = ("foguete").split('');
-      return frase;
+function splitSentence(palavra) {
+  frase = (palavra).split(' ');
+    return (frase);
 }
 // Desafio 4
 function concatName(array) {
@@ -24,7 +23,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins,ties) {
 let points = wins * 3 + ties * 1;
-  return (`${points}`);
+  return (`${points} pontos`);
 }
 // Desafio 6
 function highestCount(array) {
