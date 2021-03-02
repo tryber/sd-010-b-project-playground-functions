@@ -16,11 +16,14 @@ console.log(compareTrue(a, a));
 console.log(compareTrue(b, b));
 
 // Desafio 2
-
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
-
+  return (base * height) / 2;
 }
+// console log
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
