@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 == true && param2 == true){
+  if (param1 === true && param2 === true){
     return true;
   }else{
     return false;
-  }
-  
+  }  
 }
 
 // Desafio 2
@@ -15,8 +14,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  let array = text.split(' ');
+  return array;
+  // fonte de conhecimento 
+  //developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 }
 
 // Desafio 4
