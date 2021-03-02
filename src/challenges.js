@@ -63,24 +63,23 @@ function catAndMouse(mouse, cat1, cat2) {
     let poscat2 = Math.abs(mouse - cat2)
 
    if (poscat1 == poscat2){
-      mensagem = "os gatos trombam e o rato foge"
+      return "os gatos trombam e o rato foge"
    } else if (poscat1 < poscat2){
-      mensagem = "cat1"
+      return "cat1";
    } else {
-      mensagem = "cat2"
+      return "cat2";
    }
-   return mesagem
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let arrayFinal = [];
   for (let i = 0; i < array.length; i++){
-      if(array[i] % 3 == 0 && array[i] % 5 == 0){
+      if(array[i] % 3 === 0 && array[i] % 5 === 0){
        arrayFinal.push("fizzbuzz");
-   } else if (array[i] % 5 == 0) {
+   } else if (array[i] % 5 === 0) {
        arrayFinal.push("buzz");
-   } else if (array[i] % 3 == 0) {
+   } else if (array[i] % 3 === 0) {
        arrayFinal.push("fizz");
    } else {
        arrayFinal.push("bug!");
