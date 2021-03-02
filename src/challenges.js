@@ -2,9 +2,9 @@
 function compareTrue(a, b) {
  if(a === true && b === true ) {
   true;
- } else(a === false || b === false );{
+ } else(a === false || b === false )
   false;
-  }
+  
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -13,10 +13,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  arrayString = string.split(" ");
+  return arrayString;
 }
-
+console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName() {
   // seu código aqui
