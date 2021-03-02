@@ -5,7 +5,7 @@ function compareTrue(booleanValue1, booleanValue2) {
   else booleanReturn = false;
   return booleanReturn;
 }
-console.log(compareTrue(true, true));
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -43,8 +43,19 @@ function highestCount(arrNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let diffMouseCat1 = mouse - cat1;
+  let diffMouseCat2 = mouse - cat2;
+  let message;
+
+  if (diffMouseCat1 > diffMouseCat2) {
+    message = 'cat2';
+  } else if (diffMouseCat2 > diffMouseCat1) {
+    message = 'cat1';
+  } else {
+    message = 'os gatos trombam e o rato foge';
+  }
+  return message;
 }
 
 // Desafio 8
