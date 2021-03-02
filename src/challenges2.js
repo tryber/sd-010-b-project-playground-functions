@@ -14,11 +14,47 @@ function techList(arrayTech,name) {
   }
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayNumber) {
+  // meu código aqui
+  if(verifycaOccurr(arrayNumber)||minZeroMaxNine(arrayNumber)){
+    return "não é possível gerar um número de telefone com esses valores";
+  } else{
+    let numJoin = arrayNumber.join('')
+    return `(${numJoin.slice(0,2)}) ${numJoin.slice(2,7)}-${numJoin.slice(7)}`;
+  }
+}
+
+function verifycaOccurr(toVerify){
+  let quantyOccurre = 0;
+  let maxQuantyOccurre = 0;
+  for (let numVerificado = 0; numVerificado < toVerify.length; numVerificado++) {
+    for (let numVerificando = 0; numVerificando < toVerify.length; numVerificando++){
+      if(toVerify[numVerificado] == toVerify[numVerificando]){
+        quantyOccurre++;
+      }
+    }
+    if(maxQuantyOccurre < quantyOccurre){
+      maxQuantyOccurre = quantyOccurre;
+    }
+    quantyOccurre =0
+  }
+  if (maxQuantyOccurre > 2){
+    return true;
+  }else{
+    return false
+  }
+}
+
+function minZeroMaxNine(toVerify){
+  let existsZero = false; 
+  for (let i = 0; i < toVerify.length; i++) {
+    if(toVerify[i] < 0 || toVerify[i] > 9 || toVerify.length > 11){
+      existsZero = true;
+      break;
+    }    
+  }
+  return existsZero;
 }
 
 // Desafio 12

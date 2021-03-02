@@ -1,23 +1,23 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // meu código aqui
-  if( (value1 == true) && (value2 == true) ){
+  if ((value1 === true && value2 === true)) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // meu código aqui
-  return ((base*height)/2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(toSplit) {
   // meu código aqui
-  return toSplit.split(" ");
+  return toSplit.split(' ');
 }
 
 // Desafio 4
@@ -27,9 +27,9 @@ function concatName(reordArray) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   // meu código aqui
-  return ((wins*3)+(ties*1));
+  return ((wins * 3) + (ties * 1));
 }
 
 // Desafio 6
