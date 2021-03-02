@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue() {
-  let valor1 = 1;
-  let valor2 = 1;
+  let valor1 = true;
+  let valor2 = true;
 
   if (valor1 == valor2 && valor2 == valor1){
     return true;
@@ -9,7 +9,7 @@ function compareTrue() {
     return false;
   }
 }
-compareTrue();
+console.log(compareTrue());
 
 ////////////////////////////////////////////////////////////////////////////////////
 // Desafio 2
