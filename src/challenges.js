@@ -105,13 +105,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat2 = cat2;
   let positionMouse = mouse;
 
-  if ((positionMouse - positionCat1) > (positionMouse - positionCat2)) {
-    return ('cat1');
+  //armazenara o resultado da situação
+  let result = '';
+
+  if ((positionCat1 - positionMouse) > (positionCat2 - positionMouse)) {
+    result = 'cat1';
   } else if ((positionMouse - positionCat1) < (positionMouse - positionCat2)) {
-    return ('cat2');
-  } else {
-    return ('os gatos trombam e o rato foge');
+    result = 'cat2';
+  } else if ((positionMouse - positionCat1) == (positionMouse - positionCat2)){
+    result = 'os gatos trombam e o rato foge';
   }
+  return (result);
 }
 
 // Desafio 8
