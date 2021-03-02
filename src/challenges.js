@@ -25,13 +25,15 @@ function concatName(sentence) {
   let firstWord = sentence[0];
   let lastWord = sentence[sentence.length - 1];
   return lastWord + ", " + firstWord;
-  
+  }
+
+  // Desafio 5
+function footballPoints(wins, ties) {
+  let totalPoints = (wins * 3) + (ties * 1);
+  return totalPoints;
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+console.log(footballPoints(14, 8))
 
 // Desafio 6
 function highestCount() {
