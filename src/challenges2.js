@@ -15,22 +15,42 @@ console.log(techList([], 'Gustavo')); // -> 'Vazio!'
 
 // Requisitos Bônus
 // Requisito 11 - Gerar número de telefone a partir de array respeitando parênteses, traços e espaços.
+function numberCounter(numbers, indice) {
+  let counter = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === numbers[indice]) counter += 1;
+  }
+  return counter;
+}
+
+function validateNumbers(numbers) {
+  let msg = '';
+  for (let num = 0; num < numbers.length; num += 1) {
+    let counter = numberCounter(numbers, num);
+    if (numbers[num] < 0 || numbers[num] > 9 || counter >= 3) {
+      msg = 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return msg;
+}
+
+function writePhoneNumber(numbers) {
+  let phone = '(';
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (i === 2) {
+      phone += ') ';
+    }
+    if (i === 7) phone += '-';
+    phone += numbers[i];
+  }
+  return phone;
+}
+
 function generatePhoneNumber(numbers) {
   if (numbers.length === 11) {
-    let phone = '(';
-    for (let num = 0; num < numbers.length; num += 1) {
-      let counter = 0;
-      for (let i = 0; i < numbers.length; i += 1) {
-        if (numbers[i] === numbers[num]) counter += 1;
-      }
-      if (numbers[num] < 0 || numbers[num] > 9 || counter >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      if (num === 2) phone += ') ';
-      else if (num === 7) phone += '-';
-      phone += numbers[num];
-    }
-    return phone;
+    let msgInvalid = validateNumbers(numbers);
+    if (msgInvalid) return msgInvalid;
+    return writePhoneNumber(numbers);
   }
   return 'Array com tamanho incorreto.';
 }
@@ -50,7 +70,6 @@ console.log(triangleCheck(10, 14, 8)); // -> trues
 function hydrate(string) {
   let reg = /\d+/g;
   let cups = string.match(reg);
-  console.log(cups);
   let sum = 0;
   for (let cup = 0; cup < cups.length; cup += 1) {
     sum += parseInt(cups[cup], 10);

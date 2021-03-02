@@ -74,18 +74,20 @@ console.log(catAndMouse(0, 6, 12)); // -> 'cat1'
 console.log(catAndMouse(0, 5, 5)); // -> 'os gatos trombam e o rato foge'
 
 // Requisito 8 - Verifica se um número é divisível por 3, 5 ou ambos
+function dividedBy(number, divisor1, divisor2) {
+  if (number % divisor1 === 0 && number % divisor2 === 0) return 'fizzBuzz';
+
+  if (number % divisor1 === 0) return 'fizz';
+
+  if (number % divisor2 === 0) return 'buzz';
+
+  return 'bug!';
+}
+
 function fizzBuzz(numbers) {
   let res = [];
-  for (const num in numbers) {
-    if (numbers[num] % 3 === 0 && numbers[num] % 5 === 0) {
-      res.push('fizzBuzz');
-    } else if (numbers[num] % 3 === 0) {
-      res.push('fizz');
-    } else if (numbers[num] % 5 === 0) {
-      res.push('buzz');
-    } else {
-      res.push('bug!');
-    }
+  for (let num = 0; num < numbers.length; num += 1) {
+    res.push(dividedBy(numbers[num], 3, 5));
   }
   return res;
 }
@@ -94,26 +96,48 @@ console.log(fizzBuzz([7, 9])); // ->  ['bug!', 'fizz']
 console.log(fizzBuzz([9, 25])); // -> ['fizz', 'buzz']
 
 // Requisito 9 - Criar duas funções, uma que codifica trocando vogais por números e outra que decodifica a mensagem
+function changeLetter(letter) {
+  let pairs = {
+    a: '1',
+    i: '3',
+    e: '2',
+    u: '5',
+    o: '4',
+  };
+
+  for (const key in pairs) {
+    if (letter === key) letter = pairs[key];
+  }
+  return letter;
+}
+
 function encode(string) {
   string = string.split('');
   for (let char = 0; char < string.length; char += 1) {
-    if (string[char] === 'a') string[char] = '1';
-    if (string[char] === 'e') string[char] = '2';
-    if (string[char] === 'i') string[char] = '3';
-    if (string[char] === 'o') string[char] = '4';
-    if (string[char] === 'u') string[char] = '5';
+    string[char] = changeLetter(string[char]);
   }
   return string.join('');
+}
+
+function changeNumber(number) {
+  let pairs = {
+    1: 'a',
+    3: 'i',
+    2: 'e',
+    5: 'u',
+    4: 'o',
+  };
+
+  for (const key in pairs) {
+    if (number === key) number = pairs[key];
+  }
+  return number;
 }
 
 function decode(string) {
   string = string.split('');
   for (let char = 0; char < string.length; char += 1) {
-    if (string[char] === '1') string[char] = 'a';
-    if (string[char] === '2') string[char] = 'e';
-    if (string[char] === '3') string[char] = 'i';
-    if (string[char] === '4') string[char] = 'o';
-    if (string[char] === '5') string[char] = 'u';
+    string[char] = changeNumber(string[char]);
   }
   return string.join('');
 }
