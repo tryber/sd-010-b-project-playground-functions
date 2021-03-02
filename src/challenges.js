@@ -1,7 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable max-lines-per-function */
-/* eslint-disable no-plusplus */
-
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
   let response = valueOne && valueTwo;
@@ -47,20 +43,12 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  let response;
-  let counter = 0;
-  let larger = 0;
+  let response; let counter = 0; let larger = 0;
 
-  for (let i = 0; i < arrayNumbers.length; i++) {
-    if (arrayNumbers[i] > larger) {
-      larger = arrayNumbers[i];
-    }
-  }
+  larger = Math.max(...arrayNumbers);
 
-  for (let i = 0; i < arrayNumbers.length; i++) {
-    if (larger === arrayNumbers[i]) {
-      counter++;
-    }
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (larger === arrayNumbers[i]) { counter += 1; }
   }
 
   response = counter;
@@ -70,8 +58,20 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1; let distance2; let response;
+
+  let larger1 = Math.max(mouse, cat1);
+  let larger2 = Math.max(mouse, cat2);
+
+  distance1 = larger1 === mouse ? mouse - cat1 : cat1 - mouse;
+  distance2 = larger2 === mouse ? mouse - cat2 : cat2 - mouse;
+
+  response = distance1 > distance2 ? 'cat1' : 'cat2';
+  if (distance1 === distance2) { response = 'os gatos trombam e o rato foge'; }
+  console.log(`Gato 1: ${distance1} | Gato 2: ${distance2} | Resultado: ${response}`);
+
+  return response;
 }
 
 // Desafio 8
@@ -96,6 +96,7 @@ splitSentence('Teste de Split');
 concatName(concat);
 footballPoints(14, 8);
 highestCount(numbers);
+catAndMouse(8, 5, 4);
 
 module.exports = {
   calcArea,
