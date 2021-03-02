@@ -70,8 +70,8 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distCat1 = cat1 - mouse;
-  let distCat2 = cat2 - mouse;
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
   let capture = "";
   if(distCat1 < distCat2){
     capture = "cat1";
@@ -85,18 +85,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 
+
 // Desafio 8
 function fizzBuzz(arrayNums) {
   // seu código aqui
   let arrayResp = [];
   let resp = "";
 
-  for(num in arrayNums){
-    if ((arrayNums[num] % 3 == 0) && (arrayNums[num] % 5 == 0)) {
+  for(let num in arrayNums){
+    if ((arrayNums[num] % 3 === 0) && (arrayNums[num] % 5 === 0)) {
       resp = "fizzBuzz";
-    }  else if (arrayNums[num] % 3 == 0) {
+    }  else if (arrayNums[num] % 3 === 0) {
         resp = "fizz";
-    } else if((arrayNums[num]) % 5 == 0) {
+    } else if((arrayNums[num]) % 5 === 0) {
       resp = "Buzz";
     } else {
       resp = "bug!";
@@ -112,7 +113,8 @@ function fizzBuzz(arrayNums) {
 // Desafio 9
 function encode() {
   // seu código aqui
-}
+} 
+  
 function decode() {
   // seu código aqui
 }
