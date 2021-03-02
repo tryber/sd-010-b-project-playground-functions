@@ -17,8 +17,11 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(array) {
-  return [array.length-1, 0]
-}
+  return array[array.length-1] + " " + array[0]
+  
+  }
+
+//recebi a ajuda dos colegas durante o breakout room para colocar os "[]" para descobrir o primeiro elemento
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,20 +47,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-  for (index = 0; index < fizzBuzz.length; index =+1){
-    if (fizzBuzz[index] % 3 ==0) {
+function fizzBuzz(array) {
+  for (let index = 0; index < array.length; index =+1){
+    if (array[index] % 3 ==0) {
       return "fizz"
-    } else if (fizzBuzz[index] % 5 === 0) {
+    } else if (array[index] % 5 === 0) {
       return "buzz"
-    } else if (fizzBuzz[index] % 5 === 0 && fizzBuzz[index] % 3 === 0) {
+    } else if (array[index] % 5 === 0 && array[index] % 3 === 0) {
       return "fizzBuzz"
     } else {
       return "bug!"
     }
   }
 }
-
+console.log(fizzBuzz(5,7,15,21,23))
 // Desafio 9
 function encode( ) {
   
