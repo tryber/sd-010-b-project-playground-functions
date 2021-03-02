@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 == True && bool2 == True) {
-    return.console.log('True');
+    return true;
   } else {
-    return.console.log('False')
+    return false;
   }
 }
 
