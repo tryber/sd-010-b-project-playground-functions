@@ -47,8 +47,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(parametro) {
+    let retorno = [];
+    for (let index = 0; index < parametro.length; index++) {
+      retorno.push(
+        parametro[index] % 3 === 0 && parametro[index] % 5 === 0 ? "fizzBuzz" : 
+        parametro[index] % 3 === 0 ? "fizz" : 
+        parametro[index] % 5 === 0 ? "buzz" : "bug!"
+      );
+      
+    }
+    return retorno;
 }
 
 // Desafio 9
@@ -59,7 +68,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(catAndMouse(2, 3, 3));
+console.log(fizzBuzz([9, 25]));
 
 module.exports = {
   calcArea,
