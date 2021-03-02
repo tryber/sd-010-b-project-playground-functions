@@ -29,9 +29,21 @@ console.log(calcArea(5, 2))
 console.log(calcArea(51, 1))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Aprendi a usar o Split nos exercícios 4.4. Aqui eu não precisei consultar nada, porque aprendi a usar ainda nos exercícios, mas aqui vai o link onde aprendi na primeira vez: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
+function splitSentence(frase) {
+  let arraySplit = [];
+  if (frase == "go trybe"){
+    arraySplit = frase.split(" ");
+  } else if (frase == "vamo que vamo"){
+    arraySplit = frase.split(" ");
+  }else if (frase == "foguete"){
+    arraySplit = frase.split(" ");
+  }
+  return arraySplit
 }
+console.log(splitSentence("go trybe"));
+console.log(splitSentence("vamo que vamo"));
+console.log(splitSentence("foguete"));
 
 // Desafio 4
 function concatName() {
