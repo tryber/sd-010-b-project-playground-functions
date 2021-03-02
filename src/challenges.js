@@ -29,7 +29,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(ultimoPrimeiroItem) {
   
-  let conectaItem = (ultimoPrimeiroItem[ultimoPrimeiroItem.length-1]) + (ultimoPrimeiroItem[0]);
+  let conectaItem = (ultimoPrimeiroItem[ultimoPrimeiroItem.length-1]) +" , "(ultimoPrimeiroItem[0]);
   return conectaItem;
 
 }
@@ -44,21 +44,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-repeteMaior= [4,2,1,4,6,3,9];
 
 function highestCount(repeteMaior) {
   
   let maiorNumero;
   let qntNumeroMaior;
-  let key = 0;
-  for(key in repeteMaior){
-    if(repeteMaior[key] > repeteMaior.length-1){
+  for(let cont=0;cont < repeteMaior.length; cont+=1){
+    if(repeteMaior[cont] > repeteMaior.length-1){
       maiorNumero = repeteMaior[key];
     }
-    console.log(maiorNumero);
-    console.log(repeteMaior);
   }
-  
 }
 
 // Desafio 7
