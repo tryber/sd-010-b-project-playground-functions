@@ -74,15 +74,13 @@ function highestCount(arrayNumeros) {
   let armazenaMaiorNumero = 0;
   let contador = 0;
 
-  // Loop form para achar qual é o maior número:
+  // Loop form 1 serve para achar qual é o maior número e Loop for 2 serve para cverificar quantas vezes o maior número aparece no array:
   for (let indexMaior = 0; indexMaior < arrayNumeros.length; indexMaior += 1) {
-    
     if(arrayNumeros[indexMaior] > armazenaMaiorNumero) {
       armazenaMaiorNumero = arrayNumeros[indexMaior];
     }
   }
 
-  // Loop for para cverificar quantas vezes o maior número aparece no array:
   for (let indexContador = 0; indexContador < arrayNumeros.length; indexContador += 1) {
     if (arrayNumeros[indexContador] === armazenaMaiorNumero) {
       contador += 1;
