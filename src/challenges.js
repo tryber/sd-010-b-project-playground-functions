@@ -17,15 +17,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let splitedSentence = sentence.split(" ");
+  let splitedSentence = sentence.split(' ');
   return splitedSentence;
 }
 // Desafio 4
-function concatName(words) {
-  let result = words[words.length - 1] + words[0];
+function concatName(arrayString) {
+  let result = arrayString[arrayString.length - 1] +', ' + arrayString[0];
   return result;
 }
-console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo')) // CORRIGIR ERRO. RETORNANDO "sl"
+
 
 
 
