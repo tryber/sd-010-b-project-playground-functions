@@ -18,9 +18,11 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arrayStr) {
-  let strConcat = arrayStr[0].concat(arrayStr[arrayStr.length - 1]);
+  let separador = ', ';
+  let strConcat = arrayStr[0].concat(separador, arrayStr[arrayStr.length - 1]);
   return strConcat;
-}// Resposta: Tentativa de concatenat o primeiro elemento com o ultimo usando o metodo concat(). Usando concat(), tentei fazer a concatenação acesando o primeiro elemento da array(arrayStr[0]) e acessando o ultimo elemento da array(arrayStr.length - 1).
+}// Resposta: Tentativa de concatenar o primeiro elemento com o ultimo usando o metodo concat(). Usando concat(), tentei fazer a concatenação acesando o primeiro elemento da array(arrayStr[0]) e acessando o ultimo elemento da array(arrayStr.length - 1).
+
 
 // Desafio 5
 function footballPoints() {
