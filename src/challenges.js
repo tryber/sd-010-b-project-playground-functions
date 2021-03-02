@@ -18,19 +18,19 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ')
+  return string.split(' ');
 }
 
-console.log(splitSentence('Foguete'))
+console.log(splitSentence('Foguete'));
 
 // Desafio 4
 function concatName(string) {
-  let first = string[0]
-  let last = string[string.length - 1]
-  return `${last} ${first}`
+  let first = string[0];
+  let last = string[string.length - 1];
+  return `${last}, ${first}`;
 }
 
-console.log(concatName(['Thiago', 'Kachi', 'Joao', 'Luciano']))
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
