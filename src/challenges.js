@@ -35,8 +35,15 @@ function footballPoints(vit, emp) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(num) {
+  max = Math.max(...num);
+  vezes = 0;
+  for (const key in num) {
+    if (max = num[key]) {
+      vezes = vezes + 1;
+    }
+  }
+  return vezes;
 }
 
 // Desafio 7
