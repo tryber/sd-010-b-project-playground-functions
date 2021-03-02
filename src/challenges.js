@@ -58,6 +58,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+
+  // https://javascript.plainenglish.io/javascript-algorithm-cats-and-a-mouse-fd60fb1811ba  utilizei esta fonte para saber a importância do Math.abs)
     let poscat1 = Math.abs(mouse - cat1)
     let poscat2 = Math.abs(mouse - cat2)
 
@@ -74,14 +76,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayFinal = [];
   for (let i = 0; i < array.length; i++){
-      if(array[i] % 3 == 0 && array[i] % 5 == 0){
-       arrayFinal.push("fizzbuzz");
-   } else if (array[i] % 5 == 0 && array[i] % 3 != 0) {
-       arrayFinal.push("buzz");
-   } else if (array[i] % 3 == 0 && array[i] % 5 != 0) {
-       arrayFinal.push("fizz");
+      if(array[i] % 3 === 0 && array[i] % 5 === 0){
+       arrayFinal.push('fizzBuzz');
+   } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+       arrayFinal.push('buzz');
+     } else if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+       arrayFinal.push('fizz');
    } else {
-       arrayFinal.push("bug!");
+       arrayFinal.push('bug!');
    }
  }
   return arrayFinal;
