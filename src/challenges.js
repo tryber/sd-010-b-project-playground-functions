@@ -47,10 +47,10 @@ return count;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-if((mouse - cat1) > (mouse - cat2)){
+if(Math.abs((mouse - cat1)) > Math.abs((mouse - cat2))){
   return 'cat2'
 }
-else if((mouse - cat1) == (mouse - cat2)){
+else if((mouse - cat1) === (mouse - cat2)){
   return "os gatos trombam e o rato foge"
 }
 else{
