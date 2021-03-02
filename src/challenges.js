@@ -37,7 +37,7 @@ function footballPoints(wins, ties) {
   wins *= 3;
   ties *= 1;
   let total = wins + ties;
-  return `O total de pontos é: ${total}`;
+  return total;
 }
 
 console.log(footballPoints(14, 8));
@@ -59,16 +59,26 @@ function highestCount(array) {
     }
   }
   return aparicoes;
-}
-
+};
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  cat1 -= mouse
+  cat2 -= mouse
+  if (cat2 === cat1) {
+    return "os gatos trombam e o rato foge";
+  } else if (cat1 < cat2) {
+    return 'cat1'
+  } else {
+    return 'cat2'
+  }
 }
+console.log(catAndMouse(1, 4, 3));
+console.log(catAndMouse(1, 6, 12));
+console.log(catAndMouse(1, 7, 7));
 
 // Desafio 8
 function fizzBuzz() {
