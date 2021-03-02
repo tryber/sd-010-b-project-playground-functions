@@ -23,14 +23,14 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let result = arrayString[arrayString.length - 1] + ', ' + (arrayString[0]);
+  let result = `${arrayString[arrayString.length - 1]}, ${(arrayString[0])}`;
   return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
-  points = (wins * 3) + (ties)
+  points = (wins * 3) + (ties);
   return points;
 }
 
@@ -39,36 +39,30 @@ function highestCount(array) {
   let cont = 0;
   let maiorNumero = 0;
   for (let key in array) {
-    if (array[key] > maiorNumero) {
-      maiorNumero = array[key];
-    }
+    if (array[key] > maiorNumero) maiorNumero = array[key];
   }
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === maiorNumero) {
-      cont += 1;
-    }
+  for (let key in array) {
+    if (array[key] === maiorNumero) cont += 1;
   }
   return cont;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let saida;
   let unidadesCat1;
   let unidadesCat2;
-
   if (cat1 > mouse) {
     unidadesCat1 = cat1 - mouse;
   } else {
     unidadesCat1 = mouse - cat1;
   }
-
   if (cat2 > mouse) {
     unidadesCat2 = cat2 - mouse;
   } else {
     unidadesCat2 = mouse - cat2;
   }
-
   if (unidadesCat1 > unidadesCat2) {
     saida = 'cat2';
   } else if (unidadesCat1 < unidadesCat2) {
@@ -76,7 +70,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     saida = 'os gatos trombam e o rato foge'
   }
-
   return saida;
 }
 // Desafio 8
@@ -102,27 +95,15 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode(word) {
   let resultado = word;
-  for (let key in word) {
-    if (word[key] == 'a') {
-      resultado = resultado.replace('a', '1');
-    }
-    if (word[key] == 'e') {
-      resultado = resultado.replace('e', '2');
-    }
-    if (word[key] == 'i') {
-      resultado = resultado.replace('i', '3');
-    }
-    if (word[key] == 'o') {
-      resultado = resultado.replace('o', '4');
-    }
-    if (word[key] == 'u') {
-      resultado = resultado.replace('u', '5');
-    }
+  for (let key in resultado) {
+    if (resultado[key] == 'a') resultado = resultado.replace('a', '1');
+    if (resultado[key] == 'e') resultado = resultado.replace('e', '2');
+    if (resultado[key] == 'i') resultado = resultado.replace('i', '3');
+    if (resultado[key] == 'o') resultado = resultado.replace('o', '4');
+    if (resultado[key] == 'u') resultado = resultado.replace('u', '5');
   }
   return resultado;
 }
-
-console.log(encode("hi there!"));
 
 function decode(word) {
   let resultado = word;
