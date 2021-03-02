@@ -88,15 +88,13 @@ function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (divisibleByThreeAndFive(array[index])) {
       output.push(divisibleByThreeAndFive(array[index]));
-      break;
     } else if (divisibleByThree(array[index])) {
       output.push(divisibleByThree(array[index]));
-      break;
     } else if (divisibleByFive(array[index])) {
       output.push(divisibleByFive(array[index]));
-      break;
+    } else {
+      output.push('bug!');
     }
-    output.push('bug!');
   }
   return output;
   // seu código aqui
