@@ -19,7 +19,7 @@ function generatePhoneNumber(parametro) {
   let retorno = [];
 
   // Retorne a string "Array com tamanho incorreto." caso o array tenha o tamanho diferente de 11
-  if (parametro.length <= 11) {
+  if (parametro.length === 11) {
     let continua = true;
 
     // Verifica se algum dos números da array seja menor que 0, maior que 9
@@ -98,7 +98,7 @@ function hydrate() {
   // seu código aqui
 }
 
-console.log(triangleCheck(10, 14, 8));
+console.log(generatePhoneNumber([1, 2, 3]));
 
 module.exports = {
   generatePhoneNumber,
