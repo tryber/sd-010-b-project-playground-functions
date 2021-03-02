@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue() {
     // Desafio 1 por Barrisenn Gonçalo
+function compareTrue(a, b) {
   let confirma=false;
   if (a === b && !confirma) {
     confirma = true;
