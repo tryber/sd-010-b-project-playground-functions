@@ -11,11 +11,12 @@ function compareTrue(num1, num2) {
 console.log(compareTrue(a, b))
 
 // Desafio 2
-let base = 10
-let height = 50
-function calcArea(a, b) {
-  // seu código aqui
+let c = 5;
+let d = 2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+console.log(calcArea(c, d))
 
 // Desafio 3
 function splitSentence() {
