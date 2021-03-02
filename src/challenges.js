@@ -87,8 +87,8 @@ console.log(highestCount([1, 2, 2, 2, 2, 2, 2, 2, 1]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanciaGato1 = cat1 - mouse;
-  let distanciaGato2 = cat2 - mouse;
+  let distanciaGato1 = Math.abs(cat1 - mouse);
+  let distanciaGato2 = Math.abs(cat2 - mouse);
   if (distanciaGato1 === distanciaGato2) {
     return 'os gatos trombam e o rato foge';
   } if (distanciaGato1 < distanciaGato2) {
@@ -97,7 +97,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 // console log
-console.log(catAndMouse(1, 4, 3));
+console.log(catAndMouse(10, 9, 3));
 console.log(catAndMouse(1, 6, 12));
 console.log(catAndMouse(1, 6, 6));
 
@@ -126,9 +126,29 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+function encode(arrayEncode) {
   // seu código aqui
+  let frase = arrayEncode;
+  let encoded;
+  for (let index = 0; index < arrayEncode.length; index += 1) {
+    if (arrayEncode[index] === 'a') {
+      frase = arrayEncode.replace(/a/g, 1);
+    } else if (frase[index] === 'e') {
+      frase = frase.replace(/e/g, 2);
+    } else if (frase[index] === 'i') {
+      frase = frase.replace(/i/g, 3);
+    } else if (frase[index] === 'o') {
+      frase = frase.replace(/o/g, 4);
+    } else if (frase[index] === 'u') {
+      encoded = frase.replace(/u/g, 5);
+    }
+    return encoded;
+  }
+  
 }
+// console log
+console.log(encode('chuva de gatinho'));
+
 function decode() {
   // seu código aqui
 }
