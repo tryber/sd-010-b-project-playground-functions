@@ -23,7 +23,7 @@ function splitSentence(text) {
 // Desafio 4
 function concatName(array) {
   let ultimoArray = array.length - 1;
-  let primeiroUltimo = array[ultimoArray] + ' ' + array[0];
+  let primeiroUltimo = array[ultimoArray] + array[0];
   return primeiroUltimo;
 }
 
@@ -34,12 +34,11 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(contador) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(couse, cat1, cat2) {
   // seu código aqui
 }
 
