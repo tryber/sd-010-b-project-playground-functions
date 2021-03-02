@@ -1,13 +1,18 @@
-//Inciando o projeto
+//  Inciando o projeto
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(v1, v2) {
+  if (v1 == true && v2 == true) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2.
 }
 
 // Desafio 3
@@ -60,3 +65,7 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+// calling function only for tests porpose
+// calling the first function - console.log("compareTrue(true, true):", compareTrue(true, true));
+console.log("calcArea(10, 50):",calcArea(10, 50));
