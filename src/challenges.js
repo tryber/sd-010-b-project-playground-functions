@@ -75,10 +75,26 @@ console.log(catAndMouse(0, 3, 2)); // -> 'cat2
 console.log(catAndMouse(0, 6, 12)); // -> 'cat1'
 console.log(catAndMouse(0, 5, 5)); // -> 'os gatos trombam e o rato foge'
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Requisito 8 - Verifica se um número é divisível por 3, 5 ou ambos
+function fizzBuzz(numbers) {
+  
+  let res = [];
+  for (const num in numbers) {
+    if (numbers[num] % 3 === 0 && numbers[num] % 5 === 0) {
+      res.push('fizzBuzz');
+    } else if (numbers[num] % 3 === 0) {
+      res.push('fizz');
+    } else if (numbers[num] % 5 === 0) {
+      res.push('buzz');
+    } else {
+      res.push('bug!');
+    }
+  }
+    return res;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45])); // -> ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
+console.log(fizzBuzz([7, 9])); // ->  ['bug!', 'fizz']
+console.log(fizzBuzz([9, 25])); // -> ['fizz', 'buzz']
 
 // Desafio 9
 function encode() {
