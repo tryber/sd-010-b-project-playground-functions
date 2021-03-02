@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue() {
-  let valor1 = 1;
-  let valor2 = 2;
+  let valor1 = true;
+  let valor2 = false;
 
   if (valor1 == valor2 && valor2 == valor1){
     return true;
