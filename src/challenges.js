@@ -44,9 +44,9 @@ function highestCount(numeros) {
   let maiorNumero = Math.max(...numeros);
   let contadorMaiorNumero = 0;
   console.log(maiorNumero);
-  for (key in numeros) {
-    if (numeros[key] == maiorNumero) {
-      contadorMaiorNumero +=1;
+  for (let key in numeros) {
+    if (numeros[key] === maiorNumero) {
+      contadorMaiorNumero += 1;
     }
   }
 
@@ -66,11 +66,11 @@ function catAndMouse(mouse, cat1, cat2) {
   console.log(distaciaCat2Mouse);
   let winerCat;
   if (distaciaCat1Mouse > distaciaCat2Mouse) {
-    winerCat = "cat2";
+    winerCat = 'cat2';
   } else if (distaciaCat1Mouse < distaciaCat2Mouse) {
-    winerCat = "cat1";
+    winerCat = 'cat1';
   } else {
-    winerCat = "os gatos trombam e o rato foge";
+    winerCat = 'os gatos trombam e o rato foge';
   }
   return winerCat;
 }
@@ -81,23 +81,23 @@ let cat2 = 2;
 console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
-function fizzBuzz(numeros) {
+function fizzBuzz(numerosFizzBuzz) {
   let numerosConvertidos = [];
 
-  for (key in numeros) {
+  for (let key in numeros) {
     if (((numeros[key] % 3) === 0) && ((numeros[key] % 5) === 0)) {
-      numerosConvertidos.push("fizzBuzz");
+      numerosConvertidos.push('fizzBuzz');
     } else if ((numeros[key] % 3) === 0) {
-      numerosConvertidos.push("fizz");
+      numerosConvertidos.push('fizz');
     } else if ((numeros[key] % 5) === 0) {
-      numerosConvertidos.push("buzz");
+      numerosConvertidos.push('buzz');
     } else {
-      numerosConvertidos.push("bug!")
+      numerosConvertidos.push('bug!');
     }
   }
   return numerosConvertidos;
 }
-let numerosfizzbuz = [2, 15, 7, 9, 45];
+let numerosFizzBuzz = [2, 15, 7, 9, 45];
 // console.log(fizzBuzz(numeros));
 
 // Desafio 9 Busquei orientação para resolver o item no site: https://pt.stackoverflow.com/questions/170/qual-a-forma-correta-de-se-fazer-uma-substitui%C3%A7%C3%A3o-regular-em-javascript-para-tod
@@ -124,7 +124,7 @@ function decode(frase) {
   fraseTrocada = fraseTrocada.split(5).join('u');
   return fraseTrocada;
 }
-let frase2 = "H4w 1r2 y45 t4d1y?";
+let frase2 = 'H4w 1r2 y45 t4d1y?';
 console.log(decode(frase2));
 
 module.exports = {
