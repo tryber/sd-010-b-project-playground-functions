@@ -9,13 +9,27 @@ function compareTrue(bool1, bool2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return ((base*height)/2);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array=[];
+    let word='';
+    let wCount=0;
+  
+    for(let i=0; i<string.length; i++){
+      if(string[i]!=' '){
+        word+=string[i];
+      }
+      if(string[i]==' ' || i==string.length-1){
+        array[wCount]=word;
+        word='';
+        wCount++;
+      }
+    }
+    return (array);
 }
 
 // Desafio 4
