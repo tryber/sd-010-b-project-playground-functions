@@ -1,7 +1,8 @@
 // Desafio 1
 function compareTrue() {
-    // Desafio 1 por Barrisenn Gonçalo
-  if (a === true && b === true) {
+// Desafio 1 por Barrisenn Gonçalo
+function compareTrue(firstCondition, secondCondition) {
+  if (firstCondition === true && secondCondition === true) {
     return true;
   }
 
@@ -56,14 +57,14 @@ function decode() {
 }
 
 module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
 }
