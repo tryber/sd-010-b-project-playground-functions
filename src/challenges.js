@@ -84,31 +84,67 @@ console.log(catAndMouse(1, 7, 7));
 function fizzBuzz(array) {
   let resultado = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 == 0 && array[index] % 5 == 0) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       resultado.push('fizzBuzz');
-    } else if (array[index] % 3 != 0 && array[index] % 5 != 0) {
+    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
       resultado.push('bug!');
-    } else if(array[index] % 3 == 0) {
+    } else if (array[index] % 3 === 0) {
       resultado.push('fizz');
     } else {
       resultado.push('buzz');
-    } 
-  } 
+    }
+  }
   return resultado;
 }
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz( [7, 9]));
+console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  string = string.split('');
+  let palavraCodificada = '';
+  for (let letra = 0; letra < string.length; letra += 1) {
+    if (string[letra] === 'a') {
+      palavraCodificada += 1;
+    } else if (string[letra] === 'e') {
+      palavraCodificada += 2;
+    } else if (string[letra] === 'i') {
+      palavraCodificada += 3;
+    } else if (string[letra] === 'o') {
+      palavraCodificada += 4;
+    } else if (string[letra] === 'u') {
+      palavraCodificada += 5;
+    } else {
+      palavraCodificada += string[letra];
+    }
+  }
+  return palavraCodificada;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there!'));
+
+function decode(string) {
+  string = string.split('');
+  let palavraDecodificada = '';
+  for (let letra = 0; letra < string.length; letra += 1) {
+    if (string[letra] === '1') {
+      palavraDecodificada += 'a';
+    } else if (string[letra] === '2') {
+      palavraDecodificada += 'e';
+    } else if (string[letra] === '3') {
+      palavraDecodificada += 'i';
+    } else if (string[letra] === '4') {
+      palavraDecodificada += 'o';
+    } else if (string[letra] === '5') {
+      palavraDecodificada += 'u';
+    } else {
+      palavraDecodificada += string[letra];
+    }
+  }
+  return palavraDecodificada;
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
