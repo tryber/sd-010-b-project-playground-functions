@@ -128,30 +128,57 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(arrayEncode) {
   // seu código aqui
-  let frase = arrayEncode;
+  let fraseA = arrayEncode;
+  let fraseE = fraseA;
+  let fraseI = fraseE;
+  let fraseO = fraseI;
+  let fraseU = fraseO;
   let encoded;
   for (let index = 0; index < arrayEncode.length; index += 1) {
     if (arrayEncode[index] === 'a') {
-      frase = arrayEncode.replace(/a/g, 1);
-    } else if (frase[index] === 'e') {
-      frase = frase.replace(/e/g, 2);
-    } else if (frase[index] === 'i') {
-      frase = frase.replace(/i/g, 3);
-    } else if (frase[index] === 'o') {
-      frase = frase.replace(/o/g, 4);
-    } else if (frase[index] === 'u') {
-      encoded = frase.replace(/u/g, 5);
+      fraseA = arrayEncode.replace(/a/g, 1);
+    } else if (fraseA[index] === 'e') {
+    fraseE = fraseA.replace(/e/g, 2);
+    } else if (fraseE[index] === 'i') {
+    fraseI = fraseE.replace(/i/g, 3);
+    } else if (fraseI[index] === 'o') {
+    fraseO = fraseI.replace(/o/g, 4);
+    } else if (fraseO[index] === 'u') {
+    fraseU = fraseO.replace(/u/g, 5);
     }
-    return encoded;
+    encoded = fraseU;
   }
-  
+  return encoded;
 }
 // console log
-console.log(encode('chuva de gatinho'));
+console.log(encode('urso chuva de gatinho malhado com olho verde e azul'));
 
-function decode() {
+function decode(arrayDecode) {
   // seu código aqui
+  let num1 = arrayDecode;
+  let num2 = num1;
+  let num3 = num2;
+  let num4 = num3;
+  let num5 = num4;
+  let decoded;
+  for (let index = 0; index < arrayDecode.length; index += 1) {
+    if (arrayDecode[index] === '1') {
+      num1 = arrayDecode.replace(/1/g, 'a');
+    } else if (num1[index] === '2') {
+      num2 = num1.replace(/2/g, 'e');
+    } else if (num2[index] === '3') {
+      num3 = num2.replace(/3/g, 'i');
+    } else if (num3[index] === '4') {
+      num4 = num3.replace(/4/g, 'o');
+    } else if (num4[index] === '5') {
+      num5 = num4.replace(/5/g, 'u');
+    }
+    decoded = num5;
+  }
+  return decoded;
 }
+// console log
+console.log(decode('5rs4 ch5v1 d2 g1t3nh4 m1lh1d4 c4m 4lh4 v2rd2 2 1z5l'));
 
 module.exports = {
   calcArea,
