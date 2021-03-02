@@ -19,8 +19,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  ultimoValor = array.length - 1
+  resultado = array[ultimoValor] + ", " + array[0]
+  return resultado
 }
 
 // Desafio 5
