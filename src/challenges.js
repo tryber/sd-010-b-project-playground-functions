@@ -38,8 +38,10 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let nearCat = (mouse - cat1) < (mouse - cat2) ? 'cat1' : 'cat2';
+  nearCat = cat1 === cat2 ? "os gatos trombam e o rato foge" : nearCat;
+  return nearCat;
 }
 
 // Desafio 8
