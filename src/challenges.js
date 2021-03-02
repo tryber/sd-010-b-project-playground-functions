@@ -16,7 +16,8 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let newArray = [array[array.length - 1], array[0]];
-  return newArray.toString();
+  newArray = newArray.toString();
+  return newArray;
 }
 
 // Desafio 5
