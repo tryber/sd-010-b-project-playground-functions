@@ -45,13 +45,13 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(maxN) {
-  let helper = 0;
+  let numb = 0;
   for (const i of maxN) {
     if (Math.max.apply(null, maxN) === i) {
-      helper += 1;
+      numb += 1;
     }
   }
-  return helper;
+  return numb;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return ('os gatos trombam e o rato foge');
 }
 console.log(catAndMouse(2, 0, 3));
-console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 6, 1));
 console.log(catAndMouse(0, 0, 0));
 // https://www.w3schools.com/js/js_math.asp
 
