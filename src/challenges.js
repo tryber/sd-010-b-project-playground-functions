@@ -81,9 +81,8 @@ let cat2 = 2;
 console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
-function fizzBuzz(numerosFizzBuzz) {
+function fizzBuzz(numeros) {
   let numerosConvertidos = [];
-
   for (let key in numeros) {
     if (((numeros[key] % 3) === 0) && ((numeros[key] % 5) === 0)) {
       numerosConvertidos.push('fizzBuzz');
@@ -97,7 +96,7 @@ function fizzBuzz(numerosFizzBuzz) {
   }
   return numerosConvertidos;
 }
-let numerosFizzBuzz = [2, 15, 7, 9, 45];
+// let numerosFizzBuzz = [2, 15, 7, 9, 45];
 // console.log(fizzBuzz(numeros));
 
 // Desafio 9 Busquei orientação para resolver o item no site: https://pt.stackoverflow.com/questions/170/qual-a-forma-correta-de-se-fazer-uma-substitui%C3%A7%C3%A3o-regular-em-javascript-para-tod
@@ -113,7 +112,6 @@ function encode(frase) {
 }
 let frase1 = "How are you today?";
 console.log(encode(frase1));
-
 
 function decode(frase) {
   let fraseTrocada;
