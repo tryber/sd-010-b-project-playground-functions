@@ -1,11 +1,12 @@
 // Desafio 1
 function compareTrue(num1, num2) {
   // seu código aquiaa
-  if((num1==num2) && (num2==num1)){
+  if((num1===true) && (num2===true)){
     return true;
   }else
   return false;
 }
+
 
 
 // Desafio 2
