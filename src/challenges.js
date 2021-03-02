@@ -16,8 +16,10 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
- /////////   
+ let fraseSeparada = frase.split(" ");
+ return fraseSeparada;
 }
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
@@ -48,12 +50,13 @@ function highestCount(numeros) {
  }
  return cont;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+
+  let moduloCat1 = Math.abs(cat1-mouse);
+  let moduloCat2 = Math.abs(cat2-mouse);
+
   if (cat1 == cat2){
     return 'os gatos trombam e o rato foge';
   } else if ((cat1 - mouse) < (cat2 - mouse)){
