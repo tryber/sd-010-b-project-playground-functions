@@ -1,6 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aquia
+function compareTrue(valora,valorb) {
+  // seu código aqui
+  if((valora === true) && (valorb === true)){
+    return true;
+  }
+  else{
+    return false;
+  }
+
+
 }
 
 // Desafio 2
