@@ -106,9 +106,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionMouse = mouse;
 
   if ((positionMouse - positionCat1) > (positionMouse - positionCat2)) {
-    return ('cat2');
-  } else if ((positionMouse - positionCat1) < (positionMouse - positionCat2)) {
     return ('cat1');
+  } else if ((positionMouse - positionCat1) < (positionMouse - positionCat2)) {
+    return ('cat2');
   } else {
     return ('os gatos trombam e o rato foge');
   }
@@ -153,6 +153,7 @@ function encode(string) {
       finalString += string[counter];
     }
   }
+  return (finalString);
 }
 function decode(string) {
   // seu código aqui
@@ -172,6 +173,7 @@ function decode(string) {
       finalString += string[counter];
     }
   }
+  return (finalString);
 }
 
 module.exports = {
