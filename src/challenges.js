@@ -42,7 +42,6 @@ function highestCount(num) {
     if (num[key] = max) {
       vezes = vezes + 1;
     }
-    console.log(vezes)
   }
   return vezes;
 }
