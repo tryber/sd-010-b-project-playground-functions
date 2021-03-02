@@ -1,19 +1,19 @@
 // Desafio 10
-function techList(arrayTech,name) {
+function techList(arrayTech, name) {
   // meu código aqui
   let sortArrayTech = arrayTech.sort();
-  if(arrayTech.length < 1){
-    return "Vazio!"
-  }else{
+  if(arrayTech.length < 1) {
+    return "Vazio!";
+  } else {
     let techLists = [];
-    for (let i = 0; i < arrayTech.length; i++) {
-      techLists.push( { tech: arrayTech[i], name: name }
+    for (let i = 0; i < sortArrayTech.length; i++) {
+      techLists.push( { tech: sortArrayTech[i], name: name }
       )
     } 
     return techLists;
   }
 }
-
+ 
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // meu código aqui
@@ -39,7 +39,7 @@ function verifycaOccurr(toVerify){
     if(maxQuantyOccurre < quantyOccurre){
       maxQuantyOccurre = quantyOccurre;
     }
-    quantyOccurre =0
+    quantyOccurre = 0;
   }
   if (maxQuantyOccurre > 2){
     return true;
