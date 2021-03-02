@@ -65,7 +65,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-// calling function only for tests porpose
-// calling the first function - console.log("compareTrue(true, true):", compareTrue(true, true));
-console.log("calcArea(10, 50):",calcArea(10, 50));
