@@ -45,9 +45,24 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorValor = 0;
+  let aparicoes = 0;
+  for(let index = 0; index < array.length; index += 1){// primeiro encontro o maior valor
+    if(maiorValor < array[index])
+      maiorValor = array[index];
+  }
+  for(let value = 0; value < array.length; value += 1){// pego as ocorrencias dele no array
+    if(maiorValor == array[value]){
+      aparicoes += 1;
+    }
+  }
+  return aparicoes;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
