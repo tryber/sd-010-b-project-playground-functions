@@ -62,11 +62,18 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0)); */
 
 // Desafio 6
-function highestCount() {
-
+function highestCount(arrayNumbers) {
+  let maiorNumero = Math.max.apply(null, arrayNumbers); // código retirado no site: http://henriquesilverio.github.io/javascript-e-jquery/javascript-descobrir-menor-e-maior-valor-em-um-array
+  let cont = 0;
+  for(index = 0; index < arrayNumbers.length; index += 1) {
+    if(arrayNumbers[index] === maiorNumero) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 9, 1]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
@@ -116,31 +123,30 @@ function fizzBuzz(arrayNumbers8) {
   }
   return stringsArray;
 }
-/* console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25])); */
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
-  let newString = string.toLowerCase();
+  let novaFrase = "";
   let objectCodes = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u"
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
   }
 
   for(index = 0; index < string.length; index += 1) {
-    for(let key in objectCodes) {
-      if(newString[index] === objectCodes[key]) {
-        newString.replace(newString[index], objectCodes[key])
-      }
+    if(objectCodes[index] === string[index]) {
+      novaFrase += objectCodes[index];
+    } else {
+      novaFrase += string[index];
     }
   }
-  return newString;
 }
-/* console.log(encode("hi there")); */
+console.log(encode("hi there"));
 
 function decode() {
   // seu código aqui
