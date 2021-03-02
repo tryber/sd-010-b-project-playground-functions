@@ -115,11 +115,42 @@ function fizzBuzz(arrayNumerico) {
 }
 
 // Desafio 9
-function encode() {
+function encode(codificar) {
   // seu código aqui
+  let arrayVogal = ["a" , "e", "i", "o", "u"];
+  let arrayCode = [1 , 2, 3, 4, 5];
+
+  arrayCodificar = codificar.split("");
+
+  for (let key in arrayCodificar){
+    for (let key2 in arrayVogal){
+      if (arrayCodificar[key] == arrayVogal[key2])
+        arrayCodificar[key] = arrayCode[key2];
+    }
+  }
+
+  juntar = arrayCodificar.join("");
+
+  return console.log(juntar);
 }
-function decode() {
+
+function decode(decodificar) {
   // seu código aqui
+  let arrayVogal = ["a" , "e", "i", "o", "u"];
+  let arrayCode = [1 , 2, 3, 4, 5];
+
+  arrayDecodificar = decodificar.split("");
+
+  for (let key in arrayDecodificar){
+    for (let key2 in arrayCode){
+      if (arrayDecodificar[key] == arrayCode[key2])
+      arrayDecodificar[key] = arrayVogal[key2];
+    }
+  }
+
+  juntar = arrayDecodificar.join("");
+
+  return console.log(juntar);
 }
 
 module.exports = {
