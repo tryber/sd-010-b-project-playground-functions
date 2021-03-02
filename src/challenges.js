@@ -27,9 +27,7 @@ function concatName(arr) {
 }
 
 // Desafio 5
-function footballPoints(vit, emp) {
-  wins = vit;
-  ties = emp;
+function footballPoints(wins, ties) {
   total = wins * 3 + ties;
   return total;
 }
@@ -47,16 +45,13 @@ function highestCount(num) {
 }
 
 // Desafio 7
-function catAndMouse(rat, c1, c2) {
-  mouse = rat;
-  cat1 = c1;
-  cat2 = c2;
+function catAndMouse(mouse, cat1, cat2) {
   ca1 = "cat1";
   ca2 = "cat2";
   emp = "os gatos trombam e o rato foge";
-  if (cat1 < cat2) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
     return ca1;
-  } else if (cat2 < cat1) {
+  } else if ((cat2 - mouse) < (cat1 - mouse)) {
     return ca2;
   } else {
     return emp;
