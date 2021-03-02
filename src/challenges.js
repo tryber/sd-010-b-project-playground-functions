@@ -22,7 +22,7 @@ function splitSentence(sentence) {
 }
 // Desafio 4
 function concatName(arrayString) {
-  let result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  let result = arrayString[arrayString.length - 1] + ", " + arrayString[0];
   return result;
 }
 
@@ -43,23 +43,40 @@ function highestCount(numbers) {
     }
   }
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-    if (numbers[index2] == highestNumber) {
+    if (numbers[index2] === highestNumber) {
       counter += 1;
     }
   }
   return counter;
 }
 
-
-
-
-
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = Math.abs(cat1 - mouse);
+  let cat2Distance = Math.abs(cat2 - mouse);
+  let result = '';
+  if (cat1Distance < cat2Distance) {
+    result = 'cat1';
+  } else if (cat2Distance < cat1Distance) {
+    result = 'cat2';
+  } else {
+    result = 'os gatos trombam e o rato foge'; //Jerry wins!
+  }
+  return result;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
