@@ -101,14 +101,31 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(6, 12, 18));
 // console.log(catAndMouse(6, 9, 9));
 
-
-
-
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(umaLista) {
+  let out = [];
+  for (let key in umaLista) {
+    if (umaLista[key] % 3 == 0 && umaLista[key] % 5 == 0){
+      out.push("fizzBuzz");
+    }else if (umaLista[key] % 3 == 0){
+      out.push("fizz");
+    }else if (umaLista[key] % 5 == 0){
+      out.push("buzz");
+    }else{
+      out.push("bug!")
+    }
+  }
+  return out;
 }
+
+// teste intem 8
+array0 = [2, 15, 7, 9, 45];
+array1 = [7, 9];
+array2 = [9, 25];
+console.log(fizzBuzz(array0));
+console.log(fizzBuzz(array1));
+console.log(fizzBuzz(array2));
+
 
 // Desafio 9
 function encode() {
