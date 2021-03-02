@@ -1,12 +1,25 @@
 // Desafio 1
-function compareTrue() {
+let a = true;
+let b = false;
+function compareTrue(a, b) {
   // seu código aqui
-  
+  if (a === true && b === true){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
+// console log
+console.log(compareTrue(a, b));
+console.log(compareTrue(a, a));
+console.log(compareTrue(b, b));
 
 // Desafio 2
+
 function calcArea() {
   // seu código aqui
+
 }
 
 // Desafio 3
