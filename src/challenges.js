@@ -1,13 +1,13 @@
 // Desafio 1 iniciado no dia 02 de março de 2021 as 14:58 h
 function compareTrue(valorUm, valorDois) {
   // seu código aqui
+  let trueOrFalse = false;
   if (valorUm && valorDois === true) {
-    console.log(true);
+    console.log(compareTrue);
   } else if (valorUm && valorDois !== true) {
-    console.log(false);
+    console.log(trueOrFalse);
   }
 }
-console.log(compareTrue);
 
 // Desafio 2
 function calcArea(base, height) {
@@ -29,10 +29,10 @@ function calcArea(base, height) {
 function splitSentence() {
   // seu código aqui
   if (splitSentence.length === 2) {
-    return splitSentence.split(''+', '+'');
+    return splitSentence.split('' + ' ');
   }
   if (splitSentence.length === 1) {
-   return splitSentence.split(''+',');
+   return splitSentence.split('' + ' ');
   }
 }
 
