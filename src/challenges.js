@@ -30,7 +30,6 @@ function concatName() {
   let array = ['captain', 'my', 'captain'];
   let newArray = [];
   for(let index =0; index < array.length; index += 1){
-
     if(index==0 || (index == (array.length -1))){
       newArray.unshift(array[index]);
     }
@@ -115,9 +114,8 @@ function fizzBuzz() {
 // Desafio 9
 function encode() {
 
-let string = ("hi there!").split('')
+let string = ("a e i o u").split('')
 let frase =""
-
 for(let index = 0; index < string.length; index++){
   switch (string[index]){
 
@@ -141,23 +139,48 @@ for(let index = 0; index < string.length; index++){
       string[index] = "5"
     break
   }
-
-
 }
 for(let index = 0; index < string.length; index +=1){
   frase += string[index]
 }
 console.log(frase)
+
 }
 
 
-
-
-
-
-
 function decode() {
-  // seu código aqui
+
+let string = ("h3 th2r2!").split('')
+let frase =""
+for(let index = 0; index < string.length; index++){
+  switch (string[index]){
+
+    case "1" :
+      string[index] = "a"
+    break
+
+    case "2" :
+      string[index] = "e"
+    break
+
+    case "3" :
+      string[index] = "i"
+    break
+
+    case "4" :
+      string[index] = "o"
+    break
+
+    case "5" :
+      string[index] = "u"
+    break
+  }
+}
+for(let index = 0; index < string.length; index +=1){
+  frase += string[index]
+}
+console.log(frase)
+
 }
 
 module.exports = {
