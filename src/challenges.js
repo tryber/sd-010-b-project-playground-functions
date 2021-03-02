@@ -1,23 +1,25 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
+  let trueFalse;
   if (bol1 === true && bol2 === true) {
-    return true;
+    trueFalse = true;
   } else {
-    return false;
+    trueFalse = false;
   }
-} console,log(compareTrue(true, true));
+  return trueFalse;
+}
 
 // Desafio 2
 function calcArea(base, height) {
   let area = ((base * height) / 2);
   return area;
-} console.log(calcArea(10, 50));
+}
 
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
   return array;
-} console.log(splitSentence('go Trybe'));
+}
 
 // Desafio 4
 function concatName(array) {
@@ -25,17 +27,17 @@ function concatName(array) {
   let primeiroItem = array[0];
   let string = (ultimoItem + ', ' + primeiroItem); 
   return string;
-} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
-} console.log(footballPoints(14, 8));
+}
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  
 }
 
 // Desafio 7
