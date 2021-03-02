@@ -115,9 +115,9 @@ function fizzBuzz(array) {
 // Desafio 9
 // let string = 'h3 th2r2!';
 
-function encode() {
+function encode(string) {
   let palavraFatiada = string.split('');
-  for (index in palavraFatiada) {
+  for (let index = 0; index < palavraFatiada.length; index += 1) {
     switch (true) {
       case palavraFatiada[index] === 'a':
         palavraFatiada[index] = 1;
@@ -134,6 +134,8 @@ function encode() {
       case palavraFatiada[index] === 'u':
         palavraFatiada[index] = 5;
         break;
+      default:
+        break;
     }
   }
   let resultado = palavraFatiada.join('');
@@ -142,7 +144,7 @@ function encode() {
 
 function decode(string) {
   let palavraFatiada = string.split('');
-  for (let index in palavraFatiada) {
+  for (let index = 0; index < palavraFatiada.length; index += 1) {
     switch (true) {
       case palavraFatiada[index] === '1':
         palavraFatiada[index] = 'a';
@@ -158,6 +160,8 @@ function decode(string) {
         break;
       case palavraFatiada[index] === '5':
         palavraFatiada[index] = 'u';
+        break;
+      default:
         break;
     }
   }
