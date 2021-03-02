@@ -51,34 +51,32 @@ function highestCount(array) {
   for (let index = 0; index < array.length; index += 1) { // primeiro encontro o maior valor
     if (maiorValor < array[index]) {
       maiorValor = array[index];
+      
     }
-  }
-  for (let value = 0; value < array.length; value += 1) { // pego as ocorrencias dele no array
-    if (maiorValor === array[value]) {
+    if (maiorValor === array[index]) {
       aparicoes += 1;
     }
   }
   return aparicoes;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  cat1 -= mouse;
-  cat2 -= mouse;
   if (cat2 === cat1) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1 < cat2) {
-    return 'cat1';
-  } else {
+  } else if (mouse - cat1 < mouse - cat2) {
     return 'cat2';
+  } else {
+    return 'cat1';
   }
 }
-console.log(catAndMouse(1, 4, 3));
-console.log(catAndMouse(1, 6, 12));
-console.log(catAndMouse(1, 7, 7));
+console.log(catAndMouse(2, 4, 3));
+console.log(catAndMouse(2, 6, 12));
+console.log(catAndMouse(2, 7, 7));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -136,7 +134,7 @@ function decode(string) {
       palavraDecodificada += 'i';
     } else if (string[letra] === '4') {
       palavraDecodificada += 'o';
-    } else if (string[letra] === '5') {
+    } else if (string[letra] === '5'){
       palavraDecodificada += 'u';
     } else {
       palavraDecodificada += string[letra];
