@@ -42,8 +42,12 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let fizzBuzzBug = [];
+  for (let i = 0; i < numbers.length; i++) {
+    fizzBuzzBug[i] = (numbers[i] % 3 == 0 && numbers[i] % 5 == 0 ? "fizzBuzz" : (numbers[i] % 3 == 0 ? "fizz" : (numbers[i] % 5 == 0 ? "buzz" : "bug!")));
+  }
+  return fizzBuzzBug;
 }
 
 // Desafio 9
