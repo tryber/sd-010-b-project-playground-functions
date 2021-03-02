@@ -1,24 +1,29 @@
 // Hello! Welcome to my playground!
 
-// Desafio 1
-function compareTrue() {
-  // seu código aqui
+// Challenge 1
+function compareTrue(value1, value2) {
+  return value1 === true && value2 === true ? true : false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  if (base == 0 || height == 0) return 'invalid base or heigth';
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
