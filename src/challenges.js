@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
 function highestCount(count) {
   let maior = count[0];
   let contador = 0;
-  for (let index = 0; index < count.length; index+=) {
+  for (let index = 0; index < count.length; index += 1) {
     if (maior < count[index]) {
       maior = count[index];
       contador = 1;
@@ -50,10 +50,41 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(divisivel) {
+  let apenas3 = true;
+  let apenas5 = true;
+  let fizzBuster = []
+  for (let porta = 0; porta < divisivel.length; porta += 1) {
+    for (let divisores = 2; divisores < divisivel[porta]; divisores += 1) {
+      if (divisores !== 3) {
+        if (divisivel[porta] % 3 === 0 && divisivel[porta] % divisores === 0 ) {
+          apenas3 = false;
+        }
+      }
+      if (divisores !== 5) {
+        if (divisivel[porta] % 5 === 0 && divisivel[porta] % divisores === 0 ) {
+          apenas5 = false;
+        }
+      }
+    }
+    if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 === 0) {
+      fizzBuster.push('fizzBuzz');
+    } if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 !== 0) {
+        fizzBuster.push('bug');
+        apenas3 = false;
+        apenas5 = false;
+      }
+    if (apenas5 === true) {
+      fizzBuster.push('buzz')
+    } if (apenas3 === true) {
+        fizzBuster.push('fizz')
+      }    
+    apenas3 = true;
+    apenas5 = true;
+  }
+  return fizzBuster;
 }
-
+console.log(fizzBuzz([15,2,6,10]))
 // Desafio 9
 function encode() {
   // seu código aqui
