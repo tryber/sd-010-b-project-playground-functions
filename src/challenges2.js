@@ -78,7 +78,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-
 // Desafio 13
 function hydrate(toReplace) {
   // meu código aqui
@@ -87,7 +86,11 @@ function hydrate(toReplace) {
   for (let i = 0; i < toSum.length; i++) {
     result += parseInt(toSum[i]);    
   }
-  return result;
+  if(result == 1){
+    return `${result} copo de água`;
+  }else {
+    return `${result} copos de água`;
+  }
 }
 
 module.exports = {
