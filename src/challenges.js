@@ -58,7 +58,6 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    let mensagem = "";
     let poscat1 = Math.abs(mouse - cat1)
     let poscat2 = Math.abs(mouse - cat2)
 
@@ -90,11 +89,43 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  
-}
+    let fraseFinal = "";
+    for (let i = 0; i < string.length; i++){
+      if (string[i] != "a" && string[i] != "e" && string[i] != "i" && string[i] != "o" && string[i] != "u") {
+        fraseFinal += string[i];
+      } else if (string[i] == "a"){
+        fraseFinal += "1";
+      } else if (string[i] == "e"){
+        fraseFinal += "2";
+      } else if (string[i] == "i"){
+        fraseFinal += "3";
+      } else if (string[i] == "o"){
+        fraseFinal += "4";
+      } else if (string[i] === "u"){
+        fraseFinal += "5";
+      }
+    }
+    return fraseFinal;
+  }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let fraseDecodificada = "";
+    for (let i = 0; i < string.length; i++){
+      if (string[i] != "1" && string[i] != "2" && string[i] != "3" && string[i] != "4" && string[i] != "5") {
+        fraseDecodificada += string[i];
+      } else if (string[i] == "1"){
+        fraseDecodificada += "a";
+      } else if (string[i] == "2"){
+        fraseDecodificada += "e";
+      } else if (string[i] == "3"){
+        fraseDecodificada += "i";
+      } else if (string[i] == "4"){
+        fraseDecodificada += "o";
+      } else if (string[i] === "5"){
+        fraseDecodificada += "u";
+      }
+    }
+    return fraseDecodificada;
 }
 
 module.exports = {
