@@ -1,8 +1,16 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  teste
+function compareTrue(operando1, operando2) {
+  /*
+   Essa função recebe dois operandos (operandos) e retorna true se ambos os valores booleanos são iguais e falso, caso contrário.
+   */
+  return operando1 && operando2;
 }
+
+// console.log(`compareTrue(true, true) = ${compareTrue(true, true)}`);
+
+// console.log(`compareTrue(true, false) = ${compareTrue(true, false)}`);
+
+// console.log(`compareTrue(false, false) = ${compareTrue(false, false)}`);
 
 // Desafio 2
 function calcArea() {
