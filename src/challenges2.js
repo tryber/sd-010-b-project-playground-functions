@@ -1,7 +1,20 @@
 // Desafio 10
-function techList() {
-  Teste
+function techList(tech, name) {
+  let objectListOutput = [];
+  let object = {
+    tech:tech,
+    name: name
+  }
+  let ordenadedList = object.tech.sort();
+  for(let key in ordenadedList) {
+    objectListOutput.push({
+        tech: ordenadedList[key],
+        name: name
+    })
+  }
+  return objectListOutput;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
