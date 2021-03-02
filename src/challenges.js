@@ -16,16 +16,19 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ');  // separo as strings pelo espaõ em branco
+  return string.split(' ');// separo as strings pelo espaõ em branco
 }
-console.log(splitSentence("go Trybe"));
-console.log(splitSentence("vamo que vamo"));
-console.log(splitSentence("foguete"));
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array[array.length-1]+ ', ' + array[0];//última posição e primeira posição
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
