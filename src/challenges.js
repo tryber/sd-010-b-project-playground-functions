@@ -8,7 +8,6 @@ function compareTrue(boolean1, boolean2) {
 }
 console.log(compareTrue(true, false));
 
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -36,8 +35,19 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  const catDistance = mouse - cat1;
+  const catDistance2 = mouse - cat2;
+
+  if (catDistance1 > catDistance2) {
+    return 'cat1';
+  }
+  if (catDistance1 < catDistance2) {
+    return 'cat2';
+  }
+
+  return 'Os gatos trombam e o rato foge';
+
 }
 
 // Desafio 8
