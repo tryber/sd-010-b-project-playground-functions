@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   let resultado = '';
-  if(bool1 && bool2 === true) {
+  if (bool1 && bool2 === true) {
     resultado = true;
   } else if (bool1 && bool2 === false) {
     resultado = false;
