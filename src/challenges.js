@@ -86,14 +86,22 @@ function divisibleByThreeAndFive(number) {
 function fizzBuzz(array) {
   let output = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (divisibleByThree(array[index])) {
+    if (divisibleByThreeAndFive(array[index])) {
+      output.push(divisibleByThreeAndFive(array[index]));
+      break;
+    } else if (divisibleByThree(array[index])) {
       output.push(divisibleByThree(array[index]));
+      break;
+    } else if (divisibleByFive(array[index])) {
+      output.push(divisibleByFive(array[index]));
+      break;
     }
+    output.push('bug!');
   }
   return output;
   // seu código aqui
 }
-console.log(fizzBuzz());
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
