@@ -16,6 +16,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
  return string.split('');
 }
+console.log(splitSentence ( "go Trybe" ));
 
 
 /////////////////////////////////////////////////////////////////////////////////////
