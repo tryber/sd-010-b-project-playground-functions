@@ -50,13 +50,17 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(listname) {
   // seu código aqui
-  let nomes 
-  
-    nomes.push ( listname[-1]) 
-   
-    nomes.push(listname[0])
+  let nomes =[]
+
+  for ( let i=0 ; i < listname.length ; i ++ ) {
+    if( i = -1 ) {
+    nomes.push ( listname[listname.length[-1]]) ;
+  }
+    else if (i = 0) {
+    nomes.push (listname[ listname.length[0] ] ) ;
+  }
     
-  
+  }
   return nomes
 }
 
