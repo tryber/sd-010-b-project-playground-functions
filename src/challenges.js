@@ -55,25 +55,27 @@ function highestCount(arrayNum) {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let gato1 = cat1 - mouse; // 4;
-  let gato2 = cat2 - mouse; // 5;
-
-  if (gato1 === gato2) {
-    return 'Os gatos trombam e o rato foge';
-  } else if (gato1 < gato2) {
-    return 'cat1';
-  } else {
-    return 'cat2';
-  }
-}
-
-console.log(catAndMouse(7, 12, 12));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(num) {
+
+  const valores = num.map( function( number ) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      return 'FizzBuzz'
+    } else if (number % 5 === 0) {
+      return 'Buzz'
+    } else if (number % 3 === 0) {
+      return 'Fizz'
+    } else {
+      return 'Bug!'
+    }
+  })
+
+  return valores
+  
 }
+
+console.log(fizzBuzz([9, 25]))
 
 // Desafio 9
 function encode() {
