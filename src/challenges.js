@@ -138,13 +138,13 @@ function encode(arrayEncode) {
     if (arrayEncode[index] === 'a') {
       fraseA = arrayEncode.replace(/a/g, 1);
     } else if (fraseA[index] === 'e') {
-    fraseE = fraseA.replace(/e/g, 2);
+      fraseE = fraseA.replace(/e/g, 2);
     } else if (fraseE[index] === 'i') {
-    fraseI = fraseE.replace(/i/g, 3);
+      fraseI = fraseE.replace(/i/g, 3);
     } else if (fraseI[index] === 'o') {
-    fraseO = fraseI.replace(/o/g, 4);
+      fraseO = fraseI.replace(/o/g, 4);
     } else if (fraseO[index] === 'u') {
-    fraseU = fraseO.replace(/u/g, 5);
+      fraseU = fraseO.replace(/u/g, 5);
     }
     encoded = fraseU;
   }
