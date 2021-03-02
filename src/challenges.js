@@ -5,8 +5,10 @@ function compareTrue(valor1, valor2) {
   } else {
     return false;
   }
+
 }
-// console.log(compareTrue(false,true));
+ console.log(compareTrue(true,true));
+
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2)
@@ -55,8 +57,8 @@ function highestCount(numeros) {
   }
   return contadorMaiorNumero;
 }
- let numeros = [9, 1, 2, 3, 9, 5, 7];
- console.log(highestCount(numeros));
+let numeros = [9, 1, 2, 3, 9, 5, 7];
+// console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -77,14 +79,14 @@ let mouse = 0;
 
 // Desafio 8
 function fizzBuzz(numeros) {
-let numerosConvertidos= [];
+  let numerosConvertidos = [];
 
   for (key in numeros) {
-    if(((numeros[key] % 3) === 0 ) && ((numeros[key] % 5 ) === 0)){
+    if (((numeros[key] % 3) === 0) && ((numeros[key] % 5) === 0)) {
       numerosConvertidos.push("fizzBuzz");
     } else if ((numeros[key] % 3) === 0) {
       numerosConvertidos.push("fizz");
-    } else if ((numeros[key] % 5 ) === 0) {
+    } else if ((numeros[key] % 5) === 0) {
       numerosConvertidos.push("buzz");
     } else {
       numerosConvertidos.push("bug!")
@@ -92,14 +94,36 @@ let numerosConvertidos= [];
   }
   return numerosConvertidos;
 }
-
-let numeros = [2, 15, 7, 9, 45];
+let numerosfizzbuz = [2, 15, 7, 9, 45];
 // console.log(fizzBuzz(numeros));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  for (let i = 0; i < frase.length; i += 1) {
+    switch (frase[i]) {
+      case "a":
+        frase[i] = 1;
+        break;
+      case "2":
+        frase[i] = 2;
+        break;
+      case "1":
+        frase[i] = 3;
+        break;
+      case "o":
+        frase[i] = 4;
+        break;
+      case "u":
+        frase[i] = 5;
+        break;
+        default:
+          console.log("vogal nao encontrads");
+    }
+  }
+  return frase;
 }
+let frase = "hi there";
+console.log(encode(frase));
 
 function decode() {
   // seu código aqui
