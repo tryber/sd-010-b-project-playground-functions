@@ -54,7 +54,7 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let nearCat = ''
+  let nearCat = ""
 	if(cat1 === cat2) {
 		nearCat = "os gatos trombam e o rato foge"
 	} else {
@@ -66,14 +66,14 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let fizzBuzzArr = []
+	let fizzBuzzArr = []
 	for (let index = 0; index < arr.length; index += 1) {
-		if (arr[index]%3 && arr[index]%5){
-			fizzBuzzArr.push("bug!")
-		} else if (arr[index]%3 || arr[index]%5) {
-			fizzBuzzArr.push(arr[index]%3 ? "buzz" : "fizz")
-		} else {
+		if (arr[index]%3 === 0 && arr[index]%5 === 0){
 			fizzBuzzArr.push("fizzBuzz!")
+		} else if (arr[index]%3 === 0 || arr[index]%5 === 0) {
+			fizzBuzzArr.push(arr[index]%3 === 0 ? "fizz" : "buzz")
+		} else {
+			fizzBuzzArr.push("bug!")
 		}
 	}
 	return fizzBuzzArr
