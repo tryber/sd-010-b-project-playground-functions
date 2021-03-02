@@ -44,7 +44,7 @@ function highestCount(array) {
     }
   }
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] == maiorNumero) {
+    if (array[index] === maiorNumero) {
       cont += 1;
     }
   }
@@ -53,8 +53,16 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let saida;
+  if ((mouse - cat1) < (mouse - cat2)) {
+    saida = "cat1";
+  } else if ((mouse - cat2) < (mouse - cat1)) {
+    saida = "cat2";
+  } else {
+    saida = "os gatos trombam e o rato foge"
+  }
+  return saida;
 }
 
 // Desafio 8
