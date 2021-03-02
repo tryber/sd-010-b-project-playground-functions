@@ -3,7 +3,8 @@ function compareTrue(valorUm, valorDois) {
   // seu código aqui;
   if (valorUm === true && valorDois === true) {
     return true;
-  } else {
+  }
+  if (valorUm !== true && valorDois === true) {
     return false;
   }
 }
