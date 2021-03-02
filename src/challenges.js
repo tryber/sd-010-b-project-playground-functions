@@ -50,12 +50,14 @@ function concatName(fraseArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let pontos = (wins * 3) + ties;
+  let vitorias = wins * 3;
+  let empates = ties
+  let pontos = vitorias + empates;
  
   return pontos + " pontos";
 
 }
-console.log(footballPoints(0, 0));
+//console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(arrayNumeros) {
