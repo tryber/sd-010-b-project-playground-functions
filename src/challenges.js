@@ -56,9 +56,10 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(word1) {
-  let 
-function decode(word2) {
+function encode( {
+  
+
+function decode() {
   // seu código aqui
 }
 
