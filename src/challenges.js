@@ -23,7 +23,7 @@ function splitSentence(text) {
 // Desafio 4
 function concatName(array) {
   let ultimoArray = array.length - 1;
-  let primeiroUltimo = array[ultimoArray] + array[0];
+  let primeiroUltimo = ultimoArray + ', ' + array[0];
   return primeiroUltimo;
 }
 
