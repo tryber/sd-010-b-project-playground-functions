@@ -43,7 +43,7 @@ function highestCount(parametro) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  return cat1 - mouse < cat2 - mouse ? "cat1" : cat2 - mouse < cat1 - mouse ? "cat2" : "os gatos trombam e o rato foge";
+  return Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse) ? "cat1" : Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse) ? "cat2" : "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
