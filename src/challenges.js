@@ -44,11 +44,21 @@ function highestCount(numeros) {
     }
   return recorrencia;
 }
+// Auxilio por orientação:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  distanciaCat1 = mouse - cat1;
+  distanciaCat2 = mouse - cat2;
+
+  if (distanciaCat1 < distanciaCat2) {
+    return "cat1"
+  } else if (distanciaCat2 < distanciaCat1) {
+    return "cat2"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
