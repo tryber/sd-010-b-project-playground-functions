@@ -26,14 +26,15 @@ function concatName(words) {
 
 }
 // Desafio 
-let pontos
 function footballPoints(wins, ties) {
-  let totalpoints = ((wins * 3) + (ties * 1))
+  let totalPoints = ((wins * 3) + ties);
+
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayGrande) {
+  let contador = arrayGrande.length[]
 }
 
 // Desafio 7
