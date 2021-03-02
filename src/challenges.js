@@ -52,10 +52,10 @@ function footballPoints(wins, ties) {
   // seu código aqui
   let pontos = (wins * 3) + ties;
  
-  return "O time possui " + pontos + " pontos";
+  return pontos + " pontos";
 
 }
-//console.log(footballPoints(14, 8));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(arrayNumeros) {
