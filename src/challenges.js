@@ -82,12 +82,12 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// let array = [2, 15, 7, 9, 45];
+// let array = [9, 25];
 // console.log(fizzBuzz(array));
 function fizzBuzz(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     if (((numbers[i] % 3) === 0) && ((numbers[i] % 5) === 0)) {
-      numbers[i] = "fizzbuzz";
+      numbers[i] = "fizzBuzz";
     } else if ((numbers[i] % 3) === 0) {
       numbers[i] = "fizz";
     } else if ((numbers[i] % 5) === 0) {
