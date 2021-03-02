@@ -80,13 +80,18 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let table = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5' };
 }
 function decode() {
   // seu código aqui
 }
-
+console.log(encode('hi there!'));
 module.exports = {
   calcArea,
   catAndMouse,
