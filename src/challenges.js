@@ -54,16 +54,16 @@ function highestCount(numbers) {
   return cont;
 }
 // Desafio 7
-function catAndMouse(cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let winner = "";
   if (cat1 < cat2) {
     winner = "cat1";
   } else if (cat2 < cat1) {
-    winner = "cat2"
+    winner = "cat2";
   } else {
-    winner = "os gatos trombam e o rato foge"
+    winner = "os gatos trombam e o rato foge";
   }
-  return winner
+  return winner;
 }
 // Desafio 8
 function fizzBuzz() {
