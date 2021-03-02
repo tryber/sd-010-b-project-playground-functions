@@ -49,12 +49,17 @@ function generatePhoneNumber(phone) {
     return "Array com tamanho incorreto.";
   }
 }
-console.log(generatePhoneNumber('12341671982'));
 
 // Desafio 12
-function triangleCheck() {
-  
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) {
+    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+      return true;
+    }
+  }
+  return false;
 }
+console.log(triangleCheck(1, 12, 12));
 
 // Desafio 13
 function hydrate() {
