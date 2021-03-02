@@ -29,7 +29,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(ultimoPrimeiroItem) {
   
-  let conectaItem = (ultimoPrimeiroItem.length-1) + (ultimoPrimeiroItem[0]);
+  let conectaItem = (ultimoPrimeiroItem[ultimoPrimeiroItem.length-1]) + (ultimoPrimeiroItem[0]);
   return conectaItem;
 
 }
