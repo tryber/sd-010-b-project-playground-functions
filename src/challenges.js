@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(fraseADividir) {
   // Busquei orientação para resolver o item no site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
-  let fraseDividida = fraseADividir.split(" ");
+  let fraseDividida = fraseADividir.split('' '');
   return fraseDividida;
 }
 // console.log(splitSentence("Mariana Mohr Silveira"));
@@ -34,7 +34,7 @@ function concatName(listaNomes) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontosTotais = ((wins * 3) + (ties * 1))
+  let pontosTotais = ((wins * 3) + (ties * 1));
   return pontosTotais;
 }
 // console.log(footballPoints(1, 2));
@@ -54,7 +54,6 @@ function highestCount(numeros) {
 }
 let numero = [9, 1, 9, 3, 9, 5, 7];
 console.log(highestCount(numero));
-
 
 // console.log(highestCount(numeros));
 
@@ -110,7 +109,7 @@ function encode(frase) {
   fraseTrocada = fraseTrocada.split('u').join(5);
   return fraseTrocada;
 }
-let frase1 = "How are you today?";
+let frase1 = 'How are you today?';
 console.log(encode(frase1));
 
 function decode(frase) {
