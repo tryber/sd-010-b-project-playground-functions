@@ -21,15 +21,20 @@ function calcArea(base, heigth) {
   // seu código aqui
   areaTriangulo = (base * heigth)/2;
 
-  return areaTriangulo
+  return areaTriangulo;
 
 }
-console.log(calcArea(51, 1));
+//console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  let recebeString = frase.split(' ');
+
+  return recebeString;
+
 }
+//console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
