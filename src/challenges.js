@@ -1,7 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  teste
+function compareTrue(bol1, bol2) {
+  if (bol1 === true && bol2 === true) {
+    console.log('true')
+  }
+  else {
+    console.log('false')
+  }
 }
 
 // Desafio 2
