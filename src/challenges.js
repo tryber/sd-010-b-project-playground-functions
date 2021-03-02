@@ -1,3 +1,7 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable no-plusplus */
+
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
   let response = valueOne && valueTwo;
@@ -25,7 +29,7 @@ function splitSentence(stringSplit) {
 // Desafio 4
 function concatName(arrayStrings) {
   let response = '';
-  response = `${arrayStrings[0]}, ${arrayStrings[arrayStrings.length - 1]}`;
+  response = `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
   console.log(`Concatenação: ${response}`);
 
   return response;
@@ -42,8 +46,27 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let response;
+  let counter = 0;
+  let larger = 0;
+
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    if (arrayNumbers[i] > larger) {
+      larger = arrayNumbers[i];
+    }
+  }
+
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    if (larger === arrayNumbers[i]) {
+      counter++;
+    }
+  }
+
+  response = counter;
+  console.log(`Maior número: ${larger}, Repetições: ${response}`);
+
+  return response;
 }
 
 // Desafio 7
@@ -65,12 +88,14 @@ function decode() {
 }
 
 let concat = ['João', 'Victor', 'Pistório', 'Martins'];
+let numbers = [1, 2, 2, 3, 4, 4, 5, 5, 6, 7, 8, 9, 9, 9];
 
 compareTrue(false, false);
 calcArea(10, 50);
 splitSentence('Teste de Split');
 concatName(concat);
 footballPoints(14, 8);
+highestCount(numbers);
 
 module.exports = {
   calcArea,
