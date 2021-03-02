@@ -4,8 +4,12 @@ function techList(tech) {
   let nome = "Lucas";
   let retorno = [];
 
-  for (let index = 0; index < lista.length; index++) {
+  if (lista.length > 1) {
+    for (let index = 0; index < lista.length; index++) {
     retorno.push({tech: lista[index], name: nome});    
+  }
+  } else {
+    retorno = 'Vazio!';
   }
   return retorno;
 }
@@ -25,7 +29,7 @@ function hydrate() {
   // seu código aqui
 }
 
-  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
+  console.log(techList([]));
 
 module.exports = {
   generatePhoneNumber,
