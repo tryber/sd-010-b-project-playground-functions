@@ -47,8 +47,9 @@ function highestCount(arrayOfNum) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  const catDistance1 = mouse - cat1;
-  const catDistance2 = mouse - cat2;
+  // Valores absolutos, ou seja, ignora o negativo
+  const catDistance1 = Math.abs(mouse - cat1);
+  const catDistance2 = Math.abs(mouse - cat2);
 
   if (catDistance1 > catDistance2) {
     return 'cat1';
@@ -59,6 +60,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return 'os gatos trombam e o rato foge';
 }
+
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz() {

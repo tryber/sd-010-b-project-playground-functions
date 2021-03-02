@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 3:
-function splitSentence(string) {
+/* function splitSentence(string) {
   let arrayOfStrings = [];
   let word = '';
 
@@ -36,4 +34,4 @@ function highestCount(arrayOfNum) {
   }
 
   return counter;
-}
+} */
