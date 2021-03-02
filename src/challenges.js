@@ -1,12 +1,13 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
-    return true
-} 
-    return false
+    return true;
+  }
+    return false;
 }
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  return ((base * height) /2);
 // seu código aqui
 }
 
@@ -61,3 +62,4 @@ module.exports = {
   splitSentence,
 };
 console.log(compareTrue( true, false))
+console.log(calcArea(5, 2))
