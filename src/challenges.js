@@ -1,16 +1,7 @@
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   // seu código aqui
-  let resultCompare = null;
-  if (parameter1 === true && parameter2 === true) {
-    resultCompare = true;
-    return resultCompare;
-  } if (parameter1 === false && parameter2 === false) {
-    resultCompare = true;
-    return resultCompare;
-  } else {
-    resultCompare = false;
-  }
+  let resultCompare = parameter1 && parameter2;
   return resultCompare;
 }
 
