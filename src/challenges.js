@@ -1,11 +1,13 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   // seu código aqui
+  let resp = '';
   if (bool1 === true && bool2 === true){
-    return true;
+     resp = true;
   } else {
-    return false;
+    resp = false;
   }
+  return resp;
 }
 
 
@@ -50,13 +52,13 @@ function highestCount(arrayNumbers) {
   let contMaior = 0;
   let maior = arrayNumbers[0];
   
-  for (num in arrayNumbers){
+  for (let num in arrayNumbers){
     if(maior < arrayNumbers[num]){
       maior = arrayNumbers[num];
     }
   }
-  for (highest in arrayNumbers){
-    if(maior == arrayNumbers[highest]){
+  for (let highest in arrayNumbers){
+    if(maior === arrayNumbers[highest]){
       contMaior += 1;
     }
   }
@@ -66,9 +68,22 @@ function highestCount(arrayNumbers) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distCat1 = cat1 - mouse;
+  let distCat2 = cat2 - mouse;
+  let capture = "";
+  if(distCat1 < distCat2){
+    capture = "cat1";
+  } else if(distCat1 > distCat2){
+    capture = "cat2"
+  } else {
+    capture = "Os gatos trombam e o rato foge"
+  }
+
+  return capture;
 }
+
 
 // Desafio 8
 function fizzBuzz() {
