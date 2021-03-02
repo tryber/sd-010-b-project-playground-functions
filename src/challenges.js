@@ -50,7 +50,6 @@ function highestCount(array) {
   }
   return cont;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -64,6 +63,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return saida;
 }
+
+console.log(catAndMouse(5, 3, 3));
 
 // Desafio 8
 function fizzBuzz() {
