@@ -1,8 +1,12 @@
 // Desafio 1
 function compareTrue() {
-    // Desafio 1 == Barrisenn Gonçalo
-function  compareTrue ( a , b ) {  
-  return a === true && b === true ? verdadeiro : falso ;
+    // Desafio 1 por Barrisenn Gonçalo
+  let confirma=false;
+  if (a === b && !confirma) {
+    confirma = true;
+  }
+  return confirma;
+  return a === true && b === true ? true : false;
     
 }
 
