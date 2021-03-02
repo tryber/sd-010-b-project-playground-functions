@@ -4,7 +4,7 @@ function compareTrue(valorUm, valorDois) {
   let trueOrFalse = false;
   if (valorUm && valorDois === true) {
     return true;
-  } 
+  }
   return trueOrFalse;
 }
 
