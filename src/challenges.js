@@ -77,7 +77,6 @@ console.log(catAndMouse(0, 5, 5)); // -> 'os gatos trombam e o rato foge'
 
 // Requisito 8 - Verifica se um número é divisível por 3, 5 ou ambos
 function fizzBuzz(numbers) {
-  
   let res = [];
   for (const num in numbers) {
     if (numbers[num] % 3 === 0 && numbers[num] % 5 === 0) {
@@ -90,7 +89,7 @@ function fizzBuzz(numbers) {
       res.push('bug!');
     }
   }
-    return res;
+  return res;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45])); // -> ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
 console.log(fizzBuzz([7, 9])); // ->  ['bug!', 'fizz']
@@ -98,27 +97,27 @@ console.log(fizzBuzz([9, 25])); // -> ['fizz', 'buzz']
 
 // Requisito 9 - Criar duas funções, uma que codifica trocando vogais por números e outra que decodifica a mensagem
 function encode(string) {
-  string = string.split('').map((char) => {
-    if (char === 'a') char = '1';
-    if (char === 'e') char = '2';
-    if (char === 'i') char = '3';
-    if (char === 'o') char = '4';
-    if (char === 'u') char = '5';
-    return char;
-  }).join('');
-  return string;
+  string = string.split('');
+  for (const char in string) {
+    if (string[char] === 'a') string[char] = '1';
+    if (string[char] === 'e') string[char] = '2';
+    if (string[char] === 'i') string[char] = '3';
+    if (string[char] === 'o') string[char] = '4';
+    if (string[char] === 'u') string[char] = '5';
+  }
+  return string.join('');
 }
 
 function decode(string) {
-  string = string.split('').map((char) => {
-    if (char === '1') char = 'a';
-    if (char === '2') char = 'e';
-    if (char === '3') char = 'i';
-    if (char === '4') char = 'o';
-    if (char === '5') char = 'u';
-    return char;
-  }).join('');
-  return string;
+  string = string.split('');
+  for (const char in string) {
+    if (string[char] === '1') string[char] = 'a';
+    if (string[char] === '2') string[char] = 'e';
+    if (string[char] === '3') string[char] = 'i';
+    if (string[char] === '4') string[char] = 'o';
+    if (string[char] === '5') string[char] = 'u';
+  }
+  return string.join('');
 }
 console.log(encode('hi there!')); // -> 'h3 th2r2!'
 console.log(decode('h3 th2r2!')); // -> 'hi there!'
