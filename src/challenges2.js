@@ -83,9 +83,9 @@ function generatePhoneNumber(parametro) {
 function triangleCheck(lineA, lineB, lineC) {
   let retorno = false;
 
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB + lineC)) {
-    if (lineB < (lineA + lineC) && lineB > Math.abs(lineA + lineC)) {
-      if (lineC < (lineA + lineB) && lineC > Math.abs(lineA + lineB)) {
+  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    if (lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+      if (lineC < Math.abs(lineB + lineA) && lineC > Math.abs(lineA - lineB)) {
         retorno = true;
       }
     }
@@ -98,7 +98,7 @@ function hydrate() {
   // seu código aqui
 }
 
-console.log(generatePhoneNumber([1, 2, 3]));
+console.log(triangleCheck(30, 14, 8));
 
 module.exports = {
   generatePhoneNumber,
