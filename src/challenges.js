@@ -16,8 +16,12 @@ function splitSentence(a) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(a) {
+  let dado = [];
+  dado.push(a.pop());
+  dado.push(a[0]);
+  dado = dado.join(', ');
+  return dado;
 }
 
 // Desafio 5
