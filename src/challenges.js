@@ -3,16 +3,18 @@ function compareTrue(active, connected) {
   if (active === true && connected === true) {
     return true;
   } else {
-    return false
+    return false;
   }
 }
 
-console.log(compareTrue(false, false))
+console.log(compareTrue(false, false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2
 }
+
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
