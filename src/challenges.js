@@ -25,7 +25,7 @@ function concatName(array) {
       response.push(array[index]);
     }
   }
-  return response;
+  return response.join(' ');
 }
 
 // Desafio 5
