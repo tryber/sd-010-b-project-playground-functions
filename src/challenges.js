@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(0, 3, 2))
+//console.log(catAndMouse(0, 3, 2))
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -91,12 +91,49 @@ function fizzBuzz(numeros) {
 //console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let codificacao = "";
+  for (let index in frase) {
+    if (frase[index] == "a") {
+      codificacao += 1;
+    } else if (frase[index] == "e") {
+      codificacao += 2;
+    } else if (frase[index] == "i") {
+      codificacao += 3;
+    } else if (frase[index] == "o") {
+      codificacao += 4;
+    } else if (frase[index] == "u") {
+      codificacao += 5;
+    } else {
+      codificacao += frase[index];
+    }
+  }
+  return codificacao
 }
-function decode() {
-  // seu código aqui
+
+//console.log(encode("hi there!"));
+
+function decode(frase) {
+  let decodificacao = "";
+  for (let index in frase) {
+    if (frase[index] == 1) {
+      decodificacao += "a";
+    } else if (frase[index] == 2) {
+      decodificacao += "e";
+    } else if (frase[index] == 3) {
+      decodificacao += "i";
+    } else if (frase[index] == 4) {
+      decodificacao += "o";
+    } else if (frase[index] == 5) {
+      decodificacao += "u";
+    } else {
+      decodificacao += frase[index];
+    }
+  }
+  return decodificacao
 }
+
+//console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
