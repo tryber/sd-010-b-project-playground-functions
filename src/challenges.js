@@ -61,11 +61,13 @@ let numeros = [9, 1, 2, 3, 9, 5, 7];
 // console.log(highestCount(numeros));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) { // 1 5 12 
+  let distaciaCat1Mouse = cat1 - mouse; //4
+  let distaciaCat2Mouse = cat2 - mouse; //11
   let winerCat;
-  if (cat1 > cat2) {
+  if (distaciaCat1Mouse > distaciaCat2Mouse) {
     winerCat = "cat2";
-  } else if (cat1 < cat2) {
+  } else if (distaciaCat1Mouse < distaciaCat2Mouse) {
     winerCat = "cat1";
   } else {
     winerCat = "os gatos trombam e o rato foge";
@@ -74,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 let cat1 = 12;
 let cat2 = 12;
-let mouse = 0;
+let mouse = 1;
 console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
