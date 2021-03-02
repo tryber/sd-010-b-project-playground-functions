@@ -15,6 +15,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
+  // Consultei o site da w3schools pra usar a função split aqui
+  // link: https://www.w3schools.com/jsref/jsref_split.asp
   let array = string.split(' ');
   return array;
 }
@@ -101,6 +103,8 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+// Consultei o site da w3schools pra usar a função replace nas duas funções
+// link: https://www.w3schools.com/jsref/jsref_replace.asp
 function encode(string) {
   let encodedMessage = string;
   encodedMessage = encodedMessage.replace(/a/g, '1');
