@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat2Distance < cat1Distance) {
     result = 'cat2';
   } else {
-    result = 'os gatos trombam e o rato foge'; //Jerry wins!
+    result = 'os gatos trombam e o rato foge'; // Jerry wins! :)
   }
   return result;
 }
@@ -68,11 +68,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let fizzBuzzArray = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if ((numbers[index] % 3 == 0) && (numbers[index] % 5 == 0)) {
+    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
       fizzBuzzArray.push('fizzBuzz');
-    } else if (numbers[index] % 3 == 0) {
+    } else if (numbers[index] % 3 === 0) {
       fizzBuzzArray.push('fizz');
-    } else if (numbers[index] % 5 == 0) {
+    } else if (numbers[index] % 5 === 0) {
       fizzBuzzArray.push('buzz');
     } else {
       fizzBuzzArray.push('bug!');
@@ -81,31 +81,57 @@ function fizzBuzz(numbers) {
   return fizzBuzzArray;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(message) {
+  let codedMessagem = '';
+  for (let index in message) {
+    switch (message[index]) {
+      case 'a':
+        codedMessagem = codedMessagem + '1';
+        break;
+      case 'e':
+        codedMessagem = codedMessagem + '2';
+        break;
+      case 'i':
+        codedMessagem = codedMessagem + '3';
+        break;
+      case 'o':
+        codedMessagem = codedMessagem + '4';
+        break;
+      case 'u':
+        codedMessagem = codedMessagem + '5';
+        break;
+      default:
+        codedMessagem = codedMessagem + message[index];
+    }
+  }
+  return codedMessagem;
 }
 
-function decode() {
-  // seu código aqui
+function decode(message) {
+  let encodedMessagem = '';
+  for (let index in message) {
+    switch (message[index]) {
+      case '1':
+        encodedMessagem = encodedMessagem + 'a';
+        break;
+      case '2':
+        encodedMessagem = encodedMessagem + 'e';
+        break;
+      case '3':
+        encodedMessagem = encodedMessagem + 'i';
+        break;
+      case '4':
+        encodedMessagem = encodedMessagem + 'o';
+        break;
+      case '5':
+        encodedMessagem = encodedMessagem + 'u';
+        break;
+      default:
+        encodedMessagem = encodedMessagem + message[index];
+    }
+  }
+  return encodedMessagem;
 }
 
 module.exports = {
