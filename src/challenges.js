@@ -30,10 +30,15 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); // -> Paol
 console.log(concatName(['foguete', 'não', 'tem', 'ré'])); // -> 'ré, foguete'
 console.log(concatName(['captain', 'my', 'captain'])); // -> 'captain, captain'
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+// Requisito 5 - retornar a pontuação de um time a partir do número de vitórias(3pts) e empates(1pt)
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
+console.log(footballPoints(14, 8)); // -> 50
+console.log(footballPoints(1, 2)); // -> 5
+console.log(footballPoints(0, 0)); // -> 0
+
 
 // Desafio 6
 function highestCount() {
