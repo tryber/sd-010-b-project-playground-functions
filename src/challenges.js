@@ -71,7 +71,7 @@ function fizzBuzz(arrayDeNumeros) {
   let resposta = [];
   for (let index = 0; index < arrayDeNumeros.length; index += 1) {
     if ((arrayDeNumeros[index] % 3 === 0) && (arrayDeNumeros[index] % 5 === 0)) {
-      resposta.push('fizzbuzz');
+      resposta.push('fizzBuzz');
     } else if (arrayDeNumeros[index] % 3 === 0) {
       resposta.push('fizz');
     } else if (arrayDeNumeros[index] % 5 === 0) {
@@ -99,8 +99,8 @@ function encode(frase) {
       separado[caracter] = 5;
     }
   }
-  let junto = separado.join('');
-  return junto;
+  let juntoEncode = separado.join('');
+  return juntoEncode;
 }
 
 function decode(frase) {
@@ -118,10 +118,9 @@ function decode(frase) {
       separado[caracter] = 'u';
     }
   }
-  let junto = separado.join('');
-  return junto;
+  let juntoDecode = separado.join('');
+  return juntoDecode;
 }
-console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
