@@ -32,8 +32,17 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(namesArray) {
+  let arrayConcat = [];
+  let lastName = namesArray.length - 1;
+  for (index = lastName; index >= 0; index -= 1) {
+    if (index === lastName) {
+      arrayConcat.push(namesArray[index]);
+    } else if (index === 0) {
+      arrayConcat.push(namesArray[index]);
+    }
+  }
+  return arrayConcat;
 }
 
 // Desafio 5
@@ -60,6 +69,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
