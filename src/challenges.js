@@ -1,9 +1,14 @@
 // Desafio 1
 function compareTrue() {
-function compareTrue(a, b) {
-  return a === true && b === true ? true : false;
-  let confirma = false;
-  return a === true && b === true ? !confirma : confirma;
+  let boo1 = ;
+  let boo2 = ;
+  if (boo1 && boo2 === true) {
+    return true;
+  }
+  return false;
+function compareTrue(boo1, boo2) {
+  let verdadeFalso = boo1 && boo2;
+  return verdadeFalso;
 }
 
 // Desafio 2
