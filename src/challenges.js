@@ -44,9 +44,9 @@ function highestCount(arrayNum) {
   let qtd = 0;
   let maior = Math.max.apply(null, arrayNum);
 
-  for (let i = 0; i < arrayNum.length; i++) {
-    if (arrayNum[i] == maior) {
-      qtd = qtd + 1
+  for (let i = 0; i < arrayNum.length; i += 1) {
+    if (arrayNum[i] === maior) {
+      qtd++
     }
   }
   return qtd;
@@ -55,9 +55,20 @@ function highestCount(arrayNum) {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let gato1 = cat1 - mouse // 4
+  let gato2 = cat2 - mouse // 5
+
+  if (gato1 == gato2) {
+    return 'Os gatos trombam e o rato foge'
+  } else if (gato1 < gato2) {
+    return 'cat1'
+  } else {
+    return 'cat2'
+  }
 }
+
+console.log(catAndMouse(7, 6, 12))
 
 // Desafio 8
 function fizzBuzz() {
