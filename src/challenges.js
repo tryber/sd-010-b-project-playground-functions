@@ -69,10 +69,17 @@ function catAndMouse(cat1, cat2, mouse) {
 function fizzBuzz(array) {
   let novaArray = [];
   for (let i = 0; i <= array.length; i += 1) {
-    if ((i % 3 == 0) && (i % 5 != 0) {
-      novaArray.push = 
+    if ((i % 3 == 0) && (i % 5 != 0)) {
+      novaArray.push('fizz');
     }
-  }
+    else if ((i % 3 != 0) && (i % 5 == 0)) {
+      novaArray.push('buzz');
+    }
+    else if ((i % 3 == 0) && (i % 5 == 0)) {
+      novaArray.push('fizzBuzz');
+    }
+    }
+
 }
 
 // Desafio 9
