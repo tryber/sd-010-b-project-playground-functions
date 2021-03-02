@@ -97,7 +97,7 @@ module.exports = {
   concatName,
   decode,
   encode,
-  fizzBuzz: result,
+  fizzBuzz,
   footballPoints,
   highestCount,
   splitSentence,
