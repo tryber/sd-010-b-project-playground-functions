@@ -1,34 +1,70 @@
 // Desafio 1
-function compareTrue() {
-  // começando
-  teste123
-  // seu código aqui
+function compareTrue(numeroImpar1, numeroImpar2) {
+  if (numeroImpar1 % 2 != 0 && numeroImpar2 % 2 != 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo = 0;
+  triangulo = ((base * height) / 2);
+
+  return triangulo;
 }
+
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let array = [];
+  for(let key in frase){
+   array.push(frase[key]);
+  }
+  return array;
 }
+
+console.log(splitSentence("O mar é azul"));
+
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(variavel) {
+  let resultado = "";
+  resultado = variavel[variavel.length -1] + ", " + variavel[0];
+
+  return resultado;
 }
 
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = 0;
+  pontos = (3 * wins + 1 * ties);
+
+  return pontos;  
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(n) {
+  let numeroMaior = 0;
+  let contador = 0;
+  for(let i = 0; i < n.length; i += 1){
+    if (n[i] >= numeroMaior){
+      numeroMaior = n[i];
+    }
+  }
+  
+  for(let i = 0; i < n.length; i += 1){
+    if(numeroMaior == n[i]){
+      contador += 1;
+    } 
+  }
+  return contador;
 }
+
 
 // Desafio 7
 function catAndMouse() {
