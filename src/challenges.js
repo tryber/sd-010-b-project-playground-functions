@@ -1,21 +1,23 @@
-// Desafio 1
+// ok - Desafio 1
 function compareTrue(boolean1, boolean2) {
-  //Ref: https://stackoverflow.com/questions/45817581/replace-this-if-then-else-statement-by-a-single-return-statement//
-  //Após sugestão do ESlint, usei a referência acima para refatoração do cógico, antes implementado com uso do IF/ELSE//
+  // Ref: https://stackoverflow.com/questions/45817581/replace-this-if-then-else-statement-by-a-single-return-statement //
+  // Após sugestão do ESlint, usei a referência acima para refatoração do cógico, antes implementado com uso do IF/ELSE //
   return boolean1 && boolean2;
 }
 console.log('Resultado do 1º Desafio: ' + compareTrue(false, false));
 
-// Desafio 2
+// ok - Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  return ((base * height) / 2);
 }
-console.log('Resultado do 2° Desafio: ' + calcArea(5, 5));
+console.log('Resultado do 2° Desafio: ' + calcArea(51, 1));
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// ok - Desafio 3
+function splitSentence(sentence) {
+  let wordsArray = sentence.split(" ");
+  return wordsArray;
 }
+console.log('Resultado do 2° Desafio: ' + splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName() {
