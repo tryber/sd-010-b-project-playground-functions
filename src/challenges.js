@@ -1,14 +1,14 @@
 // Desafio 1
 let check1 = true;
-let check2 = true;
-console.log(compareTrue(check1, check2));
+let check2 = false;
 function compareTrue(check1, check2) {
-  if((check1 === true)&&(check2 === true)) {
-    return true;
-  }else{
-    return false;
-  }
+  let check3 = false;
+  if ((check1 === true) && (check2 === true)) {
+    check3 = true;
+  } 
+  return check3;
 }
+console.log(compareTrue(check1, check2));
 
 // Desafio 2
 function calcArea() {
