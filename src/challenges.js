@@ -53,7 +53,7 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(sentence) {
   let vowels = 'aeiou';
-  let replace = '';
+  let replace;
   let regex;
   for (let i = 0; i < vowels.length; i++) {
     for (let j = 0; j < sentence.length; j++) {
@@ -68,8 +68,22 @@ function encode(sentence) {
   return sentence;
 }
 
-function decode() {
-  // seu código aqui
+function decode(encSentence) {
+  let vowels = 'aeiou'
+  let numbers = '12345';
+  let replace;
+  let regex;
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < encSentence.length; j++) {
+      replace = encSentence[j];
+      regex = new RegExp(replace,"g");
+      if (encSentence[j] == numbers[i]) {
+        encSentence = encSentence.replace(regex, vowels[i]);
+        break;
+      }
+    }
+  }
+  return encSentence;
 }
 
 module.exports = {
