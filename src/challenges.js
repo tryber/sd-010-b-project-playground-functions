@@ -1,18 +1,19 @@
 // Desafio 1
 function compareTrue(booleanValue1, booleanValue2) {
   let booleanReturn;
-  (booleanValue1 && booleanValue2) ? booleanReturn = true : booleanReturn = false;
+  if (booleanValue1 && booleanValue2) booleanReturn = true;
+  else booleanReturn = false;
   return booleanReturn;
 }
-
+console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(str) {
-  let splitStrings = str.split(" ");
+  let splitStrings = str.split(' ');
   return splitStrings;
 }
 
@@ -33,14 +34,10 @@ function highestCount(arrNumbers) {
   let maior = 0;
   let count = 0;
   for (const key in arrNumbers) {
-    if (arrNumbers[maior] <= arrNumbers[key]) {
-      maior = arrNumbers[key];
-    }
+    if (arrNumbers[maior] <= arrNumbers[key]) maior = arrNumbers[key];
   }
   for (const key in arrNumbers) {
-    if (maior === arrNumbers[key]) {
-      count += 1;
-    }
+    if (maior === arrNumbers[key]) count += 1;
   }
   return count;
 }
