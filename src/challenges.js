@@ -26,6 +26,7 @@ function calcArea(base , height) {
 
     return area;
 
+
   }
 
 // Desafio 3
@@ -48,21 +49,26 @@ function splitSentence(string) {
   
 
 // Desafio 4
-function concatName(listname) {
+function concatName(array) {
   // seu código aqui
-  let nomes =[]
+  let nomes =array
+  let resultado= [];
+  for (let i = 0 ; i < nomes.length; i ++){
+    if (i = nomes.length -1){
+      resultado.push(nomes[i])
+    }
+    else {
+      resultado.push(nomes[0])
+    }
 
-  for ( let i=0 ; i < listname.length ; i ++ ) {
-     if( i = listname.length -1 ) {
-    nomes.push ( listname[-1]) ;
   }
-     else if (i = listname[0]) {
-    nomes.push (listname[ 0 ] ) ;
-  }
-    
-  }
-  return nomes
+  
+  
+
+  return resultado
 }
+
+
 
 // Desafio 5
 function footballPoints(wins ,ties ) {
