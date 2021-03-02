@@ -1,9 +1,14 @@
 // Desafio 1
-console.log ("Hello World!")
-
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  if (bool1 && bool2) {
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log (compareTrue (false, true));
+console.log (compareTrue (false, false));
+console.log (compareTrue (true, true));
 
 // Desafio 2
 function calcArea() {
