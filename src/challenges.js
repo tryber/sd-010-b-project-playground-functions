@@ -105,7 +105,6 @@ let result;
   }
 return result;
 }
-catAndMouse(5,4,3)
 
 // Desafio 8
 function fizzBuzz() {
