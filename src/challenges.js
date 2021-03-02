@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(fullWord) {
   // função split aprendida junto ao site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings
-let arrayWord = fullWord.split("");
+let arrayWord = fullWord.split(" ");
 return arrayWord;
 }
 
