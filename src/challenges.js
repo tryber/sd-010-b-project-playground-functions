@@ -53,14 +53,14 @@ function fizzBuzz(array) {
       arrayResult.push('fizzBuzz');
     } else if (e % 3 === 0) {
       arrayResult.push('fizz');
-    } else if (e % 5 === 0)  {
+    } else if (e % 5 === 0) {
       arrayResult.push('buzz');
     } else {
       arrayResult.push('bug!');
     }
-  })
+  });
 
-  return arrayResult
+  return arrayResult;
 }
 
 // Desafio 9
