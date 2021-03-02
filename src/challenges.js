@@ -142,7 +142,7 @@ function encode() {
 
 function decode(string) {
   let palavraFatiada = string.split('');
-  for (index in palavraFatiada) {
+  for (let index in palavraFatiada) {
     switch (true) {
       case palavraFatiada[index] === '1':
         palavraFatiada[index] = 'a';
