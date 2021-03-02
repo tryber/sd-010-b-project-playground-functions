@@ -53,7 +53,7 @@ console.log(generatePhoneNumber('12341671982'));
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  
 }
 
 // Desafio 13
