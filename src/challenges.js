@@ -1,18 +1,17 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if (num1 % 2 == 0 && num2 % 2 == 0) {
-    return "true";
+  if (num1 % 2 === 0 && num2 % 2 === 0) {
+    return 'true';
   } else {
-    return "false";
+    return 'false';
   }
+  return compareTrue;
 }
-
-let verificaNum = compareTrue(7, 20);
-console.log (verificaNum);
+compareTrue(7, 20);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base , height) {
+
 }
 
 // Desafio 3
