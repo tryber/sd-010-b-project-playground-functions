@@ -1,6 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(item1 = 10) {
+  if (item1 < 20 && 30) {
+    console.log('True');
+  } else {
+    console.log('False');
+  }
+  return true;
 }
 
 // Desafio 2
