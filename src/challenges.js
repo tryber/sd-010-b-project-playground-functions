@@ -42,7 +42,7 @@ console.log(footballPoints(0, 0)); // -> 0
 function highestCount(numbers) {
   let higherNumber = 0;
   let counter = 0;
-  for (const i in numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > higherNumber) {
       higherNumber = numbers[i];
       counter = 0;

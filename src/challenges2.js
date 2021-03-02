@@ -50,15 +50,16 @@ console.log(triangleCheck(10, 14, 8)); // -> trues
 function hydrate(string) {
   let reg = /\d+/g;
   let cups = string.match(reg);
+  console.log(cups);
   let sum = 0;
   for (let cup = 0; cup < cups.length; cup += 1) {
     sum += parseInt(cups[cup], 10);
   }
-  return `${sum} copos de água`;
+  return `${sum} copo de água`;
 }
 console.log(hydrate('1 cerveja')); // -> '1 copo de água'
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // -> '7 copos de água'
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // -> '7 copos de água'
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // -> '7 copo de água'
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // -> '7 copo de água'
 
 module.exports = {
   generatePhoneNumber,
