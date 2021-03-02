@@ -11,14 +11,8 @@ function compareTrue(valorUm, valorDois) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let formula;
-  if ((base * height) / 2 === 250) {
-    return formula = 250;
-  } else if ((base * height) / 2 === 5) {
-    return formula = 5;
-  } else if ((base * height) / 2 === 5) {
-    return formula = 25.5;
-  }
+  let formula = (base * height) / 2;
+  return formula;
 }
 
 // Desafio 3
