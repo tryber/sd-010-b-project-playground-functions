@@ -3,8 +3,8 @@ function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === false) {
     return true;
   }
-  return false;
 }
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -14,21 +14,18 @@ function splitSentence(frase) {
   let palavras = frase.split(' ');
   return palavras;
 }
-
 // Desafio 4
 function concatName(array) {
   const concatenated = `${array[(array.length - 1)]}, ${array[0]}`;
 
   return concatenated;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   const totalpoints = (wins * 3) + ties;
 
   return totalpoints;
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
@@ -62,5 +59,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence, 
+  splitSentence,
 };
