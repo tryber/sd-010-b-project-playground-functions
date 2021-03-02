@@ -1,7 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  teste
+let skills = 10;
+let selfinfo = 9;
+
+function compareTrue(skills, selfinfo) {
+  if (skills >= 10 && selfinfo >= 10) {
+    return "Passou"
+    } else {
+    return "Tente de novo"
+  }
 }
+console.log(compareTrue(skills, selfinfo))
 
 // Desafio 2
 function calcArea() {
