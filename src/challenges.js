@@ -22,21 +22,21 @@ function splitSentence(sentence) {
 }
 // Desafio 4
 function concatName(arrayString) {
-  let result = arrayString[arrayString.length - 1] +', ' + arrayString[0];
+  let result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
   return result;
 }
 
-
-
-
-
-
-
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let totalPoints = winsPoints + ties;
+  return totalPoints;
 }
+
+
+
+
+
 
 // Desafio 6
 function highestCount() {
