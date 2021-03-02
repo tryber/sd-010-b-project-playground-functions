@@ -35,7 +35,7 @@ function concatName(contact) {
 // let win = 0, tie = 0;
 // console.log(footballPoints(win, tie));
 function footballPoints(wins, ties) {
-  return ((wins * 3) + tie);
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
@@ -100,6 +100,7 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
+// I found the replace() function at https://www.w3schools.com/jsref/jsref_replace.asp
 // let code = 'hi, there!';
 // console.log(encode(code));
 function encode(string) {
