@@ -23,10 +23,8 @@ function splitSentence(toSplit) {
 // Desafio 4
 function concatName(reordArray) {
   // meu código aqui
-  return `${reordArray[reordArray.length - 1]},${reordArray[0]}`;
+  return `${reordArray[reordArray.length - 1]}, ${reordArray[0]}`;
 }
-
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -73,7 +71,7 @@ function fizzBuzz(arrayFzzBzz) {
     }else if( arrayFzzBzz[i]%3 == 0 ){
       arrayFzzBzz[i] = "fizz"
     }else if( arrayFzzBzz[i]%5==0 ){
-      arrayFzzBzz[i] = "Buzz"
+      arrayFzzBzz[i] = "buzz"
     }else{
       arrayFzzBzz[i] = "bug!";
     }    
