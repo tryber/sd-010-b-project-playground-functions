@@ -6,10 +6,15 @@ function compareTrue(a, b) {
     return false
   }
 }
+console.log(compareTrue(true,true))
+console.log(compareTrue(true,false))
+console.log(compareTrue(false,true))
+console.log(compareTrue(false,false))
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+    return area
 }
 
 // Desafio 3
