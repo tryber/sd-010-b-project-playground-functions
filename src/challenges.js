@@ -20,18 +20,10 @@ console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(array) {
-  let resposta = '';
-  for (let index = array.length; index >= 0; index = index - 1) {
-    if (index === array.length) {
-      resposta = resposta + array[index] + ', ';
-    }
-    if (index === 0){
-      resposta = resposta + array[index];
-    }
-     return resposta
-  }
+  let resposta = array[array.length -1] + ', ' + array[0];
+  return resposta;
 }
-console.log(concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+console.log(concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
