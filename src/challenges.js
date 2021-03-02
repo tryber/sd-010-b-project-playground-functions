@@ -52,8 +52,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs(cat1 - mouse);
-  let distCat2 = Math.abs(cat2 - mouse);
+  let distCat1 = Math.abs(cat1 - mouse); //Pesquisei o Math.abs no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  let distCat2 = Math.abs(cat2 - mouse); //Pesquisei o Math.abs no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   let string;
   if (distCat1 === distCat2) {
     string = 'os gatos trombam e o rato foge';
@@ -63,12 +63,12 @@ function catAndMouse(mouse, cat1, cat2) {
     string = 'cat2';
   }
   return string;
-} console.log(catAndMouse(1,0,2))
+}
 
 // Desafio 8
 function fizzBuzz(array) {
   let novaArray = [];
-  for (let i = 0; i <= array.length - 1; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
       novaArray.push('fizzBuzz');
     } else if ((array[i] % 3 === 0) && (array[i] % 5 !== 0)) {
@@ -83,12 +83,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(string) {
+  let novaString = string.split('');
+  let trocaCaracter = '';
+  for (let i = 0; i < novaString.length; i += 1) {
+    if (novaString[i] === 'a') {
+        trocaCaracter += '1';
+    } else if (novaString[i] === 'e') {
+        trocaCaracter += '2';
+    } else if (novaString[i] === 'i') {
+        trocaCaracter += '3';
+    } else if (novaString[i] === 'o') {
+        trocaCaracter += '4';
+    } else if (novaString[i] === 'u') {
+        trocaCaracter += '5';
+    } else {
+        trocaCaracter += novaString[i];
+    }      
+  }
+  return trocaCaracter;
+} 
+function decode(string) {
+  let novaString = string.split('');
+  let trocaCaracter = '';
+  for (let i = 0; i < novaString.length; i += 1) {
+    if (novaString[i] === '1') {
+        trocaCaracter += 'a';
+    } else if (novaString[i] === '2') {
+        trocaCaracter += 'e';
+    } else if (novaString[i] === '3') {
+        trocaCaracter += 'i';
+    } else if (novaString[i] === '4') {
+        trocaCaracter += 'o';
+    } else if (novaString[i] === '5') {
+        trocaCaracter += 'u';
+    } else {
+        trocaCaracter += novaString[i];
+    }      
+  }
+  return trocaCaracter;
+} 
 
 module.exports = {
   calcArea,
