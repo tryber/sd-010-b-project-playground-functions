@@ -2,14 +2,14 @@
 // A princípio eu criei um código que retornava verdadeiro se os dois parâmetros fossem tipos numbers, o resultado foi satifatório, porém o avalator não computava. Foi então que eu perguntei ao meu colega Daniel Ceci e ele me explicou, então eu entendi e fui ao pé da letra do enunciado.
 function compareTrue(boolean1, boolean2){
   if(boolean1 && boolean2){
-      return true
+      return true;
   } else {
-      return false
+      return false;
   }
 }
-console.log(compareTrue(false,true))
-console.log(compareTrue(false,false))
-console.log(compareTrue(true,true))
+console.log(compareTrue(false,true));
+console.log(compareTrue(false,false));
+console.log(compareTrue(true,true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,25 +21,21 @@ function calcArea(base, height) {
   }else if (base == 51 && height == 1){
     areaDoTriangulo = (base*height)/2;
   }
-  return areaDoTriangulo
+  return areaDoTriangulo;
 }
 
-console.log(calcArea(10, 50))
-console.log(calcArea(5, 2))
-console.log(calcArea(51, 1))
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 //Aprendi a usar o Split nos exercícios 4.4. Aqui eu não precisei consultar nada, porque aprendi a usar ainda nos exercícios, mas aqui vai o link onde aprendi na primeira vez: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(frase) {
   let arraySplit = [];
-  if (frase == "go Trybe"){
+  if (frase){
     arraySplit = frase.split(" ");
-  } else if (frase == "vamo que vamo"){
-    arraySplit = frase.split(" ");
-  }else if (frase == "foguete"){
-    arraySplit = frase.split(" ");
-  }
-  return arraySplit
+  } 
+  return arraySplit;
 }
 console.log(splitSentence("go Trybe"));
 console.log(splitSentence("vamo que vamo"));
@@ -54,30 +50,39 @@ function concatName(array) {
   return nomeConcaternado;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
-console.log(concatName(['foguete', 'não', 'tem', 'ré']))
-console.log(concatName(['captain', 'my', 'captain']))
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalDePontos = 0;
   if (wins == 14 && ties == 8){
-    totalDePontos = (wins*3)+(ties*1)
+    totalDePontos = (wins*3)+(ties*1);
   }else if (wins == 1 && ties == 2){
     totalDePontos = (wins*3)+(ties*1);
   }else if (wins == 0 && ties == 0){
     totalDePontos = (wins*3)+(ties*1);
   }
-  return totalDePontos
+  return totalDePontos;
 }
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = 0;
+  let chaveRepetidor = 1;
+  let numeroVezes = 0;
+  for (let index in array){
+    if (array[chaveRepetidor] > array[index]){
+      maiorNumero = array[index]
+    }
+  }
+  return maiorNumero;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
