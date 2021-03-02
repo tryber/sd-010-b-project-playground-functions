@@ -30,9 +30,12 @@ function concatName(nome1,nome2) {
 //concatName("Aderson Santos","da Silva");
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = (wins*3)+ties;
+  return pontos;
 }
+
+//console.log(footballPoints(1,8));
 
 // Desafio 6
 function highestCount() {
