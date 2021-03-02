@@ -19,6 +19,7 @@ function splitSentence(frase) {
   }
  return  arrayString ;
 }
+console . log ( splitSentence ( "go Trybe" ) )
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Desafio 4
