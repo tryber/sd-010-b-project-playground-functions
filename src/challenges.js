@@ -1,7 +1,3 @@
-/* eslint-disable complexity */
-/* eslint-disable max-lines-per-function */
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable eqeqeq */
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
@@ -44,9 +40,7 @@ function concatName(arrayString) {
       lastItem = arrayString[index];
     }
   }
-  // eslint-disable-next-line no-undef
   finalString = `${lastItem}, ${firstItem}`;
-  // eslint-disable-next-line no-undef
   return finalString;
 }
 
@@ -106,9 +100,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } if (cat2Steps > cat1Steps) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
