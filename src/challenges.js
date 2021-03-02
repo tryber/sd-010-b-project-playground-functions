@@ -64,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
   let ataqueBemSucedido = '';
   let ataqueGato1 = 0;
   let ataqueGato2 = 0;
-
   if (mouse > cat1) {
     for (let gato1 = cat1; gato1 !== mouse; gato1 += 1) {
       ataqueGato1 += 1;
@@ -74,7 +73,6 @@ function catAndMouse(mouse, cat1, cat2) {
       ataqueGato1 += 1;
     }
   }
-
   if (mouse > cat2) {
     for (let gato2 = cat2; gato2 !== mouse; gato2 += 1) {
       ataqueGato2 += 1;
@@ -83,8 +81,7 @@ function catAndMouse(mouse, cat1, cat2) {
     for (let gato2 = cat2; gato2 !== mouse; gato2 -= 1) {
       ataqueGato2 += 1;
     }
-  }
-  // o post do Renan Atunes que me deu uma luz nesses if's acima
+  } // o post do Renan Atunes que me deu uma luz nesses if's acima
   if (ataqueGato1 < ataqueGato2) {
     ataqueBemSucedido = 'cat1';
   } else if (ataqueGato1 > ataqueGato2) {
@@ -116,13 +113,58 @@ function fizzBuzz(array) {
 }
 // console.log(fizzBuzz(array));
 // Desafio 9
+// let string = 'h3 th2r2!';
+
 function encode() {
-  // seu código aqui
+  let palavraFatiada = string.split('');
+  for (index in palavraFatiada) {
+    switch (true) {
+      case palavraFatiada[index] === 'a':
+        palavraFatiada[index] = 1;
+        break;
+      case palavraFatiada[index] === 'e':
+        palavraFatiada[index] = 2;
+        break;
+      case palavraFatiada[index] === 'i':
+        palavraFatiada[index] = 3;
+        break;
+      case palavraFatiada[index] === 'o':
+        palavraFatiada[index] = 4;
+        break;
+      case palavraFatiada[index] === 'u':
+        palavraFatiada[index] = 5;
+        break;
+    }
+  }
+  let resultado = palavraFatiada.join('');
+  return resultado;
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let palavraFatiada = string.split('');
+  for (index in palavraFatiada) {
+    switch (true) {
+      case palavraFatiada[index] === '1':
+        palavraFatiada[index] = 'a';
+        break;
+      case palavraFatiada[index] === '2':
+        palavraFatiada[index] = 'e';
+        break;
+      case palavraFatiada[index] === '3':
+        palavraFatiada[index] = 'i';
+        break;
+      case palavraFatiada[index] === '4':
+        palavraFatiada[index] = 'o';
+        break;
+      case palavraFatiada[index] === '5':
+        palavraFatiada[index] = 'u';
+        break;
+    }
+  }
+  let resultado = palavraFatiada.join('');
+  return resultado;
 }
+// console.log(decode(string));
 
 module.exports = {
   calcArea,
