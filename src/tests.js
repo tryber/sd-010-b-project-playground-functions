@@ -1,4 +1,4 @@
-string = 'foguete';
+function splitSentence(string) {
 array = [];
 splittedString = '';
 for (let index in string) {
@@ -9,4 +9,5 @@ for (let index in string) {
         splittedString += string[index]
     }
 }
-array.push(splittedString);
+array.push(splittedString)
+return array }

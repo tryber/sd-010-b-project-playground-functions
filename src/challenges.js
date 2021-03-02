@@ -25,7 +25,7 @@ for (let index in string) {
     }
 }
 array.push(splittedString);
-return splittedString
+return array
 }
 
 // Desafio 4
