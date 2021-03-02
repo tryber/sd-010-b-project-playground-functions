@@ -1,6 +1,15 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec,name) {
+  let saida = [];
+
+  for(let index = 0; index < tec.length; index++){
+    const info ={
+      tech: tec[index],
+      name: name
+    }
+    saida.push(info);
+  }
+  return(saida);
 }
 
 // Desafio 11
