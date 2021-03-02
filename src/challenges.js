@@ -14,10 +14,13 @@ function calcArea(base, height) {
 } 
 console.log(calcArea(20, 10))
 
+
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
+const splits = frase.split(" ", frase.length-1)
+return splits;
   // seu código aqui
-}
+} console.log(splitSentence("go trybe mano"))
 
 // Desafio 4
 function concatName() {
