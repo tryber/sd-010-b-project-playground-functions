@@ -24,8 +24,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(highestCount) {
+  let higher = 0;
+  let repeat = 0;
+
+  for (let index = 0; index < highestCount.length; index++) {
+    if (highestCount[index] >= higher) {
+      higher = highestCount[index];
+    }
+  }
+  for (let index = 0; index < highestCount.length; index++) {
+    if (highestCount[index] === higher) {
+      repeat++;
+    }
+  }
+  return repeat;
 }
 
 // Desafio 7
@@ -46,7 +59,7 @@ function decode() {
   // seu código aqui
 }
 
-  console.log(footballPoints(0,0));
+  console.log(highestCount([0, 0, 0]));
 
 module.exports = {
   calcArea,
