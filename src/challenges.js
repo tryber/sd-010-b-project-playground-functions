@@ -84,9 +84,22 @@ for (let i in maior) {
 return repeticao
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let distancia1 = cat1 - mouse
+let distancia2 = cat2 - mouse 
+let result;
+  if (distancia1 > distancia2){
+    result="cat1";
+  }
+  if (distancia1 > distancia2){
+    result= "cat2";
+  }else   {
+    result ="os gatos trombam e o rato foge";
+  
+  }
+return result;
 }
+catAndMouse(5,4,3)
 
 // Desafio 8
 function fizzBuzz() {
