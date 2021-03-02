@@ -76,7 +76,7 @@ function highestCount(arrayNumeros) {
 
   // Loop form 1 serve para achar qual é o maior número e Loop for 2 serve para cverificar quantas vezes o maior número aparece no array:
   for (let indexMaior = 0; indexMaior < arrayNumeros.length; indexMaior += 1) {
-    if(arrayNumeros[indexMaior] > armazenaMaiorNumero) {
+    if (arrayNumeros[indexMaior] > armazenaMaiorNumero) {
       armazenaMaiorNumero = arrayNumeros[indexMaior];
     }
   }
@@ -93,9 +93,24 @@ function highestCount(arrayNumeros) {
 // console.log(highestCount());
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if ((mouse - cat1) < (mouse - cat2)) {
+    return 'cat1';
+  }
+
+  else if ((mouse - cat1) === (mouse - cat2)) {
+    return 'os gatos trombam e o rato foge';
+  } else {
+    return 'cat2';
+  }
 }
+
+// O console.log() abaixo serve somente para finalidade de teste.
+// console.log(catAndMouse(10, 5, 3));
+
+// O console.log() abaixo serve somente para finalidade de teste.
+// console.log(highestCount())
 
 // Desafio 8
 function fizzBuzz() {
