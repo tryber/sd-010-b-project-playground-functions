@@ -26,7 +26,7 @@ function splitSentence(string) {
       help = '';
     } else if (string[i] !== ' ') {
       help += string[i];
-    } 
+    }
   }
   return array;
 }
@@ -34,23 +34,27 @@ console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(array) {
-  let help = '';
-  let first, last;
-  for (let i = 0; i < array.length; i++) {
-    if (i == array.length - 1) {
+  let help;
+  let first;
+  let last;
+  for (let i = 0; i < array.length; i += 1) {
+    if (i === array.length - 1) {
       last = array[i];
-    } else if (i == 0) {
+    } else if (i === 0) {
       first = array[i];
     }
   }
-  return help = last + ', ' + first;
+  help = last + ', ' + first;
+  return help;
 }
 console.log(concatName(['foquete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties;
+  return points;
 }
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
