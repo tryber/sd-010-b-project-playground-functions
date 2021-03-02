@@ -12,25 +12,29 @@ console.log (compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2
+  return (base * height) /2;
 }
-console.log (calcArea (10, 50));
-console.log (calcArea (5, 2));
-console.log (calcArea (51, 1));
+console.log (calcArea(10, 50));
+console.log (calcArea(5, 2));
+console.log (calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(words) {
-   separeted = words.split(" ");
-    return separeted
+  let separeted = words.split(" ");
+    return separeted;
 }
-console.log(splitSentence("go trybe"));
-console.log(splitSentence("vamo que vamo"));
-console.log(splitSentence("foguete"));
+console.log(splitSentence('go trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lastFirst) {
+  return lastFirst[lastFirst.length -1] + ", " + lastFirst[0];
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
