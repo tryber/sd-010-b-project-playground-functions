@@ -11,9 +11,10 @@ function calcArea(base, height) {
 }// Resposta: Fiz a formula dentro da variavel trangulo e dei um return nessa variavel.
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(str) {
+  let newArray = str.split(' ');
+  return newArray;
+} // Resposta: Nesse requisito criei um parametro str na function para receber qualquer string. Dentro da function criei uma variavel para receber a string tranformada em uma array de string. Para fazer isso usei o metodo split(), e usei o separador com uma string vazia. Fiz o return da variavel newArray. Link que tirei como base a minha solução:https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 // Desafio 4
 function concatName() {
