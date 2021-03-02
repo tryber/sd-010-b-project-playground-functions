@@ -8,11 +8,11 @@ function compareTrue(number1, number2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2
-  let base1 = 10;
-  let altura = 50;
-}
-console.log(calcArea(base1, altura))
+  return (base * height) / 2
+} 
+console.log(calcArea(10, 50));
+console.log(calcArea(5,2));
+console.log(calcArea(51, 1))
 
 
 
