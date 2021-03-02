@@ -59,11 +59,19 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(1, 12, 12));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let numbers = drinks.match(/\d/g); // https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += parseInt(numbers[i]);
+  }
+  if (sum > 1) {
+    return sum + " copos de água.";
+  } else {
+    return sum + " copo de água.";
+  }
 }
 
 module.exports = {
