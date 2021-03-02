@@ -85,21 +85,27 @@ return repeticao
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distancia1 = mouse - cat1
-let distancia2 = mouse - cat2 
+let distancia1 = cat1 - mouse
+let distancia2 = cat2 - mouse
+if (distancia1<0){
+  distancia1 *-1
+}
+if (distancia2 <0){
+  distancia2 *-1
+}
 let result;
   if (distancia1 > distancia2){
-    result="cat2";
+    result="cat1";
   }
-  else if (distancia1 < distancia2){
-    result= "cat1";
-  } else if (distancia1 = distancia2)   {
+  if (distancia1 > distancia2){
+    result= "cat2";
+  }else   {
     result ="os gatos trombam e o rato foge";
   
   }
 return result;
 }
-catAndMouse(5,2,3)
+catAndMouse(5,4,3)
 
 // Desafio 8
 function fizzBuzz() {
