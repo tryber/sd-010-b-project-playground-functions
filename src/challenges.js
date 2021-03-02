@@ -10,27 +10,30 @@ console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, altura) {
-  return (base*altura)/2
+  return (base*altura)/2;
 }
 console.log(calcArea(51,1))
 
 // Desafio 3
 function splitSentence(array) {
   array = array.split(" ");
-  return array
+  return array;
 }
 console.log(splitSentence("vamo que vamo"))
 
 // Desafio 4
 function concatName(string) {
   let nomes = string[string.length - 1] + ", " + string[0];
-  return nomes
+  return nomes;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = (wins*3) + ties;
+  return resultado;
 }
+console.log(footballPoints(0, 0))
 
 // Desafio 6
 function highestCount() {
