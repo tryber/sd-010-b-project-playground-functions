@@ -1,10 +1,10 @@
 // Desafio 1
-function compareTrue(){
+function compareTrue() {
   let boo1 = true;
   let boo2 = true;
-  if(boo1 && boo2 === true){
+  if(boo1 && boo2 === true) {
     return true;
-  }else{
+  }else {
     return false;
   }  
 }
