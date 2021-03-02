@@ -54,14 +54,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
   if (distanceCat1 < distanceCat2) {
-    return 'cat1';
+    return "cat1";
   }
   if (distanceCat2 < distanceCat1) {
-    return 'cat2';
+    return "cat2";
   }
-  return 'os gatos trombam e o rato foge';
+  return "os gatos trombam e o rato foge";
 }
-console.log(catAndMouse(0, 6, 6));
 
 // auxiliary functions Desafio 8
 function divisibleByThree(number) {
@@ -84,10 +83,17 @@ function divisibleByThreeAndFive(number) {
   }
 }
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let output = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (divisibleByThree(array[index])) {
+      output.push(divisibleByThree(array[index]));
+    }
+  }
+  return output;
   // seu código aqui
 }
-
+console.log(fizzBuzz());
 // Desafio 9
 function encode() {
   // seu código aqui
