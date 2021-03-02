@@ -2,7 +2,7 @@
 function compareTrue(boolean1, boolean2) {
   let value1 = boolean1;
   let value2 = boolean2;
-  if(value1 === true && value2 === true){
+  if (value1 === true && value2 === true) {
     return true;
   } else {
     return false;
@@ -10,7 +10,7 @@ function compareTrue(boolean1, boolean2) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  let result = (base*height)/2;
+  let result = (base * height) / 2;
   return result;
 }
 // Desafio 3
@@ -19,10 +19,17 @@ function splitSentence(string) {
   return array.split(" ");
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let result = "";
+  for (let index = array.length - 1; index >= 0; index -= 1) {
+    if (index + 1 == array.length) {
+      result = result += array[index];
+    } else if (index == 0) {
+      result = result += ", " + array[index];
+    }
+  }
+  return result;
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
@@ -47,6 +54,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
