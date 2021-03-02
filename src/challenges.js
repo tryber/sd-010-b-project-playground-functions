@@ -65,7 +65,7 @@ function highestCount(numeros) {
 
 
   // seu código aqui
-}
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
