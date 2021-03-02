@@ -21,10 +21,9 @@ function splitSentence(palavra) {
 
 // Desafio 4
 function concatName(name) {
-  let separation = name.split(' ')
-  let first = separation[0]
-  let last = separation[separation.length - 1]
-  let concatenation = last + ', ' + first
+  let last = name[name.length-1];
+  let first = name[0];
+  let concatenation = last + ', ' + first;
 
   return concatenation
 }
