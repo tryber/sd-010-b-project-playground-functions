@@ -1,13 +1,7 @@
 // Desafio 1
 function compareTrue(boola, boolb) {
-  let resposta;
-  if ((boola === true) && (boolb === true)) {
-    resposta = true;
-  }
-  else {
-    resposta = false;
-  } 
-  return resposta
+  return ((boola === true) && (boolb === true))
+  
 }
 
 // Desafio 2
