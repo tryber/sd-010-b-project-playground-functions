@@ -7,7 +7,7 @@ function compareTrue(bol1, bol2) {
     trueFalse = false;
   }
   return trueFalse;
-}
+} 
 
 // Desafio 2
 function calcArea(base, height) {
@@ -68,19 +68,22 @@ function catAndMouse(cat1, cat2, mouse) {
 // Desafio 8
 function fizzBuzz(array) {
   let novaArray = [];
-  for (let i = 0; i <= array.length; i += 1) {
-    if ((i % 3 == 0) && (i % 5 != 0)) {
+  for (let i = 0; i <= array.length - 1; i += 1) {
+    if ((array[i] % 3 === 0) && (array[i] % 5 !== 0)) {
       novaArray.push('fizz');
     }
-    else if ((i % 3 != 0) && (i % 5 == 0)) {
+    else if ((array[i] % 3 !== 0) && (array[i] % 5 === 0)) {
       novaArray.push('buzz');
     }
-    else if ((i % 3 == 0) && (i % 5 == 0)) {
+    else if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
       novaArray.push('fizzBuzz');
     }
+    else {
+      novaArray.push('bug!');
     }
-
-}
+  }
+  return novaArray;
+} 
 
 // Desafio 9
 function encode() {
