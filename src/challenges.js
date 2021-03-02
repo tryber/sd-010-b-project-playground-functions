@@ -25,6 +25,7 @@ function concatName(contacts) {
   
   return fistLast[fistLast.length -1] + ', ' + fistLast[0];
 }
+console.log (concatName('eder jota tiago rafa'));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -32,13 +33,43 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(highNumber) {
+function highestCount(number) {
+  let array = [number,number];
   
+  let highNumber = 0;
+  for (let indexA = 0; indexA < number.length; indexA += 1) {
+    for (let indexB = 0; indexB < number.length; indexB =+ 1) {
+      if (number[indexA] >= number[indexB]) {
+        highNumber = number[indexA];
+      }        
+    }
+  }
+  return array;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let result1;
+  let result2;
+  if (cat1 > mouse) {
+    result1 = cat1 - mouse;
+  } else {
+    result1 = mouse - cat1;
+  }
+
+  if (cat2 > mouse) {
+    result2 = cat2 - mouse;
+  } else {
+    result2 = mouse - cat2;
+  }
+
+  if (result1 === result2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (result1 < result2) {
+    return 'cat1';
+  } else {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
