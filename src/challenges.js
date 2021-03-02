@@ -1,61 +1,34 @@
 // Desafio 1
-function compareTrue() {
-  let a = true
-  let b = true
-
+function compareTrue(a,b) {
   if(a==true && b==true){
-    console.log(true)
+    return true
   }else{
-    console.log(false)
+    return false
   }
 }
-
 // Desafio 2
-function calcArea() {
-  let base = 51;
-  let height = 1;
+function calcArea(base,height) {
+
   let area = (base*height)/2
-  console.log(area)
+    return area
 }
-
 // Desafio 3
-function splitSentence() {
-  let frase = ("foguete").split(" ")
-  console.log(frase)
+function splitSentence(frase) {
+     frase = ("foguete").split(" ")
+      return frase
 }
-
 // Desafio 4
-function concatName() {
-
-  let array = ['captain', 'my', 'captain'];
-  let newArray = [];
-  for(let index =0; index < array.length; index += 1){
-    if(index==0 || (index == (array.length -1))){
-      newArray.unshift(array[index]);
-    }
-  }
-  console.log(newArray);
-
-
+function concatName(array) {
+  eturn (array[array.length -1] + ", " + array[0])
 }
-
 // Desafio 5
-function footballPoints() {
-
-let wins = 1;
-let ties = 2;
+function footballPoints(wins,ties) {
 let points = wins*3 + ties*1;
-console.log(`${points} pontos.`);
-
-
-
+  return (`${points} pontos.`);
 }
-
 // Desafio 6
-function highestCount() {
-
-let array = [0,0,0]
-let maior = 0
+function highestCount(array) {
+  let maior = 0
 let count = 0
 for(let index = 0; index < array.length; index +=1 ){
 
@@ -68,32 +41,23 @@ for(let index = 0;index < array.length; index +=1){
     count += 1
   }
 }
-console.log(count)
+  return count
 }
-
-
 // Desafio 7
-function catAndMouse() {
-
-  let cat1 = 1;
-  let cat2 = 2;
-  let mouse = 5;
-  let distcat1 = (mouse-cat1);
+function catAndMouse(mouse,cat1,cat2) {
+let distcat1 = (mouse-cat1);
   let distcat2 = (mouse-cat2) ;
   if(distcat1 < distcat2){
-    console.log("cat1")
+    return ("cat1")
   }else if( distcat2 < distcat1){
-    console.log("cat2")
+    return ("cat2")
   }else{
-    console.log("os gatos trombam e o rato foge")
+    return ("os gatos trombam e o rato foge")
   }
 
 }
-
 // Desafio 8
-function fizzBuzz() {
-
-  let array =   [9, 25] ;
+function fizzBuzz(array) {
   let fizzBuzz = [];
   for(let index = 0; index < array.length; index += 1){
     if((array[index] % 3 == 0) && (array[index] % 5 != 0)){
@@ -106,15 +70,12 @@ function fizzBuzz() {
       fizzBuzz.push("bug!")
     }
     }
-  console.log(fizzBuzz)
+  return (fizzBuzz)
 
   }
-
-
 // Desafio 9
-function encode() {
-
-let string = ("a e i o u").split('')
+function encode(string) {
+string.split('')
 let frase =""
 for(let index = 0; index < string.length; index++){
   switch (string[index]){
@@ -143,14 +104,13 @@ for(let index = 0; index < string.length; index++){
 for(let index = 0; index < string.length; index +=1){
   frase += string[index]
 }
-console.log(frase)
+return frase
 
 }
 
 
-function decode() {
-
-let string = ("h3 th2r2!").split('')
+function decode(string) {
+string.split('')
 let frase =""
 for(let index = 0; index < string.length; index++){
   switch (string[index]){
@@ -179,7 +139,7 @@ for(let index = 0; index < string.length; index++){
 for(let index = 0; index < string.length; index +=1){
   frase += string[index]
 }
-console.log(frase)
+return (frase)
 
 }
 
