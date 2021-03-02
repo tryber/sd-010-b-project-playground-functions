@@ -48,12 +48,12 @@ console.log(footballPoints(0, 0));
 function highestCount(array) {
   let maiorValor = 0;
   let aparicoes = 0;
-  for(let index = 0; index < array.length; index += 1){// primeiro encontro o maior valor
-    if(maiorValor < array[index])
+  for (let index = 0; index < array.length; index += 1) { // primeiro encontro o maior valor
+    if (maiorValor < array[index]) {
       maiorValor = array[index];
-  }
-  for(let value = 0; value < array.length; value += 1){// pego as ocorrencias dele no array
-    if(maiorValor == array[value]){
+    }
+  for (let value = 0; value < array.length; value += 1) { // pego as ocorrencias dele no array
+    if (maiorValor === array[value]) {
       aparicoes += 1;
     }
   }
