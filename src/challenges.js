@@ -56,9 +56,11 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let winner = "";
-  if (cat1 < cat2 && cat1 > mouse) {
+  let distance1 = mouse - cat1;
+  let distance2 = mouse - cat2;
+  if (distance1 < distance2) {
     winner = "cat1";
-  } else if (cat2 < cat1 && cat2 > mouse) {
+  } else if (distance2 < distance1) {
     winner = "cat2";
   } else {
     winner = "os gatos trombam e o rato foge";
@@ -76,7 +78,7 @@ function fizzBuzz(numbers) {
     } else if (numbers[index] % 5 === 0) {
       result[index] = "buzz";
     } else {
-      result[index] = "bug!"
+      result[index] = "bug!";
     }
   }
   return result;
