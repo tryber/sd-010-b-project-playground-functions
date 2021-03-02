@@ -38,8 +38,8 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  return  Math . abs ( cat1  -  rato )  <  Matem . abs ( cat2  -  rato ) ? "cat1" : Matemática . abs ( cat2  -  rato )  <  Matem . abs ( cat1  -  rato ) ? "cat2" : "os gatos trombam e o rato foge" ;
 }
 
 // Desafio 8
