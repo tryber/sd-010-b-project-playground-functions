@@ -30,8 +30,14 @@ function concatName(arrayStrings) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  let somatorio = 0; 
+    if(wins > 0 && ties > 0){
+      somatorio = (wins * 3) + ties;
+      return somatorio;  
+    } 
+      return somatorio; 
 }
 
 // Desafio 6
