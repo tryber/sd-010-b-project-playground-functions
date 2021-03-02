@@ -100,11 +100,41 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// let code = 'hi, there!';
+// console.log(encode(code));
+function encode(string) {
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === 'a') {
+      string = string.replace(string[i], 1);
+    } else if (string[i] === 'e') {
+      string = string.replace(string[i], 2);
+    } else if (string[i] === 'i') {
+      string = string.replace(string[i], 3);
+    } else if (string[i] === 'o') {
+      string = string.replace(string[i], 4);
+    } else if (string[i] === 'u') {
+      string = string.replace(string[i], 5);
+    }
+  }
+  return string;
 }
-function decode() {
-  // seu código aqui
+// code = 'h3, th2r2!';
+// console.log(decode(code));
+function decode(string) {
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === '1') {
+      string = string.replace(string[i], 'a');
+    } else if (string[i] === '2') {
+      string = string.replace(string[i], 'e');
+    } else if (string[i] === '3') {
+      string = string.replace(string[i], 'i');
+    } else if (string[i] === '4') {
+      string = string.replace(string[i], 'o');
+    } else if (string[i] === '5') {
+      string = string.replace(string[i], 'u');
+    }
+  }
+  return string;
 }
 
 module.exports = {
