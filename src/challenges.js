@@ -1,29 +1,28 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   let isTrue = false;
-  if ((valor1===valor2 &&& valor2===valor1)){
+  if ((valor1 && valor2)){
     isTrue = true;
   } 
     return isTrue;
-  
 }
 
 // Desafio 2
 function calcArea(base, height) { 
-  return (base * height / 2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  let split = [];
-  let temp = [];
+  let split = []
+  let temp = []
   for(cont=0;cont<frase.length;cont++) {
     if (" " == frase[cont]) {
-      split.push(temp);
-      temp=[];
-      cont+=1;
+      split.push(temp)
+      temp=[]
+      cont+=1
     } 
-    temp+=frase[cont] ;
+    temp+=frase[cont];
   }
   split.push(temp);
   console.log(split);
