@@ -11,8 +11,6 @@ function compareTrue(valora,valorb) {
 
 }
 
-
-
 // Desafio 2
 function calcArea(base,height) {
 
@@ -53,13 +51,13 @@ function catAndMouse(mouse,cat1,cat2) {
   else if ((cat2+mouse)<(cat1+mouse)){
     return "cat2";
   }
-  else if ((cat2+mouse) == (cat1+mouse)){
+  else if ((cat1+mouse) === (cat2+mouse)){
     return "os gatos trombam e o rato foge";
   }
 
 }
 
-console.log(catAndMouse(1,3,2));
+
 
 // Desafio 8
 function fizzBuzz(vetor) {
