@@ -75,7 +75,7 @@ function decode(encSentence) {
   let regex;
   for (let i = 0; i < numbers.length; i++) {
     for (let j = 0; j < encSentence.length; j++) {
-      replace = encSentence[j];
+      replace = encSentence[j]; // https://stackoverflow.com/questions/494035/how-do-you-use-a-variable-in-a-regular-expression
       regex = new RegExp(replace,"g");
       if (encSentence[j] == numbers[i]) {
         encSentence = encSentence.replace(regex, vowels[i]);
