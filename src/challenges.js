@@ -4,6 +4,8 @@ let b = true;
 function compareTrue() {
    if (a === true && b === true){
    return true;
+ } else if (a === false && b === false) { 
+   return false;
  } else {
    return false;
  }
