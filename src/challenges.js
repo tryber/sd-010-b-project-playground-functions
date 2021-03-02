@@ -19,13 +19,45 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let spaceFound = 0;
+  let wordFound = '';
+  let latestSpaceFound = 0;
+  let phraseSplited = [];
+
+  for (let counterLettersStr = 0; counterLettersStr < string.length; counterLettersStr += 1) {
+    if (string[counterLettersStr] === ' ') {
+      spaceFound = counterLettersStr;
+      for (let wordCleanUp = latestSpaceFound; wordCleanUp < spaceFound; wordCleanUp += 1) {
+        wordFound += string[wordCleanUp];
+      }
+      phraseSplited.push(wordFound);
+      wordFound = '';
+      latestSpaceFound = counterLettersStr + 1;
+    } else if (counterLettersStr === string.length - 1) {
+      spaceFound = counterLettersStr;
+      for (let wordCleanUp = latestSpaceFound; wordCleanUp < spaceFound; wordCleanUp += 1) {
+        wordFound += string[wordCleanUp];
+      }
+      wordFound += string[string.length - 1];
+      phraseSplited.push(wordFound);
+      wordFound = '';
+      latestSpaceFound = counterLettersStr + 1;
+    }
+  }
+  return (phraseSplited);
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayOfStrings) {
   // seu código aqui
+  //variavel que vai receber o resultado final
+let phraseOfElements = '';
+
+phraseOfElements = (arrayOfStrings[(arrayOfStrings.length-1)]) + ', ' + (arrayOfStrings[(arrayOfStrings.length) - (arrayOfStrings.length)]);
+
+return phraseOfElements;
 }
 
 // Desafio 5
