@@ -20,14 +20,17 @@ function splitSentence(anyString) {
     if(anyString[index] === ' '){
       array.push(word);
       word = '';
+    }else if(index == (anyString.length-1)){
+      word = word + anyString[index];
+      array.push(word);
     }else{
       word = word + anyString[index];
     }
   }
   return array;
 }
-
-console.log(splitSentence("go Trybe "));
+let string = 'go Trybe';
+console.log(splitSentence(string));
 
 // Desafio 4
 function concatName() {
