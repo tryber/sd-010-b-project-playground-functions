@@ -55,12 +55,27 @@ function footballPoints(wins, ties) {
   return "O time possui " + pontos + " pontos";
 
 }
-console.log(footballPoints(14, 8));
+//console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumeros) {
   // seu código aqui
+  let localizaMaior = 0;
+  let contMaior = 0;
+  for (let i = 0 ; i <= arrayNumeros.length ; i++) {
+      if(localizaMaior < arrayNumeros[i]){
+      localizaMaior = arrayNumeros[i];
+    }
+  }
+
+  for (let j = 0 ; j <= arrayNumeros.length ; j++){
+    if(localizaMaior == arrayNumeros[j]){
+      contMaior++;
+    }
+  }
+   return contMaior;
 }
+//console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
