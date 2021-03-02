@@ -17,8 +17,12 @@ function splitSentence(palavra) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  // let name = array.concat(array[])
+  let ultimo = array[array.length-1] + ', ';
+  let primeiro = array[0];
+  // console.log(`${array[array.length-1]}, ${array[0]}`);
+  return ultimo + primeiro;
 }
 
 // Desafio 5
