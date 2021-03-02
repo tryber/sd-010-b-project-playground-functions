@@ -17,6 +17,8 @@ function splitSentence(frase) {
   resultado = frase.split(" ");
   return resultado;
 }
+// Auxilio por orientação:
+// https://www.w3schools.com/jsref/jsref_split.asp
 
 // Desafio 4
 function concatName(array) {
@@ -32,8 +34,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  
 }
 
 // Desafio 7
