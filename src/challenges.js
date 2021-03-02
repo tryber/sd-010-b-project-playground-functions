@@ -126,19 +126,19 @@ function decode(stringWithNumbers) {
   let result = [];
   for(let key in stringWithNumbers){
     switch (true) {
-    case (stringWithNumbers[key] === 1):
+    case (stringWithNumbers[key] == 1):
       result += 'a';
       break;
-    case (stringWithNumbers[key] === 2):
+    case (stringWithNumbers[key] == 2):
       result += 'e';
       break;
-    case (stringWithNumbers[key] === 3):
+    case (stringWithNumbers[key] == 3):
       result += 'i';
       break;
-    case (stringWithNumbers[key] === 4):
+    case (stringWithNumbers[key] == 4):
       result += 'o';
      break;
-    case (stringWithNumbers[key] === 5):
+    case (stringWithNumbers[key] == 5):
       result += 'u';
       break;
     default:
