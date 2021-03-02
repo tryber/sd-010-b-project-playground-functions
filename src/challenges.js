@@ -98,7 +98,7 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse(positionMouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   //variaveis que receberao as posições dos gatos e do rato
   let positionCat1 = cat1;
@@ -115,8 +115,23 @@ function catAndMouse(positionMouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumbers) {
   // seu código aqui
+    //array que sera armazenada as strings
+    let arrayFizzBuzz = [];
+    //contador que passará por cada numero do array
+    for (let counter = 0; counter < arrayNumbers.length; counter += 1) {
+      if ((arrayNumbers[counter] % 3 == 0) && (arrayNumbers[counter] % 5 != 0)) {
+        arrayFizzBuzz.push('fizz');
+      } else if ((arrayNumbers[counter] % 5 == 0) && (arrayNumbers[counter] % 3 != 0)) {
+        arrayFizzBuzz.push('buzz');
+      } else if ((arrayNumbers[counter] % 3 == 0) && (arrayNumbers[counter] % 5 == 0)) {
+        arrayFizzBuzz.push ('fizzBuzz');
+      } else {
+        arrayFizzBuzz.push('bug!');
+      }
+    }
+return (arrayFizzBuzz);
 }
 
 // Desafio 9
