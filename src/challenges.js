@@ -9,14 +9,14 @@ function compareTrue(Valeu1, Valeu2) {
   }
 return result;
 }
-//console.log(compareTrue(true, false));
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
   let areaT = (base*height)/2;
 return areaT
 }
-//console.log(calcArea(51,1));
+console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence(sentence) {
@@ -27,9 +27,13 @@ function splitSentence(sentence) {
 console.log(splitSentence("Foguete"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrStrings) {
+  let result = "";
+
+  result = arrStrings[(arrStrings.length - 1)] + ", " + arrStrings[0];
+  return result
 }
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
