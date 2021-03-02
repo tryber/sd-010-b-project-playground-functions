@@ -95,38 +95,28 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode(word) {
   let resultado = word;
-  for (let key in resultado) {
-    if (resultado[key] == 'a') resultado = resultado.replace('a', '1');
-    if (resultado[key] == 'e') resultado = resultado.replace('e', '2');
-    if (resultado[key] == 'i') resultado = resultado.replace('i', '3');
-    if (resultado[key] == 'o') resultado = resultado.replace('o', '4');
-    if (resultado[key] == 'u') resultado = resultado.replace('u', '5');
+  for (let index = 0; index < resultado.length; index += 1) {
+    resultado = resultado.replace('a', '1');
+    resultado = resultado.replace('e', '2');
+    resultado = resultado.replace('i', '3');
+    resultado = resultado.replace('o', '4');
+    resultado = resultado.replace('u', '5');
   }
   return resultado;
 }
 
 function decode(word) {
   let resultado = word;
-  for (let key in word) {
-    if (word[key] == '1') {
-      resultado = resultado.replace('1', 'a');
-    }
-    if (word[key] == '2') {
-      resultado = resultado.replace('2', 'e');
-    }
-    if (word[key] == '3') {
-      resultado = resultado.replace('3', 'i');
-    }
-    if (word[key] == '4') {
-      resultado = resultado.replace('4', 'o');
-    }
-    if (word[key] == '5') {
-      resultado = resultado.replace('5', 'u');
-    }
+  for (let index = 0; index < resultado.length; index += 1) {
+    resultado = resultado.replace('1', 'a');
+    resultado = resultado.replace('2', 'e');
+    resultado = resultado.replace('3', 'i');
+    resultado = resultado.replace('4', 'o');
+    resultado = resultado.replace('5', 'u');
   }
+
   return resultado;
 }
-console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
