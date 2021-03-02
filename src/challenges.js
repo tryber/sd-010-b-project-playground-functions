@@ -20,14 +20,14 @@ console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(array) {
-  let resposta = array[array.length -1] + ', ' + array[0];
+  let resposta = `${array[array.length - 1]} , ${array[0]}`;
   return resposta;
 }
-console.log(concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let quantidadePontos = wins * 3 + ties;
+  return quantidadePontos;
 }
 
 // Desafio 6
