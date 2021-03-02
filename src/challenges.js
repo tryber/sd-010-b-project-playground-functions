@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue() {
-  if(v1 && v1 = true) {
+  if (v1 && v1 == true) {
     return true;
   }else{
     return false;
