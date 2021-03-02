@@ -52,20 +52,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-let fizbuzzArray =[]
 function fizzBuzz(arr) {
-  for(num in arr){
-    if(arr[num] % 5 == 0 && arr[num] % 3 == 0) {
-      fizbuzzArray.push("fizzbuzz")
-    } else if(arr[num] % 5 == 0) {
-      fizbuzzArray.push("buzz")
-    } else if(arr[num] % 3 == 0) {
-      fizbuzzArray.push("fizz")
-    } else {
-      fizbuzzArray.push("bug!")
-    }
+  let exit = [];
+  for (let index = 0; index < arr.length; index++) {
+    exit.push(
+      arr[index] % 3 === 0 && arr[index] % 5 === 0 ? "fizzBuzz" : 
+      arr[index] % 3 === 0 ? "fizz" : 
+      arr[index] % 5 === 0 ? "buzz" : "bug!"
+    );
+
   }
-  return fizbuzzArray
+  return exit;
 }
 
 // Desafio 9
