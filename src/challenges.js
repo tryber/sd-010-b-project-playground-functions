@@ -53,25 +53,58 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(0, 6, 6));
-
-// Retorne a string 'cat2' caso a função catAndMouse receba o parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
-
-// Retorne a string 'cat1' caso a função catAndMouse receba o parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
-
-// Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba o parâmetros onde gatos estejam na mesma distância do rato
-
 // Challenge 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  return arr.map((number) => {
+    if (number % 3 === 0 && number % 5 === 0) {
+      return 'fizzBuzz';
+    } else if (number % 3 === 0) {
+      return 'fizz';
+    } else if (number % 5 === 0) {
+      return 'buzz';
+    } else {
+      return 'bug!';
+    }
+  });
 }
 
 // Challenge 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  const encodeMap = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let encodedString = '';
+  for (let char of string) {
+    if (encodeMap[char]) {
+      encodedString += encodeMap[char];
+    } else {
+      encodedString += char;
+    }
+  }
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  const encodeMap = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let decodedString = '';
+  for (let char of string) {
+    if (encodeMap[char]) {
+      decodedString += encodeMap[char];
+    } else {
+      decodedString += char;
+    }
+  }
+  return decodedString;
 }
 
 module.exports = {
