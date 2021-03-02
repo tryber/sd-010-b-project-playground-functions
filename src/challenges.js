@@ -56,7 +56,7 @@ function highestCount(numArray) {
       }
     }
   } else {
-    repeatedBigNum = repeatedNumbers[Object.keys(repeatedNumbers)[0]];
+    repeatedBigNum = objNum[Object.keys(objNum)[0]];
   }
   return repeatedBigNum;
 }
@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceCa1 > distanceCa2) {
     return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 
