@@ -1,16 +1,16 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  //Ref: https://stackoverflow.com/questions/45817581/replace-this-if-then-else-statement-by-a-single-return-statement
-  //Após sugestão do ESlint, usei a referência acima para refatoração do cógico, antes implementado com uso do IF/ELSE
-  return boolean1 === boolean2;
+  //Ref: https://stackoverflow.com/questions/45817581/replace-this-if-then-else-statement-by-a-single-return-statement//
+  //Após sugestão do ESlint, usei a referência acima para refatoração do cógico, antes implementado com uso do IF/ELSE//
+  return boolean1 && boolean2;
 }
-console.log('Resultado do Desafio 1: ' + compareTrue(true, true));
+console.log('Resultado do 1º Desafio: ' + compareTrue(false, false));
 
 // Desafio 2
-function calcArea() {
-
-  
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+console.log('Resultado do 2° Desafio: ' + calcArea(5, 5));
 
 // Desafio 3
 function splitSentence() {
