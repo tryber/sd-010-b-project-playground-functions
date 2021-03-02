@@ -38,10 +38,11 @@ function footballPoints(vit, emp) {
 function highestCount(num) {
   max = Math.max(...num);
   vezes = 0;
-  for (const key in num) {
-    if (key == max) {
-      vezes += 1;
+  for (let key in num) {
+    if (num[key] = max) {
+      vezes = vezes + 1;
     }
+    console.log(vezes)
   }
   return vezes;
 }
