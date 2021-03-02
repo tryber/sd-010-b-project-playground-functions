@@ -19,8 +19,8 @@ function splitSentence(frase) {
 console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
-function concatName(array) {
-  let resposta = `${array[array.length - 1]} , ${array[0]}`;
+function concatName(arrayDePalavras) {
+  let resposta = `${arrayDePalavras[arrayDePalavras.length - 1]} , ${arrayDePalavras[0]}`;
   return resposta;
 }
 
@@ -31,8 +31,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayDeNumeros) {
+  let contagem = { };
+  let maiorNumero = 0;
+  for (let itens of arrayDeNumeros) {
+    contagem[itens] = 0;
+  }
+  for (let itens of arrayDeNumeros) {
+    contagem[itens] += 1;
+  }
+  for (let itens in arrayDeNumeros) {
+    if (itens > maiorNumero) {
+      itens = maiorNumero;
+    }
+  }
+  return contagem[maiorNumero];
 }
 
 // Desafio 7
