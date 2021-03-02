@@ -1,11 +1,11 @@
 // Desafio 1 iniciado no dia 02 de março de 2021 as 14:58 h
 function compareTrue(valorUm, valorDois) {
-  // seu código aqui
-  let trueOrFalse = false;
+  // seu código aqui;
   if (valorUm === true && valorDois === true) {
-    trueOrFalse = true;
+    return true;
+  } else {
+    return false;
   }
-  return trueOrFalse;
 }
 
 // Desafio 2
