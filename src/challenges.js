@@ -46,6 +46,7 @@ return count;
 }
 
 // Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
 if((mouse - cat1) > (mouse - cat2)){
   return 'cat2'
 }
@@ -55,6 +56,8 @@ else if((mouse - cat1) == (mouse - cat2)){
 else{
   return 'cat1'
 } 
+}
+
 
 // Desafio 8
 function fizzBuzz() {
