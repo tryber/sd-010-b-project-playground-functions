@@ -30,7 +30,7 @@ function concatName(arrayStrings) {
   let novoArray = arrayStrings.reverse();
   let ultimoTermo = novoArray[0];
   
-  arrayConcatenado = [];
+  let arrayConcatenado = [];
   arrayConcatenado.push(ultimoTermo,primeiroTermo);
 
   return console.log(arrayConcatenado);
@@ -38,8 +38,11 @@ function concatName(arrayStrings) {
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontosTotais = (wins * 3) + (ties * 1);
+  
+  return pontosTotais;
 }
 
 // Desafio 6
