@@ -33,8 +33,13 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let str='';
+  let count=array.length;
+  str=array[count-1];
+  str+=', ';
+  str+=array[0];
+  return (str);
 }
 
 // Desafio 5
