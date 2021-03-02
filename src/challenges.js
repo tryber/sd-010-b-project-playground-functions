@@ -2,6 +2,8 @@
 function compareTrue(x, y) {
   if(x === true && y === true){
     comparacao = true;
+  } else {
+    comparacao = false;
   }
   return comparacao;
 }
@@ -15,7 +17,7 @@ function calcArea() {
 
   return (base * height) / 2;
 }
-calcArea();
+
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Desafio 3
