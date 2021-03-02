@@ -14,15 +14,17 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let palavras = frase.split(" ");
+  return palavras;
 }
-console.log (calcArea(10,10));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(contacts) {
+  let fistLast = contacts.split(" ");
+  return `${fistLast[0]}, ${fistLast[fistLast.length -1]}`;
 }
+console.log (concatName('ederson rafael lucas tiago'));
 
 // Desafio 5
 function footballPoints() {
