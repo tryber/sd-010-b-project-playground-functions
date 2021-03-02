@@ -33,7 +33,7 @@ function highestCount(array) {
   let qtt = null;
   array.forEach((e) => {
     qtt += max === e ? 1 : 0;
-  })
+  });
   return qtt;
 }
 
