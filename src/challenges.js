@@ -5,7 +5,7 @@ function compareTrue(valor1, valor2) {
 
     return true;
 
-  } else if (valor1 == false && valor2 === false) {
+  } else if (valor1 == false && valor2 == false) {
     
     return false;
   } else {
@@ -50,14 +50,12 @@ function concatName(fraseArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let vitorias = wins * 3;
-  let pontos = vitorias + ties;
-
-
+  let pontos = (wins * 3) + ties;
+ 
   return "O time possui " + pontos + " pontos";
 
 }
-//console.log(footballPoints(1, 2));
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
