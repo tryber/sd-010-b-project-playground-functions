@@ -6,6 +6,7 @@ function compareTrue(cond1, cond2) {
   } else {
       condicao = false;
     }
+    return condicao;
   }
 
 // Desafio 2
