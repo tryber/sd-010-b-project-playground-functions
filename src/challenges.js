@@ -25,7 +25,7 @@ function splitSentence(frase) {
   const separaFrase = frase.split(' ');
 
   // Usando a função sting split (que aprendi usando o site: https://www.w3schools.com/jsref/jsref_split.asp):
-    return separaFrase;
+  return separaFrase;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
