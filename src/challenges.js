@@ -34,13 +34,16 @@ function splitSentence(string) {
   arrayOfStrings.push(word);
 
   return arrayOfStrings;
-
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  const concatenated = `${array[(array.length - 1)]}, ${array[0]}`;
+
+  return concatenated;
 }
+
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
