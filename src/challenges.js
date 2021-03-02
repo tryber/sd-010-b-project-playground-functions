@@ -1,21 +1,43 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aquia
+  let a = true
+  let b = true
+
+  if(a==true && b==true){
+    console.log(true)
+  }else{
+    console.log(false)
+  }
 }
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  let base = 51;
+  let height = 1;
+  let area = (base*height)/2
+  console.log(area)
 }
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let frase = ("foguete").split(" ")
+  console.log(frase)
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+
+  let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+  let newArray = []
+  for(let index =0; index < array.length; index += 1){
+
+    if(index==0 || (index == (array.length -1))){
+      newArray.unshift(array[index])
+    }
+  }
+  console.log(newArray)
+  console.log(array.length -1)
+
 }
 
 // Desafio 5
