@@ -55,8 +55,8 @@ function highestCount(numeros) {
   }
   return contadorMaiorNumero;
 }
-// let numeros = [0, 0, 0];
-// console.log(highestCount(numeros));
+ let numeros = [9, 1, 2, 3, 9, 5, 7];
+ console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -66,19 +66,35 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat1 < cat2) {
     winerCat = "cat1";
   } else {
-    winerCat = "Os gatos trombam e o rato foge!";
+    winerCat = "os gatos trombam e o rato foge";
   }
   return winerCat;
 }
-let cat1 = 5;
-let cat2 = 5;
+let cat1 = 12;
+let cat2 = 12;
 let mouse = 0;
-console.log(catAndMouse(mouse, cat1, cat2));
+// console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+let numerosConvertidos= [];
+
+  for (key in numeros) {
+    if(((numeros[key] % 3) === 0 ) && ((numeros[key] % 5 ) === 0)){
+      numerosConvertidos.push("fizzBuzz");
+    } else if ((numeros[key] % 3) === 0) {
+      numerosConvertidos.push("fizz");
+    } else if ((numeros[key] % 5 ) === 0) {
+      numerosConvertidos.push("buzz");
+    } else {
+      numerosConvertidos.push("bug!")
+    }
+  }
+  return numerosConvertidos;
 }
+
+let numeros = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz(numeros));
 
 // Desafio 9
 function encode() {
