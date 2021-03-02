@@ -13,13 +13,12 @@ function calcArea(base, height) {
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Desafio 3
-function splitSentence(frase,array) {
-  frase = "Go trybe";
-  array = [];
-  return frase += array;
+function splitSentence(string) {
+  let array.split (" ");
+  return array;
 }
+ 
 
-console.log(splitSentence());
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Desafio 4
