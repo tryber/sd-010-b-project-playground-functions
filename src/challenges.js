@@ -19,13 +19,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(items) {
-  let lastItem = items[items.lenght - 1];
+  let lastItem = items[items.length - 1];
   let firstItem = items[0];
   let lastAndFirstItems = `${lastItem}, ${firstItem}`;
-  
+
   return lastAndFirstItems;
 }
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -35,8 +34,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+let higherNumber = numbers[0];
+let repetitionHigherNumber = 0;
+
+for (let x = 0; x < numbers.length; x ++) {
+  if (numbers[x] > higherNumber) {
+    higherNumber = numbers[x]
+  }
+}
+
+for (let y = 0; y < numbers.length; y ++) {
+  if (numbers[y] === higherNumber) {
+    repetitionHigherNumber ++
+  }
+} 
+
+return repetitionHigherNumber;
 }
 
 // Desafio 7
