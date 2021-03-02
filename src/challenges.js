@@ -51,9 +51,9 @@ function catAndMouse(rat, c1, c2) {
   mouse = rat;
   cat1 = c1;
   cat2 = c2;
-  ca1 = 'cat1';
-  ca2 = 'cat2';
-  emp = 'os gatos trombam e o rato foge'
+  ca1 = "cat1";
+  ca2 = "cat2";
+  emp = "os gatos trombam e o rato foge";
   if (cat1 < cat2) {
     return ca1;
   } else if (cat2 < cat1) {
