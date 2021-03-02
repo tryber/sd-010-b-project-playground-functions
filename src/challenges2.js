@@ -11,8 +11,10 @@ function techList(nomesTecnologias, nome) {
       });
     }
   }
-  return objeto;
+  let ordenado = objeto.sort();
+  return ordenado;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],'lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
