@@ -57,21 +57,21 @@ function footballPoints(wins, ties) {
 function highestCount(valuesArray) {
   let biggestNumber = valuesArray[0];
   let subCounter = 0;
-  let currentCounter = 0;  
-    for (index = 0; index < valuesArray.length; index += 1) {
-      for (counterIndex = 0; counterIndex < valuesArray.length; counterIndex += 1) {
-        if (valuesArray[counterIndex] === valuesArray[index]) {
-          currentCounter += 1;
-        }
-      }
-      if (valuesArray[index] >= biggestNumber && currentCounter > subCounter) {
-        biggestNumber = valuesArray[index];
-        subCounter = currentCounter;
-        currentCounter = 0;
-      } else {
-        currentCounter = 0;
+  let currentCounter = 0;
+  for (index = 0; index < valuesArray.length; index += 1) {
+    for (counterIndex = 0; counterIndex < valuesArray.length; counterIndex += 1) {
+      if (valuesArray[counterIndex] === valuesArray[index]) {
+        currentCounter += 1;
       }
     }
+    if (valuesArray[index] >= biggestNumber) {
+      biggestNumber = valuesArray[index];
+      subCounter = currentCounter;
+      currentCounter = 0;
+    } else {
+      currentCounter = 0;
+    }
+  }
   return subCounter;
 }
 
