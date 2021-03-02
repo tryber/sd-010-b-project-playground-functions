@@ -34,7 +34,7 @@ function concatName(arrayString) {
   let primeiro = arrayString[0] + ", ";
   let ultimo = arrayString[arrayString.length - 1];
 
-  return primeiro + ultimo;
+  return ultimo + primeiro;
 }
 // Desafio 5
 function footballPoints() {
@@ -71,4 +71,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+ //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
