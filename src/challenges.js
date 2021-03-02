@@ -44,8 +44,8 @@ function highestCount(arrNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let diffMouseCat1 = mouse - cat1;
-  let diffMouseCat2 = mouse - cat2;
+  let diffMouseCat1 = Math.abs(mouse - cat1);
+  let diffMouseCat2 = Math.abs(mouse - cat2);
   let message;
 
   if (diffMouseCat1 > diffMouseCat2) {
@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return message;
 }
-
+console.log(catAndMouse(10, 4, 22));
 // Desafio 8
 function fizzBuzz(arrNumbers) {
   let fizzBuzzBugArray = [];
