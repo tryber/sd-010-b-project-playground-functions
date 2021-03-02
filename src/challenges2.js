@@ -1,10 +1,6 @@
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  let objeto = {
-    tech: "NomeTech",
-    name: name
-  }
   let resultado = [];
   array= array.sort();
   if(array = []){
