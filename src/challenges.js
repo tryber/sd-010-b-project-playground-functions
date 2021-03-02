@@ -94,58 +94,30 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(arrayString) {
-  let coding = '';
-  for (let index = 0; index < arrayString.length; index += 1) {
-  switch (arrayString[index]) {
-    case 'a':
-      coding += 1;
-      break;
-    case 'e':
-      coding += 2;
-      break;
-    case 'i':
-      coding += 3;
-      break;
-    case 'o':
-      coding += 4;
-      break
-    case 'u':
-      coding += 5;
-      break;
-    default:
-      coding += arrayString[index];
-      break;
+  let string = arrayString;
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < string.length; index += 1) {
+    for (let cont = 0; cont < vogais.length; cont += 1) {
+      if (string[index] === vogais[cont]) {
+        string = string.replace(string[index], (cont + 1));
+      }
     }
   }
-  return coding;
+  return string;
 }
 console.log(encode('hi there!'));
 
 function decode(decodeArray) {
-  let decoding = '';
-  for (let index = 0; index < decodeArray.length; index += 1) {
-  switch (decodeArray[index]) {
-    case '1':
-      decoding += 'a';
-      break;
-    case '2':
-      decoding += 'e';
-      break;
-    case '3':
-      decoding += 'i';
-      break;
-    case '4':
-      decoding += 'o';
-      break
-    case '5':
-      decoding += 'u';
-      break;
-    default:
-      decoding += decodeArray[index];
-      break;
+  let string = decodeArray;
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < string.length; index += 1) {
+    for (let cont = 0; cont < vogais.length; cont += 1) {
+      if (string[index] == (cont+1)) {
+        string = string.replace(string[index], vogais[cont]);
+      }
     }
   }
-  return decoding;
+  return string;
 }
 console.log(decode('h3 th2r2!'));
 

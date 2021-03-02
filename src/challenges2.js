@@ -6,9 +6,9 @@ function techList(skills, name) {
     return 'Vazio!';
   }
   for (let index in skills){
-    jobs.push({
+    jobs.push( {
       tech: skills[index],
-      name: name,
+      name: name
     });
   }
   return jobs;
