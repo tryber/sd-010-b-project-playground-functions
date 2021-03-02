@@ -62,13 +62,11 @@ console.log(catAndMouse(4, 4, 2));
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  numbers = [2, 15, 7, 9, 45];
-  let result = [];
-
+  numbers = [2, 15, 7, 9, 45]; let result = [];
   for (let i = 0; i < numbers.length; i += 1) {
     if ((numbers[i] % 3 === 0) && (numbers[i] % 5 === 0)) result.push('fizzBuzz');
-    else if (numbers[i] % 3 === 0) result.push('buzz');
-    else if (numbers[i] % 5 === 0) result.push('fizz');
+    else if (numbers[i] % 3 === 0) result.push('fizz');
+    else if (numbers[i] % 5 === 0) result.push('buzz');
     else result.push('bug!');
   }
   return result;
