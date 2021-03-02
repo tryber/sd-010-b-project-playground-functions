@@ -11,26 +11,27 @@ function compareTrue(bol1, bol2) {
 function calcArea(base, height) {
   let area = ((base * height) / 2);
   return area;
-} console.log(calcArea(10,50));
+} console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
   return array;
-} console.log(splitSentence('go Trybe'))
+} console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
   let ultimoItem = array[array.length - 1];
   let primeiroItem = array[0];
-  let string = (ultimoItem + ', ' + primeiroItem) 
+  let string = (ultimoItem + ', ' + primeiroItem); 
   return string;
-} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  let pontos = (wins * 3) + ties;
+  return pontos;
+} console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
