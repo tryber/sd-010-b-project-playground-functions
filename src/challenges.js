@@ -1,25 +1,37 @@
 // Desafio 1
 function compareTrue(boola, boolb) {
-  return ((boola === true) && (boolb === true))
-  
+  return ((boola === true) && (boolb === true));
 }
 
 // Desafio 2
 function calcArea(base, altura) {
-  area = (base*altura)/2;
+  let area = (base * altura) / 2;
 
-  return area
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let separado = frase.split(' ');
+  return separado;
 }
 
+console.log(splitSentence('vamo que vamo'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let resposta = '';
+  for (let index = array.length; index >= 0; index = index - 1) {
+    if (index === array.length) {
+      resposta = resposta + array[index] + ', ';
+    }
+    if (index === 0){
+      resposta = resposta + array[index];
+    }
+     return resposta
+  }
 }
+console.log(concatName( ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
