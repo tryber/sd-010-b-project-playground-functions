@@ -48,9 +48,16 @@ function concatName(fraseArray) {
 //console.log(concatName(arrayDeStrings));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let vitorias = wins * 3;
+  let pontos = vitorias + ties;
+
+
+  return "O time possui " + pontos + " pontos";
+
 }
+//console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
