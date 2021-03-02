@@ -25,19 +25,20 @@ function splitSentence(stringSplit) {
 // Desafio 4
 function concatName(arrayStrings) {
   let response = '';
-
-  response += arrayStrings[0];
-  response += ', ';
-  response += arrayStrings[arrayStrings.length - 1];
-
+  response = `${arrayStrings[0]}, ${arrayStrings[arrayStrings.length - 1]}`;
   console.log(`Concatenação: ${response}`);
 
   return response;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let response = 0;
+  response += wins * 3;
+  response += ties;
+  console.log(`Total de pontos: ${response}`);
+
+  return response;
 }
 
 // Desafio 6
@@ -69,6 +70,7 @@ compareTrue(false, false);
 calcArea(10, 50);
 splitSentence('Teste de Split');
 concatName(concat);
+footballPoints(14, 8);
 
 module.exports = {
   calcArea,
