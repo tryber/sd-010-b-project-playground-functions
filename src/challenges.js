@@ -28,12 +28,16 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let result = "";
+  result += names[names.length - 1] + ", ";
+  result += names[0];
+  
+  return result;
 }
-
 // Desafio 5
 function footballPoints() {
+  
   // seu código aqui
 }
 
