@@ -11,22 +11,34 @@ function compareTrue() {
 }
 
 compareTrue();
-
+////////////////////////////////////////////////////////////////////////////////////
 // Desafio 2
 function calcArea() {
-  // seu código aqui
-}
+  let base = 10;
+  let height = 50;
 
+  return (base * height) / 2;
+}
+calcArea();
+
+/////////////////////////////////////////////////////////////////////////////////////
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let frase = "Go trybe";
+  let array = [];
+  return frase + array;
 }
+splitSentence();
 
+/////////////////////////////////////////////////////////////////////////////////////
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let arrayString = ["Lucas", "Marcos", "João"];
+  return arrayString[0] + " " + arrayString[2];
 }
+concatName();
 
+//////////////////////////////////////////////////////////////////////////////////////
 // Desafio 5
 function footballPoints() {
   // seu código aqui
