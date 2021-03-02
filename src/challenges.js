@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(word) {
   // função split aprendida junto ao site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings
-  let sentence = word.split(" ");
+  let sentence = word.split(' ');
   return sentence;
 }
 
@@ -40,13 +40,13 @@ function highestCount(arrayNumbers) {
   //   Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
 
   // Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
-  let show
-  for (let index = 0; index < arrayNumbers.length; index++) {
-    let number = 0
+    let show = 0;
+    let number = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] >= number) {
-      number = arrayNumbers[index]
-      show = show + 1
-    };
+      number = arrayNumbers[index];
+      show += 1;
+    }
   }
   return show;
 }
