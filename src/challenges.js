@@ -23,7 +23,7 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  let result = arrayString[arrayString.length - 1] + ', ' + (arrayString[0]);
   return result;
 }
 
@@ -100,13 +100,52 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let resultado = word;
+  for (let key in word) {
+    if (word[key] == 'a') {
+      resultado = resultado.replace('a', '1');
+    }
+    if (word[key] == 'e') {
+      resultado = resultado.replace('e', '2');
+    }
+    if (word[key] == 'i') {
+      resultado = resultado.replace('i', '3');
+    }
+    if (word[key] == 'o') {
+      resultado = resultado.replace('o', '4');
+    }
+    if (word[key] == 'u') {
+      resultado = resultado.replace('u', '5');
+    }
+  }
+  return resultado;
 }
 
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"));
+
+function decode(word) {
+  let resultado = word;
+  for (let key in word) {
+    if (word[key] == '1') {
+      resultado = resultado.replace('1', 'a');
+    }
+    if (word[key] == '2') {
+      resultado = resultado.replace('2', 'e');
+    }
+    if (word[key] == '3') {
+      resultado = resultado.replace('3', 'i');
+    }
+    if (word[key] == '4') {
+      resultado = resultado.replace('4', 'o');
+    }
+    if (word[key] == '5') {
+      resultado = resultado.replace('5', 'u');
+    }
+  }
+  return resultado;
 }
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
