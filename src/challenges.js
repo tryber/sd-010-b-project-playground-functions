@@ -6,10 +6,13 @@ console.log(compareTrue(false, true)); // -> false
 console.log(compareTrue(false, false)); // -> false
 console.log(compareTrue(true, true)); // -> true
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+// Requisito 2 - Calcular a área de um triángulo
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+console.log(calcArea(10, 50)); // -> 250
+console.log(calcArea(5, 2)); // -> 5
+console.log(calcArea(51, 1)); // -> 25.5
 
 // Desafio 3
 function splitSentence() {
