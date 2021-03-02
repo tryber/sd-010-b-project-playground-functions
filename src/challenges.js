@@ -9,13 +9,14 @@ function compareTrue(bol1, bol2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = ((base * height)/2);
-  console.log(area)
+  let area = ((base * height) / 2);
+  console.log(area);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" ");
+  console.log(array);
 }
 
 // Desafio 4
