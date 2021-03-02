@@ -21,12 +21,14 @@ function calcArea(base, height) {
 // console.log(splitSentence(sentence));
 function splitSentence(sentence) {
   let words = [];
-  return words = sentence.split(" ");
+  return words = sentence.split(" "); // I found the split() function at https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let array = ['captain', 'my', 'captain'];
+console.log(concatName(array));
+function concatName(contact) {
+  return contact[contact.length - 1].concat(', ',  contact[0]); // I founf the concat() function at https://www.w3schools.com/jsref/jsref_concat_string.asp
 }
 
 // Desafio 5
