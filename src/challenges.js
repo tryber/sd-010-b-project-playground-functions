@@ -37,9 +37,15 @@ function splitSentence(frase) {
 //console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
+function concatName(fraseArray) {
   // seu código aqui
+  let novoFormato = fraseArray[fraseArray.length-1] + ", " + fraseArray[0];
+
+  return novoFormato
+
 }
+//let arrayDeStrings = ['captain', 'my', 'captain'];
+//console.log(concatName(arrayDeStrings));
 
 // Desafio 5
 function footballPoints() {
