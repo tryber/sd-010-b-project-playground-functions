@@ -1,6 +1,6 @@
 // Hello! Welcome to my playground!
 
-// Desafio 10
+// Challenge 10
 function techList(tech, name) {
   if (tech.length < 1) {
     return 'Vazio!';
@@ -16,7 +16,7 @@ function techList(tech, name) {
   return techList;
 }
 
-// Desafio 11
+// Challenge 11
 function generatePhoneNumber(arr) {
   //starting checks
   if (arr.length !== 11) return 'Array com tamanho incorreto.';
@@ -84,7 +84,7 @@ function triangleCheck(a, b, c) {
 
 console.log(triangleCheck(10, 14, 8));
 
-// Desafio 13
+// Challenge 13
 function hydrate(string) {
   const drankTimes = string.match(/\d+/g).reduce((acc, curr) => {
     return parseInt(acc) + parseInt(curr);
