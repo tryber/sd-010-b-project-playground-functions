@@ -29,14 +29,14 @@ function splitSentence(string) {
 // const array = ['captain', 'my', 'captain'];
 
 function concatName(array) {
-  let resultado = `${array[array.length-1]}, ${array[0]}`;
+  let resultado = `${array[array.length - 1]}, ${array[0]}`;
   return resultado;
 }
 // console.log(concatName(array));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let resultado = (wins * 3) + (ties * 1);
+  let resultado = wins * 3 + ties * 1;
   return resultado;
 }
 // console.log(footballPoints(0, 0));
@@ -50,7 +50,6 @@ function highestCount(array) {
   for (let index in numeroOrdenado) {
     if (numeroOrdenado[index] === numeroOrdenado[index - 1]) {
       total += 1;
-
     } else {
       total = 1;
     }
@@ -61,9 +60,18 @@ function highestCount(array) {
 // console.log(highestCount(array));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let ataqueBemSucedido = '';
+  if (mouse < (cat1 < cat2)) {
+    ataqueBemSucedido = 'cat1';
+  } else if (mouse < (cat2 < cat1)) {
+    ataqueBemSucedido = 'cat2';
+  } else {
+    ataqueBemSucedido = 'os gatos trombam e o rato foge';
+  }
+  return ataqueBemSucedido;
 }
+// console.log(catAndMouse(0, 7, 3));
 
 // Desafio 8
 function fizzBuzz() {
