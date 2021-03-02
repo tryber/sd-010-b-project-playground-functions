@@ -51,17 +51,17 @@ function catAndMouse(mouse, cat1, cat2) {
   const catDistance1 = Math.abs(mouse - cat1);
   const catDistance2 = Math.abs(mouse - cat2);
 
-  if (catDistance1 > catDistance2) {
+  if (catDistance1 < catDistance2) {
     return 'cat1';
   }
-  if (catDistance1 < catDistance2) {
+  if (catDistance1 > catDistance2) {
     return 'cat2';
   }
 
   return 'os gatos trombam e o rato foge';
 }
 
-console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse(10, 4, 22));
 
 // Desafio 8
 function fizzBuzz() {
