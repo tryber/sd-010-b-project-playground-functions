@@ -44,14 +44,39 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(repeatM) {
+  let maiorN = repeatM[0];
+  let qMaior = 0;
+  for (let i = 0; i < repeatM.length; i += 1) {
+    if (repeatM[i] > maiorN) {
+      qMaior = repeatM[i]
+    }
+  }
+  for (let j = 0; j < repeatM.length; j += 1) {
+    if (repeatM[j] === maiorN) {
+      qMaior += 1;
+    }
+  }
+  return qMaior;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) !== Math.abs(mouse - cat2)) {
+    if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+      return 'cat1';
+    }
+    return 'cat2';
+  }
+  return ('os gatos trombam e o rato foge');
 }
+console.log(catAndMouse(2, 0, 3));
+console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 0, 0));
+//https://www.w3schools.com/js/js_math.asp
 
 // Desafio 8
 function fizzBuzz() {
