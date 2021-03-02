@@ -35,9 +35,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numArray) {
+  let repeatedNumbers = {};
+  for (let index = 0; index < numArray.length; index += 1){
+    if (repeatedNumbers[numArray[index]] === undefined){
+      repeatedNumbers[numArray[index]] = 1;
+    } else {
+      repeatedNumbers[numArray[index]] += 1;
+    }
+  }
+  return repeatedNumbers;
 }
+//REFERENCIA => Primeira parte do Gabarito do course da Trybe em exercício similar 
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
