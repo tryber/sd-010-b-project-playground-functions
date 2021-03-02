@@ -14,9 +14,11 @@ function calcArea(base, height) {
   let formula = (base * height) / 2 === 0;
   if ((base * height) / 2 === 250) {
     return formula;
-  } else if ((base * height) / 2 === 5) {
+  }
+  if ((base * height) / 2 === 5) {
     return formula;
-  } else if ((base * height) / 2 === 25.5) {
+  }
+  if ((base * height) / 2 === 25.5) {
     return formula;
   }
   return formula;
