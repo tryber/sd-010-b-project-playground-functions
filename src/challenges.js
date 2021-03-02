@@ -11,13 +11,18 @@ function compareTrue(boolean1, boolean2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriangulo;
+  areaTriangulo = (base*height)/2
+  
+  return areaTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  
+    
+  }
 }
 
 // Desafio 4
