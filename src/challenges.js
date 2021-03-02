@@ -2,11 +2,10 @@
 function compareTrue() {
   let boo1 = true;
   let boo2 = true;
-  if(boo1 && boo2 === true) {
+  if (boo1 && boo2 === true) {
     return true;
-  }else {
-    return false;
-  }  
+  }
+  return false;
 }
 
 // Desafio 2
