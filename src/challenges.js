@@ -2,9 +2,9 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2) {
     return true;
-  } else {
-    return false;
-  }
+  // } else {
+  //   return false;
+  // }
 }
 
 // teste item 1
@@ -23,7 +23,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(umaFrase) {
-  return umaFrase.split(" ");
+  return umaFrase.split(' ');
 }
 
 // teste item 3
@@ -33,7 +33,7 @@ function splitSentence(umaFrase) {
 
 // Desafio 4
 function concatName(umaLista) {
-  let concat = umaLista[umaLista.length - 1] + ", " + umaLista[0];
+  let concat = umaLista[umaLista.length - 1] + ', ' + umaLista[0];
   return concat;
 }
 
@@ -44,7 +44,6 @@ function concatName(umaLista) {
 // console.log(concatName(array0));
 // console.log(concatName(array1));
 // console.log(concatName(array2));
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -59,17 +58,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // pegar o maior número
-  bigger = numbers[0];
+  let bigger = numbers[0];
   for (let key in numbers) {
     if (numbers[key] > bigger) {
       bigger = numbers[key];
     }
   }
-  //contar quantas vezes ele aparece
+  // contar quantas vezes ele aparece
   let counter = 0;
   for (let key in numbers) {
     if (numbers[key] === bigger) {
-      counter++;
+      counter ++;
     }
   }
   return counter;
@@ -84,15 +83,15 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanciaMouse1 = Math.abs(mouse - cat1);
-  distanciaMouse2 = Math.abs(mouse - cat2);
+  let distanciaMouse1 = Math.abs(mouse - cat1);
+  let distanciaMouse2 = Math.abs(mouse - cat2);
 
   if (distanciaMouse1 < distanciaMouse2) {
-    return "cat1"
+    return "cat1";
   } else if (distanciaMouse2 < distanciaMouse1) {
-    return "cat2"
+    return "cat2";
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
@@ -105,11 +104,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(umaLista) {
   let out = [];
   for (let key in umaLista) {
-    if (umaLista[key] % 3 == 0 && umaLista[key] % 5 == 0) {
+    if (umaLista[key] % 3 === 0 && umaLista[key] % 5 === 0) {
       out.push("fizzBuzz");
-    } else if (umaLista[key] % 3 == 0) {
+    } else if (umaLista[key] % 3 === 0) {
       out.push("fizz");
-    } else if (umaLista[key] % 5 == 0) {
+    } else if (umaLista[key] % 5 === 0) {
       out.push("buzz");
     } else {
       out.push("bug!")
@@ -129,7 +128,7 @@ function fizzBuzz(umaLista) {
 
 // Desafio 9
 function encode(umaFrase) {
-  lista = umaFrase.split("");
+  let lista = umaFrase.split("");
 
   for (let key in lista) {
     switch(lista[key]) {
@@ -153,7 +152,7 @@ function encode(umaFrase) {
   return lista.join("");
 }
 function decode(umaFrase) {
-  lista = umaFrase.split("");
+  let lista = umaFrase.split("");
 
   for (let key in lista) {
     switch(lista[key]) {
@@ -181,7 +180,6 @@ function decode(umaFrase) {
 // teste item 9
 // console.log(encode("hi there!"));
 // console.log(decode("h3 th2r2!"));
-
 
 // NÂO MEXER ABAIXO!
 module.exports = {
