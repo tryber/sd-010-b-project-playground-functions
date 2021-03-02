@@ -21,8 +21,8 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  let string = 'go Trybe';
+function splitSentence(string) {
+  string = 'go Trybe';
   let resultado = string.split(' ');
   return resultado;
 }
