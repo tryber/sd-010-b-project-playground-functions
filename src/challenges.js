@@ -46,9 +46,17 @@ return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let saida;
+if((cat1 - mouse) > (cat2 - mouse) ) {
+  saida = "cat2"
+} else if ((cat1 - mouse) < (cat2 - mouse) ){
+  saida = "cat1"
+}else {
+  saida = "os gatos trombam e o rato foge"
 }
+return saida
+} 
 
 // Desafio 8
 function fizzBuzz() {
