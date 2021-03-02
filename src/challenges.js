@@ -45,7 +45,7 @@ function highestCount(array) {
     }
     if (array[index] === maior) {
       repete += 1;
-    }   
+    }
   }
   return repete;
 }
@@ -54,18 +54,14 @@ function highestCount(array) {
 function catAndMouse(cat1, cat2, mouse) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
-  let string;
-  if (distCat1 === distCat2){
-    string = "os gatos trombam e o rato foge";    
+  if (distCat1 === distCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (distCat1 < distCat2) {
+    return 'cat1';
+  } else {
+    return 'cat2';
   }
-  else if (distCat1 < distCat2) {
-    string = "cat1";
-  }
-  else {
-    string = "cat2";
-  }
-  return string;
-} 
+}
 
 // Desafio 8
 function fizzBuzz() {
