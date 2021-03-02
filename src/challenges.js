@@ -5,7 +5,7 @@ function compareTrue(valorUm, valorDois) {
   if (valorUm && valorDois === true) {
     return true;
   }
-  if (valorUm || valorDois !== true) {
+  if (valorUm && valorDois !== true) {
     return trueOrFalse;
   }
 }
@@ -30,10 +30,10 @@ function calcArea(base, height) {
 function splitSentence() {
   // seu código aqui
   if (splitSentence.length === 2) {
-  return toSplit.split(' '+', '+' '+', '+' ');
+    return splitSentence.split(''+','+''+','+'');
   }
   if (splitSentence.length == 1) {
-  return toSplit.split(' '+', '+' ');
+   return splitSentence.split(''+','+'');
   }
 }
 
