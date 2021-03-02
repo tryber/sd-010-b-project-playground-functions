@@ -1,26 +1,26 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(batman, robin) {
+  return batman && robin;
 }
 
 // Desafio 2
 function calcArea() {
-  
+  // seu código aqui
 }
 
 // Desafio 3
 function splitSentence() {
-  
+  // seu código aqui
 }
 
 // Desafio 4
 function concatName() {
-  
+  // seu código aqui
 }
 
 // Desafio 5
 function footballPoints() {
-
+  // seu código aqui
 }
 
 // Desafio 6
