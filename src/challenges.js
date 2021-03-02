@@ -57,41 +57,45 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
   if (distanceCat2 < distanceCat1) {
-    return 'cat 2';
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
+console.log(catAndMouse(0, 6, 6));
 
-// Desafio 8
-function fizzBuzz(array) {
-  let response = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
-      response.push('fizzBuzz');
-    } else if ((array[index] % 3) === 0) {
-      response.push('fizz');
-    } else if ((array[index] % 5) === 0) {
-      response.push('buzz');
-    } else {
-      response.push('bug!');
-    }
+// auxiliary functions Desafio 8
+function divisibleByThree(number) {
+  if (number % 3 === 0) {
+    return 'fizz';
   }
-  return response;
+  return false;
+}
+
+function divisibleByFive(number) {
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return false;
+}
+
+function divisibleByThreeAndFive(number) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    return 'fizzBuzz';
+  }
+}
+// Desafio 8
+function fizzBuzz() {
+  // seu código aqui
 }
 
 // Desafio 9
-function encode(string) {
-  let table = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5' };
+function encode() {
+  // seu código aqui
 }
 function decode() {
   // seu código aqui
 }
-console.log(encode('hi there!'));
+
 module.exports = {
   calcArea,
   catAndMouse,

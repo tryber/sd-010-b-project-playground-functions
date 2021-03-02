@@ -1,16 +1,6 @@
 // Desafio 10
-function techList(array, string) {
-  let output = [];
-  if (array !== []) {
-    for (let key in array) {
-      if (string !== '') {
-        output.push({ tech: array[key], name: string });
-      }
-    }
-  } else {
-    return 'Vazio!';
-  }
-  return output;
+function techList() {
+  // seu código aqui
 }
 
 // Desafio 11
