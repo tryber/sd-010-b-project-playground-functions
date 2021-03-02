@@ -103,7 +103,7 @@ function catAndMouse(mouse, cat1, cat2) {
   //variaveis que receberao as posições dos gatos e do rato
   let positionCat1 = cat1;
   let positionCat2 = cat2;
-  let positionMouse = positionMouse;
+  let positionMouse = mouse;
 
   if ((positionMouse - positionCat1) > (positionMouse - positionCat2)) {
     return ('cat2');
