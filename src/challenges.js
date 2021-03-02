@@ -88,17 +88,17 @@ function encode(string) {
   let trocaCaracter = '';
   for (let i = 0; i < novaString.length; i += 1) {
     if (novaString[i] === 'a') {
-        trocaCaracter += '1';
+      trocaCaracter += '1';
     } else if (novaString[i] === 'e') {
-        trocaCaracter += '2';
+      trocaCaracter += '2';
     } else if (novaString[i] === 'i') {
-        trocaCaracter += '3';
+      trocaCaracter += '3';
     } else if (novaString[i] === 'o') {
-        trocaCaracter += '4';
+      trocaCaracter += '4';
     } else if (novaString[i] === 'u') {
-        trocaCaracter += '5';
+      trocaCaracter += '5';
     } else {
-        trocaCaracter += novaString[i];
+      trocaCaracter += novaString[i];
     }      
   }
   return trocaCaracter;
@@ -108,21 +108,21 @@ function decode(string) {
   let trocaCaracter = '';
   for (let i = 0; i < novaString.length; i += 1) {
     if (novaString[i] === '1') {
-        trocaCaracter += 'a';
+      trocaCaracter += 'a';
     } else if (novaString[i] === '2') {
-        trocaCaracter += 'e';
+      trocaCaracter += 'e';
     } else if (novaString[i] === '3') {
-        trocaCaracter += 'i';
+      trocaCaracter += 'i';
     } else if (novaString[i] === '4') {
-        trocaCaracter += 'o';
+      trocaCaracter += 'o';
     } else if (novaString[i] === '5') {
-        trocaCaracter += 'u';
+      trocaCaracter += 'u';
     } else {
-        trocaCaracter += novaString[i];
-    }      
+      trocaCaracter += novaString[i];
+    }     
   }
   return trocaCaracter;
-} 
+}
 
 module.exports = {
   calcArea,
