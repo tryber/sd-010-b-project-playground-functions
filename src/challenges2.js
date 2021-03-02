@@ -15,9 +15,10 @@ function techList(tech, name) {
 }
 
 // Desafio 11
+// toString verificado no site https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings
 function generatePhoneNumber(array) {
   if (array.length > 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
   let num = {};
   let contaRepetido = 0;
@@ -26,7 +27,7 @@ function generatePhoneNumber(array) {
     if (num[valor] === undefined) {
       num[valor] = 1;
     } else {
-      num[valor] = num[valor] + 1;
+      num[valor] += 1;
     }
   }
   for (let prop in num) {
@@ -39,12 +40,12 @@ function generatePhoneNumber(array) {
       return 'Não é possível gerar um número de telefone com esses valores.';
     }
   }
-  let numTelefone;
-  for (let i = 0; i < array.length; i += 1) {
-    numTelefone = '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10] 
-  }
+  let telefoneDDD = '(' + array[0].toString() + array[1].toString() + ')';
+  let telefoneParteUm = array[2].toString() + array[3].toString() + array[4].toString() + array[5].toString() + array[6].toString();
+  let telefoneParteDois = array[7].toString() + array[8].toString() + array[9].toString() + array[10].toString();
+  numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
   return numTelefone;
-} 
+}
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
