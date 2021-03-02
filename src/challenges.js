@@ -1,7 +1,9 @@
 // Desafio 1
 function compareTrue() {
-    // seu código aqui
-    teste
+    // Desafio 1 == Barrisenn Gonçalo
+function  compareTrue ( a , b ) {  
+  return a === true && b === true ? verdadeiro : falso ;
+    
 }
 
 // Desafio 2
