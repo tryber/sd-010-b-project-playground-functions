@@ -23,7 +23,6 @@ function concatName(arr) {
   return stringResult;
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -39,13 +38,12 @@ function highestCount(arr) {
   let highNumber = Math.max.apply(Math, arr);
   let totalHigh = 0;
   for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] == highNumber) {
-      totalHigh += arr[index];
+    if (arr[index] === highNumber) {
+      totalHigh += 1;
     }
   }
   return totalHigh;
 }
-//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
