@@ -2,8 +2,12 @@
 function compareTrue(active, connected) {
   if (active === true && connected === true) {
     return true;
+  } else {
+    return false
   }
-};
+}
+
+console.log(compareTrue(false, false))
 
 // Desafio 2
 function calcArea() {
