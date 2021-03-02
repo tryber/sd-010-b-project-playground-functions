@@ -70,8 +70,10 @@ function hydrate(string) {
       count += Number(letter);
     }
   }
-
-  return `${count} copos de água.`;
+  if (count > 1) {
+    return `${count} copos de água.`;
+  }
+  return `${count} copo de água.`;
 }
 
 module.exports = {
