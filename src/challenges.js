@@ -20,7 +20,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let arrayFrase=[];
+  let arrayFrase = [];
   arrayFrase = frase.split(" ");
   return arrayFrase;
   }
@@ -29,7 +29,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(ultimoPrimeiroItem) {
   
-  let conectaItem = (ultimoPrimeiroItem[ultimoPrimeiroItem.length-1]) +" , "(ultimoPrimeiroItem[0]);
+  let conectaItem = (ultimoPrimeiroItem[ultimoPrimeiroItem.length-1]) + " , " + (ultimoPrimeiroItem[0]);
   return conectaItem;
 
 }
@@ -51,7 +51,7 @@ function highestCount(repeteMaior) {
   let qntNumeroMaior;
   for(let cont=0;cont < repeteMaior.length; cont+=1){
     if(repeteMaior[cont] > repeteMaior.length-1){
-      maiorNumero = repeteMaior[key];
+      maiorNumero = repeteMaior[cont];
     }
   }
 }
