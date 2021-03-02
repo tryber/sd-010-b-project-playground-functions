@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(a,b) {
+function compareTrue(a, b) {
   // seu código aqui
   if(a && b) {
     return true;
@@ -10,9 +10,12 @@ function compareTrue(a,b) {
 console.log(compareTrue(0,1));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
-}
+  let resultado = (base * height) / 2;
+  return resultado;
+};
+console.log(calcArea(2,5));
 
 // Desafio 3
 function splitSentence() {
