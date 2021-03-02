@@ -50,16 +50,16 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1; // 2
   let distanciaCat2 = mouse - cat2; // -6
-  if (distanciaCat1 < distanciaCat2) {
+  if (Math.abs(distanciaCat1) < Math.abs(distanciaCat2)) {
     return "cat1";
   }
-  else if (distanciaCat2 < distanciaCat1) {
+  else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)) {
     return "cat2";
   }
   else {
     return "os gatos trombam e o rato foge";
   }
-}
+} console.log(catAndMouse(0, 3, 2))
 
 let array = [7, 9];
 // Desafio 8
