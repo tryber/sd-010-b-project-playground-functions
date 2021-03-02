@@ -3,7 +3,7 @@ function techList(array, name) {
   // seu código aqui
   let resultado = [];
   array= array.sort();
-  if(array = []){
+  if(array == []){
     return 'Vazio!'
   }
   for(let index in array){
@@ -11,7 +11,8 @@ function techList(array, name) {
     resultado.push({'tech': array[index], 'name': name});
   }
   return resultado;
-}//console.log(techList([],"Lucas"));
+}
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
