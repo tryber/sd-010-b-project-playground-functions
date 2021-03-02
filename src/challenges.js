@@ -55,12 +55,14 @@ function highestCount(arrayNum) {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  // Seu código aqui
+}
 
 // Desafio 8
 function fizzBuzz(num) {
-
   const valores = num.map( function( number ) {
-    if (number % 3 === 0 && number % 5 === 0) {
+    if(number % 3 === 0 && number % 5 === 0) {
       return 'FizzBuzz'
     } else if (number % 5 === 0) {
       return 'Buzz'
@@ -72,7 +74,6 @@ function fizzBuzz(num) {
   })
 
   return valores
-  
 }
 
 console.log(fizzBuzz([9, 25]))
