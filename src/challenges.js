@@ -1,15 +1,15 @@
 // Desafio 1
-function compareTrue(boolean1, boolean2) {
-  if (boolean1 >= 0 && boolean2 >= 0){
-    return true
-  }else {
-    return false;
+// A princípio eu criei um código que retornava verdadeiro se os dois parâmetros fossem tipos numbers, o resultado foi satifatório, porém o avalator não computava. Foi então que eu perguntei ao meu colega Daniel Ceci e ele me explicou, então eu entendi e fui ao pé da letra do enunciado.
+function compareTrue(boolean1, boolean2){
+  if(boolean1 && boolean2){
+      return true
+  } else {
+      return false
+  }
 }
-}
-
-console.log(compareTrue("Amor", "Amor"))
-console.log(compareTrue(10, "Amor"))
-console.log(compareTrue(3, 5))
+console.log(compareTrue(false,true))
+console.log(compareTrue(false,false))
+console.log(compareTrue(true,true))
 
 // Desafio 2
 function calcArea() {
