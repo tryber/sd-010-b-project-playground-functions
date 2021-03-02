@@ -15,10 +15,31 @@ console.log(
 ); // -> [{ tech: 'CSS', name: 'Gustavo' },{ tech: 'HTML', name: 'Gustavo' },{ tech: 'JavaScript', name: 'Gustavo' },{ tech: 'Jest', name: Gustavo' },{ tech: 'React', name: 'Gustavo' }]
 console.log(techList([], 'Gustavo')); // -> 'Vazio!'
 
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// Requisitos Bônus
+// Requisito 11 - Gerar número de telefone a partir de array respeitando parênteses, traços e espaços.
+function generatePhoneNumber(numbers) {
+  if (numbers.length === 11) {
+    let phone = '(';
+    for (let num = 0; num < numbers.length; num += 1) {
+      let counter = 0;
+      for (let i = 0; i < numbers.length; i += 1) {
+        if (numbers[i] === numbers[num]) counter += 1;
+      }
+      if (numbers[num] < 0 || numbers[num] > 9 || counter >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+      if (num === 2) phone += ') ';
+      else if (num === 7) phone += '-';
+      phone += numbers[num];
+    } return phone;
+  }
+  return 'Array com tamanho incorreto.';
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 5])); // -> 'Array com tamanho incorreto.'
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1])); // -> 'não é possível gerar um número de telefone com esses valores'
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10])); // -> 'não é possível gerar um número de telefone com esses valores'
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0])); // -> 'não é possível gerar um número de telefone com esses valores'
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // -> (12) 34567-8901
 
 // Desafio 12
 function triangleCheck() {
