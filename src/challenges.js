@@ -1,17 +1,11 @@
 // Desafio 1
-function compareTrue(valor1, valor2) {
-  // seu código aqui teste:
-  if (valor1 == valor2 && valor2 == valor1) {
+
+function compareTrue(boolean1, boolean2) {
+  if (boolean1 === boolean2 && boolean2 === boolean1) {
     return true;
   }
-  else {
-    return false;
-  }
-
+  return false;
 }
-
-let valoresIguais = compareTrue(2,2)
-console.log(valoresIguais);
 
 
 // Desafio 2
