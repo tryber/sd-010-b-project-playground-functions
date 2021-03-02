@@ -1,6 +1,13 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firtsName, midleName) {
+  firtsName = "Carlos";
+  midleName = "Henrique";
+
+  if(firtsName == "Carlos" && midleName == "Henrique")
+    return true;
+  else{
+    return false;
+  }
 }
 
 // Desafio 2
