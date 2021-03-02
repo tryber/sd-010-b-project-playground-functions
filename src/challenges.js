@@ -60,8 +60,29 @@ function fizzBuzz(umaLista) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(umaFrase) {
+  lista = umaFrase.split("");
+
+  for (let key in lista) {
+    switch(lista[key]) {
+      case "a":
+      lista[key] = 1;
+      break;
+      case "e":
+      lista[key] = 2;
+      break;
+      case "i":
+      lista[key] = 3;
+      break;
+      case "o":
+      lista[key] = 4;
+      break;
+      case "u":
+      lista[key] = 5;
+      break;
+    }
+  }
+  return lista.join("");
 }
 function decode() {
   // seu código aqui
