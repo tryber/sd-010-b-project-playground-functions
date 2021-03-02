@@ -19,7 +19,6 @@ function splitSentence(string) {
   return arrayString;
 }
 
-
 // Desafio 4
 function concatName() {
   // seu código aqui
