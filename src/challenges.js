@@ -1,7 +1,7 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  teste
+function compareTrue(boola , boolb) {
+  return boola === boolb;
+  
 }
 
 // Desafio 2
@@ -59,3 +59,6 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
+console.log(compareTrue( true, false))
