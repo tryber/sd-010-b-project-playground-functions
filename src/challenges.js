@@ -39,15 +39,13 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let capture;
   if (cat1 == cat2){
-    capture = 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   } else if ((mouse - cat1) < (mouse - cat2)){
-    capture = 'cat1';
+    return 'cat1';
   } else{
-    capture = 'cat2';
+    return 'cat2';
   }
-  return capture;
 }
 
 // Desafio 8
