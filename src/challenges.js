@@ -3,9 +3,7 @@ function compareTrue(active, connected) {
   if (active === true && connected === true) {
     return true;
   }
-}
-
-compareTrue(true, false);
+};
 
 // Desafio 2
 function calcArea() {
