@@ -48,9 +48,17 @@ function highestCount(numeros) {
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  distanciaCat1 = cat1;
-  distanciaCat2 = cat2;
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < mouse) {
+    distanciaCat1 = mouse - cat1;
+  } else {
+    distanciaCat1 = cat1 - mouse;
+  }
+  if (cat2 < mouse) {
+    distanciaCat2 = mouse - cat2;
+  } else {
+    distanciaCat2 = cat2 - mouse;
+  }
 
   if (distanciaCat1 < distanciaCat2) {
     return "cat1"
@@ -61,7 +69,7 @@ function catAndMouse(cat1, cat2) {
   }
 }
 
-//console.log(catAndMouse(20, 17, 18))
+console.log(catAndMouse(0, 3, 2))
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -80,7 +88,7 @@ function fizzBuzz(numeros) {
   return resultado;
 }
 
-console.log(fizzBuzz([9, 25]));
+//console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
