@@ -7,7 +7,7 @@ function compareTrue(bol1, bol2) {
     trueFalse = false;
   }
   return trueFalse;
-} 
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -51,7 +51,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
   let string;
@@ -63,7 +63,7 @@ function catAndMouse(cat1, cat2, mouse) {
     string = 'cat2';
   }
   return string;
-} 
+} console.log (catAndMouse(0,3,2))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -71,14 +71,11 @@ function fizzBuzz(array) {
   for (let i = 0; i <= array.length - 1; i += 1) {
     if ((array[i] % 3 === 0) && (array[i] % 5 !== 0)) {
       novaArray.push('fizz');
-    }
-    else if ((array[i] % 3 !== 0) && (array[i] % 5 === 0)) {
+    } else if ((array[i] % 3 !== 0) && (array[i] % 5 === 0)) {
       novaArray.push('buzz');
-    }
-    else if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
+    } else if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
       novaArray.push('fizzBuzz');
-    }
-    else {
+    } else {
       novaArray.push('bug!');
     }
   }
