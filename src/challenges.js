@@ -1,17 +1,20 @@
 // Desafio 1
 function compareTrue(parameter1, parameter2) {
   // seu código aqui
-    return parameter1 === true && parameter2 === true;
-  }
-  console.log(compareTrue(false, true));
-  console.log(compareTrue(false, false));
-  console.log(compareTrue (true,true));
-
+  return parameter1 === true && parameter2 === true;
+}
+console.log(compareTrue(false, true));
+console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height) / 2;
 }
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2))
+console.log(calcArea(51, 1))
 
 // Desafio 3
 function splitSentence() {
@@ -47,6 +50,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
