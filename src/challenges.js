@@ -108,11 +108,20 @@ function encode(string) {
   }).join('');
   return string;
 }
-console.log(encode('hi there!')); // -> 'h3 th2r2!'
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  string = string.split('').map((char) => {
+    if (char === '1') char = 'a';
+    if (char === '2') char = 'e';
+    if (char === '3') char = 'i';
+    if (char === '4') char = 'o';
+    if (char === '5') char = 'u';
+    return char;
+  }).join('');
+  return string;
 }
+console.log(encode('hi there!')); // -> 'h3 th2r2!'
+console.log(decode('h3 th2r2!')); // -> 'hi there!'
 
 module.exports = {
   calcArea,
