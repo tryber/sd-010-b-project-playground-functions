@@ -7,7 +7,7 @@ function compareTrue(param1, param2) {
   } else {
     compara = false;
   }
-    return compara;
+  return compara;
 }
 
 // Desafio 2
@@ -17,9 +17,13 @@ function calcArea(height, base) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(str) {
   // seu código aqui
+  let split = str.split(" ")  //Fonte do ".split" = <https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254>
+  return split
 }
+
+console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName() {
