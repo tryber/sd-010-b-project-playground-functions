@@ -51,8 +51,15 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1 - mouse;
-  let distanceCat2 = cat2 - mouse;
+  let distanceCat1;
+  let distanceCat2;
+  if (cat1 <= 0 || cat2 <= 0) {
+    distanceCat1 = cat1 + mouse;
+    distanceCat2 = cat2 + mouse;
+  } else {
+    distanceCat1 = cat1 - mouse;
+    distanceCat2 = cat2 - mouse;
+  }
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
