@@ -71,8 +71,8 @@ function fizzBuzz(arrNumbers) {
 }
 
 // Desafio 9
-function encode(message) {
-  let arrMessage = message.split('');
+function encode(decodeMessage) {
+  let arrMessage = decodeMessage.split('');
   for (let index = 0; index < arrMessage.length; index += 1) {
     switch (arrMessage[index].toLowerCase()) {
       case 'a':
@@ -96,8 +96,30 @@ function encode(message) {
   }
   return arrMessage.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(encodeMessage) {
+  let arrMessage = encodeMessage.split('');
+  for (let index = 0; index < arrMessage.length; index += 1) {
+    switch (arrMessage[index]) {
+      case '1':
+        arrMessage[index] = 'a';
+        break;
+      case '2':
+        arrMessage[index] = 'e';
+        break;
+      case '3':
+        arrMessage[index] = 'i';
+        break;
+      case '4':
+        arrMessage[index] = 'o';
+        break;
+      case '5':
+        arrMessage[index] = 'u';
+        break;
+      default:
+        break;
+    }
+  }
+  return arrMessage.join('');
 }
 
 module.exports = {
