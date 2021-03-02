@@ -2,14 +2,27 @@
 function techList(techs, name) {
   let ordenedList = techs.sort();
   let resultList = [];
-  for (let index = 0; index < ordenedList.length; index += 1) {
-    resultList.push(list = {
-      tech: techs[index],
-      name: name,
-    })
+  if (techs.length === 0) {
+    return 'Vazio!'
+  } else {
+    for (let index = 0; index < ordenedList.length; index += 1) {
+      resultList.push(list = {
+        tech: techs[index],
+        name: name,
+      })
+    }
   }
   return resultList;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+
+
+
+
+
+
+
+
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
@@ -20,32 +33,17 @@ function generatePhoneNumber(numbers) {
     for (let index = 0; index < 2; index += 1) {
       phoneNumber = phoneNumber + numbers[index];
     }
-    phoneNumber =phoneNumber + ')';
+    phoneNumber = phoneNumber + ')';
     for (let index = 2; index < 7; index += 1) {
-      phoneNumber = phoneNumber + numbers [index];
+      phoneNumber = phoneNumber + numbers[index];
     }
-    phoneNumber =phoneNumber + '-'; 
+    phoneNumber = phoneNumber + '-';
     for (let index = 7; index < numbers.length; index += 1) {
-      phoneNumber = phoneNumber + numbers [index];
+      phoneNumber = phoneNumber + numbers[index];
     }
   }
   return phoneNumber;
 }
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1 ]));
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
