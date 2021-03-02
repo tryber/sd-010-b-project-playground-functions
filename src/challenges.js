@@ -27,7 +27,7 @@ function splitSentence(string) {
 function concatName(array) {
   let fiirstElement = array.shift();
   let lastElement = array.pop();
-  let stringConcat = "'" + lastElement + ", " + fiirstElement + "'";
+  let stringConcat = lastElement + ", " + fiirstElement;
   return stringConcat;
 }
 
