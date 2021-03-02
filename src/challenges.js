@@ -21,14 +21,18 @@ function splitSentence(toSplit) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(reordArray) {
   // meu código aqui
+  let arrayRet = [reordArray[reordArray.length - 1], reordArray[0]];
+  return arrayRet;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  // meu código aqui
+  return ((wins*3)+(ties*1));
 }
+
 
 // Desafio 6
 function highestCount() {
