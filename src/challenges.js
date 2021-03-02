@@ -20,9 +20,16 @@ function calcArea(base, height) {
 // console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  const separaFrase = frase.split(' ');
+
+  // Usando a função sting split (que aprendi usando o site: https://www.w3schools.com/jsref/jsref_split.asp):
+    return separaFrase;
 }
+
+// O console.log() abaixo serve somente para finalidade de teste.
+// console.log(splitSentence("Eu sou um teste"));
 
 // Desafio 4
 function concatName() {
