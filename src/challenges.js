@@ -27,9 +27,11 @@ function splitSentence(string) {
 console.log(splitSentence("vamo que vamo"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(primeiroComUltimo) {
+  let trazUltimo = primeiroComUltimo.length -1
+  return `${primeiroComUltimo[trazUltimo]}, ${primeiroComUltimo[0]}` 
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']))
 
 // Desafio 5
 function footballPoints() {
