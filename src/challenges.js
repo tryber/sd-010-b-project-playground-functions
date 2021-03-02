@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(a,b) {
-  if (a == true && b == true){
+  if(a === true && b === true){
     return true;
-  }else {
+  } else {
     return false;
   }
 }
@@ -23,8 +23,8 @@ function concatName(array) {
 }
 // Desafio 5
 function footballPoints(wins,ties) {
-let points = wins*3 + ties*1;
-  return (`${points} pontos.`);
+let points = wins * 3 + ties * 1;
+  return (`${points}`);
 }
 // Desafio 6
 function highestCount(array) {
@@ -44,10 +44,10 @@ function highestCount(array) {
 return count
 }
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  let distcat1 = (mouse-cat1);
-  let distcat2 = (mouse-cat2) ;
-  if (distcat1 < distcat2){
+function catAndMouse(mouse, cat1, cat2) {
+  let distcat1 = (mouse - cat1);
+  let distcat2 = (mouse - cat2);
+  if(distcat1 < distcat2){
     return ('cat1')
   }else if ( distcat2 < distcat1){
     return ('cat2')
