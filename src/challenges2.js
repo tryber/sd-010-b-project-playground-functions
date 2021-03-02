@@ -1,13 +1,13 @@
 // Desafio 10
 function techList(array, name) {
   let listOfObjetcts = [];
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     let object = {};
     object.tech = `${array[index]}`;
     object.name = name;
     listOfObjetcts.push(object);
   }
-  console.log(listOfObjetcts);
+  return listOfObjetcts;
 }
 let teste = [1, 2, 3, 4, 5, 6, 7];
 techList(teste, 'Renan');
