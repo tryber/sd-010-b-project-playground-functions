@@ -61,7 +61,7 @@ return phraseOfElements;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
 let pointsWins = (wins * 3);
 let pointsTies = (ties * 1)
 let pointsTotal = (pointsTies + pointsWins)
@@ -70,7 +70,7 @@ return pointsTotal;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
   //variavel que vai armazenar qual maior numero.
   let highestNumber = 0;
