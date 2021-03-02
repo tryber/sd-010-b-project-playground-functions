@@ -108,7 +108,7 @@ function catAndMouse(mouse, cat1, cat2) {
   //armazenara o resultado da situação
   let result = '';
 
-  if ((positionCat1 - positionMouse) > (positionCat2 - positionMouse)) {
+  if ((positionMouse - positionCat1) > (positionMouse - positionCat2)) {
     result = 'cat2';
   } else if ((positionMouse - positionCat1) < (positionMouse - positionCat2)) {
     result = 'cat1';
