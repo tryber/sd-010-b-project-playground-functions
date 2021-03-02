@@ -6,18 +6,18 @@ function compareTrue(b1, b2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  return (base * height / 2);
+function calcArea(base, height) {
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split('');
 }
 
 // Desafio 4
 function concatName(string) {
-    return (string[0] + ", " + string[string.length-1]);
+  return (string[string.length - 1] + ',' + string[0]);
 }
 
 // Desafio 5
