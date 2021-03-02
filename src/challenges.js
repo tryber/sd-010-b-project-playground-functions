@@ -17,14 +17,20 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(myStr) {
-  // seu código aqui
+  // solução criada a partir do documento https://www.w3schools.com/jsref/jsref_split.asp
   let split = myStr.split(' ');
   return split;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(myArray) {
   // seu código aqui
+  let ultimaPosicao = myArray.length - 1;
+  let ultimoItem = myArray[ultimaPosicao];
+  let primeiroItem = myArray[0];
+  let resultado = `${ultimoItem}, ${primeiroItem}`;
+
+  return resultado;
 }
 
 // Desafio 5
