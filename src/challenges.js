@@ -15,6 +15,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
+
+  //Busquei orientação para resolver o item no site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
   let fraseDividida = str.split(" ");
   return fraseDividida;
 }
@@ -30,9 +32,11 @@ function concatName(listaNomes) {
 //console.log(concatName(listaNomes));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontosTotais = ((wins * 3) + (ties * 1))
+  return pontosTotais;
 }
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
