@@ -3,7 +3,7 @@ function compareTrue(check1, check2) {
   let check3 = false;
   if ((check1 === true) && (check2 === true)) {
     check3 = true;
-  } 
+  }
   return check3;
 }
 let check1 = true;
@@ -11,9 +11,12 @@ let check2 = false;
 console.log(compareTrue(check1, check2));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+let base = 51;
+let height = 1;
+console.log(calcArea(base, height));
 
 // Desafio 3
 function splitSentence() {
