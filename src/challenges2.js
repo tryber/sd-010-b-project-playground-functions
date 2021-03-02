@@ -14,10 +14,12 @@ function techList(arrayTech,name) {
   }
 }
 
+console.log(generatePhoneNumber([0, 1, 6]));
+
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // meu código aqui
-  if(verifycaOccurr(arrayNumber)||minZeroMaxNine(arrayNumber)){
+  if(verifycaOccurr(arrayNumber)||verifyNum(arrayNumber)){
     return "não é possível gerar um número de telefone com esses valores";
   } else{
     let numJoin = arrayNumber.join('')
@@ -46,10 +48,10 @@ function verifycaOccurr(toVerify){
   }
 }
 
-function minZeroMaxNine(toVerify){
+function verifyNum(toVerify){
   let existsZero = false; 
   for (let i = 0; i < toVerify.length; i++) {
-    if(toVerify[i] < 0 || toVerify[i] > 9 || toVerify.length > 11){
+    if(toVerify[i] < 0 || toVerify[i] > 9 || toVerify.length > 11 || toVerify.length < 11){
       existsZero = true;
       break;
     }    
@@ -58,8 +60,11 @@ function minZeroMaxNine(toVerify){
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // meu código aqui
+  if(lineA < lineB + lineC){
+    
+  }
 }
 
 // Desafio 13
