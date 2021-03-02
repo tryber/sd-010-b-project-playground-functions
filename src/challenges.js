@@ -22,13 +22,15 @@ function splitSentence(words) {
 function concatName(name) {
   let first = name.shift();
   let last = name.pop();
-  let juncao = last + ', ' + first;
-  return juncao;
+  let junction = last + ', ' + first;
+  return junction;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultWins = wins * 3;
+  let finalResult = resultWins + ties;
+  return finalResult;
 }
 
 // Desafio 6
