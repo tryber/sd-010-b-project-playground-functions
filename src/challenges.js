@@ -1,6 +1,18 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  let subject = 'javaScript';
+  let subject2 = 'unix';
+  let psubject3 = 'cobol';
+  let subject4 = 'php';
+
+  let curriculoTrybe = ''
+
+  if (curriculoTrybe = subject && subject2) {
+    return true
+  } else {
+    return false
+  }
+  
 }
 
 // Desafio 2
