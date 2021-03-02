@@ -21,7 +21,9 @@ function splitSentence(string) {
 function concatName(items) {
   let lastItem = items[items.lenght-1];
   let firstItem = items[0];
-  return = [lastItem + ', ' + firstItem];
+  let lastAndFirstItems = lastItem + ', ' + firstItem;
+
+  return lastAndFirstItems;
 }
 
 // Desafio 5
