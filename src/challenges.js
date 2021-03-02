@@ -1,8 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  teste
+function compareTrue(boolean1, boolean2) {
+  if (boolean1 >= 0 && boolean2 >= 0){
+    return true
+  }else {
+    return false;
 }
+}
+
+console.log(compareTrue("Amor", "Amor"))
+console.log(compareTrue(10, "Amor"))
+console.log(compareTrue(3, 5))
 
 // Desafio 2
 function calcArea() {
