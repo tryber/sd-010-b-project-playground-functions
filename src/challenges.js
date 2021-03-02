@@ -1,8 +1,8 @@
 const { TestScheduler } = require("jest");
 
 // Desafio 1
-function compareTrue() {
-  if (true && true) {
+function compareTrue(valor1, valor2) {
+  if (valor1 == true && valor2 == true) {
     return true;
   } else {
     return false;
