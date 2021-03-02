@@ -49,6 +49,9 @@ function highestCount() {
   }
   return counter;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); 
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1])); 
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -62,8 +65,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(0, 3, 2)); // -> 'cat2
-console.log(catAndMouse(0, 6, 12)); // -> 'cat1'
+console.log(catAndMouse(0, 3, 2)); 
+console.log(catAndMouse(0, 6, 12)); 
 console.log(catAndMouse(0, 5, 5));
 
 // Desafio 8
