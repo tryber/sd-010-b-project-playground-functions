@@ -79,6 +79,7 @@ function fizzBuzz(vetor) {
  return vetorderetorno;
 }
 
+
 // Desafio 9
 function encode() {
   // seu código aqui
