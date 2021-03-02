@@ -2,19 +2,23 @@
 function techList(tecnologias, name) {
   let resultado = [];
   let ordemCrescente = tecnologias.sort();
+  if (tecnologias.length < 1) {
+    resultado = "Vazio!"
+  } else {
   for (let index = 0; index < ordemCrescente.length; index++) {
     let objeto = {
       tech: ordemCrescente[index],
       name: name,
     }
     resultado.push(objeto);
+    }
   }
   return resultado;
 }
 // Auxilio por orientação:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+//console.log(techList([], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
