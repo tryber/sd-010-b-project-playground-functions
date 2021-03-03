@@ -19,7 +19,7 @@ function splitSentence(word) {
 function concatName(array) {
   return array[array.length-1] + " " + array[0]
   
-  }
+ }
 
 //recebi a ajuda dos colegas durante o breakout room para colocar os "[]" para descobrir o primeiro elemento
 
