@@ -119,12 +119,55 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  for (let index in phrase) {  
+    switch (phrase[index]) {
+      case 'a': 
+        phrase = phrase.replace(phrase[index], 1);
+        break;   
+      case 'e':
+        phrase = phrase.replace(phrase[index], 2);
+        break;
+      case 'i':
+        phrase = phrase.replace(phrase[index], 3);
+        break;
+      case 'o':
+        phrase = phrase.replace(phrase[index], 4);
+        break;
+      case 'u':
+        phrase = phrase.replace(phrase[index], 5);
+        break;      
+    }
+  }
+  return phrase;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode("hi, there!"));
+
+function decode(phrase) {
+  for (let index in phrase) {  
+    switch (phrase[index]) {
+      case '1': 
+        phrase = phrase.replace(phrase[index], 'a');
+        break;   
+      case '2':
+        phrase = phrase.replace(phrase[index], 'e');
+        break;
+      case '3':
+        phrase = phrase.replace(phrase[index], 'i');
+        break;
+      case '4':
+        phrase = phrase.replace(phrase[index], 'o');
+        break;
+      case '5':
+        phrase = phrase.replace(phrase[index], 'u');
+        break;      
+    }
+  }
+  return phrase;
 }
+
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
