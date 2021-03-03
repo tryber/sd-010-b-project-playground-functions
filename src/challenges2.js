@@ -72,9 +72,13 @@ function hydrate(frase) {
   for (let key in bebidas) {
     soma += parseInt(bebidas[key]);
   }
-  return `${soma} copos de água`;
+  if (soma !== 1) {
+    return `${soma} copos de água`;
+  } else {
+    return `${soma} copo de água`;
+  }
 }
-console.log(hydrate("1 cerveja"));
+console.log(hydrate("5 cerveja"));
 
 module.exports = {
   generatePhoneNumber,
