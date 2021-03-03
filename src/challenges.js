@@ -57,9 +57,9 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  let Words= [];
+  let Words = [];
   for (let index = 0; index < arrayNumeros.length; index++) {
-    if ((arrayNumeros[index] % 3 === 0) && (arrayNumeros[index] % 5 ===0)) {
+    if ((arrayNumeros[index] % 3 === 0) && (arrayNumeros[index] % 5 === 0)) {
       Words.push("fizzBuzz");
     } else if (arrayNumeros[index] % 3 === 0) {
       Words.push("fizz")
