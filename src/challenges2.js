@@ -42,7 +42,7 @@ function generatePhoneNumber(array) {
         invalido = false;
       }
     }
-    if (invalido != false) {
+    if (invalido !== false) {
       return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
     } else {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -71,7 +71,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let absBC = Math.abs(lineB - lineC);
   let absAC = Math.abs(lineA - lineC);
   let absAB = Math.abs(lineA - lineB);
-  if ((lineA < somaBC) && (lineA < somaBC) && (lineB < somaAC) && (absAC < lineB) && (lineC < somaAB) && (absAB < lineC)) {
+  if ((lineA < somaBC) && (lineB < somaAC) && (lineC < somaAB) && (absBC < lineA) && (absAC < lineB) && (absAB < lineC)) {
     flag = true;
   }
   return flag;
@@ -82,7 +82,6 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(3, 4, 5 ));
 // console.log(triangleCheck(5, 12, 13));
 // console.log(triangleCheck(1, 2, 5 ));
-
 
 // Desafio 13
 function hydrate(umaFrase) {
