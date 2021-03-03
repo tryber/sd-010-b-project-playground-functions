@@ -1,11 +1,17 @@
 // Desafio 1 iniciado no dia 02 de março de 2021 as 14:58 h
 function compareTrue(valorUm, valorDois) {
   // seu código aqui
-  let trueOrFalse = false;
-  if (valorUm === true && valorDois === true) {
-    return true;
+  switch (compareTrue) {
+    case true:
+      return true;
+      break;
+
+    case salse:
+      return false;
+      break;
+
+    default:
   }
-  return trueOrFalse;
 }
 
 // Desafio 2
@@ -27,7 +33,7 @@ function calcArea(base, height) {
 function splitSentence() {
   // seu código aqui
   if (splitSentence.length === 2) {
-    return splitSentence.split('',' ');
+    return splitSentence.split('', ' ');
   }
   if (splitSentence.length === 1) {
     return splitSentence.split('', '');
