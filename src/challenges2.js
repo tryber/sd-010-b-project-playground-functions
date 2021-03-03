@@ -76,6 +76,7 @@ function generatePhoneNumber(array) {
   return 'Array com tamanho incorreto.';
 }
 // teste item 11
+  console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 // array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // console.log(generatePhoneNumber(array0));
 // array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
