@@ -18,40 +18,39 @@ function techList(tecnologias, nome) {
 function testaRepeticoes(phoneNumber) {
   let cont = 0;
   let isValid = true;
-  if (phoneNumber.length === 11) {
-    for (let index = 0; index <= phoneNumber.length; index += 1) {
-      cont = 0;
-      if (phoneNumber[index] === phoneNumber[index - 1] && phoneNumber[index] === phoneNumber[index + 1]) {
-        cont += 2;
-      }
-      if (cont >= 2) {
-        isValid = false;
-        break;
-      }
+  for (let index = 0; index <= phoneNumber.length; index += 1) {
+    cont = 0;
+    if (phoneNumber[index] === phoneNumber[index - 1] && phoneNumber[index] === phoneNumber[index + 1]) {
+      cont += 2;
     }
-  } else {
-    isValid = false;
+    if (cont >= 2) {
+      isValid = false;
+      break;
+    }
   }
   return isValid;
 }
 
 function generatePhoneNumber(phoneNumber) {
   let saida;
-  for (let key in phoneNumber) {
-    if (phoneNumber[key] < 0 || phoneNumber[key] > 9 || testaRepeticoes(phoneNumber) === false) {
-      saida = 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      saida = `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+  if (phoneNumber.length === 11) {
+    for (let key in phoneNumber) {
+      if (phoneNumber[key] < 0 || phoneNumber[key] > 9 || testaRepeticoes(phoneNumber) === false) {
+        saida = 'não é possível gerar um número de telefone com esses valores';
+      } else {
+        saida = `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+      }
     }
+  } else {
+    saida = "Array com tamanho incorreto."
   }
   return saida;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 0, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   istriangle = false;
-
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     istriangle = true;
   } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
