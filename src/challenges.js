@@ -67,7 +67,7 @@ function fizzBuzz(array) {
 
   }
 }
-console.log(fizzBuzz([9, 25]));
+console.log(fizzBuzz());
 
 
 // Desafio 9
