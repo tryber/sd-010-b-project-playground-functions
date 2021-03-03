@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(tech) {
-  let nome = "Lucas"
+  let nome = "Lucas";
   let list = tech.sort();
   let saida = [];
 
@@ -19,12 +19,12 @@ function techList(tech) {
 function generatePhoneNumber(phone) {
   let resposta = ""
 
-if (phone.length > 11){
+if (phone.length > 11 || phone.length < 11){
     resposta = "Array com tamanho incorreto."
 }
 else {
     resposta = `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`
-}
+
     for ( i in phone) {
         let count = 0;
           if(phone[i] > 9 || phone[i] < 0) {
@@ -40,9 +40,8 @@ else {
          }
       }
     }
-  
-  
-return resposta
+}
+return resposta;
 }
 
 // Desafio 12
