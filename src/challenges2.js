@@ -33,12 +33,12 @@ function numerosInvalidos(numeros) {
 
 function generatePhoneNumber(phoneNumber) {
   // seu código aqui
+  if (phoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto';
+  }
   let ddd = []; let part1 = []; let part2 = [];
   let numerosIncorretos = numerosInvalidos(phoneNumber);
   if (numerosIncorretos) return numerosIncorretos;
-  if (phoneNumber.length > 11) {
-    return 'Array com tamanho incorreto';
-  }
   for (let index = 0; index < 2; index += 1) {
     ddd.push(phoneNumber[index]);
   }
@@ -58,6 +58,10 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 4, 6, 7, 8, 9, 0, 4]));
 console.log(generatePhoneNumber([2, 1, 5, 8, 3, 7, 6, 8, 9, 5, 9]));
 console.log(generatePhoneNumber([2, 1, 2, 8, 3, 2, 6, 8, 9, 5, 2]));
 console.log(generatePhoneNumber([21, 1, 9, 8, 3, 7, 6, 8, 9, 5, 2]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 2]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, -8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
+console.log(generatePhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
