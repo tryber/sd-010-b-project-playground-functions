@@ -101,15 +101,15 @@ function footballPoints(wins, ties) {
   Essa função recebe um array de números e retorna o maior deles.
  */
 function highestNumber(array) {
-  let highest = array[0];
+  let highest = array[0]; // considera o primeiro item do array como o maior
 
   for (let index = 1; index < array.length; index += 1) {
-    if (array[index] > highest) {
-      highest = array[index];
+    if (array[index] > highest) { // se outro item do array é maior que o armazenado em highest
+      highest = array[index]; // atualiza highest com este item encontrado
     }
   }
 
-  return highest;
+  return highest; // retorna o maior número encontrado no array
 }
 
 /*
@@ -125,16 +125,16 @@ function highestNumber(array) {
   https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
  */
 function highestCount(array) {
-  let highest = highestNumber(array);
-  let repetitionCount = 0;
+  let highest = highestNumber(array); // armazena o maior número do array em highest
+  let repetitionCount = 0; // inicializa o contador de repetições para este maior número
 
-  for (const number of array) {
-    if (number === highest) {
-      repetitionCount += 1;
+  for (const number of array) { // para cada número armazenado no array
+    if (number === highest) { // se o número for o maior
+      repetitionCount += 1; // contabiliza a repetição em repetitionCount
     }
   }
 
-  return repetitionCount;
+  return repetitionCount; // retorna a quantidade de vezes que o maior número foi encontrado
 }
 
 // let array = [9, 1, 2, 3, 9, 5, 7];
