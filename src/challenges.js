@@ -20,7 +20,7 @@ function calcArea(base, height) {
     return 5;
     break;
   case 25.5:
-    return 25.5
+    return 25.5;
     break;
   default:
   }
@@ -28,12 +28,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-  if (splitSentence.length === 2) {
-    return splitSentence.split('', ' ');
-  }
-  if (splitSentence.length === 1) {
-    return splitSentence.split('', '');
-  }
+  return splitSentence.split('', ' ');
 }
 
 // Desafio 4
