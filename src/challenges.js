@@ -13,10 +13,13 @@ function calcArea(base,heigth) {
   return (base*heigth)/2;
 }
 console.log(calcArea(51,1));
+
 // Desafio 3
-function splitSentence() {
+function splitSentence(arryNames) {
   // seu código aqui
+return arryNames.split('/');
 }
+console.log(splitSentence("go/trybe"));
 
 // Desafio 4
 function concatName() {
