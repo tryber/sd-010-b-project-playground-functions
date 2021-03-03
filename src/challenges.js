@@ -17,8 +17,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arra) {
-  return arra[arra.length - 1] + ', ' + arra[0];
+function concatName(arr) {
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
@@ -64,43 +64,44 @@ function fizzBuzz(fiz) {
   });
 }
 // Desafio 9
-function encode(arrayString) {
-  let code = {
+function encode(string) {
+  let encodeMap = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
     u: 5,
   };
-  let encoding = '';
-  for (let i of arrayString) {
-    if (code[i]) {
-      encoding += code[i];
+  let encodedString = '';
+  for (let char of string) {
+    if (encodeMap[char]) {
+      encodedString += encodeMap[char];
     } else {
-      encoding += i;
+      encodedString += char;
     }
   }
-  return encoding;
+  return encodedString;
 }
-
-function decode(arrayString) {
-  let code = {
+console.log(encode('hi there'))
+function decode(string) {
+  let encodeMap = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
   };
-  let decoding = '';
-  for (let index of arrayString) {
-    if (code[index]) {
-      decoding += code[index];
+  let decodedString = '';
+  for (let char of string) {
+    if (encodeMap[char]) {
+      decodedString += encodeMap[char];
     } else {
-      decoding += index;
+      decodedString += char;
     }
   }
-  return decoding;
+  return decodedString;
 }
+console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
