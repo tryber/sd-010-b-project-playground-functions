@@ -14,13 +14,15 @@ function techList(techs, name) {
   }
   return resultList;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phoneNumber = '(';
   let repetitionCounter = 0;
   let numberCounter = 0;
+  if (numbers.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -28,7 +30,7 @@ function generatePhoneNumber(numbers) {
     let numberCounter = 0;
     for (let index2 = 0; index2 < numbers.length; index2 += 1) {
       if (numbers[index2] === numbers[index]) {
-        numberCounter++;
+        numberCounter += 1;
       }
     }
     if (numberCounter > repetitionCounter) {
@@ -38,51 +40,40 @@ function generatePhoneNumber(numbers) {
   if (repetitionCounter >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  if (numbers.length !== 11) {
-    return "Array com tamanho incorreto.";
-  } else {
-    for (let index = 0; index < 2; index += 1) {
-      phoneNumber = phoneNumber + numbers[index];
-    }
-    phoneNumber = phoneNumber + ')';
-    for (let index = 2; index < 7; index += 1) {
-      phoneNumber = phoneNumber + numbers[index];
-    }
-    phoneNumber = phoneNumber + '-';
-    for (let index = 7; index < numbers.length; index += 1) {
-      phoneNumber = phoneNumber + numbers[index];
-    }
+  for (let index = 0; index < 2; index += 1) {
+    phoneNumber = phoneNumber + numbers[index];
+  }
+  phoneNumber = phoneNumber + ')';
+  for (let index = 2; index < 7; index += 1) {
+    phoneNumber = phoneNumber + numbers[index];
+  }
+  phoneNumber = phoneNumber + '-';
+  for (let index = 7; index < numbers.length; index += 1) {
+    phoneNumber = phoneNumber + numbers[index];
   }
   return phoneNumber;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if((lineA < lineB + lineC) && (lineA > Math.abs(lineB-lineC))) {
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
     return true;
   } else {
-    return false; 
+    return false;
   }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinking) {
+
+
+
+
+
+
+
 }
 
 module.exports = {
