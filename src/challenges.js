@@ -15,7 +15,7 @@ function calcArea(base, height) {
   return area; 
 }
 
-// Desafio 3 ==>>>>> Nao terminei essa ainda!!! Voltar nela!!!<<<<<<==
+// Desafio 3
 function splitSentence(string) {
   let arrayDeStrings = [];
   arrayDeStrings = string.split(" ");
@@ -147,6 +147,7 @@ function decode(stringWithNumbers) {
   }
   return result;
 }
+console.log(decode('H4w 1r2 y45 t4d1y?'));
 
 module.exports = {
   calcArea,
