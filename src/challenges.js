@@ -3,14 +3,12 @@ function compareTrue(a, b) {
   if (a === true && b === true) return true;
   return false;
 }
-
 console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
 }
-
 console.log(calcArea(51, 1));
 
 // Desafio 3
@@ -18,7 +16,6 @@ function splitSentence(word) {
   let result = word.split(' ');
   return result;
 }
-
 console.log(splitSentence('vamo que vamo!'));
 
 // Desafio 4
@@ -26,14 +23,12 @@ function concatName(name) {
   name = ['foguete', 'não', 'tem', 'ré'];
   return name[name.length - 1] + name[0];
 }
-
 console.log(concatName());
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-
 console.log(footballPoints(1, 2));
 
 // Desafio 6
@@ -47,7 +42,6 @@ function highestCount(numbers) {
   }
   return counter;
 }
-
 console.log(highestCount());
 
 // Desafio 7
@@ -57,15 +51,14 @@ function catAndMouse(cat1, cat2, mouse) {
   if (distance2 < distance1) return 'cat2';
   if (distance1 === distance2) return 'The cat crashs and the mouse runs away';
 }
-
 console.log(catAndMouse(4, 4, 2));
 
 // Desafio 8
-let result = [];
 function fizzBuzz(numbers) {
+  let result = [];
   for (let i = 0; i < numbers.length; i += 1) {
-    if ((numbers[i] % 3 === 0) && (numbers[i] % 5 === 0)) result.push('fizzBuzz');
-    else if (numbers[i] % 3 === 0) result.push('fizz'); 
+    if (numbers[i] % 15 === 0) result.push('fizzBuzz');
+    else if (numbers[i] % 3 === 0) result.push('fizz');
     else if (numbers[i] % 5 === 0) result.push('buzz');
     else result.push('bug!');
   } return result;
