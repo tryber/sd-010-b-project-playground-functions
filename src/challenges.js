@@ -55,17 +55,18 @@ function fizzBuzz(divisivel) {
   for (let porta = 0; porta < divisivel.length; porta += 1) {
     if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 === 0) {
       fizzBuster.push('fizzBuzz');
-    } if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 !== 0) {
+    } else if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 !== 0) {
       fizzBuster.push('fizz');
-    } if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 === 0) {
+    } else if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 === 0) {
       fizzBuster.push('buzz');
-    } if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 !== 0) {
+    } else {// } if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 !== 0) {
       fizzBuster.push('bug!');
     }
   }
-  return fizzBuster;
+    return fizzBuster;
 }
-
+  
+console.log(fizzBuzz([15,2,3,10]))
 // Desafio 9
 function encode(codigo) {
   let vogais = {
