@@ -25,14 +25,14 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName(string) {
+function concatName(stringuinha) {
   // seu código aqui
 
-  let primeiro = string[0];
-  let ultimo = string[string.length - 1];
+  let primeiro = stringuinha[0];
+  let ultimo = stringuinha[(stringuinha.length) - 1];
 
   
-  return ultimo + "," +  primeiro;
+  return ultimo + primeiro;
 }
 
 
@@ -51,15 +51,16 @@ function highestCount(array) {
     // como dito o apply passa os valores do array para função math.max e assim ela analisa o maior.
     
     let maior = Math.max.apply(null,array);
-    //preciso inicializar a contagem porém quando sair do for ele será 0
+    //inicializo o contador em 0
     let count = 0;
     let countatt;
     for(let i = 0;i < array.length; i+= 1){
           if(array[i] === maior){
             count+=1;
           }
-        countatt = count;
-        
+          //armazeno a contagem infelizmente não verifiquei depois de acertar se raciocio esta certo mas acho que count sera
+          //atualizado e essa linha abaixo e inutil
+        countatt = count;        
     }          
          
   return countatt;
@@ -91,8 +92,6 @@ function fizzBuzz() {
   
   
 }
-
-
 
 // Desafio 9
 function encode() {
