@@ -96,9 +96,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return ratoMaisProximo;
 }
-console.log(catAndMouse(2, 5, 4))
-console.log(catAndMouse(2, 8, 14))
-console.log(catAndMouse(2, 2, 2))
+console.log(catAndMouse(0, 3, 2))
+console.log(catAndMouse(0, 6, 12))
+console.log(catAndMouse(0, 0, 0))
 
 // Desafio 8
 
