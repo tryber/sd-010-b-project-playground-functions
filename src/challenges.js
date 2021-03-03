@@ -87,12 +87,8 @@ return repeticao
 function catAndMouse(mouse, cat1, cat2) {
 let distancia1 = cat1 - mouse
 let distancia2 = cat2 - mouse
-if (distancia1<0){
-  distancia1 *-1
-}
-if (distancia2 <0){
-  distancia2 *-1
-}
+Math.abs(distancia1)
+Math.abs(distancia2)
 let result;
   if (distancia1 > distancia2){
     result="cat1";
