@@ -59,19 +59,24 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let index = 0; index < array.length; index =+1){
-    if (array[index] % 3 == 0) {
-      return "fizz"
-    } else if (array[index] % 5 == 0) {
-      return "buzz"
-    } else if (array[index] % 5 == 0 && array[index] % 3 == 0) {
-      return "fizzBuzz"
-    } else {
-      return "bug!"
-    }
+  let somaDeFizzBuzz = [];
+  for (let index = 0; index < array.length; index+=1){
+    
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      somaDeFizzBuzz.push("fizzBuzz");
+    }    
+    else if (array[index] % 3 == 0) {
+      somaDeFizzBuzz.push("fizz")
+    }  
+    else if (array[index] % 5 == 0) {
+      somaDeFizzBuzz.push("buzz")
+    } 
+    else {somaDeFizzBuzz.push("bug!")}
   }
+  return somaDeFizzBuzz
+ 
 }
-
+//resolução após plantão de dúvidas com Fernando onde outro colega também estava com a mesma dúvida
 // Desafio 9
 function encode( ) {
   

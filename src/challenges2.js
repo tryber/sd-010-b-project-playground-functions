@@ -1,7 +1,13 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(parameter1, parameter2) {
+  let newtech = parameter1 + parameter2
+
+  newtech.tech = parameter1[index]
+  newtech.name = parameter2
+
+  return parameter1[index]
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -21,17 +27,15 @@ function triangleCheck(lineA, lineB, lineC) {
 
 }
 
-console.log(triangleCheck(10, 14, 8))
-
 // Desafio 13
-function hydrate("string") {
+function hydrate(string) {
   let number = string.replace(/\D/g,'');
   let sum =0;
-  for (index =0; index < number.lenght; index =+1){
+  for (let index =0; index < number.lenght; index++){
     sum =+
-    return sum + "copo(s) de água"
   }
-}
+  return sum + "copo(s) de água"
+  }
 //https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
 
 module.exports = {
