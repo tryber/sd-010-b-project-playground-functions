@@ -64,15 +64,18 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = cat1 - mouse;
   let distanceCat2 = cat2 - mouse;
+  let resultCat1 = Math.abs(distanceCat1);
+  let resultCat2 = Math.abs(distanceCat2);
 
-  if (distanceCat1 < distanceCat2) {
+  if (resultCat1 < resultCat2) {
     return 'cat1';
   }
-  if (distanceCat1 > distanceCat2) {
+  if (resultCat1 > resultCat2) {
     return 'cat2';
   }
-  return 'os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';  
 }
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz() {
