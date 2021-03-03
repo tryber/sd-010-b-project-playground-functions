@@ -42,7 +42,7 @@ function concatName(string) {
   // seu código aqui
   let primeiroString = string[0];
   let ultimoString = string.length - 1;
-  return `${ultimoString}, ${primeiroString}`;
+  return `${ultimoString}, ${primeiroString}`; // pc travou
 }
 
 // Desafio 5
