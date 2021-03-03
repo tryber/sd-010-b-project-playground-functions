@@ -4,16 +4,22 @@ function techList(ListaTech, name) {
   let tech = [];
   // console.log(ListaTech);
   // console.log(tamanhoListaTech);
-  for (let index = 0; index <= ListaTech.length - 1; index += 1) {
-    tech[index] = {
-      tech: ListaTech[index], 
-      name: name
+
+  if (ListaTech.length == 0) {
+    return 'Vazio!';
+
+  } else {
+    for (let index = 0; index <= ListaTech.length - 1; index += 1) {
+      tech[index] = {
+        tech: ListaTech[index],
+        name: name
+      }
     };
   }
   return tech;
 }
-let ListaTech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name = 'Mariana';
+let ListaTech = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let name = 'Lucas';
 console.log(techList(ListaTech, name));
 
 // Desafio 11
