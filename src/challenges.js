@@ -24,8 +24,8 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let finalString = (arrayString[arrayString.length - 1] + ', ' + arrayString[0]);
-  return finalString;
+  let final = (arrayString[arrayString.length - 1] + ', ' + arrayString[0]);
+  return final;
 }
 
 // Desafio 5
@@ -63,9 +63,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   // Retorne a string 'cat1' caso a função catAndMouse receba o parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
 
-  let situation
-cat1 = mouse-cat1;
-cat2 = mouse-cat2;
+  let situation;
+  cat1 = mouse - cat1;
+  cat2 = mouse - cat2;
   if (cat1 !== cat2) {
     if (cat1 > cat2) {
       situation = 'cat2';
@@ -73,14 +73,28 @@ cat2 = mouse-cat2;
       situation = 'cat1';
     }
   } else {
-    situation = 'os gatos trombam e o rato foge.'
+    situation = 'os gatos trombam e o rato foge.';
   }
   return situation;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let alone
+  let result = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    alone = numbers[index];
+    if (alone % 3 == 0 && alone % 5 != 0) {
+      result.push('fizz')
+    } else if (alone % 5 == 0 && alone % 3 != 0) {
+      result.push('buzz')
+    } else if (alone % 3 == 0 && alone % 5 == 0) {
+      result.push('fizzBuzz')
+    } else {
+      result.push('bug!')
+    }
+  }
+  return result;
 }
 
 // Desafio 9
