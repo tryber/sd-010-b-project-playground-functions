@@ -53,16 +53,13 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  Math.abs(mouse);
-  Math.abs(cat1);
-  Math.abs(cat2);
-  if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
-  }
-  if (cat1 > cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  }else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  }
-  return 'cat1';
+  }else{
+    return 'os gatos trombam e o rato foge';
+  } 
 }
 
 // console.log(catAndMouse(0, 6, 12));
