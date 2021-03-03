@@ -19,45 +19,31 @@ function techList(arr, name) {
 // Desafio 11
 function generatePhoneNumber(arr) {
   let numbers = {};
-
+  const conditionals = (item) => {
+    let num = numbers[item] ? (numbers[item] += 1) : (numbers[item] = 1);
+    return num;
+  };
   if (arr.length === 11) {
     for (let item of arr) {
-      numbers[item] = 0;
-    }
-
-    for (let occ of arr) {
-      numbers[occ] += 1;
-      if (occ < 0 || occ > 9 || numbers[occ] >= 3) {
+      conditionals(item);
+      if (numbers[item] >= 3 || item < 0 || item > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
-
-    let telefone = '(';
-    for (let i = 0; i < arr.length; i += 1) {
-      if (telefone.length === 3) {
-        telefone += ') ' + arr[i];
-      } else if (telefone.length === 10) {
-        telefone += '-' + arr[i];
-      } else {
-        telefone += arr[i];
-      }
-    }
-    return telefone;
+    let telefone = arr.toString().replace(/\D/g, '');
+    let match = telefone.match(/^(\d{2})(\d{5})(\d{4})$/);
+    return `(${match[1]}) ${match[2]}-${match[3]}`;
   }
-
   return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB > lineC && lineC > Math.abs(lineA - lineB)) {
-    return true;
-  } else if (lineC + lineA > lineB && lineB > Math.abs(lineC - lineA)) {
-    return true;
-  } else if (lineB + lineC > lineA && lineA > Math.abs(lineC - lineB)) {
-    return true;
-  }
-  return false;
+  let aB = lineA + lineB > lineC && lineC > Math.abs(lineA - lineB);
+  let bA = lineC + lineA > lineB && lineB > Math.abs(lineC - lineA);
+  let cB = lineB + lineC > lineA && lineA > Math.abs(lineC - lineB);
+
+  return (aB, bA, cB);
 }
 
 // Desafio 13

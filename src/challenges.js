@@ -15,9 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arr) {
-  for (let i = 0; i < arr.length; i += 1) {
-    return `${arr[arr.length - 1]}, ${arr[0]}`;
-  }
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
@@ -47,7 +45,8 @@ function highestCount(arr) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return 'os gatos trombam e o rato foge';
-  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+  }
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
   }
   return 'cat2';
@@ -55,19 +54,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let result = [];
-
-  for (let i of arr) {
+  let result = arr.map((i) => {
     if (i % 3 === 0 && i % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (i % 5 === 0) {
-      result.push('buzz');
-    } else if (i % 3 === 0) {
-      result.push('fizz');
-    } else {
-      result.push('bug!');
+      return 'fizzBuzz';
     }
-  }
+    if (i % 5 === 0) {
+      return 'buzz';
+    }
+    if (i % 3 === 0) {
+      return 'fizz';
+    }
+    return 'bug';
+  });
   return result;
 }
 
