@@ -49,12 +49,22 @@ function highestCount(arrayNumbers) {
   }
   return count;
 }
-console.log(highestCount([9, 1, 9, 2, 10, 12, 3, 9, 5, 7, 9, 9, 12]))
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  
+  if (distanceCat1 < distanceCat2) 
+  return 'cat1';
+  if (distanceCat2 < distanceCat1)
+  return 'cat2';
+  if (distanceCat1 === distanceCat2)
+  return 'os gatos trombam e o rato foge';
 }
+
+console.log(catAndMouse(15, 9, 9));
 
 // Desafio 8
 function fizzBuzz() {
