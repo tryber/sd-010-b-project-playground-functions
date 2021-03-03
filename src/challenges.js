@@ -2,17 +2,15 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
- } 
+  } 
   return false;
- }
-console.log(compareTrue(true, true));
+  } console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
   // seu código aqui
- } 
-console.log(calcArea(20, 10));
+  } console.log(calcArea(20, 10));
 
 
 // Desafio 3
@@ -116,12 +114,48 @@ return resultado
 console.log(fizzBuzz([7, 9]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(palavra) {
+  let resultado = "";
+  for(index = 0; index <= palavra.length-1; index++){
+    
+    if(palavra[index] === "a"){
+      resultado += 1; 
+    } else if(palavra[index] === "e"){
+      resultado += 2;
+    } else if(palavra[index] === "i"){
+      resultado += 3; 
+    } else if(palavra[index] === "o"){
+      resultado += 4;
+    } else if(palavra[index] === "u"){
+      resultado += 5;
+    } else{
+      resultado += palavra[index];
+    }
+  }
+  return resultado;
+} console.log(encode("paralelepipedo"))
+
+function decode(palavra) {
+  let resultado = "";
+  for(index = 0; index <= palavra.length-1; index++){
+    
+    if(palavra[index] == 1){
+      resultado += "a"; 
+    } else if(palavra[index] == 2){
+      resultado += "e";
+    } else if(palavra[index] == 3){
+      resultado += "i"; 
+    } else if(palavra[index] == 4){
+      resultado += "o";
+    } else if(palavra[index] == 5){
+      resultado += "u";
+    } else{
+      resultado += palavra[index];
+    }
+  }
+  return resultado;
+} console.log(decode("p1r1l2l2p3p2d4"))
+
 
 module.exports = {
   calcArea,
