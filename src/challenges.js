@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let index = undefined;
+  let require = undefined;
   if (a && b) {
-    index = true
+    require = true;
   } else {
-    index = false
+    require = false;
   }
 }
 
