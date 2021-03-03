@@ -3,9 +3,9 @@ function compareTrue(valorUm, valorDois) {
   // seu código aqui
   let trueOrFalse = false;
   if (valorUm && valorDois === true) {
-    console.log(compareTrue);
+    return compareTrue;
   } else if (valorUm && valorDois !== true) {
-    console.log(trueOrFalse);
+    return trueOrFalse;
   }
 }
 
@@ -29,10 +29,10 @@ function calcArea(base, height) {
 function splitSentence() {
   // seu código aqui
   if (splitSentence.length === 2) {
-    return splitSentence.split('' + ' ');
+    return splitSentence.split(''+'');
   }
   if (splitSentence.length === 1) {
-   return splitSentence.split('' + ' ');
+   return splitSentence.split(''+'');
   }
 }
 
