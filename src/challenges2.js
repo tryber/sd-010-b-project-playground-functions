@@ -4,13 +4,12 @@ function techList(techs, name) {
   let resultList = [];
   if (techs.length === 0) {
     return 'Vazio!';
-  } else {
-    for (let index = 0; index < ordenedList.length; index += 1) {
-      resultList.push(list = {
-        tech: techs[index],
-        name: name,
-      });
-    }
+  }
+  for (let index = 0; index < ordenedList.length; index += 1) {
+    resultList.push(list = {
+      tech: techs[index],
+      name: name,
+    });
   }
   return resultList;
 }
