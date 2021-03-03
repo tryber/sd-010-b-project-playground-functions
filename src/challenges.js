@@ -44,7 +44,7 @@ function concatName(string) {
   for (let index = string.length - 1; index >= 0; index -= 1) {
     retorno += string[index];
   }
-  return retorno;
+  return retorno.split(' ', 3);
 }
 
 // Desafio 5
