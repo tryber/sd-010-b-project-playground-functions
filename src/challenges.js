@@ -25,7 +25,7 @@ function concatName(arrayParameter) {
   // seu código aqui
   let searchLastName = arrayParameter[arrayParameter.length - 1];
   let searchFirstName = arrayParameter[0];
-  let resultConcat = searchLastName + ', ' + searchFirstName;
+  let resultConcat = searchLastName + ", " + searchFirstName;
   return resultConcat;
 }
 
@@ -41,16 +41,16 @@ function highestCount(arrayNumbers) {
   // seu código aqui
   let highestNumber = arrayNumbers[0];
   let howManyTimes = 0;
-  for (let index = 1; index < arrayNumbers.length; index++) {
+  for (let index = 1; index < arrayNumbers.length; index +=1) {
     if (arrayNumbers[index] > highestNumber) {
       highestNumber = arrayNumbers[index];
-    } 
-  }
-  for (let index2 = 0; index2 < arrayNumbers.length; index2++) {
-    if (arrayNumbers[index2] == highestNumber) {
-      howManyTimes++;
     }
-  } 
+  }
+  for (let index2 = 0; index2 < arrayNumbers.length; index2 +=1) {
+    if (arrayNumbers[index2] === highestNumber) {
+      howManyTimes +=1;
+    }
+  }
   return howManyTimes;
 }
 
