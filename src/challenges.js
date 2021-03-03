@@ -41,17 +41,15 @@ function highestCount(arrayNumbers) {
 
   for (let index = 0; index < arrayNumbers.length; index++) {
     if (arrayNumbers[index] > maior) {
-      maior = arrayNumbers[index]
-      contador = 1
-      
-    } else if (arrayNumbers[index] == maior){
-      contador++;
+      maior = arrayNumbers[index];
+      contador = 1;
+    } else if (arrayNumbers[index] === maior) {
+      contador = contador + 1;
     }
   }
   return contador;
 }
 
-console.log(highestCount());
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
