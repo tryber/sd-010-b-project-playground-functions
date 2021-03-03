@@ -20,9 +20,15 @@ return (base*height)/2;
 
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(stringuinha) {
   // seu código aqui
+  let separateOfStrings = stringuinha.split(" ");
+  return separateOfStrings;
 }
+
+let array = "eu to de sacanagem";
+bilugastral = splitSentence(array);
+console.log(bilugastral);
 
 // Desafio 4
 function concatName(stringuinha) {
@@ -110,10 +116,6 @@ function fizzBuzz(arrayOfNumbers) {
   
   return arrayOfStrings;
 }
-
-let array = [5,3,15,9];
-let retorno = fizzBuzz(array);
-console.log(retorno);
 
 // Desafio 9
 function encode() {
