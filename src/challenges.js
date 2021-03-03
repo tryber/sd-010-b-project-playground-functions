@@ -70,7 +70,7 @@ function fizzBuzz(array) {
     }
     return (fizzBuzz)
   }
-
+}
 
 
 

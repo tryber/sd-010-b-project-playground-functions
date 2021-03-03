@@ -2,11 +2,11 @@
 function techList(array) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    let bloco ={
+    let bloco = {
       tech: array[index],
-      nome: "Jefferson"
+      nome: 'Jefferson'
   }
-  newArray.push(bloco);
+    newArray.push(bloco);
 }
   return (newArray);
 
