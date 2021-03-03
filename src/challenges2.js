@@ -72,8 +72,6 @@ function hydrate(pedido) {
   if (soma > 1){
   return (`${soma} copos de água`);
   } return (`${soma} copo de água`)
-}
-console.log(hydrate("6 copo de água"))
 
 module.exports = {
   generatePhoneNumber,
