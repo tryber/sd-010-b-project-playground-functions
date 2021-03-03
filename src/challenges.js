@@ -16,12 +16,17 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-  console.log(calcArea(51,1));
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+//  console.log(calcArea(51,1));
 
+
+  // Desafio 3
+function splitSentence(phrase) {
+  // seu código aqui
+    let phrases = phrase;
+    return phrases.split(" ");
+  }  
+
+console.log(splitSentence("he he he kkk kkk kkk"));
 // Desafio 4
 function concatName() {
   // seu código aqui
