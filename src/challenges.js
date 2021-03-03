@@ -22,6 +22,8 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
+// consultado o site para essa resolução:
+// https://www.devmedia.com.br/metodos-split-e-indexof-mais-metodos-da-classe-string/23458
 let splitor = ' ';
 let arrayString = [];
 function splitSentence(frase) {
@@ -85,6 +87,8 @@ console.log(highestCount([0, 0, 0]));
 console.log(highestCount([1, 2, 2, 2, 2, 2, 2, 2, 1]));
 
 // Desafio 7
+// consultado o site para essa resolução:
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanciaGato1 = Math.abs(cat1 - mouse);
@@ -126,6 +130,8 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
+// consultado o site para essa parte e a seguinte:
+// https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176#:~:text=O%20m%C3%A9todo%20replace()%20percorre,feita%2C%20%C3%A9%20devolvida%20pelo%20m%C3%A9todo.
 function encode(arrayEncode) {
   // seu código aqui
   let fraseA = arrayEncode;
@@ -153,6 +159,7 @@ function encode(arrayEncode) {
 // console log
 console.log(encode('urso chuva de gatinho malhado com olho verde e azul'));
 
+// 
 function decode(arrayDecode) {
   // seu código aqui
   let num1 = arrayDecode;
@@ -178,7 +185,7 @@ function decode(arrayDecode) {
   return decoded;
 }
 // console log
-console.log(decode('5rs4 ch5v1 d2 g1t3nh4 m1lh1d4 c4m 4lh4 v2rd2 2 1z5l'));
+console.log(decode('5rs4 ch5v1 d2 g1t3nh4 m1lh1d4 c4m 4lh4 v2rd2 2 1z5l 12345 1234512345'));
 
 module.exports = {
   calcArea,
