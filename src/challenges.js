@@ -2,7 +2,7 @@
 function compareTrue(valorUm, valorDois) {
   // seu código aqui
   let trueOrFalse = valorUm === valorDois;
-  switch (compareTrue) {
+  switch (trueOrFalse) {
   case true:
     return true;
     break;
