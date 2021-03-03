@@ -105,25 +105,34 @@ function generatePhoneNumber(array) {
 // console.log(generatePhoneNumber(array5));
 
 // // Desafio 12
-// function triangleCheck(lineA, lineB, lineC) {
-//   let flag = false;
-//   let somaBC = lineB + lineC;
-//   let somaAC = lineA + lineC;
-//   let somaAB = lineA + lineB;
-//   let absBC = Math.abs(lineB - lineC);
-//   let absAC = Math.abs(lineA - lineC);
-//   let absAB = Math.abs(lineA - lineB);
-//   if ((lineA < somaBC) && (lineB < somaAC) && (lineC < somaAB) && (absBC < lineA) && (absAC < lineB) && (absAB < lineC)) {
-//     flag = true;
-//   }
-//   return flag;
-// }
+function verifySum(lineA, lineB, lineC) {
+  let somaBC = lineB + lineC;
+  let somaAC = lineA + lineC;
+  let somaAB = lineA + lineB;
+  if ((lineA < somaBC) && (lineB < somaAC) && (lineC < somaAB)) {
+    return true;
+  }
+}
+function verifyAbs(lineA, lineB, lineC) {
+  let absBC = Math.abs(lineB - lineC);
+  let absAC = Math.abs(lineA - lineC);
+  let absAB = Math.abs(lineA - lineB);
+  if ((lineA > absBC) && (lineB > absAC) && (lineC > absAB)) {
+    return true;
+  }
+}
+function triangleCheck(lineA, lineB, lineC) {
+  if (verifySum(lineA, lineB, lineC) && verifyAbs(lineA, lineB, lineC)) {
+    return true;
+  }
+  return false;
+}
 
 // // teste itam 12
-// // console.log(triangleCheck(10, 14, 8));
-// // console.log(triangleCheck(3, 4, 5 ));
-// // console.log(triangleCheck(5, 12, 13));
-// // console.log(triangleCheck(1, 2, 5 ));
+// console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(3, 4, 5));
+// console.log(triangleCheck(5, 12, 13));
+// console.log(triangleCheck(1, 2, 5));
 
 // // Desafio 13
 // function hydrate(umaFrase) {
@@ -151,5 +160,5 @@ module.exports = {
   generatePhoneNumber,
   techList,
   // hydrate,
-  // triangleCheck,
+  triangleCheck,
 };
