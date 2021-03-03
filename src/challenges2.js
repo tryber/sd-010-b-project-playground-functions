@@ -62,8 +62,15 @@ return resposta
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let numbers = phrase.replace(/[^0-9]/g,'');
+
+let array = numbers.split("");
+let sum = 0;
+for (i in array) {
+  sum += parseInt(array[i]);    
+}
+return (sum === 1 ? sum+" copo de água" : sum +" copos de água")
 }
 
 module.exports = {
