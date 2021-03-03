@@ -4,16 +4,15 @@ function techList(skills, name) {
   skills.sort();
   if (skills.length <= 0) {
     return 'Vazio!';
-  }
-  for (let index in skills){
+  } for (let index in skills){
     jobs.push( {
       tech: skills[index],
       name: name
-    });
+    } );
   }
   return jobs;
 }
-console.log(techList(['react'], 'Arlen'));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui

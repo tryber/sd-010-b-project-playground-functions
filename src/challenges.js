@@ -18,7 +18,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arra) {
-  return string = arra[arra.length - 1] + ', ' + arra[0];
+  return arra[arra.length - 1] + ', ' + arra[0];
 }
 
 // Desafio 5
@@ -81,17 +81,17 @@ function encode(arrayString) {
     } else {
       encoding += i;
     }
-  } 
-  return encoding;  
+  }
+  return encoding;
 }
 
 function decode(arrayString) {
   let code = {
-    1: a,
-    2: e,
-    3: i,
-    4: o,
-    5: u,
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
   let decoding = '';
   for (let index of arrayString) {
@@ -100,7 +100,7 @@ function decode(arrayString) {
     } else {
       decoding += index;
     }
-  } 
+  }
   return decoding;
 }
 
