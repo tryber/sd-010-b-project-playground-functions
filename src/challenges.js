@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let index = '';
+  let index = undefined;
   if (a && b) {
     index = true
   } else {
