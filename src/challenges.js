@@ -6,7 +6,7 @@ function compareTrue(valor1, valor2) {
     return true;
 
   } else if (valor1 == false && valor2 == false) {
-    
+
     return false;
   } else {
 
@@ -19,7 +19,7 @@ function compareTrue(valor1, valor2) {
 // Desafio 2
 function calcArea(base, heigth) {
   // seu código aqui
-  areaTriangulo = (base * heigth)/2;
+  areaTriangulo = (base * heigth) / 2;
 
   return areaTriangulo;
 
@@ -39,7 +39,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(fraseArray) {
   // seu código aqui
-  let novoFormato = fraseArray[fraseArray.length-1] + ", " + fraseArray[0];
+  let novoFormato = fraseArray[fraseArray.length - 1] + ", " + fraseArray[0];
 
   return novoFormato
 
@@ -51,29 +51,28 @@ function concatName(fraseArray) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let vitorias = wins * 3;
- 
-  return vitorias + ties + " pontos";
 
+  return vitorias + ties + " pontos";
 }
-//console.log(footballPoints(14, 8));
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(arrayNumeros) {
   // seu código aqui
   let localizaMaior = 0;
   let contMaior = 0;
-  for (let i = 0 ; i <= arrayNumeros.length ; i++) {
-      if(localizaMaior < arrayNumeros[i]){
+  for (let i = 0; i <= arrayNumeros.length; i++) {
+    if (localizaMaior < arrayNumeros[i]) {
       localizaMaior = arrayNumeros[i];
     }
   }
 
-  for (let j = 0 ; j <= arrayNumeros.length ; j++){
-    if(localizaMaior == arrayNumeros[j]){
+  for (let j = 0; j <= arrayNumeros.length; j++) {
+    if (localizaMaior == arrayNumeros[j]) {
       contMaior++;
     }
   }
-   return contMaior;
+  return contMaior;
 }
 //console.log(highestCount([0, 0, 0]));
 
@@ -91,6 +90,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
