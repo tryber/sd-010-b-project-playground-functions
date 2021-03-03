@@ -95,23 +95,62 @@ function highestCount(arrayNumeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
 
-    if (distanciaCat1 < distanciaCat2) return 'cat1';
+  // Ao olhar o log do GitHub, tive de fazer uma pequena alteração no código e adicionar uma nova função que transforma os números negativos em positivos, assim, as distâncias podem ser comparadas em números positivos:
+  function transformNumber () {
+    if (distanciaCat1 < 0) {
+      distanciaCat1 *= -1;
+    }
+    if (distanciaCat2 < 0) {
+      distanciaCat2 *= -1;
+    }
+  }
+  transformNumber ();
 
-    if (distanciaCat1 > distanciaCat2) return 'cat2';
+  // Agora já podem ser compararadas de forma clara as distâncias entre os gatos e o rato:
+  if (distanciaCat1 < distanciaCat2) return 'cat1';
 
-    if (distanciaCat1 === distanciaCat2) return 'os gatos trombam e o rato foge';
+  else if (distanciaCat1 > distanciaCat2) return 'cat2';
+
+  else if (distanciaCat1 === distanciaCat2) return 'os gatos trombam e o rato foge';
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
-// console.log(catAndMouse(0, 10, 1));
+// console.log(catAndMouse(0, 2, -2));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
   // seu código aqui
+
+  // A array a seguir serve apenas para finalidade de teste do algoritmo:
+  // numeros = [9, 25];
+
+  let armazenaFizzBuzz = [];
+
+  for (let achaFizzBuzz = 0; achaFizzBuzz < numeros.length; achaFizzBuzz += 1) {
+    if (numeros[achaFizzBuzz] % 5 === 0 && numeros[achaFizzBuzz] % 3 === 0) {
+      armazenaFizzBuzz.push('fizzBuzz');
+    }
+
+    else if (numeros[achaFizzBuzz] % 3 === 0) {
+      armazenaFizzBuzz.push('fizz');
+    }
+
+    else if (numeros[achaFizzBuzz] % 5 === 0) {
+      armazenaFizzBuzz.push('buzz');
+    }
+
+    else {
+      armazenaFizzBuzz.push('bug!');
+    }
+  }
+  return armazenaFizzBuzz;
 }
+
+// O console.log() abaixo serve somente para finalidade de teste.
+// console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {
