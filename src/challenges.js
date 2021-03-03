@@ -39,13 +39,11 @@ function highestCount(arrayNumbers) {
   let show = 0;
   let number = 0;
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-
     if (arrayNumbers[index] > number) {
       number = arrayNumbers[index];
       show = 0;
     }
     if (arrayNumbers[index] === number) {
-
       show += 1;
     }
   }
@@ -53,8 +51,30 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  //   Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
+
+  // Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
+
+  // Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
+
+  // Retorne a string 'cat2' caso a função catAndMouse receba o parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
+
+  // Retorne a string 'cat1' caso a função catAndMouse receba o parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
+
+  let situation
+cat1 = mouse-cat1;
+cat2 = mouse-cat2;
+  if (cat1 !== cat2) {
+    if (cat1 > cat2) {
+      situation = 'cat2';
+    } else {
+      situation = 'cat1';
+    }
+  } else {
+    situation = 'os gatos trombam e o rato foge.'
+  }
 }
 
 // Desafio 8
