@@ -60,42 +60,17 @@ function catAndMouse(mouse, cat1, cat2) {
     alcancaPrimeiro = 'cat2';
   }
   if (distCat1 === distCat2) {
-    alcancaPrimeiro = 'os gatos batem e o rato escapa';
+    alcancaPrimeiro = 'os gatos trombam e o rato foge';
   }
   return alcancaPrimeiro;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-function verifica(tres, cinco) {
-  let resposta = '';
-  if (tres === false && cinco === false) {
-    resposta += 'bug!';
-  }
-  return resposta
-}
-function criarArray(arrayDeNumeros) {
-  let saida=[];
-  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    saida[index] = '';
-  }
-  return saida;
-}
 function fizzBuzz(arrayDeNumeros) {
-  let resposta = [];
   let resposta = criarArray(arrayDeNumeros);
   let tres = false;
   let cinco = false;
   for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    if ((arrayDeNumeros[index] % 3 === 0) && (arrayDeNumeros[index] % 5 === 0)) {
-      resposta.push('fizzBuzz');
-    } else if (arrayDeNumeros[index] % 3 === 0) {
-      resposta.push('fizz');
-    } else if (arrayDeNumeros[index] % 5 === 0) {
-      resposta.push('buzz');
-    } else {
-      resposta.push('bug!');
     tres = false;
     cinco = false;
     if (arrayDeNumeros[index] % 3 === 0) {
@@ -107,13 +82,13 @@ function fizzBuzz(arrayDeNumeros) {
       cinco = true;
     }
     resposta[index] += verifica(tres, cinco);
+    resposta[index] += verificaFalse(tres, cinco);
+    resposta[index] = verificaFizzBuzz(resposta[index]);
   }
   return resposta;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-}
 
-// Desafio 9
+//Desafio 9
 function encode(frase) {
   let separado = frase.split('');
   for (let caracter in separado) {
@@ -153,7 +128,7 @@ function decode(frase) {
   }
   let juntoDecode = separado.join('');
   return juntoDecode;
-}
+  }
 
 module.exports = {
   calcArea,
