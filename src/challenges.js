@@ -23,7 +23,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(listaNomes) {
-  let conc = (listaNomes[listaNomes.length - 1] + listaNomes[0]);
+  let conc = (listaNomes[listaNomes.length - 1] + ', ' + listaNomes[0]);
   return conc;
 }
 let listaNomes = [];
