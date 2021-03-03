@@ -66,9 +66,23 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let saida = string
+  let vogais = [
+    "*",
+    'a',
+    'e',
+    'i',
+    'o',
+    'u'
+]
+for( i in string){
+    saida = saida.replace(vogais[1], 1).replace(vogais[2], 2).replace(vogais[3], 3).replace(vogais[4], 4).replace(vogais[5], 5)
 }
+    
+return saida
+}
+
 function decode() {
   // seu código aqui
 }
