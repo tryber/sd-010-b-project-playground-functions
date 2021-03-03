@@ -1,19 +1,18 @@
 // Desafio 1
 
-let bool1 = true;
-let bool2 = false;
-let result = false;
+let bool1 = false;
+let bool2 = true;
 
-function compareTrue() {
-  if(bool1 == true && bool2 == true) {
-    result = true;
+function compareTrue(bool1, bool2) {
+  if(bool1 === true && bool2 === true) {
+    return true;
   }else {
-    result = false;
+    return false;
   }
-  console.log(result);
 }
+console.log(compareTrue(bool1, bool2));
 
-// Desafio 2
+// Desafio 2  
 function calcArea() {
   // seu código aqui
 }
