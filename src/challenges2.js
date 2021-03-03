@@ -1,6 +1,4 @@
 // Desafio 10
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
-
 function techList(array, name) {
 let lista = array.sort();
   let newArray = [];
