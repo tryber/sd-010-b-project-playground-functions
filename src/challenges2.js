@@ -41,7 +41,7 @@ function hydrate(string) {
   }
   return sum + " " + "copos de água";
   }
-  console.log(hydrate("2 copo de cerveja e 1 tequila"))
+  
 //https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
 //https://stackoverflow.com/questions/15677869/how-to-convert-a-string-of-numbers-to-an-array-of-numbers
 //"(/[^0-9]/g,'')" e "(i=>Number(i))" foram propriedades que eu retirei dos links disponibilizados acima. Eu não tenho familiaridade com ambos, mas consegui encaixá-los no meu projeto. Caso necessário, posso retirá-los.
