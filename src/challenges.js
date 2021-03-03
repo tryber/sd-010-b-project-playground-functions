@@ -7,7 +7,7 @@ function compareTrue(a, b) {
   }
 }
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   let area = ( base * height)/2
     return area;
 }
@@ -44,13 +44,14 @@ return count
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distcat1 = (mouse - cat1);
-  let distcat2 = (mouse - cat2);
+
+  let distcat1 = (mouse + cat1);
+  let distcat2 = (mouse + cat2);
   if(distcat1 < distcat2){
-    return ('cat1')
-  }else if ( distcat2 < distcat1){
-    return ('cat2')
-  }else {
+    return('cat1');
+  } else if ( distcat2 < distcat1){
+    return ('cat2');
+  } else {
     return ('os gatos trombam e o rato foge');
   }
 
@@ -74,43 +75,43 @@ function fizzBuzz(array) {
   }
 // Desafio 9
 function encode(string) {
-string.split('')
-let frase = ""
-for(let index = 0; index < string.length; index++){
-  switch (string[index]){
-    case "a" :
-      string[index] = "1"
-    break
+  string.split('')
+  let frase = ""
+  for(let index = 0; index < string.length; index++){
+    switch (string[index]){
+      case "a" :
+        string[index] = "1"
+      break
 
-    case "e" :
-      string[index] = "2"
-    break
+      case "e" :
+        string[index] = "2"
+      break
 
-    case "i" :
-      string[index] = "3"
-    break
+      case "i" :
+        string[index] = "3"
+      break
 
-    case "o" :
-      string[index] = "4"
-    break
+      case "o" :
+        string[index] = "4"
+      break
 
-    case "u" :
-      string[index] = "5"
-    break
+      case "u" :
+        string[index] = "5"
+      break
+    }
   }
-}
-for(let index = 0; index < string.length; index +=1){
-  frase += string[index]
-}
-return frase
+  for(let index = 0; index < string.length; index += 1){
+    frase += string[index]
+  }
+  return frase
 
 }
 
 
 function decode(string) {
-string.split('')
-let frase =""
-for(let index = 0; index < string.length; index++){
+  string.split('')
+  let frase =""
+  for(let index = 0; index < string.length; index += 1){
   switch (string[index]){
 
     case "1" :
@@ -134,8 +135,8 @@ for(let index = 0; index < string.length; index++){
     break
   }
 }
-for(let index = 0; index < string.length; index +=1){
-  frase += string[index]
+  for(let index = 0; index < string.length; index += 1){
+    frase += string[index]
 }
 return (frase)
 
