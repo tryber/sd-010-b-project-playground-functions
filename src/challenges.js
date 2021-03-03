@@ -74,7 +74,7 @@ function fizzBuzz(array) {
   return (arrayFizzBuzz)
 }
 // Desafio 9
-
+//console.log(encode("hello"))
 function encode(code) {
 
   let frase = ''
@@ -102,11 +102,11 @@ function encode(code) {
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
   }
-  return `"${frase}" `;
+  return `${frase}`;
 
 }
 
-
+//console.log(decode('h2ll4'))
 function decode(code) {
   let frase = ''
   let string= code.split('');
@@ -132,7 +132,7 @@ function decode(code) {
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
 }
- return `"${frase}" `
+ return `${frase}`
 }
 
 module.exports = {
