@@ -66,21 +66,24 @@ console.log(highestCount([9, 1, 10, 9, 9, 2, 3, 9, 5, 7]));
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   // Referência para o Math.abs, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-  let distanciaA = Math.abs(mouse - cat1); 
-  let distanciaB = Math.abs(mouse - cat2); 
-  let primeiroPegar;
-  
-  if(distanciaB < distanciaA){
+let distanciaA = Math.abs(mouse - cat1); 
+let distanciaB = Math.abs(mouse - cat2); 
+let primeiroPegar;
+ 
+  if (distanciaB < distanciaA) {
     primeiroPegar = 'cat2';
   }
-  else if(distanciaA < distanciaB){
+    else if (distanciaA < distanciaB) {
     primeiroPegar = 'cat1';
   }
-  else if(distanciaB === distanciaA){
+    else if (distanciaB === distanciaA) {
     primeiroPegar = 'Os gatos trombam e o rato foge';
   }
   return primeiroPegar;
 }
+console.log(catAndMouse(5,3,2))
+console.log(catAndMouse(5,3,6))
+console.log(catAndMouse(5,4,4))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
