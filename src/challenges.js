@@ -19,24 +19,36 @@ function splitSentence(phrase, letter) {
   // seu código aqui
   let word = '';
   let result = [];
+  let spaces = '';
   for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === letter) {
-      result.push(`${word}`);
+      spaces += 1;
+      result.push(word);
       word = '';
+      continue;
     }
-    word += `${phrase[index]}`;
+    word += phrase[index];
     if (index >= phrase.length) {
-      result.push(`${word}`);
+      spaces += phrase[index];
+      result.push(word);
     }
-  }
-  result.push(`${word}`);
+  } result.push(word);
   return result;
-}console.log(splitSentence('go Trybe', ' '));
+}// console.log(splitSentence('vamo que vamo', ' '));
 
 // Desafio 4
-function concatName() {
+function concatName(array = []) {
   // seu código aqui
-}
+  let endArray = '';
+  let result = '';
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === array.length - 1) {
+      endArray = array[index];
+    }
+  }
+  result = `${endArray}, ${array[0]}`;
+  return result;
+}// console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
