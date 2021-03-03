@@ -18,8 +18,7 @@ let base = 10;
 let height = 50;
 
 function calcArea(base, height) {
-  let result = (base * height) / 2;
-  console.log(result);
+  return (base * height) / 2;
 }
 console.log(calcArea(base, height));
 
