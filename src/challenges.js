@@ -106,17 +106,19 @@ function encode(frase) {
 function decode(frase) {
   let separado = frase.split('');
   for (let caracter in separado) {
-      if (separado[caracter] === '1') {
-      separado[caracter] = 'a';
-    } if (separado[caracter] === '2') {
-      separado[caracter] = 'e';
-    } if (separado[caracter] === '3') {
-      separado[caracter] = 'i';
-    } if (separado[caracter] === '4') {
-      separado[caracter] = 'o';
-    } if (separado[caracter] === '5') {
-      separado[caracter] = 'u';
-    }
+    if ({}.hasOwnProperty.call(separado, caracter)) {
+        if (separado[caracter] === '1') {
+        separado[caracter] = 'a';
+      } if (separado[caracter] === '2') {
+        separado[caracter] = 'e';
+      } if (separado[caracter] === '3') {
+        separado[caracter] = 'i';
+      } if (separado[caracter] === '4') {
+        separado[caracter] = 'o';
+      } if (separado[caracter] === '5') {
+        separado[caracter] = 'u';
+      }
+    }  
   }
   let juntoDecode = separado.join('');
   return juntoDecode;
