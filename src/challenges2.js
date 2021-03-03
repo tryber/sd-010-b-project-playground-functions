@@ -1,21 +1,18 @@
 // Desafio 10
-function techList(teq,name) {
+function techList(teq, name) {
   teq = teq.sort();
   let final = [];
   if (teq.length !== 0) {
-    for (techindex = 0; techindex < teq.length; techindex += 1) {
+    for (let techindex = 0; techindex < teq.length; techindex += 1) {
       let array = {
         tech: 'exemplo',
-        name: name,
+        name,
       };
       array.tech = teq[techindex];
       final.push(array);
     }
     return final;
-  } else {
-      return "Vazio!";
-  }
-
+  } return 'Vazio!';
 }
 
 // Desafio 11
