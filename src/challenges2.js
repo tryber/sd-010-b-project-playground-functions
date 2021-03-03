@@ -52,7 +52,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let verificacao = (lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC));
   let verificacao2 = (lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC));
   let verificacao3 = (lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB));
-  
+
   if (verificacao && verificacao2 && verificacao3) {
     return true;
   } else {
@@ -61,9 +61,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let filtro = /[1-9]/g;
+  let arrayBebidas = string.match(filtro);
+  let coposAgua = 0;
+  
+  for (let indice = 0; indice < arrayBebidas.length; indice++){
+    coposAgua = coposAgua + parseInt(arrayBebidas[indice]);
+  }
+
+  if (coposAgua === 1){
+    return `${coposAgua} copo de água`;
+  }
+
+  return `${coposAgua} copos de água`;
 }
+
+console.log(hydrate("1 cachaça"));
 
 module.exports = {
   generatePhoneNumber,
