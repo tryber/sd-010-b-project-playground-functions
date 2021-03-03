@@ -1,4 +1,4 @@
-// ok - Desafio 1
+// OK - Desafio 1
 function compareTrue(boolean1, boolean2) {
   // Ref: https://stackoverflow.com/questions/45817581/replace-this-if-then-else-statement-by-a-single-return-statement
   // Após sugestão do ESlint, usei a referência acima para refatoração do cógico, antes implementado com uso do IF/ELSE
@@ -6,36 +6,49 @@ function compareTrue(boolean1, boolean2) {
 }
 console.log(compareTrue(false, false));
 
-// ok - Desafio 2
+// OK - Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
 }
 console.log(calcArea(51, 1));
 
-// ok - Desafio 3
+// OK - Desafio 3
 function splitSentence(sentence) {
   return (sentence.split(' '));
 }
 console.log(splitSentence('Go Trybe'));
 
-// ok - Desafio 4
+// OK - Desafio 4
 function concatName(stringsArray) {
-  let ultimoPrimeiroItem = (stringsArray[stringsArray.length - 1] + ', ' + stringsArray[0]);
+  let ultimoPrimeiroItem = (`${stringsArray[stringsArray.length - 1]},  ${stringsArray[0]}`);
   return ultimoPrimeiroItem;
 }
 console.log(concatName(['captain', 'my', 'captain']));
 
-// 0k - Desafio 5
+// OK - Desafio 5
 function footballPoints(wins, ties) {
   let earnedPoints = ((wins * 3) + (ties * 1));
   return earnedPoints;
 }
-console.log( footballPoints(0, 0));
+console.log(footballPoints(0, 0));
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// OK - Desafio 6
+function highestCount(numbersArray) {
+  // Para codificação desta função utilizei como referência a página https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+  let highestNumber = Math.max(...numbersArray);
+  let occurrencesHighestNumber = 0;
+
+  for (let key in numbersArray) {
+    if (numbersArray[key] === highestNumber) {
+      occurrencesHighestNumber += 1;
+    }
+  }
+  return occurrencesHighestNumber;
+
+
+  //console.log("Maior numero " + Math.max(...numbersArray));
 }
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
