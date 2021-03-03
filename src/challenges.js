@@ -150,7 +150,7 @@ function decode(decodificar) {
 
   juntar = arrayDecodificar.join("");
 
-  return console.log(juntar);
+  return juntar;
 }
 
 module.exports = {
