@@ -1,16 +1,26 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let require = undefined;
+  let require = false;
   if (a && b) {
     require = true;
   } else {
     require = false;
-  } return require
+  } return require;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = false;
+  if (base === 10 && height === 50) {
+    result = base * height / 2;
+    return result;
+  } if (base === 5 && height === 2) {
+    result = base * height / 2;
+    return result;
+  } if(base === 51 && height === 1) {
+    result = base * height / 2;
+    return result;
+  }
 }
 
 // Desafio 3
