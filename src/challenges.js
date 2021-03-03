@@ -29,11 +29,15 @@ function concatName(stringuinha) {
   // seu código aqui
 
   let primeiro = stringuinha[0];
-  let ultimo = stringuinha[(stringuinha.length) - 1];
+  let ultimo = stringuinha[stringuinha.length - 1];
 
   
-  return ultimo + primeiro;
+  return ultimo + "," + " " + primeiro;
 }
+
+string = ["eder","ederson","patrick","julio","dodo"];
+let retornou = concatName(string);
+console.log(retornou);
 
 
 // Desafio 5
