@@ -70,10 +70,10 @@ function verifica(tres, cinco) {
   if (tres === false && cinco === false) {
     resposta += 'bug!';
   }
-  return resposta
+  return resposta;
 }
 function criarArray(arrayDeNumeros) {
-  let saida=[];
+  let saida = [];
   for (let index = 0; index < arrayDeNumeros.length; index += 1) {
     saida[index] = '';
   }
@@ -98,7 +98,6 @@ function fizzBuzz(arrayDeNumeros) {
   }
   return resposta;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(frase) {
