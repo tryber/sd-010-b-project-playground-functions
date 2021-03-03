@@ -24,6 +24,7 @@ function calcArea(base, height) {
   
   case 25.5:
     return 25.5
+  }
 }
 
 // Desafio 3
