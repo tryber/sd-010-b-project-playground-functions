@@ -26,11 +26,12 @@ console.log(splitSentence('foguete nao tem ré'))
 // Desafio 4
 function concatName(array) {
   conca = [''];
-  conca[0] = array[array.length-1];
-  conca.push(array[array.length - array.length])
+  conca = array[array.length-1];
+  conca = conca + " " + array[array.length - array.length]
+  
   return conca;   
 } 
-console.log(concatName(['foguete', 'não', 'tem', 'ré']))
+console.log(concatName(['captain', 'my', 'captain']))
 
 
 // Desafio 5
