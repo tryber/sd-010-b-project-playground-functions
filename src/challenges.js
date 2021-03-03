@@ -1,8 +1,8 @@
 // Desafio 1
-function compareTrue(booleano1, booleano2) {
-  /*
+/*
    Essa função recebe dois booleano e retorna true se ambos os valores booleanos são verdadeiros e falso, caso contrário.
-   */
+  */
+function compareTrue(booleano1, booleano2) {
   return booleano1 && booleano2;
 }
 
@@ -13,10 +13,10 @@ function compareTrue(booleano1, booleano2) {
 // console.log(`compareTrue(false, false) = ${compareTrue(false, false)}`);
 
 // Desafio 2
+/*
+  Essa função recebe dois valores numéricos, a base e altura de um triangulo, calcula e retorna a area deste triangulo.
+ */
 function calcArea(base, height) {
-  /*
-   Essa função recebe dois valores numéricos, a base e altura de um triangulo, calcula e retorna a area deste triangulo.
-   */
   return (base * height) / 2;
 }
 
@@ -25,9 +25,39 @@ function calcArea(base, height) {
 // console.log(`calcArea(2, 3) = ${calcArea(2, 3)}`);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+/*
+   Essa função recebe uma string e retorna um array de strings separadas por cada espaço na string original.
+  */
+function splitSentence(sentence) {
+  let result = []; // inicializa result com array vazio
+  let word = ''; // inicializa word com string vazia
+
+  // percorre cada caracter de sentence
+  for (let indexSentence = 0; indexSentence < sentence.length; indexSentence += 1) {
+    // o caracter da posição indexSentence em sentence é armazenado em character
+    let character = sentence.charAt(indexSentence);
+
+    // constrói palavra: armazena em word se caracter diferente de espaço
+    if (character !== ' ') {
+      word += character;
+    } else { // fim da construção da palavra
+      result.push(word); // armazena word no array result
+      word = ''; // reinicializa word com string vazia
+    }
+  }
+  result.push(word); // armazena a última word construída no array result
+  return result;
 }
+
+// let resp = splitSentence('');
+// console.log(`splitSentence( ) = ${splitSentence('')}`);
+// console.log(resp.length);
+
+// console.log(`splitSentence(go Trybe) = ${splitSentence('go Trybe')}`);
+
+// console.log(`splitSentence(vamo que vamo) = ${splitSentence('vamo que vamo')}`);
+
+// console.log(`splitSentence(foguete) = ${splitSentence('foguete')}`);
 
 // Desafio 4
 function concatName() {
