@@ -90,7 +90,7 @@ function fizzBuzz(array) {
       calculo.push ("buzz");
     }
     else {
-      calculo.push ("bug");
+      calculo.push ("bug!");
     }
   }
   return calculo;
@@ -98,9 +98,13 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let frase = string;
+  let mudado = ''
+    if ()
+
 }
+console.log(encode("hi there!"))
 
 function decode() {
   // seu código aqui
