@@ -10,83 +10,65 @@ function techList(array, string) {
   }
   return returnArray;
 }
-// funções auxiliares do desafio 11
-function createString(array) {
-  let output = '';
-  const numbers = array;
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (index === 0) {
-      output += `(${numbers[index]}`;
-    } else if (index === 1) {
-      output += `${numbers[index]}) `;
-    } else if (index === 6) {
-      output += `${numbers[index]}-`;
-    } else {
-      output += numbers[index];
-    }
-  }
-  return output;
-}
-
-function checkDigits(array) {
-  if (array.length !== 0) {
-    for (let index = 0; index < array.length; index += 1) {
-      if (array[index] < 0 || array[index] > 9) {
-        return false;
-      }
-    }
-  }
-  return true;
-}
-
+// FUNÇÕES AUXILIARES DO DESAFIO 11
 function checkSize(array) {
-  if (array.length !== 11) {
-    return false;
+  if (array.length === 11) {
+    return true;
   }
-  return true;
 }
 
-function checkRepetition(array) {
-  const sorted = array.sort();
-  let number = sorted[0];
-  let counter = 0;
-  let result = [];
-  for (let index = 0; index < sorted.length; index += 1) {
-    if (number === sorted[index]) {
-      counter += 1;
-    } else {
-      result.push(counter);
-      number = sorted[index];
-      counter = 1;
-    }
-  }
-  return result;
-}
-
-function validateRepetition(array) {
-  const ordered = checkRepetition(array);
-  for (let index = 0; index < ordered.length; index += 1) {
-    if (ordered[index] >= 3) {
+function checkNumbers(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > 9 || array[index] < 0) {
       return false;
     }
   }
   return true;
 }
-function checkValues(array) {
-  const parameter = array;
-  if ((checkDigits(parameter) === true) || (validateRepetition(parameter) === true)) {
-    return true;
+
+function validateTimes(array) {
+  let counter = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    let element = array[index];
+    counter = 0;
+    for (let key in array) {
+      if (array[key] === element) {
+        counter += 1;
+      }
+    }
+    if (counter >= 3) {
+      return false;
+    }
   }
-  return 'não é possível gerar um número de telefone com esses valores';
+  return true;
 }
+function buildOutput(array) {
+  let output = '';
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === 0) {
+      output += `(${array[index]}`;
+    } else if (index === 1) {
+      output += `${array[index]}) `;
+    } else if (index === 6) {
+      output += `${array[index]}-`;
+    } else {
+      output += `${array[index]}`;
+    }
+  }
+  return output;
+}
+// console.log(validateTimes([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 // Desafio 11
-function generatePhoneNumber(entry) {
-  const parameter = entry;
-  checkValues(parameter);
-  if (checkSize(parameter) === false) {
+function generatePhoneNumber(array) {
+  const numbers = array;
+  if (checkSize(numbers) === false) {
     return 'Array com tamanho incorreto.';
   }
-  return createString(parameter);
+  if ((checkNumbers(numbers) === false) || (validateTimes(numbers) === false)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return buildOutput(numbers);
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));

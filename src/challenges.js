@@ -82,6 +82,7 @@ function divisibleByThreeAndFive(number) {
     return 'fizzBuzz';
   }
 }
+
 // Desafio 8
 function fizzBuzz(array) {
   let output = [];
