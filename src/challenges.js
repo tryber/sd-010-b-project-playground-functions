@@ -104,7 +104,7 @@ function fizzBuzz(array) {
       array[key] = "fizz";
       arrayBuzz.push(array[key]);
     } else {
-      arrayBuzz.push("bug");
+      arrayBuzz.push("bug!");
     }
   }
   return arrayBuzz;
