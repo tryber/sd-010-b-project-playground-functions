@@ -46,6 +46,7 @@ function generatePhoneNumber(arrayTelefone) {
   return gerarTelefone.join("") ;
 }
 
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
@@ -77,8 +78,6 @@ function hydrate(string) {
 
   return `${coposAgua} copos de água`;
 }
-
-console.log(hydrate("1 cachaça"));
 
 module.exports = {
   generatePhoneNumber,
