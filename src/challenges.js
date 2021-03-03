@@ -21,37 +21,31 @@ function splitSentence(frase) {
 function concatName(frase) {
   let ultimoItem = frase[frase.length - 1];
   let primeiroItem = frase[0];
-  const splits = ultimoItem + ', ' + primeiroItem;
-return splits;
+  const splits = `${ultimoItem}, ${primeiroItem}`;
+  return splits;
 } console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-let total = (wins * 3) + (ties * 1);
-return total;
+  let total = (wins * 3) + (ties * 1);
+  return total;
 } console.log(footballPoints(5, 3));
- 
+
 // Desafio 6
 function highestCount(numeros) {
-  let indiceMaior = 0; 
+  let indiceMaior = 0;
   let contRepetido = 0;
-for (index = 0; index <= numeros.length; index++) {
-  if (numeros[index] > indiceMaior) {
-    indiceMaior = numeros[index]
-  } 
+  for (index = 1; index <= numeros.length; index += 1) {
+    if (numeros[index] > indiceMaior) {
+      indiceMaior = numeros[index];
+    } 
 }
-   for(index2 = 0; index2 <= numeros.length; index2++){
-    if(numeros[index2] === indiceMaior){
-      contRepetido++
+  for(index2 = 1; index2 <= numeros.length; index2 += 1) {
+    if (numeros[index2] === indiceMaior) {
+      contRepetido+=;
     }
-    } return contRepetido;
-    }
-   
-  console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-
-
-  // seu código aqui
-
+  } return contRepetido;
+} console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
