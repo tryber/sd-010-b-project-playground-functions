@@ -26,11 +26,19 @@ function splitSentence(phrase) {
     return phrases.split(" ");
   }  
 
-console.log(splitSentence("he he he kkk kkk kkk"));
+// console.log(splitSentence("he he he kkk kkk kkk"));
+
+
 // Desafio 4
-function concatName() {
+function concatName(names = []) {
   // seu código aqui
+  let sem = [] = names[names.length - 1]
+  let sema = names[names.length - names.length]
+  let seman = sem + " " +  sema;
+  return seman;
 }
+
+console.log(concatName(["lucas" , "cassiano" , "ferraz", "paolillo"]));
 
 // Desafio 5
 function footballPoints() {
