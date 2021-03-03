@@ -38,13 +38,12 @@ console.log(result);
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let spots = 0;
   if (wins > 0) {
-    wins = wins * 3;
+    wins *= 3;
   }
-  return spots = wins + ties;
+  return wins + ties;
 }
-result = footballPoints(14, 8);
+result = footballPoints(0, 0);
 console.log(result);
 
 // Desafio 6
