@@ -52,9 +52,15 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat1 < cat2) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
+// Resposta: Na tentativa de solucionar o setimo requisito, fir comparações entre os parametros dada pela function. Posição é 0 do mouse e N posições de cat1 e cat2.
 
 // Desafio 8
 function fizzBuzz() {
