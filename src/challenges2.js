@@ -11,7 +11,6 @@ function techList(tech) {
 } else {
   saida = 'Vazio!'
 }
-
   return saida
 }
 
@@ -45,8 +44,21 @@ return resposta;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB, lineC) {
+  let resposta 
+let lines = []
+lines.push(lineA,lineB, lineC)
+
+if(Math.abs(lines[0] + lines[1]) > lines[2] && Math.abs(lines[0] - lines[1]) < lines[2]){
+    if(Math.abs(lines[0] + lines[2]) > lines[1] && Math.abs(lines[0] - lines[2]) < lines[1]){
+        if(Math.abs(lines[2] + lines[1]) > lines[0] && Math.abs(lines[2] - lines[1]) < lines[0]){
+    resposta = true
+} 
+    }
+}
+
+return resposta
+  
 }
 
 // Desafio 13
