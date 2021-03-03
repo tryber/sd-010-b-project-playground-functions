@@ -9,21 +9,21 @@ console.log(compareTrue(false, false));
 // ok - Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
-  }
+}
 console.log(calcArea(51, 1));
 
 // ok - Desafio 3
 function splitSentence(sentence) {
-  return(sentence.split(' '));
+  return (sentence.split(' '));
 }
 console.log(splitSentence('Go Trybe'));
 
 // ok - Desafio 4
 function concatName(stringsArray) {
-  let ultimoPrimeiroItem = (stringsArray[stringsArray.length -1] + ", " + stringsArray[0]);
+  let ultimoPrimeiroItem = (stringsArray[stringsArray.length - 1] + ', ' + stringsArray[0]);
   return ultimoPrimeiroItem;
 }
-console.log(concatName( ['captain', 'my', 'captain']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // 0k - Desafio 5
 function footballPoints(wins, ties) {
