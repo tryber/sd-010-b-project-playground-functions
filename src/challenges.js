@@ -3,40 +3,35 @@ function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
   } return false;
-  } console.log(compareTrue(true, true));
+} console.log(compareTrue(true, true));
+
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
   // seu código aqui
-  } console.log(calcArea(20, 10));
+} console.log(calcArea(20, 10));
+
 // Desafio 3
 function splitSentence(frase) {
-const splits = frase.split(" ", frase.length-1)
-return splits;
-  // seu código aqui
-} console.log(splitSentence("go trybe mano"))
+  const splits = frase.split(' ', frase.length - 1);
+  return splits;
+} console.log(splitSentence('go trybe mano'));
 
 // Desafio 4
 function concatName(frase) {
-  let ultimoItem = frase[frase.length-1];
-  let primeiroItem = frase[0]
-  const splits = ultimoItem + ", " + primeiroItem
+  let ultimoItem = frase[frase.length - 1];
+  let primeiroItem = frase[0];
+  const splits = ultimoItem + ', ' + primeiroItem;
 return splits;
-} 
-console.log(concatName(['foguete', 'não', 'tem', 'ré']))
-  
+} console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
 let total = (wins * 3) + (ties * 1);
 return total;
-} 
-console.log(footballPoints(5, 3));
-
-
-  // Desafio 6
-
-  
+} console.log(footballPoints(5, 3));
+ 
+// Desafio 6
 function highestCount(numeros) {
   let indiceMaior = 0; 
   let contRepetido = 0;
