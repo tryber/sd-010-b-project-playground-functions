@@ -4,7 +4,7 @@ function techList(tech, name) {
   let novoArray = tech.sort();
   let objetoTech = [];
 
-  if (tech.length == 0) {
+  if (tech.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < novoArray.length; index++) {
@@ -25,15 +25,19 @@ function generatePhoneNumber(arrayTelefone) {
     "(", arrayTelefone[0], arrayTelefone[1], ")", " ", arrayTelefone[2], arrayTelefone[3], arrayTelefone[4], arrayTelefone[5], arrayTelefone[6], "-", arrayTelefone[7], arrayTelefone[8], arrayTelefone[9], arrayTelefone[10]
   ];
 
+  if (arrayTelefone.length != 11){
+    return "Array com tamanho incorreto.";
+  }
+
   for (let indice = 0; indice < arrayTelefone.length; indice++){
-    if (arrayTelefone[indice] < 0 || arrayTelefone[indice] > 9 || arrayTelefone.length != 11){
+    if (arrayTelefone[indice] < 0 || arrayTelefone[indice] > 9){
       return "não é possível gerar um número de telefone com esses valores";
     }
     repetidas = 0;
     for (let indice2 = 0; indice2 < arrayTelefone.length; indice2++){
-      if (arrayTelefone[indice] == arrayTelefone[indice2]){
+      if (arrayTelefone[indice] === arrayTelefone[indice2]){
         repetidas++;
-        if (repetidas == 3){
+        if (repetidas === 3){
           return "não é possível gerar um número de telefone com esses valores";
         }
       }

@@ -100,11 +100,11 @@ function fizzBuzz(arrayNumerico) {
   let arrayFizzBuzz = [];
 
   for (let key in arrayNumerico){
-    if ((arrayNumerico[key] % 3 == 0) && (arrayNumerico[key] % 5 == 0)){
+    if ((arrayNumerico[key] % 3 === 0) && (arrayNumerico[key] % 5 === 0)){
       arrayFizzBuzz.push("fizzBuzz");
-    }else if (arrayNumerico[key] % 3 == 0){
+    }else if (arrayNumerico[key] % 3 === 0){
       arrayFizzBuzz.push("fizz");
-    }else if (arrayNumerico[key] % 5 == 0){
+    }else if (arrayNumerico[key] % 5 === 0){
       arrayFizzBuzz.push("buzz");
     }else{
       arrayFizzBuzz.push("bug!");
@@ -124,7 +124,7 @@ function encode(codificar) {
 
   for (let key in arrayCodificar){
     for (let key2 in arrayVogal){
-      if (arrayCodificar[key] == arrayVogal[key2])
+      if (arrayCodificar[key] === arrayVogal[key2])
         arrayCodificar[key] = arrayCode[key2];
     }
   }
@@ -143,7 +143,7 @@ function decode(decodificar) {
 
   for (let key in arrayDecodificar){
     for (let key2 in arrayCode){
-      if (arrayDecodificar[key] == arrayCode[key2])
+      if (arrayDecodificar[key] === arrayCode[key2])
       arrayDecodificar[key] = arrayVogal[key2];
     }
   }
