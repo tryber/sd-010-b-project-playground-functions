@@ -10,12 +10,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ");
+  return sentence.split(' ');
 }
 
 // Desafio 4
 function concatName(fulName) {
-  return fulName[fulName.length - 1] + ", " + fulName[0];
+  return fulName[fulName.length - 1] + ', ' + fulName[0];
 }
 
 // Desafio 5
@@ -38,7 +38,9 @@ function highestCount(values) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  return (cat1 - mouse != cat2 - mouse ? (cat1 - mouse < cat2 - mouse ? "cat1" : "cat2") : "os gatos trombam e o rato foge");
+  distanceCat1 = Math.abs(ca1 - mouse);
+  distanceCat2 = Math.abs(ca2 - mouse);
+  return (distanceCat1 != distanceCat2 ? (distanceCat1 < distanceCat1 ? "cat1" : "cat2") : "os gatos trombam e o rato foge");
 }
 
 // Desafio 8
