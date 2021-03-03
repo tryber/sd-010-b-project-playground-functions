@@ -1,27 +1,34 @@
-// // Desafio 10
-// function techList(array, name) {
-//   if (array.length !== 0) {
-//     let ordenada = array.sort();
-//     let lista = [];
-//     for (let key in ordenada) {
-//       let dicionario = {
-//         tech: ordenada[key],
-//         name: name,
-//       };
-//       lista.push(dicionario);
-//     }
-//     return lista;
-//   }
-//   return 'Vazio!';
-// }
+// Desafio 10
+function pump(ordenada, name) {
+  let lista = [];
+  let prop = name;
+  for (let key in ordenada) {
+    if (Object.prototype.hasOwnProperty.call(ordenada, key)) {
+      let dicionario = {
+        tech: ordenada[key],
+        name: prop };
+      lista.push(dicionario);
+    }
+  }
+  return lista;
+}
 
-// // teste itam 10
-// // namePessoal = 'Lucas';
-// // array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-// // console.log(techList(array, namePessoal));
-// // namePessoal = 'Lucas';
-// // array1 = [];
-// // console.log(techList(array1, namePessoal));
+function techList(array, name) {
+  if (array.length !== 0) {
+    let ordenada = array.sort();
+    let lista = pump(ordenada, name);
+    return lista;
+  }
+  return 'Vazio!';
+}
+
+// teste item 10
+// namePessoal = 'Lucas';
+// array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// console.log(techList(array, namePessoal))
+// namePessoal = 'Lucas';
+// array1 = [];
+// console.log(techList(array1, namePessoal));
 
 // // Desafio 11
 // function verifyRepeated(array) {
@@ -140,9 +147,9 @@
 // // console.log(hydrate(frase2));
 // // console.log(hydrate(frase1));
 
-// module.exports = {
-//   generatePhoneNumber,
-//   techList,
-//   hydrate,
-//   triangleCheck,
-// };
+module.exports = {
+  // generatePhoneNumber,
+  techList,
+  // hydrate,
+  // triangleCheck,
+};
