@@ -1,10 +1,25 @@
-let numbers = [9, 1, 2, 3, 9, 5, 7];
-let higherNumber = numbers[0];
-let qtd = 0;
+let var1 = [3,4,5,6,7];
 
-for (let index=0; index < numbers.length; index+=1) {
-c8  if (higherNumber == numbers[index] ) {
-    qtd = qtd + 1;
-  }
-}
-console.log(qtd);
+
+/* console.log(var1);
+console.log(var2);
+console.log(var3);
+console.log(var4);
+console.log(var5);
+console.log(var6); */
+/* ACUMULADOR.... SEMPRE INICIA ANTES DO LOOP */
+let resultado = 3;
+/* INICIA O LOOP */
+console.log(resultado + " INDICE:" + 1);  
+resultado = resultado + 1;
+console.log(resultado + " INDICE:" + 2); 
+resultado = resultado + 1; 
+console.log(resultado + " INDICE:" + 3); 
+resultado = resultado + 1; 
+console.log(resultado + " INDICE:" + 4); 
+resultado = resultado + 1; 
+console.log(resultado + " INDICE:"+ 5); 
+resultado = resultado + 1; 
+console.log(resultado + " INDICE:" +6); 
+resultado = resultado + 1; 
+console.log(resultado + " INDICE:" + 7); 
