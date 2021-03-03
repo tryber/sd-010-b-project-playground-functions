@@ -87,7 +87,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let ratoMaisProximo = " ";
-  if (cat2 > mouse && cat1 > cat2){
+  if (cat2 > mouse && cat2 < cat1){
     ratoMaisProximo ="cat2";
   }else if (cat1 > mouse && cat2 > cat1){
     ratoMaisProximo = "cat1"
@@ -96,8 +96,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return ratoMaisProximo;
 }
-console.log(catAndMouse(0, 3, 2))
-console.log(catAndMouse(0, 6, 12))
+console.log(catAndMouse(2, 5, 4))
+console.log(catAndMouse(2, 8, 14))
 console.log(catAndMouse(2, 2, 2))
 
 // Desafio 8
