@@ -105,10 +105,25 @@ return result;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(number) {
+  let array =[];
+  for(let i in number){
+    if((number[i]%5) === 0 && (number[i]%3) === 0  ){
+      array.push("fizzBuzz")
+    } 
+    else if((number[i]%3) ===  0  ){
+      array.push("fizz")
+    }else if((number[i]%5) ===  0  ){
+      array.push("buzz")
+    }
+    else{
+      array.push("bug")
+    }
 
+  
+}
+return array
+}
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -128,4 +143,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+ };
