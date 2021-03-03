@@ -41,17 +41,18 @@ function generatePhoneNumber(numbers) {
     }
     feedback += numbers[i];
   }
-  if (numbers.length != 11) {
-    feedback = 'Array com tamanho incorreto.';
-  }
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
     let appers = countNumberAppears(numbers, numbers[index2]);
     if (appers > 2 || numbers[index2] < 0 || numbers[index2] > 9) {
       feedback = 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  if (numbers.length != 11) {
+    feedback = 'Array com tamanho incorreto.';
+  }
   return feedback;
 }
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let check = false;
@@ -66,6 +67,10 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// A utilização da função replace() foi feita após consulta ao stackoverflow
+// link: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
+// A utilização da função parseInt() foi feita após consulta à W3Schools
+// link:  https://www.w3schools.com/jsref/jsref_parseint.asp
 function hydrate(string) {
   let onlyNumbers = string.replace(/\D/g, '');
   let numbersSplited = onlyNumbers.split('');
