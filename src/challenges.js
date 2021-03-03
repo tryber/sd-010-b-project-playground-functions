@@ -56,18 +56,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  // pegar o maior número
   let bigger = numbers[0];
+  let counter = 0;
   for (let key in numbers) {
     if (numbers[key] > bigger) {
       bigger = numbers[key];
     }
   }
-  // contar quantas vezes ele aparece
-  let counter = 0;
   for (let key in numbers) {
     if (numbers[key] === bigger) {
-      counter++;
+      counter+1;
     }
   }
   return counter;
