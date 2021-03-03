@@ -4,9 +4,13 @@ function techList(tech) {
   let list = tech.sort();
   let saida = [];
 
+  if (list.length > 1) {
   for (i in list){
       saida.push({tech: list[i], name: nome}); 
   }
+} else {
+  saida = 'Vazio!'
+}
 
   return saida
 }
