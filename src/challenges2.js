@@ -52,15 +52,11 @@ function repeticaoDeTresOuMais (arrayDeNumeros) {
   return maisQueTres;
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let existencia = (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB-lineC))) || ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA-lineC))) || ((lineC < (lineB + lineA)) && (lineC > Math.abs(lineB-lineA))));
   return existencia
 }
-console.log(triangleCheck(10, 3, 4))
-
 
 // Desafio 13
 function hydrate(frase) {
@@ -73,11 +69,10 @@ function hydrate(frase) {
   if (soma >1) {
   saida = `${soma} copos de água`;
   } else {
-    saida = `${soma} copo de água`
+    saida = `${soma} copo de água`;
   }
   return saida
 }
-console.log(hydrate('10 cachaça, 50 cervejas e 10 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
