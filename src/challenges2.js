@@ -11,7 +11,7 @@ function techList(array, name) {
       lista.push(dicionario);
     }
     return lista;
-  } 
+  }
   return 'Vazio!';
 }
 
@@ -25,13 +25,16 @@ function techList(array, name) {
 
 // Desafio 11
 function verifyRepeated(array) {
-  let flag = true; counter = 0;
-  for (let key in array) {
-    for (let i = 0; i < array.length; i += 1) {
-      if (array[i] === array[key]) {
-        counter += 1;
+  let flag = true;
+  let counter = 0;
+  if (array.length > 0) {
+    for (let key in array) {
+      for (let i = 0; i < array.length; i += 1) {
+        if (array[i] === array[key]) {
+          counter += 1;
+        }
+        flag = (counter <= 3);
       }
-      flag = (counter <= 3);
     }
     return flag;
   }
@@ -103,7 +106,7 @@ function hydrate(umaFrase) {
   }
   if (soma > 1) {
     return `${soma} copos de água`;
-  } 
+  }
   return `${soma} copo de água`;
 }
 
