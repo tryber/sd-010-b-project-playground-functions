@@ -131,7 +131,7 @@ function encode(codificar) {
 
   juntar = arrayCodificar.join("");
 
-  return console.log(juntar);
+  return juntar;
 }
 
 function decode(decodificar) {
