@@ -74,10 +74,10 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let arrayString = string.split("");
-  let dictionary = {a: 1, e: 2, i: 3, o: 4, u: 5};
+  let arrayString = string.split('');
+  let dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
-  for (let i = 0; i < arrayString.length; i++) {
+  for (let i = 0; i < arrayString.length; i+=1) {
     for (let key in dictionary) {
       if (arrayString[i] === key) {
         arrayString[i] = dictionary[key];
@@ -85,7 +85,7 @@ function encode(string) {
     }
   }
 
-  return arrayString.join("");
+  return arrayString.join('');
 }
 
 function decode() {
