@@ -26,9 +26,10 @@ function splitSentence(string) {
   // seu código aqui
   if (string === 'go Trybe') {
     return string.split(' ', 2);
-  }
-  if (string === 'vamo que vamo') {
+  } else if (string === 'vamo que vamo') {
     return string.split(' ', 3);
+  } else {
+    return string.split(' ');
   }
 }
 
