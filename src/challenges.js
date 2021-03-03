@@ -3,18 +3,15 @@ function compareTrue(a, b) {
   let confirma = false;
   return a === true && b === true ? !confirma : confirma;
 }
-
 // Desafio 2
 function calcArea(base, altura) {
   return (base * altura) / 2;
 }
-
 // Desafio 3
 function splitSentence(a) {
   let dado = a.split(' ');
   return dado;
 }
-
 // Desafio 4
 function concatName(a) {
   let dado = [];
@@ -23,13 +20,11 @@ function concatName(a) {
   dado = dado.join(', ');
   return dado;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let a = wins * 3;
   return a + ties;
 }
-
 // Desafio 6
 function highestCount(arrayDeNumeros) {
   let contagem = { };
@@ -47,7 +42,6 @@ function highestCount(arrayDeNumeros) {
   }
   return contagem[maiorNumero];
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
@@ -67,6 +61,34 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
+function fizzBuzz( ) {
+function verifica(tres, cinco) {
+function verificaFalse(tres, cinco) {
+  let resposta = '';
+  if (tres === false && cinco === false) {
+    resposta += 'bug!';
+    if (tres === true && cinco === true) {
+      resposta += 'fizzBuzz';
+    }
+  }
+  return resposta;
+}
+function verificaFizzBuzz(palavra) {
+  let saida = '';
+  if (palavra === 'fizzbuzz') {
+    saida = 'fizzBuzz';
+  } else {
+    saida = palavra;
+  }
+  return saida;
+}
+function criarArray(arrayDeNumeros) {
+  let saida = [];
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    saida[index] = '';
+  }
+  return saida;
+}
   let resposta = criarArray(arrayDeNumeros);
   let tres = false;
   let cinco = false;
@@ -87,10 +109,46 @@ function fizzBuzz(arrayDeNumeros) {
   }
   return resposta;
 }
-
-// Desafio 9
-function  encode() {
-  //Escreva aqui seu código
+//Desafio 9
+function encode(frase) {
+  let separado = frase.split('');
+  for (let caracter in separado) {
+    if ({}.hasOwnProperty.call(separado, caracter)) {
+      if (separado[caracter] === 'a') {
+        separado[caracter] = 1;
+      } if (separado[caracter] === 'e') {
+        separado[caracter] = 2;
+      } if (separado[caracter] === 'i') {
+        separado[caracter] = 3;
+      } if (separado[caracter] === 'o') {
+        separado[caracter] = 4;
+      } if (separado[caracter] === 'u') {
+        separado[caracter] = 5;
+      }
+    }
+  }
+  let juntoEncode = separado.join('');
+  return juntoEncode;
+}
+function decode(frase) {
+  let separado = frase.split('');
+  for (let caracter in separado) {
+    if ({}.hasOwnProperty.call(separado, caracter)) {
+        if (separado[caracter] === '1') {
+        separado[caracter] = 'a';
+      } if (separado[caracter] === '2') {
+        separado[caracter] = 'e';
+      } if (separado[caracter] === '3') {
+        separado[caracter] = 'i';
+      } if (separado[caracter] === '4') {
+        separado[caracter] = 'o';
+      } if (separado[caracter] === '5') {
+        separado[caracter] = 'u';
+      }
+    }  
+  }
+  let juntoDecode = separado.join('');
+  return juntoDecode;
 }
 
 module.exports = {
