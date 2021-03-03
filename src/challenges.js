@@ -97,9 +97,54 @@ function footballPoints(wins, ties) {
 // console.log(`footballPoints(0, 0) = ${footballPoints(0, 0)} pontos`);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+/*
+  Essa função recebe um array de números e retorna o maior deles.
+ */
+function highestNumber(array) {
+  let highest = array[0];
+
+  for (let index = 1; index < array.length; index += 1) {
+    if (array[index] > highest) {
+      highest = array[index];
+    }
+  }
+
+  return highest;
 }
+
+/*
+  Essa função recebe um array de números e retorna a quantidade de vezes que o maior deles se repete.
+
+  Foi utilizado o loop for...of para obter diretamente o valor de cada posição e como ele não será modificado dentro do loop, a variavel number foi declarada como const.
+
+  Material consultado sobre o loop for...in
+  https://www.w3schools.com/js/js_loop_forin.asp
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in
+
+  Material consultado sobre o loop for...of
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
+ */
+function highestCount(array) {
+  let highest = highestNumber(array);
+  let repetitionCount = 0;
+
+  for (const number of array) {
+    if (number === highest) {
+      repetitionCount += 1;
+    }
+  }
+
+  return repetitionCount;
+}
+
+// let array = [9, 1, 2, 3, 9, 5, 7];
+// console.log(`highestCount(${array}) = ${highestCount(array)}`);
+
+// array = [0, 4, 4, 4, 9, 2, 1];
+// console.log(`highestCount(${array}) = ${highestCount(array)}`);
+
+// array = [0, 0, 0];
+// console.log(`highestCount(${array}) = ${highestCount(array)}`);
 
 // Desafio 7
 function catAndMouse() {
