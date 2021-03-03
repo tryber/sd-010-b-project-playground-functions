@@ -30,20 +30,22 @@ function footballPoints(wins, ties) {
   return totalpoints;
 }
 // Desafio 6
-function highestCount(array) {
-  let max = array[0];
-  let nVezes = 0;
-  //Verificar qual maior número
-  for(let key in array){
-    if(array[key+1] >= max){
-      max = array[key+1];
+function highestCount(arrayDeNumeros) {
+  let contagem = { };
+  let maiorNumero = 0;
+  for (let itens of arrayDeNumeros) {
+    contagem[itens] = 0;
+  }
+  for (let itens of arrayDeNumeros) {
+    contagem[itens] += 1;
+  }
+  for (let itens in arrayDeNumeros) {
+    if (itens > maiorNumero) {
+      itens = maiorNumero;
     }
   }
-
-  for(let key in array)
-    if(array[key] === max) nVezes++;
-  
-  return nVezes;
+  return contagem[maiorNumero];
+}
 
 // Desafio 7
 
@@ -58,26 +60,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(entrada) {
-  let saida = [];
-
-  for (let key = 0; key < entrada.length; key++) {
-    if (entrada[chave] % 3 == 0 && entrada[chave] % 5 == 0 && entrada[chave] % 2! = 0 ) {
-      saida.push("fizzBuzz")
+function  fizzBuzz ( arrayDeNumeros )  {
+  let  resposta  =  [ ] ;
+  for  ( let  index  =  0 ;  index  <  arrayDeNumeros . length ;  index  + =  1 )  {
+    if  ( ( arrayDeNumeros [ index ] % 3  ===  0 )  &&  ( arrayDeNumeros [ index ] % 5  ===  0 ) ) {
+      RESPOSTA . push ( 'fizzbuzz' ) ;
     }
-    else if (entrada[chave] % 3 == 0 && entrada[chave] % 2! = 0 )
-    {
-      saida.empurre("fizz");
+    else  if  ( arrayDeNumeros [ index ] % 3  ===  0 ) {
+      RESPOSTA . empurre ( 'fizz' ) ;
     }
-    else if (entrada[chave] % 5 == 0 && entrada[chave] % 2! = 0 ) {
-      saida.push("Buzz");
+    else  if  ( arrayDeNumeros [ index ] % 5  ===  0 ) {
+      RESPOSTA . push ( 'zumbido' ) ;
     }
-    else {
-      saida.push("bug!");
+    else  {
+      RESPOSTA . push ( 'bug!' ) ;
     }
   }
-  return saida;
+  retorno  resposta ;
 }
+
 
 // Desafio 9
 function encode() {
