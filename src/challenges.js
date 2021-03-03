@@ -50,7 +50,8 @@ function concatName(fraseArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-    return wins * 3 + ties;
+  return wins * 3 + ties;
+}
 //console.log(footballPoints(14, 8));
 
 // Desafio 6
@@ -79,11 +80,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato1 = cat1 - mouse;
   let distanciaGato2 = cat2 - mouse;
 
-  if(distanciaGato1 < distanciaGato2 ){
+  if (distanciaGato1 < distanciaGato2) {
 
     return 'cat1';
 
-  } else if (distanciaGato1 > distanciaGato2){
+  } else if (distanciaGato1 > distanciaGato2) {
 
     return 'cat2';
 
@@ -94,7 +95,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
 }
-//console.log(catAndMouse(0, 7, 7));
+//console.log(catAndMouse(0, 12, 6));
 
 
 // Desafio 8
