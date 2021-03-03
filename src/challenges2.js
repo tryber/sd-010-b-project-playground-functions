@@ -21,7 +21,7 @@ function generatePhoneNumber(phone) {
   if (phone.length == 11) {
     let isValid = true;
     let moreThanThree = 0;
-    let phoneSorted = phone.split("").sort();
+    let phoneSorted = phone.split('').sort();
     let currentNumber = phoneSorted[0];
     for (let i = 0; i < phoneSorted.length; i++) {
       if (phoneSorted[i] != currentNumber) {
@@ -36,7 +36,7 @@ function generatePhoneNumber(phone) {
       }
     }
     if (isValid) {
-      phoneSorted = phone.split("");
+      phoneSorted = phone.split('');
       // https://stackoverflow.com/questions/586182/how-to-insert-an-item-into-an-array-at-a-specific-index-javascript
       phoneSorted.splice(0, 0, '(');
       phoneSorted.splice(3, 0, ')');
