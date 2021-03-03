@@ -39,11 +39,11 @@ console.log(footballPoints(0, 0))
 function highestCount(valores) {
   for (let iArray = 0; iArray < valores.length; iArray += 1) {
     let repete = 0
-      for (let array2 = 0; array2 < valores[iArray].length; array2 +=1){
-        if (valores[iArray] === valores[array2]) {
+    for (let array2 = 0; array2 < valores[iArray].length; array2 += 1) {
+      if (valores[iArray] === valores[array2]) {
         repete += 1;
-        }
       }
+    }
   }
 }
 
@@ -81,16 +81,13 @@ function fizzBuzz(array) {
   let calculo = [];
   for (let indexNumb = 0; indexNumb < param.length; indexNumb += 1) {
     if (param[indexNumb] % 3 == 0 && param[indexNumb] % 5 == 0) {
-      calculo.push ("fizzBuzz")
-    }
-    else if (param[indexNumb] % 3 == 0) {
-      calculo.push ("fizz");
-    }
-    else if (param[indexNumb] % 5 == 0) {
-      calculo.push ("buzz");
-    }
-    else {
-      calculo.push ("bug!");
+      calculo.push("fizzBuzz")
+    } else if (param[indexNumb] % 3 == 0) {
+      calculo.push("fizz");
+    } else if (param[indexNumb] % 5 == 0) {
+      calculo.push("buzz");
+    } else {
+      calculo.push("bug!");
     }
   }
   return calculo;
@@ -102,28 +99,52 @@ function encode(string) {
   let stringPronto = [];
   let stringPronta = "";
   for (let key in string) {
-      if (string[key] === "a") {
-          stringPronto.push("1");
-       }else if (string[key] === "e") {
-          stringPronto.push("2");
-       }else if (string[key] === "i") {
-           stringPronto.push("3");
-       }else if (string[key] === "o") {
-           stringPronto.push("4");
-       }else if (string[key] === "u") {
-           stringPronto.push("5");
-       } else {
-           stringPronto.push(string[key]);
-       }
-   } for (let key in stringPronto) {
-       stringPronta += stringPronto[key];
-   }
-   return stringPronta
-}console.log(encode("hi there!"))
-
-function decode() {
-  // seu código aqui
+    if (string[key] === "a") {
+      stringPronto.push("1");
+    } else if (string[key] === "e") {
+      stringPronto.push("2");
+    } else if (string[key] === "i") {
+      stringPronto.push("3");
+    } else if (string[key] === "o") {
+      stringPronto.push("4");
+    } else if (string[key] === "u") {
+      stringPronto.push("5");
+    } else {
+      stringPronto.push(string[key]);
+    }
+  }
+  for (let key in stringPronto) {
+    stringPronta += stringPronto[key];
+  }
+  return stringPronta
 }
+console.log(encode("hi there!"))
+
+function decode(string) {
+  let stringPronto = [];
+  let stringPronta = "";
+  for (let key in string) {
+    if (string[key] === "1") {
+      stringPronto.push("a");
+    } else if (string[key] === "2") {
+      stringPronto.push("e");
+    } else if (string[key] === "3") {
+      stringPronto.push("i");
+    } else if (string[key] === "4") {
+      stringPronto.push("o");
+    } else if (string[key] === "5") {
+      stringPronto.push("u");
+    } else {
+      stringPronto.push(string[key]);
+    }
+  }
+  for (let key in stringPronto) {
+    stringPronta += stringPronto[key];
+  }
+  return stringPronta
+}
+console.log(decode("h3 th2r2!"))
+
 
 module.exports = {
   calcArea,
