@@ -89,27 +89,40 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(6, 9, 9));
 
 // Desafio 8
+function both3and5(umaLista, key){
+  if (umaLista[key] % 3 === 0 && umaLista[key] % 5 === 0){
+    return 'fizzBuzz'
+  }
+  return is3(umaLista, key);
+}
+function is5(umaLista, key){
+  if(umaLista[key] % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
+function is3(umaLista, key){
+  if (umaLista[key] % 3 === 0) {
+    return 'fizz'
+  }
+  return is5(umaLista, key)
+}
 function fizzBuzz(umaLista) {
   let out = [];
   for (let key in umaLista) {
-    if (umaLista[key] % 3 === 0 && umaLista[key] % 5 === 0) {
-      out.push('fizzBuzz');
-    } else if (umaLista[key] % 3 === 0 || umaLista[key] % 5 === 0) {
-      (umaLista[key] % 3 === 0) ? out.push('fizz') : out.push('buzz');
-    } else {
-      out.push('bug!');
-    }
+    out.push(both3and5(umaLista, key));
   }
   return out;
 }
 
 // // teste intem 8
-// // array0 = [2, 15, 7, 9, 45];
-// // array1 = [7, 9];
-// // array2 = [9, 25];
-// // console.log(fizzBuzz(array0));
-// // console.log(fizzBuzz(array1));
-// // console.log(fizzBuzz(array2));
+array0 = [2, 15, 7, 9, 45];
+array1 = [7, 9];
+array2 = [9, 25];
+console.log(fizzBuzz(array0));
+console.log(fizzBuzz(array1));
+console.log(fizzBuzz(array2));
 
 // // Desafio 9
 // function encode(umaFrase) {
@@ -174,8 +187,8 @@ module.exports = {
   catAndMouse,
   compareTrue,
   concatName,
-  decode,
-  encode,
+  // decode,
+  // encode,
   fizzBuzz,
   footballPoints,
   highestCount,
