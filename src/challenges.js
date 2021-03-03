@@ -80,7 +80,7 @@ function encode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
 
   for (let i in arrayString) {
@@ -99,12 +99,12 @@ function decode(string) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
+    u: 5,
   };
-  
+
   for (let i in arrayString) {
     for (let key in dictionary) {
-      let number = parseInt(arrayString[i]) != NaN ? parseInt(arrayString[i]) : arrayString[i]
+      let number = parseInt(arrayString[i]) !== NaN ? parseInt(arrayString[i]) : arrayString[i];
       arrayString[i] = number === dictionary[key] ? key : arrayString[i];
     }
   }
