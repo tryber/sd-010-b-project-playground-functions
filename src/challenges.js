@@ -33,8 +33,8 @@ function splitSentence(phrase) {
 function concatName(names = []) {
   // seu código aqui
   let sem = [] = names[names.length - 1]
-  let sema = names[names.length - names.length]
-  let seman = sem + " " +  sema;
+  let sema = names[0]
+  let seman = sem + ', ' +  sema;
   return seman;
 }
 
