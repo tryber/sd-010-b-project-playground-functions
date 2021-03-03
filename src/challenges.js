@@ -133,57 +133,40 @@ console.log(fizzBuzz([9, 25]));
 // consultado o site para essa parte e a seguinte:
 // https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176#:~:text=O%20m%C3%A9todo%20replace()%20percorre,feita%2C%20%C3%A9%20devolvida%20pelo%20m%C3%A9todo.
 function encode(arrayEncode) {
-  // seu código aqui
-  let fraseA = arrayEncode;
-  let fraseE = fraseA;
-  let fraseI = fraseE;
-  let fraseO = fraseI;
-  let fraseU = fraseO;
-  let encoded;
-  for (let index = 0; index < arrayEncode.length; index += 1) {
-    if (arrayEncode[index] === 'a') {
-      fraseA = arrayEncode.replace(/a/g, 1);
-    } else if (fraseA[index] === 'e') {
-      fraseE = fraseA.replace(/e/g, 2);
-    } else if (fraseE[index] === 'i') {
-      fraseI = fraseE.replace(/i/g, 3);
-    } else if (fraseI[index] === 'o') {
-      fraseO = fraseI.replace(/o/g, 4);
-    } else if (fraseO[index] === 'u') {
-      fraseU = fraseO.replace(/u/g, 5);
-    }
-    encoded = fraseU;
-  }
-  return encoded;
-}
-// console log
-console.log(encode('urso indio chuva de gatinho malhado com olho verde e azul'));
+  let encodings = [
+    { vowel: 'a', number: '1' },
+    { vowel: 'e', number: '2' },
+    { vowel: 'i', number: '3' },
+    { vowel: 'o', number: '4' },
+    { vowel: 'u', number: '5' },
+  ];
+  let encodedString = arrayEncode;
+  encodings.forEach(encoding => {
+    encodedString = encodedString.replaceAll(encoding.vowel, encoding.number);
+  });
 
+  return encodedString;
+}
+
+console.log(encode('urso indio chuva de gatinho malhado com olho verde e azul'));
 // 
 function decode(arrayDecode) {
   // seu código aqui
-  let num1 = arrayDecode;
-  let num2 = num1;
-  let num3 = num2;
-  let num4 = num3;
-  let num5 = num4;
-  let decoded;
-  for (let index = 0; index < arrayDecode.length; index += 1) {
-    if (arrayDecode[index] === '1') {
-      num1 = arrayDecode.replace(/1/g, 'a');
-    } else if (num1[index] === '2') {
-      num2 = num1.replace(/2/g, 'e');
-    } else if (num2[index] === '3') {
-      num3 = num2.replace(/3/g, 'i');
-    } else if (num3[index] === '4') {
-      num4 = num3.replace(/4/g, 'o');
-    } else if (num4[index] === '5') {
-      num5 = num4.replace(/5/g, 'u');
-    }
-    decoded = num5;
-  }
-  return decoded;
+  let encodings = [
+    { vowel: 'a', number: '1' },
+    { vowel: 'e', number: '2' },
+    { vowel: 'i', number: '3' },
+    { vowel: 'o', number: '4' },
+    { vowel: 'u', number: '5' },
+  ];
+  let encodedString = arrayDecode;
+  encodings.forEach(decoding => {
+    encodedString = encodedString.replaceAll(decoding.number, decoding.vowel);
+  });
+
+  return encodedString;
 }
+
 // console log
 console.log(decode('5rs4 ch5v1 d2 g1t3nh4 m1lh1d4 c4m 4lh4 v2rd2 2 1z5l 12345 1234512345'));
 
