@@ -11,7 +11,7 @@ function techList(techArray, yourName) {
   let objArr = [];
   let sortTechList = techArray.sort();
   for (const key in sortTechList) {
-    objArr.push({tech: sortTechList[key], name: yourName})
+    objArr.push({ tech: sortTechList[key], name: yourName });
   }
   return objArr;
 }
