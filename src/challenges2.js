@@ -1,6 +1,6 @@
 // Desafio 10
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]))
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]))
 function techList(array) {
   // let array =["React", "Jest", "HTML", "CSS", "JavaScript"]
   // let name ="Lucas"
