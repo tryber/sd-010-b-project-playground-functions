@@ -32,7 +32,7 @@ function generatePhoneNumber(number) {
     if (number.length == 11) {
       return true
     } else {
-      return 'Array com tamanho incorreto.'
+      return false
     }
   }
 
@@ -49,15 +49,17 @@ function generatePhoneNumber(number) {
     return validaNum
   }
 
-  if (arrNum() === 'Array com tamanho incorreto.' || validator() === false || repeat >= 3) {
+  if (validator() === false || repeat >= 3) {
     return 'não é possível gerar um número de telefone com esses valores'
-  }  else {
+  } else if (arrNum() === false) {
+    return 'Array com tamanho incorreto.'
+  } else {
     return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
   }
   }
 
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1,1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
