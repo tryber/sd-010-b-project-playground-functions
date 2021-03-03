@@ -98,7 +98,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(0, 3, 2))
 console.log(catAndMouse(0, 6, 12))
-console.log(catAndMouse(0, 2, 2))
+console.log(catAndMouse(2, 2, 2))
 
 // Desafio 8
 
