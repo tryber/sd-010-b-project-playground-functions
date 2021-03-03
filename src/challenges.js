@@ -95,7 +95,7 @@ function fizzBuzz(umaLista) {
     if (umaLista[key] % 3 === 0 && umaLista[key] % 5 === 0) {
       out.push('fizzBuzz');
     } else if (umaLista[key] % 3 === 0 || umaLista[key] % 5 === 0) {
-      (umaLista[key] % 3 === 0) ? out.push('fizz'): out.push('buzz');
+      (umaLista[key] % 3 === 0) ? out.push('fizz') : out.push('buzz');
     } else {
       out.push('bug!');
     }
@@ -142,23 +142,23 @@ function decode(umaFrase) {
   let lista = umaFrase.split('');
   for (let key in lista) {
     switch (lista[key]) {
-      case '1':
-        lista[key] = 'a';
-        break;
-      case '2':
-        lista[key] = 'e';
-        break;
-      case '3':
-        lista[key] = 'i';
-        break;
-      case '4':
-        lista[key] = 'o';
-        break;
-      case '5':
-        lista[key] = 'u';
-        break;
-      default:
-        break;
+    case '1':
+      lista[key] = 'a';
+      break;
+    case '2':
+      lista[key] = 'e';
+      break;
+    case '3':
+      lista[key] = 'i';
+      break;
+    case '4':
+      lista[key] = 'o';
+      break;
+    case '5':
+      lista[key] = 'u';
+      break;
+    default:
+      break;
     }
   }
   return lista.join('');

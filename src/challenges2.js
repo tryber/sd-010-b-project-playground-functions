@@ -6,13 +6,13 @@ function techList(array, name) {
     for (let key in ordenada) {
       let dicionario = {
         tech: ordenada[key],
-        name: name
+        name: name,
       };
       lista.push(dicionario);
     }
     return lista;
   } 
-    return 'Vazio!';
+  return 'Vazio!';
 }
 
 // teste itam 10
