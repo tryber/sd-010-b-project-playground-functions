@@ -124,55 +124,71 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
+function compareString(string) {
+  if (string === 'a') {
+    string = 1;
+  } else {
+    string = 2;
+  }
+  return string;
+}
+
+function compareString2(string) {
+  if (string === 'i') {
+    string = 3;
+  } else if (string === 'o') {
+    string = 4;
+  } else if (string === 'u') {
+    string = 5;
+  }
+  return string;
+}
+
 function encode(phrase) {
   for (let index in phrase) {
-    switch (phrase[index]) {
-      case 'a':
-        phrase = phrase.replace(phrase[index], 1);
-        break;
-        case 'e':
-        phrase = phrase.replace(phrase[index], 2);
-        break;
-      case 'i':
-        phrase = phrase.replace(phrase[index], 3);
-        break;
-      case 'o':
-        phrase = phrase.replace(phrase[index], 4);
-        break;
-      case 'u':
-        phrase = phrase.replace(phrase[index], 5);
-        break;
-      }
+    if (phrase[index] === 'a' || phrase[index] === 'e') {
+      phrase = phrase.replace(phrase[index], compareString(phrase[index]));
+    } else {
+      phrase = phrase.replace(phrase[index], compareString2(phrase[index]));
+    }
   }
   return phrase;
 }
 
 console.log(encode('hi, there!'));
 
+function compareValor(string) {
+  if (string === '1') {
+    string = 'a';
+  } else {
+    string = 'e';
+  }
+  return string;
+}
+
+function compareValor2(string) {
+  if (string === '3') {
+    string = 'i';
+  } else if (string === '4') {
+    string = 'o';
+  } else if (string === '5') {
+    string = 'u';
+  }
+  return string;
+}
+
 function decode(phrase) {
-  for (let index in phrase) {  
-    switch (phrase[index]) {
-      case '1': 
-        phrase = phrase.replace(phrase[index], 'a');
-        break;   
-      case '2':
-        phrase = phrase.replace(phrase[index], 'e');
-        break;
-      case '3':
-        phrase = phrase.replace(phrase[index], 'i');
-        break;
-      case '4':
-        phrase = phrase.replace(phrase[index], 'o');
-        break;
-      case '5':
-        phrase = phrase.replace(phrase[index], 'u');
-        break;      
+  for (let index in phrase) {
+    if (phrase[index] === '1' || phrase[index] === '2') {
+      phrase = phrase.replace(phrase[index], compareValor(phrase[index]));
+    } else {
+      phrase = phrase.replace(phrase[index], compareValor2(phrase[index]));
     }
   }
   return phrase;
 }
 
-console.log(decode("h3 th2r2!"));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
