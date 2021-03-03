@@ -3,7 +3,9 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if ((value1 === true) && (value2 === true)) {
     return true;
-  } else if (((value1 === false) && (value2 === true)) || ((value1 === true) && (value2 === false)) || ((value1 === false) && (value2 === false))) {
+  } else if (((value1 === false) && (value2 === true)) || ((value1 === true) && (value2 === false))) {
+    return false;
+  } else {
     return false;
   }
 }
