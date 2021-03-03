@@ -12,7 +12,6 @@ function techList(arrayTech, name) {
   }
 
   return objArray;
-
 }
 
 
