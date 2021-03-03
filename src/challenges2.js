@@ -17,24 +17,26 @@ function techList(arr, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(arr) {
-  const conditionals = () => {
-    if (arr.length !== 11) return 'Array com tamanho incorreto.';
-    let telefone = arr.toString().replace(/\D/g, '');
-    let match = telefone.match(/^(\d{2})(\d{5})(\d{4})$/);
-    return `(${match[1]}) ${match[2]}-${match[3]}`;
-  };
-  const verify = () => {
-    let numbers = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
-    for (let item of arr) {
-      numbers[item] += 1;
-      if (numbers[item] >= 3 || item < 0 || item > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+
+const concat = (arr) => {
+  let telefone = arr.toString().replace(/\D/g, '');
+  let match = telefone.match(/^(\d{2})(\d{5})(\d{4})$/);
+  return `(${match[1]}) ${match[2]}-${match[3]}`;
+};
+const conditionals = (arr, numbers) => {
+  for (let item of arr) {
+    numbers[item] += 1;
+    if (numbers[item] >= 3 || item < 0 || item > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-    return conditionals();
-  };
-  return verify();
+  }
+  return concat(arr);
+};
+
+function generatePhoneNumber(arr) {
+  let numbers = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
+  if (arr.length !== 11) return 'Array com tamanho incorreto.';
+  return conditionals(arr, numbers);
 }
 
 // Desafio 12
