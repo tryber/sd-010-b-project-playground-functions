@@ -76,8 +76,8 @@ function fizzBuzz(array) {
 function encode(string) {
   let arrayString = string.split('');
   let dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-  for(let i in arrayString){
-    for(let key in dictionary){
+  for (let i in arrayString) {
+    for (let key in dictionary) {
       arrayString[i] = arrayString[i] === key ? dictionary[key] : arrayString[i];
     }
   }
