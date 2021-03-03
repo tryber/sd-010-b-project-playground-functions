@@ -4,27 +4,27 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber(numeros) {
+function generatePhoneNumber(num) {
   let mensagem;
-  let maiorNum = Math.max(...numeros);
-  let menorNumero = Math.min(...numeros);
+  let maiorNum = Math.max(...num);
+  let menorNumero = Math.min(...num);
   let contadorMaiorNumero = 0;
-  for (let key in numeros) {
-    if (numeros[key] === maiorNum) {
+  for (let key in num) {
+    if (num[key] === maiorNum) {
       contadorMaiorNumero += 1;
     }
   }
-  if (numeros.length > 11) {
+  if (num.length < 11 || num.length > 11) {
     mensagem = 'Array com tamanho incorreto.';
   } else if (maiorNum > 10 || menorNumero > 0 || contadorMaiorNumero >= 3) {
     mensagem = 'não é possível gerar um número de telefone com esses valores';
 
   } else {
-    mensagem = '(' + numeros[0] + numeros[1] + ')' + ' ' + numeros[2] + numeros[3] + numeros[4] + numeros[5] + numeros[6] + '-' + numeros[7] + numeros[8] + numeros[9] + numeros[10];
+    mensagem = '(' + num[0] + num[1] + ')' + ' ' + num[2] + num[3] + num[4] + num[5] + num[6] + '-' + num[7] + num[8] + num[9] + num[10];
   }
   return mensagem;
 }
-let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 10];
+let numeros = [9, 2, 3, 0, 5, -6, 7, 8, -7];
 console.log(generatePhoneNumber(numeros));
 
 // Desafio 12
