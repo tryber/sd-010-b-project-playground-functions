@@ -31,13 +31,13 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(number) {
-  let highN;
-  for (let index = 0; index < number.length; index +=1) {    
-    if (Math.abs (number) == number[index]) {
-      highN = highN + 1;
-    }
+  let highN = number[Math.abs(number)];
+  // for (let index = 0; index < number.length; index +=1) {    
+    // if (Math.abs (number=[]) == number[index]) {
+    //   highN = highN + 1;
+    // }
     return highN;
-  }
+  // }
 }
 console.log (highestCount([9, 1, 2, 3, 9, 5, 7]));
 
@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(mouse - cat1) > Math.abs (mouse - cat2)) {
     return 'cat2'
   } else {
-    return 'gatos se trobaram e o rato fugiu';
+    return 'os gatos trombam e o rato foge';
   }
 }
 
