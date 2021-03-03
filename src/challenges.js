@@ -74,12 +74,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   else if(distanciaA < distanciaB){
     primeiroPegar = 'Cat1';
-  }else{
+  }else if(distanciaB === distanciaA){
     primeiroPegar = 'Os gatos trombam e o rato foge.';
   };
   return primeiroPegar;
 };
-console.log(catAndMouse(10,1,5));
+console.log(catAndMouse(10,5,5));
 
 // Desafio 8
 function fizzBuzz() {
