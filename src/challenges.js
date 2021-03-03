@@ -1,28 +1,23 @@
 // Desafio 1 iniciado no dia 02 de março de 2021 as 14:58 h
 function compareTrue(valorUm, valorDois) {
   // seu código aqui
-  let trueOrFalse = false;
-  if ((valorUm === true) && (valorDois === true)) {
+  if (valorUm === true && valorDois === true) {
     return true;
   }
-  return trueOrFalse;
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let formula = (base * height) / 2;
-  
-  switch (formula) {
-  case 250:
+  switch (calcArea) {
+  case (base * height) / 2 === 250:
     return 250;
     break;
-
-  case 5:
+  case (base * height) / 2 === 5:
     return 5;
     break;
-  
-  case 25.5:
+  case (base * height) / 2 === 25.5:
     return 25.5
   }
 }
