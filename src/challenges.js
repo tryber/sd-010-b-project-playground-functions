@@ -39,27 +39,37 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(0, 0));
 
 // Desafio 6
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(array) {
   let num1 = 0;
+  let num2 = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (index === array[index]) {
-      num1 += array[index];
+    if (array[index] >= num1) {
+      num1 = array[index];
     }
   }
-  return num1;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === num1) {
+      num2 += 1;
+    }
+  }
+  return num2;
 }
+/* Resposta: Com a ajuda do Emerson Saturnino, consegui resolver esse requisito. Foi feito
+dois for para iterar duas vezes o mesmo array. O primeiro for faz a verificação do maior
+número da array e adiciona o numero na var. num1. O Segundo for faz a verificação novamente
+na array e compara com a variavel num1. Cada numero repetido é amazernado na var. num2 */
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  }else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+  } if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  }else{
-    return 'os gatos trombam e o rato foge';
-  } 
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // console.log(catAndMouse(0, 6, 12));
