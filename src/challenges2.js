@@ -18,14 +18,11 @@ function techList(arr, name) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  let numbers = {};
-  const conditionals = (item) => {
-    let num = numbers[item] ? (numbers[item] += 1) : (numbers[item] = 1);
-    return num;
-  };
+  let numbers = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
+
   if (arr.length === 11) {
     for (let item of arr) {
-      conditionals(item);
+      numbers[item] += 1;
       if (numbers[item] >= 3 || item < 0 || item > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
       }

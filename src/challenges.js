@@ -26,10 +26,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arr) {
   let count = 0;
-  let major = Math.max(arr[0], arr[arr.length - 1]);
+  let highest = Math.max(arr[0], arr[arr.length - 1]);
 
   for (let num of arr) {
-    if (num === major) {
+    if (num === highest) {
       count += 1;
     }
   }
