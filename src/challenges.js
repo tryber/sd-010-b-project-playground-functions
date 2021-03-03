@@ -73,9 +73,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanciaB < distanciaA) {
     primeiroPegar = 'cat2';
   } else if (distanciaA < distanciaB) {
-  primeiroPegar = 'cat1';
+    primeiroPegar = 'cat1';
   } else if (distanciaB === distanciaA) {
-  primeiroPegar = 'Os gatos trombam e o rato foge';
+    primeiroPegar = 'Os gatos trombam e o rato foge';
   }
   return primeiroPegar;
 }
