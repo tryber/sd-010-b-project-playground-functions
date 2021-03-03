@@ -5,11 +5,11 @@ function techList(tech, name) {
   if (tech.length <= 0) {
     return 'Vazio!';
   }
-    for (let index in tech){
-      jobs.push({
-        tech: tech[index],
-        name: name,
-    });
+  for (let index in tech){
+    jobs.push({
+      tech: tech[index],
+      name: name,
+  });
   }
   return jobs;
 }

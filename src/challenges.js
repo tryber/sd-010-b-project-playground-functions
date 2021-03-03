@@ -65,7 +65,7 @@ function fizzBuzz(fiz) {
 }
 // Desafio 9
 function encode(string) {
-  let encodeMap = {
+  let encodeS = {
     a: 1,
     e: 2,
     i: 3,
@@ -73,16 +73,17 @@ function encode(string) {
     u: 5,
   };
   let encodedString = '';
-  for (let char of string) {
-    if (encodeMap[char]) {
-      encodedString += encodeMap[char];
+  for (let index of string) {
+    if (encodeS[index]) {
+      encodedString += encodeS[index];
     } else {
-      encodedString += char;
+      encodedString += index;
     }
   }
   return encodedString;
-}
-console.log(encode('hi there'))
+};
+console.log(encode('hi there'));
+
 function decode(string) {
   let encodeMap = {
     1: 'a',
@@ -92,16 +93,16 @@ function decode(string) {
     5: 'u',
   };
   let decodedString = '';
-  for (let char of string) {
-    if (encodeMap[char]) {
-      decodedString += encodeMap[char];
+  for (let index of string) {
+    if (encodeMap[index]) {
+      decodedString += encodeMap[index];
     } else {
-      decodedString += char;
+      decodedString += index;
     }
   }
   return decodedString;
-}
-console.log(decode('h3 th2r2!'))
+};
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
