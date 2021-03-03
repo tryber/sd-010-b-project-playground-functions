@@ -56,15 +56,28 @@ console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let existencia = (((lineA < lineB + lineC) && (lineA > Math.abs(lineB-lineC))) || ((lineB < lineA + lineC) && (lineB > Math.abs(lineA-lineC))) || ((lineC < lineB + lineA) && (lineC > Math.abs(lineB-lineC))));
-return existencia
+  let existencia = (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB-lineC))) || ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA-lineC))) || ((lineC < (lineB + lineA)) && (lineC > Math.abs(lineB-lineA))));
+  return existencia
 }
+console.log(triangleCheck(10, 3, 4))
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let regex = /\d+/g;
+  let numeros = frase.match(regex);
+  let soma=0;
+  for (index in numeros) {
+    soma = soma + parseInt(numeros[index]);
+  }
+  if (soma >1) {
+  saida = `${soma} copos de água`;
+  } else {
+    saida = `${soma} copo de água`
+  }
+  return saida
 }
+console.log(hydrate('10 cachaça, 50 cervejas e 10 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
