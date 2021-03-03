@@ -42,7 +42,7 @@ function highestCount(array) {
   return count
 }
 // Desafio
-console.log(catAndMouse(1,9,-12))
+//console.log(catAndMouse(1,9,-12))
 function catAndMouse(mouse, cat1, cat2) {
 
   let distcat1 = Math.abs((mouse - cat1));
