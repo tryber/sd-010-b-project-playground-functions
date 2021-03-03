@@ -29,7 +29,7 @@ function concatName(array) {
   for (let i = 0; i < array.length; i += 1) {
     ultimoItem = array[i];
   }
-  return ultimoItem + ', ' + primeiroItem;
+  return `${ultimoItem}, ${primeiroItem}`;
 }
 
 // Desafio 5
