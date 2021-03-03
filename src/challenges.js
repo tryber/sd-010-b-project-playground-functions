@@ -1,12 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  }
-  if (a === true && b === false) {
-    return false;
-  } else if (a === false && b === false) {
-    return false;
+  let index = '';
+  if (a && b) {
+    index = true
+  } else {
+    index = false
   }
 }
 
