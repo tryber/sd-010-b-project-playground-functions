@@ -24,23 +24,33 @@ function techList(array, name) {
 // console.log(techList(array1, namePessoal));
 
 // Desafio 11
+function verificaCarateres(array, key){
+  let verificacao = true; 
+  (array[key] < 0 || array[key] > 9) ? verificacao = false : verificacao = true;
+  if ( verificacao === false){
+    return verificacao;
+  }
+  return repeticao(array, key);
+}
+
+function repeticao(array, key){
+  let counter = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === array[key]) {
+      counter += 1;
+    }
+    (counter >= 3) ? verificacao = false : verificacao = true;
+  }
+  return verificacao;
+}
+
 function generatePhoneNumber(array) {
-  let invalido = true;
+  var verificacao = true;
   if (array.length === 11) {
     for (let key in array) {
-      if (array[key] < 0 || array[key] > 9) {
-        invalido = false;
-        break;
-      }
-      let counter = 0;
-      for (let i = 0; i < array.length; i += 1) {
-        if (array[i] === array[key]) {
-          counter += 1;
-        }
-      }
-      (counter >= 3) ? invalido = false : invalido = true;
+      var verificacao = verificaCarateres(array, key);
     }
-    if (invalido !== false) {
+    if (verificacao !== false) {
       return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
     }
     return 'não é possível gerar um número de telefone com esses valores';
