@@ -28,7 +28,7 @@ function splitSentence() {
   // seu código aqui
   let organiza = "";
   if (organiza === splitSentence) {
-    return organiza.split("", "");
+    return organiza.split([""[", "]]);
   }
 }
 
