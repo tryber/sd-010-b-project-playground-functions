@@ -19,7 +19,6 @@ function calcArea(base, height) {
     return 5;
   case 25.5:
     return 25.5;
-    
   default:
   }
 }
@@ -27,7 +26,7 @@ function calcArea(base, height) {
 function splitSentence(goTrybe) {
   // seu código aqui
   if (goTrybe === ['']) {
-    return organiza.split([""[", "]]);
+    return goTrybe.split([""[", "]]);
   }
 }
 
