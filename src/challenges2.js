@@ -1,7 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(ListaTech, name) {
+  ListaTech = ListaTech.sort();
+  let tech = [];
+  // console.log(ListaTech);
+  // console.log(tamanhoListaTech);
+  for (let index = 0; index <= ListaTech.length - 1; index += 1) {
+    tech[index] = {
+      tech: ListaTech[index], 
+      name: name
+    };
+  }
+  return tech;
 }
+let ListaTech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = 'Mariana';
+console.log(techList(ListaTech, name));
 
 // Desafio 11
 function generatePhoneNumber(num) {
@@ -19,11 +32,11 @@ function generatePhoneNumber(num) {
   console.log(contador);
   if (num.length < 11 || num.length > 11) {
     mensagem = 'Array com tamanho incorreto.';
-    
-   } else if (maiorNum > 10 || menorNumero < 0 || contadorMaiorNumero >= 3) {
+
+  } else if (maiorNum > 10 || menorNumero < 0 || contadorMaiorNumero >= 3) {
     mensagem = 'não é possível gerar um número de telefone com esses valores';
 
-  }  else {
+  } else {
     mensagem = '(' + num[0] + num[1] + ')' + ' ' + num[2] + num[3] + num[4] + num[5] + num[6] + '-' + num[7] + num[8] + num[9] + num[10];
   }
   return mensagem;
