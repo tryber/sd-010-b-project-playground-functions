@@ -1,15 +1,16 @@
 // Desafio 10
 
-console.log(techList([],"lucas"))
-function techList(array, name) {
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]))
+function techList(array) {
   // let array =["React", "Jest", "HTML", "CSS", "JavaScript"]
   // let name ="Lucas"
-  let vazio = []
-   array.sort()
+  let vazio = [];
+  let lista = array.sort();
+  let name = "Lucas";
   let newArray = [];
-  for (let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < lista.length; index += 1) {
     let bloco = {
-      tech: array[index],
+      tech: lista[index],
       name: name
   }
     newArray.push(bloco);
