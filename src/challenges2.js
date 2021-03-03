@@ -4,6 +4,7 @@ function techList(array, name) {
   let arrayObjeto = [];
   let objeto = {};
   let resultado;
+  array.sort();
   if (array.length == 0) {
     resultado = "Vazio";
   } else {
@@ -11,7 +12,7 @@ function techList(array, name) {
       objeto.tech = array[index];
       objeto.name = name;
       arrayObjeto.push(objeto);
-      objeto = {};
+      objeto = {}
     }
     resultado = arrayObjeto;
   }
@@ -39,4 +40,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-console.log(techList([],"Lucas"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
