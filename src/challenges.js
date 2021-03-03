@@ -15,10 +15,10 @@ function calcArea(base, height) {
   switch (formula) {
   case 250:
     return 250;
-    break;
+    
   case 5:
     return 5;
-    break;
+    
   case 25.5:
     return 25.5;
     break;
@@ -28,7 +28,10 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-  return splitSentence.split('', ' ');
+  let organiza = "";
+  if (organiza == String) {
+    return organiza.split('');
+  }
 }
 
 // Desafio 4
