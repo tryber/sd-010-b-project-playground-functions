@@ -45,7 +45,7 @@ function footballPoints(wins,ties) {
 
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
     // seu código aqui
     // https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
     // como dito o apply passa os valores do array para função math.max e assim ela analisa o maior.
@@ -54,21 +54,16 @@ function highestCount() {
     //preciso inicializar a contagem porém quando sair do for ele será 0
     let count = 0;
     let countatt;
-    for(let i = 0;i<array.length; i+=){
-
-      if(count === maior){
-        count+=;
-      }
-      else{}
-      //estou armazenando o count em uma atualização
-      countatt = count;
-
-    }    
+    for(let i = 0;i < array.length; i+= 1){
+          if(array[i] === maior){
+            count+=1;
+          }
+        countatt = count;
+        
+    }          
          
   return countatt;
 }
-
-
 
 // Desafio 7
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
