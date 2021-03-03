@@ -105,7 +105,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   transformNumber();
 
-  let message = "";
+  let message = '';
   // Agora já podem ser compararadas de forma clara as distâncias entre os gatos e o rato:
   if (distanciaCat1 < distanciaCat2) message = 'cat1';
   else if (distanciaCat1 > distanciaCat2) message = 'cat2';
@@ -122,15 +122,15 @@ function fizzBuzz(numeros) {
   // seu código aqui
   // A array a seguir serve apenas para finalidade de teste do algoritmo:
   // numeros = [9, 25];
-  let armazenaFizzBuzz = [];
+  let saveArray = [];
 
   for (let achaFizzBuzz = 0; achaFizzBuzz < numeros.length; achaFizzBuzz += 1) {
-    if (numeros[achaFizzBuzz] % 5 === 0 && numeros[achaFizzBuzz] % 3 === 0) armazenaFizzBuzz.push('fizzBuzz');
-    else if (numeros[achaFizzBuzz] % 3 === 0) armazenaFizzBuzz.push('fizz');
-    else if (numeros[achaFizzBuzz] % 5 === 0) armazenaFizzBuzz.push('buzz');
-    else armazenaFizzBuzz.push('bug!');
+    if (numeros[achaFizzBuzz] % 5 === 0 && numeros[achaFizzBuzz] % 3 === 0) saveArray.push('fizzBuzz');
+    else if (numeros[achaFizzBuzz] % 3 === 0) saveArray.push('fizz');
+    else if (numeros[achaFizzBuzz] % 5 === 0) saveArray.push('buzz');
+    else saveArray.push('bug!');
   }
-  return armazenaFizzBuzz;
+  return saveArray;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
