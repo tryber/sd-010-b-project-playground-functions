@@ -65,7 +65,7 @@ function highestCount(numbers) {
   }
   for (let key in numbers) {
     if (numbers[key] === bigger) {
-      counter + 1;
+      counter +1;
     }
   }
   return counter;
@@ -170,7 +170,6 @@ function decode(umaFrase) {
     }
   }
   return lista.join('');
-
 }
 
 // teste item 9
