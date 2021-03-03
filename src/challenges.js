@@ -57,7 +57,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let counter = 0;
-  let maior = Math.max(...numbers)
+  let maior = Math.max(...numbers);
   for (let key in numbers) {
     if (numbers[key] === maior) {
       counter += 1;
@@ -77,16 +77,16 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaMouse1 = Math.abs(mouse - cat1);
   let distanciaMouse2 = Math.abs(mouse - cat2);
-  if (distanciaMouse1 ===  distanciaMouse2) {
+  if (distanciaMouse1 === distanciaMouse2) {
     return 'os gatos trombam e o rato foge';
   }
-   return (distanciaMouse1 < distanciaMouse2) ? 'cat1' : 'cat2';
+  return (distanciaMouse1 < distanciaMouse2) ? 'cat1' : 'cat2';
 }
 
 // teste item 7
-console.log(catAndMouse(5, 2, 7));
-console.log(catAndMouse(6, 12, 18));
-console.log(catAndMouse(6, 9, 9));
+// console.log(catAndMouse(5, 2, 7));
+// console.log(catAndMouse(6, 12, 18));
+// console.log(catAndMouse(6, 9, 9));
 
 // Desafio 8
 function fizzBuzz(umaLista) {
@@ -94,10 +94,8 @@ function fizzBuzz(umaLista) {
   for (let key in umaLista) {
     if (umaLista[key] % 3 === 0 && umaLista[key] % 5 === 0) {
       out.push('fizzBuzz');
-    } else if (umaLista[key] % 3 === 0) {
-      out.push('fizz');
-    } else if (umaLista[key] % 5 === 0) {
-      out.push('buzz');
+    }else if (umaLista[key] % 3 === 0 || umaLista[key] % 5 === 0) {
+      var resultado = (umaLista[key] % 3 === 0) ? out.push('fizz') : out.push('buzz')
     } else {
       out.push('bug!');
     }
@@ -106,12 +104,12 @@ function fizzBuzz(umaLista) {
 }
 
 // teste intem 8
-// array0 = [2, 15, 7, 9, 45];
-// array1 = [7, 9];
-// array2 = [9, 25];
-// console.log(fizzBuzz(array0));
-// console.log(fizzBuzz(array1));
-// console.log(fizzBuzz(array2));
+array0 = [2, 15, 7, 9, 45];
+array1 = [7, 9];
+array2 = [9, 25];
+console.log(fizzBuzz(array0));
+console.log(fizzBuzz(array1));
+console.log(fizzBuzz(array2));
 
 // Desafio 9
 function encode(umaFrase) {
@@ -119,8 +117,8 @@ function encode(umaFrase) {
   for (let key in lista) {
     switch (lista[key]) {
       case 'a':
-      lista[key] = 1;
-      break;
+        lista[key] = 1;
+        break;
       case 'e':
         lista[key] = 2;
         break;
