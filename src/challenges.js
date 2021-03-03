@@ -27,7 +27,6 @@ function splitSentence(frase) {
   return array;
 }
 
-console.log(splitSentence("O mar é azul"));
 
 
 // Desafio 4
@@ -67,21 +66,63 @@ function highestCount(n) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let position1 = Math.abs(cat1 - mouse);
+  let position2 = Math.abs(cat2 - mouse);
+
+  if(position1 === position2){
+    return "Os gatos trombam e o rato foge";
+  } else if(position1 > position2){
+    return "cat2";
+  } else {
+    return "cat1";
+  }
 }
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(n) {
+  for(let i = 0; i < n.length; i += 1){
+    if(n[i] % 5 == 0 && n[i] % 3 == 0){
+      n[i] = "fizzBuzz";
+    } else if (n[i] % 5 == 0 && n[i] % 3 != 0){
+      n[i] = "buzz";
+    } else if (n[i] % 3 == 0 && n[i] % 5 != 0){
+      n[i] = "fizz";
+    } else {
+      n[i] = "bug!";
+    }
+  }
+  return n;
 }
 
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for(let i = 0; i < string.length; i += 1) {
+    if(string[i] == "a"){
+      string[i] = "1";
+    } else if(string[i] == "e") {
+      string[i] = "2";
+    } else if(string[i] == "i") {
+      string[i] = "3";
+    } else if(string[i] == "o") {
+      string[i] = "4";
+    } else if(string[i] == "u") {
+      string[i] = "5";
+    }
+  }
+  return string;
 }
+
+console.log(encode("hi there!"));
+
+
+
+
+
 function decode() {
-  // seu código aqui
+  
 }
 
 module.exports = {
