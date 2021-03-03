@@ -29,8 +29,9 @@ function splitSentence(goTrybe) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(name) {
   // seu código aqui
+  return name('' + '');
 }
 
 // Desafio 5
