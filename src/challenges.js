@@ -26,14 +26,17 @@ function concatName(arrayStr) {
     palavra2 = arrayStr.shift();
   }
   return palavra1 + separador + palavra2;
-}// Resposta: Nessa tentativa de solução do requisito 4, usei os metodos shift e pop. Ao remover o primeiro elemento do array com o metodo shift(), coloco esse elemento na var. palavra1, faço o mesmo com o metodo pop(), onde ele remove o ultimo elemento. O return é a concatenação da palavra, separador(usei a ,) e palavra2. Outra maneira de resolver: return arrayStr[arrayStr.length - 1] + ', ' + arrayStr[0];
+}// Resposta: Nessa tentativa de solução do requisito 4, usei os metodos shift e pop. Ao remover o primeiro elemento do array com o metodo shift(), coloco esse elemento na var. palavra1, faço o mesmo com o metodo pop(), onde ele remove o ultimo elemento. O return é a concatenação da palavra, separador(usei a ,) e palavra2. Outra maneira de resolver: return arrayStr[arrayStr.length - 1] + ', ' + arrayStr[0]; (Solução feita pelo Emerson Saturnino)
 
 //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  let totalPontos = (wins * 3) + (ties * 1);
+  return totalPontos;
+} //Resposta: Criei uma Var. totalPontos, nessa var. atribui uma pequena formula para o calculo. E dei um return na var. totalPontos
+
+//console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
