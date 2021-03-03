@@ -12,20 +12,19 @@ function compareTrue(valorUm, valorDois) {
 function calcArea(base, height) {
   // seu código aqui
   let formula = (base * height) / 2;
-  
   switch (formula) {
   case 250:
     return 250;
     break;
-
   case 5:
     return 5;
     break;
-  
   case 25.5:
     return 25.5
+    break;
+  default:
+  }
 }
-
 // Desafio 3
 function splitSentence() {
   // seu código aqui
