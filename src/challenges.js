@@ -50,11 +50,9 @@ function concatName(fraseArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let vitorias = wins * 3;
-
-  return vitorias + ties + " pontos";
+    return wins * 3 + ties + ' pontos';
 }
-console.log(footballPoints(14, 8));
+//console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(arrayNumeros) {
@@ -77,9 +75,28 @@ function highestCount(arrayNumeros) {
 //console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanciaGato1 = cat1 - mouse;
+  let distanciaGato2 = cat2 - mouse;
+
+  if(distanciaGato1 < distanciaGato2 ){
+
+    return 'cat1';
+
+  } else if (distanciaGato1 > distanciaGato2){
+
+    return 'cat2';
+
+  } else {
+
+    return 'os gatos trombam e o rato foge';
+
+  }
+
 }
+console.log(catAndMouse(0, 7, 7));
+
 
 // Desafio 8
 function fizzBuzz() {
