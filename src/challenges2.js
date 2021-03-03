@@ -1,5 +1,26 @@
 // Desafio 10
 function techList(tech, name) {
+  let objectListOutput = [];
+  let object = {
+    tech:tech,
+    name: name
+  }
+  let ordenadedList = object.tech.sort();
+  for(let key in ordenadedList) {    
+    objectListOutput.push({
+        tech: ordenadedList[key],
+        name: name
+    })
+  }
+  if (object.tech > 0) {
+    return objectListOutput;
+  } else {
+    return 'Vazio!';
+  }  
+}
+
+// Desafio 11 ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
+function generatePhoneNumber(arrayOfNumber) {
   let telePhoneNumber = '(';
   for(let DDD = 0; DDD < 2; DDD += 1) {
   telePhoneNumber += arrayOfNumber[DDD]; 
@@ -43,8 +64,7 @@ function techList(tech, name) {
       } else if (verifyNumberPossibility > 0) {
           return 'não é possível gerar um número de telefone com esses valores';
       }
-  }                 
-}
+  }  
 console.log(generatePhoneNumber([1, 2, 3, 34, 3, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
