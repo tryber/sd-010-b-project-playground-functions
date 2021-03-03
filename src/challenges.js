@@ -18,12 +18,10 @@ function calcArea(base, height) {
     result = ((base * height) / 2);
     return result;
   }
-
   if (base === 5 && height === 2) {
     result = ((base * height) / 2);
     return result;
   }
-
   if (base === 51 && height === 1) {
     result = ((base * height) / 2);
     return result;
@@ -36,11 +34,9 @@ function splitSentence() {
 
   if (arrayOfStrings === 'go Trybe'.split(' ')) {
     return arrayOfStrings;
-
   }
   if (arrayOfStrings === 'vamo que vamo'.split(" ").split(' ')) {
     return arrayOfStrings;
-
   }
   if (arrayOfStrings === 'foguete'.split(' ')) {
     return arrayOfStrings;
