@@ -157,7 +157,7 @@ function encode(arrayEncode) {
   return encoded;
 }
 // console log
-console.log(encode('urso chuva de gatinho malhado com olho verde e azul'));
+console.log(encode('urso indio chuva de gatinho malhado com olho verde e azul'));
 
 // 
 function decode(arrayDecode) {
