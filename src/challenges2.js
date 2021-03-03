@@ -15,22 +15,6 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-// toString verificado no site https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/Strings
-function generatePhoneNumber(array) {
-  if (array.length > 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  for (let i = 0; i < array.length; i += 1) {
-    if ((array[i] < 0) || (array[i] > 9 || (contaNumRepetido(array) >= 3))) {
-      return 'Não é possível gerar um número de telefone com esses valores.';
-    }
-  }
-  let telefoneDDD = '(' + array[0] + array[1] + ')';
-  let telefoneParteUm = '' + array[2] + array[3] + array[4] + array[5] + array[6];
-  let telefoneParteDois = '' + array[7] + array[8] + array[9] + array[10];
-  let numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
-  return numTelefone;
-}
 function contaNumRepetido(array) {
   let num = {};
   let contaRepetido = 0;
@@ -49,7 +33,21 @@ function contaNumRepetido(array) {
   }
   return contaRepetido;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+function generatePhoneNumber(array) {
+  if (array.length > 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    if ((array[i] < 0) || (array[i] > 9 || (contaNumRepetido(array) >= 3))) {
+      return 'Não é possível gerar um número de telefone com esses valores.';
+    }
+  }
+  let telefoneDDD = '(' + array[0] + array[1] + ')';
+  let telefoneParteUm = '' + array[2] + array[3] + array[4] + array[5] + array[6];
+  let telefoneParteDois = '' + array[7] + array[8] + array[9] + array[10];
+  let numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
+  return numTelefone;
+} console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -63,19 +61,26 @@ function triangleCheck(lineA, lineB, lineC) {
     trianguloPossivel = false;
   }
   return trianguloPossivel;
-} 
+}
 
 // Desafio 13
+// Regex - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+// ParseInt - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
 function hydrate(string) {
-  let numeros = /[1-9]/g;
-  let resultado = string.match(numeros);
-  let soma = 0;
-  for (i = 0; i < string.length; i +=1) {
-    soma += parseInt(string[i]);
-  }  
+  let regex = /\d+/g;
+  let numeros = string.match(regex);
+  let copoAgua = 0;
+  let resultado;
+  for (let i = 0; i < numeros.length; i += 1) {
+    copoAgua += parseInt(numeros[i], 10);
+  }
+  if (copoAgua === 1) {
+    resultado = '1 copo de água';
+  } else {
+    resultado = copoAgua + ' copos de água';
+  }
   return resultado;
 }
-  console.log (hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 
 module.exports = {
