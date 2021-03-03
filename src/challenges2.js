@@ -11,7 +11,7 @@ function techList(tech, name) {
     objetoTech[index] = {
       tech: novoArray[index],
       name: name,
-    }
+    };
   }
 
   return objetoTech;
@@ -22,31 +22,44 @@ function generatePhoneNumber(arrayTelefone) {
   // seu código aqui
   let repetidas = 0;
   let gerarTelefone = [
-    "(", arrayTelefone[0], arrayTelefone[1], ")", " ", arrayTelefone[2], arrayTelefone[3], arrayTelefone[4], arrayTelefone[5], arrayTelefone[6], "-", arrayTelefone[7], arrayTelefone[8], arrayTelefone[9], arrayTelefone[10]
+    '(',
+    arrayTelefone[0],
+    arrayTelefone[1],
+    ')',
+    ' ',
+    arrayTelefone[2],
+    arrayTelefone[3],
+    arrayTelefone[4],
+    arrayTelefone[5],
+    arrayTelefone[6],
+    '-',
+    arrayTelefone[7],
+    arrayTelefone[8],
+    arrayTelefone[9],
+    arrayTelefone[10],
   ];
 
-  if (arrayTelefone.length != 11){
-    return "Array com tamanho incorreto.";
+  if (arrayTelefone.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
 
-  for (let indice = 0; indice < arrayTelefone.length; indice++){
-    if (arrayTelefone[indice] < 0 || arrayTelefone[indice] > 9){
-      return "não é possível gerar um número de telefone com esses valores";
+  for (let indice = 0; indice < arrayTelefone.length; indice++) {
+    if (arrayTelefone[indice] < 0 || arrayTelefone[indice] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     repetidas = 0;
-    for (let indice2 = 0; indice2 < arrayTelefone.length; indice2++){
-      if (arrayTelefone[indice] === arrayTelefone[indice2]){
+    for (let indice2 = 0; indice2 < arrayTelefone.length; indice2++) {
+      if (arrayTelefone[indice] === arrayTelefone[indice2]) {
         repetidas++;
-        if (repetidas === 3){
-          return "não é possível gerar um número de telefone com esses valores";
+        if (repetidas === 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
         }
       }
     }
-  } 
-  return gerarTelefone.join("") ;
+  }
+  return gerarTelefone.join('');
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
@@ -67,12 +80,12 @@ function hydrate(string) {
   let filtro = /[1-9]/g;
   let arrayBebidas = string.match(filtro);
   let coposAgua = 0;
-  
-  for (let indice = 0; indice < arrayBebidas.length; indice++){
+
+  for (let indice = 0; indice < arrayBebidas.length; indice++) {
     coposAgua = coposAgua + parseInt(arrayBebidas[indice]);
   }
 
-  if (coposAgua === 1){
+  if (coposAgua === 1) {
     return `${coposAgua} copo de água`;
   }
 
