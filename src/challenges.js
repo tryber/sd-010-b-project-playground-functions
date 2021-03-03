@@ -82,31 +82,86 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
+
 function fizzBuzz(divisivelArray) {
+  let resultadoDividir = [];
+
   for(let cont=0; cont < divisivelArray.length; cont += 1){
-    let resultadoDividir = [];
 
-    if(divisivelArray[cont] % 3 == 0){
-      resultadoDividir.push = "fizz";
-    } else if (divisivelArray[cont] % 5 == 0){
-      resultadoDividir.push = "buzz";
-    } else if (divisivelArray[cont] % 3 == 0 && divisivelArray[cont] % 5 == 0){
-      resultadoDividir.push = "fizzBuzz";
+    if(divisivelArray[cont] % 3 == 0 && divisivelArray[cont] % 5 != 0) {
+      resultadoDividir.push("fizz");
+    } else if (divisivelArray[cont] % 5 == 0 && divisivelArray[cont] % 3 != 0) {
+      resultadoDividir.push("buzz");
+    } else if (divisivelArray[cont] % 3 == 0 && divisivelArray[cont] % 5 == 0) {
+      resultadoDividir.push("fizzBuzz");
     } else {
-      resultadoDividir.push = "bug!";
+      resultadoDividir.push("bug!");
     }
-    return resultadoDividir;
-    console.log(resultadoDividir);
   }
-
+  return resultadoDividir;
+  
 }
+console.log(fizzBuzz([5,15,4,45]));
+
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(paramCodificado) {
+  
+    let arrayCodificado = paramCodificado.split('');
+
+  for(cont=0; cont < arrayCodificado.length; cont += 1){
+    if (arrayCodificado[cont] == a){
+      
+      arrayCodificado[cont] = 1;
+
+    } else if (arrayCodificado[cont] == e) {
+
+      arrayCodificado[cont] = 2;
+
+    } else if (arrayCodificado[cont] == i) {
+
+      arrayCodificado[cont] = 3;
+      
+    } else if (arrayCodificado[cont] == o) {
+      
+      arrayCodificado[cont] = 4;
+
+    } else if (arrayCodificado[cont] == u){
+
+      arrayCodificado[cont] = 5;
+
+    }
+  }
+  
 }
-function decode() {
-  // seu código aqui
+function decode(paramDecodificado) {
+
+  let arrayDecodificado = paramDecodificado.split('');
+
+  for(cont=0; cont < arrayDecodificado.length; cont += 1){
+    if (arrayDecodificado[cont] == 1){
+      
+      arrayDecodificado[cont] = a;
+
+    } else if (arrayDecodificado[cont] == 2) {
+
+      arrayDecodificado[cont] = e;
+
+    } else if (arrayDecodificado[cont] == 3) {
+
+      arrayDecodificado[cont] = i;
+      
+    } else if (arrayDecodificado[cont] == 4) {
+      
+      arrayDecodificado[cont] = o;
+
+    } else if (arrayDecodificado[cont] == 5){
+
+      arrayDecodificado[cont] = u;
+
+    }
+  }
+  return 
 }
 
 module.exports = {
