@@ -83,8 +83,20 @@ for( i in string){
 return saida
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let saida = string
+let vogais = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+]
+for( i in string){
+    saida = saida.replace(vogais[1], "a").replace(vogais[2], "e").replace(vogais[3], "i").replace(vogais[4], "o").replace(vogais[5], "u")
+}
+return saida
 }
 
 module.exports = {
