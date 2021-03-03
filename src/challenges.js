@@ -23,16 +23,18 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(listaNomes) {
-  let conc = (listaNomes[listaNomes.length - 1] + ', ' + listaNomes[0]);
+  let conc = (listaNomes[listaNomes.length-1] + ", " + listaNomes[0]);
   return conc;
 }
-let listaNomes = [];
+  let listaNomes = [];
 console.log(concatName(listaNomes));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontuacao = ((wins * 3) + ties);
+  return pontuacao;
 }
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
