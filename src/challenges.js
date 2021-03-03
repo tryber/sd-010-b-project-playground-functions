@@ -73,8 +73,21 @@ function catAndMouse(mouse, cat1, cat2) {
   return menorTamanho;
 }
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumber) {
   // seu código aqui
+  let list = [];
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
+      list.push("fizzBuzz");
+    } else if (arrayNumber[index] % 3 === 0) {
+      list.push("fizz");
+    } else if (arrayNumber[index] % 5 === 0) {
+      list.push("buzz");
+    } else {
+      list.push("bug!");
+    }
+  }
+  return list;
 }
 // Desafio 9
 function encode() {
@@ -95,4 +108,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-console.log(catAndMouse(1,0,2));
+  // console.log(fizzBuzz([9, 25]));
