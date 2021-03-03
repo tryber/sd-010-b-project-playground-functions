@@ -70,10 +70,31 @@ function concatName(fullArray) {
   return `${lastItem}, ${firstItem}`; // retorna uma string no formato 'ultimo_item, primeiro_item'
 }
 
+// let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// console.log(`concatName(${array}) = ${concatName(array)}`);
+
+// array = ['foguete', 'não', 'tem', 'ré'];
+// console.log(`concatName(${array}) = ${concatName(array)}`);
+
+// array = ['captain', 'my', 'captain'];
+// console.log(`concatName(${array}) = ${concatName(array)}`);
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+/*
+  Essa função calcula a quantidade de pontos que um time marcou em um campeonato. Para isso, recebe o número de vitórias (wins) e de empates (ties), calcula e retorna a quantidade de pontos marcados sendo que cada vitória vale 3 pontos e cada empate, 1 ponto.
+ */
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3; // calcula a quantidade de pontos marcados com vitórias
+  let tiesPoints = ties * 1; // calcula a quantidade de pontos marcados com empates
+  let totalPoints = winsPoints + tiesPoints; // calcula a quantidade total de pontos marcados
+  return totalPoints;
 }
+
+// console.log(`footballPoints(14, 8) = ${footballPoints(14, 8)} pontos`);
+
+// console.log(`footballPoints(1, 2) = ${footballPoints(1, 2)} pontos`);
+
+// console.log(`footballPoints(0, 0) = ${footballPoints(0, 0)} pontos`);
 
 // Desafio 6
 function highestCount() {
