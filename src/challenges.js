@@ -43,7 +43,7 @@ function highestCount(numero) {
   }
   
   for (let key in numero){
-    if (numero[key] === indiceMaior){
+    if (numero[key] === numero[indiceMaior]){
       contador += 1;
     }
   }
@@ -66,6 +66,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 console.log(catAndMouse(4, 1, 1));
+
+
 
 // Desafio 8
 function fizzBuzz(array, string) {
@@ -92,9 +94,11 @@ function fizzBuzz(array, string) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
+
+
 // Desafio 9
 function encode() {
-  // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
