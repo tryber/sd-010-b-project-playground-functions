@@ -118,7 +118,7 @@ function fizzBuzz(umaLista) {
   return out;
 }
 
-// // teste intem 8
+// teste intem 8
 // array0 = [2, 15, 7, 9, 45];
 // array1 = [7, 9];
 // array2 = [9, 25];
@@ -126,62 +126,62 @@ function fizzBuzz(umaLista) {
 // console.log(fizzBuzz(array1));
 // console.log(fizzBuzz(array2));
 
-// // Desafio 9
-// function encode(umaFrase) {
-//   let lista = umaFrase.split('');
-//   for (let key in lista) {
-//     switch (lista[key]) {
-//     case 'a':
-//       lista[key] = 1;
-//       break;
-//     case 'e':
-//       lista[key] = 2;
-//       break;
-//     case 'i':
-//       lista[key] = 3;
-//       break;
-//     case 'o':
-//       lista[key] = 4;
-//       break;
-//     case 'u':
-//       lista[key] = 5;
-//       break;
-//     default:
-//       break;
-//     }
-//   }
-//   return lista.join('');
-// }
+// Desafio 9
+function change(caracter) {
+  let ob = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let key in ob) {
+    if (key === caracter) {
+      caracter = ob[key];
+      return caracter;
+    }
+  }
+  return caracter;
+}
+function encode(umaFrase) {
+  let lista = umaFrase.split('');
+  for (let key in lista) {
+    if (Object.prototype.hasOwnProperty.call(lista, key)) {
+      lista[key] = change(lista[key]);
+    }
+  }
+  return lista.join('');
+}
 
-// function decode(umaFrase) {
-//   let lista = umaFrase.split('');
-//   for (let key in lista) {
-//     switch (lista[key]) {
-//     case '1':
-//       lista[key] = 'a';
-//       break;
-//     case '2':
-//       lista[key] = 'e';
-//       break;
-//     case '3':
-//       lista[key] = 'i';
-//       break;
-//     case '4':
-//       lista[key] = 'o';
-//       break;
-//     case '5':
-//       lista[key] = 'u';
-//       break;
-//     default:
-//       break;
-//     }
-//   }
-//   return lista.join('');
-// }
+function unchange(caracter) {
+  let ob = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let key in ob) {
+    if (key === caracter) {
+      caracter = ob[key];
+      return caracter;
+    }
+  }
+  return caracter;
+}
+function decode(umaFrase) {
+  let lista = umaFrase.split('');
+  for (let key in lista) {
+    if (Object.prototype.hasOwnProperty.call(lista, key)) {
+      lista[key] = unchange(lista[key]);
+    }
+  }
+  return lista.join('');
+}
 
 // teste item 9
-// console.log(encode("hi there!"));
-// console.log(decode("h3 th2r2!"));
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 // NÂO MEXER ABAIXO!
 module.exports = {
@@ -189,8 +189,8 @@ module.exports = {
   catAndMouse,
   compareTrue,
   concatName,
-  // decode,
-  // encode,
+  decode,
+  encode,
   fizzBuzz,
   footballPoints,
   highestCount,
