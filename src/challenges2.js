@@ -1,11 +1,8 @@
 // Desafio 10
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
-console.log(techList([],'Lucas'))
-
-function techList(array,name) {
-
-  let vazio = [];
-  let lista = array.sort();
+function techList(array, name) {
+let lista = array.sort();
   let newArray = [];
   for (let index = 0; index < lista.length; index += 1) {
     let bloco = {
@@ -14,14 +11,10 @@ function techList(array,name) {
     }
     newArray.push(bloco);
   }
-
-  if (newArray.length == 0) {
-    vazio.push('Vazio!')
-    return vazio;
+  if (newArray.length === 0) {
+    return 'Vazio!';
   } else {
     return newArray;
-
-
   }
 }
 
