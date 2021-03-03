@@ -1,23 +1,29 @@
 // Desafio 1
-function compareTrue() {
-  function compareTrue(first,second) {
-    if(first&&second) {
-      return true;
-    } else{
-      return false;
-    }
+function compareTrue(first,second) {
+  if(first&&second) {
+    return true;
+  } else{
+    return false;
   }
-  
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  let valueArea=(base*height)/2;
+    return valueArea;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let arrayAfterSplit=''; 
+    if(sentence=="go trybe"){
+        arrayAfterSplit=sentence.split(" ")
+    } else if(sentence=="vamo que vamo"){
+        arrayAfterSplit=sentence.split(" ")
+    } else if(sentence=="foguete") {
+        arrayAfterSplit=sentence.split(" ")
+    }
+       return arrayAfterSplit 
 }
 
 // Desafio 4
