@@ -61,19 +61,19 @@ return repete
 console.log(highestCount([9, 1, 9, 2, 9, 5, 7]))
 
 // Desafio 7
-//Dica de colegas e pesquisa sobre a função no link: https://www.w3schools.com/jsref/jsref_abs.asp
+//Dica dos colegas em sala de estudos e pesquisa sobre a função no link: https://www.w3schools.com/jsref/jsref_abs.asp
 function catAndMouse(mouse, cat1, cat2) {
  let distanciaCat1 = Math.abs(mouse - cat1);
  let distanciaCat2 = Math.abs(mouse - cat2);
- if (distanciaCat1 > distanciaCat2) {
+ if (distanciaCat1 < distanciaCat2) {
    return "cat1";
- } else if (distanciaCat1 < distanciaCat2) {
+ } else if (distanciaCat1 > distanciaCat2) {
    return "cat2";
  } else {
    return "os gatos trombam e o rato foge";
  }
 }
-console.log(catAndMouse(0,4,-4))
+console.log(catAndMouse(0,3,2))
 
 // Desafio 8
 function fizzBuzz() {
