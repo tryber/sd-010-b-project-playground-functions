@@ -58,7 +58,7 @@ function fizzBuzz(divisivel) {
       divisivel[porta] = 'fizz';
     } else if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 === 0) {
       divisivel[porta] = 'buzz';
-    } else { 
+    } else {
       divisivel[porta] = 'bug!';
     }
   }
@@ -73,40 +73,39 @@ function encode(codigo) {
     i: 3,
     o: 4,
     u: 5,
-  }
+  };
   codigo = codigo.split('');
   for (let letraindex = 0; letraindex < codigo.length; letraindex += 1) {
     for (let key in vogais) {
       if (codigo[letraindex] === key) {
-      codigo[letraindex] = vogais[key];
+        codigo[letraindex] = vogais[key];
       }
     }
   }
   codigo = codigo.join('');
   return codigo;
 }
-console.log(encode("hi there!"))
 
 function decode(codigo2) {
   let vogais = {
-    a:1,
-    e:2,
-    i:3,
-    o:4,
-    u:5,
-  }
-  codigo2 = codigo2.split('')
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  codigo2 = codigo2.split('');
   for (let letraindex = 0; letraindex < codigo2.length; letraindex += 1) {
     for (let key in vogais) {
       if (codigo2[letraindex] == vogais[key]) {
-      codigo2[letraindex] = key;
+        codigo2[letraindex] = key;
       }
     }
   }
   codigo2 = codigo2.join('');
   return codigo2;
 }
-console.log(decode('h3 th2r2!'))
+
 module.exports = {
   calcArea,
   catAndMouse,
