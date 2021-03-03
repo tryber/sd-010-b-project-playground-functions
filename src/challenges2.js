@@ -45,12 +45,14 @@ function repeticaoDeTresOuMais (arrayDeNumeros) {
     contagem[itens] += 1;
   }
   for (let itens of arrayDeNumeros) {
-    if (contagem[itens] > 3) {
+    if (contagem[itens] >= 3) {
       maisQueTres = true;
     }
   }
   return maisQueTres;
 }
+
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
