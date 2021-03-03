@@ -89,11 +89,23 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   let result = 'cat2';
   return result;
-} console.log(catAndMouse(3, 2, 2));
+}
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(Array = []) {
   // seu código aqui
+  let result = [];
+  for (let index = 0; index < Array.length; index += 1) {
+    if (Array[index] % 3 === 0 && Array[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (Array[index] % 5 === 0 && Array[index] % 3 === 1) {
+      result.push('buzz');
+    } else if (Array[index] % 3 === 0 && Array[index] % 5 === 1 || Array[index] % 3 === 0) {
+      result.push('fizz');
+    } else {
+      result.push('bug!');
+    }
+  } return result;
 }
 
 // Desafio 9
