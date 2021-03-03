@@ -54,62 +54,18 @@ function catAndMouse(mouse, cat1, cat2) {
     alcancaPrimeiro = 'cat2';
   }
   if (distCat1 === distCat2) {
-    alcancaPrimeiro = 'os gatos trombam e o rato foge';
+    alcancaPrimeiro = 'os gatos batem e o rato escapa';
   }
   return alcancaPrimeiro;
 }
-
 // Desafio 8
-function fizzBuzz(arrayDeNumeros) {
-function fizzBuzz( ) {
-function verifica(tres, cinco) {
-function verificaFalse(tres, cinco) {
-  let resposta = '';
-  if (tres === false && cinco === false) {
-    resposta += 'bug!';
-    if (tres === true && cinco === true) {
-      resposta += 'fizzBuzz';
-    }
-  }
-  return resposta;
+function fizzBuzz() {
+  // seu código aqui
 }
-function verificaFizzBuzz(palavra) {
-  let saida = '';
-  if (palavra === 'fizzbuzz') {
-    saida = 'fizzBuzz';
-  } else {
-    saida = palavra;
-  }
-  return saida;
-}
-function criarArray(arrayDeNumeros) {
-  let saida = [];
-  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    saida[index] = '';
-  }
-  return saida;
-}
-  let resposta = criarArray(arrayDeNumeros);
-  let tres = false;
-  let cinco = false;
-  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    tres = false;
-    cinco = false;
-    if (arrayDeNumeros[index] % 3 === 0) {
-      resposta[index] += 'fizz';
-      tres = true;
-    }
-    if (arrayDeNumeros[index] % 5 === 0) {
-      resposta[index] += 'buzz';
-      cinco = true;
-    }
-    resposta[index] += verifica(tres, cinco);
-    resposta[index] += verificaFalse(tres, cinco);
-    resposta[index] = verificaFizzBuzz(resposta[index]);
-  }
-  return resposta;
-}
-//Desafio 9
+
+// Desafio 9
+function encode() {
+  // seu código aqui
 function encode(frase) {
   let separado = frase.split('');
   for (let caracter in separado) {
@@ -130,6 +86,8 @@ function encode(frase) {
   let juntoEncode = separado.join('');
   return juntoEncode;
 }
+function decode() {
+  // seu código aqui
 function decode(frase) {
   let separado = frase.split('');
   for (let caracter in separado) {
