@@ -45,7 +45,6 @@ function highestCount(arrayNumbers) {
   // seu código aqui
   let contMaior = 0;
   let maior = arrayNumbers[0];
-  
   for (let num in arrayNumbers) {
     if (maior < arrayNumbers[num]) {
       maior = arrayNumbers[num];
@@ -76,19 +75,18 @@ function catAndMouse(mouse, cat1, cat2) {
   return capture;
 }
 
-
 // Desafio 8
 function fizzBuzz(arrayNums) {
   // seu código aqui
   let arrayResp = [];
-  let resp = "";
+  let resp = '';
 
-  for(let num in arrayNums){
+  for (let num in arrayNums) {
     if ((arrayNums[num] % 3 === 0) && (arrayNums[num] % 5 === 0)) {
       resp = 'fizzBuzz';
-    }  else if (arrayNums[num] % 3 === 0) {
-        resp = 'fizz';
-    } else if((arrayNums[num]) % 5 === 0) {
+    } else if (arrayNums[num] % 3 === 0) {
+      resp = 'fizz';
+    } else if ((arrayNums[num]) % 5 === 0) {
       resp = 'buzz';
     } else {
       resp = 'bug!';
@@ -99,12 +97,44 @@ function fizzBuzz(arrayNums) {
 }
 
 // Desafio 9
-function encode() {
+function encode(sentence) {
   // seu código aqui
+  let frase = sentence;
+  for (letter in frase) {
+    switch (frase[letter]) {
+      case 'a':
+        frase = frase.replace('a', 1);
+      case 'e':
+        frase = frase.replace('e', 2);
+      case 'i':
+        frase = frase.replace('i', 3);
+      case 'o':
+        frase = frase.replace('o', 4);
+      case 'u':
+        frase = frase.replace('u', 5);
+    }
+  }
+  return frase;
 } 
-  
-function decode() {
+
+function decode(sentence) {
   // seu código aqui
+  let frase = sentence;
+  for (letter in frase) {
+    switch (frase[letter]) {
+      case '1':
+        frase = frase.replace(1, 'a');
+      case '2':
+        frase = frase.replace(2, 'e');
+      case '3':
+        frase = frase.replace(3, 'i');
+      case '4':
+        frase = frase.replace(4, 'o');
+      case '5':
+        frase = frase.replace(5, 'u');
+    }
+  }
+  return frase;
 }
 
 module.exports = {
