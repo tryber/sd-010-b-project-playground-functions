@@ -85,20 +85,20 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-//Busquei orientação na PR do meu colega de turma André Hammel, exclusivamente nesta questão, link:https://github.com/tryber/sd-010-b-project-playground-functions/pull/117/commits/49ea1e6e7f2d5bb22a91741d7d0cdcd183e17562
+//Busquei orientação na PR do meu colega de turma André Hammel, exclusivamente nesta questão, para resolver a questão dos resultados negativos das subtrações. link:https://github.com/tryber/sd-010-b-project-playground-functions/pull/117/commits/49ea1e6e7f2d5bb22a91741d7d0cdcd183e17562
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat2 < distanciaCat1){
     return "cat2";
-  }else if (distanciaCat2 > distanciaCat1){
+  }else if (distanciaCat1 < distanciaCat2){
     return "cat1"
   }else if (distanciaCat1 == distanciaCat2){
     return "os gatos trombam e o rato foge"
   }
 }
-console.log(catAndMouse(4, 7, 6))
-console.log(catAndMouse(4, 12, 16))
+console.log(catAndMouse(7, 4, 5))
+console.log(catAndMouse(4, 10, 16))
 console.log(catAndMouse(2, 6, 6))
 
 
