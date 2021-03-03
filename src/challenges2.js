@@ -1,26 +1,5 @@
 // Desafio 10
 function techList(tech, name) {
-  let objectListOutput = [];
-  let object = {
-    tech:tech,
-    name: name
-  }
-  let ordenadedList = object.tech.sort();
-  for(let key in ordenadedList) {    
-    objectListOutput.push({
-        tech: ordenadedList[key],
-        name: name
-    })
-  }
-  if (object.tech > 0) {
-    return objectListOutput;
-  } else {
-    return 'Vazio!';
-  }  
-}
-
-// Desafio 11 ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
-function generatePhoneNumber(arrayOfNumber) {
   let telePhoneNumber = '(';
   for(let DDD = 0; DDD < 2; DDD += 1) {
   telePhoneNumber += arrayOfNumber[DDD]; 
@@ -48,16 +27,23 @@ function generatePhoneNumber(arrayOfNumber) {
           numindex = key;
       }
       numberCounter = 0;
-  } 
-  for (let index = 0; index < arrayOfNumber.length; index += 1) {             
+  }
+  let verifyNumberPossibility = 0;
+  let verifyNumerOk = 0;  
+  for (let index = 0; index < arrayOfNumber.length; index += 1) {                
       if (((arrayOfNumber[index]) < 0) || ((arrayOfNumber[index]) > 9) || (repeated >= 3)) {
-          return 'não é possível gerar um número de telefone com esses valores';
-      } else if (arrayOfNumber.length !== 11){
-          return 'Array com tamanho incorreto.';
+          verifyNumberPossibility += 1; 
       } else if ((arrayOfNumber[index] >= 0) && (arrayOfNumber[index] <= 9) && (arrayOfNumber.length == 11)) {
-          return telePhoneNumber;        
+          verifyNumerOk += 1;                    
+      } else if (arrayOfNumber.length !== 11) {
+          return 'Array com tamanho incorreto.';
       }
-  }               
+      if (verifyNumerOk === 11) {
+          return telePhoneNumber;
+      } else if (verifyNumberPossibility > 0) {
+          return 'não é possível gerar um número de telefone com esses valores';
+      }
+  }                 
 }
 console.log(generatePhoneNumber([1, 2, 3, 34, 3, 6, 7, 8, 9, 0, 1]))
 
@@ -74,7 +60,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-// Desafio 13
+// Desafio 13  ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
 function hydrate(stringWithGlasses) {
   let retorno = '';
   let busca = /[1-9]/g;
