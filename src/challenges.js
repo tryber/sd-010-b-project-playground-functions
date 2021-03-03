@@ -53,14 +53,15 @@ function highestCount() {
     let maior = Math.max.apply(null,array);
     //preciso inicializar a contagem porém quando sair do for ele será 0
     let count = 0;
-    for(let i = 0;i<array.length; i++){
+    let countatt;
+    for(let i = 0;i<array.length; i+=){
 
       if(count === maior){
-        count++;
+        count+=;
       }
       else{}
       //estou armazenando o count em uma atualização
-      let countatt = count;
+      countatt = count;
 
     }    
          
