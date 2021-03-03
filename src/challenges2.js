@@ -1,10 +1,10 @@
 // Desafio 10
 
 
-function techList(tec, name) {
+function techList(array, name) {
   // let array =["React", "Jest", "HTML", "CSS", "JavaScript"]
   // let name ="Lucas"
-  let array = tec.sort()
+   array.sort()
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     let bloco = {
