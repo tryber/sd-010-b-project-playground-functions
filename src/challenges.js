@@ -52,7 +52,7 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  let absCat1 = Math.abs(cat1 - mouse);
+  let absCat1 = Math.abs(cat1 - mouse); //fonte de pesquisa: https://www.w3schools.com/jsref/jsref_abs.asp
   let absCat2 = Math.abs(cat2 - mouse);
 
   if (absCat1 == absCat2) {
@@ -75,7 +75,7 @@ function fizzBuzz(array) {
     } else if ((array[index] % 5 == 0) && (array[index] % 3 != 0)) {
       fizzBuzz.push('buzz');
     } else {
-      fizzBuzz.push('bug');
+      fizzBuzz.push('bug!');
     }
   }
   return fizzBuzz;
