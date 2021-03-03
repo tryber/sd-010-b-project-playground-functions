@@ -22,13 +22,16 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(listaPalavras) {
-  let concatenacao = '' + listaPalavras[listaPalavras.length - 1] + ', ' + listaPalavras[0] + '';
+  let concatenacao = listaPalavras[listaPalavras.length - 1] + ', ' + listaPalavras[0];
   return concatenacao;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totWins = wins * 3;
+  let totTies = ties *1;
+
+  return (totWins+totTies);
 }
 
 // Desafio 6
