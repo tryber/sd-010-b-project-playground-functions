@@ -25,7 +25,7 @@ function concatName(arrayParameter) {
   // seu código aqui
   let searchLastName = arrayParameter[arrayParameter.length - 1];
   let searchFirstName = arrayParameter[0];
-  let resultConcat = searchLastName + ',' + ' ' + searchFirstName;
+  let resultConcat = searchLastName + ', ' + searchFirstName;
   return resultConcat;
 }
 
@@ -37,8 +37,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
+  let highestNumber = arrayNumbers[0];
+  let howManyTimes = 0;
+  for (let index = 1; index < arrayNumbers.length; index++) {
+    if (arrayNumbers[index] > highestNumber) {
+      highestNumber = arrayNumbers[index];
+    } 
+  }
+  for (let index2 = 0; index2 < arrayNumbers.length; index2++) {
+    if (arrayNumbers[index2] == highestNumber) {
+      howManyTimes++;
+    }
+  } 
+  return howManyTimes;
 }
 
 // Desafio 7
