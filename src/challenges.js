@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
-console.log(catAndMouse(0, -6, 5));
+// console.log(catAndMouse(0, -6, 5));
 
 /* Resposta: Na tentativa de solucionar o setimo requisito, fiz
 comparações entre os parametros dada pela function. Posição é 0 do
