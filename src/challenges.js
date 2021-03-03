@@ -42,12 +42,21 @@ function catAndMouse(mouse, cat1, cat2) {
   let cCat1 = 0;
   let cCat2 = 0;
   if (cat1 > mouse) {
-    for (let i = cat1; i <= mouse; i++) {
+    for (let i = cat1; i <= mouse; i--) {
       cCat1 ++;
     }
   } else if (cat1 < mouse) {
-    for (let i = cat1; i >= mouse; i--) {
+    for (let i = cat1; i >= mouse; i++) {
       cCat1 ++;
+    }    
+  }
+  if (cat2 > mouse) {
+    for (let i = cat2; i <= mouse; i--) {
+      cCat2 ++;
+    }
+  } else if (cat2 < mouse) {
+    for (let i = cat2; i >= mouse; i++) {
+      cCat2 ++;
     }    
   }
   if (cCat1 > cCat2) {
