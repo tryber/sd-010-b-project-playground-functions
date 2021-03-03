@@ -1,12 +1,12 @@
 // Desafio 10
 function techList(array, string) {
   let returnArray = [];
-  array = array.reverse();
+  array = array.sort();
   if (array.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < array.length; index += 1) {
-    returnArray.push({ tech: array[index], name: string});
+    returnArray.push({ tech: array[index], name: string });
   }
   return returnArray;
 }
