@@ -30,19 +30,26 @@ function footballPoints(wins, ties) {
   return totalpoints;
 }
 // Desafio 6
-function highestCount(array) {
-  let max = array[0];
-  let nVezes = 0;
-  // Verificar qual maior número
-  for (let key in array) {
-    if (array[key + 1] >= max) {
-      max = array[key + 1];
+function highestCount(arrayNumeros) {
+  // seu código aqui
+  let maiorNumero = 0;
+  let repeticao = 0;
+
+  // eslint-disable-next-line no-plusplus
+  for (let indice = 0; indice < arrayNumeros.length; indice++) {
+    if (arrayNumeros[indice] > maiorNumero) {
+      maiorNumero = arrayNumeros[indice];
     }
   }
 
-  for (let key in array) if (array[key] === max) nVezes += 1;
-}
+  for (let indice = 0; indice < arrayNumeros.length; indice++) {
+    if (arrayNumeros[indice] === maiorNumero) {
+      repeticao++;
+    }
+  }
 
+  return repeticao;
+}
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
@@ -71,7 +78,7 @@ function fizzBuzz(arrayNumerico) {
       arrayFizzBuzz.push('bug!');
     }
   }
-  
+
   return arrayFizzBuzz;
 }
 
