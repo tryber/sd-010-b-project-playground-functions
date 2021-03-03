@@ -60,28 +60,41 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato1 = 0;
   let gato2 = 0;
   if (cat1 > mouse) {
-    gato1 = cat1-mouse;
-  }else{
-    gato1 = mouse-cat1;
+    gato1 = cat1 - mouse;
+  } else {
+    gato1 = mouse - cat1;
   }
   if (cat2 > mouse) {
-    gato2 = cat2-mouse;
-  }else{
-    gato2 = mouse-cat2;
+    gato2 = cat2 - mouse;
+  } else {
+    gato2 = mouse - cat2;
   }
   if (gato1 !== gato2) {
     if (gato1 < gato2) {
       return 'cat1';
-    }else{
+    } else {
     return 'cat2';
     }
   }
   return 'os gatos trombam e o rato foge';
 }
+// Math.abs
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let resposta = [];
+  for (let cont = 0; cont < numeros.length; cont += 1) {
+    if ((numeros[cont]%3) == 0 && (numeros[cont]%5) == 0) {
+      resposta.push("fizzBuzz");
+    } else if ((numeros[cont]%3) == 0) {
+      resposta.push("fizz");
+    } else if ((numeros[cont]%5) == 0) {
+      resposta.push("Buzz");
+    } else {
+      resposta.push("bug!");
+    }
+  }
+  return(resposta)
 }
 
 // Desafio 9
