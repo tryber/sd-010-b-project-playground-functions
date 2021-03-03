@@ -34,9 +34,9 @@ function concatName(arrayStrings) {
 
   arrayConcatenado.push(ultimoTermo, primeiroTermo);
 
-  return arrayConcatenado;
+  return `${ultimoTermo}, ${primeiroTermo}`;
 }
-
+console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui

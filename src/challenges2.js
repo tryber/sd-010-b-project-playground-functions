@@ -3,15 +3,17 @@ function techList(tech, name) {
   // seu código aqui
   let novoArray = tech.sort();
   let objetoTech = [];
+
   if (tech.length == 0) {
     return 'Vazio!';
   }
-  for (let index = 0; index < novoArray.length; index += 1) {
+  for (let index = 0; index < novoArray.length; index++) {
     objetoTech[index] = {
       tech: novoArray[index],
       name: name,
     }
   }
+  
   return objetoTech;
 }
 
