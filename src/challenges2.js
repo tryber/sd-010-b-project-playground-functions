@@ -1,17 +1,20 @@
 // Desafio 10
-function techList(array) {
+function techList(array,name) {
+  // let array =["React", "Jest", "HTML", "CSS", "JavaScript"]
+  // let name ="Lucas"
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     let bloco = {
       tech: array[index],
-      nome: 'Jefferson'
+      nome: name
   }
     newArray.push(bloco);
 }
-if(newArray.length ==0){
+
+if (newArray.length ==0){
   return ('Vazio!')
-}
-  return (newArray);
+} else {
+  return (newArray)};
 
   }
 
