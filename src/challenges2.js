@@ -1,40 +1,41 @@
 // Desafio 10
 function techList(tecnologias, nome) {
+  let array = [];
   if (tecnologias.length !== 0) {
     tecnologias = tecnologias.sort();
-    let array = [];
     for (let key in tecnologias) {
       array[key] = {
         tech: tecnologias[key],
         name: nome
       }
-    } else {
-      let array = "Vazio!";
     }
-    return array;
+  } else {
+    array = 'Vazio!';
   }
-  let array = [];
-  let nome = "lucas";
-  console.log(techList(array, nome));
+  return array;
+}
+let array = [];
+let nome = "Lucas";
+console.log(techList(array, nome));
 
-  // Desafio 11
-  function generatePhoneNumber() {
-    // seu código aqui
-  }
+// Desafio 11
+function generatePhoneNumber() {
+  // seu código aqui
+}
 
-  // Desafio 12
-  function triangleCheck() {
-    // seu código aqui
-  }
+// Desafio 12
+function triangleCheck() {
+  // seu código aqui
+}
 
-  // Desafio 13
-  function hydrate() {
-    // seu código aqui
-  }
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
 
-  module.exports = {
-    generatePhoneNumber,
-    techList,
-    hydrate,
-    triangleCheck,
-  };
+module.exports = {
+  generatePhoneNumber,
+  techList,
+  hydrate,
+  triangleCheck,
+};
