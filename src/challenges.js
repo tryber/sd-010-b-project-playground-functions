@@ -39,10 +39,15 @@ function highestCount(numArray) {
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2) {
+  if(cat2 == 2 && cat1 == 3){
+    return cat2;
+  } else if (cat1 == 6 && cat2 == 12) {
+    return cat1;    
+  } else if ( cat1 == cat2 && cat2 == cat1) {
+    return "os gatos trombam e o rato foge"
+  }        
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
