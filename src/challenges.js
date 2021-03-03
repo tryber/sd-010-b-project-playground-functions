@@ -37,9 +37,15 @@ result = concatName(listWords);
 console.log(result);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let spots = 0;
+  if (wins > 0) {
+    wins = wins * 3;
+  }
+  return spots = wins + ties;
 }
+result = footballPoints(14, 8);
+console.log(result);
 
 // Desafio 6
 function highestCount() {
