@@ -167,10 +167,7 @@ function decode(codedString) {
   for (let indexDecode = 0; indexDecode < codedString.length; indexDecode += 1) {
     saveToDecode = codedString[indexDecode];
     for (let indexDecoding = 0; indexDecoding < leAlgoritmo.length; indexDecoding += 1) {
-
-      if (leAlgoritmo[indexDecoding] == saveToDecode) {
-        saveToDecode = letrasDescodificar[indexDecoding];
-      }
+      if (leAlgoritmo[indexDecoding] == saveToDecode) saveToDecode = letrasDescodificar[indexDecoding];
     }
     saveDecodedString += saveToDecode;
   }
