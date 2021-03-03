@@ -1,16 +1,17 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if(param1 === true && param2 === true) {
+  if (param1 === true && param2 === true) {
     return true;
-  } else if (param1 === false && param2 === false) {
+  }
+  if (param1 === false && param2 === false) {
     return false
   } else {
     return false;
   }
 }
-/* console.log(compareTrue(false, true));
+console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
-console.log(compareTrue(true, true)); */
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -108,20 +109,18 @@ console.log(catAndMouse(10, 5, 15)); */
 
 // Desafio 8
 function fizzBuzz(arrayNumbers8) {
-  let stringsArray = [];
-
   for(index = 0; index < arrayNumbers8.length; index += 1) {
     if ((arrayNumbers8[index] % 3 === 0) && (arrayNumbers8[index] % 5 === 0)) {
-      stringsArray.push("fizBuzz");
+      arrayNumbers8[index] = "fizzBuzz"
     } else if(arrayNumbers8[index] % 3 === 0) {
-      stringsArray.push("fizz");
+      arrayNumbers8[index] = "fizz"
     } else if(arrayNumbers8[index] % 5 === 0) {
-      stringsArray.push("buzz");
+      arrayNumbers8[index] = "buzz"
     } else {
-      stringsArray.push("bug!");
+      arrayNumbers8[index] = "bug!"
     } 
   }
-  return stringsArray;
+  return arrayNumbers8;
 }
 /* console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
@@ -171,7 +170,6 @@ function decode(string) {
   return decodeArrayToString;
 }
 /* console.log(decode("h3 th2r2!")); */
-
 
 module.exports = {
   calcArea,

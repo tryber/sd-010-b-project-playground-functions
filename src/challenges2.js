@@ -3,7 +3,7 @@ function techList(arrayList, nome) {
   let arrayVazio = "Vazio!";
   let newArray = [];
 
-  if(arrayList.length <= 0) {
+  if (arrayList.length <= 0) {
     return arrayVazio;
   }
 
