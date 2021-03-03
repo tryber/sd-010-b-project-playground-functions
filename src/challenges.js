@@ -8,33 +8,27 @@ function compareTrue(valorUm, valorDois) {
   }
   return resultado;
 }
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-
 // Desafio 3
 function splitSentence(word) {
   let array = [];
   array = word.split(' ');
   return array;
 }
-console.log(splitSentence('go Trybe'));
-
 // Desafio 4
 function concatName(arrayString) {
   let result = `${arrayString[arrayString.length - 1]}, ${(arrayString[0])}`;
   return result;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
   points = (wins * 3) + (ties);
   return points;
 }
-
 // Desafio 6
 function maiorNumero(array) {
   let maior = 0;
@@ -52,7 +46,6 @@ function highestCount(array) {
   }
   return cont;
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let saida;
@@ -73,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (unidadesCat1 < unidadesCat2) {
     saida = 'cat1';
   } else {
-    saida = 'os gatos trombam e o rato foge'
+    saida = 'os gatos trombam e o rato foge';
   }
   return saida;
 }
@@ -93,8 +86,6 @@ function fizzBuzz(arrayNumber) {
   }
   return arraySaida;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 function encode(word) {
   let resultado = word;
@@ -117,7 +108,6 @@ function decode(word) {
     resultado = resultado.replace('4', 'o');
     resultado = resultado.replace('5', 'u');
   }
-
   return resultado;
 }
 

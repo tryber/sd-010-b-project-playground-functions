@@ -3,7 +3,7 @@ function techList(tecnologias, nome) {
   let array = [];
   if (tecnologias.length !== 0) {
     tecnologias = tecnologias.sort();
-    for (let key in tecnologias) {
+    for (let key = 0; key < tecnologias.length; key += 1) {
       array[key] = {
         tech: tecnologias[key],
         name: nome,
@@ -34,14 +34,15 @@ function testaRepeticoes(phoneNumber) {
 }
 
 function generatePhoneNumber(phoneNumber) {
+  let num = phoneNumber;
   let saida;
-  if (phoneNumber.length === 11) {
-    for (let index = 0; index <= phoneNumber.length; index += 1) {
-      if (phoneNumber[index] < 0 || phoneNumber[index] > 9 || testaRepeticoes(phoneNumber) === false) {
+  if (num.length === 11) {
+    for (let index = 0; index <= num.length; index += 1) {
+      if (num[index] < 0 || num[index] > 9 || testaRepeticoes(num) === false) {
         saida = 'não é possível gerar um número de telefone com esses valores';
         break;
       } else {
-        saida = `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+        saida = `(${num[0]}${num[1]}) ${num[2]}${num[3]}${num[4]}${num[5]}${num[6]}-${num[7]}${num[8]}${num[9]}${num[10]}`;
       }
     }
   } else {
