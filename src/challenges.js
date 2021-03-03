@@ -20,7 +20,7 @@ return (base*height)/2;
 
 
 // Desafio 3
-function splitSentence(string) {
+function splitSentence() {
   // seu código aqui
 }
 
@@ -44,7 +44,7 @@ function footballPoints(wins,ties) {
 
 
 // Desafio 6
-function highestCount(array) {
+function highestCount() {
     // seu código aqui
     // https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
     // como dito o apply passa os valores do array para função math.max e assim ela analisa o maior.
@@ -89,7 +89,7 @@ function catAndMouse(mouse,cat1,cat2) {
 
 
 // Desafio 8
-function fizzBuzz(vetor) {
+function fizzBuzz() {
   // seu código aqui
   
     for (let i = 0; i<vetor.length ; i++){
