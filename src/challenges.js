@@ -34,6 +34,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Agradecimentos a Daniel Roberto Turma 10 - Tribo B, por ter me orientado aonde eu estava errando (for dentro de for ).
 function highestCount(numbers) {
   let max = 0;
   let repete = 0;
@@ -44,16 +45,23 @@ function highestCount(numbers) {
   }
   for (let key in numbers) {
     if (max === numbers[key]) {
-      repete += 1
+      repete += 1;
     }
   }
   return repete;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-  //não pode ser numero negativo, pois irá dar problema.
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
+  if (distanciaCat1 < distanciaCat2) {
+    return "cat2";
+  } else if (distanciaCat2 < distanciaCat1) {
+    return "cat1";
+  } else if (distanciaCat1 === distanciaCat2) {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
