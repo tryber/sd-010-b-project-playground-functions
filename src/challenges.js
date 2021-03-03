@@ -88,11 +88,13 @@ function encode(string) {
 
 function decode(string) {
   let arrayString = string.split('');
-  let dictionary = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
+  let dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
   arrayString.forEach((e, i) => {
-    if (e in dictionary) {
-      arrayString[i] = dictionary[e];
+    for(let key in dictionary){
+      if (parseInt(e) === dictionary[key]) {
+        arrayString[i] = key
+      }
     }
   });
   return arrayString.join('');
