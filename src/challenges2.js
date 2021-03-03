@@ -77,12 +77,12 @@ function hydrate() {
   let str = "1 cachaça, 5 cervejas e 1 copo de vinho"
   let array = str.split(" ")
   count = 0
-console.log(array)
+//console.log(array)
   for(let index = 0; index < array.length; index += 1){
 
       count += array[index]
     }
-  } console.log(count)
+  } //console.log(count)
 
 
 
