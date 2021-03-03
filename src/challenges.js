@@ -95,19 +95,22 @@ function highestCount(arrayNumeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if ((mouse - cat1) < (mouse - cat2)) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
     return 'cat1';
   }
 
-  else if ((mouse - cat1) === (mouse - cat2)) {
+  else if ((cat1 - mouse) === (cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
-  } else {
+  }
+
+  else if ((cat1 - mouse) > (cat2 - mouse)) {
     return 'cat2';
   }
+    return "A distância entre os gatos não nos permite saber quem apanhará o rato!"
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
-// console.log(catAndMouse(10, 5, 3));
+console.log(catAndMouse(0, 6, 12));
 
 // O console.log() abaixo serve somente para finalidade de teste.
 // console.log(highestCount())
