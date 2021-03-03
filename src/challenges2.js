@@ -25,12 +25,13 @@ if (newArray.length ==0){
 // Desafio 11
 function generatePhoneNumber() {
 
-  let numbersphone = [1, 2, 8, 2, 3, 3, 7, 8, 9, 0, 1];
+  let numbersphone = [1, 12, 0,0, 3, 3, 7, 8, 9, 0, 1,1,1];
   let bloco = {}
   if (numbersphone.length == 11) {
     for (let index=0; index < 11; index += 1) {
       if (numbersphone[index] < 0 || numbersphone[index] >9) {
-        console.log("Os numeros precisam ser entre 0 e 9")
+        console.log("não é possível gerar um número de telefone com esses valores")
+
         break;
         }
 
@@ -44,7 +45,7 @@ function generatePhoneNumber() {
 
   } for (keys in bloco){
     if(bloco[keys] > 3){
-      console.log('"não é possível gerar um número de telefone com esses valores"')
+      console.log("não é possível gerar um número de telefone com esses valores")
       break;
     }
   }

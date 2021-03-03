@@ -42,18 +42,17 @@ function highestCount(array) {
   return count
 }
 // Desafio 7
+//console.log(catAndMouse(0,0,0))
 function catAndMouse(mouse, cat1, cat2) {
-  let mouse=0
-  let cat1=3
-  let cat2=2
+
   let distcat1 = (mouse + cat1);
   let distcat2 = (mouse + cat2);
   if (distcat1 < distcat2) {
-    console.log('cat1');
+    return 'cat1';
   } else if (distcat2 < distcat1) {
-    console.log('cat2');
+    return 'cat2';
   } else {
-    console.log('os gatos trombam e o rato foge');
+    return 'os gatos trombam e o rato foge';
   }
 
 }
