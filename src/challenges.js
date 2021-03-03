@@ -24,7 +24,7 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let final = (arrayString[arrayString.length - 1] + ', ' + arrayString[0]);
+  let final = (`${arrayString[arrayString.length - 1]}, ${arrayString[0]}`);
   return final;
 }
 
@@ -80,26 +80,50 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let alone
   let result = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    alone = numbers[index];
-    if (alone % 3 == 0 && alone % 5 != 0) {
-      result.push('fizz')
-    } else if (alone % 5 == 0 && alone % 3 != 0) {
-      result.push('buzz')
-    } else if (alone % 3 == 0 && alone % 5 == 0) {
-      result.push('fizzBuzz')
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
+      result.push('fizz');//foi utilizado o site https://developer.mozilla.org/pt-BR/ para rever o conceito de push
+    } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
+      result.push('buzz');
+    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      result.push('fizzBuzz');
     } else {
-      result.push('bug!')
+      result.push('bug!');
     }
   }
   return result;
 }
 
 // Desafio 9
-function encode() {
+function encode(stringpar) {
   // seu código aqui
+  //   Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+  let info = stringpar.split();
+  for (let index = 0; index < array.length; index++) {
+    if (info[index] === 'a') {
+      info[index] = 1;
+    } else if (info[index] === 'e') {
+      info[index] = 2;
+    } else if (info[index] === 'i') {
+      info[index] = 3;
+    } else if (info[index] === 'o') {
+      info[index] = 4;
+    } if (info[index] === 'u') {
+      info[index] = 5;
+    } 
+  }
+  // a -> 1
+  // e -> 2
+  // i -> 3
+  // o -> 4
+  // u -> 5
+
+  // Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+
+  // A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
+
 }
 function decode() {
   // seu código aqui
