@@ -66,10 +66,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let onlyNumbers = string.replace(/\D/g, '');
+  let numbersSplited = onlyNumbers.split('');
+  let sumOfTheNumbers = 0;
+  for (let index = 0; index < numbersSplited.length; index += 1) {
+    sumOfTheNumbers = sumOfTheNumbers + parseInt(numbersSplited[index]);
+  }
+  let feedback = ``;
+  if (sumOfTheNumbers < 2) {
+    feedback = `${sumOfTheNumbers} copo de água`;
+  } else {
+    feedback = `${sumOfTheNumbers} copos de água`;
+  }
+  return feedback;
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
