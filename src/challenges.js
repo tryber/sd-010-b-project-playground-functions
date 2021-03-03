@@ -28,19 +28,10 @@ function calcArea(base, height) {
   }
 }
 
-// Desafio 3
-function splitSentence() {
-  let arrayOfStrings = [];
-
-  if (arrayOfStrings === 'go Trybe'.split(' ')) {
-    return arrayOfStrings;
-  }
-  if (arrayOfStrings === 'vamo que vamo'.split(" ").split(' ')) {
-    return arrayOfStrings;
-  }
-  if (arrayOfStrings === 'foguete'.split(' ')) {
-    return arrayOfStrings;
-  }
+//broda Desafio 3
+function splitSentence(userEntry) {
+  let arrayOfStrings = userEntry.split(" ");
+  return arrayOfStrings
 }
 
 // Desafio 4
