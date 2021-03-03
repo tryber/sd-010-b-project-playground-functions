@@ -11,37 +11,20 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-console.log(calcArea(10, 50));
-console.log(calcArea(5, 2));
-console.log(calcArea(51, 1));
-
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(' ');
-  return array;
+  return string.split(' ');
 }
-
-console.log(splitSentence('go trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(arra) {
-  let string = arra[arra.length - 1] + ', ' + arra[0]; 
-  return string;  
+  return string = arra[arra.length - 1] + ', ' + arra[0];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
-
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(maxN) {
@@ -53,9 +36,6 @@ function highestCount(maxN) {
   }
   return numb;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -67,10 +47,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return ('os gatos trombam e o rato foge');
 }
-console.log(catAndMouse(2, 0, 3));
-console.log(catAndMouse(0, 6, 1));
-console.log(catAndMouse(0, 0, 0));
-// https://www.w3schools.com/js/js_math.asp
 
 // Desafio 8
 function fizzBuzz(fiz) {
@@ -88,38 +64,45 @@ function fizzBuzz(fiz) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(arrayString) {
-  let string = arrayString;
-  let vogais = ['a', 'e', 'i', 'o', 'u'];
-  for (let index = 0; index < string.length; index += 1) {
-    for (let cont = 0; cont < vogais.length; cont += 1) {
-      if (string[index] === vogais[cont]) {
-        string = string.replace(string[index], (cont + 1));
-      }
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let encoding = '';
+  for (let i of arrayString) {
+    if (code[i]) {
+      encoding += code[i];
+    } else {
+      encoding += i;
     }
-  }
-  return string;
+  } 
+  return encoding;  
 }
-console.log(encode('hi there!'));
 
-function decode(decoding) {
-  let string = decoding;
-  let vogais = ['a', 'e', 'i', 'o', 'u']
-  for (let index = 0; index < string.length; index += 1) {
-    for (let cont = 0; cont < vogais.length; cont += 1) {
-      if (string[index] == (cont+1)) {
-        string = string.replace(string[index], vogais[cont]);
-      }
+function decode(arrayString) {
+  let code = {
+    1: a,
+    2: e,
+    3: i,
+    4: o,
+    5: u,
+  };
+  let decoding = '';
+  for (let index of arrayString) {
+    if (code[index]) {
+      decoding += code[i];
+    } else {
+      decoding += index;
     }
-  }
-  return string;
+  } 
+  return decoding;
 }
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
