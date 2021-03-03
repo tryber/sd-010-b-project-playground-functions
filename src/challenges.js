@@ -33,15 +33,17 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let max = array[0];
   let nVezes = 0;
-  // Verificar qual maior número
-  for (let key in array) {
-    if (array[key + 1] >= max) {
-      max = array[key + 1];
+  //Verificar qual maior número
+  for(let key in array){
+    if(array[key+1] >= max){
+      max = array[key+1];
     }
   }
 
-  for (let key in array) if (array[key] === max) nVezes += 1;
-}
+  for(let key in array)
+    if(array[key] === max) nVezes++;
+  
+  return nVezes;
 
 // Desafio 7
 
