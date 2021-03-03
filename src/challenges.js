@@ -30,9 +30,6 @@ function concatName(arrayStrings) {
   let primeiroTermo = arrayStrings[0];
   let novoArray = arrayStrings.reverse();
   let ultimoTermo = novoArray[0];
-  let arrayConcatenado = [];
-
-  arrayConcatenado.push(ultimoTermo, primeiroTermo);
 
   return `${ultimoTermo}, ${primeiroTermo}`;
 }
@@ -100,14 +97,14 @@ function fizzBuzz(arrayNumerico) {
   let arrayFizzBuzz = [];
 
   for (let key in arrayNumerico){
-    if ((arrayNumerico[key] % 3 === 0) && (arrayNumerico[key] % 5 === 0)){
-      arrayFizzBuzz.push("fizzBuzz");
-    }else if (arrayNumerico[key] % 3 === 0){
-      arrayFizzBuzz.push("fizz");
-    }else if (arrayNumerico[key] % 5 === 0){
-      arrayFizzBuzz.push("buzz");
-    }else{
-      arrayFizzBuzz.push("bug!");
+    if ((arrayNumerico[key] % 3 === 0) && (arrayNumerico[key] % 5 === 0)) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (arrayNumerico[key] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if (arrayNumerico[key] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
+    } else {
+      arrayFizzBuzz.push('bug!');
     }
   }
 
@@ -117,38 +114,38 @@ function fizzBuzz(arrayNumerico) {
 // Desafio 9
 function encode(codificar) {
   // seu código aqui
-  let arrayVogal = ["a" , "e", "i", "o", "u"];
-  let arrayCode = [1 , 2, 3, 4, 5];
+  let arrayVogal = ['a', 'e', 'i', 'o', 'u'];
+  let arrayCode = [1, 2, 3, 4, 5];
 
-  arrayCodificar = codificar.split("");
+  let arrayCodificar = codificar.split('');
 
-  for (let key in arrayCodificar){
-    for (let key2 in arrayVogal){
-      if (arrayCodificar[key] == arrayVogal[key2])
+  for (let key in arrayCodificar) {
+    for (let key2 in arrayVogal) {
+      if (arrayCodificar[key] == arrayVogal[key2]){
         arrayCodificar[key] = arrayCode[key2];
     }
   }
 
-  juntar = arrayCodificar.join("");
+  let juntar = arrayCodificar.join('');
 
   return juntar;
 }
 
 function decode(decodificar) {
   // seu código aqui
-  let arrayVogal = ["a", "e", "i", "o", "u"];
+  let arrayVogal = ['a', 'e', 'i', 'o', 'u'];
   let arrayCode = [1, 2, 3, 4, 5];
 
-  arrayDecodificar = decodificar.split("");
+  let arrayDecodificar = decodificar.split('');
 
-  for (let key in arrayDecodificar){
-    for (let key2 in arrayCode){
-      if (arrayDecodificar[key] == arrayCode[key2])
-      arrayDecodificar[key] = arrayVogal[key2];
+  for (let key in arrayDecodificar) {
+    for (let key2 in arrayCode) {
+      if (arrayDecodificar[key] == arrayCode[key2]){
+        arrayDecodificar[key] = arrayVogal[key2];
     }
   }
 
-  juntar = arrayDecodificar.join("");
+  let juntar = arrayDecodificar.join('');
 
   return juntar;
 }
