@@ -42,11 +42,11 @@ function highestCount(array) {
   return count
 }
 // Desafio 7
-//console.log(catAndMouse(0,0,0))
+//console.log(catAndMouse(15,12,13))
 function catAndMouse(mouse, cat1, cat2) {
 
-  let distcat1 = (mouse + cat1);
-  let distcat2 = (mouse + cat2);
+  let distcat1 = (mouse - cat1);
+  let distcat2 = (mouse - cat2);
   if (distcat1 < distcat2) {
     return 'cat1';
   } else if (distcat2 < distcat1) {
@@ -106,7 +106,7 @@ function encode(code) {
 
 }
 
-console.log(decode("h3 th2r2!"))
+
 function decode(code) {
   let frase = ''
   let string= code.split('');
