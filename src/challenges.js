@@ -68,8 +68,9 @@ function fizzBuzz(array) {
     } else {
       fizzBuzz.push('bug!');
     }
-    return (fizzBuzz)
+
   }
+  return (fizzBuzz)
 }
 
 

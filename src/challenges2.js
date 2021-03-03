@@ -8,6 +8,9 @@ function techList(array) {
   }
     newArray.push(bloco);
 }
+if(newArray.length ==0){
+  return ('Vazio!')
+}
   return (newArray);
 
   }
