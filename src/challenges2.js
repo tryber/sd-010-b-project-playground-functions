@@ -20,7 +20,7 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   let repeatedNumbers = 0;
   let repeatedNumbersValidator = 0;
   let weirdNumbers = false;
@@ -41,11 +41,10 @@ function generatePhoneNumber() {
     repeatedNumbers = 0;
   }
 
-
   if ((weirdNumbers == true) || (repeatedNumbersValidator >= 3)){
-    console.log ("não é possível gerar um número de telefone com esses valores")
+    return("não é possível gerar um número de telefone com esses valores")
   } else if (array.length != 11) {
-    console.log("Array com tamanho incorreto.")
+    return("Array com tamanho incorreto.")
   } else {
     let string = '(';
 
@@ -61,7 +60,7 @@ function generatePhoneNumber() {
     for (let i = 7; i < array.length; i += 1) {
       string += array[i]
     }
-    console.log (string);
+    return(string);
   }
 }
 
