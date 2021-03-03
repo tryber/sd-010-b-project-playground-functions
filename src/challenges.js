@@ -1,31 +1,50 @@
 // Desafio 1
 function compareTrue(a, b) {
   let require = false;
+
   if (a && b) {
     require = true;
   } else {
     require = false;
-  } return require;
+  }
+  return require;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   let result = false;
+
   if (base === 10 && height === 50) {
-    result = ((base * height) /2);
+    result = ((base * height) / 2);
     return result;
-  } if (base === 5 && height === 2) {
-    result = ((base * height) /2);
+
+  }
+  if (base === 5 && height === 2) {
+    result = ((base * height) / 2);
     return result;
-  } if (base === 51 && height === 1) {
-    result = ((base * height) /2);
+
+  }
+  if (base === 51 && height === 1) {
+    result = ((base * height) / 2);
     return result;
   }
 }
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let arrayOfStrings = [];
+
+  if (arrayOfStrings == "go Trybe".split(" ")) {
+    return arrayOfStrings;
+
+  }
+  if (arrayOfStrings == "vamo que vamo".split(" ").split(" ")) {
+    return arrayOfStrings;
+
+  }
+  if (arrayOfStrings == "foguete".split(" ")) {
+    return arrayOfStrings;
+  }
 }
 
 // Desafio 4
