@@ -21,8 +21,12 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayParameter) {
   // seu código aqui
+  let searchLastName = arrayParameter[arrayParameter.length - 1];
+  let searchFirstName = arrayParameter[0];
+  let resultConcat = searchLastName + ',' + ' ' + searchFirstName;
+  return resultConcat;
 }
 
 // Desafio 5
