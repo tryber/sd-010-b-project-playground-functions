@@ -1,20 +1,24 @@
 // Desafio 10
-function techList(array,name) {
+
+
+function techList(tec, name) {
   // let array =["React", "Jest", "HTML", "CSS", "JavaScript"]
   // let name ="Lucas"
+  let array = tec.sort()
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     let bloco = {
       tech: array[index],
-      nome: name
+      name: name
   }
     newArray.push(bloco);
 }
 
 if (newArray.length ==0){
-  return ('Vazio!')
+  return 'Vazio!';
 } else {
-  return (newArray)};
+  return newArray;
+}
 
   }
 
@@ -50,12 +54,10 @@ function generatePhoneNumber() {
   } else {
     console.log('Array com tamanho incorreto.')
   }
-
+}
 // Desafio 12
-function triangleCheck() {
-  let lineA = 19;
-  let lineB = 10;
-  let lineC = 8;
+
+function triangleCheck(lineA, lineB, lineC){
   let sumAC = (lineA + lineC);
   let sumAB = (lineA + lineB);
   let sumBC = (lineB + lineC);
@@ -63,16 +65,25 @@ function triangleCheck() {
   let difAB = Math.abs(lineA- lineB);
   let difBC = Math.abs(lineB- lineC);
   if((sumAB> lineC) && (sumBC > lineA) && (sumAC > lineB) && (difAC<lineB) && (difAB<lineC) && (difBC<lineA)){
-    console.log (true)
+    return true
   }else{
-    console.log(false)
+    return false
   }
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
-}
+  let str = "1 cachaça, 5 cervejas e 1 copo de vinho"
+  let array = str.split(" ")
+  count = 0
+console.log(array)
+  for(let index = 0; index < array.length; index += 1){
+
+      count += array[index]
+    }
+  } console.log(count)
+
+
 
 module.exports = {
   generatePhoneNumber,
