@@ -20,8 +20,8 @@ function techList(arr, name) {
 
 const concat = (arr) => {
   let telefone = arr.toString().replace(/\D/g, '');
-  let match = telefone.match(/^(\d{2})(\d{5})(\d{4})$/);
-  return `(${match[1]}) ${match[2]}-${match[3]}`;
+  let combine = telefone.match(/^(\d{2})(\d{5})(\d{4})$/);
+  return `(${combine[1]}) ${combine[2]}-${combine[3]}`;
 };
 const conditionals = (arr, numbers) => {
   for (let item of arr) {
