@@ -78,7 +78,7 @@ function encode(string) {
   let dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
   arrayString.forEach((ele, i) => {
-    if (dictionary.hasOwnProperty(ele)) {
+    if (ele in dictionary) {
       arrayString[i] = dictionary[ele];
     }
   });
@@ -91,13 +91,13 @@ function decode(string) {
   let dictionary = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
 
   arrayString.forEach((ele, i) => {
-    if (dictionary.hasOwnProperty(ele)) {
+    if (ele in dictionary) {
       arrayString[i] = dictionary[ele];
     }
   });
   return arrayString.join('');
 }
-
+console.log(decode('d1nn3'))
 module.exports = {
   calcArea,
   catAndMouse,
