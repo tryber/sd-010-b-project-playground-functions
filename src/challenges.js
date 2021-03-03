@@ -20,9 +20,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array) {
-  let ultimo = array[array.length - 1] + "," + array[0];
-  return ultimo;
+function concatName(umaLista) {
+  let concat = umaLista[umaLista.length - 1] + ", " + umaLista[0];
+  return concat;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -38,21 +38,24 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maior = 0;
-  for (let index in array) {
-    if (array[index] > maior) {
-      maior = array[index];
+  bigger = numbers[0];
+  for (let key in numbers) {
+    if (numbers[key] > bigger) {
+      bigger = numbers[key];
     }
   }
-  let cont = 0;
-  for (let index in array) {
-    if (array[index === maior]) {
-      cont++;
-   }
+  //contar quantas vezes ele aparece
+  let counter = 0;
+  for (let key in numbers) {
+    if ( numbers[key] === bigger) {
+      counter ++;
+    if (numbers[key] === bigger) {
+      counter++;
+    }
   }
-  return cont;
+  return counter;
 }
-
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
