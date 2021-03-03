@@ -118,16 +118,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(0, 2, -2));
 
 // Desafio 8
-function fizzBuzz(numeros) {
+function fizzBuzz(nums) {
   // seu código aqui
   // A array a seguir serve apenas para finalidade de teste do algoritmo:
-  // numeros = [9, 25];
+  // nums = [9, 25];
   let saveArray = [];
 
-  for (let achaFizzBuzz = 0; achaFizzBuzz < numeros.length; achaFizzBuzz += 1) {
-    if (numeros[achaFizzBuzz] % 5 === 0 && numeros[achaFizzBuzz] % 3 === 0) saveArray.push('fizzBuzz');
-    else if (numeros[achaFizzBuzz] % 3 === 0) saveArray.push('fizz');
-    else if (numeros[achaFizzBuzz] % 5 === 0) saveArray.push('buzz');
+  for (let achaFizzBuzz = 0; achaFizzBuzz < nums.length; achaFizzBuzz += 1) {
+    if (nums[achaFizzBuzz] % 5 === 0 && nums[achaFizzBuzz] % 3 === 0) saveArray.push('fizzBuzz');
+    else if (nums[achaFizzBuzz] % 3 === 0) saveArray.push('fizz');
+    else if (nums[achaFizzBuzz] % 5 === 0) saveArray.push('buzz');
     else saveArray.push('bug!');
   }
   return saveArray;
@@ -137,9 +137,27 @@ function fizzBuzz(numeros) {
 // console.log(fizzBuzz());
 
 // Desafio 9
-function encode() {
+function encode(uncodedString) {
   // seu código aqui
+  let letrasCodificar = ['a', 'e', 'i', 'o', 'u'];
+  let algoritmo = [1, 2, 3, 4, 5]
+  
+  let saveToCode = '';
+  let saveCodedString = '';
+
+  for (let indexCode = 0; indexCode < uncodedString.length; indexCode += 1) {
+    saveToCode = uncodedString[indexCode];
+    for (let indexCoding = 0; indexCoding < letrasCodificar.length; indexCoding += 1) {
+      if (letrasCodificar[indexCoding] === saveToCode) saveToCode = algoritmo[indexCoding];
+    }
+    saveCodedString += saveToCode;
+  }
+  return saveCodedString;
 }
+
+// O console.log() abaixo serve somente para finalidade de teste.
+// console.log(encode("hi there!"));
+
 function decode() {
   // seu código aqui
 }
