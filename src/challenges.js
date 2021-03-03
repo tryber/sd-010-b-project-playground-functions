@@ -65,8 +65,8 @@ console.log(highestCount([9, 1, 10, 9, 9, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let distanciaA = mouse - cat1; 
-  let distanciaB = mouse - cat2; 
+  let distanciaA = Math.abs(mouse - cat1); 
+  let distanciaB = Math.abs(mouse - cat2); 
   let primeiroPegar;
   
   if(distanciaB < distanciaA){
@@ -74,13 +74,12 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   else if(distanciaA < distanciaB){
     primeiroPegar = 'Cat1';
-  }else if(distanciaB === distanciaA){
+  }
+  else if(distanciaB === distanciaA){
     primeiroPegar = 'Os gatos trombam e o rato foge.';
-  };
+  }
   return primeiroPegar;
-};
-console.log(catAndMouse(10,5,5));
-
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
