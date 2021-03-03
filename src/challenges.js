@@ -31,6 +31,7 @@ function splitSentence(string) {
     return string.split(' ', 3);
   case 'foguete':
     return string.split(' ');
+  default:
   }
 }
 
