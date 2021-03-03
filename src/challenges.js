@@ -105,10 +105,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   transformNumber();
 
+  let message = "";
   // Agora já podem ser compararadas de forma clara as distâncias entre os gatos e o rato:
-  if (distanciaCat1 < distanciaCat2) return 'cat1';
-  else if (distanciaCat1 > distanciaCat2) return 'cat2';
-  else if (distanciaCat1 === distanciaCat2) return 'os gatos trombam e o rato foge';
+  if (distanciaCat1 < distanciaCat2) message = 'cat1';
+  else if (distanciaCat1 > distanciaCat2) message = 'cat2';
+  else if (distanciaCat1 === distanciaCat2) message = 'os gatos trombam e o rato foge';
+
+  return message;
 }
 
 // O console.log() abaixo serve somente para finalidade de teste.
