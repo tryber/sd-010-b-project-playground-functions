@@ -82,48 +82,65 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(n) {
+  let resultado = [];
   for(let i = 0; i < n.length; i += 1){
     if(n[i] % 5 == 0 && n[i] % 3 == 0){
-      n[i] = "fizzBuzz";
+      resultado.push("fizzBuzz");
     } else if (n[i] % 5 == 0 && n[i] % 3 != 0){
-      n[i] = "buzz";
+      resultado.push("buzz");
     } else if (n[i] % 3 == 0 && n[i] % 5 != 0){
-      n[i] = "fizz";
+      resultado.push("fizz");
     } else {
-      n[i] = "bug!";
+      resultado.push("bug!");
     }
   }
-  return n;
+  return resultado;
 }
+
 
 
 // Desafio 9
 function encode(string) {
+  let palavra = "";
   for(let i = 0; i < string.length; i += 1) {
     if(string[i] == "a"){
-      string[i] = "1";
+      palavra += "1";
     } else if(string[i] == "e") {
-      string[i] = "2";
+      palavra += "2";
     } else if(string[i] == "i") {
-      string[i] = "3";
+      palavra += "3";
     } else if(string[i] == "o") {
-      string[i] = "4";
+      palavra += "4";
     } else if(string[i] == "u") {
-      string[i] = "5";
-    }
+      palavra += "5";
+    } else {
+      palavra += string[i];
+        }
   }
-  return string;
+  return palavra;
 }
 
-console.log(encode("hi there!"));
 
-
-
-
-
-function decode() {
-  
+function decode(string) {
+  let palavra = "";
+  for(let i = 0; i < string.length; i += 1) {
+    if(string[i] == "1"){
+      palavra += "a";
+    } else if(string[i] == "2") {
+      palavra += "e";
+    } else if(string[i] == "3") {
+      palavra += "i";
+    } else if(string[i] == "4") {
+      palavra += "o";
+    } else if(string[i] == "5") {
+      palavra += "u";
+    } else {
+      palavra += string[i];
+        }
+  }
+  return palavra;
 }
+
 
 module.exports = {
   calcArea,
