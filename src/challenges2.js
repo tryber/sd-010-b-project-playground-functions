@@ -17,31 +17,31 @@ function techList(teq, name) {
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
-  let phoneNumber =['(']
-  let contador = 0
+  let phoneNumber = ['('];
+  let contador = 0;
   if (numeros.length === 11) {
     for (let numberIndex = 0; numberIndex < numeros.length; numberIndex += 1) {
       for (let contIndex = 0; contIndex < numeros.length; contIndex += 1) {
         if (numeros[numberIndex] === numeros[contIndex]) {
-          contador += 1
+          contador += 1;
         }
       }
       if (numeros[numberIndex] > 9 || numeros[numberIndex] < 0 || contador > 2) {
         return 'não é possível gerar um número de telefone com esses valores';
       } switch (numberIndex) {
-          case 1 :
-            phoneNumber = phoneNumber + numeros[numberIndex] + ') ';
-            break;
-          case 6 :
-            phoneNumber = phoneNumber + numeros[numberIndex] + '-';
-            break;
-          default :
-            phoneNumber = phoneNumber + numeros[numberIndex];
-            break;
-        } contador = 0 ;
+      case 1:
+        phoneNumber = `${phoneNumber}${numeros[numberIndex]}) `;
+        break;
+      case 6:
+        phoneNumber = `${phoneNumber}${numeros[numberIndex]}-`;
+        break;
+      default:
+        phoneNumber = `${phoneNumber}${numeros[numberIndex]}`;
+        break;
+        } contador = 0;
     } return phoneNumber;
   } return 'Array com tamanho incorreto.';
-} 
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -50,19 +50,26 @@ function triangleCheck(lineA, lineB, lineC) {
       return false;
     }
   } else if (lineB > lineA && lineC) {
-      if (lineB > lineA + lineC) {
-        return false;
-      }
-    } else if (lineC > lineA && lineB) {
-        if (lineC > lineB + lineA) {
-          return false;
-        }
-      } return true;
+    if (lineB > lineA + lineC) {
+      return false;
+    }
+  } else if (lineC > lineA && lineB) {
+    if (lineC > lineB + lineA) {
+      return false;
+    }
+  } return true;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(pedido) {
+  let soma = 0;
+  pedido = pedido.replace(/\D/g, "");
+  pedido = pedido.split('');
+  for (index =0; index < pedido.length; index += 1) {
+      pedido[index] = parseInt(pedido[index]);
+      soma = soma + pedido[index];
+  }
+  return (`${soma} copos de água`);
 }
 
 module.exports = {

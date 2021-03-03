@@ -1,29 +1,16 @@
-let maior
-let meio
-let menor
-if (lineA > lineB && lineC){
-  maior =lineA
-  if (lineB > lineC){
-    meio = lineB
-    menor = lineC
-  } 
-  meio = lineC
-  menor = lineB
-} else if (lineB > lineA && lineC) {
-  maior =lineB
-  if (lineA > lineC){
-    meio = lineA
-    menor = lineC
-  } 
-  meio = lineC
-  menor = lineA
-} else if (lineC > lineA && lineB){
-  maior =lineC
-  if (lineB > lineA){
-    meio = lineB
-    menor = lineA
-  } 
-  meio = lineA
-  menor = lineB
+let soma = 0
+let a = "f1 f2"
+a = a.replace(/\D/g, "")
+a = a.split('')
+for (index =0; index < a.length; index += 1){
+    a[index] = parseInt(a[index])
+    soma = soma + a[index]
 }
-if (maior > meio + menor || meio < maior - menor)
+console.log(soma)
+
+for (let pedidoindex = 0; pedidoindex < a.length ; pedidoindex += 1){
+  if (typeof a[pedidoindex] === 'number'){
+    soma = soma + a[pedidoindex];
+  }
+}
+  console.log(soma)
