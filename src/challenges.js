@@ -142,4 +142,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-console.log(decode("h3 th2r2!"));

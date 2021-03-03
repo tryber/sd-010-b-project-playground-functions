@@ -1,7 +1,22 @@
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
-}
+  let arrayObjeto = [];
+  let objeto = {};
+  let resultado;
+  if (array.length == 0) {
+    resultado = "Vazio";
+  } else {
+    for (let index = 0; index < array.length; index += 1) {
+      objeto.tech = array[index];
+      objeto.name = name;
+      arrayObjeto.push(objeto);
+      objeto = {};
+    }
+    resultado = arrayObjeto;
+  }
+  return resultado
+} 
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -24,3 +39,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+console.log(techList([],"Lucas"));
