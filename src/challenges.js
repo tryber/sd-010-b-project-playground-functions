@@ -145,7 +145,7 @@ function decode(arrayString) {
     } else if(arrayString[index] == '3'){
       newString = newString + 'i';
     } else if(arrayString[index] == '4'){
-      newString = newString + '0';
+      newString = newString + 'o';
     } else if(arrayString[index] == '5'){
       newString = newString + 'u';
     } else {
@@ -154,7 +154,7 @@ function decode(arrayString) {
   }
   return newString;
 }
-console.log(decode("h3 th2r2!"))
+
 module.exports = {
   calcArea,
   catAndMouse,
