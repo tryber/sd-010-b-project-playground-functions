@@ -3,7 +3,7 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -18,7 +18,7 @@ function splitSentence(myString) {
 
 // Desafio 4
 function concatName(myArray) {
-  return myArray[myArray.length - 1] + ', ' + myArray[0];
+  return myArray[myArray.length - 1] + myArray[0];
 }
 
 // Desafio 5
