@@ -43,7 +43,7 @@ function generatePhoneNumber(numbers) {
   for (let index = 0; index < 2; index += 1) {
     phoneNumber = phoneNumber + numbers[index];
   }
-  phoneNumber = phoneNumber + ')';
+  phoneNumber = phoneNumber + ') ';
   for (let index = 2; index < 7; index += 1) {
     phoneNumber = phoneNumber + numbers[index];
   }
@@ -66,15 +66,9 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate(drinking) {
+function hydrate(drinking) {}
 
 
-
-
-
-
-
-}
 
 module.exports = {
   generatePhoneNumber,
