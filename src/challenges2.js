@@ -1,15 +1,14 @@
 // Desafio 10
 function techList(array) {
-
-  let newArray = []
-  for(let index = 0; index < array.length ;index += 1){
-  let bloco ={
-    tech: array[index],
-    nome : "Jefferson"
+  let newArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    let bloco ={
+      tech: array[index],
+      nome: "Jefferson"
   }
-  newArray.push(bloco)
+  newArray.push(bloco);
 }
-  return (newArray)
+  return (newArray);
 
   }
 
