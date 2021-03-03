@@ -84,9 +84,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(num) {
+  let convertArray = [];
+  for (let index = 0; index < num.length; index += 1) {
+    if (num[index] % 3 == 0 && num[index] % 5 == 0){
+      convertArray.push('FizzBuzz') ;
+    } else if (num[index] % 3 == 0) {
+      convertArray.push('Fizz');
+    } else if (num[index] % 5 == 0) {
+      convertArray.push('Buzz');
+    } else {
+      convertArray.push('Bug!');
+    }
+  }
+  return convertArray;
 }
+
 
 // Desafio 9
 function encode() {
