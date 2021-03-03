@@ -30,8 +30,9 @@ function splitSentence(userEntry) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  let lastFirst = arrayOfStrings[arrayOfStrings[0] + ', ' + arrayOfStrings[0]];
+  return arrayOfStrings;
 }
 
 // Desafio 5
