@@ -39,7 +39,7 @@ function generatePhoneNumber(array) {
   }
   for (let i = 0; i < array.length; i += 1) {
     if ((array[i] < 0) || (array[i] > 9 || (contaNumRepetido(array) >= 3))) {
-      return 'Não é possível gerar um número de telefone com esses valores.';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   let telefoneDDD = '(' + array[0] + array[1] + ')';
@@ -47,7 +47,7 @@ function generatePhoneNumber(array) {
   let telefoneParteDois = '' + array[7] + array[8] + array[9] + array[10];
   let numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
   return numTelefone;
-}
+} 
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -77,7 +77,7 @@ function hydrate(string) {
   if (copoAgua === 1) {
     resultado = '1 copo de água';
   } else {
-    resultado = copoAgua + '$copo copos de água';
+    resultado = copoAgua + ' copos de água';
   }
   return resultado;
 }
