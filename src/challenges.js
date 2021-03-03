@@ -65,12 +65,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function verifica(tres, cinco) {
+function verificaFalse(tres, cinco) {
   let resposta = '';
   if (tres === false && cinco === false) {
     resposta += 'bug!';
+    if (tres === true && cinco === true) {
+      resposta += 'fizzBuzz';
+    }
   }
   return resposta;
+}
+function verificaFizzBuzz(palavra) {
+  let saida = '';
+  if (palavra === 'fizzbuzz') {
+    saida = 'fizzBuzz';
+  } else {
+    saida = palavra;
+  }
+  return saida;
 }
 function criarArray(arrayDeNumeros) {
   let saida = [];
@@ -94,7 +106,8 @@ function fizzBuzz(arrayDeNumeros) {
       resposta[index] += 'buzz';
       cinco = true;
     }
-    resposta[index] += verifica(tres, cinco);
+    resposta[index] += verificaFalse(tres, cinco);
+    resposta[index] = verificaFizzBuzz(resposta[index]);
   }
   return resposta;
 }
