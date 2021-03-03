@@ -99,21 +99,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat2 = mouse - cat2;
 
   // Ao olhar o log do GitHub, tive de fazer uma pequena alteração no código e adicionar uma nova função que transforma os números negativos em positivos, assim, as distâncias podem ser comparadas em números positivos:
-  function transformNumber () {
-    if (distanciaCat1 < 0) {
-      distanciaCat1 *= -1;
-    }
-    if (distanciaCat2 < 0) {
-      distanciaCat2 *= -1;
-    }
+  function transformNumber() {
+    if (distanciaCat1 < 0) distanciaCat1 *= -1;
+    if (distanciaCat2 < 0) distanciaCat2 *= -1;
   }
-  transformNumber ();
+  transformNumber();
 
   // Agora já podem ser compararadas de forma clara as distâncias entre os gatos e o rato:
   if (distanciaCat1 < distanciaCat2) return 'cat1';
-
   else if (distanciaCat1 > distanciaCat2) return 'cat2';
-
   else if (distanciaCat1 === distanciaCat2) return 'os gatos trombam e o rato foge';
 }
 
@@ -123,28 +117,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numeros) {
   // seu código aqui
-
   // A array a seguir serve apenas para finalidade de teste do algoritmo:
   // numeros = [9, 25];
-
   let armazenaFizzBuzz = [];
 
   for (let achaFizzBuzz = 0; achaFizzBuzz < numeros.length; achaFizzBuzz += 1) {
-    if (numeros[achaFizzBuzz] % 5 === 0 && numeros[achaFizzBuzz] % 3 === 0) {
-      armazenaFizzBuzz.push('fizzBuzz');
-    }
-
-    else if (numeros[achaFizzBuzz] % 3 === 0) {
-      armazenaFizzBuzz.push('fizz');
-    }
-
-    else if (numeros[achaFizzBuzz] % 5 === 0) {
-      armazenaFizzBuzz.push('buzz');
-    }
-
-    else {
-      armazenaFizzBuzz.push('bug!');
-    }
+    if (numeros[achaFizzBuzz] % 5 === 0 && numeros[achaFizzBuzz] % 3 === 0) armazenaFizzBuzz.push('fizzBuzz');
+    else if (numeros[achaFizzBuzz] % 3 === 0) armazenaFizzBuzz.push('fizz');
+    else if (numeros[achaFizzBuzz] % 5 === 0) armazenaFizzBuzz.push('buzz');
+    else armazenaFizzBuzz.push('bug!');
   }
   return armazenaFizzBuzz;
 }
