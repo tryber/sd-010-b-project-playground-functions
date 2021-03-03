@@ -92,12 +92,12 @@ function decode(string) {
 
   arrayString.forEach((e, i) => {
     if (e in dictionary) {
-      arrayString[i] = dictionary[ele];
+      arrayString[i] = dictionary[e];
     }
   });
   return arrayString.join('');
 }
-console.log(decode('d1nn3'))
+
 module.exports = {
   calcArea,
   catAndMouse,
