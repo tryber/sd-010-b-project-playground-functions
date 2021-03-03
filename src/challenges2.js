@@ -19,7 +19,7 @@ function techList(tech, name) {
   }  
 }
 
-// Desafio 11 ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
+// Desafio 11
 function generatePhoneNumber(arrayOfNumber) {
   let telePhoneNumber = '(';
   for(let DDD = 0; DDD < 2; DDD += 1) {
@@ -65,7 +65,6 @@ function generatePhoneNumber(arrayOfNumber) {
           return 'não é possível gerar um número de telefone com esses valores';
       }
   }  
-console.log(generatePhoneNumber([1, 2, 3, 34, 3, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -83,11 +82,16 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13  ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
 function hydrate(stringWithGlasses) {
   let retorno = '';
-  let busca = /[1-9]/g;
-  
+  let sumOfGlasses = 0;  
+  for (let key in stringWithGlasses){
+      if (typeof(stringWithGlasses[key]) == Number) {
+          sumOfGlasses += stringWithGlasses[key];
+      }
+  }
+  retorno = sumOfGlasses + ' copos de água';
   return retorno; 
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+
 
 module.exports = {
   generatePhoneNumber,
