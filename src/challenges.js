@@ -20,14 +20,13 @@ function calcArea(base, height) {
   case 25.5:
     return 25.5;
     break;
-  default:
   }
 }
 // Desafio 3
 function splitSentence() {
   // seu código aqui
-  let organiza = "";
-  if (organiza === splitSentence) {
+  let organiza = splitSentence();
+  if (organiza === '') {
     return organiza.split([""[", "]]);
   }
 }
