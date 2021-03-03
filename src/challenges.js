@@ -41,7 +41,7 @@ function splitSentence(string) {
 function concatName(string) {
   // seu código aqui
   let retorno = string;
-    retorno.reverse();
+    retorno.reverse().split(' ');
   return retorno;
 }
 
