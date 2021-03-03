@@ -5,7 +5,7 @@ function compareTrue(valorUm, valorDois) {
   if (valorUm && valorDois === true) {
     return compareTrue;
   }
-    return trueOrFalse;
+  return trueOrFalse;
 }
 
 // Desafio 2
