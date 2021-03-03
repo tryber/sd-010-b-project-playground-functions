@@ -55,9 +55,11 @@ function repeticaoDeTresOuMais (arrayDeNumeros) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let existencia = (((lineA < lineB + lineC) && (lineA > Math.abs(lineB-lineC))) || ((lineB < lineA + lineC) && (lineB > Math.abs(lineA-lineC))) || ((lineC < lineB + lineA) && (lineC > Math.abs(lineB-lineC))));
+return existencia
 }
+
 
 // Desafio 13
 function hydrate() {
