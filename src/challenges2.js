@@ -38,27 +38,25 @@ function generatePhoneNumber(array) {
           counter += 1;
         }
       }
-      if (counter >= 3) {
-        invalido = false;
-      }
+      (counter >= 3) ? invalido = false : invalido = true;
     }
     if (invalido !== false) {
       return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
     }
-      return 'não é possível gerar um número de telefone com esses valores';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-    return 'Array com tamanho incorreto.';
+  return 'Array com tamanho incorreto.';
 }
 
 // teste item 11
-array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(array0));
-array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-console.log(generatePhoneNumber(array1));
-array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
-console.log(generatePhoneNumber(array2));
-array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
-console.log(generatePhoneNumber(array3));
+// array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(array0));
+// array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// console.log(generatePhoneNumber(array1));
+// array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
+// console.log(generatePhoneNumber(array2));
+// array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
+// console.log(generatePhoneNumber(array3));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -94,7 +92,7 @@ function hydrate(umaFrase) {
   if (soma > 1) {
     return `${soma} copos de água`;
   } 
-    return `${soma} copo de água`;
+  return `${soma} copo de água`;
 }
 
 // teste item 13
