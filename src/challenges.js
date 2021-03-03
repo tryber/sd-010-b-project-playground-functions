@@ -66,18 +66,16 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < mouse) {
+  if (cat1 == 0) {
     cat1 += mouse;
   } else {
     cat1 -= mouse;
   }
-  if (cat2 < mouse) {
-    cat2 += mouse
+  if (cat2 == 0) {
+    cat2 += mouse;
   } else {
-    cat2 -= mouse;
+    cat2 -= mouse;2
   }
-  
-  
   if (cat1 < cat2) {
     return 'cat1';
   } else if (cat2 < cat1) {
@@ -87,7 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 console.log(catAndMouse(1, 3, 2));
-console.log(catAndMouse(1, 6, 12));
+console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
