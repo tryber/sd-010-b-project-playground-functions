@@ -26,28 +26,28 @@ function techList(array, name) {
 // Desafio 11
 function repeticao(array, key) {
   let counter = 0;
-  var verificacao = true;
+  let verificacao = true;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === array[key]) {
       counter += 1;
     }
-    var verificacao = (counter >= 3) ? false : true;
+    verificacao = (counter >= 3) ? false : true;
   }
   return verificacao;
 }
 function verificaCarateres(array, key) {
   let verificacao = (array[key] < 0 || array[key] > 9) ? false : true;
-  if ( verificacao === false ) {
+  if (verificacao === false) {
     return verificacao;
   }
   return repeticao(array, key);
 }
 
 function generatePhoneNumber(array) {
-  var verificacao = true;
+  let verificacao = true;
   if (array.length === 11) {
     for (let key in array) {
-      var verificacao = verificaCarateres(array, key);
+      verificacao = verificaCarateres(array, key);
     }
     if (verificacao !== false) {
       return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
