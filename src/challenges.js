@@ -102,16 +102,14 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (Math.abs((cat1 - mouse)) > Math.abs((cat2 - mouse))) {
     return 'cat2';
-
   } else if(Math.abs((cat1 - mouse)) == Math.abs(( cat2 - mouse))){
     return 'os gatos trombam e o rato foge';
-
   } else {
     return 'cat1';
   }
 }
 
-console.log(catAndMouse(0, 3, 2));
+
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
