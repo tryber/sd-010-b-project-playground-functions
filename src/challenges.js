@@ -3,7 +3,7 @@ function compareTrue(valorUm, valorDois) {
   // seu código aqui
   let trueOrFalse = false;
   if (valorUm && valorDois === true) {
-    return compareTrue;
+    return true;
   }
   return trueOrFalse;
 }
@@ -31,7 +31,7 @@ function splitSentence() {
     return splitSentence.split(''+'');
   }
   if (splitSentence.length === 1) {
-   return splitSentence.split(''+'');
+    return splitSentence.split(''+'');
   }
 }
 
