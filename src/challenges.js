@@ -21,8 +21,10 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaPalavras) {
+  let concatenacao =
+    listaPalavras[listaPalavras.length - 1] + ', ' + listaPalavras[0];
+  return concatenacao;
 }
 
 // Desafio 5
@@ -52,7 +54,6 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
