@@ -65,7 +65,7 @@ function highestCount(numbers) {
   }
   for (let key in numbers) {
     if (numbers[key] === bigger) {
-      counter+1;
+      counter + 1;
     }
   }
   return counter;
@@ -87,10 +87,10 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (distanciaMouse2 < distanciaMouse1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
+
 
 // teste item 7
 // console.log(catAndMouse(5, 2, 7));
@@ -122,16 +122,14 @@ function fizzBuzz(umaLista) {
 // console.log(fizzBuzz(array1));
 // console.log(fizzBuzz(array2));
 
-
 // Desafio 9
 function encode(umaFrase) {
   let lista = umaFrase.split('');
-
   for (let key in lista) {
     switch (lista[key]) {
       case 'a':
-        lista[key] = 1;
-        break;
+      lista[key] = 1;
+      break;
       case 'e':
         lista[key] = 2;
         break;
