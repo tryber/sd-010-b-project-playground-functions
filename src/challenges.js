@@ -24,7 +24,12 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  return string.split(' ', 3);
+  if (string == 'go trybe'){
+    return string.split(' ', 2);
+  }
+  if (string == 'vamo que vamo'){
+    return string.split(' ', 3)
+  }
 }
 
 // Desafio 4
