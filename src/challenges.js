@@ -107,12 +107,12 @@ function encode(arrayString) {
 }
 console.log(encode('hi there!'));
 
-function decode(decodeArray) {
-  let string = decodeArray;
-  let vogais = ['a', 'e', 'i', 'o', 'u'];
+function decode(decoding) {
+  let string = decoding;
+  let vogais = ['a', 'e', 'i', 'o', 'u']
   for (let index = 0; index < string.length; index += 1) {
     for (let cont = 0; cont < vogais.length; cont += 1) {
-      if (string[index] === (cont + 1)) {
+      if (string[index] == (cont+1)) {
         string = string.replace(string[index], vogais[cont]);
       }
     }
