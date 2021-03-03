@@ -6,17 +6,17 @@ function techList() {
 // Desafio 11
 function generatePhoneNumber(numeros) {
   let mensagem;
-  let maiorNumero = Math.max(...numeros);
+  let maiorNum = Math.max(...numeros);
   let menorNumero = Math.min(...numeros);
   let contadorMaiorNumero = 0;
   for (let key in numeros) {
-    if (numeros[key] === maiorNumero) {
+    if (numeros[key] === maiorNum) {
       contadorMaiorNumero += 1;
     }
   }
   if (numeros.length > 11) {
     mensagem = 'Array com tamanho incorreto.';
-  } else if (maiorNumero > 10 || menorNumero > 0 || contadorMaiorNumero >= 3) {
+  } else if (maiorNum > 10 || menorNumero > 0 || contadorMaiorNumero >= 3) {
     mensagem = 'não é possível gerar um número de telefone com esses valores';
 
   } else {
@@ -28,7 +28,7 @@ let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 10];
 console.log(generatePhoneNumber(numeros));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, LineC) {
   // seu código aqui
 }
 
@@ -43,6 +43,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
-
-maiorNumero > 10 && menorNumero >= 0
