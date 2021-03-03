@@ -34,9 +34,10 @@ function testaRepeticoes(phoneNumber) {
 function generatePhoneNumber(phoneNumber) {
   let saida;
   if (phoneNumber.length === 11) {
-    for (let key in phoneNumber) {
-      if (phoneNumber[key] < 0 || phoneNumber[key] > 9 || testaRepeticoes(phoneNumber) === false) {
+    for (let index = 0; index <= phoneNumber.length; index += 1) {
+      if (phoneNumber[index] < 0 || phoneNumber[index] > 9 || testaRepeticoes(phoneNumber) === false) {
         saida = 'não é possível gerar um número de telefone com esses valores';
+        break;
       } else {
         saida = `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
       }
@@ -46,7 +47,7 @@ function generatePhoneNumber(phoneNumber) {
   }
   return saida;
 }
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
