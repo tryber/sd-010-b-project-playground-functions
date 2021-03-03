@@ -48,9 +48,9 @@ function generatePhoneNumber(arrayDeNumeros) {
   if (arrayDeNumeros.length !== 11) {
     saida = 'Array com tamanho incorreto.';
   } else if (numerosImpossiveis(arrayDeNumeros)) {
-    saida = 'não é possível gerar um número de telefone com esses valores.';
+    saida = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    saida = `(${arrayDeNumeros[0]}${arrayDeNumeros[1]})${arrayDeNumeros[2]}${arrayDeNumeros[3]}`;
+    saida = `(${arrayDeNumeros[0]}${arrayDeNumeros[1]}) ${arrayDeNumeros[2]}${arrayDeNumeros[3]}`;
     saida += `${arrayDeNumeros[4]}${arrayDeNumeros[5]}${arrayDeNumeros[6]}-${arrayDeNumeros[7]}`;
     saida += `${arrayDeNumeros[8]}${arrayDeNumeros[9]}${arrayDeNumeros[10]}`;
   }
