@@ -86,55 +86,54 @@ function fizzBuzz(numeros) {
 function encode(string) {
   let codigo = ''
   for (let cont = 0; cont < string.length; cont += 1) {
-      switch (string[cont]){
-        case 'a':
-          codigo += 1;
-          break;
-        case 'e':
-          codigo += 2;
-          break;
-        case 'i':
-          codigo += 3;
-          break;
-        case 'o':
-          codigo += 4;
-          break;
-        case 'u':
-          codigo += 5;
-          break;
-        default:
-         codigo+= string[cont];
-         break;
-      }
+    switch (string[cont]){
+      case 'a':
+        codigo += 1;
+        break;
+      case 'e':
+        codigo += 2;
+        break;
+      case 'i':
+        codigo += 3;
+        break;
+      case 'o':
+        codigo += 4;
+        break;
+      case 'u':
+        codigo += 5;
+        break;
+      default:
+        codigo+= string[cont];
+        break;
+    }
   }
   return codigo
 }
 function decode(string) {
-    let codigo = ''
-    for (let cont = 0; cont < string.length; cont += 1) {
-        switch (string[cont]){
-          case 1:
-            codigo += 'a';
-            break;
-          case 2:
-            codigo += 'e';
-            break;
-          case 3:
-            codigo += 'i';
-            break;
-          case 4:
-            codigo += 'o';
-            break;
-          case 5:
-            codigo += 'u';
-            break;
-          default:
-           codigo+= string[cont];
-           break;
-        }
+  let codigo = ''
+  for (let cont = 0; cont < string.length; cont += 1) {
+    switch (string[cont]){
+      case 1:
+        codigo += 'a';
+        break;
+      case 2:
+        codigo += 'e';
+        break;
+      case 3:
+        codigo += 'i';
+        break;
+      case 4:
+        codigo += 'o';
+        break;
+      case 5:
+        codigo += 'u';
+        break;
+      default:
+        codigo+= string[cont];
+        break;
     }
-    return codigo;
   }
+  return codigo;
 }
 
 module.exports = {
