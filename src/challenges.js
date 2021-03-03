@@ -44,30 +44,30 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-  
-  for (let key in array){
-    if (key,array[key] %5 === 0){
-      return("Buzz");
+  let string = [];
+  for (let index = 0; index < array.length; index += 1){
+    if (array[index] %3 === 0){
+      string.push("Fizz");
     } 
     
     
-    else if (key,array[key] %3 === 0){
-      return("Fizz");
+    else if (array[index] %5 === 0){
+      string.push("Buzz");
     } 
     
     
-    else if (key,array[key] %3 === 0 && array[key] %5 === 0){
-      return("FizzBuzzz");
+    else if (array[index] %3 === 0 && array[index] %5 === 0){
+      string.push("FizzBuzzz");
     }
 
 
      else {
-      return("Bug");
+      string.push("Bug");
     }
-
   }
+  return string;
 }
-console.log(fizzBuzz());
+console.log(fizzBuzz([7, 9]));
 
 
 // Desafio 9
