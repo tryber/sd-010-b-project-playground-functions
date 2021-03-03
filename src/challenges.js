@@ -36,34 +36,26 @@ let total = (wins * 3) + (ties * 1);
 return total;
 } 
 console.log(footballPoints(5, 3));
-  // seu código aqui
+
 
   // Desafio 6
-function highestCount(numeros) {
 
+  
+function highestCount(numeros) {
   let indiceMaior = 0; 
   let contRepetido = 0;
-  let contNumero = 0;
-  let indexNumeroRepetido = 0;
-
-  for(let indice in numeros){
-      if (numeros[indice] > numeros[indiceMaior]) { 
-          indiceMaior = indice;      
-     for (let index in numeros) {
-      let verificaNumero = numeros[index];
-      for (let index2 in numeros) {
-        if (verificaNumero === numeros[index2]) {
-          contNumero++;
-        }
-      }
-      if (contNumero > contRepetido) {
-        contRepetido = contNumero;
-        indexNumeroRepetido = index;
-      }
-      contNumero = 0;
+for (index = 0; index <= numeros.length; index++) {
+  if (numeros[index] > indiceMaior) {
+    indiceMaior = numeros[index]
+  } 
+}
+   for(index2 = 0; index2 <= numeros.length; index2++){
+    if(numeros[index2] === indiceMaior){
+      contRepetido++
     }
-    return numeros[indexNumeroRepetido];
-  }     }}           
+    } return contRepetido;
+    }
+   
   console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 
@@ -91,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
     } 
   }   
   
- console.log(catAndMouse(0, 3, 2))
+ console.log(catAndMouse(5, 8, 3))
  
 
 
