@@ -68,9 +68,9 @@ function hydrate(drinks) {
     sum += parseInt(numbers[i]);
   }
   if (sum > 1) {
-    return sum + " copos de água.";
+    return sum + " copos de água";
   } else {
-    return sum + " copo de água.";
+    return sum + " copo de água";
   }
 }
 
