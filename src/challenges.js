@@ -19,14 +19,14 @@ function calcArea(base, height) {
     return 5;
   case 25.5:
     return 25.5;
-    break;
+    
+  default:
   }
 }
 // Desafio 3
-function splitSentence() {
+function splitSentence(goTrybe) {
   // seu código aqui
-  let organiza = splitSentence();
-  if (organiza === '') {
+  if (goTrybe === ['']) {
     return organiza.split([""[", "]]);
   }
 }
