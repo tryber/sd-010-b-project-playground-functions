@@ -12,9 +12,7 @@ function techList(array, name) {
       ar.push(ob); //Source: https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
       ob={};
     }
-  //   if(array.tech){
-  //     return ("Vazio!");
-  //   }
+
 return (ar);
   }else{
       return ("Vazio!");
@@ -22,8 +20,43 @@ return (ar);
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let num = '';
+  let s = 1;
+  if(array.length!=11){
+    return ('Array com tamanho incorreto.');
+  }else{
+      for(let i = 0; i < array.length; i++){
+          for(let i2 = i; i2 < array.length; i2++){
+            if(i!=i2){
+              if(array[i]==array[i2]){
+                s++;
+              }
+
+            }
+          }
+          if(s >= 3 || array[i]>9 || array[i] < 0){
+            return ('não é possível gerar um número de telefone com esses valores');
+          }
+        s=0;
+      }
+  }
+
+  num+='(';
+  num+=array[0];
+  num+=array[1];
+  num+=') ';
+
+  for(let i = 2; i < 7; i++){
+    num+=array[i];
+  }
+  num+='-';
+  for(let i = 7; i < 11; i++){
+    num+=array[i];
+  }
+
+  return (num);
+  
 }
 
 // Desafio 12
