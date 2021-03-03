@@ -57,10 +57,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// baseado na resposta de Alex Wayne em: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string 
+function hydrate(string) {
+  let numbers = string.replace(/\D/g, '');
+  let sum = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    sum += Number(numbers[index]);
+  }
+  let answer = sum.toString();
+  return answer + ' copos de água';
 }
 
+console.log(hydrate('1 cachaça, 5 cervejas e 4 copo de vinho'));
 module.exports = {
   generatePhoneNumber,
   techList,
