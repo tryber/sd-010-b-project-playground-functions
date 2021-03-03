@@ -68,6 +68,49 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+function verifica(tres, cinco) {
+  let resposta = '';
+  if (tres === false && cinco === false) {
+    resposta += 'bug!';
+  }
+  return resposta
+}
+function criarArray(arrayDeNumeros) {
+  let saida=[];
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    saida[index] = '';
+  }
+  return saida;
+}
+function fizzBuzz(arrayDeNumeros) {
+  let resposta = [];
+  let resposta = criarArray(arrayDeNumeros);
+  let tres = false;
+  let cinco = false;
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    if ((arrayDeNumeros[index] % 3 === 0) && (arrayDeNumeros[index] % 5 === 0)) {
+      resposta.push('fizzBuzz');
+    } else if (arrayDeNumeros[index] % 3 === 0) {
+      resposta.push('fizz');
+    } else if (arrayDeNumeros[index] % 5 === 0) {
+      resposta.push('buzz');
+    } else {
+      resposta.push('bug!');
+    tres = false;
+    cinco = false;
+    if (arrayDeNumeros[index] % 3 === 0) {
+      resposta[index] += 'fizz';
+      tres = true;
+    }
+    if (arrayDeNumeros[index] % 5 === 0) {
+      resposta[index] += 'buzz';
+      cinco = true;
+    }
+    resposta[index] += verifica(tres, cinco);
+  }
+  return resposta;
+}
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 }
 
 // Desafio 9
