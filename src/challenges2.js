@@ -87,19 +87,26 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(umaFrase) {
-  // let fatiada =  umaFrase.split("");
-  // let soma = 0;
-  // for (let key in fatada) {
-    
-  // }
-  // return fatiada;
+  let fatiada = umaFrase.split("");
+  let soma = 0;
+  for (let key in fatiada) {
+    let char = fatiada[key];
+    if (char.charCodeAt() >= 48 && char.charCodeAt() <= 57) {
+      soma += parseInt(char)
+    }
+  }
+  if (soma > 1) {
+    return `${soma} copos de água`
+  } else {
+    return `${soma} copo de água`
+  }
 }
-
 
 // teste item 13
 // let frase1 = '1 cerveja';
 // let frase2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
 // console.log(hydrate(frase2));
+// console.log(hydrate(frase1));
 
 module.exports = {
   generatePhoneNumber,

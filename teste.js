@@ -1,10 +1,8 @@
 
-let a = 10;
-let b = 100;
-let c = 1000;
-let cond  = true;
-if ( a < b < c) {
-  cond = false;
-}
 
-console.log(cond);
+let st = '9';
+let st1 = 'a'
+let code = st.charCodeAt();
+let sum = parseInt(st) + parseInt(st1);
+
+console.log(code);
