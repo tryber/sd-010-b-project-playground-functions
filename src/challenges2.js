@@ -27,10 +27,8 @@ function generatePhoneNumber(arrayDeNumeros) {
   return saida;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 function tamanho (arrayDeNumeros) {
-  let saida=`(${arrayDeNumeros[0]}${arrayDeNumeros[1]})${arrayDeNumeros[2]}${arrayDeNumeros[3]}${arrayDeNumeros[4]}${arrayDeNumeros[5]}${arrayDeNumeros[6]}-${arrayDeNumeros[7]}${arrayDeNumeros[8]}${arrayDeNumeros[9]}${arrayDeNumeros[10]}`;
+  let saida=`(${arrayDeNumeros[0]}${arrayDeNumeros[1]}) ${arrayDeNumeros[2]}${arrayDeNumeros[3]}${arrayDeNumeros[4]}${arrayDeNumeros[5]}${arrayDeNumeros[6]}-${arrayDeNumeros[7]}${arrayDeNumeros[8]}${arrayDeNumeros[9]}${arrayDeNumeros[10]}`;
     if (arrayDeNumeros.length != 11) {
     saida = 'Array com tamanho incorreto';
   }
