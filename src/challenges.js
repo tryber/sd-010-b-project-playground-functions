@@ -102,3 +102,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+// resoluções baseadas no conteudo proposto nos plantões.

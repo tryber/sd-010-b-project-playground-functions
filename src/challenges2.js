@@ -36,3 +36,5 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+// resoluções baseadas no conteudo proposto nos plantões.
