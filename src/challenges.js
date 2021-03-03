@@ -60,8 +60,8 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) !== Math.abs(cat2 - mouse)) {
     if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
       return 'cat1';
-    } else {
-      return 'cat2';
+    } 
+    return 'cat2';
     }
   }
   return 'os gatos trombam e o rato foge';
@@ -71,24 +71,70 @@ function fizzBuzz(numeros) {
   let resposta = [];
   for (let cont = 0; cont < numeros.length; cont += 1) {
     if ((numeros[cont] % 3) === 0 && (numeros[cont] % 5) === 0) {
-      resposta.push("fizzbuzz");
+      resposta.push('fizzbuzz');
     } else if ((numeros[cont] % 3) === 0) {
-      resposta.push("fizz");
-    } else if ((numeros[cont] % 5 ) === 0) {
-      resposta.push("buzz");
+      resposta.push('fizz');
+    } else if ((numeros[cont] % 5) === 0) {
+      resposta.push('buzz');
     } else {
-      resposta.push("bug!");
+      resposta.push('bug!');
     }
   }
   return(resposta)
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let codigo = ''
+  for (let cont = 0; cont < string.length; cont += 1) {
+      switch (string[cont]){
+        case 'a':
+          codigo+=1
+          break
+        case 'e':
+          codigo+=2
+          break
+        case 'i':
+          codigo+=3
+          break
+        case 'o':
+          codigo+=4
+          break
+        case 'u':
+          codigo+=5
+          break
+        default:
+         codigo+= string[cont]
+      }
+  }
+  return codigo
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+    let codigo = ''
+    for (let cont = 0; cont < string.length; cont += 1) {
+        switch (string[cont]){
+          case 1:
+            codigo += 'a';
+            break;
+          case 2:
+            codigo += 'e';
+            break;
+          case 3:
+            codigo += 'i';
+            break;
+          case 4:
+            codigo += 'o';
+            break;
+          case 5:
+            codigo += 'u';
+            break;
+          default:
+           codigo+= string[cont];
+           break;
+        }
+    }
+    return codigo;
+  }
 }
 
 module.exports = {
