@@ -103,66 +103,66 @@ function fizzBuzz(umaLista) {
   return out;
 }
 
-// teste intem 8
-// array0 = [2, 15, 7, 9, 45];
-// array1 = [7, 9];
-// array2 = [9, 25];
-// console.log(fizzBuzz(array0));
-// console.log(fizzBuzz(array1));
-// console.log(fizzBuzz(array2));
+// // teste intem 8
+// // array0 = [2, 15, 7, 9, 45];
+// // array1 = [7, 9];
+// // array2 = [9, 25];
+// // console.log(fizzBuzz(array0));
+// // console.log(fizzBuzz(array1));
+// // console.log(fizzBuzz(array2));
 
-// Desafio 9
-function encode(umaFrase) {
-  let lista = umaFrase.split('');
-  for (let key in lista) {
-    switch (lista[key]) {
-    case 'a':
-      lista[key] = 1;
-      break;
-    case 'e':
-      lista[key] = 2;
-      break;
-    case 'i':
-      lista[key] = 3;
-      break;
-    case 'o':
-      lista[key] = 4;
-      break;
-    case 'u':
-      lista[key] = 5;
-      break;
-    default:
-      break;
-    }
-  }
-  return lista.join('');
-}
+// // Desafio 9
+// function encode(umaFrase) {
+//   let lista = umaFrase.split('');
+//   for (let key in lista) {
+//     switch (lista[key]) {
+//     case 'a':
+//       lista[key] = 1;
+//       break;
+//     case 'e':
+//       lista[key] = 2;
+//       break;
+//     case 'i':
+//       lista[key] = 3;
+//       break;
+//     case 'o':
+//       lista[key] = 4;
+//       break;
+//     case 'u':
+//       lista[key] = 5;
+//       break;
+//     default:
+//       break;
+//     }
+//   }
+//   return lista.join('');
+// }
 
-function decode(umaFrase) {
-  let lista = umaFrase.split('');
-  for (let key in lista) {
-    switch (lista[key]) {
-    case '1':
-      lista[key] = 'a';
-      break;
-    case '2':
-      lista[key] = 'e';
-      break;
-    case '3':
-      lista[key] = 'i';
-      break;
-    case '4':
-      lista[key] = 'o';
-      break;
-    case '5':
-      lista[key] = 'u';
-      break;
-    default:
-      break;
-    }
-  }
-  return lista.join('');
-}
+// function decode(umaFrase) {
+//   let lista = umaFrase.split('');
+//   for (let key in lista) {
+//     switch (lista[key]) {
+//     case '1':
+//       lista[key] = 'a';
+//       break;
+//     case '2':
+//       lista[key] = 'e';
+//       break;
+//     case '3':
+//       lista[key] = 'i';
+//       break;
+//     case '4':
+//       lista[key] = 'o';
+//       break;
+//     case '5':
+//       lista[key] = 'u';
+//       break;
+//     default:
+//       break;
+//     }
+//   }
+//   return lista.join('');
+// }
 
 // teste item 9
 // console.log(encode("hi there!"));
