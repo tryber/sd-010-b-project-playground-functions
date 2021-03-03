@@ -136,8 +136,8 @@ function encode(codificar) {
 
 function decode(decodificar) {
   // seu código aqui
-  let arrayVogal = ["a" , "e", "i", "o", "u"];
-  let arrayCode = [1 , 2, 3, 4, 5];
+  let arrayVogal = ["a", "e", "i", "o", "u"];
+  let arrayCode = [1, 2, 3, 4, 5];
 
   arrayDecodificar = decodificar.split("");
 
