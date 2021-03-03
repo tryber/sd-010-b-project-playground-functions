@@ -63,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat1';
 }
-// console.log(catAndMouse(13, 6, 12));
+ console.log(catAndMouse(0, 6, 6));
 
 // Resposta: Na tentativa de solucionar o setimo requisito, fir comparações entre os parametros dada pela function. Posição é 0 do mouse e N posições de cat1 e cat2. Adicionei duas variaveis onde calcula a distancia entre um cat e mouse.
 
