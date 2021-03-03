@@ -66,7 +66,34 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayDeNumeros) {
+function fizzBuzz( ) {
+function verifica(tres, cinco) {
+function verificaFalse(tres, cinco) {
+  let resposta = '';
+  if (tres === false && cinco === false) {
+    resposta += 'bug!';
+    if (tres === true && cinco === true) {
+      resposta += 'fizzBuzz';
+    }
+  }
+  return resposta;
+}
+function verificaFizzBuzz(palavra) {
+  let saida = '';
+  if (palavra === 'fizzbuzz') {
+    saida = 'fizzBuzz';
+  } else {
+    saida = palavra;
+  }
+  return saida;
+}
+function criarArray(arrayDeNumeros) {
+  let saida = [];
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    saida[index] = '';
+  }
+  return saida;
+}
   let resposta = criarArray(arrayDeNumeros);
   let tres = false;
   let cinco = false;
