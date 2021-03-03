@@ -53,7 +53,7 @@ function generatePhoneNumber() {
   // }
 }
 // Desafio 12
-console.log(triangleCheck(14, 10, 8))
+
 function triangleCheck(lineA, lineB, lineC) {
   let sumAC = (lineA + lineC);
   let sumAB = (lineA + lineB);
