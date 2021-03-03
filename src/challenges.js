@@ -67,7 +67,7 @@ function fizzBuzz(divisivel) {
 
 // Desafio 9
 function encode(codigo) {
-  let vogais = {
+    let vogais = {
     a: 1,
     e: 2,
     i: 3,
