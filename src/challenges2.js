@@ -38,7 +38,7 @@ function generatePhoneNumber(array) {
           if(s >= 3 || array[i]>9 || array[i] < 0){
             return ('não é possível gerar um número de telefone com esses valores');
           }
-        s=0;
+        s = 1;
       }
   }
 
