@@ -47,8 +47,7 @@ function highestCount(arrayOfValues) {
     if (arrayOfValues[i] >= biggest) {
       biggest = arrayOfValues[i];
     }
-  }
-  for (let counter in arrayOfValues) {
+  } for (let counter in arrayOfValues) {
     if (arrayOfValues[counter] === biggest) {
       sum += 1;
     }
@@ -93,15 +92,15 @@ function encode(string) {
   let result = [];
   for (let key in string) {
     if (string[key] === 'a') {
-      result += 1;
+      result += '1';
     } else if (string[key] === 'e') {
-      result += 2;
+      result += '2';
     } else if (string[key] === 'i') {
-      result += 3;
+      result += '3';
     } else if (string[key] === 'o') {
-      result += 4;
+      result += '4';
     } else if (string[key] === 'u') {
-      result += 5;
+      result += '5';
     } else {
       result += string[key];
     }
@@ -112,15 +111,15 @@ function encode(string) {
 function decode(stringWithNumbers) {
   let result = [];
   for (let key in stringWithNumbers) {
-    if (stringWithNumbers[key] == 1) {
+    if (stringWithNumbers[key] === '1') {
       result += 'a';
-    } else if (stringWithNumbers[key] == 2) {
+    } else if (stringWithNumbers[key] === '2') {
       result += 'e';
-    } else if (stringWithNumbers[key] == 3) {
+    } else if (stringWithNumbers[key] === '3') {
       result += 'i';
-    } else if (stringWithNumbers[key] == 4) {
+    } else if (stringWithNumbers[key] === '4') {
       result += 'o';
-    } else if (stringWithNumbers[key] == 5) {
+    } else if (stringWithNumbers[key] === '5') {
       result += 'u';
     } else {
       result += stringWithNumbers[key];

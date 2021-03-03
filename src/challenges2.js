@@ -18,6 +18,7 @@ function techList(tech, name) {
     return 'Vazio!';
   }  
 }
+console.log(techList());
 
 // Desafio 11
 function generatePhoneNumber(arrayOfNumber) {
@@ -65,6 +66,7 @@ function generatePhoneNumber(arrayOfNumber) {
           return 'não é possível gerar um número de telefone com esses valores';
       }
   }  
+console.log(generatePhoneNumber());
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -78,6 +80,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
+console.log(triangleCheck());
 
 // Desafio 13  ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
 function hydrate(stringWithGlasses) {
