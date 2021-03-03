@@ -38,9 +38,9 @@ function highestCount(values) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanceCat1 = Math.abs(ca1 - mouse);
-  distanceCat2 = Math.abs(ca2 - mouse);
-  return (distanceCat1 != distanceCat2 ? (distanceCat1 < distanceCat1 ? "cat1" : "cat2") : "os gatos trombam e o rato foge");
+  distanceCat1 = Math.abs(cat1 - mouse);
+  distanceCat2 = Math.abs(cat2 - mouse);
+  return (distanceCat1 != distanceCat2 ? (distanceCat1 < distanceCat2 ? "cat1" : "cat2") : "os gatos trombam e o rato foge");
 }
 
 // Desafio 8
