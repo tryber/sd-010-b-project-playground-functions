@@ -1,12 +1,13 @@
 // Desafio 10
 function techList(array, name) {
   let listOfObjetcts = [];
+  let arrayOrdenada = array.sort();
   if (array.length < 1) {
     listOfObjetcts = 'Vazio!';
   } else {
-    for (let index = 0; index < array.length; index += 1) {
+    for (let index = 0; index < arrayOrdenada.length; index += 1) {
       let object = {
-        tech: array[index],
+        tech: arrayOrdenada[index],
         name: name,
       };
       listOfObjetcts.push(object);
