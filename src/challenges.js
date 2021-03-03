@@ -63,19 +63,14 @@ console.log(footballPoints(14, 8))
 console.log(footballPoints(1, 2))
 console.log(footballPoints(0, 0))
 
-
 // Desafio 6
 function highestCount(array) {
-  let maior = 0;
   let total = 0;
-  for (let index = 0; index < array.length; index+=1) {
-    if (array[index] > maior) {
+  let maior = 0;
+  array.sort();
+  for (let index = array.length-1; index >= 0; index -= 1) {
+    if (array[index] > maior || array[index] == maior) {
       maior = array[index];
-    }
-  }
-
-  for (let index = 0; index < array.length; index+=1) {
-    if (array[index] == maior) {
       total += 1;
     }
   }
