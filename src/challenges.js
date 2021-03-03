@@ -87,11 +87,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(num) {
   let convertArray = [];
   for (let index = 0; index < num.length; index += 1) {
-    if (num[index] % 3 == 0 && num[index] % 5 == 0){
+    if (num[index] % 3 === 0 && num[index] % 5 === 0){
       convertArray.push('FizzBuzz') ;
-    } else if (num[index] % 3 == 0) {
+    } else if (num[index] % 3 === 0) {
       convertArray.push('Fizz');
-    } else if (num[index] % 5 == 0) {
+    } else if (num[index] % 5 === 0) {
       convertArray.push('Buzz');
     } else {
       convertArray.push('Bug!');
@@ -99,20 +99,21 @@ function fizzBuzz(num) {
   }
   return convertArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(string) {
   let code = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] == 'a') {
+    if (string[index] === 'a') {
       code += '1';
-    } else if (string[index] == 'e') {
+    } else if (string[index] === 'e') {
       code += '2';
-    } else if (string[index] == 'i') {
+    } else if (string[index] === 'i') {
       code += '3';
-    } else if (string[index] == 'o') {
+    } else if (string[index] === 'o') {
       code += '4';
-    } else if (string[index] == 'u') {
+    } else if (string[index] === 'u') {
       code += '5';
     } else {
       code += string[index];
@@ -121,19 +122,18 @@ function encode(string) {
   return code;
 }
 
-console.log(encode("hi there!"))
 function decode(string) {
   let decodeText = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] == '1') {
+    if (string[index] === '1') {
       decodeText += 'a';
-    } else if (string[index] == '2') {
+    } else if (string[index] === '2') {
       decodeText += 'e';
-    } else if (string[index] == '3') {
+    } else if (string[index] === '3') {
       decodeText += 'i';
-    } else if (string[index] == '4') {
+    } else if (string[index] === '4') {
       decodeText += 'o';
-    } else if (string[index] == '5') {
+    } else if (string[index] === '5') {
       decodeText += 'u';
     } else {
       decodeText += string[index];
@@ -142,7 +142,7 @@ function decode(string) {
   return decodeText;
 }
 
-console.log(decode("h3 th2r2!"))
+
 
 module.exports = {
   calcArea,
