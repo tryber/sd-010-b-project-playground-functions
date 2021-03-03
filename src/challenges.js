@@ -16,7 +16,7 @@ function calcArea(base,height) {
 // Desafio 3
 function splitSentence(sentence) {
   let arrayAfterSplit=''; 
-    if(sentence=="go trybe"){
+    if(sentence=="go Trybe"){
         arrayAfterSplit=sentence.split(" ")
     } else if(sentence=="vamo que vamo"){
         arrayAfterSplit=sentence.split(" ")
