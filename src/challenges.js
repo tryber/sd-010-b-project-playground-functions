@@ -18,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(fraseADividir) {
   // Busquei orientação para resolver o item no site: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
-  let fraseDividida = fraseADividir.split('' '');
+  let fraseDividida = fraseADividir.split(' ');
   return fraseDividida;
 }
 // console.log(splitSentence("Mariana Mohr Silveira"));
