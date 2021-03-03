@@ -85,9 +85,20 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let ratoMaisProximo = " ";
+  if (cat2 > mouse && cat1 > cat2){
+    ratoMaisProximo ="cat2";
+  }else if (cat1 > mouse && cat2 > cat1){
+    ratoMaisProximo = "cat1"
+  }else if (cat1 === cat2){
+    ratoMaisProximo ="os gatos trombam e o rato foge"
+  }
+  return ratoMaisProximo;
 }
+console.log(catAndMouse(0, 3, 2))
+console.log(catAndMouse(0, 6, 12))
+console.log(catAndMouse(0, 2, 2))
 
 // Desafio 8
 
