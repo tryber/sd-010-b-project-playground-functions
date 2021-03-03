@@ -57,18 +57,22 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+  let alcancaPrimeiro = '';
 
-  if (distanciaCat1 === distanciaCat2){
-    return "Gatos se trombam e rato foge";
-  } else if (distanciaCat1 < distanciaCat2){
-    return "cat1";
-  } else if(distanciaCat2 < distanciaCat1) {
-    return "cat2";
+  if (distCat1 < distCat2) {
+    alcancaPrimeiro = 'cat1';
   }
+  if (distCat2 < distCat1) {
+    alcancaPrimeiro = 'cat2';
+  }
+  if (distCat1 === distCat2) {
+    alcancaPrimeiro = 'os gatos trombam e o rato foge';
+  }
+  return alcancaPrimeiro;
 }
-console.log(catAndMouse(5, 7, 7));
+
 
 
 
@@ -101,10 +105,44 @@ console.log(fizzBuzz([ 7, 9]));
 
 // Desafio 9
 function encode() {
-  
+  let separado = frase.split('');
+  for (let caracter in separado) {
+    if ({}.hasOwnProperty.call(separado, caracter)) {
+      if (separado[caracter] === 'a') {
+        separado[caracter] = 1;
+      } if (separado[caracter] === 'e') {
+        separado[caracter] = 2;
+      } if (separado[caracter] === 'i') {
+        separado[caracter] = 3;
+      } if (separado[caracter] === 'o') {
+        separado[caracter] = 4;
+      } if (separado[caracter] === 'u') {
+        separado[caracter] = 5;
+      }
+    }
+  }
+  let juntoEncode = separado.join('');
+  return juntoEncode;
 }
 function decode() {
-  // seu código aqui
+  let separado = frase.split('');
+  for (let caracter in separado) {
+    if ({}.hasOwnProperty.call(separado, caracter)) {
+        if (separado[caracter] === '1') {
+        separado[caracter] = 'a';
+      } if (separado[caracter] === '2') {
+        separado[caracter] = 'e';
+      } if (separado[caracter] === '3') {
+        separado[caracter] = 'i';
+      } if (separado[caracter] === '4') {
+        separado[caracter] = 'o';
+      } if (separado[caracter] === '5') {
+        separado[caracter] = 'u';
+      }
+    }  
+  }
+  let juntoDecode = separado.join('');
+  return juntoDecode;
 }
 
 module.exports = {
