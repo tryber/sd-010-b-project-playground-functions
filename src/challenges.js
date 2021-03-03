@@ -94,8 +94,8 @@ function fizzBuzz(umaLista) {
   for (let key in umaLista) {
     if (umaLista[key] % 3 === 0 && umaLista[key] % 5 === 0) {
       out.push('fizzBuzz');
-    }else if (umaLista[key] % 3 === 0 || umaLista[key] % 5 === 0) {
-      var resultado = (umaLista[key] % 3 === 0) ? out.push('fizz') : out.push('buzz')
+    } else if (umaLista[key] % 3 === 0 || umaLista[key] % 5 === 0) {
+      (umaLista[key] % 3 === 0) ? out.push('fizz'): out.push('buzz');
     } else {
       out.push('bug!');
     }
@@ -104,33 +104,35 @@ function fizzBuzz(umaLista) {
 }
 
 // teste intem 8
-array0 = [2, 15, 7, 9, 45];
-array1 = [7, 9];
-array2 = [9, 25];
-console.log(fizzBuzz(array0));
-console.log(fizzBuzz(array1));
-console.log(fizzBuzz(array2));
+// array0 = [2, 15, 7, 9, 45];
+// array1 = [7, 9];
+// array2 = [9, 25];
+// console.log(fizzBuzz(array0));
+// console.log(fizzBuzz(array1));
+// console.log(fizzBuzz(array2));
 
 // Desafio 9
 function encode(umaFrase) {
   let lista = umaFrase.split('');
   for (let key in lista) {
     switch (lista[key]) {
-      case 'a':
-        lista[key] = 1;
-        break;
-      case 'e':
-        lista[key] = 2;
-        break;
-      case 'i':
-        lista[key] = 3;
-        break;
-      case 'o':
-        lista[key] = 4;
-        break;
-      case 'u':
-        lista[key] = 5;
-        break;
+    case 'a':
+      lista[key] = 1;
+      break;
+    case 'e':
+      lista[key] = 2;
+      break;
+    case 'i':
+      lista[key] = 3;
+      break;
+    case 'o':
+      lista[key] = 4;
+      break;
+    case 'u':
+      lista[key] = 5;
+      break;
+    default:
+      break;
     }
   }
   return lista.join('');
@@ -138,7 +140,6 @@ function encode(umaFrase) {
 
 function decode(umaFrase) {
   let lista = umaFrase.split('');
-
   for (let key in lista) {
     switch (lista[key]) {
       case '1':
@@ -155,6 +156,8 @@ function decode(umaFrase) {
         break;
       case '5':
         lista[key] = 'u';
+        break;
+      default:
         break;
     }
   }
