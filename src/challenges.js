@@ -36,7 +36,7 @@ function concatName(arrayStrings) {
 
   return `${ultimoTermo}, ${primeiroTermo}`;
 }
-console.log(concatName(['captain', 'my', 'captain']));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -86,9 +86,9 @@ function catAndMouse(mouse, cat1, cat2) {
     mouseCat2 = cat2 - mouse;
   }
 
-  if (mouseCat1 > mouseCat2) {
+  if (mouseCat1 < mouseCat2) {
     return 'cat1';
-  } if (mouseCat2 > mouseCat1) {
+  } if (mouseCat2 < mouseCat1) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
