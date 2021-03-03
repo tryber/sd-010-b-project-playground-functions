@@ -15,7 +15,6 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  // go trybe
   let array = [];
   let palavra = "";
   for (let indexString = 0; indexString <= string.length ; indexString += 1) {
@@ -43,8 +42,20 @@ function footballPoints(wins, ties) {
   return pontos; 
 }
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumber) {
   // seu código aqui
+  let contador = 1;
+  let maiorNumber = arrayNumber[0];
+  for (let index = 1; index < arrayNumber.length; index +=1) {
+    if (arrayNumber[index] > maiorNumber) {
+      maiorNumber = arrayNumber[index];
+      contador = 1;
+    } else if (arrayNumber[index] === maiorNumber) {
+      contador += 1;
+    } else {
+    }
+  }
+  return contador;
 }
 // Desafio 7
 function catAndMouse() {
@@ -73,4 +84,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- console.log(footballPoints(1,2));
+ //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
