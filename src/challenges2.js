@@ -1,12 +1,12 @@
 // Desafio 10
-function techList(skills, name) {
+function techList(tech, name) {
   let jobs = [];
-  skills.sort();
-  if (skills.length <= 0) {
+  tech.sort();
+  if (tech.length <= 0) {
     return 'Vazio!';
-  } for (let index in skills){
+  } for (let index in tech){
     jobs.push( {
-      tech: skills[index],
+      tech: tech[index],
       name: name
     } );
   }
