@@ -66,15 +66,15 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 == 0) {
+  if (cat1 === 0) {
     cat1 += mouse;
   } else {
     cat1 -= mouse;
   }
-  if (cat2 == 0) {
+  if (cat2 === 0) {
     cat2 += mouse;
   } else {
-    cat2 -= mouse;2
+    cat2 -= mouse;
   }
   if (cat1 < cat2) {
     return 'cat1';
