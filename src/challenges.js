@@ -22,10 +22,13 @@ return arryNames.split('/');
 console.log(splitSentence("go/trybe"));
 
 // Desafio 4
-function concatName() {
+function concatName(arrNames) {
   // seu código aqui
+  let arryNames=['captain', 'my', 'captain'];
+  let result= arryNames.concat();
+  return arrNames;
 }
-
+console.log(concatName('captain, captain' ));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
