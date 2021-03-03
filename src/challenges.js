@@ -20,9 +20,10 @@ function splitSentence(palavra) {
 // Desafio 4
 function concatName(name) {
   let pos = (name[name.length - 1]);
-  let firstLast = '\'' + pos + ', ' + name[0] + '\'';
+  let firstLast = `'${pos}, ${name[0]}'`;
   return (firstLast);
 }
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
