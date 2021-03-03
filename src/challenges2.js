@@ -21,7 +21,7 @@ console.log(techList([],"Lucas")); */
 function generatePhoneNumber(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
-      return 'Array com tamanho incorreto.';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let cont = 0;
     for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
@@ -29,7 +29,7 @@ function generatePhoneNumber(arrayNumbers) {
         cont += 1;
       }
     }
-    if(cont >= 3) {
+    if(cont >= 3 || arrayNumbers.length != 11) {
       return 'Array com tamanho incorreto';
     }
   }
@@ -40,7 +40,9 @@ function generatePhoneNumber(arrayNumbers) {
   let number = arrayNumber.join('');
   return number;
 }
-/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10])); */
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
