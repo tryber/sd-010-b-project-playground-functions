@@ -1,4 +1,4 @@
-// Desafio 10
+
 // Desafio 10
 function techList(tec, name) {
   let order = tec.sort();
