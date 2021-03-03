@@ -72,16 +72,24 @@ console.log(result);
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+
+  if (distanceCat1 < 0) {
+    distanceCat1 *= -1;
+  }
+  if (distanceCat2 < 0) {
+    distanceCat2 *= -1;
+  }
+  if (distanceCat1 === distanceCat2) {
+    return 'os gatos trombaram e o rato foge';
+  }
+  if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
-
-  if (cat2 < cat1) {
-    return 'cat2';
-  }
-  return 'os gatos trombaram e o rato foge';
+  return 'cat2';
 }
-result = catAndMouse(1, 6, 6);
+result = catAndMouse(0, -3, 3);
 console.log(result);
 
 // Desafio 8
