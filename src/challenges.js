@@ -5,7 +5,6 @@ function compareTrue(param1, param2) {
   }
   return false;
 }
-
 /* console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
 console.log(compareTrue(true, true)); */
@@ -25,9 +24,9 @@ function splitSentence(string) {
   array = string.split(' ');
   return array;
 }
-console.log(splitSentence('go Trybe'));
+/* console.log(splitSentence('go Trybe'));
 console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
+console.log(splitSentence('foguete')); */
 
 // Desafio 4
 function concatName(arrayStrings) {
@@ -100,15 +99,15 @@ console.log(catAndMouse(10, 5, 15)); */
 
 // Desafio 8
 function fizzBuzz(arrayNumbers8) {
-  for(index = 0; index < arrayNumbers8.length; index += 1) {
+  for (index = 0; index < arrayNumbers8.length; index += 1) {
     if ((arrayNumbers8[index] % 3 === 0) && (arrayNumbers8[index] % 5 === 0)) {
-      arrayNumbers8[index] = "fizzBuzz"
-    } else if(arrayNumbers8[index] % 3 === 0) {
-      arrayNumbers8[index] = "fizz"
-    } else if(arrayNumbers8[index] % 5 === 0) {
-      arrayNumbers8[index] = "buzz"
+      arrayNumbers8[index] = 'fizzBuzz';
+    } else if (arrayNumbers8[index] % 3 === 0) {
+      arrayNumbers8[index] = 'fizz';
+    } else if (arrayNumbers8[index] % 5 === 0) {
+      arrayNumbers8[index] = 'buzz';
     } else {
-      arrayNumbers8[index] = "bug!"
+      arrayNumbers8[index] = 'bug!';
     } 
   }
   return arrayNumbers8;
@@ -127,7 +126,6 @@ function encode(string) {
     o: 4,
     u: 5
   }
-
   for (index = 0; index < encodeArray.length; index += 1) {
     for (let key in objectEncode) {
       if (encodeArray[index] == key) {
@@ -138,8 +136,7 @@ function encode(string) {
   let encodeArrayToString = encodeArray.join("");
   return encodeArrayToString;
 }
-console.log(encode("hi there!"));
-
+/* console.log(encode("hi there!")); */
 function decode(string) {
   let decodeArray = string.split("");
   let objectDecodes = {
@@ -149,7 +146,6 @@ function decode(string) {
     4: "o",
     5: "u"
   }
-
   for (let index = 0; index < decodeArray.length; index += 1) {
     for (let key in objectDecodes) {
       if(decodeArray[index] == key) {
