@@ -48,8 +48,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-
+function fizzBuzz(a) {
+  let dado = [];
+  for (let key in a){
+    if (a[key] % 3 === 0 && a[key] % 5 === 0) {
+      dado.push("fizzBuzz");
+    } else if (a[key] % 3 === 0) {
+      dado.push("fizz");
+    } else if (a[key] % 5 === 0) {
+      dado.push("buzz");
+    } else {
+      dado.push("bug!")
+    }
+  }
+  return dado;
 }
 
 // Desafio 9
