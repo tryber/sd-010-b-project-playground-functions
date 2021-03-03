@@ -99,12 +99,27 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(string) {
-  let frase = string;
-  let mudado = ''
-    if ()
-
-}
-console.log(encode("hi there!"))
+  let stringPronto = [];
+  let stringPronta = "";
+  for (let key in string) {
+      if (string[key] === "a") {
+          stringPronto.push("1");
+       }else if (string[key] === "e") {
+          stringPronto.push("2");
+       }else if (string[key] === "i") {
+           stringPronto.push("3");
+       }else if (string[key] === "o") {
+           stringPronto.push("4");
+       }else if (string[key] === "u") {
+           stringPronto.push("5");
+       } else {
+           stringPronto.push(string[key]);
+       }
+   } for (let key in stringPronto) {
+       stringPronta += stringPronto[key];
+   }
+   return stringPronta
+}console.log(encode("hi there!"))
 
 function decode() {
   // seu código aqui
