@@ -88,13 +88,13 @@ function fizzBuzz(num) {
   let convertArray = [];
   for (let index = 0; index < num.length; index += 1) {
     if (num[index] % 3 === 0 && num[index] % 5 === 0){
-      convertArray.push('FizzBuzz') ;
+      convertArray.push('fizzBuzz') ;
     } else if (num[index] % 3 === 0) {
-      convertArray.push('Fizz');
+      convertArray.push('fizz');
     } else if (num[index] % 5 === 0) {
-      convertArray.push('Buzz');
+      convertArray.push('buzz');
     } else {
-      convertArray.push('Bug!');
+      convertArray.push('bug!');
     }
   }
   return convertArray;
