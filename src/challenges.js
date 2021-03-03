@@ -40,7 +40,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(string) {
   // seu código aqui
-  return string.reverse().split(' ');
+  return string.reverse();
 }
 
 // Desafio 5
