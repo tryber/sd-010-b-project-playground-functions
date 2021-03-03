@@ -3,15 +3,12 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   }
-  if (param1 === false && param2 === false) {
-    return false
-  } else {
-    return false;
-  }
+  return false;
 }
-console.log(compareTrue(false, true));
+
+/* console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
-console.log(compareTrue(true, true));
+console.log(compareTrue(true, true)); */
 
 // Desafio 2
 function calcArea(base, height) {
@@ -25,23 +22,22 @@ console.log(calcArea(51, 1)); */
 // Desafio 3
 function splitSentence(string) {
   let array = [];
-  array = string.split(" ");
+  array = string.split(' ');
   return array;
 }
-/* console.log(splitSentence("go Trybe"));
-console.log(splitSentence("vamo que vamo"));
-console.log(splitSentence("foguete")); */
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(arrayStrings) {
   let ultimoValor;
   let primeiroValor = 0;
-  let words= "";
+  let words = '';
 
-  ultimoValor = arrayStrings[arrayStrings.length -1];
+  ultimoValor = arrayStrings[arrayStrings.length - 1];
   primeiroValor = arrayStrings[primeiroValor];
   words = `${ultimoValor}, ${primeiroValor}`;
-  
   return words;
 }
 /* console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -66,8 +62,8 @@ console.log(footballPoints(0, 0)); */
 function highestCount(arrayNumbers) {
   let maiorNumero = Math.max.apply(null, arrayNumbers); // código retirado no site: http://henriquesilverio.github.io/javascript-e-jquery/javascript-descobrir-menor-e-maior-valor-em-um-array
   let cont = 0;
-  for(let index = 0; index < arrayNumbers.length; index += 1) {
-    if(arrayNumbers[index] === maiorNumero) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] === maiorNumero) {
       cont += 1;
     }
   }
@@ -79,30 +75,25 @@ console.log(highestCount([0, 0, 0])); */
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let resultado = "";
+  let resultado = '';
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
-
-  if(distanceCat1 < 0) {
+  if (distanceCat1 < 0) {
     distanceCat1 = distanceCat1 * -1;
   }
-
-  if(distanceCat2 < 0) {
+  if (distanceCat2 < 0) {
     distanceCat2 = distanceCat2 * -1;
   }
-
-  if(distanceCat1 > distanceCat2) {
-    resultado = "cat2";
+  if (distanceCat1 > distanceCat2) {
+    resultado = 'cat2';
   } else {
-    resultado = "cat1";
+    resultado = 'cat1';
   }
-
-  if(distanceCat1 === distanceCat2) {
-    resultado = "os gatos trombam e o rato foge";
+  if (distanceCat1 === distanceCat2) {
+    resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
 }
-
 /* console.log(catAndMouse(10, 13, 8));
 console.log(catAndMouse(10, 4, 22));
 console.log(catAndMouse(10, 5, 15)); */
