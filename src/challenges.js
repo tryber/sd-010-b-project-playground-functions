@@ -75,11 +75,11 @@ function catAndMouse (mouse, cat1, cat2) {
   }
   return result
 }
-console.log(catAndMouse(1,6,6));
+console.log(catAndMouse(10,6,12));
 
 // Desafio 8
 function fizzBuzz(arrNumbers) {
-  let arrResult =[];
+  let arrResult = [];
 
   for (let i in arrNumbers){
     if (arrNumbers[i] % 3 == 0){
@@ -98,12 +98,12 @@ function fizzBuzz(arrNumbers) {
   }
   for (let i in arrNumbers){
     if (arrNumbers[i] % 3 == 0 && arrNumbers[i] % 5 == 0){
-      arrResult[i] = "fizzBuz"
+      arrResult[i] = "fizzBuzz"
     }
   }
 return arrResult
 }
-console.log(fizzBuzz([9, 25]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
