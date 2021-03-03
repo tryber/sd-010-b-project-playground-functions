@@ -85,20 +85,24 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
+//Busquei orientação na PR do meu colega de turma André Hammel, exclusivamente nesta questão, link:https://github.com/tryber/sd-010-b-project-playground-functions/pull/117/commits/49ea1e6e7f2d5bb22a91741d7d0cdcd183e17562
 function catAndMouse(mouse, cat1, cat2) {
   let ratoMaisProximo = " ";
-  if (cat2 > mouse && cat2 < cat1){
-    ratoMaisProximo ="cat2";
-  }else if (cat1 > mouse && cat2 > cat1){
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  if (distanciaCat2 < distanciaCat1){
+    ratoMaisProximo = "cat2";
+  }else if (distanciaCat1 < distanciaCat2){
     ratoMaisProximo = "cat1"
-  }else if (cat1 === cat2){
+  }else if (distanciaCat1 === distanciaCat2){
     ratoMaisProximo ="os gatos trombam e o rato foge"
   }
   return ratoMaisProximo;
 }
-console.log(catAndMouse(0, 3, 2))
-console.log(catAndMouse(0, 6, 12))
-console.log(catAndMouse(0, 0, 0))
+console.log(catAndMouse(4, 7, 6))
+console.log(catAndMouse(4, 12, 16))
+console.log(catAndMouse(2, 6, 6))
+
 
 // Desafio 8
 
