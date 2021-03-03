@@ -31,26 +31,28 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(number) {
-  let highN = number[Math.abs(number)];
-  // for (let index = 0; index < number.length; index +=1) {    
-    // if (Math.abs (number=[]) == number[index]) {
-    //   highN = highN + 1;
-    // }
-    return highN;
-  // }
+  let highN = Math.max.apply(null, number);
+  let x = 0;
+  for (let index = 0; index < number.length; index +=1) {    
+    if (highN == number[index]) {
+      x = x + 1;
+    }    
+  }
+  return x;
 }
 console.log (highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs (mouse - cat2)) {
-    return "cat1"
+    return "cat1";
   } else if (Math.abs(mouse - cat1) > Math.abs (mouse - cat2)) {
-    return 'cat2'
+    return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
   }
 }
+console.log (catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz() {
