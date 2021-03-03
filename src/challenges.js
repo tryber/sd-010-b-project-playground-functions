@@ -104,45 +104,45 @@ console.log(fizzBuzz([ 7, 9]));
 
 
 // Desafio 9
-function encode() {
-  let separado = frase.split('');
-  for (let caracter in separado) {
-    if ({}.hasOwnProperty.call(separado, caracter)) {
-      if (separado[caracter] === 'a') {
-        separado[caracter] = 1;
-      } if (separado[caracter] === 'e') {
-        separado[caracter] = 2;
-      } if (separado[caracter] === 'i') {
-        separado[caracter] = 3;
-      } if (separado[caracter] === 'o') {
-        separado[caracter] = 4;
-      } if (separado[caracter] === 'u') {
-        separado[caracter] = 5;
-      }
-    }
-  }
-  let juntoEncode = separado.join('');
-  return juntoEncode;
+function encode(str) {
+  let encoderDict = {
+		a: 1,
+		e: 2,
+		i: 3,
+		o: 4,
+		u: 5
+	}
+
+	let arr = str.split("")
+
+
+	for (let index = 0; index < arr.length; index += 1){
+		for (key in encoderDict){
+			arr[index] = arr[index]===key ? encoderDict[key] : arr[index]
+		}
+	}
+
+	return arr.join("")
 }
-function decode() {
-  let separado = frase.split('');
-  for (let caracter in separado) {
-    if ({}.hasOwnProperty.call(separado, caracter)) {
-        if (separado[caracter] === '1') {
-        separado[caracter] = 'a';
-      } if (separado[caracter] === '2') {
-        separado[caracter] = 'e';
-      } if (separado[caracter] === '3') {
-        separado[caracter] = 'i';
-      } if (separado[caracter] === '4') {
-        separado[caracter] = 'o';
-      } if (separado[caracter] === '5') {
-        separado[caracter] = 'u';
-      }
-    }  
-  }
-  let juntoDecode = separado.join('');
-  return juntoDecode;
+function decode(str) {
+  let decoderDict = {
+		1:"a",
+		2:"e",
+		3:"i",
+		4:"o",
+		5:"u"
+	}
+
+	let arr = str.split("")
+
+
+	for (let index = 0; index < arr.length; index += 1){
+		for (key in decoderDict){
+			arr[index] = arr[index]===key ? decoderDict[key] : arr[index]
+		}
+	}
+
+	return arr.join("")
 }
 
 module.exports = {
