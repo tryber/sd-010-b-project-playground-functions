@@ -141,7 +141,7 @@ function encode(arrayEncode) {
     { vowel: 'u', number: '5' },
   ];
   let encodedString = arrayEncode;
-  encodings.forEach(encoding => {
+  encodings.forEach((encoding) => {
     encodedString = encodedString.replaceAll(encoding.vowel, encoding.number);
   });
 
@@ -155,19 +155,19 @@ console.log(encode('urso indio chuva de gatinho malhado com olho verde e azul'))
 
 function decode(arrayDecode) {
   // seu código aqui
-  let encodings = [
+  let decodings = [
     { vowel: 'a', number: '1' },
     { vowel: 'e', number: '2' },
     { vowel: 'i', number: '3' },
     { vowel: 'o', number: '4' },
     { vowel: 'u', number: '5' },
   ];
-  let encodedString = arrayDecode;
-  encodings.forEach(decoding => {
-    encodedString = encodedString.replaceAll(decoding.number, decoding.vowel);
+  let decodedString = arrayDecode;
+  decodings.forEach((decoding) => {
+    decodedString = decodedString.replaceAll(decoding.number, decoding.vowel);
   });
 
-  return encodedString;
+  return decodedString;
 }
 
 // console log
