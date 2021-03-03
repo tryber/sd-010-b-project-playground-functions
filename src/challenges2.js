@@ -30,79 +30,79 @@ function techList(array, name) {
 // array1 = [];
 // console.log(techList(array1, namePessoal));
 
-// // Desafio 11
-// function verifyRepeated(array) {
-//   let flag = true;
-//   let outs = [];
-//   if (array.length > 0) {
-//     for (let key in array) {
-//       let counter = 0;
-//       for (let i = 0; i < array.length; i += 1) {
-//         if (array[i] === array[key]) {
-//           counter += 1;
-//         }
-//       }
-//       outs.push(counter);
-//     }
-//     if (Math.max(...outs) >= 3){
-//       flag = false;
-//     }
-//   }
-//   return flag;
-// }
+// Desafio 11
+function repeterAnaliser(array) {
+  let dic = {};
+  for (let i = 0; i < array.length; i += 1) {
+    if (dic[array[i]]) {
+      dic[array[i]] += 1;
+    } else {
+      dic[array[i]] = 1;
+    }
+  }
+  return Object.values(dic).sort().reverse()[0];
+}
 
-// function verifyCharacter(array) {
-//   let flag = true;
-//   for (let key in array) {
-//     if (array[key] < 0 || array[key] > 9) {
-//       flag = false;
-//     }
-//   }
-//   return flag;
-// }
+function verifyRepeated(array) {
+  let flag = true;
+  if (repeterAnaliser(array) >= 3) {
+    flag = false;
+  }
+  return flag;
+}
 
-// function phoneNumber(array) {
-//   let numberFormated = '(';
-//   for (let i = 0; i < array.length; i += 1) {
-//     if (i === 2) {
-//       numberFormated += ') ';
-//     }
-//     if (i === 7) {
-//       numberFormated += '-';
-//     }
-//     numberFormated += array[i];
-//   }
-//   return numberFormated;
-// }
+function verifyCharacter(array) {
+  let flag = true;
+  for (let key in array) {
+    if (array[key] < 0 || array[key] > 9) {
+      flag = false;
+    }
+  }
+  return flag;
+}
 
-// function generatePhoneNumber(array) {
-//   if (array.length === 11) {
-//     let isNotChacacter = verifyCharacter(array); // é caracter é falso
-//     let isNotRepeated = verifyRepeated(array);
-//     if (isNotChacacter && isNotRepeated) {
-//       return phoneNumber(array);
-//     }
-//     return 'não é possível gerar um número de telefone com esses valores';
-//   }
-//   return 'Array com tamanho incorreto.';
-// }
+function phoneNumber(array) {
+  let numberFormated = '(';
+  for (let i = 0; i < array.length; i += 1) {
+    if (i === 2) {
+      numberFormated += ') ';
+    }
+    if (i === 7) {
+      numberFormated += '-';
+    }
+    numberFormated += array[i];
+  }
+  return numberFormated;
+}
+
+function generatePhoneNumber(array) {
+  if (array.length === 11) {
+    let isNotCharacter = verifyCharacter(array); // é caracter é falso
+    let isNotRepeated = verifyRepeated(array);
+    if (isNotCharacter && isNotRepeated) {
+      return phoneNumber(array);
+    }
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return 'Array com tamanho incorreto.';
+}
 // // teste item 11
 // console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
-// // console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
-// // console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
-// // console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-// // array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// // console.log(generatePhoneNumber(array0));
-// // array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-// // console.log(generatePhoneNumber(array1));
-// // array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
-// // console.log(generatePhoneNumber(array2));
-// // array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
-// // console.log(generatePhoneNumber(array3));
-// // array4 = [1, 1, 1, 4, 5, 6, 7, 8, 9, 0, 1];
-// // console.log(generatePhoneNumber(array4));
-// // array5 = [-1, 2, 3, 4, 5, 6, 7, -1];
-// // console.log(generatePhoneNumber(array5));
+// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
+// console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+// array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(array0));
+// array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+// console.log(generatePhoneNumber(array1));
+// array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
+// console.log(generatePhoneNumber(array2));
+// array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
+// console.log(generatePhoneNumber(array3));
+// array4 = [1, 1, 1, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(array4));
+// array5 = [-1, 2, 3, 4, 5, 6, 7, -1];
+// console.log(generatePhoneNumber(array5));
 
 // // Desafio 12
 // function triangleCheck(lineA, lineB, lineC) {
@@ -148,7 +148,7 @@ function techList(array, name) {
 // // console.log(hydrate(frase1));
 
 module.exports = {
-  // generatePhoneNumber,
+  generatePhoneNumber,
   techList,
   // hydrate,
   // triangleCheck,
