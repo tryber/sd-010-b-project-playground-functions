@@ -104,14 +104,14 @@ function decode(string) {
 
   for (let i in arrayString) {
     for (let key in dictionary) {
-      let number = isNaN(parseInt(arrayString[i])) ? arrayString[i] : parseInt(arrayString[i]);
+      let number = Number.isNaN(parseInt(arrayString[i])) ? arrayString[i] : parseInt(arrayString[i]);
       arrayString[i] = number === dictionary[key] ? key : arrayString[i];
     }
   }
 
   return arrayString.join('');
 }
-console.log(decode("111444"))
+
 module.exports = {
   calcArea,
   catAndMouse,
