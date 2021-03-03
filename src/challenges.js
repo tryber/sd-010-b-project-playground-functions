@@ -96,37 +96,43 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(stringpar) {
-  // seu código aqui
-  //   Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
-  let info = stringpar.split();
-  for (let index = 0; index < array.length; index++) {
+function encode(string) {
+  //foi utilizado o site https://developer.mozilla.org/pt-BR/ para entender o conceito de split
+  let info = string.split('');
+  for (let index = 0; index < string.length; index += 1) {
     if (info[index] === 'a') {
-      info[index] = 1;
+      info[index] = '1';
     } else if (info[index] === 'e') {
-      info[index] = 2;
+      info[index] = '2';
     } else if (info[index] === 'i') {
-      info[index] = 3;
+      info[index] = '3';
     } else if (info[index] === 'o') {
-      info[index] = 4;
-    } if (info[index] === 'u') {
-      info[index] = 5;
-    } 
+      info[index] = '4';
+    } else if (info[index] === 'u') {
+      info[index] = '5';
+    }
   }
-  // a -> 1
-  // e -> 2
-  // i -> 3
-  // o -> 4
-  // u -> 5
-
-  // Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
-
-  // A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
-
-
+  string = info.join('');//foi utilizado o site https://developer.mozilla.org/pt-BR/ para entender o conceito de join
+  return string;
 }
-function decode() {
-  // seu código aqui
+
+function decode(array) {
+  let info = array.split('');
+  for (let index = 0; index < array.length; index += 1) {
+    if (info[index] === '1') {
+      info[index] = 'a';
+    } else if (info[index] === '2') {
+      info[index] = 'e';
+    } else if (info[index] === '3') {
+      info[index] = 'i';
+    } else if (info[index] === '4') {
+      info[index] = 'o';
+    } else if (info[index] === '5') {
+      info[index] = 'u';
+    }
+  }
+  array = info.join('');
+  return array;
 }
 
 module.exports = {
