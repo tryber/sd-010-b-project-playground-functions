@@ -36,9 +36,9 @@ function highestCount(numbers) {
   numbers = [9, 1, 2, 3, 9, 5, 7];
   let highNumber = 0; let counter = 0;
 
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] > highNumber) highNumber = numbers[i];
-    if (highNumber === numbers[i]) counter += 1;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > highNumber) highNumber = numbers[index];
+    if (highNumber === numbers[index]) counter += 1;
   }
   return counter;
 }
@@ -56,12 +56,13 @@ console.log(catAndMouse(4, 4, 2));
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] % 15 === 0) result.push('fizzBuzz');
-    else if (numbers[i] % 3 === 0) result.push('fizz');
-    else if (numbers[i] % 5 === 0) result.push('buzz');
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 15 === 0) result.push('fizzBuzz');
+    else if (numbers[index] % 3 === 0) result.push('fizz');
+    else if (numbers[index] % 5 === 0) result.push('buzz');
     else result.push('bug!');
-  } return result;
+  }
+  return result;
 }
 
 let userNumbers = [2, 15, 7, 9, 45];
@@ -69,7 +70,7 @@ console.log(fizzBuzz(userNumbers));
 
 // Desafio 9
 function encode() {
-
+  
 }
 function decode() {
   // seu código aqui
