@@ -32,7 +32,7 @@ function splitSentence(umaFrase) {
 
 // Desafio 4
 function concatName(umaLista) {
-  let concat = umaLista[umaLista.length - 1] + ', ' + umaLista[0];
+  let concat = `${umaLista[umaLista.length - 1]}, ${umaLista[0]}`;
   return concat;
 }
 
