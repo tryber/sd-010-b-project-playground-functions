@@ -20,12 +20,14 @@ function testaRepeticoes(phoneNumber) {
   let isValid = true;
   for (let index = 0; index <= phoneNumber.length; index += 1) {
     cont = 0;
-    if (phoneNumber[index] === phoneNumber[index - 1] && phoneNumber[index] === phoneNumber[index + 1]) {
-      cont += 2;
-    }
-    if (cont >= 2) {
-      isValid = false;
-      break;
+    for (let indexDois = 0; indexDois <= phoneNumber.length; indexDois += 1) {
+      if (phoneNumber[index] === phoneNumber[indexDois]) {
+        cont += 1;
+      }
+      if (cont > 2) {
+        isValid = false;
+        break;
+      }
     }
   }
   return isValid;
@@ -47,7 +49,7 @@ function generatePhoneNumber(phoneNumber) {
   }
   return saida;
 }
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
