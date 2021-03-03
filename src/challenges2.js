@@ -8,8 +8,8 @@ function techList(tech, name) {
   for (let i = 0; i < novaArray.length; i += 1) {
     objeto[i] = {
       tech: novaArray[i],
-      name: name
-    }
+      name: name,
+    };
   }
   return objeto;
 }
@@ -34,7 +34,7 @@ function contaNumRepetido(array) {
   return contaRepetido;
 }
 function generatePhoneNumber(array) {
-  if (array.length > 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < array.length; i += 1) {
@@ -47,7 +47,7 @@ function generatePhoneNumber(array) {
   let telefoneParteDois = '' + array[7] + array[8] + array[9] + array[10];
   let numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
   return numTelefone;
-} console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -77,11 +77,10 @@ function hydrate(string) {
   if (copoAgua === 1) {
     resultado = '1 copo de água';
   } else {
-    resultado = copoAgua + ' copos de água';
+    resultado = copoAgua + '$copo copos de água';
   }
   return resultado;
 }
-
 
 module.exports = {
   generatePhoneNumber,
