@@ -54,8 +54,26 @@ function generatePhoneNumber(arrayDeNumeros) {
 }
 
 // Desafio 12
+function priT (lineA, lineB, lineC) {
+  let primeiro = ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC)));
+  return primeiro;
+}
+
+function segT (lineA, lineB, lineC) {
+  let segundo = ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC)));
+  return segundo;
+}
+
+function terT (lineA, lineB, lineC) {
+  let terceiro = (lineC < (lineB + lineA)) && ((lineC > Math.abs(lineB - lineA)));
+  return terceiro;
+}
+
 function triangleCheck(lineA, lineB, lineC) {
-  let existencia = (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) || ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) || ((lineC < (lineB + lineA)) && (lineC > Math.abs(lineB - lineA))));
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+  let existencia = priT(a, b, c) || segT(a, b, c) || terT(a, b, c);
   return existencia;
 }
 
