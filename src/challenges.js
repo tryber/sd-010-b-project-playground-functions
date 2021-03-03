@@ -98,7 +98,7 @@ function fizzBuzz(arrayNums) {
     }  else if (arrayNums[num] % 3 === 0) {
         resp = "fizz";
     } else if((arrayNums[num]) % 5 === 0) {
-      resp = "Buzz";
+      resp = "buzz";
     } else {
       resp = "bug!";
     }
