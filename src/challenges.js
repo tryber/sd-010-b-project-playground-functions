@@ -53,19 +53,18 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  Math.abs(cat1, cat2);
-  let posCat1 = mouse - cat1;
-  let posCat2 = mouse - cat2;
-  if (posCat1 === posCat2) {
+  Math.abs(cat1);
+  Math.abs(cat2);
+  if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   }
-  if (posCat1 < posCat2) {
-    return 'cat1';
+  if (cat1 > cat2) {
+    return 'cat2';
   }
-  return 'cat2';
+  return 'cat1';
 }
 
-// console.log(catAndMouse(0, -6, 5));
+console.log(catAndMouse(0, 6, 12));
 
 /* Resposta: Na tentativa de solucionar o setimo requisito, fiz
 comparações entre os parametros dada pela function. Posição é 0 do
