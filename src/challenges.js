@@ -71,12 +71,12 @@ function fizzBuzz(arrNumber) {
     } else {
       resultArr.push('bug!');
     }
-  }   
+  }
   return resultArr;
 }
 
 // Desafio 9
-function encode(str) {
+function encode() {
   // seu código aqui
 }
 
