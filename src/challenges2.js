@@ -19,7 +19,7 @@ function generatePhoneNumber(numbers) {
   let phoneNumber = '(';
   let repetitionCounter = 0;
   if (numbers.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
@@ -39,15 +39,15 @@ function generatePhoneNumber(numbers) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let index = 0; index < 2; index += 1) {
-    phoneNumber = phoneNumber + numbers[index];
+    phoneNumber += numbers[index];
   }
   phoneNumber = phoneNumber + ') ';
   for (let index = 2; index < 7; index += 1) {
-    phoneNumber = phoneNumber + numbers[index];
+    phoneNumber += numbers[index];
   }
   phoneNumber = phoneNumber + '-';
   for (let index = 7; index < numbers.length; index += 1) {
-    phoneNumber = phoneNumber + numbers[index];
+    phoneNumber += numbers[index];
   }
   return phoneNumber;
 }
@@ -56,10 +56,10 @@ function generatePhoneNumber(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
+
 
 
 
