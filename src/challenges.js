@@ -86,9 +86,9 @@ function encode(message) {
   let codedMessagem = '';
   for (let index in message) {
     switch (message[index]) {
-    case 'a':
-        break;
+      case 'a':
         codedMessagem = codedMessagem + '1';
+        break;
       case 'e':
         codedMessagem = codedMessagem + '2';
         break;

@@ -55,6 +55,7 @@ function generatePhoneNumber(numbers) {
   return phoneNumber;
 }
 
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if((lineA < lineB + lineC) && (lineA > Math.abs(lineB-lineC))) {
