@@ -33,9 +33,9 @@ function generatePhoneNumber(array) {
         break;
       }
       let counter = 0;
-      for (let i = 0; i < array.length; i++) {
+      for (let i = 0; i < array.length; i += 1) {
         if (array[i] === array[key]) {
-          counter++;
+          counter += 1;
         }
       }
       if (counter >= 3) {
@@ -43,24 +43,22 @@ function generatePhoneNumber(array) {
       }
     }
     if (invalido !== false) {
-      return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
-    } else {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
     }
-  } else {
-    return 'Array com tamanho incorreto.';
+      return 'não é possível gerar um número de telefone com esses valores';
   }
+    return 'Array com tamanho incorreto.';
 }
 
 // teste item 11
-// array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(generatePhoneNumber(array0));
-// array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-// console.log(generatePhoneNumber(array1));
-// array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
-// console.log(generatePhoneNumber(array2));
-// array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
-// console.log(generatePhoneNumber(array3));
+array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(array0));
+array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(generatePhoneNumber(array1));
+array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
+console.log(generatePhoneNumber(array2));
+array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
+console.log(generatePhoneNumber(array3));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -85,7 +83,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(umaFrase) {
-  let fatiada = umaFrase.split("");
+  let fatiada = umaFrase.split('');
   let soma = 0;
   for (let key in fatiada) {
     let char = fatiada[key];
@@ -95,9 +93,8 @@ function hydrate(umaFrase) {
   }
   if (soma > 1) {
     return `${soma} copos de água`;
-  } else {
+  } 
     return `${soma} copo de água`;
-  }
 }
 
 // teste item 13
