@@ -16,7 +16,7 @@ function splitSentence(a) {
 }
 
 // Desafio 4
-function splitSentence(a) {
+function concatName(a) {
   let dado = [];
   dado.push(a.pop());
   dado.push(a[0]);
