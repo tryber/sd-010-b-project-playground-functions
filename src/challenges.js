@@ -23,7 +23,6 @@ function concatName(name) {
   let firstLast = `'${pos}, ${name[0]}'`;
   return (firstLast);
 }
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
