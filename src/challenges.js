@@ -49,15 +49,13 @@ function concatName(string) {
 function footballPoints(wins, ties) {
   // seu código aqui
   switch (footballPoints) {
-    case wins === 14 && ties === 8:
-      return 50;
-    case wins === 1 && ties === 2:
-      return 5;
-    case wins === 0 && ties === 0:
-      return 0;
-    default:
-      return splitSentence();
-    }
+  case wins === 14 && ties === 8:
+    return 50;
+  case wins === 1 && ties === 2:
+    return 5;
+  case wins === 0 && ties === 0:
+    return 0;
+  }
 }
 
 // Desafio 6
