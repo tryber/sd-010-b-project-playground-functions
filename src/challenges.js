@@ -3,7 +3,7 @@ function compareTrue(value1, value2) {
   // seu código aqui
   if ((value1 === true) && (value2 === true)) {
     return true;
-  } else if (((value1 === false) && (value2 === true)) || ((value1 === true) && (value2 === false))) {
+  } else if ((value1 === false && value2 === true) || (value1 === true && value2 === false)) {
     return false;
   } else {
     return false;
@@ -19,13 +19,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  return str.split(" ");
+  return str.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  return (array[0] + ", " + array[array.length - 1]);
+  return (array[0].concat(array.length - 1));
 }
 
 // Desafio 5
