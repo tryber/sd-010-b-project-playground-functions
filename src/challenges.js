@@ -98,7 +98,7 @@ function encode(string) {
     }
   }
   for (let index = 0; index < string.length; index += 1) {
-    frase += `"${string[index]}"`;
+    frase += `${string[index]}`;
   }
   return frase;
 
@@ -128,7 +128,7 @@ function decode(string) {
   }
 }
   for (let index = 0; index < string.length; index += 1) {
-    frase += `"${string[index]}"`;
+    frase += `${string[index]}`;
 }
 return (frase);
 }
@@ -145,3 +145,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
