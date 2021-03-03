@@ -5,7 +5,7 @@ function compareTrue(a, b) {
     require = true;
   } else {
     require = false;
-  }
+  } return require
 }
 
 // Desafio 2
