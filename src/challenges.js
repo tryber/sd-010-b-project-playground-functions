@@ -65,16 +65,16 @@ console.log(footballPoints(0, 0)); */
 function highestCount(arrayNumbers) {
   let maiorNumero = Math.max.apply(null, arrayNumbers); // código retirado no site: http://henriquesilverio.github.io/javascript-e-jquery/javascript-descobrir-menor-e-maior-valor-em-um-array
   let cont = 0;
-  for(index = 0; index < arrayNumbers.length; index += 1) {
+  for(let index = 0; index < arrayNumbers.length; index += 1) {
     if(arrayNumbers[index] === maiorNumero) {
       cont += 1;
     }
   }
   return cont;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+/* console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount([0, 0, 0])); */
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -112,7 +112,7 @@ function fizzBuzz(arrayNumbers8) {
 
   for(index = 0; index < arrayNumbers8.length; index += 1) {
     if ((arrayNumbers8[index] % 3 === 0) && (arrayNumbers8[index] % 5 === 0)) {
-      stringsArray.push("fizbuzz");
+      stringsArray.push("fizBuzz");
     } else if(arrayNumbers8[index] % 3 === 0) {
       stringsArray.push("fizz");
     } else if(arrayNumbers8[index] % 5 === 0) {
@@ -123,14 +123,14 @@ function fizzBuzz(arrayNumbers8) {
   }
   return stringsArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+/* console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
+console.log(fizzBuzz([9, 25])); */
 
 // Desafio 9
 function encode(string) {
-  let novaFrase = "";
-  let objectCodes = {
+  let encodeArray = string.split("");
+  let objectEncode = {
     a: 1,
     e: 2,
     i: 3,
@@ -138,19 +138,39 @@ function encode(string) {
     u: 5
   }
 
-  for(index = 0; index < string.length; index += 1) {
-    if(objectCodes[index] === string[index]) {
-      novaFrase += objectCodes[index];
-    } else {
-      novaFrase += string[index];
+  for (index = 0; index < encodeArray.length; index += 1) {
+    for (let key in objectEncode) {
+      if (encodeArray[index] == key) {
+        encodeArray[index] = objectEncode[key];
+      }
     }
   }
+  let encodeArrayToString = encodeArray.join("");
+  return encodeArrayToString;
 }
-console.log(encode("hi there"));
+console.log(encode("hi there!"));
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decodeArray = string.split("");
+  let objectDecodes = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u"
+  }
+
+  for (let index = 0; index < decodeArray.length; index += 1) {
+    for (let key in objectDecodes) {
+      if(decodeArray[index] == key) {
+        decodeArray[index] = objectDecodes[key];
+      }
+    }
+  }
+  let decodeArrayToString = decodeArray.join("");
+  return decodeArrayToString;
 }
+/* console.log(decode("h3 th2r2!")); */
 
 
 module.exports = {
