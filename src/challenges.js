@@ -33,25 +33,30 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let count = 0;
-  let maior = 0;
-  for (let indice = 0; indice < array.length; indice += 1) {
-    for (let comparar = 0; comparar < array.length; comparar += 1) {
-      if (maior < array[comparar]) {
-          maior = array[comparar];
-      }
-      if (maior === array[indice])
-        return count += 1;
-
-
+  let compara={
+    cout:0,
+    maiorNumero:0,
     }
-  }
-  return count;
-}
+    for (let index = 0; index < array.length; index += 1) {
+      for (let compar = 0; compar < array.length; compar += 1) {
+        if (maiorNumero < array[compar]) {
+          maiorNumero = array[compar];
+        }
+      }
+      if (maiorNumero === array[index]) {
+        count += 1;
+      }
+    }
+    return compara;
+
+
+
+
+
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1,cat2) {
   // seu código aqui
 }
 
