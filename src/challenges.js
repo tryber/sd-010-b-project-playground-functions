@@ -82,13 +82,13 @@ function fizzBuzz(arrayNumber) {
   let arraySaida = [];
   for (let key in arrayNumber) {
     if (arrayNumber[key] % 3 == 0 && arrayNumber[key] % 2 != 0 && arrayNumber[key] % 5 != 0) {
-      arraySaida.push("fizz");
+      arraySaida[key] = "fizz";
     } else if (arrayNumber[key] == 5 || arrayNumber[key] == 25) {
-      arraySaida.push("buzz");
+      arraySaida[key] = "buzz";
     } else if (arrayNumber[key] % 3 == 0 && arrayNumber[key] % 5 == 0) {
-      arraySaida.push("fizzBuzz");
+      arraySaida[key] = "fizzBuzz";
     } else if (arrayNumber[key] % 3 != 0 && arrayNumber[key] % 5 != 0) {
-      arraySaida.push("bug!");
+      arraySaida[key] = "bug!";
     }
   }
   return arraySaida;
