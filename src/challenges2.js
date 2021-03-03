@@ -1,19 +1,18 @@
 // Desafio 10
 function techList(array, name) {
-  if (array.length != 0) {
+  if (array.length !== 0) {
     let ordenada = array.sort();
     let lista = [];
     for (let key in ordenada) {
       let dicionario = {
         tech: ordenada[key],
         name: name
-      }
+      };
       lista.push(dicionario);
     }
     return lista;
-  } else {
+  } 
     return 'Vazio!';
-  }
 }
 
 // teste itam 10
