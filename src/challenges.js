@@ -123,6 +123,7 @@ function encode(codificar) {
     for (let key2 in arrayVogal) {
       if (arrayCodificar[key] == arrayVogal[key2]){
         arrayCodificar[key] = arrayCode[key2];
+      }
     }
   }
 
@@ -142,6 +143,7 @@ function decode(decodificar) {
     for (let key2 in arrayCode) {
       if (arrayDecodificar[key] == arrayCode[key2]){
         arrayDecodificar[key] = arrayVogal[key2];
+      }
     }
   }
 
