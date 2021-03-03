@@ -41,7 +41,7 @@ function splitSentence(string) {
 function concatName(string) {
   // seu código aqui
   let retorno = [];
-  for (var index = string.length - 1, indexDois = 0; index >= 0; index -= 1, indexDois += 1) {
+  for (let index = string.length - 1, indexDois = 0; index >= 0; index -= 1, indexDois += 1) {
     retorno[indexDois] = string[index];
   }
   return retorno.join('');
