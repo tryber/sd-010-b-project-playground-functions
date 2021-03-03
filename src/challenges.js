@@ -53,18 +53,21 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = cat1 - mouse;
+  let distamcia2 = cat2 - mouse;
   if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
-  } if (cat1 < cat2) {
+  } if (distancia1 < distamcia2) {
     return 'cat1';
   }
   return 'cat2';
 }
-// Resposta: Na tentativa de solucionar o setimo requisito, fir comparações entre os parametros dada pela function. Posição é 0 do mouse e N posições de cat1 e cat2.
+
+// Resposta: Na tentativa de solucionar o setimo requisito, fir comparações entre os parametros dada pela function. Posição é 0 do mouse e N posições de cat1 e cat2. Adicionei duas variaveis onde calcula a distancia entre um cat e mouse.
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arryDiv) {
+ 
 }
 
 // Desafio 9
