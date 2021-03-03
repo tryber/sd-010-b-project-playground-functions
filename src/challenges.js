@@ -70,12 +70,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let resposta = [];
   for (let cont = 0; cont < numeros.length; cont += 1) {
-    if ((numeros[cont]%3) == 0 && (numeros[cont]%5) == 0) {
-      resposta.push("fizzBuzz");
-    } else if ((numeros[cont]%3) == 0) {
+    if ((numeros[cont] % 3) === 0 && (numeros[cont] % 5) === 0) {
+      resposta.push("fizzbuzz");
+    } else if ((numeros[cont] % 3) === 0) {
       resposta.push("fizz");
-    } else if ((numeros[cont]%5) == 0) {
-      resposta.push("Buzz");
+    } else if ((numeros[cont] % 5 ) === 0) {
+      resposta.push("buzz");
     } else {
       resposta.push("bug!");
     }
