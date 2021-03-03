@@ -4,7 +4,7 @@ function techList(array, nameUser) {
 	if (array.length == 0) {
 
 		return "Vazio!"
-		
+
 	} else {
 
 		arrayReturn = []
@@ -26,9 +26,24 @@ function techList(array, nameUser) {
 "Lucas")) */
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+
+	stringNumber = ''
+
+	numbers.unshift('(')
+	numbers.splice(3,0,')')
+	numbers.splice(4,0,' ')
+	numbers.splice(10,0,'-')
+
+	for (let index in numbers) {
+		stringNumber += numbers[index]
+	}
+
+	console.log(stringNumber)
+  
 }
+
+//generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
 
 // Desafio 12
 function triangleCheck() {
