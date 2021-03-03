@@ -2,16 +2,17 @@
 function compareTrue(valorUm, valorDois) {
   // seu código aqui
   let trueOrFalse = false;
-  if (valorUm && valorDois === true) {
+  if (valorUm === true && valorDois === true) {
     return true;
+  } else {
+    return trueOrFalse;
   }
-  return trueOrFalse;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let formula = (base * height) / 2 === 0;
+  let formula;
   if ((base * height) / 2 === 250) {
     return formula;
   }
@@ -28,10 +29,10 @@ function calcArea(base, height) {
 function splitSentence() {
   // seu código aqui
   if (splitSentence.length === 2) {
-    return splitSentence.split(''+'');
+    return splitSentence.split('',' ');
   }
   if (splitSentence.length === 1) {
-    return splitSentence.split(''+'');
+    return splitSentence.split('', '');
   }
 }
 
