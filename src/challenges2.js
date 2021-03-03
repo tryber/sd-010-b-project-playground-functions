@@ -1,9 +1,10 @@
 // Desafio 10
 
-
+console.log(techList([],"lucas"))
 function techList(array, name) {
   // let array =["React", "Jest", "HTML", "CSS", "JavaScript"]
   // let name ="Lucas"
+  let vazio = []
    array.sort()
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
@@ -15,7 +16,8 @@ function techList(array, name) {
 }
 
 if (newArray.length ==0){
-  return 'Vazio!';
+  vazio.push('Vazio!')
+  return vazio;
 } else {
   return newArray;
 }
