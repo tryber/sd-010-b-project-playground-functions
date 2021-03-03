@@ -6,14 +6,15 @@ function techList(array, name) {
   } else {
     for (let index = 0; index < array.length; index += 1) {
       let object = {
-        tech: name,
+        tech: array[index],
         name: name,
       };
+      listOfObjetcts.push(object);
     }
   }
   return listOfObjetcts;
 }
-
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 function countNumberAppears(array, value) {
   let n = 0;
   for (let index = 0; index < array.length; index += 1) {
@@ -52,7 +53,7 @@ function generatePhoneNumber(numbers) {
   }
   return feedback;
 }
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let check = false;
