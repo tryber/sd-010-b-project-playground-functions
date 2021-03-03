@@ -12,7 +12,7 @@ function techList(tech, name) {
         name: name
     })
   }
-  if (object.tech > 0) {
+  if (object.tech.length > 0) {
     return objectListOutput;
   } else {
     return 'Vazio!';
