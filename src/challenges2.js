@@ -66,22 +66,40 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let flag = false;
-  if((Math.abs(lineB - lineC) < lineA < lineB + lineC) && (Math.abs(lineA - lineC) < lineB < lineA + lineC) && (Math.abs(lineA - lineB) < lineC < lineA + lineB)) {
+  let somaBC = lineB + lineC;
+  let somaAC = lineA + lineC;
+  let somaAB = lineA + lineB;
+  let absBC = Math.abs(lineB - lineC);
+  let absAC = Math.abs(lineA - lineC);
+  let absAB = Math.abs(lineA - lineB);
+  if ((lineA < somaBC) && (lineA < somaBC) && (lineB < somaAC) && (absAC < lineB) && (lineC < somaAB) && (absAB < lineC)) {
     flag = true;
   }
   return flag;
 }
 
 // teste itam 12
-// console.log(triangleCheck(10, 14,8));
+// console.log(triangleCheck(10, 14, 8));
 // console.log(triangleCheck(3, 4, 5 ));
-// console.log(triangleCheck(5, 12,13));
+// console.log(triangleCheck(5, 12, 13));
+// console.log(triangleCheck(1, 2, 5 ));
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(umaFrase) {
+  // let fatiada =  umaFrase.split("");
+  // let soma = 0;
+  // for (let key in fatada) {
+    
+  // }
+  // return fatiada;
 }
+
+
+// teste item 13
+// let frase1 = '1 cerveja';
+// let frase2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
+// console.log(hydrate(frase2));
 
 module.exports = {
   generatePhoneNumber,
