@@ -88,7 +88,7 @@ console.log(highestCount([1, 2, 2, 2, 2, 2, 2, 2, 1]));
 
 // Desafio 7
 // consultado o site para essa resolução:
-//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanciaGato1 = Math.abs(cat1 - mouse);
@@ -148,8 +148,11 @@ function encode(arrayEncode) {
   return encodedString;
 }
 
+// console log
 console.log(encode('urso indio chuva de gatinho malhado com olho verde e azul'));
-// 
+
+// decode
+
 function decode(arrayDecode) {
   // seu código aqui
   let encodings = [
