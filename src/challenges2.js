@@ -13,7 +13,7 @@ function techList(tech, name) {
       name: name,
     }
   }
-  
+
   return objetoTech;
 }
 
@@ -22,7 +22,7 @@ function generatePhoneNumber(arrayTelefone) {
   // seu código aqui
   let repetidas = 0;
   let gerarTelefone = [
-    "(", arrayTelefone[0], arrayTelefone[1], ")", arrayTelefone[2], arrayTelefone[3], arrayTelefone[4], arrayTelefone[5], arrayTelefone[6], "-", arrayTelefone[7], arrayTelefone[8], arrayTelefone[9], arrayTelefone[10]
+    "(", arrayTelefone[0], arrayTelefone[1], ")", " ", arrayTelefone[2], arrayTelefone[3], arrayTelefone[4], arrayTelefone[5], arrayTelefone[6], "-", arrayTelefone[7], arrayTelefone[8], arrayTelefone[9], arrayTelefone[10]
   ];
 
   for (let indice = 0; indice < arrayTelefone.length; indice++){
