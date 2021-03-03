@@ -78,9 +78,9 @@ function hydrate(string) {
   let numbersSplited = onlyNumbers.split('');
   let sumOfTheNumbers = 0;
   for (let index = 0; index < numbersSplited.length; index += 1) {
-    sumOfTheNumbers = sumOfTheNumbers + parseInt(numbersSplited[index]);
+    sumOfTheNumbers += parseInt(numbersSplited[index], 10);
   }
-  let feedback = ``;
+  let feedback = '';
   if (sumOfTheNumbers < 2) {
     feedback = `${sumOfTheNumbers} copo de água`;
   } else {
