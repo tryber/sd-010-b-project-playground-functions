@@ -3,25 +3,26 @@ function techList(techs, name) {
   let ordenedList = techs.sort();
   let resultList = [];
   if (techs.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   } else {
     for (let index = 0; index < ordenedList.length; index += 1) {
       resultList.push(list = {
         tech: techs[index],
         name: name,
-      })
+      });
     }
   }
   return resultList;
 }
 
+// Desafio 11
 function generatePhoneNumber(numbers) {
   let phoneNumber = '(';
   let repetitionCounter = 0;
   let numberCounter = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let numberCounter = 0;
     for (let index2 = 0; index2 < numbers.length; index2 += 1) {
@@ -30,7 +31,7 @@ function generatePhoneNumber(numbers) {
       }
     }
     if (numberCounter > repetitionCounter) {
-      repetitionCounter = numberCounter
+      repetitionCounter = numberCounter;
     }
   }
   if (repetitionCounter >= 3) {
@@ -54,20 +55,29 @@ function generatePhoneNumber(numbers) {
   return phoneNumber;
 }
 
-
-
-
-
-
-
-
-
-
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if((lineA < lineB + lineC) && (lineA > Math.abs(lineB-lineC))) {
+    return true;
+  } else {
+    return false; 
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 13
 function hydrate() {
