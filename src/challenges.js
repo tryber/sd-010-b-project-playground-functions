@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
 
 // Desafio 2
@@ -22,12 +21,10 @@ function concatName(myArray) {
   return myArray[myArray.length - 1] + ', ' + myArray[0];
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return 3 * wins + 1 * ties;
 }
-
 
 // Desafio 6
 function highestCount(array) {
@@ -46,7 +43,6 @@ function highestCount(array) {
   }
   return repete;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
