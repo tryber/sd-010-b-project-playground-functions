@@ -75,42 +75,29 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let arrayString = string.split('');
-  let dictionary = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
+  let dictionary = {a: 1, e: 2, i: 3, o: 4, u: 5};
 
-  for (let i in arrayString) {
-    for (let key in dictionary) {
-      arrayString[i] = arrayString[i] === key ? dictionary[key] : arrayString[i];
+  arrayString.forEach((ele, i)=>{
+    if(dictionary.hasOwnProperty(ele)){
+      arrayString[i] = dictionary[ele];
     }
-  }
+  })
 
   return arrayString.join('');
 }
 
 function decode(string) {
   let arrayString = string.split('');
-  let dictionary = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
+  let dictionary = {'1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u'};
 
-  for (let i in arrayString) {
-    for (let key in dictionary) {
-      let number = Number.isNaN(parseInt(arrayString[i])) ? arrayString[i] : parseInt(arrayString[i]);
-      arrayString[i] = number === dictionary[key] ? key : arrayString[i];
+  arrayString.forEach((ele, i)=>{
+    if(dictionary.hasOwnProperty(ele)){
+      arrayString[i] = dictionary[ele];
     }
-  }
-
-  return arrayString.join('');
+  })
+  return arrayString.join('')
 }
+console.log(decode("d2nn3s m1rc2l4"))
 
 module.exports = {
   calcArea,
