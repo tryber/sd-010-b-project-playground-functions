@@ -22,7 +22,7 @@ function splitSentence(string) {
   // seu código aqui
   let separador = string.split(' ')
   return separador;
-}
+};
 console.log(splitSentence('Agora vai !!!'));
 
 // Desafio 4
@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
   pontos += wins * 3; 
   pontos += ties;
   return pontos;
-}
+};
 console.log(footballPoints(4, 2));
 
 // Desafio 6
@@ -59,13 +59,22 @@ function highestCount(numArray) {
     }; 
   };
   return counter;
-}  
+};  
 console.log(highestCount([9, 1, 10, 9, 9, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
-}
+  if(cat1 < cat2 && cat1 === mouse){
+    return 'Cat1';
+  };
+  if(cat2 < cat1 && cat2 === mouse){
+    return 'Cat2';
+  }if(cat2 === cat1 && (cat1 - cat2) < mouse){
+    return 'Os gatos trombam e o rato foge';
+  };
+};
+console.log(catAndMouse(1,1,1));
 
 // Desafio 8
 function fizzBuzz() {
