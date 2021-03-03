@@ -64,7 +64,7 @@ function fizzBuzz(arr) {
     if (i % 3 === 0) {
       return 'fizz';
     }
-    return 'bug';
+    return 'bug!';
   });
   return result;
 }
