@@ -52,9 +52,6 @@ function highestCount(array) {
   }
   return cont;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -86,19 +83,17 @@ function fizzBuzz(arrayNumber) {
   for (let key in arrayNumber) {
     if (arrayNumber[key] % 3 == 0 && arrayNumber[key] % 2 != 0 && arrayNumber[key] % 5 != 0) {
       arraySaida.push("fizz");
-    }
-    if (arrayNumber[key] == 5 || arrayNumber[key] == 25) {
+    } else if (arrayNumber[key] == 5 || arrayNumber[key] == 25) {
       arraySaida.push("buzz");
-    }
-    if (arrayNumber[key] % 3 == 0 && arrayNumber[key] % 5 == 0) {
+    } else if (arrayNumber[key] % 3 == 0 && arrayNumber[key] % 5 == 0) {
       arraySaida.push("fizzBuzz");
-    }
-    if (arrayNumber[key] % 3 != 0 && arrayNumber[key] % 5 != 0) {
+    } else if (arrayNumber[key] % 3 != 0 && arrayNumber[key] % 5 != 0) {
       arraySaida.push("bug!");
     }
   }
   return arraySaida;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(word) {
