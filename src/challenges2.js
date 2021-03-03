@@ -12,20 +12,48 @@ function techList(array, string) {
 }
 
 function repeatThreeTimes(array) {
-  // seu código aqui
+  let input = array.sort();
+  let number = input[0];
+  let count = 0;
+  let result = [];
+  for (let index = 0; index < input.length; index += 1) {
+    if (number === input[index]) {
+      count += 1;
+    } else if (number !== input[index]) {
+      result.push(count);
+      number = input[index];
+      count = 1;
+    }
+  }
+  result.push(count);
+  for (index2 = 0; index2 < result.length; index2 += 1) {
+    if (result[index2] >= 3) { 
+      return true; 
+    }
+  }
 }
-
+//console.log(repeatThreeTimes([1, 1, 3, 3, 4, 2, 6, 2, 7, 2, 1]));
 // Desafio 11
 function generatePhoneNumber(array) {
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  // seu código aqui
+
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5]));
+function checkSum(a, b, c) {
+  if ((a < b + c) && (b < a + c) && c < b + a) {
+    return true;
+  }
+}
+
+function checkDiference(a, b, c) {
+  if ((a > Math.abs(b - c)) && (b > Math.abs(a - c)) && (c > Math.abs(a - b))) {
+    return true;
+  }
+}
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((checkSum(lineA, lineB, lineC)) && checkDiference(lineA, lineB, lineC)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
