@@ -18,9 +18,8 @@ function techList(tech, name) {
     return 'Vazio!';
   }  
 }
-console.log(techList([],"Lucas"));
 
-// Desafio 11 ==>>>>> Nao terminei essa ainda!!! Voltar nela!!!<<<<<<==
+// Desafio 11 ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
 function generatePhoneNumber(arrayOfNumber) {
   let telePhoneNumber = '(';
   for(let DDD = 0; DDD < 2; DDD += 1) {
@@ -48,15 +47,19 @@ function generatePhoneNumber(arrayOfNumber) {
           repeated = numberCounter;
           numindex = key;
       }
-      numberCounter = 0;        
-      if ((arrayOfNumber[key] < 0) || (arrayOfNumber[key] > 9) || (repeated >= 3)) {
+      numberCounter = 0;
+  } 
+  for (let index = 0; index < arrayOfNumber.length; index += 1) {             
+      if (((arrayOfNumber[index]) < 0) || ((arrayOfNumber[index]) > 9) || (repeated >= 3)) {
           return 'não é possível gerar um número de telefone com esses valores';
       } else if (arrayOfNumber.length !== 11){
           return 'Array com tamanho incorreto.';
-      } else if ((arrayOfNumber[key] >= 0) && (arrayOfNumber[key] <= 9) && (arrayOfNumber.length == 11)) {
-          return telePhoneNumber;
+      } else if ((arrayOfNumber[index] >= 0) && (arrayOfNumber[index] <= 9) && (arrayOfNumber.length == 11)) {
+          return telePhoneNumber;        
       }
-  } 
+  }               
+}
+console.log(generatePhoneNumber([1, 2, 3, 34, 3, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -70,12 +73,15 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringWithGlasses) {
+  let retorno = '';
+  let busca = /[1-9]/g;
+  
+  return retorno; 
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,

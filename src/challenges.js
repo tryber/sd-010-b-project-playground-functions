@@ -11,14 +11,14 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base*height/2;
-  return area; 
+  let area = base * height / 2;
+  return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
   let arrayDeStrings = [];
-  arrayDeStrings = string.split(" ");
+  arrayDeStrings = string.split(' ');
   return arrayDeStrings;
 }
 
@@ -45,7 +45,7 @@ function highestCount(arrayOfValues) {
   let biggest = arrayOfValues[0];
   let sum = 0;
   for (let i in arrayOfValues) {
-    if ( arrayOfValues[i] >= biggest){
+    if (arrayOfValues[i] >= biggest){
       biggest = arrayOfValues[i];
     }
   }
@@ -78,16 +78,16 @@ function fizzBuzz(arrayOfNumbers) {
   let result = [];
   for(let key in arrayOfNumbers){
     switch(true){
-    case ((arrayOfNumbers[key]%3 === 0) && (arrayOfNumbers[key]%5 !== 0)):
+    case ((arrayOfNumbers[key] % 3 === 0) && (arrayOfNumbers[key] % 5 !== 0)):
       result.push('fizz');
       break;
-    case ((arrayOfNumbers[key]%3 !== 0) && (arrayOfNumbers[key]%5 === 0)):
+    case ((arrayOfNumbers[key] % 3 !== 0) && (arrayOfNumbers[key] % 5 === 0)):
       result.push('buzz');
       break;
-    case ((arrayOfNumbers[key]%3 === 0) && (arrayOfNumbers[key]%5 === 0)):
+    case ((arrayOfNumbers[key] % 3 === 0) && (arrayOfNumbers[key] % 5 === 0)):
       result.push('fizzBuzz');
       break;
-    case ((arrayOfNumbers[key]%3 !== 0) && (arrayOfNumbers[key]%5 !== 0)):
+    case ((arrayOfNumbers[key] % 3 !== 0) && (arrayOfNumbers[key] % 5 !== 0)):
       result.push('bug!');
       break;
     }
