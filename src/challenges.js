@@ -82,14 +82,14 @@ function catAndMouse(mouse, cat1, cat2) {
     distanceCat2 *= -1;
   }
   if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombaram e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
   return 'cat2';
 }
-result = catAndMouse(0, -3, 3);
+result = catAndMouse(1, 0, 2);
 console.log(result);
 
 // Desafio 8
