@@ -1,6 +1,7 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  let confirma = false;
+  return a === true && b === true ? !confirma : confirma;
 }
 
 // Desafio 2
