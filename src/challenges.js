@@ -66,12 +66,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz( ) {
-  //Escreva aqui seu código
+function fizzBuzz(arrayDeNumeros) {
+  let resposta = criarArray(arrayDeNumeros);
+  let tres = false;
+  let cinco = false;
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    tres = false;
+    cinco = false;
+    if (arrayDeNumeros[index] % 3 === 0) {
+      resposta[index] += 'fizz';
+      tres = true;
+    }
+    if (arrayDeNumeros[index] % 5 === 0) {
+      resposta[index] += 'buzz';
+      cinco = true;
+    }
+    resposta[index] += verifica(tres, cinco);
+    resposta[index] += verificaFalse(tres, cinco);
+    resposta[index] = verificaFizzBuzz(resposta[index]);
+  }
+  return resposta;
 }
 
 // Desafio 9
-function  encode ( ) {
+function  encode() {
   //Escreva aqui seu código
 }
 
