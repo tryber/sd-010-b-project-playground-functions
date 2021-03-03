@@ -34,7 +34,7 @@ function numerosInvalidos(numeros) {
 function generatePhoneNumber(phoneNumber) {
   // seu código aqui
   if (phoneNumber.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   let ddd = []; let part1 = []; let part2 = [];
   let numerosIncorretos = numerosInvalidos(phoneNumber);
