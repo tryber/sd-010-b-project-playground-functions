@@ -14,21 +14,16 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   let result = false;
 
-  if (base === 10 && height === 50) {
-    result = ((base * height) / 2);
-    return result;
-  }
-  if (base === 5 && height === 2) {
-    result = ((base * height) / 2);
-    return result;
-  }
-  if (base === 51 && height === 1) {
-    result = ((base * height) / 2);
-    return result;
+  if (result = (base * height /2)) {
+    return result
   }
 }
 
-//broda Desafio 3
+//Desafio 3
+// Fonte utilizada para esta parte:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+// https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(userEntry) {
   let arrayOfStrings = userEntry.split(" ");
   return arrayOfStrings
