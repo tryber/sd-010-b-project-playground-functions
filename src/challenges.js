@@ -70,7 +70,7 @@ function fizzBuzz(numeros) {
   let resposta = [];
   for (let cont = 0; cont < numeros.length; cont += 1) {
     if ((numeros[cont] % 3) === 0 && (numeros[cont] % 5) === 0) {
-      resposta.push('fizzbuzz');
+      resposta.push('fizzBuzz');
     } else if ((numeros[cont] % 3) === 0) {
       resposta.push('fizz');
     } else if ((numeros[cont] % 5) === 0) {
@@ -84,53 +84,53 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(string) {
-  let codigo = ''
+  let codigo = '';
   for (let cont = 0; cont < string.length; cont += 1) {
-    switch (string[cont]){
-      case 'a':
-        codigo += 1;
-        break;
-      case 'e':
-        codigo += 2;
-        break;
-      case 'i':
-        codigo += 3;
-        break;
-      case 'o':
-        codigo += 4;
-        break;
-      case 'u':
-        codigo += 5;
-        break;
-      default:
-        codigo += string[cont];
-        break;
+    switch (string[cont]) {
+    case 'a':
+      codigo += 1;
+      break;
+    case 'e':
+      codigo += 2;
+      break;
+    case 'i':
+      codigo += 3;
+      break;
+    case 'o':
+      codigo += 4;
+      break;
+    case 'u':
+      codigo += 5;
+      break;
+    default:
+      codigo += string[cont];
+      break;
     }
   }
   return codigo
 }
 function decode(string) {
-  let codigo = ''
+  let codigo = '';
   for (let cont = 0; cont < string.length; cont += 1) {
-    switch (string[cont]){
-      case '1':
-        codigo += 'a';
-        break;
-      case '2':
-        codigo += 'e';
-        break;
-      case '3':
-        codigo += 'i';
-        break;
-      case '4':
-        codigo += 'o';
-        break;
-      case '5':
-        codigo += 'u';
-        break;
-      default:
-        codigo += string[cont];
-        break;
+    switch (string[cont]) {
+    case '1':
+      codigo += 'a';
+      break;
+    case '2':
+      codigo += 'e';
+      break;
+    case '3':
+      codigo += 'i';
+      break;
+    case '4':
+      codigo += 'o';
+      break;
+    case '5':
+      codigo += 'u';
+      break;
+    default:
+      codigo += string[cont];
+      break;
     }
   }
   return codigo;
