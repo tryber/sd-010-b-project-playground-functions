@@ -63,7 +63,6 @@ function catAndMouse(mouse, cat1, cat2) {
     } 
     return 'cat2';
     }
-  }
   return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
@@ -89,22 +88,23 @@ function encode(string) {
   for (let cont = 0; cont < string.length; cont += 1) {
       switch (string[cont]){
         case 'a':
-          codigo+=1
-          break
+          codigo += 1;
+          break;
         case 'e':
-          codigo+=2
-          break
+          codigo += 2;
+          break;
         case 'i':
-          codigo+=3
-          break
+          codigo += 3;
+          break;
         case 'o':
-          codigo+=4
-          break
+          codigo += 4;
+          break;
         case 'u':
-          codigo+=5
-          break
+          codigo += 5;
+          break;
         default:
-         codigo+= string[cont]
+         codigo+= string[cont];
+         break;
       }
   }
   return codigo
