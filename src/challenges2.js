@@ -128,37 +128,54 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// // teste itam 12
+// // teste item 12
 // console.log(triangleCheck(10, 14, 8));
 // console.log(triangleCheck(3, 4, 5));
 // console.log(triangleCheck(5, 12, 13));
 // console.log(triangleCheck(1, 2, 5));
 
-// // Desafio 13
-// function hydrate(umaFrase) {
-//   let fatiada = umaFrase.split('');
-//   let soma = 0;
-//   for (let key in fatiada) {
-//     let char = fatiada[key];
-//     if (char.charCodeAt() >= 48 && char.charCodeAt() <= 57) {
-//       soma += parseInt(char);
-//     }
-//   }
-//   if (soma > 1) {
-//     return `${soma} copos de água`;
-//   }
-//   return `${soma} copo de água`;
-// }
+// Desafio 13
+function analyse(char) {
+  let valor = null;
+  if (char.charCodeAt() >= 48 && char.charCodeAt() <= 57) {
+    valor = parseInt(char, 10);
+  }
+  return valor;
+}
 
-// // teste item 13
-// // let frase1 = '1 cerveja';
-// // let frase2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
-// // console.log(hydrate(frase2));
-// // console.log(hydrate(frase1));
+function sum(fatiada) {
+  let soma = 0;
+  for (let key in fatiada) {
+    if (Object.prototype.hasOwnProperty.call(fatiada, key)) {
+      let char = fatiada[key];
+      soma += analyse(char);
+    }
+  }
+  return soma;
+}
+
+function pluralSingular(soma) {
+  if (soma > 1) {
+    return `${soma} copos de água`;
+  }
+  return `${soma} copo de água`;
+}
+function hydrate(umaFrase) {
+  let fatiada = umaFrase.split('');
+  let soma = sum(fatiada);
+  let resultado = pluralSingular(soma);
+  return resultado;
+}
+
+// teste item 13
+let frase1 = '1 cerveja';
+let frase2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
+console.log(hydrate(frase2));
+console.log(hydrate(frase1));
 
 module.exports = {
   generatePhoneNumber,
   techList,
-  // hydrate,
+  hydrate,
   triangleCheck,
 };
