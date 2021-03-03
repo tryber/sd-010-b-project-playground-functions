@@ -6,8 +6,8 @@ function techList(tecnologias, nome) {
     for (let key in tecnologias) {
       array[key] = {
         tech: tecnologias[key],
-        name: nome
-      }
+        name: nome,
+      };
     }
   } else {
     array = 'Vazio!';
@@ -15,7 +15,7 @@ function techList(tecnologias, nome) {
   return array;
 }
 let array = [];
-let nome = "Lucas";
+let nome = 'Lucas';
 console.log(techList(array, nome));
 
 // Desafio 11

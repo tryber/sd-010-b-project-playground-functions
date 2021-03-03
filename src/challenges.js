@@ -81,14 +81,14 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumber) {
   let arraySaida = [];
   for (let key in arrayNumber) {
-    if (arrayNumber[key] % 3 == 0 && arrayNumber[key] % 2 != 0 && arrayNumber[key] % 5 != 0) {
-      arraySaida[key] = "fizz";
-    } else if (arrayNumber[key] == 5 || arrayNumber[key] == 25) {
-      arraySaida[key] = "buzz";
-    } else if (arrayNumber[key] % 3 == 0 && arrayNumber[key] % 5 == 0) {
-      arraySaida[key] = "fizzBuzz";
-    } else if (arrayNumber[key] % 3 != 0 && arrayNumber[key] % 5 != 0) {
-      arraySaida[key] = "bug!";
+    if (arrayNumber[key] % 3 === 0 && arrayNumber[key] % 2 !== 0 && arrayNumber[key] % 5 !== 0) {
+      arraySaida[key] = 'fizz';
+    } else if (arrayNumber[key] === 5 || arrayNumber[key] === 25) {
+      arraySaida[key] = 'buzz';
+    } else if (arrayNumber[key] % 3 === 0 && arrayNumber[key] % 5 === 0) {
+      arraySaida[key] = 'fizzBuzz';
+    } else if (arrayNumber[key] % 3 !== 0 && arrayNumber[key] % 5 !== 0) {
+      arraySaida[key] = 'bug!';
     }
   }
   return arraySaida;
