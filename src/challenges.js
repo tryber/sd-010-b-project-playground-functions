@@ -1,3 +1,4 @@
+/* eslint-disable no-continue */
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
   // seu código aqui
@@ -5,36 +6,34 @@ function compareTrue(firstValue, secondValue) {
     return true;
   }
   return false;
-}// console.log(compareTrue(true, true));
+}
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   let area = (base * height) / 2;
   return area;
-}// console.log(calcArea(51, 1));
+}
 
 // Desafio 3
-function splitSentence(phrase, letter) {
+function splitSentence(phrase = '') {
   // seu código aqui
+  let letter = ' ';
   let word = '';
   let result = [];
-  let spaces = '';
   for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === letter) {
-      spaces += 1;
       result.push(word);
       word = '';
       continue;
     }
     word += phrase[index];
     if (index >= phrase.length) {
-      spaces += phrase[index];
       result.push(word);
     }
   } result.push(word);
   return result;
-}// console.log(splitSentence('vamo que vamo', ' '));
+}
 
 // Desafio 4
 function concatName(array = []) {
@@ -46,14 +45,19 @@ function concatName(array = []) {
       endArray = array[index];
     }
   }
-  result = `${endArray}, ${array[0]}`;
+  result = `${endArray},${array[0]}`;
   return result;
-}// console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+}
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
-}
+  let ptsWins = 0;
+  let result = 0;
+  ptsWins = wins * 3;
+  result = ptsWins + ties;
+  return result;
+}// console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount() {
