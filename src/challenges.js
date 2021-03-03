@@ -65,7 +65,7 @@ function highestCount(numbers) {
   }
   for (let key in numbers) {
     if (numbers[key] === bigger) {
-      counter +1;
+      counter++;
     }
   }
   return counter;
