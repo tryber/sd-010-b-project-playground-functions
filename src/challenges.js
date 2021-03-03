@@ -27,11 +27,12 @@ function splitSentence() {
 // Desafio 4
 function concatName(string) {
   // seu código aqui
-  stringmin = string[0];
-  stringmax = string[string.length];
+
+  let primeiro = string[0];
+  let ultimo = string[string.length - 1];
 
   
-  return (stringmax) + "," + (stringmin);
+  return ultimo + "," +  primeiro;
 }
 
 
