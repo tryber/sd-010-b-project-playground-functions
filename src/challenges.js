@@ -54,9 +54,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
-  } 
+  }
 }
-
 
 // Desafio 8
 function fizzBuzz(arrNumber) {
@@ -76,11 +75,11 @@ function fizzBuzz(arrNumber) {
   return resultArr;
 }
 
-
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
