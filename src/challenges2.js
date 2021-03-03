@@ -45,7 +45,7 @@ return resposta;
 
 // Desafio 12
 function triangleCheck(lineA,lineB, lineC) {
-  let resposta 
+  let resposta = false
 let lines = []
 lines.push(lineA,lineB, lineC)
 
