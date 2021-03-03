@@ -48,32 +48,34 @@ function highestCount(arr) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 > cat2 && cat2 <= mouse) {
-    return 'cat2';
-  } else if (cat2 > cat1 && cat1 <= mouse) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
+  } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
   } 
 }
+
 
 // Desafio 8
 function fizzBuzz(arrNumber) {
   // seu código aqui
   let resultArr = [];
   for (let index = 0; index < arrNumber.length; index += 1) {
-    if (arrNumber[index]%5 === 0  && arrNumber[index]%3 === 0) {
+    if (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0) {
       resultArr.push('fizzbuzz');
-    } else if (arrNumber[index]%3 === 0) {
+    } else if (arrNumber[index] % 3 === 0) {
       resultArr.push('fizz');
-    } else if (arrNumber[index]%5 === 0) {
+    } else if (arrNumber[index] % 5 === 0) {
       resultArr.push('buzz');
     } else {
       resultArr.push('bug!');
     }
-  }
+  }   
   return resultArr;
 }
+
 
 // Desafio 9
 function encode() {
