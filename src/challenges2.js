@@ -4,8 +4,8 @@ function techList(array, name) {
   let arrayObject = [];
   if (array.length > 0) {
     for (index = 0; index < array.length; index += 1) {
-      arrayObject.push({ tech: arraySort[index] });
-      arrayObject.push({ name: name });
+      arrayObject.push({ tech: arraySort[index],
+       name: name });
     }
   } else {
     return 'Vazio!';
@@ -13,13 +13,16 @@ function techList(array, name) {
   return arrayObject;
 }
 
+console.log(techList(['python', 'java', 'html'],"Lucas"))
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  if (array.length > 11) {
+    return "Array com tamanho incorreto."
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 

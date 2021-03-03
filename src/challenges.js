@@ -23,7 +23,6 @@ function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = wins * 3 + ties;
@@ -38,7 +37,7 @@ function highestCount(arrayNumber) {
   for (index = 0; index < arrayNumber.length; index += 1) {
     if (highestNumber <= sortReverse[index]) {
       highestNumber = sortReverse[index];
-    displayHighestNumber += 1;
+      displayHighestNumber += 1;
     }
   }
   return displayHighestNumber;
@@ -58,14 +57,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array_number) {
+function fizzBuzz(arrayNumber) {
   let array = [];
-  for (index = 0; index < array_number.length; index += 1) {
-    if (array_number[index] % 3 == 0 && array_number[index] % 5 == 0) {
+  for (index = 0; index < arrayNumber.length; index += 1) {
+    if (arrayNumber[index] % 3 == 0 && arrayNumber[index] % 5 == 0) {
       array[index] = 'fizzBuzz';
-    } else if (array_number[index] % 3 == 0) {
+    } else if (arrayNumber[index] % 3 == 0) {
       array[index] = 'fizz';
-    } else if (array_number[index] % 5 == 0) {
+    } else if (arrayNumber[index] % 5 == 0) {
       array[index] = 'buzz';
     } else {
       array[index] = 'bug!';
