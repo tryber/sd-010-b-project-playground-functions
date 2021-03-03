@@ -22,8 +22,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(listaPalavras) {
-  let concatenacao =
-    listaPalavras[listaPalavras.length - 1] + ', ' + listaPalavras[0];
+  let concatenacao = listaPalavras[listaPalavras.length -1] + ", "+listaPalavras[0];
   return concatenacao;
 }
 
