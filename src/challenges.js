@@ -58,9 +58,11 @@ function highestCount(arrayNumber) {
   return contador;
 }
 // Desafio 7
-function catAndMouse(cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let menorTamanho;
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
   if (cat1 < cat2) {
     menorTamanho = "cat1";
   } else if (cat2 < cat1) {
@@ -93,4 +95,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- // console.log(catAndMouse(6,6));
+console.log(catAndMouse(1,0,2));
