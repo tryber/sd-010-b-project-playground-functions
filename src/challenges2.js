@@ -29,14 +29,22 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let number = string.replace(/\D/g,'');
-  let sum =0;
-  for (let index =0; index < number.lenght; index++){
-    sum =+
+  let numbers = string.replace(/[^0-9]/g,'');
+  let SeparatedNumber = numbers.split("");
+  let number = SeparatedNumber.map(i=>Number(i));
+  let sum = 0;
+  for (let index =0; index < number.length; index++){
+    sum += number[index]
   }
-  return sum + "copo(s) de água"
+  if (sum === 1){
+    return "1 copo de água"
   }
+  return sum + " " + "copos de água";
+  }
+  console.log(hydrate("2 copo de cerveja e 1 tequila"))
 //https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
+//https://stackoverflow.com/questions/15677869/how-to-convert-a-string-of-numbers-to-an-array-of-numbers
+//"(/[^0-9]/g,'')" e "(i=>Number(i))" foram propriedades que eu retirei dos links disponibilizados acima. Eu não tenho familiaridade com ambos, mas consegui encaixá-los no meu projeto. Caso necessário, posso retirá-los.
 
 module.exports = {
   generatePhoneNumber,

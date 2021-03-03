@@ -77,6 +77,7 @@ function fizzBuzz(array) {
  
 }
 //resolução após plantão de dúvidas com Fernando onde outro colega também estava com a mesma dúvida
+
 // Desafio 9
 function encode( ) {
   
