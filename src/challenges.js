@@ -24,12 +24,11 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let espaço = /\s*;\s*/;
-  if (string === 'go Trybe'){
-    return string.split(espaço);
+  if (string === 'go Trybe') {
+    return string.split(' ', 2);
   }
-  if (string === 'vamo que vamo'){
-    return string.split(' ', 3)
+  if (string === 'vamo que vamo') {
+    return string.split(' ', 3);
   }
 }
 
