@@ -103,7 +103,7 @@ function encode(string) {
         codigo += 5;
         break;
       default:
-        codigo+= string[cont];
+        codigo += string[cont];
         break;
     }
   }
@@ -113,23 +113,23 @@ function decode(string) {
   let codigo = ''
   for (let cont = 0; cont < string.length; cont += 1) {
     switch (string[cont]){
-      case 1:
+      case '1':
         codigo += 'a';
         break;
-      case 2:
+      case '2':
         codigo += 'e';
         break;
-      case 3:
+      case '3':
         codigo += 'i';
         break;
-      case 4:
+      case '4':
         codigo += 'o';
         break;
-      case 5:
+      case '5':
         codigo += 'u';
         break;
       default:
-        codigo+= string[cont];
+        codigo += string[cont];
         break;
     }
   }
