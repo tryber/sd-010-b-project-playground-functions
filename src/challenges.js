@@ -43,13 +43,32 @@ function footballPoints(wins, ties) {
   }
   return wins + ties;
 }
-result = footballPoints(0, 0);
+result = footballPoints(14, 8);
 console.log(result);
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function findHigherNumber(numbers) {
+  let higherNumber = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > higherNumber) {
+      higherNumber = numbers[i];
+    }
+  }
+  return higherNumber;
 }
+
+function highestCount(numbers) {
+  let timesAppears = 0;
+  let higherNumber = findHigherNumber(numbers);
+  for (let j = 0; j < numbers.length; j += 1) {
+    if (numbers[j] === higherNumber) {
+      timesAppears += 1;
+    }
+  }
+  return timesAppears;
+}
+result = highestCount([9, 1, 2, 3, 9, 5, 7]);
+console.log(result);
 
 // Desafio 7
 function catAndMouse() {
