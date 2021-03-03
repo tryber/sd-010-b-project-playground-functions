@@ -51,34 +51,32 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(divisivel) {
-  let fizzBuster = []
   for (let porta = 0; porta < divisivel.length; porta += 1) {
     if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 === 0) {
-      fizzBuster.push('fizzBuzz');
+      divisivel[porta] = 'fizzBuzz';
     } else if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 !== 0) {
-      fizzBuster.push('fizz');
+      divisivel[porta] = 'fizz';
     } else if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 === 0) {
-      fizzBuster.push('buzz');
-    } else {// } if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 !== 0) {
-      fizzBuster.push('bug!');
+      divisivel[porta] = 'buzz';
+    } else { 
+      divisivel[porta] = 'bug!';
     }
   }
-    return fizzBuster;
+  return divisivel;
 }
-  
-console.log(fizzBuzz([15,2,3,10]))
+
 // Desafio 9
 function encode(codigo) {
   let vogais = {
-    a:1,
-    e:2,
-    i:3,
-    o:4,
-    u:5,
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
   }
   codigo = codigo.split('');
-  for (letraindex = 0; letraindex < codigo.length; letraindex += 1) {
-    for (key in vogais) {
+  for (let letraindex = 0; letraindex < codigo.length; letraindex += 1) {
+    for (let key in vogais) {
       if (codigo[letraindex] === key) {
       codigo[letraindex] = vogais[key];
       }
@@ -98,8 +96,8 @@ function decode(codigo2) {
     u:5,
   }
   codigo2 = codigo2.split('')
-  for (letraindex = 0; letraindex < codigo2.length; letraindex += 1) {
-    for (key in vogais) {
+  for (let letraindex = 0; letraindex < codigo2.length; letraindex += 1) {
+    for (let key in vogais) {
       if (codigo2[letraindex] == vogais[key]) {
       codigo2[letraindex] = key;
       }
@@ -108,7 +106,7 @@ function decode(codigo2) {
   codigo2 = codigo2.join('');
   return codigo2;
 }
-
+console.log(decode('h3 th2r2!'))
 module.exports = {
   calcArea,
   catAndMouse,
