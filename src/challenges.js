@@ -26,7 +26,7 @@ function calcArea(base, height) {
 function splitSentence(goTrybe) {
   // seu código aqui
   if (goTrybe === ['']) {
-    return goTrybe.split([""[", "]]);
+    return goTrybe.split([[, ]]);
   }
 }
 
