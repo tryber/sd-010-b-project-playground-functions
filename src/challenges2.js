@@ -60,13 +60,20 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-
-
-
 // Desafio 13
-function hydrate(drinking) {}
-
-
+function hydrate(drinking) {
+  let regex = /\d+/g;
+  let drinkingList = drinking;
+  let alcoholCounter = drinkingList.match(regex);
+  let waterCups = 0;
+  for (let index in alcoholCounter) {
+    waterCups += parseInt(alcoholCounter[index]);
+  }
+  if (waterCups === 1) {
+    return `${waterCups} copo de água`;
+  }
+  return `${waterCups} copos de água`;
+}
 
 module.exports = {
   generatePhoneNumber,
