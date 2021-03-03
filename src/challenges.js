@@ -4,9 +4,8 @@ function compareTrue(valorUm, valorDois) {
   let trueOrFalse = false;
   if (valorUm && valorDois === true) {
     return compareTrue;
-  } else if (valorUm && valorDois !== true) {
-    return trueOrFalse;
   }
+    return trueOrFalse;
 }
 
 // Desafio 2
