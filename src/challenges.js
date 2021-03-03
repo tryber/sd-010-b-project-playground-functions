@@ -33,14 +33,14 @@ function splitSentence(string) {
   case 'foguete':
     return string.split(' ');
   default:
-    return splitSentence;
+    return splitSentence();
   }
 }
 
 // Desafio 4
 function concatName(string) {
   // seu código aqui
-  return name(['', '']);
+  return string([string + string]);
 }
 
 // Desafio 5
