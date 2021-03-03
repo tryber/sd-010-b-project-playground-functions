@@ -37,13 +37,25 @@ function splitSentence(string) {
   }
 }
 
-// Desafio 4
-function concatName(string) {
-  // seu código aqui
-  for (let index = string.length - 1; index >= 0; index -= 1) {
+var o = [];
+    for (var i = s.length - 1, j = 0; i >= 0; i--, j++) {
+        o[j] = s[i];
+    }
+    return o.join('');
+
+    for (let index = string.length - 1; index >= 0; index -= 1) {
     string += string[index];
   }
   return string.split(' ', 3);
+
+// Desafio 4
+function concatName(string) {
+  // seu código aqui
+  let retorno = [];
+  for (var index = string.length - 1, indexDois = 0; index >= 0; index -= 1, indexDois += 1) {
+    retorno[indexDois] = string[index];
+  }
+  return retorno.join('');
 }
 
 // Desafio 5
