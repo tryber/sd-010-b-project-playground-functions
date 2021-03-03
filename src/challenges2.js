@@ -24,39 +24,40 @@ function techList(array, name) {
 // console.log(techList(array1, namePessoal));
 
 // Desafio 11
-function repeticao(array, key) {
-  let counter = 0;
-  let verificacao = true;
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === array[key]) {
-      counter += 1;
+function verifyRepeated(array) {
+  let flag = true; counter = 0;
+  for (let key in array) {
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[i] === array[key]) {
+        counter += 1;
+      }
+      flag = (counter <= 3);
     }
-    verificacao = (counter <= 3); 
+    return flag;
   }
-  return verificacao;
 }
-function verificaCarateres(array, key) {
-  let verificacao = !(array[key] < 0 || array[key] > 9);
-  if (verificacao === false) {
-    return verificacao;
+
+function verifyCharacter(array) {
+  let flag = true;
+  for (let key in array) {
+    if (array[key] < 0 || array[key] > 9) {
+      flag = false;
+    }
   }
-  return repeticao(array, key);
+  return flag;
 }
 
 function generatePhoneNumber(array) {
-  let verificacao = true;
   if (array.length === 11) {
-    for (let key in array) {
-      verificacao = verificaCarateres(array, key);
-    }
-    if (verificacao !== false) {
+    let isNotChacacter = verifyCharacter(array); // é caracter é falso
+    let isNotRepeated = verifyRepeated(array);
+    if (isNotChacacter && isNotRepeated) {
       return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
     }
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return 'Array com tamanho incorreto.';
 }
-
 // teste item 11
 // array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // console.log(generatePhoneNumber(array0));
