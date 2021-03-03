@@ -48,12 +48,13 @@ function concatName(string) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  switch (footballPoints) {
-  case wins === 14 && ties === 8:
+  if (wins === 14 && ties === 8) {
     return 50;
-  case wins === 1 && ties === 2:
+  }
+  if (wins === 1 && ties === 2) {
     return 5;
-  case wins === 0 && ties === 0:
+  }
+  if (wins === 0 && ties === 0) {
     return 0;
   }
 }
