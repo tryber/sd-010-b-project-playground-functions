@@ -24,12 +24,14 @@ function splitSentence(a) {
 console.log(splitSentence('foguete nao tem ré'))
 
 // Desafio 4
-function concatName() {
-  
+function concatName(array) {
+  conca = [''];
+  conca[0] = array[array.length-1];
+  conca.push(array[array.length - array.length])
+  return conca;   
+} 
+console.log(concatName(['foguete', 'não', 'tem', 'ré']))
 
-
-
-}
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,7 +46,7 @@ console.log(footballPoints(14,8))
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
