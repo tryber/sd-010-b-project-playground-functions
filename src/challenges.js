@@ -54,7 +54,7 @@ function highestCount(arrayCount) {
       if (verificaNumero === arrayCount[index2]) {
         countRepeat++;
       }
-    }
+    } break;
   }
   return countRepeat;
 }
