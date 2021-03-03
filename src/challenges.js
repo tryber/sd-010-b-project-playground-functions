@@ -25,9 +25,9 @@ console.log(splitSentence('foguete nao tem ré'))
 
 // Desafio 4
 function concatName(array) {
-  conca = [''];
+  conca = "";
   conca = array[array.length-1];
-  conca = conca + " " + array[array.length - array.length]
+  conca = conca + ", " + array[array.length - array.length]
   
   return conca;   
 } 
