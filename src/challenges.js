@@ -147,9 +147,55 @@ function highestCount(array) {
 // console.log(`highestCount(${array}) = ${highestCount(array)}`);
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+/*
+  Essa função recebe duas posições em uma reta e retorna a distância entre elas.
+
+  Material consultado sobre a função Math.abs(x)
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+ */
+function linearDistance(position1, position2) {
+  // para calcular a distância entre duas posições, deve-se realizar a diferença entre elas.
+  // como não há distância negativa, devemos retornar o valor absoluto utilizando a function Math.abs
+  return Math.abs(position2 - position1);
 }
+
+/*
+  Essa função recebe as posições (em uma reta) de mouse, cat1 e cat2, calcula as distâncias entre o rato e os gatos e retorna qual dos felinos irá alcançar o rato primeiro (sendo aquele que está mais perto).
+ */
+function catAndMouse(mouse, cat1, cat2) {
+  let result;
+
+  let cat1Distance = linearDistance(cat1, mouse); // armazena a distância entre cat1 e mouse
+  let cat2Distance = linearDistance(cat2, mouse); // armazena a distância entre cat2 e mouse
+
+  if (cat1Distance < cat2Distance) { // se cat1 está mais perto de mouse que cat2
+    result = 'cat1'; // 'cat1' é armazenada como resultado.
+  } else if (cat2Distance < cat1Distance) { // se cat2 está mais perto de mouse que cat1
+    result = 'cat2'; // 'cat2' é armazenada como resultado.
+  } else { // senão cat1 e cat2 estão a mesma distância de mouse
+    result = 'os gatos trombam e o rato foge'; // 'os gatos trombam e o rato foge' é armazenada como resultado
+  }
+
+  return result; // retorna o resultado encontrado
+}
+
+// console.log(`catAndMouse(0, 3, 2) = ${catAndMouse(0, 3, 2)}`);
+
+// console.log(`catAndMouse(0, 6, 12) = ${catAndMouse(0, 6, 12)}`);
+
+// console.log(`catAndMouse(0, 15, 15) = ${catAndMouse(0, 15, 15)}`);
+
+// console.log(`catAndMouse(0, -3, -2) = ${catAndMouse(0, -3, -2)}`);
+
+// console.log(`catAndMouse(0, -6, -12) = ${catAndMouse(0, -6, -12)}`);
+
+// console.log(`catAndMouse(0, -15, -15) = ${catAndMouse(0, -15, -15)}`);
+
+// console.log(`catAndMouse(0, -3, 2) = ${catAndMouse(0, -3, 2)}`);
+
+// console.log(`catAndMouse(0, -6, 12) = ${catAndMouse(0, -6, 12)}`);
+
+// console.log(`catAndMouse(0, -15, 15) = ${catAndMouse(0, -15, 15)}`);
 
 // Desafio 8
 function fizzBuzz() {
