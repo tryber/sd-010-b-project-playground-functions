@@ -45,8 +45,26 @@ function catAndMouse(cat1, cat2, mouse) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  let result = [];
+  for (let count of array) {
+    switch (true) {
+      case count % 3 === 0 && count % 5 === 0:
+        result.push('fizzBuzz');
+        break;
+      case count % 3 === 0:
+        result.push('fizz');
+        break;
+      case count % 5 === 0:
+        result.push('buzz');
+        break;
+      default:
+        result.push('bug!');
+        break;
+    }
+  }
+  return result;
 }
+
 
 // Desafio 9
 function encode() {
