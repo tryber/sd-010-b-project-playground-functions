@@ -30,7 +30,10 @@ function generatePhoneNumber(a) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let telefone = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
+  let ddd = `(${a[0]}${a[1]})`;
+  let telefone1 = ` ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}`;
+  let telefone2 = `-${a[7]}${a[8]}${a[9]}${a[10]}`;
+  let telefone = ddd + telefone1 + telefone2;
   return telefone;
 }
 

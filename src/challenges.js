@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(a) {
   let dado = [];
-  for (let key in a){
+  for (let key in a) {
     if (a[key] % 3 === 0 && a[key] % 5 === 0) {
       dado.push("fizzBuzz");
     } else if (a[key] % 3 === 0) {
