@@ -58,18 +58,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = mouse - cat1;
   let distancia2 = mouse - cat2;
   if (distancia1 === distancia2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (distancia1 < distancia2) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "cat1";
+    return 'cat1';
   }
 }
 
 // Desafio 8
 function fizzBuzz(numeros) {
   let array = []
-  
   for(let index in numeros) {
     if (numeros[index] %5 == 0 && numeros[index] %3 == 0){
       array.push("fizzBuzz")
