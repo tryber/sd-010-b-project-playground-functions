@@ -39,11 +39,20 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let nearCat = (mouse - cat1) < (mouse - cat2) ? 'cat1' : 'cat2';
-  nearCat = cat1 === cat2 ? 'os gatos trombam e o rato foge' : nearCat;
+  let nearCat = null;
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+
+  if (positionCat1 < positionCat2) {
+    nearCat = 'cat1';
+  } else if (positionCat1 > positionCat2) {
+    nearCat = 'cat2';
+  } else if (positionCat1 === positionCat2) {
+    nearCat = 'os gatos trombam e o rato foge';
+  }
+
   return nearCat;
 }
-
 // Desafio 8
 function fizzBuzz(array) {
   let arrayResult = [];
@@ -64,8 +73,19 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let arrayString = string.split("");
+  let dictionary = {a: 1, e: 2, i: 3, o: 4, u: 5};
+
+  for (let i = 0; i < arrayString.length; i++) {
+    for (let key in dictionary) {
+      if (arrayString[i] === key) {
+        arrayString[i] = dictionary[key];
+      }
+    }
+  }
+
+  return arrayString.join("");
 }
 
 function decode() {
