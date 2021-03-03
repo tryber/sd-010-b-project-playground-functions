@@ -109,12 +109,51 @@ function fizzBuzz(Array = []) {
 }
 
 // Desafio 9
-function encode() {
+function encode(teste) {
   // seu código aqui
-}
-function decode() {
+  let result = '';
+  for (let index = 0; index < teste.length; index += 1) {
+    if (teste[index] === 'a') {
+      result += '1';
+      continue;
+    } if (teste[index] === 'e') {
+      result += '2';
+      continue;
+    } if (teste[index] === 'i') {
+      result += '3';
+      continue;
+    } if (teste[index] === 'o') {
+      result += '4';
+      continue;
+    } if (teste[index] === 'u') {
+      result += '5';
+      continue;
+    } result += teste[index];
+  } return result;
+}// console.log(encode("hi there!"));
+
+function decode(teste) {
   // seu código aqui
-}
+  let result = '';
+  for (let index2 = 0; index2 < teste.length; index2 += 1) {
+    if (teste[index2] == '1') {
+      result += 'a';
+      continue;
+    } if (teste[index2] == '2') {
+      result += 'e';
+      continue;
+    } if (teste[index2] == '3') {
+      result += 'i';
+      continue;
+    } if (teste[index2] == '4') {
+      result += 'o';
+      continue;
+    } if (teste[index2] == '5') {
+      result += 'u';
+      continue;
+    } result += teste[index2];
+  } return result;
+}// console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
