@@ -58,8 +58,17 @@ function highestCount(arrayNumber) {
   return contador;
 }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2) {
   // seu código aqui
+  let menorTamanho;
+  if (cat1 < cat2) {
+    menorTamanho = "cat1";
+  } else if (cat2 < cat1) {
+    menorTamanho = "cat2";
+  } else {
+    menorTamanho = "os gatos trombam e o rato foge";
+  }
+  return menorTamanho;
 }
 // Desafio 8
 function fizzBuzz() {
@@ -84,4 +93,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+ // console.log(catAndMouse(6,6));
