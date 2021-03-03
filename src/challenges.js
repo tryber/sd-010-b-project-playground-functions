@@ -11,7 +11,7 @@ function compareTrue(cond1, cond2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = ((base * height)/2);
+  let area = ((base * height) / 2);
   return area;
 }
 
@@ -22,8 +22,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaNomes) {
+  let conc = (listaNomes[listaNomes.length-1] + listaNomes[0]);
+  return conc;
 }
 
 // Desafio 5
