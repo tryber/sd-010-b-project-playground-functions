@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(array, name) {
-let lista = array.sort();
+  let lista = array.sort();
   let newArray = [];
   for (let index = 0; index < lista.length; index += 1) {
     let bloco = {
@@ -70,15 +70,15 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  let str = "1 cachaça, 5 cervejas e 1 copo de vinho"
-  let array = str.split(" ")
-  count = 0
-  //console.log(array)
-  for (let index = 0; index < array.length; index += 1) {
+  // let str = "1 cachaça, 5 cervejas e 1 copo de vinho"
+  // let array = str.split(" ")
+  // count = 0
+  // //console.log(array)
+  // for (let index = 0; index < array.length; index += 1) {
 
-    count += array[index]
-  }
-} //console.log(count)
+  //   count += array[index]
+  // }
+}
 
 
 
