@@ -42,7 +42,7 @@ function highestCount(numeros) {
 }
   for(index2 = 1; index2 <= numeros.length; index2 += 1) {
     if (numeros[index2] === indiceMaior) {
-      contRepetido+=;
+      contRepetido += 1;
     }
   } return contRepetido;
 } console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
@@ -66,12 +66,8 @@ function catAndMouse(mouse, cat1, cat2) {
     } else{
         return "cat2"
     } 
-  }   
-  
- console.log(catAndMouse(5, 8, 3))
+  } console.log(catAndMouse(5, 8, 3))
  
-
-
 // Desafio 8
 function fizzBuzz(Array) {
   let resultado = [];
@@ -116,15 +112,15 @@ function decode(palavra) {
   let resultado = "";
   for(index = 0; index <= palavra.length-1; index++){
     
-    if(palavra[index] == 1){
+    if(palavra[index] === 1){
       resultado += "a"; 
-    } else if(palavra[index] == 2){
+    } else if(palavra[index] === 2){
       resultado += "e";
-    } else if(palavra[index] == 3){
+    } else if(palavra[index] === 3){
       resultado += "i"; 
-    } else if(palavra[index] == 4){
+    } else if(palavra[index] === 4){
       resultado += "o";
-    } else if(palavra[index] == 5){
+    } else if(palavra[index] === 5){
       resultado += "u";
     } else{
       resultado += palavra[index];
