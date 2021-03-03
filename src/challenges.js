@@ -47,22 +47,22 @@ function fizzBuzz(array) {
   
   for (let key in array){
     if (key,array[key] %5 === 0){
-      console.log("Buzz");
+      return("Buzz");
     } 
     
     
     else if (key,array[key] %3 === 0){
-      console.log("Fizz");
+      return("Fizz");
     } 
     
     
     else if (key,array[key] %3 === 0 && array[key] %5 === 0){
-      console.log("FizzBuzzz");
+      return("FizzBuzzz");
     }
 
 
      else {
-      console.log("Bug");
+      return("Bug");
     }
 
   }
