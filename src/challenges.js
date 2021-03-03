@@ -82,7 +82,7 @@ function fizzBuzz(arrayOfNumbers) {
     } else if ((arrayOfNumbers[key] % 3 === 0) && (arrayOfNumbers[key] % 5 === 0)) {
       result.push('fizzBuzz');
     } else if ((arrayOfNumbers[key] % 3 !== 0) && (arrayOfNumbers[key] % 5 !== 0)) {
-      result.push('bug!'); 
+      result.push('bug!');
     }
   }
   return result;
@@ -91,8 +91,8 @@ function fizzBuzz(arrayOfNumbers) {
 // Desafio 9
 function encode(string) {
   let result = [];
-  for(let key in string){
-    if (string[key] === 'a'){
+  for (let key in string) {
+    if (string[key] === 'a') {
       result += 1;
     } else if (string[key] === 'e') {
       result += 2;
@@ -111,8 +111,8 @@ function encode(string) {
 
 function decode(stringWithNumbers) {
   let result = [];
-  for(let key in stringWithNumbers){
-    if (stringWithNumbers[key] == 1){
+  for (let key in stringWithNumbers) {
+    if (stringWithNumbers[key] == 1) {
       result += 'a';
     } else if (stringWithNumbers[key] == 2) {
       result += 'e';
