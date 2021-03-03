@@ -1,10 +1,12 @@
 // // Desafio 1
-// function compareTrue() {
- 
-// }
-// console.log(compareTrue(false, true))
-// console.log(compareTrue(false, false))
-// console.log(compareTrue(true, true))
+function compareTrue(boolean1, boolean2) {
+ if(boolean1 = true && boolean2 = false){
+  return false
+ } 
+}
+console.log(compareTrue(false, true))
+console.log(compareTrue(false, false))
+console.log(compareTrue(true, true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -43,9 +45,22 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu códig
+function highestCount(numero) {
+  let numberEqual = 0;
+  let higherNumber = 0;
+  for (let key in numero) {
+    if (numero[higherNumber] <= numero[key]){
+      higherNumber = numero[key];
+    }
+  }
+  for (let key2 in numero) {
+    if (higherNumber === numero[key2]){
+    numberEqual += 1
+    }
+  }
+  return numberEqual
 }
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
