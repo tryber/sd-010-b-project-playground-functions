@@ -73,17 +73,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
   let capture = "";
+
   if(distCat1 < distCat2){
     capture = "cat1";
   } else if(distCat1 > distCat2){
-    capture = "cat2"
+    capture = "cat2";
   } else {
-    capture = "Os gatos trombam e o rato foge"
+    capture = "os gatos trombam e o rato foge";
   }
 
   return capture;
 }
-
 
 
 // Desafio 8
