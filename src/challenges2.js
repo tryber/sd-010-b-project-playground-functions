@@ -4,26 +4,38 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"]))
 function techList(array) {
   // let array =["React", "Jest", "HTML", "CSS", "JavaScript"]
   // let name ="Lucas"
-  let vazio = [];
-  let lista = array.sort();
-  let name = "Lucas";
-  let newArray = [];
-  for (let index = 0; index < lista.length; index += 1) {
-    let bloco = {
-      tech: lista[index],
-      name: name
-  }
-    newArray.push(bloco);
-}
+//   let vazio = [];
+//   let lista = array.sort();
+//   let name = "Lucas";
+//   let newArray = [];
+//   for (let index = 0; index < lista.length; index += 1) {
+//     let bloco = {
+//       tech: lista[index],
+//       name: name
+//   }
+//     newArray.push(bloco);
+// }
 
-if (newArray.length ==0){
-  vazio.push('Vazio!')
-  return vazio;
+// if (newArray.length ==0){
+//   vazio.push('Vazio!')
+//   return vazio;
+// } else {
+//   return newArray;
+// }
+let lista = array.sort();
+let nome = 'Lucas';
+let retorno = [];
+if (lista.length > 1) {
+  for (let index = 0; index < lista.length; index++) {
+    retorno.push({ array: lista[index], name: nome });
+  }
 } else {
-  return newArray;
+  retorno = 'Vazio!';
+}
+return retorno;
 }
 
-  }
+
 
 // Desafio 11
 function generatePhoneNumber() {
