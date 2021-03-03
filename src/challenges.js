@@ -94,7 +94,7 @@ function decode(arrayString) {
   let decoding = '';
   for (let index of arrayString) {
     if (code[index]) {
-      decoding += code[i];
+      decoding += code[index];
     } else {
       decoding += index;
     }
