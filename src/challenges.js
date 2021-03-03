@@ -54,15 +54,27 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   Math.abs(cat1, cat2);
+  let posCat1 = mouse - cat1;
+  let posCat2 = mouse - cat2;
+  if (posCat1 === posCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (posCat1 < posCat2) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
-// console.log(catAndMouse(0, 6, 6));
+
+console.log(catAndMouse(0, -6, 5));
 
 /* Resposta: Na tentativa de solucionar o setimo requisito, fiz
 comparações entre os parametros dada pela function. Posição é 0 do
 mouse e N posições de cat1 e cat2. Adicionei duas variaveis onde
 calcula a distancia entre um cat e mouse. Com ajuda de colegas da turma
 entendi que preciso garantir que a posição do cat1 e cat2 precisa ser
-absoluta. A primerira maneira que achei foi o math.abs, link */
+absoluta. A primerira maneira que achei foi o math.abs, link:https://
+developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/
+Global_Objects/Math/abs */
 
 // Desafio 8
 function fizzBuzz() {
