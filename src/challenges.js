@@ -20,14 +20,20 @@ return (base*height)/2;
 
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
 }
 
 // Desafio 4
-function concatName() {
+function concatName(string) {
   // seu código aqui
+  stringmin = string[0];
+  stringmax = string[string.length];
+
+  
+  return (stringmax) + "," + (stringmin);
 }
+
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -38,9 +44,29 @@ function footballPoints(wins,ties) {
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+    // seu código aqui
+    // https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
+    // como dito o apply passa os valores do array para função math.max e assim ela analisa o maior.
+    
+    let maior = Math.max.apply(null,array);
+    //preciso inicializar a contagem porém quando sair do for ele será 0
+    count = 0;
+    for(let i = 0;i<array.length; i++){
+
+      if(count === maior){
+        count++;
+      }
+      else{}
+      //estou armazenando o count em uma atualização
+      let countatt=count;
+
+    }    
+         
+  return countatt;
 }
+
+
 
 // Desafio 7
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
@@ -65,15 +91,15 @@ function catAndMouse(mouse,cat1,cat2) {
 // Desafio 8
 function fizzBuzz(vetor) {
   // seu código aqui
-  let vetorderetorno=[];
+  
     for (let i = 0; i<vetor.length ; i++){
-      if((vetor[i]%3 == 0) && (vetor[i] % 5 == 0)){
-        vetorretorno [i] = "fizzBuzz";
+      if((vetor[i]%3 === 0) && (vetor[i] % 5 === 0)){
+        let vetorretorno [i] = "fizzBuzz";
       }
-      else if ((vetor[i]%3 == 0) && (vetor[i] % 5 !=0)) {
+      else if ((vetor[i]%3 == 0) && (vetor[i] % 5 !==0)) {
         vetorretorno [i] = "fizz";
       }
-      else if ((vetor[i]%3 != 0) && (vetor[i] % 5 == 0)) {
+      else if ((vetor[i]%3 !== 0) && (vetor[i] % 5 == 0)) {
         vetorretorno [i] = "buzz";
 
       }
@@ -83,6 +109,7 @@ function fizzBuzz(vetor) {
     }
  return vetorderetorno;
 }
+
 
 
 // Desafio 9
