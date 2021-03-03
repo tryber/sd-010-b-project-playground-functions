@@ -100,39 +100,51 @@ function fizzBuzz(arrayNums) {
 function encode(sentence) {
   // seu código aqui
   let frase = sentence;
-  for (letter in frase) {
-    switch (frase[letter]) {
-      case 'a':
-        frase = frase.replace('a', 1);
-      case 'e':
-        frase = frase.replace('e', 2);
-      case 'i':
-        frase = frase.replace('i', 3);
-      case 'o':
-        frase = frase.replace('o', 4);
-      case 'u':
-        frase = frase.replace('u', 5);
-    }
+  for (let letter in frase) {
+  switch (frase[letter]) {
+    case 'a':
+      frase = frase.replace('a', 1);
+      break;
+    case 'e':
+      frase = frase.replace('e', 2);
+      break;
+    case 'i':
+      frase = frase.replace('i', 3);
+      break;
+    case 'o':
+      frase = frase.replace('o', 4);
+      break;
+    case 'u':
+      frase = frase.replace('u', 5);
+      break;
+  }
   }
   return frase;
-} 
+}
+
+console.log(encode('hi, there!'))
 
 function decode(sentence) {
   // seu código aqui
   let frase = sentence;
-  for (letter in frase) {
-    switch (frase[letter]) {
-      case '1':
-        frase = frase.replace(1, 'a');
-      case '2':
-        frase = frase.replace(2, 'e');
-      case '3':
-        frase = frase.replace(3, 'i');
-      case '4':
-        frase = frase.replace(4, 'o');
-      case '5':
-        frase = frase.replace(5, 'u');
-    }
+  for (let letter in frase) {
+  switch (frase[letter]) {
+    case '1':
+      frase = frase.replace(1, 'a');
+      break;
+    case '2':
+      frase = frase.replace(2, 'e');
+      break;
+    case '3':
+      frase = frase.replace(3, 'i');
+      break;
+    case '4':
+      frase = frase.replace(4, 'o');
+      break;
+    case '5':
+      frase = frase.replace(5, 'u');
+      break;
+  }
   }
   return frase;
 }
