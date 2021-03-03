@@ -1,4 +1,5 @@
-function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1);
-}
-console.log(footballPoints(14, 8))
+
+let counter = 5;
+let verificacao = (counter >= 3) 
+
+console.log(verificacao);

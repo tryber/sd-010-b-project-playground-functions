@@ -31,12 +31,12 @@ function repeticao(array, key) {
     if (array[i] === array[key]) {
       counter += 1;
     }
-    verificacao = (counter >= 3) ? false : true;
+    verificacao = !(counter >= 3); 
   }
   return verificacao;
 }
 function verificaCarateres(array, key) {
-  let verificacao = (array[key] < 0 || array[key] > 9) ? false : true;
+  let verificacao = !(array[key] < 0 || array[key] > 9);
   if (verificacao === false) {
     return verificacao;
   }
@@ -58,14 +58,16 @@ function generatePhoneNumber(array) {
 }
 
 // teste item 11
-// array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(generatePhoneNumber(array0));
-// array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-// console.log(generatePhoneNumber(array1));
-// array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
-// console.log(generatePhoneNumber(array2));
-// array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
-// console.log(generatePhoneNumber(array3));
+array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(array0));
+array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(generatePhoneNumber(array1));
+array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1];
+console.log(generatePhoneNumber(array2));
+array3 = [111, 2, 3, 4, 15, 6, 7, 8, 9, 0, 99];
+console.log(generatePhoneNumber(array3));
+array4 = [1, 1, 1, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(array4));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
