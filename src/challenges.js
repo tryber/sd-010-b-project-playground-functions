@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(A, B) {
+  if (A && B) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -45,6 +49,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+compareTrue(true, true);
 
 module.exports = {
   calcArea,
