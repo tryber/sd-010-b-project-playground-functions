@@ -27,17 +27,15 @@ function splitSentence() {
 // Desafio 4
 function concatName(stringuinha) {
   // seu código aqui
-
+  
+  //https://www.w3schools.com/js/js_arrays.asp
+  //ensinando como pegar o ultimo valor e primeiro valor de array de strings
   let primeiro = stringuinha[0];
   let ultimo = stringuinha[stringuinha.length - 1];
 
   
   return ultimo + "," + " " + primeiro;
 }
-
-string = ["eder","ederson","patrick","julio","dodo"];
-let retornou = concatName(string);
-console.log(retornou);
 
 
 // Desafio 5
@@ -91,11 +89,31 @@ function catAndMouse(mouse,cat1,cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayOfNumbers) {
   // seu código aqui
+  let arrayOfStrings = [];
+  for (let i = 0; i < arrayOfNumbers.length; i+= 1){
+    if((arrayOfNumbers[i] % 3 == 0) && (arrayOfNumbers[i] % 5 == 0)){
+      arrayOfStrings[i] = 'fizzBuzz';
+    }
+    else if (((arrayOfNumbers[i] % 3 == 0) && (arrayOfNumbers[i] % 5 != 0))){
+      arrayOfStrings[i] = 'fizz';
+    }
+    else if (((arrayOfNumbers[i] % 3 != 0) && (arrayOfNumbers[i] % 5 == 0))){
+      arrayOfStrings[i] = 'buzz';
+
+    }
+    else {
+      arrayOfStrings[i] = 'bug!';
+    }
+  }
   
-  
+  return arrayOfStrings;
 }
+
+let array = [5,3,15,9];
+let retorno = fizzBuzz(array);
+console.log(retorno);
 
 // Desafio 9
 function encode() {
