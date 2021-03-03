@@ -91,9 +91,9 @@ function decode(string) {
   let dictionary = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
   arrayString.forEach((e, i) => {
-    for(let key in dictionary){
-      if (parseInt(e) === dictionary[key]) {
-        arrayString[i] = key
+    for (let key in dictionary) {
+      if (parseInt(e, 10) === dictionary[key]) {
+        arrayString[i] = key;
       }
     }
   });
