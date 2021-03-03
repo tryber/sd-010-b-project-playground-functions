@@ -74,10 +74,12 @@ function fizzBuzz(array) {
   return (arrayFizzBuzz)
 }
 // Desafio 9
-function encode(string) {
-  string.split('');
-  let frase = '';
-  for (let index = 0; index < string.length; index +=1) {
+
+function encode(code) {
+
+  let frase = ''
+  let string= code.split('');
+  for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
       case 'a' :
       string[index] = '1';
@@ -96,17 +98,18 @@ function encode(string) {
       break;
     }
   }
+  console.log()
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
   }
-  return frase;
+  return `"${frase}" `;
 
 }
 
-
-function decode(string) {
-  string.split('');
-  let frase = '';
+console.log(decode("h3 th2r2!"))
+function decode(code) {
+  let frase = ''
+  let string= code.split('');
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
       case '1' :
@@ -129,7 +132,7 @@ function decode(string) {
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
 }
-return (frase);
+ return `"${frase}" `
 }
 
 module.exports = {
