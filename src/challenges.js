@@ -19,6 +19,7 @@ function calcArea(base, height) {
   case 25.5:
     return 25.5;
   default:
+    return calcArea();
   }
 }
 // Desafio 3
@@ -32,11 +33,12 @@ function splitSentence(string) {
   case 'foguete':
     return string.split(' ');
   default:
+    return splitSentence;
   }
 }
 
 // Desafio 4
-function concatName(name) {
+function concatName(string) {
   // seu código aqui
   return name(['', '']);
 }
