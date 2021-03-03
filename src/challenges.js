@@ -2,10 +2,9 @@
 function compareTrue(item1, item2) {
   if (item1 && item2 === true) {
     return true;
-  } else {
-    if (item1 === false || item2 === false) {
-      return false;
-    }
+  }
+  if (item1 === false || item2 === false) {
+    return false;
   }
 }
 console.log(compareTrue(false, true));
