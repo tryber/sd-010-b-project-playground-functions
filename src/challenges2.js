@@ -1,5 +1,6 @@
 // Desafio 10
-function techList(tech,nome) {
+function techList(tech) {
+  let nome = "Luiz"
   let list = tech.sort();
   let saida = [];
 
