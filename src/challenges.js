@@ -14,8 +14,8 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   let result = false;
 
-  if (result = (base * height /2)) {
-    return result
+  if (result = (base * height / 2)) {
+    return result;
   }
 }
 
@@ -26,7 +26,7 @@ function calcArea(base, height) {
 // https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(userEntry) {
   let arrayOfStrings = userEntry.split(" ");
-  return arrayOfStrings
+  return arrayOfStrings;
 }
 
 // Desafio 4
