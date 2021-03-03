@@ -5,10 +5,10 @@ function techList(array, name) {
     listOfObjetcts = 'Vazio!';
   } else {
     for (let index = 0; index < array.length; index += 1) {
-      let object = {};
-      object.tech = `${array[index]}`;
-      object.name = name;
-      listOfObjetcts.push(object);
+      let object = {
+        tech: name,
+        name: name,
+      };
     }
   }
   return listOfObjetcts;
@@ -53,8 +53,16 @@ function generatePhoneNumber(numbers) {
   return feedback;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let check = false;
+  if (
+    (lineA < lineB + lineC && lineA > Math.abs(lineC - lineB)) ||
+    (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA)) ||
+    (lineC < lineB + lineA && lineC > Math.abs(lineA - lineB))
+  ) {
+    check = true;
+  }
+  return check;
 }
 
 // Desafio 13
