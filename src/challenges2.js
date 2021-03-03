@@ -96,8 +96,27 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function sumDrinks(str) {
+  let n = str.replace(/\D/g, '');
+  let sum = 0;
+  let splitN = n.split('');
+
+  for (let i = 0; i < splitN.length; i += 1) {
+    sum += parseInt(splitN[i], 10);
+  }
+
+  return sum;
+}
+
+function hydrate(str) {
+  let n = sumDrinks(str);
+
+  if (n > 1) {
+    return `${n} copos de água`;
+  }
+  if (n === 1) {
+    return `${n} copo de água`;
+  }
 }
 
 module.exports = {
