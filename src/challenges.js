@@ -70,9 +70,9 @@ function fizzBuzz(array) {
   for (let index in array) {
     if ((array[index] % 3 == 0) && (array[index] % 5 == 0) ) {
       fizzBuzz.push('fizzBuzz'); 
-    } else if (array[index] % 3 == 0 ) {
+    } else if ((array[index] % 3 == 0) && (array[index] % 5 != 0)) {
       fizzBuzz.push('fizz');
-    } else if (array[index] % 5 == 0 ) {
+    } else if ((array[index] % 5 == 0) && (array[index] % 3 != 0)) {
       fizzBuzz.push('buzz');
     } else {
       fizzBuzz.push('bug');
