@@ -67,95 +67,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz( ) {
-function verifica(tres, cinco) {
-function verificaFalse(tres, cinco) {
-  let resposta = '';
-  if (tres === false && cinco === false) {
-    resposta += 'bug!';
-    if (tres === true && cinco === true) {
-      resposta += 'fizzBuzz';
-    }
-  }
-  return resposta;
-}
-function verificaFizzBuzz(palavra) {
-  let saida = '';
-  if (palavra === 'fizzbuzz') {
-    saida = 'fizzBuzz';
-  } else {
-    saida = palavra;
-  }
-  return saida;
-}
-function criarArray(arrayDeNumeros) {
-  let saida = [];
-  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    saida[index] = '';
-  }
-  return saida;
-}
-  let resposta = criarArray(arrayDeNumeros);
-  let tres = false;
-  let cinco = false;
-  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    tres = false;
-    cinco = false;
-    if (arrayDeNumeros[index] % 3 === 0) {
-      resposta[index] += 'fizz';
-      tres = true;
-    }
-    if (arrayDeNumeros[index] % 5 === 0) {
-      resposta[index] += 'buzz';
-      cinco = true;
-    }
-    resposta[index] += verifica(tres, cinco);
-    resposta[index] += verificaFalse(tres, cinco);
-    resposta[index] = verificaFizzBuzz(resposta[index]);
-  }
-  return resposta;
+  //Escreva aqui seu código
 }
 
-//Desafio 9
-function encode(frase) {
-  let separado = frase.split('');
-  for (let caracter in separado) {
-    if ({}.hasOwnProperty.call(separado, caracter)) {
-      if (separado[caracter] === 'a') {
-        separado[caracter] = 1;
-      } if (separado[caracter] === 'e') {
-        separado[caracter] = 2;
-      } if (separado[caracter] === 'i') {
-        separado[caracter] = 3;
-      } if (separado[caracter] === 'o') {
-        separado[caracter] = 4;
-      } if (separado[caracter] === 'u') {
-        separado[caracter] = 5;
-      }
-    }
-  }
-  let juntoEncode = separado.join('');
-  return juntoEncode;
+// Desafio 9
+function  encode ( ) {
+  //Escreva aqui seu código
 }
-function decode(frase) {
-  let separado = frase.split('');
-  for (let caracter in separado) {
-    if ({}.hasOwnProperty.call(separado, caracter)) {
-        if (separado[caracter] === '1') {
-        separado[caracter] = 'a';
-      } if (separado[caracter] === '2') {
-        separado[caracter] = 'e';
-      } if (separado[caracter] === '3') {
-        separado[caracter] = 'i';
-      } if (separado[caracter] === '4') {
-        separado[caracter] = 'o';
-      } if (separado[caracter] === '5') {
-        separado[caracter] = 'u';
-      }
-    }  
-  }
-  let juntoDecode = separado.join('');
-  return juntoDecode;
-  }
 
 module.exports = {
   calcArea,
