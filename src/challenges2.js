@@ -24,24 +24,23 @@ function techList(array, name) {
 // console.log(techList(array1, namePessoal));
 
 // Desafio 11
-function verificaCarateres(array, key){
-  let verificacao = true; 
-  (array[key] < 0 || array[key] > 9) ? verificacao = false : verificacao = true;
-  if ( verificacao === false){
-    return verificacao;
-  }
-  return repeticao(array, key);
-}
-
-function repeticao(array, key){
+function repeticao(array, key) {
   let counter = 0;
+  var verificacao = true;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === array[key]) {
       counter += 1;
     }
-    (counter >= 3) ? verificacao = false : verificacao = true;
+    var verificacao = (counter >= 3) ? false : true;
   }
   return verificacao;
+}
+function verificaCarateres(array, key) {
+  let verificacao = (array[key] < 0 || array[key] > 9) ? false : true;
+  if ( verificacao === false ) {
+    return verificacao;
+  }
+  return repeticao(array, key);
 }
 
 function generatePhoneNumber(array) {
