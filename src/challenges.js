@@ -56,19 +56,16 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gato1 = mouse - cat1; 
-  let gato2 = mouse - cat2; 
-
-  if (gato1 > gato2) {
+  if (cat1 < cat2) {
     return 'cat1'
-  } else if (gato1 < gato2) {
+  } else if (cat2 < cat1) {
     return 'cat2'
   } else {
     return 'os gatos trombam e o rato foge'
   }
 }
 
-console.log(catAndMouse(10, 12, 12));
+console.log(catAndMouse(10, 6, 12));
 
 // Desafio 8
 function fizzBuzz(num) {
@@ -92,12 +89,12 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(string) {
   let divStringA = string.toString()
-  .replace(/a/g, '1')
-  .replace(/e/g, '2')
-  .replace(/i/g, '3')
-  .replace(/o/g, '4')
-  .replace(/u/g, '5')
-  .split('');
+    .replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5')
+    .split('');
   let joinAll = divStringA.join('');
 
   return joinAll;
@@ -107,12 +104,12 @@ console.log(encode('hi, there'));
 
 function decode(string) {
   let divStringA = string.toString()
-  .replace(/1/g, 'a')
-  .replace(/2/g, 'e')
-  .replace(/3/g, 'i')
-  .replace(/4/g, 'o')
-  .replace(/5/g, 'u')
-  .split('');
+    .replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u')
+    .split('');
   let joinAll = divStringA.join('');
 
   return joinAll;
