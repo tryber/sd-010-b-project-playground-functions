@@ -41,8 +41,8 @@ function splitSentence(string) {
 function concatName(string) {
   // seu código aqui
   let primeiroString = string[0];
-  let ultimoString = string[string.length - 1];
-  return `${primeiroString}, ${ultimoString}`;
+  let ultimoString = string.length - 1;
+  return `${ultimoString}, ${primeiroString}`;
 }
 
 // Desafio 5
