@@ -15,7 +15,7 @@ function calcArea(base, height) {
 result = calcArea(10, 50);
 console.log(result);
 
-// Desafio 3 - Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// Desafio 3 - Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split / para utilização do .split('')
 let phrase = 'go Trybe';
 
 function splitSentence(string) {
@@ -25,7 +25,7 @@ function splitSentence(string) {
 result = splitSentence(phrase);
 console.log(result);
 
-// Desafio 4 - Source: https://eslint.org/docs/rules/prefer-template
+// Desafio 4 - Source: https://eslint.org/docs/rules/prefer-template / `${}` para concatenação
 let listWords = ['foguete', 'não', 'tem', 'ré'];
 
 function concatName(list) {
@@ -36,7 +36,7 @@ function concatName(list) {
 result = concatName(listWords);
 console.log(result);
 
-// Desafio 5
+// Desafio 5 - Source: https://www.w3schools.com/js/js_assignment.asp / *= operador de atribuição para multiplicação
 function footballPoints(wins, ties) {
   if (wins > 0) {
     wins *= 3;
