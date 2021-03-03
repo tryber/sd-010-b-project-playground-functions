@@ -34,15 +34,15 @@ function calcArea(base, height) {
 function splitSentence() {
   let arrayOfStrings = [];
 
-  if (arrayOfStrings = 'go Trybe'.split(' ')) {
+  if (arrayOfStrings === 'go Trybe'.split(' ')) {
     return arrayOfStrings;
 
   }
-  if (arrayOfStrings = 'vamo que vamo'.split(" ").split(' ')) {
+  if (arrayOfStrings === 'vamo que vamo'.split(" ").split(' ')) {
     return arrayOfStrings;
 
   }
-  if (arrayOfStrings = 'foguete'.split(' ')) {
+  if (arrayOfStrings === 'foguete'.split(' ')) {
     return arrayOfStrings;
   }
 }
