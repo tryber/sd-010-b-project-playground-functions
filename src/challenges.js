@@ -46,7 +46,7 @@ function highestCount(arrayNumber) {
   // seu código aqui
   let contador = 1;
   let maiorNumber = arrayNumber[0];
-  for (let index = 1; index < arrayNumber.length; index +=1) {
+  for (let index = 1; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] > maiorNumber) {
       maiorNumber = arrayNumber[index];
       contador = 1;
@@ -90,11 +90,45 @@ function fizzBuzz(arrayNumber) {
   return list;
 }
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let listEncode = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === "a") {
+      listEncode = listEncode + '1';
+    } else if (string[index] === "e") {
+      listEncode = listEncode + '2';
+    } else if (string[index] === "i") {
+      listEncode = listEncode + '3';
+    } else if (string[index] === "o") {
+      listEncode = listEncode + '4';
+    } else if (string[index] === "u") {
+      listEncode = listEncode + '5';
+    }else {
+      listEncode = listEncode + string[index];
+    }
+  }
+  return listEncode;
 }
-function decode() {
+function decode(string) {
   // seu código aqui
+  let listDecode = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === "1") {
+      listDecode = listDecode + 'a';
+    } else if (string[index] === "2") {
+      listDecode = listDecode + 'e';
+    } else if (string[index] === "3") {
+      listDecode = listDecode + 'i';
+    } else if (string[index] === "4") {
+      listDecode = listDecode + 'o';
+    } else if (string[index] === "5") {
+      listDecode = listDecode + 'u';
+    }else {
+      listDecode = listDecode + string[index];
+    }
+  }
+  return listDecode;
 }
 module.exports = {
   calcArea,
@@ -108,4 +142,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-  // console.log(fizzBuzz([9, 25]));
+console.log(decode("h3 th2r2!"));
