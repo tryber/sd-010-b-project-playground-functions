@@ -13,7 +13,7 @@ function compareTrue(par1, par2) {
 
     
 }
-  console.log(compareTrue(false, true))
+ 
 // Desafio 2
 function calcArea(base, height) {
   
@@ -60,18 +60,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index =+1){
-    if (array[index] % 3 ==0) {
+    if (array[index] % 3 == 0) {
       return "fizz"
-    } else if (array[index] % 5 === 0) {
+    } else if (array[index] % 5 == 0) {
       return "buzz"
-    } else if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+    } else if (array[index] % 5 == 0 && array[index] % 3 == 0) {
       return "fizzBuzz"
     } else {
       return "bug!"
     }
   }
 }
-console.log(fizzBuzz(5,7,15,21,23))
+
 // Desafio 9
 function encode( ) {
   
