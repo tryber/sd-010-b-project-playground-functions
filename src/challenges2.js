@@ -33,9 +33,10 @@ function verifyRepeated(array) {
         if (array[i] === array[key]) {
           counter += 1;
         }
-        flag = (counter <= 3);
       }
+      flag = !(counter >= 3);
     }
+    
   }
   return flag;
 }
@@ -76,7 +77,9 @@ function generatePhoneNumber(array) {
   return 'Array com tamanho incorreto.';
 }
 // teste item 11
-  console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
+console.log(generatePhoneNumber([0, 21, 3, 4, 14, 2, 7, 8, 19, 9, 4]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 // array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // console.log(generatePhoneNumber(array0));
 // array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
