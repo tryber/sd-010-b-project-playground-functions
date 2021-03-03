@@ -11,32 +11,11 @@ function techList(array, string) {
   return returnArray;
 }
 
-function repeatThreeTimes(array) {
-  let input = array.sort();
-  let number = input[0];
-  let count = 0;
-  let result = [];
-  for (let index = 0; index < input.length; index += 1) {
-    if (number === input[index]) {
-      count += 1;
-    } else if (number !== input[index]) {
-      result.push(count);
-      number = input[index];
-      count = 1;
-    }
-  }
-  result.push(count);
-  for (index2 = 0; index2 < result.length; index2 += 1) {
-    if (result[index2] >= 3) { 
-      return true; 
-    }
-  }
-}
-//console.log(repeatThreeTimes([1, 1, 3, 3, 4, 2, 6, 2, 7, 2, 1]));
 // Desafio 11
-function generatePhoneNumber(array) {
-
+function generatePhoneNumber() {
+  // sua resposta aqui
 }
+
 function checkSum(a, b, c) {
   if ((a < b + c) && (b < a + c) && c < b + a) {
     return true;
@@ -57,18 +36,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-// baseado na resposta de Alex Wayne em: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string 
+// baseado na resposta de Alex Wayne em: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
 function hydrate(string) {
   let numbers = string.replace(/\D/g, '');
   let sum = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     sum += Number(numbers[index]);
   }
+  if (sum > 1) {
+    let answer = sum.toString();
+    return `${answer} copos de água`;
+  }
   let answer = sum.toString();
-  return answer + ' copos de água';
+  return `${answer} copo de água`;
 }
 
-console.log(hydrate('1 cachaça, 5 cervejas e 4 copo de vinho'));
 module.exports = {
   generatePhoneNumber,
   techList,
