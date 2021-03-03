@@ -29,7 +29,7 @@ function calcArea(base, height) {
 function splitSentence() {
   // seu código aqui
   let organiza = "";
-  if (organiza == String) {
+  if (organiza === splitSentence) {
     return organiza.split('');
   }
 }
