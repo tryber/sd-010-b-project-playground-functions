@@ -34,8 +34,6 @@ function splitSentence(string) {
     }
   }
   return resultArray;
-
-// Referencia:dev.to/imakki/how-to-split-string-without-using-js-s-inbuilt-spit-function-261b
 }
 
 // Desafio 4
