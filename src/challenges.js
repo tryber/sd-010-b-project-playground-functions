@@ -2,13 +2,13 @@
 let a = true;
 let b = true;
 function compareTrue(num1, num2) {
-   if (num1 === true && num2 === true){
-   return true;
+  if (num1 === true && num2 === true) {
+    return true;
   } else {
-   return false;
- }
+    return false;
+  }
 }
-console.log(compareTrue(a, b))
+console.log(compareTrue(a, b));
 
 // Desafio 2
 let c = 5;
@@ -16,22 +16,22 @@ let d = 2;
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(c, d))
+console.log(calcArea(c, d));
 
 // Desafio 3
-//Entendimento com o Plantão e com link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split#usando_split
+// Entendimento com o Plantão e com link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split#usando_split
 function splitSentence(string) {
-  let fraseSeparada = string.split(" ");
-  return fraseSeparada
+  let fraseSeparada = string.split(' ');
+  return fraseSeparada;
 }
-console.log(splitSentence("vamo que vamo"))
+console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(primeiroComUltimo) {
-  let trazUltimo = primeiroComUltimo.length -1
-  return `${primeiroComUltimo[trazUltimo]}, ${primeiroComUltimo[0]}` 
+  let trazUltimo = primeiroComUltimo.length - 1;
+  return `${primeiroComUltimo[trazUltimo]}, ${primeiroComUltimo[0]}`;
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']))
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -39,59 +39,59 @@ function footballPoints(wins, ties) {
   let empate = 1 * ties;
   return vitoria + empate;
 }
-console.log(footballPoints(14,8))
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(qtdDoMaior) {
-let maior = 0;
-let repete = 0;
+  let maior = 0;
+  let repete = 0;
 
-for (let index = 0; index < qtdDoMaior.length; index++) {
-  if (qtdDoMaior[index] >= maior) {
-    maior = qtdDoMaior[index]; 
+  for (let index = 0; index < qtdDoMaior.length; index + 1) {
+    if (qtdDoMaior[index] >= maior) {
+      maior = qtdDoMaior[index]; 
+    }
   }
-}
-for (let index = 0; index < qtdDoMaior.length; index++) {
+  for (let index = 0; index < qtdDoMaior.length; index + 1) {
   if (qtdDoMaior[index] === maior) {
-    repete ++
+    repete ++;
+    }
   }
+  return repete;
 }
-return repete
-}
-console.log(highestCount([9, 1, 9, 2, 9, 5, 7]))
+console.log(highestCount([9, 1, 9, 2, 9, 5, 7]));
 
 // Desafio 7
-//Dica dos colegas em sala de estudos e pesquisa sobre a função no link: https://www.w3schools.com/jsref/jsref_abs.asp
+// Dica dos colegas em sala de estudos e pesquisa sobre a função no link: https://www.w3schools.com/jsref/jsref_abs.asp
 function catAndMouse(mouse, cat1, cat2) {
- let distanciaCat1 = Math.abs(mouse - cat1);
- let distanciaCat2 = Math.abs(mouse - cat2);
- if (distanciaCat1 < distanciaCat2) {
-   return "cat1";
- } else if (distanciaCat1 > distanciaCat2) {
-   return "cat2";
- } else {
-   return "os gatos trombam e o rato foge";
- }
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
+  if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
+  } else if (distanciaCat1 > distanciaCat2) {
+    return 'cat2';
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
-console.log(catAndMouse(0,3,2))
+console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
   let resultado = [];
-  for (let index = 0; index < array.length; index++) {
-    if (array[index] % 3 == 0 && array[index] % 5 == 0) { 
-      resultado.push("fizzBuzz");          
-    } else if (array[index] % 3 == 0) {
-      resultado.push("fizz");      
-    } else if (array[index] % 5 == 0) {
-      resultado.push("buzz");
+  for (let index = 0; index < array.length; index + 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      resultado.push('fizzBuzz');         
+    } else if (array[index] % 3 === 0) {
+      resultado.push('fizz');     
+    } else if (array[index] % 5 === 0) {
+      resultado.push('buzz');
     } else {
-      resultado.push("bug!");
+      resultado.push('bug!');
     }
   }
   return resultado;
 }
-console.log(fizzBuzz( [2, 15, 7, 9, 45]))
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
