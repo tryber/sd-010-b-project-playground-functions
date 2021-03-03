@@ -1,6 +1,7 @@
 // Desafio 10
 function techList(array, string) {
   let returnArray = [];
+  array = array.reverse();
   if (array.length === 0) {
     return 'Vazio!';
   }
@@ -10,11 +11,18 @@ function techList(array, string) {
   return returnArray;
 }
 
-// Desafio 11
-function generatePhoneNumber() {
+function repeatThreeTimes(array) {
   // seu código aqui
 }
 
+// Desafio 11
+function generatePhoneNumber(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  // seu código aqui
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
