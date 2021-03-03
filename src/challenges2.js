@@ -19,21 +19,7 @@ console.log(techList([],"Lucas")); */
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
-  let number = [];
-  
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers.length != 11) {
-      return 'Array com tamanho incorreto.';
-    }
-    if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9){
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      number = arrayNumbers.slice(0,2);
-      number = number + arrayNumbers.slice(2,7)
-      number = number + arrayNumbers.slice(7,11);
-    } 
-  }
-  return number;
+
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
