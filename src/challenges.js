@@ -26,6 +26,7 @@ function concatName(listaNomes) {
   let conc = (listaNomes[listaNomes.length-1] + listaNomes[0]);
   return conc;
 }
+let listaNomes = [];
 
 // Desafio 5
 function footballPoints() {
