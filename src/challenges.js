@@ -15,9 +15,23 @@ function calcArea(base, height) {
 }// console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(phrase, letter) {
   // seu código aqui
-}
+  let word = '';
+  let result = [];
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === letter) {
+      result.push(`${word}`);
+      word = '';
+    }
+    word += `${phrase[index]}`;
+    if (index >= phrase.length) {
+      result.push(`${word}`);
+    }
+  }
+  result.push(`${word}`);
+  return result;
+}console.log(splitSentence('go Trybe', ' '));
 
 // Desafio 4
 function concatName() {
