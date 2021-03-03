@@ -9,7 +9,9 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx"
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx",
+    "cypress:open": "cypress open",
+    "cypress": "cypress run"
   },
   "dependencies": {
     "eslint-config-trybe-fundamentals": "1.1.0"
