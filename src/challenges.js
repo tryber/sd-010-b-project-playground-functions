@@ -115,14 +115,46 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function encode() {
-  
+function encode(arrayString) {
+  let newString = ''
+  for(let index in arrayString){
+    if(arrayString[index] == 'a'){
+      newString = newString + '1';
+    } else if(arrayString[index] == 'e'){
+      newString = newString + '2';
+    } else if(arrayString[index] == 'i'){
+      newString = newString + '3';
+    } else if(arrayString[index] == 'o'){
+      newString = newString + '4';
+    } else if(arrayString[index] == 'u'){
+      newString = newString + '5';
+    } else {
+      newString = newString + arrayString[index];
+    }
+  }
+  return newString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(arrayString) {
+  let newString = ''
+  for(let index in arrayString){
+    if(arrayString[index] == '1'){
+      newString = newString + 'a';
+    } else if(arrayString[index] == '2'){
+      newString = newString + 'e';
+    } else if(arrayString[index] == '3'){
+      newString = newString + 'i';
+    } else if(arrayString[index] == '4'){
+      newString = newString + '0';
+    } else if(arrayString[index] == '5'){
+      newString = newString + 'u';
+    } else {
+      newString = newString + arrayString[index];
+    }
+  }
+  return newString;
 }
-
+console.log(decode("h3 th2r2!"))
 module.exports = {
   calcArea,
   catAndMouse,
