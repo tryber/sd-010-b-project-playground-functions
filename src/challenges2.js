@@ -16,17 +16,23 @@ function generatePhoneNumber(number) {
   let a = number.slice()
 
   const repeat = function repeatedNumbers() {
-    // Verificando se tem mais de 3 números repetidos no array
-    let duplicates = number.slice()
-    let result = []
-    for (let i = 0; i < duplicates.length -1; i++) {
-      if (duplicates[i + 1] == duplicates[i]) {
-        result.push(duplicates[i])
+    let current = null
+    let cnt = 0;
+    for (let i = 0; i < number.length; i++) {
+      if (number[i] != current) {
+        if (cnt > 0) {
+          return cnt;
+        }
+        current = number[i];
+        cnt = 1;
+      } else {
+        cnt++;
       }
     }
-    return result.lenght
-  }
-  
+}
+
+  console.log(repeat())
+
   const arrNum = function arrayNumbers() {
     // Verificando a quantidade correta de números do array
     if (number.length == 11) {
@@ -49,17 +55,17 @@ function generatePhoneNumber(number) {
     return validaNum
   }
 
-  if (validator() === false || repeat >= 3) {
+  if (validator() === false || repeat() >= 3) {
     return 'não é possível gerar um número de telefone com esses valores'
   } else if (arrNum() === false) {
     return 'Array com tamanho incorreto.'
   } else {
     return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
   }
-  }
+}
 
 
-console.log(generatePhoneNumber([1,1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
