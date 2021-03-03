@@ -15,6 +15,7 @@ function checkSize(array) {
   if (array.length === 11) {
     return true;
   }
+  return false;
 }
 
 function checkNumbers(array) {
@@ -71,7 +72,7 @@ function generatePhoneNumber(array) {
   return buildOutput(numbers);
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 1, 6]));
 
 function checkSum(a, b, c) {
   if ((a < b + c) && (b < a + c) && c < b + a) {
