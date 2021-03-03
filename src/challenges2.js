@@ -10,14 +10,14 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-    
-  if (lineA < lineB + lineC && lineA > (math.abs(lineB - lineC)) && lineA > math.abs(lineC - lineB)) {
-    return true;
-  } else if (lineB < lineA + lineC && lineB > (math.abs(lineA - lineC)) && lineB > math.abs(lineC - lineA) {
-    return true;
-  } else if (lineC < lineB + lineA && lineC > (math.abs(lineB - lineA)) && lineC > math.abs(lineA - lineB){
-    return true;
-  } else {return false};
+  let triangle = false;
+  if ((lineA < lineB + lineC) && (lineA > (Math.abs(lineB - lineC))) && (lineA > Math.abs(lineC - lineB))) {
+    return triangle = true;
+  } else if ((lineB < lineA + lineC) && (lineB > (Math.abs(lineA - lineC))) && (lineB > Math.abs(lineC - lineA))) {
+    return  triangle = true;
+  } else if ((lineC < lineB + lineA) && (lineC > (Math.abs(lineB - lineA))) && (lineC > Math.abs(lineA - lineB))){
+    return triangle = true;
+  } else {return triangle = false};
 
 }
 
