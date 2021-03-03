@@ -31,8 +31,8 @@ function splitSentence(userEntry) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  let lastFirst = arrayOfStrings[arrayOfStrings[0] + ', ' + arrayOfStrings[0]];
-  return arrayOfStrings;
+  let lastFirst = arrayOfStrings[arrayOfStrings.length-1] + ', ' + arrayOfStrings[0]];
+  return lastFirst;
 }
 
 // Desafio 5
