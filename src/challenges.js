@@ -51,10 +51,8 @@ function concatName(fraseArray) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let vitorias = wins * 3;
-  let empates = ties
-  let pontos = vitorias + empates;
  
-  return pontos + " pontos";
+  return vitorias + ties + " pontos";
 
 }
 //console.log(footballPoints(14, 8));
