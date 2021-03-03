@@ -60,8 +60,14 @@ function splitSentence(sentence) {
 // console.log(`splitSentence(foguete) = ${splitSentence('foguete')}`);
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+/*
+  Essa função recebe um array de strings e retorna uma string no formato 'ultimo_item, primeiro_item', sendo que primeiro_item e ultimo_item são a primeira e ultima posição do array recebido, respectivamente.
+ */
+function concatName(fullArray) {
+  let firstItem = fullArray[0]; // armazena o primeiro item de fullArray em firstItem
+  let lastItem = fullArray[fullArray.length - 1]; // armazena o ultimo item de fullArray em lastItem
+
+  return `${lastItem}, ${firstItem}`; // retorna uma string no formato 'ultimo_item, primeiro_item'
 }
 
 // Desafio 5
