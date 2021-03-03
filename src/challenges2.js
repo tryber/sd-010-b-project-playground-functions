@@ -1,7 +1,19 @@
+
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, name) {
+  let order = tec.sort();
+  let saida = [];
+  if (tec.length === 0) return ('Vazio!');
+  for (let index = 0; index < order.length; index += 1) {
+    const info = {
+      tech: order[index],
+      name,
+    };
+    saida.push(info);
+  }
+  return (saida);
 }
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Caio'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -24,3 +36,5 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+// resoluções baseadas no conteudo proposto nos plantões.
