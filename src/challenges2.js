@@ -63,14 +63,17 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(pedido) {
   let soma = 0;
-  pedido = pedido.replace(/\D/g, "");
+  pedido = pedido.replace(/\D/g, '');
   pedido = pedido.split('');
-  for (index =0; index < pedido.length; index += 1) {
-      pedido[index] = parseInt(pedido[index]);
-      soma = soma + pedido[index];
+  for (let index = 0; index < pedido.length; index += 1) {
+    pedido[index] = parseInt(pedido[index]);
+    soma += pedido[index];
   }
+  if (soma > 1){
   return (`${soma} copos de água`);
+  } return (`${soma} copo de água`)
 }
+console.log(hydrate("6 copo de água"))
 
 module.exports = {
   generatePhoneNumber,
