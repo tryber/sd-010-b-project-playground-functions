@@ -16,8 +16,6 @@ function splitSentence(frase) {
   return separado;
 }
 
-console.log(splitSentence('vamo que vamo'));
-
 // Desafio 4
 function concatName(arrayDePalavras) {
   let resposta = `${arrayDePalavras[arrayDePalavras.length - 1]}, ${arrayDePalavras[0]}`;
