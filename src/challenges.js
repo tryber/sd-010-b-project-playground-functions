@@ -1,6 +1,8 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+function  compareTrue ( boola ,  boolb )  {
+  return  ( ( boola  ===  true )  &&  ( boolb  ===  true ) ) ;
 }
 
 // Desafio 2
@@ -42,6 +44,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
@@ -57,4 +60,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}:
