@@ -93,22 +93,7 @@ function catAndMouse(mouse,cat1,cat2) {
 function fizzBuzz() {
   // seu código aqui
   
-    for (let i = 0; i<vetor.length ; i++){
-      if((vetor[i]%3 === 0) && (vetor[i] % 5 === 0)){
-        let vetorretorno [i] = "fizzBuzz";
-      }
-      else if ((vetor[i]%3 == 0) && (vetor[i] % 5 !==0)) {
-        vetorretorno [i] = "fizz";
-      }
-      else if ((vetor[i]%3 !== 0) && (vetor[i] % 5 == 0)) {
-        vetorretorno [i] = "buzz";
-
-      }
-      else {
-        vetorderetorno[i] = "bug!";
-      }
-    }
- return vetorderetorno;
+  
 }
 
 
