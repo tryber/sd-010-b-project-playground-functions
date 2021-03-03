@@ -108,12 +108,44 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let encodedString = "";
+  for (index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === "a") {
+      encodedString = encodedString + "1";
+    } else if (phrase[index] === "e") {
+      encodedString = encodedString + "2";
+    } else if (phrase[index] === "i") {
+      encodedString = encodedString + "3";
+    } else if (phrase[index] === "o") {
+      encodedString = encodedString + "4";
+    } else if (phrase[index] === "u") {
+      encodedString = encodedString + "5";
+    } else {
+      encodedString = encodedString + phrase[index];
+    }
+  }
+  return encodedString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let decodedString = "";
+  for (index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === "1") {
+      decodedString = decodedString + "a";
+    } else if (phrase[index] === "2") {
+      decodedString = decodedString + "e";
+    } else if (phrase[index] === "3") {
+      decodedString = decodedString + "i";
+    } else if (phrase[index] === "4") {
+      decodedString = decodedString + "o";
+    } else if (phrase[index] === "5") {
+      decodedString = decodedString + "u";
+    } else {
+      decodedString = decodedString + phrase[index];
+    }
+  }
+  return decodedString;
 }
 
 module.exports = {
