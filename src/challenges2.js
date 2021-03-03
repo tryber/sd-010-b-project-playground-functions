@@ -12,7 +12,7 @@ function techList(array, name) {
     }
     return lista;
   } else {
-    return 'Vazio!'
+    return 'Vazio!';
   }
 }
 
@@ -36,7 +36,7 @@ function generatePhoneNumber(array) {
       let counter = 0;
       for (let i = 0; i < array.length; i++) {
         if (array[i] === array[key]) {
-          counter++
+          counter++;
         }
       }
       if (counter >= 3) {
@@ -44,12 +44,12 @@ function generatePhoneNumber(array) {
       }
     }
     if (invalido != false) {
-      return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+      return '(' + array[0] + array[1] + ')' + ' ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
     } else {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   } else {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
 }
 
@@ -92,13 +92,13 @@ function hydrate(umaFrase) {
   for (let key in fatiada) {
     let char = fatiada[key];
     if (char.charCodeAt() >= 48 && char.charCodeAt() <= 57) {
-      soma += parseInt(char)
+      soma += parseInt(char);
     }
   }
   if (soma > 1) {
-    return `${soma} copos de água`
+    return `${soma} copos de água`;
   } else {
-    return `${soma} copo de água`
+    return `${soma} copo de água`;
   }
 }
 
