@@ -8,12 +8,6 @@ function compareTrue(valorUm, valorDois) {
   return trueOrFalse;
 }
 
-let trueOrFalse = false;
-  if (valorUm === true && valorDois === true) {
-    return true;
-  }
-  return trueOrFalse;
-
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
