@@ -31,7 +31,7 @@ function splitSentence(goTrybe) {
 // Desafio 4
 function concatName(name) {
   // seu código aqui
-  return name('' + '');
+  return name(['' + '']);
 }
 
 // Desafio 5
