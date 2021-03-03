@@ -51,46 +51,61 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(divisivel) {
-  let apenas3 = true;
-  let apenas5 = true;
   let fizzBuster = []
   for (let porta = 0; porta < divisivel.length; porta += 1) {
-    for (let divisores = 2; divisores < divisivel[porta]; divisores += 1) {
-      if (divisores !== 3) {
-        if (divisivel[porta] % 3 === 0 && divisivel[porta] % divisores === 0 ) {
-          apenas3 = false;
-        }
-      }
-      if (divisores !== 5) {
-        if (divisivel[porta] % 5 === 0 && divisivel[porta] % divisores === 0 ) {
-          apenas5 = false;
-        }
-      }
-    }
     if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 === 0) {
       fizzBuster.push('fizzBuzz');
+    } if (divisivel[porta] % 3 === 0 && divisivel[porta] % 5 !== 0) {
+      fizzBuster.push('fizz');
+    } if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 === 0) {
+      fizzBuster.push('buzz');
     } if (divisivel[porta] % 3 !== 0 && divisivel[porta] % 5 !== 0) {
-        fizzBuster.push('bug');
-        apenas3 = false;
-        apenas5 = false;
-      }
-    if (apenas5 === true) {
-      fizzBuster.push('buzz')
-    } if (apenas3 === true) {
-        fizzBuster.push('fizz')
-      }    
-    apenas3 = true;
-    apenas5 = true;
+      fizzBuster.push('bug!');
+    }
   }
   return fizzBuster;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codigo) {
+  let vogais = {
+    a:1,
+    e:2,
+    i:3,
+    o:4,
+    u:5,
+  }
+  codigo = codigo.split('');
+  for (letraindex = 0; letraindex < codigo.length; letraindex += 1) {
+    for (key in vogais) {
+      if (codigo[letraindex] === key) {
+      codigo[letraindex] = vogais[key];
+      }
+    }
+  }
+  codigo = codigo.join('');
+  return codigo;
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"))
+
+function decode(codigo2) {
+  let vogais = {
+    a:1,
+    e:2,
+    i:3,
+    o:4,
+    u:5,
+  }
+  codigo2 = codigo2.split('')
+  for (letraindex = 0; letraindex < codigo2.length; letraindex += 1) {
+    for (key in vogais) {
+      if (codigo2[letraindex] == vogais[key]) {
+      codigo2[letraindex] = key;
+      }
+    }
+  }
+  codigo2 = codigo2.join('');
+  return codigo2;
 }
 
 module.exports = {
