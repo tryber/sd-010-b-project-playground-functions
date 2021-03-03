@@ -3,61 +3,39 @@ function compareTrue(a, b) {
   let confirma = false;
   return a === true && b === true ? !confirma : confirma;
 }
+
 // Desafio 2
+function calcArea() {
+  // seu código aqui
 function calcArea(base, altura) {
   return (base * altura) / 2;
 }
+
 // Desafio 3
-function splitSentence(a) {
-  let dado = a.split(' ');
-  return dado;
+function splitSentence() {
+  // seu código aqui
 }
+
 // Desafio 4
-function concatName(a) {
-  let dado = [];
-  dado.push(a.pop());
-  dado.push(a[0]);
-  dado = dado.join(', ');
-  return dado;
+function concatName() {
+  // seu código aqui
 }
+
 // Desafio 5
-function footballPoints(wins, ties) {
-  let a = wins * 3;
-  return a + ties;
+function footballPoints() {
+  // seu código aqui
 }
+
 // Desafio 6
-function highestCount(arrayDeNumeros) {
-  let contagem = { };
-  let maiorNumero = 0;
-  for (let itens of arrayDeNumeros) {
-    contagem[itens] = 0;
-  }
-  for (let itens of arrayDeNumeros) {
-    contagem[itens] += 1;
-  }
-  for (let itens of arrayDeNumeros) {
-    if (itens > maiorNumero) {
-      maiorNumero = itens;
-    }
-  }
-  return contagem[maiorNumero];
+function highestCount() {
+  // seu código aqui
 }
+
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = Math.abs(cat1 - mouse);
-  let distCat2 = Math.abs(cat2 - mouse);
-  let alcancaPrimeiro = '';
-  if (distCat1 < distCat2) {
-    alcancaPrimeiro = 'cat1';
-  }
-  if (distCat2 < distCat1) {
-    alcancaPrimeiro = 'cat2';
-  }
-  if (distCat1 === distCat2) {
-    alcancaPrimeiro = 'os gatos batem e o rato escapa';
-  }
-  return alcancaPrimeiro;
+function catAndMouse() {
+  // seu código aqui
 }
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -66,47 +44,9 @@ function fizzBuzz() {
 // Desafio 9
 function encode() {
   // seu código aqui
-function encode(frase) {
-  let separado = frase.split('');
-  for (let caracter in separado) {
-    if ({}.hasOwnProperty.call(separado, caracter)) {
-      if (separado[caracter] === 'a') {
-        separado[caracter] = 1;
-      } if (separado[caracter] === 'e') {
-        separado[caracter] = 2;
-      } if (separado[caracter] === 'i') {
-        separado[caracter] = 3;
-      } if (separado[caracter] === 'o') {
-        separado[caracter] = 4;
-      } if (separado[caracter] === 'u') {
-        separado[caracter] = 5;
-      }
-    }
-  }
-  let juntoEncode = separado.join('');
-  return juntoEncode;
 }
 function decode() {
   // seu código aqui
-function decode(frase) {
-  let separado = frase.split('');
-  for (let caracter in separado) {
-    if ({}.hasOwnProperty.call(separado, caracter)) {
-        if (separado[caracter] === '1') {
-        separado[caracter] = 'a';
-      } if (separado[caracter] === '2') {
-        separado[caracter] = 'e';
-      } if (separado[caracter] === '3') {
-        separado[caracter] = 'i';
-      } if (separado[caracter] === '4') {
-        separado[caracter] = 'o';
-      } if (separado[caracter] === '5') {
-        separado[caracter] = 'u';
-      }
-    }  
-  }
-  let juntoDecode = separado.join('');
-  return juntoDecode;
 }
 
 module.exports = {
@@ -120,4 +60,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
