@@ -22,7 +22,7 @@ function splitSentence(words) {
 function concatName(name) {
   let first = name.shift();
   let last = name.pop();
-  let junction = last + ', ' + first;
+  let junction = last + ", " + first;
   return junction;
 }
 
@@ -34,24 +34,39 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let max = 0;
+  let repete = 0;
+  for (index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > max) {
+      max = numbers[index];
+    }
+  }
+  for (let key in numbers) {
+    if (max === numbers[key]) {
+      repete += 1
+    }
+  }
+  return repete;
 }
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
+  //não pode ser numero negativo, pois irá dar problema.
 }
 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+  // utilização de if & else
 }
 
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
