@@ -75,6 +75,7 @@ cat2 = mouse-cat2;
   } else {
     situation = 'os gatos trombam e o rato foge.'
   }
+  return situation;
 }
 
 // Desafio 8
