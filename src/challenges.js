@@ -37,17 +37,6 @@ function splitSentence(string) {
   }
 }
 
-var o = [];
-    for (var i = s.length - 1, j = 0; i >= 0; i--, j++) {
-        o[j] = s[i];
-    }
-    return o.join('');
-
-    for (let index = string.length - 1; index >= 0; index -= 1) {
-    string += string[index];
-  }
-  return string.split(' ', 3);
-
 // Desafio 4
 function concatName(string) {
   // seu código aqui
