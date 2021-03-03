@@ -20,10 +20,10 @@ console.log(splitSentence('Go Trybe'));
 
 // OK - Desafio 4
 function concatName(stringsArray) {
-  let ultimoPrimeiroItem = (`${stringsArray[stringsArray.length - 1]},  ${stringsArray[0]}`);
+  let ultimoPrimeiroItem = (stringsArray[stringsArray.length - 1] + ", " + stringsArray[0]);
   return ultimoPrimeiroItem;
 }
-console.log(concatName(['captain', 'my', 'captain']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // OK - Desafio 5
 function footballPoints(wins, ties) {
@@ -44,9 +44,6 @@ function highestCount(numbersArray) {
     }
   }
   return occurrencesHighestNumber;
-
-
-  //console.log("Maior numero " + Math.max(...numbersArray));
 }
 console.log(highestCount([0, 0, 0]));
 
