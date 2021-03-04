@@ -20,9 +20,11 @@ function splitSentence(palavra) {
 // Desafio 4
 function concatName(name) {
   let pos = (name[name.length - 1]);
-  let firstLast = `'${pos}, ${name[0]}'`;
+  let firstLast = `${pos}, ${name[0]}`;
   return (firstLast);
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -31,9 +33,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(qtdLarger) {
+  let num = qtdLarger;
+  let high = 0;
+  for (let i = 0; i < num.length; i += 1) {
+    if (num[i] > high) {
+      high = num[i];
+    }
+  }
+  return (high);
 }
+console.log(highestCount([10, 12, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
