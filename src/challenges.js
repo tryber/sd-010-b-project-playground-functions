@@ -1,7 +1,7 @@
 // Desafio 1
-function compareTrue(num) {
+function compareTrue(num1, num2) {
   // seu código aqui
-  if (num > 0 && num < 10) {
+  if (num1 > 0 && num2 < 10) {
     return true;
   }
   else {
@@ -23,8 +23,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(itens) {
   // seu código aqui
+  let firstItem = itens[0];
 }
 
 // Desafio 5
