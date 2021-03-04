@@ -22,13 +22,16 @@ splitSentence();
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let listaNomes = ['foguete', 'não', 'tem', 'ré'];
+  console.log(listaNomes[3] + ',' + listaNomes[0]);
 }
+concatName();
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  console.log(wins * 3 + ties * 1);
 }
+footballPoints(1, 2);
 
 // Desafio 6
 function highestCount() {
