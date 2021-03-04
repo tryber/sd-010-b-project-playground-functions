@@ -77,7 +77,6 @@ function catAndMouse(mouse, cat1, cat2) {
   let resultado = '';
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
-  
   if (distanceCat1 > distanceCat2) {
     resultado = 'cat2';
   } else {
@@ -94,7 +93,7 @@ console.log(catAndMouse(10, 5, 15)); */
 
 // Desafio 8
 function fizzBuzz(arrayNumbers8) {
-  for (index = 0; index < arrayNumbers8.length; index += 1) {
+  for (let index = 0; index < arrayNumbers8.length; index += 1) {
     if ((arrayNumbers8[index] % 3 === 0) && (arrayNumbers8[index] % 5 === 0)) {
       arrayNumbers8[index] = 'fizzBuzz';
     } else if (arrayNumbers8[index] % 3 === 0) {
@@ -103,7 +102,7 @@ function fizzBuzz(arrayNumbers8) {
       arrayNumbers8[index] = 'buzz';
     } else {
       arrayNumbers8[index] = 'bug!';
-    } 
+    }
   }
   return arrayNumbers8;
 }
@@ -113,45 +112,45 @@ console.log(fizzBuzz([9, 25])); */
 
 // Desafio 9
 function encode(string) {
-  let encodeArray = string.split("");
+  let encodeArray = string.split('');
   let objectEncode = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
-    u: 5
-  }
-  for (index = 0; index < encodeArray.length; index += 1) {
+    u: 5,
+  };
+  for (let index = 0; index < encodeArray.length; index += 1) {
     for (let key in objectEncode) {
-      if (encodeArray[index] == key) {
+      if (encodeArray[index] === key) {
         encodeArray[index] = objectEncode[key];
       }
     }
   }
-  let encodeArrayToString = encodeArray.join("");
+  let encodeArrayToString = encodeArray.join('');
   return encodeArrayToString;
 }
-/* console.log(encode("hi there!")); */
+/* console.log(encode('hi there!')); */
 function decode(string) {
-  let decodeArray = string.split("");
+  let decodeArray = string.split('');
   let objectDecodes = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u"
-  }
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
   for (let index = 0; index < decodeArray.length; index += 1) {
     for (let key in objectDecodes) {
-      if(decodeArray[index] == key) {
+      if (decodeArray[index] === key) {
         decodeArray[index] = objectDecodes[key];
       }
     }
   }
-  let decodeArrayToString = decodeArray.join("");
+  let decodeArrayToString = decodeArray.join('');
   return decodeArrayToString;
 }
-/* console.log(decode("h3 th2r2!")); */
+/* console.log(decode('h3 th2r2!')); */
 
 module.exports = {
   calcArea,
