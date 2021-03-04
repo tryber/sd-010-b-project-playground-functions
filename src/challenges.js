@@ -61,7 +61,7 @@ function highestCount(array) {
   // seu código aqui
   for (let index = 0; index < array.length; index += 1) {
     let clone = array[index];
-    if (clone === array) {
+    if (clone === array[index]) {
       return 2;
     }
   }
