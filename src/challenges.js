@@ -41,7 +41,7 @@ let words = ["gabriel", "menezes", "dias", "santos"];
 function concatName(words) {
   let firstWord = words[0];
   let lastWord = words[words.length - 1];
-  return firstWord + ", " + lastWord;
+  return lastWord + ", " + firstWord;
 }
   console.log(concatName(words));
 
