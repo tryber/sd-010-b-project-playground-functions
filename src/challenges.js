@@ -65,11 +65,11 @@ function highestCount(array) {
     if (array[index] > maiorNumero) {
       maiorNumero = array[index];
     }
+  } for (let index = 0; index < array.length; index += 1) {
     if (maiorNumero === array[index]) {
       contador += 1;
     }
-  }
-  return contador;
+  } return contador;
 }
 
 // Desafio 7
@@ -78,10 +78,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let primeiro = Math.abs(cat1 - mouse); // O método abs () retorna o valor absoluto de um número.
   let segundo = Math.abs(cat2 - mouse);
   if (primeiro < segundo) {
-    return primeiro;
-  } 
+    return cat1;
+  }
   if (segundo < primeiro) {
-    return segundo;
+    return cat2;
   }
   return 'os gatos trombam e o rato foge';
 }
@@ -89,7 +89,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
-
+  
 }
 
 // Desafio 9
