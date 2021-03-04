@@ -3,37 +3,26 @@ function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
   }
-  return false 
- 
+  return false; 
 }
-console.log(compareTrue(true, true));
-
 // Desafio 2
 function calcArea(base, altura) {
   
   return (base * altura) / 2;
 }
-console.log(calcArea(10, 5));
-
 // Desafio 3
 function splitSentence(a) {
   let frase = a
-  return a.split(" ")
+  return a.split(' ');
 }
-
-console.log(splitSentence('foguete nao tem ré'))
-
 // Desafio 4
 function concatName(array) {
-  let conca = "";
+  let conca = '';
   conca = array[array.length-1];
-  conca = conca + ", " + array[array.length - array.length]
+  conca = conca + ', '  + array[array.length - array.length]
   
   return conca;   
 } 
-console.log(concatName(['thiago', 'jonas', 'marcos','captain']))
-
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
@@ -43,38 +32,32 @@ function footballPoints(wins, ties) {
     return pontos;
   }
 }
-console.log(footballPoints(14,8))
-
 // Desafio 6
 function highestCount() {
   
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
-
 // Desafio 8
 function fizzBuzz(numbers) {
      
   let string = [];
   for (i = 0; i < numbers.length; i += 1){
-    if (numbers[i]% 3 == 0 && numbers[i] % 5 == 0) {
+    if (numbers[i]% 3 === 0 && numbers[i] % 5 === 0) {
       string[i] = 'fizzBuzz';
-    } else if (numbers[i] % 3 == 0) {
+    } else if (numbers[i] % 3 === 0) {
       string[i]= 'fizz';
-    } else if (numbers[i] % 5 == 0) {
+    } else if (numbers[i] % 5 === 0) {
       string[i] = 'buzz';
     } else {
-      string[i]= 'bug!';
+      string[i] = 'bug!';
     }
 
   }
   return string
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 // Desafio 9
 function encode() {
   // seu código aqui
