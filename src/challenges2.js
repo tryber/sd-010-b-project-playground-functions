@@ -68,16 +68,23 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-// Desafio 13
-function hydrate() {
-  // let str = "1 cachaça, 5 cervejas e 1 copo de vinho"
-  // let array = str.split(" ")
-  // count = 0
-  // //console.log(array)
-  // for (let index = 0; index < array.length; index += 1) {
 
-  //   count += array[index]
-  // }
+// Desafio 13
+function hydrate(str) {
+
+  let string = str.split('');
+  let soma = 0;
+  let isnotspace = [];
+  for (key in string) {
+    if (string[key] != ' ') {
+      isnotspace.push(string[key]);
+    }
+  }
+  for (let index = 0; index < isnotspace.length; index += 1) {
+    if (!isNaN(isnotspace[index])) {
+    soma += parseInt(isnotspace[index]);
+  }}
+  return `${soma} copo de água`;
 }
 
 
@@ -88,4 +95,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
