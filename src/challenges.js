@@ -1,4 +1,4 @@
-/* // Desafio 1
+// Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
   let compara;
@@ -27,25 +27,31 @@ function splitSentence(str) {
 function concatName(fullName) {
   // seu código aqui
   let firstLastName = fullName[fullName.length - 1] + ', ' + fullName[0];
-
   return firstLastName;
 }
- */
-// Desafio 5
-function footballPoints(vitoria, empate) {
-  // seu código aqui
-  let wins = 3;
-  let ties = 1;
-  let points = (wins + ties);
 
-  return points;
-  }
-console.log(footballPoints(14, 8))
+// Desafio 5
+function footballPoints(wins, ties) {
+  // seu código aqui
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let check = 0;
+  for(let index = 0; index < array.length; index += 1) {
+    if (check < array[index]) {
+      check = array[index];
+    }
+  }
+  let amount = 0;
+  for(let index = 0; index < array.length; index += 1) {
+    if(array[index] === check) {
+      amount += 1;
+    }
+  }
+  return amount
 }
 
 // Desafio 7
