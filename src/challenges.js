@@ -105,16 +105,19 @@ function encode(string) {
   // seu código aqui
   let vogais = ['a, e, i, o, u']
   for (let index = 0; index < string; index += 1) {
-    vogais[index] = string[index];
-    return vogais;
+    if (vogais[index] = string[index]) {
+      vogais;
+    }
+    return string;
   }
 }
 function decode(string) {
   // seu código aqui
   let vogais = ['a, e, i, o, u']
   for (let index = 0; index < string; index += 1) {
-    string[index] = vogais[index];
-    return string;
+    if (string[index] = vogais[index]) {
+      string;
+    }
   }
   return string;
 }
