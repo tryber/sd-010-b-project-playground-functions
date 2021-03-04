@@ -52,28 +52,18 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
-  //   Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
-
-  // Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
-
-  // Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
-
-  // Retorne a string 'cat2' caso a função catAndMouse receba o parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
-
-  // Retorne a string 'cat1' caso a função catAndMouse receba o parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
-
+  /*foi utilizado o site https://developer.mozilla.org/pt-BR/ e 
+  https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
+   para entender o conceito de Math.abs*/
   let situation;
-  cat1 = mouse - cat1;
-  cat2 = mouse - cat2;
-  if (cat1 !== cat2) {
-    if (cat1 > cat2) {
-      situation = 'cat2';
-    } else {
-      situation = 'cat1';
-    }
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
+  if (cat1 > cat2) {
+    situation = 'cat2';
+  } else if (cat1 < cat2) {
+    situation = 'cat1';
   } else {
-    situation = 'os gatos trombam e o rato foge.';
+    situation = 'os gatos trombam e o rato foge';
   }
   return situation;
 }
