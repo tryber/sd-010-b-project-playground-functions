@@ -126,7 +126,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat2Distance < cat1Distance) { // se cat2 está mais perto de mouse que cat1
     result = 'cat2'; // 'cat2' é armazenada como resultado.
   } else { // senão cat1 e cat2 estão a mesma distância de mouse
-    result = 'os gatos trombam e o rato foge'; // 'os gatos trombam e o rato foge' é armazenada como resultado
+    // 'os gatos trombam e o rato foge' é armazenada como resultado
+    result = 'os gatos trombam e o rato foge';
   }
 
   return result; // retorna o resultado encontrado
@@ -203,10 +204,35 @@ function encode(string) {
 }
 
 /*
-  Essa função recebe uma string e retorna uma string com todas os números trocados por vogais minúsculas da seguinte forma: a -> 1; e -> 2; i -> 3; o -> 4; u -> 5
+  Essa função recebe um caracter e caso seja um número, será trocado por uma vogal minúscula da seguinte forma: 1 -> a; 2 -> e; 3 -> i; 4 -> o; 5 -> u
  */
-function decode() {
-  // seu código aqui
+function charDecode(character) {
+  // define um objeto code contendo as vogais como propriedades (chaves) e os números da troca como valores destas propriedades
+  let code = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+
+  let decodedChar; // decodedChar armazenará o resultado da troca
+
+  // se character não for um número então não haverá valor definido para esta propriedade em code
+  if (code[character] === undefined) {
+    decodedChar = character; // o caracter será mantido
+  } else { // caso contrário
+    decodedChar = code[character]; // o número será trocado por seu respectivo valor em code
+  }
+
+  return decodedChar; // retorna o caracter codificado
+}
+
+/*
+  Essa função recebe uma string e retorna uma string com todos os números trocados por vogais minúsculas da seguinte forma: a -> 1; e -> 2; i -> 3; o -> 4; u -> 5
+ */
+function decode(string) {
+  let decodedString = ''; // inicializa a string codificada com ''
+
+  for (const character of string) { // para cada caracter em string
+    decodedString += charDecode(character); // concatena o caracter decodificado em decodedString
+  }
+
+  return decodedString; // retorna a string codificada
 }
 
 module.exports = {
