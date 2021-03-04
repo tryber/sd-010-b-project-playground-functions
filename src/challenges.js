@@ -6,7 +6,9 @@ function compareTrue(a, b) {
   }
   else {
     return false;
+  }
 }
+console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
