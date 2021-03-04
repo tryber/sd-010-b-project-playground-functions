@@ -2,7 +2,7 @@
 function techList(tech, name) {
   tech.sort();
   let techArray = [];
-  if (tech === (0)) {
+  if (tech == (0)) {
     techArray = techArray.toString();
     techArray = 'Vazio!';
   } else {
@@ -15,7 +15,7 @@ function techList(tech, name) {
   }
   return techArray;
 }
-// console.log(techList(["React", "CSS", "Drifting", "Node"], "Leandro"));
+console.log(techList([], "Leandro"));
 
 // Desafio 11
 function generatePhoneNumber() {
