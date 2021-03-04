@@ -36,21 +36,17 @@ function generatePhoneNumber(arrNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let sumLinesAB = lineA+lineB;
-  let sumLinesAC = lineA+lineC;
-  let sumLinesBC = lineB+lineC;
+  let sumLinesAB = lineA + lineB;
+  let sumLinesAC = lineA + lineC;
+  let sumLinesBC = lineB + lineC;
   let diffLinesAB = Math.abs(lineA - lineB);
   let diffLinesAC = Math.abs(lineA - lineC);
   let diffLinesBC = Math.abs(lineB - lineC);
   let isTriangle;
 
-  if ((lineA > sumLinesBC) || (lineB > sumLinesAC) || (lineC > sumLinesAB)) {
-    isTriangle = false;
-  } else if ((lineA < diffLinesBC) || (lineB < diffLinesAC) || (lineC < diffLinesAB)) {
-    isTriangle = false;
-  } else {
-    isTriangle = true;
-  }
+  if ((lineA > sumLinesBC) || (lineB > sumLinesAC) || (lineC > sumLinesAB)) isTriangle = false;
+  else if ((lineA < diffLinesBC) || (lineB < diffLinesAC) || (lineC < diffLinesAB)) isTriangle = false;
+  else isTriangle = true;
   return isTriangle;
 }
 
