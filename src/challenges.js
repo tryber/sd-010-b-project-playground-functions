@@ -110,21 +110,28 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str1) {
-  let codigo1 = str1;
+  let codigo = str1;
   for (let index = 0; index < str1.length; index += 1) {
-    codigo1 = str1.replace('a', 1);
-    codigo1 = str1.replace('e', 2);
-    codigo1 = str1.replace('i', 3);
-    codigo1 = str1.replace('o', 4);
-    codigo1 = str1.replace('u', 5);
+    codigo = codigo.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4)
+      .replace('u', 5);
   }
-  return codigo1
+  return codigo;
 }
-console.log(encode("hi there!"));
 
-function decode() {
-  // seu código aqui
+/* Resposta : Na primeira alternativa de resolução tentei usar o metodo replace()
+metodo esse que faz tornar possivel iterar caracter de uma string e substituir com outro elemento ou uma propria string.Link da pesquisa:https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176. No primeiro envio não
+passou no requisito, pois estava usando o metodo da maneira errada. Persebi com o dote notetion consigo fazer o comando de uma maneira que da certo. */
+// console.log(encode('hi there!'));
+
+function decode(str2) {
+  let codigo = str2;
+  for (let index = 0; index < str2.length; index += 1) {
+    codigo = codigo.replace(1, 'a').replace(2, 'e').replace(3, 'i').replace(4, 'o')
+      .replace(5, 'u');
+  }
+  return codigo;
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
