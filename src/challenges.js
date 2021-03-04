@@ -70,8 +70,9 @@ function highestCount(numbers) {
 
  // console.log(highestCount([0,0,0]));
 // Desafio 7
-function catAndMouse(posMouse, posCat1, posCat2, dist) {
+function catAndMouse(posMouse, posCat1, posCat2) {
   // seu código aqui
+  let dist;
   if(posCat1 < posCat2){
     dist = posCat1 - posMouse;
     return "cat1"
@@ -83,7 +84,7 @@ function catAndMouse(posMouse, posCat1, posCat2, dist) {
   }
 }
 
-  console.log(catAndMouse(2,8,8));
+  console.log(catAndMouse(2,8,10));
 
 
 // Desafio 8
