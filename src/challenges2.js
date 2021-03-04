@@ -46,7 +46,7 @@ function generatePhoneNumber(numbersphone) {
     }
     if (numbersphone.length == 11 && istrue == false) {
       return `(${numbersphone[0]}${numbersphone[1]}) ${numbersphone[2]}${numbersphone[3]}${numbersphone[4]}${numbersphone[5]}${numbersphone[6]}-${numbersphone[7]}${numbersphone[8]}${numbersphone[9]}${numbersphone[10]}`
-  } else if (numbersphone.length > 11) {
+  } else if (numbersphone.length > 11 || numbersphone.length < 11) {
       return 'Array com tamanho incorreto.';
   }
 }
