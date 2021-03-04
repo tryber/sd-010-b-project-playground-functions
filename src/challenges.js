@@ -38,14 +38,18 @@ console.log(footballPoints());
 
 // Desafio 6
 function highestCount(numeros) {
-  let maiorNumero = [];
-  for (let i = 0; i < numeros.length; i ++) {
-      if (numeros[i] > maiorNumero) {
-        maiorNumero.push(numeros[i]);
-      }
+  numeros.sort();
+  let contador = 0;
+  for (let i = 0; i < numeros.length; i++){
+    if (numeros[i] >= numeros.length-1) {
+      contador+=1;
     }
-    return maiorNumero.length;
   }
+    return contador;
+}
+
+let numeros = [];
+console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse() {
