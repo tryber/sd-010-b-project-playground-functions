@@ -24,8 +24,6 @@ function concatName(name) {
   return (firstLast);
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = ((wins * 3) + (ties * 1));
@@ -41,9 +39,14 @@ function highestCount(qtdLarger) {
       high = num[i];
     }
   }
-  return (high);
+  let cont = 0;
+  for (let i = 0; i < num.length; i += 1) {
+    if (num[i] === high) {
+      cont = cont += 1;
+    }
+  }
+  return (cont);
 }
-console.log(highestCount([10, 12, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
