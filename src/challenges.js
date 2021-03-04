@@ -70,10 +70,7 @@ console.log(fizzBuzz(userNumbers));
 // Desafio 9
 function encode(word) {
   let codeArray = [];
-
-  for (let i = 0; i < word.length; i += 1) {
-    codeArray[i] = word[i];
-  }
+  for (let i = 0; i < word.length; i += 1) codeArray[i] = word[i];
   for (let j = 0; j < codeArray.length; j += 1) {
     if (codeArray[j] === 'a') codeArray[j] = '1';
     if (codeArray[j] === 'e') codeArray[j] = '2';
@@ -87,10 +84,7 @@ console.log(encode('Hi there!'));
 
 function decode(word) {
   let decodeArray = [];
-
-  for (let i = 0; i < word.length; i += 1) {
-    decodeArray[i] = word[i];
-  }
+  for (let i = 0; i < word.length; i += 1) decodeArray[i] = word[i];
   for (let j = 0; j < decodeArray.length; j += 1) {
     if (decodeArray[j] === '1') decodeArray[j] = 'a';
     if (decodeArray[j] === '2') decodeArray[j] = 'e';
