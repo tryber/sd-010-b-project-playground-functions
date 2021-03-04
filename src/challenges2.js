@@ -1,18 +1,18 @@
 // Desafio 10
-function techList (arrayTech, name) {
+function techList(arrayTech, name) {
   // seu código aqui
   let arrayKnowHow = [];
-  let order = arrayTech.sort() // coloca o array em ordem
-  let resp = ''
-  for (let t in order) {
-    let knowHow = {}; // cria um objeto para cada tech
-    knowHow.tech = order[t];
-    knowHow.name = name;
-    arrayKnowHow.push(knowHow); // adiciona o objeto no array
-  }
+  let order = arrayTech.sort(); // coloca o array em ordem
+  let resp = '';
   if (arrayTech == '') {
     resp = "Vazio!";
   } else {
+    for (let t in order) {
+      let knowHow = {}; // cria um objeto para cada tech
+      knowHow.tech = order[t];
+      knowHow.name = name;
+      arrayKnowHow.push(knowHow); // adiciona o objeto no array
+    }
     resp = arrayKnowHow;
   }
   return resp;
@@ -21,8 +21,8 @@ function techList (arrayTech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   // seu código aqui
-  let resp = ''
-  let numbers = arrayNumbers
+  let resp = '';
+  let numbers = arrayNumbers;
   // verificações
   let bigThenTree = false; // maior que três
   let negativeAndNine = false; // existe negativo e maior que 9
@@ -47,10 +47,10 @@ function generatePhoneNumber(arrayNumbers) {
   }
   // first condition
   if (numbers.length != 11) {
-    resp = "Array com tamanho incorreto."
+    resp = "Array com tamanho incorreto.";
   // second condition
   } else if (negativeAndNine === true || bigThenTree === true) {
-    resp = "não é possível gerar um número de telefone com esses valores"
+    resp = "não é possível gerar um número de telefone com esses valores";
   }
   // Numéro de telefone. Ps.: Estava com dúvidas nessa parte e encontrei no slack, porém compreendi a lógica.
   else {
