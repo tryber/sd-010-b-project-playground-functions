@@ -1,23 +1,23 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-return (a===b && b===a);
-}
-let d = compareTrue(true, false);
+return a === b && b === a;
+};
+let d = compareTrue(false, true);
 console.log(d);
 
 // Desafio 2
 function calcArea(base, heigth) {
   // seu código aqui
 return (base * heigth) / 2;
-}
+};
 console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(arryNames) {
   // seu código aqui
-return arryNames.split(' / ');
-}
+return arryNames.split("/");
+};
 console.log(splitSentence('go/trybe'));
 
 // Desafio 4
@@ -26,17 +26,17 @@ function concatName(arrNames) {
   let arryNames = ['captain', 'my', 'captain'];
   let result = arryNames.concat();
 return arrNames;
-}
+};
 console.log(concatName('captain, captain'));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
-}
+};
 // Desafio 6
-function highestCount() {
+function highestCount(valorMax) {
   // seu código aqui
 }
-
+ 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
