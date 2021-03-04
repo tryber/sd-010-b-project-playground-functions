@@ -84,9 +84,12 @@ function hydrate(str) {
     if (!isNaN(isnotspace[index])) {
     soma += parseInt(isnotspace[index]);
   }}
-  return `${soma} copo de água`;
+  if(soma <= 1){
+    return `${soma} copo de água`;
+} else {
+    return `${soma} copos de água`;
 }
-
+}
 
 
 module.exports = {
