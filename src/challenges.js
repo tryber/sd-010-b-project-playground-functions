@@ -40,10 +40,10 @@ function footballPoints(wins, ties) {
   let vitorias = wins * 3;
   let empates = ties * 1;
   let resultado = vitorias + empates;
-  if (wins == true) {
+  if (wins === true) {
     wins = vitorias;
   }
-  if (ties == true) {
+  if (ties === true) {
     ties = empates;
   }
   return resultado;
@@ -51,7 +51,7 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
 }
 
 // Desafio 7
