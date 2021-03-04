@@ -51,7 +51,23 @@ function generatePhoneNumber(arrayNumbers) {
   // second condition
   } else if (negativeAndNine === true || bigThenTree === true) {
     resp = "não é possível gerar um número de telefone com esses valores"
-  } 
+  }
+  // Numéro de telefone. Ps.: Estava com dúvidas nessa parte e encontrei no slack, porém compreendi a lógica.
+  else {
+    let phone = '';
+    for (let p in numbers) {
+      if (p == 0) {
+        phone = '(' + numbers[p]; // phone += ( + '1' -> phone = (1
+      } else if (p == 1) {
+        phone += numbers[p] + ') '; // phone += '2' + ) + ' ' ->  phone = (12) 
+      } else if (p == 6) {
+        phone += numbers[p]+ '-'; // phone += '7' + '-'
+      } else {
+        phone += numbers[p];  // phone = '3456' '8901'
+      }
+    }
+    resp = phone;
+  }
   return resp;
 }
 
