@@ -1,14 +1,14 @@
 // Desafio 10
 function techList(array, name) {
-  let techObject = []; 
-  if (array.length != 0){
-    for (let index in array.sort()){
-      techObject.push({tech: array[index], name});//Fonte: Consultei o PR do Vinicius Broda para saber como criar o Objeto pelo push. No caso usando "{}" englobando chaves e valores dentro.
+  let techObject = [];
+  if (array.length !== 0) {
+    for (let index in array.sort()) {
+      techObject.push({ tech: array[index], name });  //Fonte: Consultei o PR do Vinicius Broda para saber como criar o Objeto pelo push. No caso usando "{}" englobando chaves e valores dentro.
     }
     return techObject;
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
+  
 }
 
 // Desafio 11
