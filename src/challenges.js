@@ -89,13 +89,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0) {
-      return 'fizz';
-    } if (array[index] % 5 === 0) {
+      array = 'fizz';
+    } else if (array[index] % 5 === 0) {
       return 'buzz';
-    } if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      return 'fizzBuzz';
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      array = 'fizzBuzz';
+    } else {
+      array = 'bug!';
     }
-  } return 'bug!';
+  } return array;
 }
 
 // Desafio 9
