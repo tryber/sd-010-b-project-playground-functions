@@ -10,8 +10,8 @@ function techList (arrayTech, name) {
     knowHow.name = name;
     arrayKnowHow.push(knowHow); // adiciona o objeto no array
   }
-  if (order === []) {
-    resp = 'Vazio!';
+  if (arrayTech == '') {
+    resp = "Vazio!";
   } else {
     resp = arrayKnowHow;
   }
