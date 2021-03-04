@@ -103,7 +103,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let vogais = ['a, e, i, o, u']
+  let vogais = ['a, e, i, o, u'];
   for (let index = 0; index < string; index += 1) {
     if (vogais[index] = string[index]) {
       vogais;
@@ -113,7 +113,7 @@ function encode(string) {
 }
 function decode(string) {
   // seu código aqui
-  let vogais = ['a, e, i, o, u']
+  let vogais = ['a, e, i, o, u'];
   for (let index = 0; index < string; index += 1) {
     if (string[index] = vogais[index]) {
       string;
