@@ -59,7 +59,7 @@ function fizzBuzz(numbers) {
   for (let i in numbers) {
     if (numbers[i] % 15 === 0) result.push('fizzBuzz');
     else if (numbers[i] % 3 === 0) result.push('fizz');
-    else if (numbers[i] % 5 == 0) result.push('buzz');
+    else if (numbers[i] % 5 === 0) result.push('buzz');
     else result.push('bug!');
   }
   return result;
@@ -69,38 +69,38 @@ console.log(fizzBuzz(userNumbers));
 
 // Desafio 9
 function encode(word) {
-  let encode = [];
+  let codeArray = [];
 
-  for (let i = 0; i < word.length; i += 1) {
-    encode[i] = word[i];
+  for (let i in word) {
+    codeArray[i] = word[i];
   }
 
-  for (let j = 0; j < encode.length; j += 1) {
-    if (encode[j] === 'a') encode[j] = '1';
-    if (encode[j] === 'e') encode[j] = '2';
-    if (encode[j] === 'i') encode[j] = '3';
-    if (encode[j] === 'o') encode[j] = '4';
-    if (encode[j] === 'u') encode[j] = '5';
+  for (let j in codeArray) {
+    if (codeArray[j] === 'a') codeArray[j] = '1';
+    if (codeArray[j] === 'e') codeArray[j] = '2';
+    if (codeArray[j] === 'i') codeArray[j] = '3';
+    if (codeArray[j] === 'o') codeArray[j] = '4';
+    if (codeArray[j] === 'u') codeArray[j] = '5';
   }
-  return encode.join('');
+  return codeArray.join('');
 }
 console.log(encode('Hi there!'));
 
 function decode(word) {
-  let decode = [];
+  let decodeArray = [];
 
-  for (let i = 0; i < word.length; i += 1) {
-    decode[i] = word[i];
+  for (let i in word) {
+    decodeArray[i] = word[i];
   }
 
-  for (let j = 0; j < decode.length; j += 1) {
-    if (decode[j] === '1') decode[j] = 'a';
-    if (decode[j] === '2') decode[j] = 'e';
-    if (decode[j] === '3') decode[j] = 'i';
-    if (decode[j] === '4') decode[j] = 'o';
-    if (decode[j] === '5') decode[j] = 'u';
+  for (let j in decodeArray) {
+    if (decodeArray[j] === '1') decodeArray[j] = 'a';
+    if (decodeArray[j] === '2') decodeArray[j] = 'e';
+    if (decodeArray[j] === '3') decodeArray[j] = 'i';
+    if (decodeArray[j] === '4') decodeArray[j] = 'o';
+    if (decodeArray[j] === '5') decodeArray[j] = 'u';
   }
-  return decode.join('');
+  return decodeArray.join('');
 }
 console.log(decode('H3 th2r2!'));
 
@@ -109,8 +109,8 @@ module.exports = {
   catAndMouse,
   compareTrue,
   concatName,
-  decode,
-  encode,
+  decodeArray,
+  codeArray,
   fizzBuzz,
   footballPoints,
   highestCount,
