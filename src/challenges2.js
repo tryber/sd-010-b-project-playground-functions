@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(technology, nome) {
+function techList(technology, name) {
   let register = {}
   for (let index in technology) {
 
