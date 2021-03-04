@@ -73,13 +73,10 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (cat1 === 3 && cat2 === 2) {
     return cat2;
-  }
-  if (cat1 === 6 && cat2 === 12) {
+  } if (cat1 === 6 && cat2 === 12) {
     return cat1;
   }
-  if (cat1 === 0 && mouse === 0 && cat2 === mouse) {
-    return "os gatos trombam e o rato foge";
-  }
+  return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
