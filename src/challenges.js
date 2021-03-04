@@ -50,15 +50,19 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse <= cat1 && cat1 < cat2) {
+  if (mouse <= cat1 && cat1 < cat2 && cat1 != 0) {
     console.log('cat1');
-  } else if (mouse <= cat2 && cat2 < cat1) {
+  } else if (mouse <= cat2 && cat2 < cat1 && cat2 != 0) {
     console.log('cat2');
-    } else {
-      console.log('os gatos trombam e o rato foge');
-      } 
+  } else if (mouse > cat1 && cat1 < cat2 && cat1 != 0) {
+    console.log('cat1');
+  } else if (mouse > cat2 && cat2 < cat1 && cat2 != 0) {
+    console.log('cat2');
+  } else {
+    console.log('os gatos trombam e o rato foge');
+  }
 }
-catAndMouse();
+catAndMouse(1, 0, 2);
 
 // Desafio 8
 function fizzBuzz() {
