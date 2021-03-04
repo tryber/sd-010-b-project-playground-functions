@@ -1,24 +1,17 @@
 // Desafio 10
+// Refatorei o código após ver um exemplo do Emerson Saturino em uma thread no slack
 function techList(arrayList, name) {
-  let firstElementAux = '';
-  if(arrayList.length == 0){
+  let organizedArray = [];
+  if (arrayList.length == 0) {
     return 'Vazio!';
   } else {
     arrayList.sort();
-    let tamanhoArray = arrayList.length;
-    for(let index = 0; index < tamanhoArray; tamanhoArray -= 1){
-      firstElementAux = arrayList[index];
-      arrayList.shift()
-      arrayList.push(
-        {
-          tech: firstElementAux,
-          name: name,
-        })
+    for (let index in arrayList) {
+      organizedArray.push({tech: arrayList[index], name: name,})
     }
-    return arrayList;
   }
+  return organizedArray;
 }
-console.log(techList([], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
