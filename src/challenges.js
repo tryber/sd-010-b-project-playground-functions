@@ -49,21 +49,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Para resolver esse trecho, me baseei no repositório do aluno Matheus Bodra
+// https://github.com/tryber/sd-010-b-project-playground-functions/blob/matheus-bodra-project-playground-functions/src/challenges.js
 function highestCount(arrayNumbers) {
   let highNumber = 0;
-  let contador = 0;
-  for (i=0; i<arrayNumbers.length; i++) {
-      if (array[i]>highNumber) {
+  let highCount = 0;
+  for (i = 0; i < arrayNumbers.length; i += 1) {
+      if (array[i] > highNumber) {
           highNumber = arrayNumbers[i]
       }
   }
 
-  for (j=0; j<arrayNumbers.length; j++) {
+  for (j = 0; j <arrayNumbers.length; j += 1) {
       if (arrayNumbers[j] == highNumber) {
-          contador++
+          highCount++
       }
   }
-  return contador;
+  return highCount;
 }
 
 // Desafio 7
