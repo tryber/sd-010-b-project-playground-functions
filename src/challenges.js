@@ -84,9 +84,25 @@ developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/
 Global_Objects/Math/abs */
 
 // Desafio 8
-function fizzBuzz() {
-
+function fizzBuzz(arrayNumbers) {
+  let newArray = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 5 === 0 && arrayNumbers[index] % 3 === 0) {
+      arrayNumbers[index] = 'fizzBuzz';
+      newArray = arrayNumbers.slice();
+    }
+    if (arrayNumbers[index] % 3 === 0) {
+      arrayNumbers[index] = 'fizz';
+      newArray = arrayNumbers.slice();
+    }
+    if (arrayNumbers[index] % 5 === 0) {
+      arrayNumbers[index] = 'buzz';
+      newArray = arrayNumbers.slice();
+    } 
+  }
+  return newArray;
 }
+console.log(fizzBuzz([2, 15]));
 
 // Desafio 9
 function encode() {
