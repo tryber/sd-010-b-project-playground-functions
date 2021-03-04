@@ -39,13 +39,20 @@ function generatePhoneNumber(a) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  //escreva seu código aqui
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(umaFrase) {
+  let fatiada = umaFrase.split('');
+  let soma = sum(fatiada);
+  let resultado = pluralSingular(soma);
+  return resultado;
 }
+let frase1 = '1 cerveja';
+let frase2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
+console.log(hydrate(frase2));
+console.log(hydrate(frase1));
 
 module.exports = {
   generatePhoneNumber,
