@@ -49,17 +49,18 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let posicao = 0;
+function catAndMouse (mouse, cat1, cat2) {
   if (mouse <= cat1 && cat1 < cat2) {
     console.log ('cat1');
-  }  else if (mouse <= cat2 && cat2 < cat1) {
+  } else if (mouse <= cat2 && cat2 < cat1) {
     console.log('cat2');
-  } else { console.log('os gatos trombam e o rato foge');
+  } else {
+    console.log('os gatos trombam e o rato foge');
   } 
 return console.log();
 }
-catAndMouse(1, 1, 1);
+catAndMouse();
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
