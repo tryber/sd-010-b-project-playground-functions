@@ -69,7 +69,7 @@ function addPhoneStructure(string) {
   if (string.length === 4) {
     string += ' ';
   }
-  if (string.length === 9) {
+  if (string.length === 10) {
     string += '-';
   }
   return string;
