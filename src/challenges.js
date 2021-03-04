@@ -23,10 +23,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(listaNomes) {
-  let conc = (listaNomes[listaNomes.length-1] + ", " + listaNomes[0]);
+  let conc = (listaNomes[listaNomes.length - 1] + ', ' + listaNomes[0]);
   return conc;
 }
-  let listaNomes = [];
+let listaNomes = [];
 console.log(concatName(listaNomes));
 
 // Desafio 5
@@ -34,12 +34,18 @@ function footballPoints(wins, ties) {
   let pontuacao = ((wins * 3) + ties);
   return pontuacao;
 }
-console.log(footballPoints(14, 8));
+console.log(footballPoints());
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numeros) {
+  let maiorNumero = [];
+  for (let i = 0; i < numeros.length; i ++) {
+      if (numeros[i] > maiorNumero) {
+        maiorNumero.push(numeros[i]);
+      }
+    }
+    return maiorNumero.length;
+  }
 
 // Desafio 7
 function catAndMouse() {
