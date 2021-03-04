@@ -77,28 +77,28 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz(array, string) {
-  string = "";
+function fizzBuzz(array) {
+  let string = [];
   for (let index = 0; index < array.length; index += 1){
     if (array[index] %3 === 0 && array[index] %5 === 0){
-      string = "FizzBuzz";
+      string.push("FizzBuzz");
     } 
     
     else if (array[index] %3 === 0){
-      string = "Fizz";
+      string.push("Fizz");
     } 
     
     else if (array[index] %5 === 0){
-      string = "Buzzz";
+      string.push("Buzzz");
     }
 
      else {
-      string = "Bug";
+      string.push("Bug");
     }
   }
   return string;
 }
-console.log(fizzBuzz([ 7, 9]));
+console.log(fizzBuzz([ 2, 15, 7, 9, 45]));
 
 
 
