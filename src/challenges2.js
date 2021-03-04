@@ -17,9 +17,9 @@ function techList(tecnologias, nome) {
 // Desafio 11
 function testaRepeticoes(phoneNumber) {
   let isValid = true;
-  for (let index = 0; index <= phoneNumber.length; index += 1) {
+  for (let index = 0; index < phoneNumber.length; index += 1) {
     let cont = 0;
-    for (let indexDois = 0; indexDois <= phoneNumber.length; indexDois += 1) {
+    for (let indexDois = 0; indexDois < phoneNumber.length; indexDois += 1) {
       if (phoneNumber[index] === phoneNumber[indexDois]) {
         cont += 1;
       }
@@ -36,7 +36,7 @@ function generatePhoneNumber(phoneNumber) {
   let num = phoneNumber;
   let saida;
   if (num.length === 11) {
-    for (let index = 0; index <= num.length; index += 1) {
+    for (let index = 0; index < num.length; index += 1) {
       if (num[index] < 0 || num[index] > 9 || testaRepeticoes(num) === false) {
         saida = 'não é possível gerar um número de telefone com esses valores';
         break;
@@ -49,7 +49,7 @@ function generatePhoneNumber(phoneNumber) {
   }
   return saida;
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 1, 8, 9, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {

@@ -1,12 +1,6 @@
 // Desafio 1
 function compareTrue(valorUm, valorDois) {
-  let resultado;
-  if ((valorUm) && (valorDois)) {
-    resultado = true;
-  } else {
-    resultado = false;
-  }
-  return resultado;
+  return valorUm && valorDois;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -64,21 +58,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(4, 2, 5));
 // Desafio 8
+
+function Verifica(number) {
+  if (number % 3 === 0 && number % 2 !== 0 && number % 5 !== 0) {
+    return 'fizz';
+  } else if (number === 5 || number === 25) {
+    return 'buzz';
+  } else if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (number % 3 !== 0 && number % 5 !== 0) {
+    return 'bug!';
+  }
+}
+
 function fizzBuzz(arrayNumber) {
   let arraySaida = [];
-  for (let key in arrayNumber) {
-    if (arrayNumber[key] % 3 === 0 && arrayNumber[key] % 2 !== 0 && arrayNumber[key] % 5 !== 0) {
-      arraySaida[key] = 'fizz';
-    } else if (arrayNumber[key] === 5 || arrayNumber[key] === 25) {
-      arraySaida[key] = 'buzz';
-    } else if (arrayNumber[key] % 3 === 0 && arrayNumber[key] % 5 === 0) {
-      arraySaida[key] = 'fizzBuzz';
-    } else if (arrayNumber[key] % 3 !== 0 && arrayNumber[key] % 5 !== 0) {
-      arraySaida[key] = 'bug!';
-    }
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    arraySaida[index] = Verifica(arrayNumber[index]);
   }
   return arraySaida;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode(word) {
   let resultado = word;
