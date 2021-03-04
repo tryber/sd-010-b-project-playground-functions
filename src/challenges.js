@@ -128,12 +128,41 @@ function fizzBuzz(arrayInicial) {
 //console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+function encode(stringEncode) {
   // seu código aqui
+  let novaString = stringEncode;
+
+     for (i = 0 ; i <= novaString.length ; i++){
+
+      if(novaString[i] === 'a'){
+        novaString = novaString.replace('a', '1');
+
+      } else if(novaString[i] === 'e'){
+
+        novaString = novaString.replace('e','2');
+
+      } else if(novaString[i] === 'i'){
+
+        novaString = novaString.replace('i','3');
+
+      } else if(novaString[i] === 'o'){
+
+        novaString = novaString.replace('o','4');
+
+      } else if(novaString[i] === 'u'){
+        novaString = novaString.replace('u','5');
+      }
+   }
+  
+  return novaString;
+ 
 }
+console.log(encode('a e i o u'));
+
 
 function decode() {
   // seu código aqui
+  
 }
 
 module.exports = {
