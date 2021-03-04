@@ -5,7 +5,7 @@ function techList(array, name) {
   let objeto = {};
   let resultado;
   array.sort();
-  if (array.length == 0) {
+  if (array.length === 0) {
     resultado = "Vazio!";
   } else {
     for (let index = 0; index < array.length; index += 1) {
@@ -52,11 +52,11 @@ function generatePhoneNumber(array) {
   let caracteres = '() -'; 
   let posicaoCaract = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (index == 0 || index == 2) {
+    if (index === 0 || index === 2) {
       numero = numero + caracteres[posicaoCaract];
       posicaoCaract = posicaoCaract + 1;
     } 
-    if (index == 2 || index == 7) {
+    if (index === 2 || index === 7) {
       numero = numero + caracteres[posicaoCaract];
       posicaoCaract = posicaoCaract + 1;
     } 
@@ -91,8 +91,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(stringBar) {
   // seu código aqui
+  // pega os numero e volta em forma de string
+  // var res = stringBar.replace(/\D/g, ""); // 667000
+  let reg = /\d+/g;
+  let soNumb = stringBar.match(reg);
+  let soma = 0;
+  for (let index = 0; index < soNumb.length; index += 1){
+    soma = soma + parseInt(soNumb[index]);
+  }
+  return soma + " copos de água";
 }
 
 module.exports = {
@@ -101,4 +110,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-//console.log(triangleCheck(10,14,8));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
