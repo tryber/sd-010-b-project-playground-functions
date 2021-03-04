@@ -101,6 +101,7 @@ function fizzBuzz(array) {
   // seu código aqui
 }
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 function findVowel(char) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < vowels.length; index += 1) {
