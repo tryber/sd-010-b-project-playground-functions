@@ -45,7 +45,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse() {
 
 }
 
