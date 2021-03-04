@@ -22,7 +22,7 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  if (array.length > 11) {
+  if (array.length != 11) {
     return "Array com tamanho incorreto.";
   }
   // Funcao para retornar o menor valor de um array
@@ -81,4 +81,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
- console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 1, 1, 4, 1,]));
+console.log(generatePhoneNumber([]));
