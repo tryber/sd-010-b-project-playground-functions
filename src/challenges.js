@@ -23,7 +23,7 @@ function calcArea(base, height) {
   }
 }
 // Desafio 3
-function splitSentence(string) {
+function splitSentence() {
   // seu código aqui
   switch (splitSentence) {
   case 'go Trybe':
