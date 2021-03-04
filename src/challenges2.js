@@ -14,7 +14,7 @@ function techList(array, name) {
       };
       finalArray.push(objetoTech);
     }
-    console.log (finalArray)
+    return(finalArray);
   }
 }
 
