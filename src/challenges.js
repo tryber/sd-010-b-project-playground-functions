@@ -24,8 +24,8 @@ function splitSentence(sentence) {
 function concatName(sentence) {
   let firstWord = sentence[0];
   let lastWord = sentence[sentence.length - 1];
-  return lastWord + ", " + firstWord;
-  }
+  return lastWord + ', ' + firstWord;
+}
 
   // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,7 +44,7 @@ function highestCount(arrayNumbers) {
   }
   for (let index = 0; index < arrayNumbers.length; index++) {
     if (highestNumber === arrayNumbers[index]) {
-      count++;
+      count += count;
     }
   }
   return count;
@@ -54,14 +54,16 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(mouse - cat1);
-  let distanceCat2 = Math.abs(mouse - cat2);
-  
-  if (distanceCat1 > distanceCat2) 
-  return 'cat2';
-  if (distanceCat2 > distanceCat1)
-  return 'cat1';
-  if (distanceCat1 === distanceCat2)
-  return 'os gatos trombam e o rato foge';
+  let distanceCat2 = Math.abs(mouse - cat2);  
+  if (distanceCat1 > distanceCat2) {
+    return 'cat2';
+  }
+  if (distanceCat2 > distanceCat1) {
+    return 'cat1';
+  }
+  if (distanceCat1 === distanceCat2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
@@ -81,14 +83,40 @@ function fizzBuzz(arrayNumbers) {
   return resposta;
 }
 
-console.log(fizzBuzz([9,25]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(sentence) {
+  let arraySentense = sentence.split('');
+  for (let index = 0; index < arraySentense.length; index += 1) {
+    if (arraySentense[index] === 'a') {
+      arraySentense[index] = 1;
+    } else if (arraySentense[index] === 'e') {
+      arraySentense[index] = 2;
+    } else if(arraySentense[index] === 'i') {
+      arraySentense[index] = 3;
+    } else if (arraySentense[index] === 'o') {
+      arraySentense[index] = 4;
+    } else if (arraySentense[index] === 'u') {
+      arraySentense[index] = 5
+    }
+  }
+  return arraySentense.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(sentence) {
+  let arraySentense = sentence.split('');
+  for (let index = 0; index < arraySentense.length; index += 1) {
+    if (arraySentense[index] === '1') {
+      arraySentense[index] = 'a';
+    } else if (arraySentense[index] === '2') {
+      arraySentense[index] = 'e';
+    } else if(arraySentense[index] === '3') {
+      arraySentense[index] = 'i';
+    } else if (arraySentense[index] === '4') {
+      arraySentense[index] = 'o';
+    } else if (arraySentense[index] === '5') {
+      arraySentense[index] = 'u';
+    }
+  }
+  return arraySentense.join('');
 }
 
 module.exports = {
