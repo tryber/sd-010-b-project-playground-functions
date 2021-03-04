@@ -103,23 +103,23 @@ function fizzBuzz(arrayInicial) {
   let arrayFinal = [];
 
   for (const i in arrayInicial) {
-   
-    if(arrayInicial[i] % 3 == 0 && arrayInicial[i] % 5 == 0){
+
+    if (arrayInicial[i] % 3 == 0 && arrayInicial[i] % 5 == 0) {
 
       arrayFinal.push('fizzBuzz');
 
-    } else if(arrayInicial[i] % 3 == 0){
+    } else if (arrayInicial[i] % 3 == 0) {
 
       arrayFinal.push('fizz');
 
-    } else if(arrayInicial[i] % 5 == 0) {
+    } else if (arrayInicial[i] % 5 == 0) {
 
       arrayFinal.push('buzz');
 
     } else {
       arrayFinal.push('bug!')
-    } 
-   
+    }
+
   }
   return arrayFinal;
 }
@@ -132,37 +132,36 @@ function encode(stringEncode) {
   // seu código aqui
   let novaString = stringEncode;
 
-     for (i = 0 ; i <= novaString.length ; i++){
+  for (i = 0; i <= novaString.length; i++) {
 
-      if(novaString[i] === 'a'){
-        novaString = novaString.replace('a', '1');
+    if (novaString[i] === 'a') {
+      novaString = novaString.replace('a', '1');
 
-      } else if(novaString[i] === 'e'){
+    } else if (novaString[i] === 'e') {
 
-        novaString = novaString.replace('e','2');
+      novaString = novaString.replace('e', '2');
 
-      } else if(novaString[i] === 'i'){
+    } else if (novaString[i] === 'i') {
 
-        novaString = novaString.replace('i','3');
+      novaString = novaString.replace('i', '3');
 
-      } else if(novaString[i] === 'o'){
+    } else if (novaString[i] === 'o') {
 
-        novaString = novaString.replace('o','4');
+      novaString = novaString.replace('o', '4');
 
-      } else if(novaString[i] === 'u'){
-        novaString = novaString.replace('u','5');
-      }
-   }
-  
+    } else if (novaString[i] === 'u') {
+      novaString = novaString.replace('u', '5');
+    }
+  }
+
   return novaString;
- 
-}
-console.log(encode('hello'));
 
+}
+//console.log(encode('hello'));
 
 function decode() {
   // seu código aqui
-  
+
 }
 
 module.exports = {
