@@ -85,25 +85,23 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(message) {
   let codedMessagem = '';
-  for (let index in message) {
-    switch (message[index]) {
-      case 'a':
-        codedMessagem = codedMessagem + '1';
-        break;
-      case 'e':
-        codedMessagem = codedMessagem + '2';
-        break;
-      case 'i':
-        codedMessagem = codedMessagem + '3';
-        break;
-      case 'o':
-        codedMessagem = codedMessagem + '4';
-        break;
-      case 'u':
-        codedMessagem = codedMessagem + '5';
-        break;
-      default:
-        codedMessagem = codedMessagem + message[index];
+  let translation = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let index = 0; index < message.length; index += 1) {
+    let counter = 0;
+    for (let key in translation) {
+      if (message[index] === key) {
+        codedMessagem += translation[message[index]];
+        counter += 1;
+      } else if (key === 'u' && counter < 1) { //se depois de ter verificado todas as key e nao for encontrado nenhuma igual, ai sim segue para o código.
+        codedMessagem += message[index];
+        counter += 1;
+      }
     }
   }
   return codedMessagem;
