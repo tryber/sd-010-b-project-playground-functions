@@ -66,6 +66,9 @@ function addPhoneStructure(string) {
   if (string.length === 3) {
     string += ')';
   }
+  if (string.length === 4) {
+    string += ' ';
+  }
   if (string.length === 9) {
     string += '-';
   }
