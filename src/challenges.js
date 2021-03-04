@@ -70,16 +70,16 @@ function highestCount(numbers) {
 
  // console.log(highestCount([0,0,0]));
 // Desafio 7
-function catAndMouse(posMouse, posCat1, posCat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let dist;
-  if(posCat1 < posCat2){
-    dist = posCat1 - posMouse;
+  if(cat1 < cat2){
+    dist = cat1 - mouse;
     return "cat1"
-  }else if(posCat2 < posCat1){
-    dist = posCat2 - posMouse;
+  }else if(cat2 < cat1){
+    dist = cat2 - mouse;
     return "cat2"
-  }else if(posCat1 == posCat2){
+  }else if(cat1 == cat2){
     return "os gatos batem e o rato foge"
   }
 }
