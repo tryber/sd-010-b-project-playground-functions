@@ -19,20 +19,21 @@ function splitSentence(content) {
 }
 
 // Desafio 4
-function concatName() {
-  // i'll try again later //
+function concatName(thingy) {
+  return thingy[-1] && thingy[0];
 }
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let win = wins * 3;
   return win + ties;
 }
-console.log(footballPoints(14, 8));
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
 }
-
+console.log(highestCount());
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
