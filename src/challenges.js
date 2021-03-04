@@ -104,7 +104,7 @@ function fizzBuzz(array) {
 function encode(string) {
   // seu código aqui
   let vogais = ['a, e, i, o, u']
-  for (let index = 0; index < string; index += 1) {
+  for (let index = 0; index < string.length; index += 1) {
     vogais[index] = string[index];
     return vogais;
   }
@@ -112,7 +112,7 @@ function encode(string) {
 function decode(string) {
   // seu código aqui
   let vogais = ['a, e, i, o, u']
-  for (let index = 0; index < string; index += 1) {
+  for (let index = 0; index < vogais.length; index += 1) {
     string[index] = vogais[index];
     return string;
   }
