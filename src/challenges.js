@@ -129,7 +129,6 @@ console.log(encode('hi there!'))
 function decode() {
  }
 
-
 module.exports = {
   calcArea,
   catAndMouse,
