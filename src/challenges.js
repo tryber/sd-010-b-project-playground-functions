@@ -20,9 +20,9 @@ console.log(splitSentence('vamo que vamo!'));
 
 // Desafio 4
 function concatName(word) {
-  return `${word[word.length - 1]} ${word[0]}`;
+  return `${word[word.length - 1]}, ${word[0]}`;
 }
-let userWord = ['foguete', 'não', 'tem', 'ré'];
+let userWord = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(userWord));
 
 // Desafio 5
@@ -33,7 +33,6 @@ console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount(numbers) {
-  numbers = [9, 1, 2, 3, 9, 5, 7];
   let highNumber = 0; let counter = 0;
 
   for (let i = 0; i < numbers.length; i += 1) {
@@ -42,14 +41,15 @@ function highestCount(numbers) {
   }
   return counter;
 }
-console.log(highestCount());
+numbers = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(numbers));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = (cat1 - mouse); let dist2 = (cat2 - mouse);
   if (dist1 < dist2) return 'cat1';
   if (dist2 < dist1) return 'cat2';
-  if (dist1 === dist2) return 'The cat crashs and the mouse runs away';
+  if (dist1 === dist2) return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(2, 4, 4));
 
