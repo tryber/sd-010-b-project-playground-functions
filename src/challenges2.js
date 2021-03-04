@@ -41,11 +41,11 @@ function generatePhoneNumber(numbers) {
   for (let index = 0; index < 2; index += 1) {
     phoneNumber += numbers[index];
   }
-  phoneNumber = phoneNumber + ') ';
+  phoneNumber += ') ';
   for (let index = 2; index < 7; index += 1) {
     phoneNumber += numbers[index];
   }
-  phoneNumber = phoneNumber + '-';
+  phoneNumber += '-';
   for (let index = 7; index < numbers.length; index += 1) {
     phoneNumber += numbers[index];
   }
@@ -66,8 +66,8 @@ function hydrate(drinking) {
   let drinkingList = drinking;
   let alcoholCounter = drinkingList.match(regex);
   let waterCups = 0;
-  for (let index in alcoholCounter) {
-    waterCups += parseInt(alcoholCounter[index]);
+  for (let index = 0; index < alcoholCounter.length; index += 1) {
+    waterCups += parseInt(alcoholCounter[index], 10);
   }
   if (waterCups === 1) {
     return `${waterCups} copo de água`;
