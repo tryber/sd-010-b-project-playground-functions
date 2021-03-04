@@ -69,7 +69,7 @@ function highestCount(array) {
       contador += 1;
     }
   }
-  return maiorNumero;
+  return contador;
 }
 
 // Desafio 7
