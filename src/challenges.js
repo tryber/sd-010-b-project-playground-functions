@@ -59,18 +59,19 @@ function catAndMouse(cat1, cat2, mouse) {
 function fizzBuzz(numArray) {
   let resul = [];
   for(let index = 0; index < numArray.length; index += 1) {
-    if (numArray[index] % 3 === 0) {
-      resul.push('fizz');
+    if ((numArray[index] % 3 === 0) && (numArray[index] % 5 === 0)) {
+      resul.push('fizzBuzz');      
     } else if(numArray[index] % 5 === 0) {
       resul.push('buzz');
-    } else if((numArray[index] % 3 === 0) && (numArray[index] % 5 === 0)) {
-      resul.push('fizzBuzz');
+    } else if(numArray[index] % 3 === 0) {
+      resul.push('fizz');
     } else {
       resul.push('bug!');
     }
   }  
   return resul;
 }
+//console.log(fizzBuzz([2, 15, 7, 9, 45, 45, 15, 2]));
 // Desafio 9
  function encode(vowel) { // (Apredi como usar funcão replace) https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
   return vowel.replace(/a/g,"1")
