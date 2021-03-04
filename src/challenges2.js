@@ -49,12 +49,11 @@ function generatePhoneNumber(phoneNumber) {
   }
   return saida;
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 1, 8, 9, 0, 7]));
+console.log(generatePhoneNumber([0, 7, 3, 4, 5, 7, 1, 8, 9, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let istriangle = false;
-  let teste = false;
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     istriangle = true;
   } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {

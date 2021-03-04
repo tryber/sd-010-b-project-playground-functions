@@ -62,11 +62,14 @@ console.log(catAndMouse(4, 2, 5));
 function Verifica(number) {
   if (number % 3 === 0 && number % 2 !== 0 && number % 5 !== 0) {
     return 'fizz';
-  } else if (number === 5 || number === 25) {
+  }
+  if (number === 5 || number === 25) {
     return 'buzz';
-  } else if (number % 3 === 0 && number % 5 === 0) {
+  }
+  if (number % 3 === 0 && number % 5 === 0) {
     return 'fizzBuzz';
-  } else if (number % 3 !== 0 && number % 5 !== 0) {
+  }
+  if (number % 3 !== 0 && number % 5 !== 0) {
     return 'bug!';
   }
 }
