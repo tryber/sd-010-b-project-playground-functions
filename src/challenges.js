@@ -64,6 +64,7 @@ function highestCount(arrayOfNumbers = []) {
           highCount++
       }
 }
+}
 
 // Desafio 7
 function catAndMouse() {
