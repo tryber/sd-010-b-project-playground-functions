@@ -75,7 +75,7 @@ function fizzBuzz(numbers) {
     } else if (numbers[key] % 3 === 0) {
       resultado.push("fizz");
     } else {
-      resultado.push("bug");
+      resultado.push("bug!");
     }
   }
   return resultado;
