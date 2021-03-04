@@ -11,8 +11,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(word) {
-  let result = word.split(' ');
-  return result;
+  return result = word.split(' ');
 }
 
 // Desafio 4
@@ -30,29 +29,27 @@ function highestCount(numbers) {
   let highNumber = 0; let count = 0;
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] >= highNumber) highNumber = numbers[i];
-  }
-  for (let j = 0; j < numbers.length; j += 1) {
-  if (highNumber === numbers[j]) count += 1;
-  }
-  return count;
+  } for (let j = 0; j < numbers.length; j += 1) {
+      if (highNumber === numbers[j]) count += 1;
+  } return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = Math.abs(cat1 - mouse); dist2 = Math.abs(cat2 - mouse);
+  let dist1 = Math.abs(cat1 - mouse); let dist2 = Math.abs(cat2 - mouse);
   if (dist1 === dist2) return 'os gatos trombam e o rato foge';
-  else if (dist1 < dist2) return 'cat1';
-  else if (dist2 < dist1) return 'cat2';
+    else if (dist1 < dist2) return 'cat1';
+  return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  for (let i in numbers) {
-    result.push(
-    numbers[i] % 15 === 0 ? 'fizzBuzz':
-    numbers[i] % 3 === 0 ? 'fizz':
-    numbers[i] % 5 === 0 ? 'buzz': 'bug!');
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 15 === 0) result.push('fizzBuzz');
+    else if (numbers[i] % 5 === 0) result.push('fizz');
+    else if (numbers[i] % 3 === 0) result.push('buzz');
+    else result.push('bug!');
   } return result;
 }
 
@@ -60,8 +57,7 @@ function fizzBuzz(numbers) {
 function encode(word) {
   for (let i = 0; i < word.length; i += 1) {
     word = word.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5)
-  }
-  return word;
+  } return word;
 }
 
 function decode(word) {
