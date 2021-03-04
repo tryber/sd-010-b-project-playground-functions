@@ -19,7 +19,7 @@ function splitSentence(anyString) {
     if (anyString[index] === ' ') {
       array.push(word);
       word = '';
-    } else if (index == (anyString.length - 1)) {
+    } else if (index === (anyString.length - 1)) {
       word += anyString[index];
       array.push(word);
     } else {
@@ -34,9 +34,9 @@ function concatName(arrayString) {
   let firstItem = '';
   let lastItem = '';
   for (let index in arrayString) {
-    if (index == 0) {
+    if (index === 0) {
       firstItem = arrayString[index];
-    } else if (index == (arrayString.length - 1)) {
+    } else if (index === NavigationPreloadManager,(arrayString.length - 1)) {
       lastItem = arrayString[index];
     }
   }
