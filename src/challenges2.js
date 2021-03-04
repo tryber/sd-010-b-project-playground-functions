@@ -101,7 +101,10 @@ function hydrate(stringBar) {
   for (let index = 0; index < soNumb.length; index += 1){
     soma = soma + parseInt(soNumb[index]);
   }
-  return soma + " copo de água";
+  if (soma === 1) {
+    return soma + " copo de água";
+  }
+  return soma + " copos de água";
 }
 
 module.exports = {
