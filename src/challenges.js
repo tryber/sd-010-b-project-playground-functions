@@ -6,12 +6,6 @@ function compareTrue(booleano1, booleano2) {
   return booleano1 && booleano2;
 }
 
-// console.log(`compareTrue(true, true) = ${compareTrue(true, true)}`);
-
-// console.log(`compareTrue(true, false) = ${compareTrue(true, false)}`);
-
-// console.log(`compareTrue(false, false) = ${compareTrue(false, false)}`);
-
 // Desafio 2
 /*
   Essa função recebe dois valores numéricos, a base e altura de um triangulo, calcula e retorna a area deste triangulo.
@@ -19,10 +13,6 @@ function compareTrue(booleano1, booleano2) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-
-// console.log(`calcArea(3, 4) = ${calcArea(3, 4)}`);
-
-// console.log(`calcArea(2, 3) = ${calcArea(2, 3)}`);
 
 // Desafio 3
 /*
@@ -49,16 +39,6 @@ function splitSentence(sentence) {
   return result;
 }
 
-// let resp = splitSentence('');
-// console.log(`splitSentence( ) = ${splitSentence('')}`);
-// console.log(resp.length);
-
-// console.log(`splitSentence(go Trybe) = ${splitSentence('go Trybe')}`);
-
-// console.log(`splitSentence(vamo que vamo) = ${splitSentence('vamo que vamo')}`);
-
-// console.log(`splitSentence(foguete) = ${splitSentence('foguete')}`);
-
 // Desafio 4
 /*
   Essa função recebe um array de strings e retorna uma string no formato 'ultimo_item, primeiro_item', sendo que primeiro_item e ultimo_item são a primeira e ultima posição do array recebido, respectivamente.
@@ -70,15 +50,6 @@ function concatName(fullArray) {
   return `${lastItem}, ${firstItem}`; // retorna uma string no formato 'ultimo_item, primeiro_item'
 }
 
-// let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-// console.log(`concatName(${array}) = ${concatName(array)}`);
-
-// array = ['foguete', 'não', 'tem', 'ré'];
-// console.log(`concatName(${array}) = ${concatName(array)}`);
-
-// array = ['captain', 'my', 'captain'];
-// console.log(`concatName(${array}) = ${concatName(array)}`);
-
 // Desafio 5
 /*
   Essa função calcula a quantidade de pontos que um time marcou em um campeonato. Para isso, recebe o número de vitórias (wins) e de empates (ties), calcula e retorna a quantidade de pontos marcados sendo que cada vitória vale 3 pontos e cada empate, 1 ponto.
@@ -89,12 +60,6 @@ function footballPoints(wins, ties) {
   let totalPoints = winsPoints + tiesPoints; // calcula a quantidade total de pontos marcados
   return totalPoints;
 }
-
-// console.log(`footballPoints(14, 8) = ${footballPoints(14, 8)} pontos`);
-
-// console.log(`footballPoints(1, 2) = ${footballPoints(1, 2)} pontos`);
-
-// console.log(`footballPoints(0, 0) = ${footballPoints(0, 0)} pontos`);
 
 // Desafio 6
 /*
@@ -137,15 +102,6 @@ function highestCount(array) {
   return repetitionCount; // retorna a quantidade de vezes que o maior número foi encontrado
 }
 
-// let array = [9, 1, 2, 3, 9, 5, 7];
-// console.log(`highestCount(${array}) = ${highestCount(array)}`);
-
-// array = [0, 4, 4, 4, 9, 2, 1];
-// console.log(`highestCount(${array}) = ${highestCount(array)}`);
-
-// array = [0, 0, 0];
-// console.log(`highestCount(${array}) = ${highestCount(array)}`);
-
 // Desafio 7
 /*
   Essa função recebe duas posições em uma reta e retorna a distância entre elas.
@@ -179,27 +135,53 @@ function catAndMouse(mouse, cat1, cat2) {
   return result; // retorna o resultado encontrado
 }
 
-// console.log(`catAndMouse(0, 3, 2) = ${catAndMouse(0, 3, 2)}`);
-
-// console.log(`catAndMouse(0, 6, 12) = ${catAndMouse(0, 6, 12)}`);
-
-// console.log(`catAndMouse(0, 15, 15) = ${catAndMouse(0, 15, 15)}`);
-
-// console.log(`catAndMouse(0, -3, -2) = ${catAndMouse(0, -3, -2)}`);
-
-// console.log(`catAndMouse(0, -6, -12) = ${catAndMouse(0, -6, -12)}`);
-
-// console.log(`catAndMouse(0, -15, -15) = ${catAndMouse(0, -15, -15)}`);
-
-// console.log(`catAndMouse(0, -3, 2) = ${catAndMouse(0, -3, 2)}`);
-
-// console.log(`catAndMouse(0, -6, 12) = ${catAndMouse(0, -6, 12)}`);
-
-// console.log(`catAndMouse(0, -15, 15) = ${catAndMouse(0, -15, 15)}`);
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+/*
+  Essa função recebe um número e retorna uma string, sendo que o número será avaliado da seguinte forma:
+  - se divisível apenas por 3, retorne uma string "fizz";
+  - se divisível apenas por 5, retorne uma string "buzz";
+  - se divisível por 3 e 5, retorne a string "fizzBuzz";
+  - caso contrário, retorne a string "bug!";
+ */
+function fizzBuzzString(number) {
+  let result = ''; // inicializa a string de resultado
+
+  if ((number % 15) === 0) { // se número divisível por 3 e 5, isto é, 15
+    result += 'fizzBuzz'; // armazena a string "fizzBuzz" em result
+  } else if ((number % 3) === 0) { // se número divisível por 3
+    result += 'fizz'; // armazena a string "fizz" em result
+  } else if ((number % 5) === 0) { // se número divisível por 5
+    result += 'buzz'; // armazena a string "buzz" em result
+  } else { // se número não é divisível nem por 3 e nem 5
+    result += 'bug!'; // armazena a string "bug" em result
+  }
+
+  return result; // retorna a string de resultado
+}
+
+/*
+  Essa função recebe um array de números e retorna um array de strings, sendo que cada número do array será avaliado e o resultado armazenado no array de strings, na mesma posição original. Cada número será avaliado da seguinte forma:
+  - se divisível apenas por 3, retorne uma string "fizz";
+  - se divisível apenas por 5, retorne uma string "buzz";
+  - se divisível por 3 e 5, retorne a string "fizzBuzz";
+  - caso contrário, retorne a string "bug!";
+
+  Foi utilizado o loop for...of para obter diretamente o valor de cada posição e como ele não será modificado dentro do loop, a variavel number foi declarada como const.
+
+  Material consultado sobre o loop for...in
+  https://www.w3schools.com/js/js_loop_forin.asp
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in
+
+  Material consultado sobre o loop for...of
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
+ */
+function fizzBuzz(numbersArray) {
+  let stringsArray = [];
+
+  for (const number of numbersArray) {
+    stringsArray.push(fizzBuzzString(number));
+  }
+  return stringsArray; // retorna o array de strings
 }
 
 // Desafio 9
