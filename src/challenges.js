@@ -29,16 +29,8 @@ return arrNames;
 }
 console.log(concatName('captain, captain'));
 // Desafio 5
-function footballPoints(quantPoints) {
+function footballPoints() {
   // seu código aqui
-  let wins = 3;
-  let ties = 1;
-
-return quantPoints;
-  if (partida >= 3) {
-  } else {
-    quatEmpate = partida + 1;
-  }
 }
 // Desafio 6
 function highestCount() {
