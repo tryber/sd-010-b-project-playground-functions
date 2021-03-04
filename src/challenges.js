@@ -41,14 +41,12 @@ function highestCount(numeros) {
   numeros.sort();
   let contador = 0;
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] >= numeros.length - 1) {
+    if (numeros[i] >=  numeros[numeros.length-1]) {
       contador += 1;
     }
   }
   return contador;
 }
-let numeros = [];
-console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse() {
