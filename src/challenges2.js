@@ -1,3 +1,9 @@
+/* eslint-disable valid-typeof */
+/* eslint-disable complexity */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable no-unused-vars */
+/* eslint-disable eqeqeq */
+/* eslint-disable guard-for-in */
 // Desafio 10
 function techList(tech, name) {
   let objectListOutput = [];
@@ -53,10 +59,8 @@ function generatePhoneNumber(arrayOfNumber) {
   for (let index = 0; index < arrayOfNumber.length; index += 1) {
     if (((arrayOfNumber[index]) < 0) || ((arrayOfNumber[index]) > 9) || (repeated >= 3)) {
       verifyNumberPossibility += 1;
-    } else if ((arrayOfNumber[index] >= 0) && (arrayOfNumber[index] <= 9) && (arrayOfNumber.length == 11)) {
+    } else if ((arrayOfNumber[index] >= 0) && (arrayOfNumber[index] <= 9) && (arrayOfNumber.length === 11)) {
       verifyNumerOk += 1;
-    } else if ((arrayOfNumber.length !== 11)||(arrayOfNumber == [])) {
-      return 'Array com tamanho incorreto.';
     }
     if (verifyNumerOk === 11) {
       return telePhoneNumber;
@@ -65,7 +69,7 @@ function generatePhoneNumber(arrayOfNumber) {
     }
   }
 }
-console.log(generatePhoneNumber([1]));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) {

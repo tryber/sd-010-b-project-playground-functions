@@ -1,3 +1,5 @@
+/* eslint-disable complexity */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   let result = Boolean;
@@ -71,6 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// eslint-disable-next-line complexity
 function fizzBuzz(arrayOfNumbers) {
   let result = [];
   for (let key in arrayOfNumbers) {
