@@ -49,7 +49,7 @@ function generatePhoneNumber(numbersphone) {
   } else if (numbersphone.length > 11) {
       return 'Array com tamanho incorreto.';
   }
-
+}
 
 // Desafio 12
 
@@ -89,6 +89,7 @@ function hydrate(str) {
     return `${soma} copos de água`;
 }
 }
+
 
 
 module.exports = {
