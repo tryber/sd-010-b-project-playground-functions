@@ -48,7 +48,7 @@ function generatePhoneNumber (phone) {
   function formatNumber(number){ 
       let arr2 = '('
       arr2 += number.slice(0,2) 
-      arr2 += ')'
+      arr2 += ') '
       arr2 += number.slice(2,7)
       arr2 += '-'
       arr2 += number.slice(7,11)
@@ -58,7 +58,7 @@ function generatePhoneNumber (phone) {
 
   return formatNumber(save)
 }
-// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
