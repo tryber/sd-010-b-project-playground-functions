@@ -83,27 +83,26 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(str) {
   // seu código aqui
-  let strFinal = '';
   for (let index = 0; index < str.length; index += 1) {
-    if (str[index] === 'a') {
-      strFinal[index] += '1';
-    } else if (str[index] === 'e') {
-      strFinal[index] += '2';
-    } else if (str[index] === 'i') {
-      strFinal[index] += '3';
-    } else if (str[index] === 'o') {
-      strFinal[index] += '4';
-    } else if (str[index] === 'u') {
-      strFinal[index] += '5';
-    } else {
-      strFinal[index] += str[index];
-    }
+    str = str.replace('a', '1');
+    str = str.replace('e', '2');
+    str = str.replace('i', '3');
+    str = str.replace('o', '4');
+    str = str.replace('u', '5');
   }
-  return strFinal;
+  return str;
 }
 
 function decode(str) {
   // seu código aqui
+  for (let index = 0; index < str.length; index += 1) {
+    str = str.replace('1', 'a');
+    str = str.replace('2', 'e');
+    str = str.replace('3', 'i');
+    str = str.replace('4', 'o');
+    str = str.replace('5', 'u');
+  }
+  return str;
 }
 
 module.exports = {
@@ -118,3 +117,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
