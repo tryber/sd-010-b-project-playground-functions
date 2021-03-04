@@ -67,6 +67,7 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let key =[];
   if(array[key]%3===0)
     {return "fizz"}
     else if(array[key]%5===0)
