@@ -85,24 +85,25 @@ Global_Objects/Math/abs */
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let newArray = [];
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 5 === 0 && arrayNumbers[index] % 3 === 0) {
-      arrayNumbers[index] = 'fizzBuzz';
-      newArray = arrayNumbers.slice();
+    let newArray = [];
+    for (let index = 0; index < arrayNumbers.length; index += 1) {
+      if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] ===0) {
+        let palavra1 = 'fizzBuzz';
+        newArray.push(palavra1);
+      } else if (arrayNumbers[index] % 3 === 0) {
+          let palavra2 = 'fizz';
+          newArray.push(palavra2);
+      } else if (arrayNumbers[index] % 5 === 0) {
+        let palavra3 = 'buzz';
+        newArray.push(palavra3);
+      } else {
+        let palavra4 = 'bug!';
+        newArray.push(palavra4);
+      }
     }
-    if (arrayNumbers[index] % 3 === 0) {
-      arrayNumbers[index] = 'fizz';
-      newArray = arrayNumbers.slice();
-    }
-    if (arrayNumbers[index] % 5 === 0) {
-      arrayNumbers[index] = 'buzz';
-      newArray = arrayNumbers.slice();
-    } 
-  }
-  return newArray;
+    return newArray;
 }
-console.log(fizzBuzz([2, 15]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
