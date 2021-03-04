@@ -65,8 +65,6 @@ function highestCount(array) {
     if (array[index] > maiorNumero) {
       maiorNumero = array[index];
     }
-  }
-  for (let index = 0; index < array.length; index += 1) {
     if (maiorNumero === array[index]) {
       contador += 1;
     }
@@ -91,6 +89,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+
 }
 
 // Desafio 9
