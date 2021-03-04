@@ -46,13 +46,29 @@ function footballPoints(wins, ties) {
     let qtdPts = (wins * 3) + ties;
     return qtdPts;
 }
-  console.log(footballPoints(1,2));
+ // console.log(footballPoints(1,2));
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+   let count = 0;
+   let aux = 0;
+    
+   for(let index = 0; index < numbers.length; index += 1){
+   if(numbers[index] > count){
+     count = numbers[index];
+   }  
+  }
+   for(let index = 0; index < numbers.length; index += 1){
+     
+    if(count == numbers[index]){
+       aux += 1;
+     }
+   }
+    return aux;
 }
 
+  console.log(highestCount([0,0,0]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
