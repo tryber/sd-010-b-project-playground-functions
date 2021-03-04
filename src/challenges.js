@@ -52,9 +52,9 @@ let ties = 1;
 
 function footballPoints(wins, ties) {
   if(wins == 0 && ties == 0) {
-    return 0 + " pontos";
+    return 0;
   }else {
-    return (ties + (wins * 3)) + " pontos";
+    return (ties + (wins * 3));
   }
 }
 console.log(footballPoints(wins, ties));
