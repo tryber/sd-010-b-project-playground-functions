@@ -49,18 +49,18 @@ console.log(triangleCheck(10, 14, 8));
 console.log(triangleCheck(6, 1, 10));
 
 // Resolvido com muita ajuda do stackoverflow, developermozilla.org ParseInt. https://www.devmedia.com.br/iniciando-expressoes-regulares/6557
-// Desafio 13 
+// Desafio 13
 function hydrate(string) {
   let regex = /\d+/g;
   let numeros = string.match(regex);
   let soma = 0;
   for (let i = 0; i < numeros.length; i += 1) {
-    soma += parseInt(numeros[i], 10)
+    soma += parseInt(numeros[i], 10);
   }
   if (soma === 1) {
     return `${soma} copo de água`;
   }
-  return `${soma} copos de água`;  
+  return `${soma} copos de água`;
 }
 console.log(hydrate('1 cerveja'));
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
