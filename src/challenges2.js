@@ -15,7 +15,7 @@ function techList(tech, name) {
   }
   return techArray;
 }
-console.log(techList([], "Leandro"));
+// console.log(techList([], "Leandro"));
 
 // Desafio 11
 function generatePhoneNumber() {
