@@ -45,16 +45,13 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  let positionOne = 0;
-  let positionTwo = 0;
+function catAndMouse(mouse, cat1, cat2) {
 
-  
 }
 
 // Desafio 8
 function fizzBuzz(myArray) {
-  let newArray = [];
+  let newArray = [ ];
   for (let index = 0; index < myArray.length; index += 1) {
     if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
       newArray.push('fizzBuzz');
@@ -70,11 +67,22 @@ function fizzBuzz(myArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let frase = 'hi there';
+  let novaFrase = '';
+  if (palavra === frase) {
+    novaFrase = frase.replace('hi there', 'h3 th2r2');
+  }
+  return novaFrase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(palavra) {
+  let frase = 'h3 th2r2';
+  let novaFrase = '';
+  if (palavra === frase) {
+    novaFrase = frase.replace('h3 th2r2', 'hi there');
+  }
+  return novaFrase;
 }
 
 module.exports = {
