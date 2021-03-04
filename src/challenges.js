@@ -108,6 +108,7 @@ function encode(string) {
     vogais[index] = string[index];
     return vogais;
   }
+  return string;
 }
 function decode(string) {
   // seu código aqui
