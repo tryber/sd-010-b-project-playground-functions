@@ -20,14 +20,14 @@ function splitSentence(content) {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  // i'll try again later //
 }
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let win = wins * 3;
+  return win + ties;
 }
-
+console.log(footballPoints(14, 8));
 // Desafio 6
 function highestCount() {
   // seu código aqui
