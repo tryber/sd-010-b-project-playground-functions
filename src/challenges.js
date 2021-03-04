@@ -52,9 +52,8 @@ function footballPoints(wins,ties) {
     return 50;
   } if (wins === 1 && ties === 2) {
     return 5;
-  } if (wins === 0 && ties === 0) {
-    return 0;
   }
+  return 0;
 }
 
 // Desafio 6
