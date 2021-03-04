@@ -52,9 +52,9 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  /* foi utilizado o site https://developer.mozilla.org/pt-BR/ e 
-  https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
-   para entender o conceito de Math.abs */
+  // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs e 
+  // https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
+  //  para entender o conceito de Math.abs
   let situation;
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
@@ -73,7 +73,7 @@ function fizzBuzz(numbers) {
   let result = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
-      result.push('fizz'); // foi utilizado o site https://developer.mozilla.org/pt-BR/ para rever o conceito de push
+      result.push('fizz'); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push para rever o conceito de push
     } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
       result.push('buzz');
     } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
@@ -87,7 +87,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(string) {
-   //foi utilizado o site https://developer.mozilla.org/pt-BR/ para entender o conceito de split
+  //foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
   let info = string.split('');
   for (let index = 0; index < string.length; index += 1) {
     if (info[index] === 'a') {
@@ -102,7 +102,7 @@ function encode(string) {
       info[index] = '5';
     }
   }
-  string = info.join(''); // foi utilizado o site https://developer.mozilla.org/pt-BR/ para entender o conceito de join
+  string = info.join(''); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join para entender o conceito de join
   return string;
 }
 

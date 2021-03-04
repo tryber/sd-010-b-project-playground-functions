@@ -1,61 +1,64 @@
 // Desafio 10
 function techList(technology, nome) {
-  // seu código aqui
-//   crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
+  let register = {}
+  for (let index in technology) {
 
-// Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
+    register.tech = technology[index]
+    register.name = name
+    //   crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
 
-// {
-//   tech: "NomeTech",
-//   name: name
-// }
-// Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
+    // Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
 
-// A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
+    // {
+    //   tech: "NomeTech",
+    //   name: name
+    // }
+    // Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
 
-// Exemplo:
+    // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
 
-// Entradas da função:
+    // Exemplo:
 
-// ["React", "Jest", "HTML", "CSS", "JavaScript"]
-// "Lucas"
+    // Entradas da função:
 
-// // Saída:
+    // ["React", "Jest", "HTML", "CSS", "JavaScript"]
+    // "Lucas"
 
-// [
-//   {
-//     tech: "CSS",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "HTML",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "JavaScript",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "Jest",
-//     name: "Lucas"
-//   },
-//   {
-//     tech: "React",
-//     name: "Lucas"
-//   }
-// ]
-// Caso o array venha vazio sua função deve retornar 'Vazio!'
+    // // Saída:
 
-// O que será verificado:
+    // [
+    //   {
+    //     tech: "CSS",
+    //     name: "Lucas"
+    //   },
+    //   {
+    //     tech: "HTML",
+    //     name: "Lucas"
+    //   },
+    //   {
+    //     tech: "JavaScript",
+    //     name: "Lucas"
+    //   },
+    //   {
+    //     tech: "Jest",
+    //     name: "Lucas"
+    //   },
+    //   {
+    //     tech: "React",
+    //     name: "Lucas"
+    //   }
+    // ]
+    // Caso o array venha vazio sua função deve retornar 'Vazio!'
 
-// Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias deve
+    // O que será verificado:
 
-// Retorne a mensagem de erro 'Vazio!' quando a lista tiver com 0 tecnologias
-let register = { }
-for (index in technology){
-  register[tech[index]]= technology[index]
-  register[name[index]]= nome[index] 
-}
+    // Retorne uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias deve
+
+    // Retorne a mensagem de erro 'Vazio!' quando a lista tiver com 0 tecnologias
+    console.log(register)
+  }
+
+
 }
 
 // Desafio 11
