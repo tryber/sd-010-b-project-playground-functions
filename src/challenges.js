@@ -1,14 +1,14 @@
 // Desafio 1
-let message;
 function compareTrue(info1, info2) {
-  if (info1 == info2 && info2 == info1) {
-    message = 'true';
+  let message;
+  if (info1 == true && info2 == true) {
+    message = true;
   } else {
-    message = 'false';
+    message = false;
   }
   return message;
 }
-console.log(compareTrue('maria','maria'));
+console.log(compareTrue(false,true));
 
 // Desafio 2
 function calcArea(base,heigth) {
@@ -110,4 +110,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- */
