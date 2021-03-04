@@ -23,7 +23,6 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber (phone) {
   let save = [];
-  let phoneSort = save.sort(function(a,b){return a-b})
   let count = 0
   if(phone.length != 11){
       return "Array com tamanho incorreto."
@@ -33,7 +32,8 @@ function generatePhoneNumber (phone) {
       save.push(phone[index])
   }
 
-  for(let index = 0; index < phoneSort.length; index ++){
+  for(let index = 0; index < phone.length; index ++){
+      let phoneSort = phone.sort(function(a,b){return a-b})
       if(phoneSort[index]< 0 || phoneSort[index]>9){
           return "não é possível gerar um número de telefone com esses valores"
       } else if (phoneSort[index + 1] == phoneSort[index]){
@@ -58,7 +58,7 @@ function generatePhoneNumber (phone) {
 
   return formatNumber(save)
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
 
 // Desafio 12
 function triangleCheck() {
