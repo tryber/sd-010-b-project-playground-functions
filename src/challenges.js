@@ -94,8 +94,7 @@ function fizzBuzz(array) {
       array[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
       array[index] = 'buzz';
-    }
-    array[index] = 'bug!';
+    } else { array[index] = 'bug!'; }
   } return array;
 }
 
