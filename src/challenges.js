@@ -46,9 +46,18 @@ function concatName(words) {
   console.log(concatName(words));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+let wins = 5;
+let ties = 1;
+
+function footballPoints(wins, ties) {
+  if(wins == 0 && ties == 0) {
+    return 0 + " pontos";
+  }else {
+    return (ties + (wins * 3)) + " pontos";
+  }
 }
+console.log(footballPoints(wins, ties));
 
 // Desafio 6
 function highestCount() {
