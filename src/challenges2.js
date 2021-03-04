@@ -52,9 +52,29 @@ let numeros = [0, 2, 3, 2, 5, 7, 7, 8, 9, 0, 4, 6];
 console.log(generatePhoneNumber(numeros));
 
 // Desafio 12
-function triangleCheck(lineA, lineB, LineC) {
+function triangleCheck(lineA, lineB, lineC) {
+
+  let mediaA = lineB + lineC;
+  let mediaB = lineA + lineC;
+  let mediaC = lineA + lineB;
+  let mensagem;
+
+  if (lineA < mediaA && lineB < mediaB && lineC < mediaC) {
+    mensagem = true;
+
+  } else {
+
+    mensagem = false;
+  }
+  return mensagem;
   // seu código aqui
 }
+
+let lineA = 1;
+let lineB = 1;
+let lineC = 1.5;
+
+console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
 function hydrate() {
