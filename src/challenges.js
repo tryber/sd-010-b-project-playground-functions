@@ -1,60 +1,53 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+	let value = null;
+
   if (value1 && value2) {
-
-    return true
-
+    value = true;
   } else {
-
-    return false
-
+    value = false;
   }
+
+  return value;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(sentenca) {
-	sentenca+=" "
-    splitWords = []
-	word = ""
-	length = sentenca.length-1
+	let sentenca += ' ';
+  let splitWords = [];
+	word = '';
+	let length = sentenca.length - 1;
 
-	for (let i = 0; i < sentenca.length; i++) {
+	for (let i = 0; i < sentenca.length; i += 1) {
 		if (sentenca[i] != " ") {
-			word += sentenca[i]
-		} else if (sentenca[i] == " " || i == length) {
-			splitWords.push(word)
-			word = ""
+			word += sentenca[i];
+		} else if (sentenca[i] === ' ' || i === length) {
+			splitWords.push(word);
+			word = '';
 		}
 	}
 
 	return splitWords
 }
 
-//console.log(splitSentence("foguete"))
-
 // Desafio 4
 function concatName(arraySentence) {
-	
-  return `${arraySentence[arraySentence.length-1]}, ${arraySentence[0]}`
+  return `${arraySentence[arraySentence.length - 1]}, ${arraySentence[0]}`;
 }
-
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins*3+ties
+  return wins * 3 + ties;
 }
-
-//console.log(footballPoints(1, 2))
 
 // Desafio 6
 function highestCount(numbers) {
-	higherNumber = 0
+	let higherNumber = 0;
 
 	for (let number in numbers) {
 		if (numbers[number] > higherNumber) {
