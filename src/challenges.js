@@ -11,7 +11,6 @@ function calcArea(base, height) {
 console.log(calcArea(10, 50));
 console.log(calcArea(5, 2));
 console.log(calcArea(51, 1)); 
-}
 
 // Desafio 3
 function splitSentence() {
@@ -21,7 +20,6 @@ function splitSentence() {
 console.log(splitSentence('go Trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
-}
 
 // Desafio 4
 function concatName() {
@@ -30,8 +28,12 @@ function concatName() {
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  let points = (wins * 3) + (ties * 1);
+  return points;
 }
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
