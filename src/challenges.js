@@ -62,14 +62,19 @@ function fizzBuzz(arrNumber) {
   // seu código aqui
   let resultArr = [];
   for (let index = 0; index < arrNumber.length; index += 1) {
-    if (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0) {
-      resultArr.push('fizzbuzz');
-    } else if (arrNumber[index] % 3 === 0) {
-      resultArr.push('fizz');
-    } else if (arrNumber[index] % 5 === 0) {
-      resultArr.push('buzz');
-    } else {
-      resultArr.push('bug!');
+    switch (true) {
+      case (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0):
+          resultArr.push('fizzbuzz');
+        break;
+      case (arrNumber[index] % 3 === 0):
+          resultArr.push('fizz');
+        break;
+      case (arrNumber[index] % 5 === 0):
+          resultArr.push('buzz');
+        break;
+      default:
+          resultArr.push('bug!');
+        break;
     }
   }
   return resultArr;
