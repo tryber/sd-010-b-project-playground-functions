@@ -2,7 +2,7 @@
 function techList(array, name) {
   // seu código aqui
   if (array.length == 0) {
-    console.log ("Vazio!");
+    return("Vazio!");
   } else {
     let finalArray = [];
     let arraySort = [];  
