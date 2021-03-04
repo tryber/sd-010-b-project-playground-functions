@@ -71,13 +71,20 @@ function fizzBuzz(numArray) {
   return resul;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+ function encode(vowel) { // (Apredi como usar funcão replace) https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+  return vowel.replace(/a/g,"1")
+    .replace(/e/g, "2") // (Sobre colocar colocar g) https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
+    .replace(/i/g, "3")
+    .replace(/o/g, "4")
+    .replace(/u/g, "5");
 }
-function decode() {
-  // seu código aqui
+function decode(numberVowel) {
+  return numberVowel.replace(/1/g, "a")
+    .replace(/2/g, "e")
+    .replace(/3/g, "i")
+    .replace(/4/g, "o")
+    .replace(/5/g, "u");
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
