@@ -16,6 +16,7 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  // veja os ultimos exercicios
 }
 
 module.exports = {

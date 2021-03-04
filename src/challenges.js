@@ -82,12 +82,40 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let linha = text;
+  for (let key in text) {
+    if (text[key] === "a") {
+      linha = linha.replace("a", 1);
+    } else if (text[key] === "e") {
+      linha = linha.replace("e", 2);
+    } else if (text[key] === "i") {
+      linha = linha.replace("i", 3);
+    } else if (text[key] === "o") {
+      linha = linha.replace("o", 4);
+    } else if (text[key] === "u") {
+      linha = linha.replace("u", 5);
+    }
+  }
+  return linha;
 }
 
-function decode() {
-  // seu código aqui
+function decode(text) {
+  let linha = text;
+  for (let key in text) {
+    if (text[key] === "1") {
+      linha = linha.replace("1", "a");
+    } else if (text[key] === "2") {
+      linha = linha.replace("2", "e");
+    } else if (text[key] === "3") {
+      linha = linha.replace("3", "i");
+    } else if (text[key] === "4") {
+      linha = linha.replace("4", "o");
+    } else if (text[key] === "5") {
+      linha = linha.replace("5", "u");
+    }
+  }
+  return linha;
 }
 
 module.exports = {
