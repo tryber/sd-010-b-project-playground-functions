@@ -16,10 +16,9 @@ function techList(tecnologias, nome) {
 }
 // Desafio 11
 function testaRepeticoes(phoneNumber) {
-  let cont = 0;
   let isValid = true;
   for (let index = 0; index <= phoneNumber.length; index += 1) {
-    cont = 0;
+    let cont = 0;
     for (let indexDois = 0; indexDois <= phoneNumber.length; indexDois += 1) {
       if (phoneNumber[index] === phoneNumber[indexDois]) {
         cont += 1;
@@ -55,6 +54,7 @@ console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let istriangle = false;
+  let teste = false;
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     istriangle = true;
   } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
@@ -71,7 +71,7 @@ function hydrate(frase) {
   let bebidas = frase.match(/\d+/g);
   let soma = 0;
   for (let key = 0; key < bebidas.length; key += 1) {
-    soma += parseInt(bebidas[key]);
+    soma += Number(bebidas[key]);
   }
   if (soma !== 1) {
     return `${soma} copos de água`;
