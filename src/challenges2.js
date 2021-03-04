@@ -8,12 +8,10 @@ function techList(tech, name) {
       resultado.push({ tech: lista[index], name: name });
     }
   } else {
-    resultado = 'Vazio!'
+    resultado = 'Vazio!';
   }
   return resultado;
 }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Thiago"));
 
 // Desafio 11
 function generatePhoneNumber() {
