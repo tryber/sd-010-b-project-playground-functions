@@ -81,19 +81,19 @@ function fizzBuzz(array) {
   let string = [];
   for (let index = 0; index < array.length; index += 1){
     if (array[index] %3 === 0 && array[index] %5 === 0){
-      string.push("FizzBuzz");
+      string.push("fizzBuzz");
     } 
     
     else if (array[index] %3 === 0){
-      string.push("Fizz");
+      string.push("fizz");
     } 
     
     else if (array[index] %5 === 0){
-      string.push("Buzzz");
+      string.push("buzz");
     }
 
      else {
-      string.push("Bug");
+      string.push("bug!");
     }
   }
   return string;
