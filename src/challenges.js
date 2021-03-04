@@ -77,10 +77,10 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(cat1 - mouse);
   cat2 = Math.abs(cat2 - mouse);
   if (cat1 < cat2) {
-    return cat1;
+    return 'cat1';
   }
   if (cat2 < cat1) {
-    return cat2;
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
@@ -89,11 +89,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
     if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
-      array[index] = 'fizzBuzz';
+      array = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
-      array[index] = 'fizz';
+      array = 'fizz';
     } else if (array[index] % 5 === 0) {
-      array[index] = 'buzz';
+      array = 'buzz';
     } else {
       array = 'bug!';
     }
