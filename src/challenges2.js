@@ -95,8 +95,22 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleLineValidator(lineToValidate, line2, line3) {
+  const valid = lineToValidate < line2 + line3 && lineToValidate > Math.abs(line2 - line3);
+
+  return valid;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let validA = triangleLineValidator(lineA, lineB, lineC);
+  let validB = triangleLineValidator(lineB, lineA, lineC);
+  let validC = triangleLineValidator(lineC, lineA, lineB);
+
+  if (!validA && !validB && !validC) {
+    return false;
+  }
+
+  return true;
 }
 
 // Desafio 13
