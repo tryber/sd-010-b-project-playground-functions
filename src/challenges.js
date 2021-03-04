@@ -64,17 +64,17 @@ function fizzBuzz(arrNumber) {
   for (let index = 0; index < arrNumber.length; index += 1) {
     switch (true) {
       case (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0):
-          resultArr.push('fizzbuzz');
-        break;
+        resultArr.push('fizzbuzz');
+      break;
       case (arrNumber[index] % 3 === 0):
-          resultArr.push('fizz');
-        break;
+        resultArr.push('fizz');
+      break;
       case (arrNumber[index] % 5 === 0):
-          resultArr.push('buzz');
-        break;
+        resultArr.push('buzz');
+      break;
       default:
-          resultArr.push('bug!');
-        break;
+        resultArr.push('bug!');
+      break;
     }
   }
   return resultArr;
