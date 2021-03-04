@@ -8,8 +8,8 @@ function techList(tech, name) {
   } else {
     for (let index = 0; index < tech.length; index += 1) {
       let technology = {};
-      technology["name"] = tech[index];
-      technology["tech"] = name;
+      technology["name"] = name;
+      technology["tech"] = tech[index];
       techArray.push(technology);
     }
   }
