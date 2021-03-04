@@ -2,8 +2,9 @@
 function compareTrue(boo1, boo2) {
   let verdadeFalso = boo1 && boo2;
   return verdadeFalso;
-}// Resposta: Criei dois parametros na função e comparei esses dois parametros na variavel verdadeiroFalso, Dei um return nessa variavel.
-
+} /* Resposta: Criei dois parametros na função e comparei esses dois parametros na variavel
+verdadeiroFalso, Dei um return nessa variavel.
+ */
 // Desafio 2
 function calcArea(base, height) {
   let triangulo = (base * height) / 2;
@@ -26,7 +27,7 @@ function concatName(arrayStr) {
     palavra2 = arrayStr.shift();
   }
   return palavra1 + separador + palavra2;
-}// Resposta: Nessa tentativa de solução do requisito 4, usei os metodos shift e pop. Ao remover o primeiro elemento do array com o metodo shift(), coloco esse elemento na var. palavra1, faço o mesmo com o metodo pop(), onde ele remove o ultimo elemento. O return é a concatenação da palavra, separador(usei a ,) e palavra2. Outra maneira de resolver: return arrayStr[arrayStr.length - 1] + ', ' + arrayStr[0]; (Solução feita pelo Emerson Saturnino)
+} /* Resposta: Nessa tentativa de solução do requisito 4, usei os metodos shift e pop. Ao remover o primeiro elemento do array com o metodo shift(), coloco esse elemento na var. palavra1, faço o mesmo com o metodo pop(), onde ele remove o ultimo elemento. O return é a concatenação da palavra, separador(usei a ,) e palavra2. Outra maneira de resolver: return arrayStr[arrayStr.length - 1] + ', ' + arrayStr[0]; (Solução feita pelo Emerson Saturnino) */
 
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -34,12 +35,12 @@ function concatName(arrayStr) {
 function footballPoints(wins, ties) {
   let totalPontos = (wins * 3) + (ties * 1);
   return totalPontos;
-} // Resposta: Criei uma Var. totalPontos, nessa var. atribui uma pequena formula para o calculo. E dei um return na var. totalPontos
+} /* Resposta: Criei uma Var. totalPontos, nessa var. atribui uma pequena formula para o
+ calculo. E dei um return na var. totalPontos */
 
 // console.log(footballPoints(0, 0));
 
 // Desafio 6
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(array) {
   let num1 = 0;
   let num2 = 0;
@@ -85,25 +86,27 @@ Global_Objects/Math/abs */
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-    let newArray = [];
-    for (let index = 0; index < arrayNumbers.length; index += 1) {
-      if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] ===0) {
-        let palavra1 = 'fizzBuzz';
-        newArray.push(palavra1);
-      } else if (arrayNumbers[index] % 3 === 0) {
-          let palavra2 = 'fizz';
-          newArray.push(palavra2);
-      } else if (arrayNumbers[index] % 5 === 0) {
-        let palavra3 = 'buzz';
-        newArray.push(palavra3);
-      } else {
-        let palavra4 = 'bug!';
-        newArray.push(palavra4);
-      }
+  let newArray = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] === 0) {
+      let palavra1 = 'fizzBuzz';
+      newArray.push(palavra1);
+    } else if (arrayNumbers[index] % 3 === 0) {
+      let palavra2 = 'fizz';
+      newArray.push(palavra2);
+    } else if (arrayNumbers[index] % 5 === 0) {
+      let palavra3 = 'buzz';
+      newArray.push(palavra3);
+    } else {
+      let palavra4 = 'bug!';
+      newArray.push(palavra4);
     }
-    return newArray;
-}
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+  }
+  return newArray;
+} /* Resposta: Para solucionar esse requisito fiz uma estrutura de repetição para iterar o
+array. A cada vez que o loop passa pelo numero ele compara com a condição colocada(ifs e else). se a condição for atingida faz um push, metodo para colocar um novo elemento na array(no caso essa essa array é uma vazia, newArray) na ultima posição do indice, assim fazer o retorno dessa nova array.
+ */
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
