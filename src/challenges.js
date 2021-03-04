@@ -47,20 +47,12 @@ function highestCount(array) {
   return cont;
 }
 // Desafio 7
+
 function catAndMouse(mouse, cat1, cat2) {
   let saida;
-  let unidadesCat1;
-  let unidadesCat2;
-  if (cat1 > mouse) {
-    unidadesCat1 = cat1 - mouse;
-  } else {
-    unidadesCat1 = mouse - cat1;
-  }
-  if (cat2 > mouse) {
-    unidadesCat2 = cat2 - mouse;
-  } else {
-    unidadesCat2 = mouse - cat2;
-  }
+  let unidadesCat1 = cat1 > mouse ? cat1 - mouse : mouse - cat1;
+  let unidadesCat2 = cat2 > mouse ? cat2 - mouse : mouse - cat2;
+
   if (unidadesCat1 > unidadesCat2) {
     saida = 'cat2';
   } else if (unidadesCat1 < unidadesCat2) {
@@ -70,6 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return saida;
 }
+console.log(catAndMouse(4, 2, 5));
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let arraySaida = [];

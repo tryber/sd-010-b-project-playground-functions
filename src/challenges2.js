@@ -54,7 +54,7 @@ console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  istriangle = false;
+  let istriangle = false;
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     istriangle = true;
   } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
@@ -70,16 +70,15 @@ console.log(triangleCheck(10, 10, 10));
 function hydrate(frase) {
   let bebidas = frase.match(/\d+/g);
   let soma = 0;
-  for (let key in bebidas) {
+  for (let key = 0; key < bebidas.length; key += 1) {
     soma += parseInt(bebidas[key]);
   }
   if (soma !== 1) {
     return `${soma} copos de água`;
-  } else {
-    return `${soma} copo de água`;
   }
+  return `${soma} copo de água`;
 }
-console.log(hydrate("5 cerveja"));
+console.log(hydrate('5 cervejas 25 pingaas'));
 
 module.exports = {
   generatePhoneNumber,
