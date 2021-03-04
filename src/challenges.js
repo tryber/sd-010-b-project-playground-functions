@@ -159,10 +159,34 @@ function encode(stringEncode) {
 }
 //console.log(encode('hello'));
 
-function decode() {
+function decode(stringDecode) {
   // seu código aqui
+  let novaString = stringDecode;
 
+  for (i = 0; i <= novaString.length; i++) {
+
+    if (novaString[i] === '1') {
+      novaString = novaString.replace('1', 'a');
+
+    } else if (novaString[i] === '2') {
+
+      novaString = novaString.replace('2', 'e');
+
+    } else if (novaString[i] === '3') {
+
+      novaString = novaString.replace('3', 'i');
+
+    } else if (novaString[i] === '4') {
+
+      novaString = novaString.replace('4', 'o');
+
+    } else if (novaString[i] === '5') {
+      novaString = novaString.replace('5', 'u');
+    }
+  }
+  return novaString;
 }
+//console.log(decode('h2ll4'));
 
 module.exports = {
   calcArea,
