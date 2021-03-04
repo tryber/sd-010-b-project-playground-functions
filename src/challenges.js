@@ -14,24 +14,30 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   let result = false;
 
-  if (result = (base * height / 2)) {
+  result = base * height / 2;
     return result;
-  }
+ 
 }
 
-//Desafio 3
+// Desafio 3
 // Fonte utilizada para esta parte:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 // https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
+
 function splitSentence(userEntry) {
-  let arrayOfStrings = userEntry.split(" ");
+  let arrayOfStrings = userEntry.split(' ');
   return arrayOfStrings;
 }
 
 // Desafio 4
+// Fonte utilizada para esta parte:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+// https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
+
 function concatName(arrayOfStrings1) {
-  let lastFirst = arrayOfStrings1[arrayOfStrings1.length-1] + ', ' + arrayOfStrings1[0];
+  let lastFirst = arrayOfStrings1[arrayOfStrings1.length - 1] + ', ' + arrayOfStrings1[0];
   return lastFirst;
 }
 
