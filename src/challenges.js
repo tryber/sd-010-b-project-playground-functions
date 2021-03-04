@@ -157,7 +157,7 @@ function encode(stringEncode) {
   return novaString;
  
 }
-console.log(encode('a e i o u'));
+console.log(encode('hello'));
 
 
 function decode() {
