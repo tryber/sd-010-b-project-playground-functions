@@ -1,13 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  if ((value1 === true) && (value2 === true)) {
-    return true;
-  } else if ((value1 === false && value2 === true) || (value1 === true && value2 === false)) {
-    return false;
-  } else {
-    return false;
-  }
+  return (value1 && value2);
 }
 
 // Desafio 2
@@ -69,9 +63,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+let array = [2, 15, 7, 9, 45];
+function fizzBuzz(array) {
   // seu código aqui
+  for (let index = 0; index < array.length; index += 1) {
+    if ((array[index] % 3) === 0) {
+      return 'fizz';
+    } else if ((array[index] % 5) === 0) {
+      return 'buzz';
+    } else if ((array[index] % 3 ) === 0 && (array[index] % 5) === 0) {
+      return 'fizz buzz';
+    } else {
+      return 'bug';
+    }
+  }
 }
+
+console.log(fizzBuzz(array));
 
 // Desafio 9
 function encode() {
