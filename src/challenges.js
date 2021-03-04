@@ -40,14 +40,13 @@ console.log(footballPoints());
 function highestCount(numeros) {
   numeros.sort();
   let contador = 0;
-  for (let i = 0; i < numeros.length; i++){
-    if (numeros[i] >= numeros.length-1) {
-      contador+=1;
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] >= numeros.length - 1) {
+      contador += 1;
     }
   }
-    return contador;
+  return contador;
 }
-
 let numeros = [];
 console.log(highestCount(numeros));
 
