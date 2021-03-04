@@ -14,9 +14,8 @@ function compareTrue(a, b) {
 function calcArea(base, height) {
   let result = false;
 
-  result = base * height / 2;
-    return result;
- 
+  result = (base * height) / 2;
+  return result;
 }
 
 // Desafio 3
@@ -37,13 +36,16 @@ function splitSentence(userEntry) {
 // https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
 
 function concatName(arrayOfStrings1) {
-  let lastFirst = arrayOfStrings1[arrayOfStrings1.length - 1] + ', ' + arrayOfStrings1[0];
+  let lastFirst = (arrayOfStrings1[arrayOfStrings1.length - 1] + ', ' + arrayOfStrings1[0]);
   return lastFirst;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let up = wins * 3;
+  let down = ties *1;
+  let totalPoints = up + down;
+  return totalPoints
 }
 
 // Desafio 6
