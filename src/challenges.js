@@ -84,7 +84,7 @@ function encode(encod) {
     u: 5,
   };
   for (let key in vogais) {
-    if (vogais.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(vogais, key)) {
       while (encod.includes(key)) {
         encod = encod.replace(key, vogais[key]);
       }
@@ -101,7 +101,7 @@ function decode(encod) {
     u: 5,
   };
   for (let key in vogais) {
-    if (vogais.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(vogais, key)) {
       while (encod.includes(vogais[key])) {
         encod = encod.replace(vogais[key], key);
       }
