@@ -1,4 +1,3 @@
-/* eslint-disable no-continue */
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
   // seu código aqui
@@ -24,18 +23,16 @@ function splitSentence(phrase) {
     if (phrase[index] === letter) {
       result.push(word);
       word = '';
-      continue;
+    } else {
+      word += phrase[index];
     }
-    word += phrase[index];
-    if (index >= phrase.length) {
-      result.push(word);
-    }
-  } result.push(word);
+  }
+  result.push(word);
   return result;
 }
 
 // Desafio 4
-function concatName(Array = []) {
+function concatName(Array) {
   // seu código aqui
   let endArray = '';
   let result = '';
@@ -44,7 +41,7 @@ function concatName(Array = []) {
       endArray = Array[index];
     }
   }
-  result = `${endArray},${Array[0]}`;
+  result = `${endArray}, ${Array[0]}`;
   return result;
 }
 
@@ -59,7 +56,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numeros = []) {
+function highestCount(numeros) {
   // seu código aqui
   let maior = numeros[0];
   let result = 0;
@@ -78,34 +75,34 @@ function highestCount(numeros = []) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let alcanceCat1Mouse = cat1 - mouse;
-  let alcanceCat2Mouse = cat2 - mouse;
-  if (alcanceCat1Mouse < alcanceCat2Mouse) {
-    let result = 'cat1';
-    return result;
-  } if (cat1 === cat2) {
-    let result = 'os gatos trombam e o rato foge';
-    return result;
+  let result = ''; let distanciaCat1 = mouse - cat1; let distanciaCat2 = mouse - cat2;
+  if (distanciaCat1 === distanciaCat2 || cat1 === cat2) {
+    result = 'os gatos trombam e o rato foge';
+  } if (distanciaCat1 < distanciaCat2) {
+    result = 'cat2';
+  } if (distanciaCat1 > distanciaCat2) {
+    result = 'cat1';
   }
-  let result = 'cat2';
   return result;
 }
 
 // Desafio 8
 function fizzBuzz(Array = []) {
-  // seu código aqui
   let result = [];
   for (let index = 0; index < Array.length; index += 1) {
-    if (Array[index] % 3 === 0 && Array[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (Array[index] % 5 === 0 && Array[index] % 3 === 1) {
-      result.push('buzz');
-    } else if (Array[index] % 3 === 0 && Array[index] % 5 === 1 || Array[index] % 3 === 0) {
-      result.push('fizz');
+    const DividePor3 = Array[index] % 3 === 0; const DividePor5 = Array[index] % 5 === 0;
+    const DividePor3ePor5 = DividePor3 && DividePor5;
+    if (DividePor3ePor5) {
+      result[index] = 'fizzBuzz';
+    } else if (DividePor3) {
+      result[index] = 'fizz';
+    } else if (DividePor5) {
+      result[index] = 'buzz';
     } else {
-      result.push('bug!');
+      result[index] = 'bug';
     }
-  } return result;
+  }
+  return result;
 }
 
 // Desafio 9
@@ -113,47 +110,55 @@ function encode(teste) {
   // seu código aqui
   let result = '';
   for (let index = 0; index < teste.length; index += 1) {
-    if (teste[index] === 'a') {
-      result += '1';
-      continue;
-    } if (teste[index] === 'e') {
-      result += '2';
-      continue;
-    } if (teste[index] === 'i') {
-      result += '3';
-      continue;
-    } if (teste[index] === 'o') {
-      result += '4';
-      continue;
-    } if (teste[index] === 'u') {
-      result += '5';
-      continue;
-    } result += teste[index];
-  } return result;
-}// console.log(encode("hi there!"));
-
+    switch (teste[index]) {
+      case 'a':
+        result += '1';
+        break;
+      case 'e':
+        result += '2';
+        break;
+      case 'i':
+        result += '3';
+        break;
+      case 'o':
+        result += '4';
+        break;
+      case 'u':
+        result += '5';
+        break;
+      default:
+        result += teste[index];
+        break;
+    }
+  }
+  return result;
+}
 function decode(teste) {
   // seu código aqui
   let result = '';
-  for (let index2 = 0; index2 < teste.length; index2 += 1) {
-    if (teste[index2] == '1') {
-      result += 'a';
-      continue;
-    } if (teste[index2] == '2') {
-      result += 'e';
-      continue;
-    } if (teste[index2] == '3') {
-      result += 'i';
-      continue;
-    } if (teste[index2] == '4') {
-      result += 'o';
-      continue;
-    } if (teste[index2] == '5') {
-      result += 'u';
-      continue;
-    } result += teste[index2];
+  for (let index = 0; index < teste.length; index += 1) {
+    switch (teste[index]) {
+     case '1':
+       result += 'a';
+       break;
+     case '2':
+       result += 'e';
+       break;
+     case '3':
+       result += 'i';
+       break;
+     case '4':
+       result += 'o';
+       break;
+     case '5':
+       result += 'u';
+       break;
+     default:
+       result += teste[index];
+       break;
+    }
   } return result;
-}// console.log(decode("h3 th2r2!"));
+}
 
 module.exports = {
   calcArea,

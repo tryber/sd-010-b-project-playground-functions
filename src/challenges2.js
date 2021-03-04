@@ -1,9 +1,9 @@
 // Desafio 10
-function techList(nameTechs = [], nameUser) {
+function techList() {
   // seu código aqui
-  let result = [];
-  for (let index = 0; index < nameTechs.length; index += 1) {
-    let lista = {};
+  let result = []; let lista = {};
+  for (let index = 0; index < nameTechs.sort().length; index += 1) {
+    lista = {};
     lista.tech = nameTechs[index];
     lista.name = nameUser;
     result[index] = lista;
