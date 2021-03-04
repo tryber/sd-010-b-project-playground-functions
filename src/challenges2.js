@@ -1,16 +1,19 @@
 // Desafio 10
 function techList(array, paramterName) {
   let list = [];
-  if (array.length > 0) {
-    for (let i in array.sort()) {
-      list.push({
-        tech: array[i],
-        name: paramterName,
-      });
-    }
-  } else {
+  
+  if (array.length < 1) {
     return 'Vazio!';
   }
+
+  array.sort()
+  array.forEach((e ) => {
+    list.push({
+      tech: e,
+      name: paramterName,
+    });
+  });
+
   return list;
 }
 
