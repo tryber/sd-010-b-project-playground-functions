@@ -18,9 +18,9 @@ function splitSentence(myString) { // Referencias: https://developer.mozilla.org
 }
 // Desafio 4
 function concatName(lassFirstArray) {
-  return lassFirstArray[lassFirstArray.length -1] + ',' + lassFirstArray[0]; 
+  return lassFirstArray[lassFirstArray.length -1] + ', ' + lassFirstArray[0]; 
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (3*wins)+ties;
@@ -54,6 +54,7 @@ function catAndMouse(cat1, cat2, mouse) {
    return 'os gatos trombam e o rato foge';
  }
 }
+//console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz(numArray) {
   let resul = [];
