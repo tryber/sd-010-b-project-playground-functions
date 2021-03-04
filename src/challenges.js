@@ -68,7 +68,7 @@ function highestCount(array) {
     if (maiorNumero === array[index]) {
       contador += 1;
     }
-  }
+  } return contador;
 }
 
 // Desafio 7
@@ -94,8 +94,10 @@ function fizzBuzz(array) {
       array[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
       array[index] = 'buzz';
+    } else { 
+      array[index] = 'bug!'; 
     }
-  }
+  } return array;
 }
 
 // Desafio 9
