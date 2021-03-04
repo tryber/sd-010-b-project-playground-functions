@@ -80,7 +80,7 @@ function fizzBuzz(arrNumber) {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
 }
 
