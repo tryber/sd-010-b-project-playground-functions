@@ -1,27 +1,16 @@
 // Desafio 10
-function techList(array, name) {
-  let qtt = array.length;
+function techList(array, paramterName) {
   let list = [];
-  
-  if (qtt < 1) {
+  if (array.length < 1) {
     return 'Vazio!';
   }
-  
-  for (let i in array) {
+
+  for (let i in array.sort()) {
     list.push({
-      teach: array[i], 
-      name: name,
+      tech: array[i], 
+      name: paramterName,
     });
   }
-
-  //Utilizei esse questão do stackoverflow para resolver o prbolema abaixo
-  //https://pt.stackoverflow.com/questions/46600/como-ordenar-uma-array-de-objetos-com-array-sort
-  list.sort((a, b) => {
-    if (a.teach < b.teach) return -1;
-    if (a.teach > b.teach) return 1;
-    return 0;
-  });
-
   return list;
 }
 
@@ -46,3 +35,12 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+/* 
+// Utilizei esse questão do stackoverflow para resolver o prbolema, https://pt.stackoverflow.com/questions/46600/como-ordenar-uma-array-de-objetos-com-array-sort
+  list.sort((a, b) => {
+    if (a.teach < b.teach) return -1;
+    if (a.teach > b.teach) return 1;
+    return 0;
+  });
+  
+  */
