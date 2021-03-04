@@ -71,11 +71,10 @@ console.log(fizzBuzz(userNumbers));
 function encode(word) {
   let codeArray = [];
 
-  for (let i in word) {
+  for (let i = 0; i < word.length; i += 1) {
     codeArray[i] = word[i];
   }
-
-  for (let j in codeArray) {
+  for (let j = 0; j < codeArray.length; j += 1) {
     if (codeArray[j] === 'a') codeArray[j] = '1';
     if (codeArray[j] === 'e') codeArray[j] = '2';
     if (codeArray[j] === 'i') codeArray[j] = '3';
@@ -89,11 +88,10 @@ console.log(encode('Hi there!'));
 function decode(word) {
   let decodeArray = [];
 
-  for (let i in word) {
+  for (let i = 0; i < word.length; i += 1) {
     decodeArray[i] = word[i];
   }
-
-  for (let j in decodeArray) {
+  for (let j = 0; j < decodeArray.length; j += 1) {
     if (decodeArray[j] === '1') decodeArray[j] = 'a';
     if (decodeArray[j] === '2') decodeArray[j] = 'e';
     if (decodeArray[j] === '3') decodeArray[j] = 'i';
@@ -109,8 +107,8 @@ module.exports = {
   catAndMouse,
   compareTrue,
   concatName,
-  decodeArray,
-  codeArray,
+  decode,
+  encode,
   fizzBuzz,
   footballPoints,
   highestCount,
