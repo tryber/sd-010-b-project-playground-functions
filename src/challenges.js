@@ -34,7 +34,7 @@ console.log(splitSentence('foguete'));
 function concatName(array) {
   let string = ''
   for (let key = 0; key < array.length; key += 1){
-    string = array[array.length - 1] + ',' + array[0]
+    string = array[array.length - 1] + ', ' + array[0]
   }
   return string
 }
@@ -83,8 +83,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 } 
 }
-console.log(catAndMouse(0, 3, 2))
-console.log(catAndMouse(0, 6, 12))
+console.log(catAndMouse(1, 3, 2))
+console.log(catAndMouse(1, 6, 12))
 console.log(catAndMouse(1, 1, 1))
 
 // Desafio 8
