@@ -1,6 +1,6 @@
 // Desafio 10
 function checkEmptyArray(arr) {
-  if (arr.indexOf('') === 0 || arr.indexOf(undefined) === 0) return true;
+  if (arr.indexOf('') === 0 || arr.length < 1) return true;
   return false;
 }
 
@@ -15,7 +15,7 @@ function techList(techArray, yourName) {
   }
   return objArr;
 }
-//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+console.log(techList([], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(arrNumbers) {
