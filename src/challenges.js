@@ -73,21 +73,20 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let dist = 0;
-  let fel = "";
   if(cat1 < cat2){
     dist = cat1 - mouse;
-    fel = "cat1";
+    return "cat1";
     }else if(cat2 < cat1){
     dist = cat2 - mouse;
-    fel = "cat2"
+    return "cat2"
   }else if(cat1 == cat2){
-    fel ="os gatos batem e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
-    return fel;
+    
 }
 
   
-  console.log(catAndMouse(8,8,8));
+  console.log(catAndMouse(8,5,10));
   
 
 // Desafio 8
