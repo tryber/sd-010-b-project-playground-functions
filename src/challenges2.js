@@ -18,40 +18,39 @@ function techList(array, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbersphone) {
+  let bloco = {};
+  let istrue =false;
+  if (numbersphone.length == 11) {
+    for (let index = 0; index < 11; index += 1) {
+      if (numbersphone[index] < 0 || numbersphone[index] > 9) {
+        return("não é possível gerar um número de telefone com esses valores");
+        istrue = true;
+        break;
+      }
+      let quantidade = 0
+      for (let j = 0; j < numbersphone.length; j += 1) {
+        if (numbersphone[index] == numbersphone[j]) {
+          quantidade += 1;
+        }
+      }
+      bloco[numbersphone[index]] = quantidade;
+    }
+    for (keys in bloco) {
+      if (bloco[keys] > 3) {
+        return("não é possível gerar um número de telefone com esses valores");
+        istrue = true;
+        break;
+      }
+    }
+    }
+    if (numbersphone.length == 11 && istrue == false) {
+      return `(${numbersphone[0]}${numbersphone[1]}) ${numbersphone[2]}${numbersphone[3]}${numbersphone[4]}${numbersphone[5]}${numbersphone[6]}-${numbersphone[7]}${numbersphone[8]}${numbersphone[9]}${numbersphone[10]}`
+  } else if (numbersphone.length > 11) {
+      return 'Array com tamanho incorreto.';
+  }
 
-  // let numbersphone = [1, 12, 0, 0, 3, 3, 7, 8, 9, 0, 1, 1, 1];
-  // let bloco = {}
-  // if (numbersphone.length == 11) {
-  //   for (let index = 0; index < 11; index += 1) {
-  //     if (numbersphone[index] < 0 || numbersphone[index] > 9) {
-  //       console.log("não é possível gerar um número de telefone com esses valores")
 
-  //       break;
-  //     }
-
-  //     let quantidade = 0
-  //     for (let j = 0; j < numbersphone.length; j += 1) {
-  //       if (numbersphone[index] == numbersphone[j]) {
-  //         quantidade += 1;
-  //       }
-  //     }
-  //     bloco[numbersphone[index]] = quantidade
-
-  //   }
-  //   for (keys in bloco) {
-  //     if (bloco[keys] > 3) {
-  //       console.log("não é possível gerar um número de telefone com esses valores")
-  //       break;
-  //     }
-  //   }
-
-  // } else if (numbersphone.length == 11) {
-  //   console.log(`(${numbersphone[0]}${numbersphone[1]}) ${numbersphone[2]}${numbersphone[3]}${numbersphone[4]}${numbersphone[5]}${numbersphone[6]}-${numbersphone[7]}${numbersphone[8]}${numbersphone[9]}${numbersphone[10]}`)
-  // } else {
-  //   console.log('Array com tamanho incorreto.')
-  // }
-}
 // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {

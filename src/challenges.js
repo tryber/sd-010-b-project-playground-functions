@@ -98,7 +98,6 @@ function encode(code) {
       break;
     }
   }
-  console.log()
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
   }
