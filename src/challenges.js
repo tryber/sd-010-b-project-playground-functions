@@ -38,12 +38,15 @@ function concatName(names = []) {
   return seman;
 }
 
-console.log(concatName(["lucas" , "cassiano" , "ferraz", "paolillo"]));
+// console.log(concatName(["lucas" , "cassiano" , "ferraz", "paolillo"]));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+    let qtdPts = (wins * 3) + ties;
+    return qtdPts;
 }
+  console.log(footballPoints(1,2));
 
 // Desafio 6
 function highestCount() {
