@@ -14,14 +14,12 @@ function splitSentence(string) {
   string
   return string.split(' ');
 }
-console.log(splitSentence('frase de teste aqui'))
 
 // Desafio 4
 function concatName(array) {
   let conca = '';
   conca = array[array.length-1];
   conca = conca + ', '  + array[array.length - array.length]
-  
   return conca;   
 } 
 // Desafio 5
@@ -46,7 +44,6 @@ function highestCount(numbers) {
     if (numbers[j] === highNumber) {
      highNumberCount = (highNumberCount+1);
      }
-
   }
   return highNumberCount  
 }
@@ -68,7 +65,6 @@ function fizzBuzz(numbers) {
     } else {
       string[i] = 'bug!';
     }
-
   }
   return string
 }
