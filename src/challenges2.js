@@ -8,14 +8,14 @@ function techList(tech, name) {
   } else {
     for (let index = 0; index < tech.length; index += 1) {
       let technology = {};
-      technology["tech"] = tech[index];
-      technology["name"] = name;
+      technology["name"] = tech[index];
+      technology["tech"] = name;
       techArray.push(technology);
     }
   }
-  console.log(techArray);
-  return techList;
+  return techArray;
 }
+// console.log(techList(["React", "CSS", "Drifting", "Node"], "Leandro"));
 
 // Desafio 11
 function generatePhoneNumber() {
