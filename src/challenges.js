@@ -137,11 +137,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 /*
-  Essa função recebe um número e retorna uma string, sendo que o número será avaliado da seguinte forma:
-  - se divisível apenas por 3, retorne uma string "fizz";
-  - se divisível apenas por 5, retorne uma string "buzz";
-  - se divisível por 3 e 5, retorne a string "fizzBuzz";
-  - caso contrário, retorne a string "bug!";
+  Essa função recebe um número e retorna uma string, sendo que o número será avaliado da seguinte forma: se divisível apenas por 3, retorne uma string "fizz"; se divisível apenas por 5, retorne uma string "buzz"; se divisível por 3 e 5, retorne a string "fizzBuzz"; caso contrário, retorne a string "bug!".
  */
 function fizzBuzzString(number) {
   let result = ''; // inicializa a string de resultado
@@ -160,20 +156,9 @@ function fizzBuzzString(number) {
 }
 
 /*
-  Essa função recebe um array de números e retorna um array de strings, sendo que cada número do array será avaliado e o resultado armazenado no array de strings, na mesma posição original. Cada número será avaliado da seguinte forma:
-  - se divisível apenas por 3, retorne uma string "fizz";
-  - se divisível apenas por 5, retorne uma string "buzz";
-  - se divisível por 3 e 5, retorne a string "fizzBuzz";
-  - caso contrário, retorne a string "bug!";
+  Essa função recebe um array de números e retorna um array de strings, sendo que cada número do array será avaliado e o resultado armazenado no array de strings, na mesma posição original. Cada número será avaliado da seguinte forma: se divisível apenas por 3, retorne uma string "fizz"; se divisível apenas por 5, retorne uma string "buzz"; se divisível por 3 e 5, retorne a string "fizzBuzz"; caso contrário, retorne a string "bug!";
 
   Foi utilizado o loop for...of para obter diretamente o valor de cada posição e como ele não será modificado dentro do loop, a variavel number foi declarada como const.
-
-  Material consultado sobre o loop for...in
-  https://www.w3schools.com/js/js_loop_forin.asp
-  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in
-
-  Material consultado sobre o loop for...of
-  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
  */
 function fizzBuzz(numbersArray) {
   let stringsArray = [];
@@ -185,9 +170,44 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+/*
+  Essa função recebe um caracter e caso seja uma vogal minúscula, será trocada por número da seguinte forma: a -> 1; e -> 2; i -> 3; o -> 4; u -> 5
+
+  Material consultado sobre como descobrir se uma chave (propriedade) existe em um objeto
+  https://stackoverflow.com/a/22074727
+ */
+function charEncode(character) {
+  // define um objeto code contendo as vogais como propriedades (chaves) e os números da troca como valores destas propriedades
+  let code = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+
+  let encodedChar; // encodedChar armazenará o resultado da troca
+
+  // se character não for uma vogal minúscula então não haverá valor definido para esta propriedade em code
+  if (code[character] === undefined) {
+    encodedChar = character; // o caracter será mantido
+  } else { // caso contrário
+    encodedChar = code[character]; // a vogal minúscula será trocada por seu respectivo valor em code
+  }
+
+  return encodedChar; // retorna o caracter codificado
 }
+
+/*
+  Essa função recebe uma string e retorna uma string com todas as vogais minúsculas trocadas por números da seguinte forma: a -> 1; e -> 2; i -> 3; o -> 4; u -> 5
+ */
+function encode(string) {
+  let encodedString = ''; // inicializa a string codificada com ''
+
+  for (const character of string) { // para cada caracter em string
+    encodedString += charEncode(character); // concatena o caracter codificado em encodedString
+  }
+
+  return encodedString; // retorna a string codificada
+}
+
+/*
+  Essa função recebe uma string e retorna uma string com todas os números trocados por vogais minúsculas da seguinte forma: a -> 1; e -> 2; i -> 3; o -> 4; u -> 5
+ */
 function decode() {
   // seu código aqui
 }
