@@ -25,13 +25,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  switch (string) {
+  switch (splitSentence) {
   case 'go Trybe':
-    return string.split(' ', 2);
+    return splitSentence.split(' ', 2);
   case 'vamo que vamo':
-    return string.split(' ', 3);
+    return splitSentence.split(' ', 3);
   case 'foguete':
-    return string.split(' ');
+    return splitSentence.split(' ');
   default:
     return splitSentence();
   }
@@ -69,7 +69,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
