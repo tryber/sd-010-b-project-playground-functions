@@ -41,7 +41,7 @@ function highestCount(numeros) {
   numeros.sort();
   let contador = 0;
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] >=  numeros[numeros.length-1]) {
+    if (numeros[i] >= numeros[numeros.length - 1]) {
       contador += 1;
     }
   }
@@ -49,10 +49,17 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let posicao = 0;
+  if (mouse <= cat1 && cat1 < cat2) {
+    console.log ('cat1');
+  }  else if (mouse <= cat2 && cat2 < cat1) {
+    console.log('cat2');
+  } else { console.log('os gatos trombam e o rato foge');
+  } 
+return console.log();
 }
-
+catAndMouse(1, 1, 1);
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
