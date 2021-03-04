@@ -124,13 +124,12 @@ function encode(string) {
     u = '5'
   }
  }
-}
+
 console.log(encode('hi there!'))
 function decode() {
  }
-}
 
-// Desafio 10
+
 module.exports = {
   calcArea,
   catAndMouse,
