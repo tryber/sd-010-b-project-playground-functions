@@ -23,15 +23,15 @@ function calcArea(base, height) {
   }
 }
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
-  switch (splitSentence) {
+  switch (string) {
   case 'go Trybe':
-    return splitSentence.split(' ', 2);
+    return string.split(' ', 2);
   case 'vamo que vamo':
-    return splitSentence.split(' ', 3);
+    return string.split(' ', 3);
   case 'foguete':
-    return splitSentence.split(' ');
+    return string.split(' ');
   default:
     return splitSentence();
   }
@@ -71,6 +71,14 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  switch (mouse, cat1, cat2) {
+  case cat1 + 3 !== mouse && cat2 + 2 !== mouse:
+    return cat2;
+  case cat1 + 6 !== mouse && cat2 + 12 !== mouse:
+    return cat1;
+  default:
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
