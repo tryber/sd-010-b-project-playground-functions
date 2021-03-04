@@ -71,13 +71,12 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 < cat2) {
+  if (cat1 > cat2 > mouse) {
+    return cat2;
+  } if (cat1< cat2 > mouse) {
     return cat1;
-  } if (cat1 > cat2) {
-    return cat1;
-  } if (cat1 === 0, cat2 === 0, mouse === 0) {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
