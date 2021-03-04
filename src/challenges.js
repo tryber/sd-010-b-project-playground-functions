@@ -137,13 +137,29 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 console.log(fizzBuzz([7, 9]))
 console.log(fizzBuzz([9, 25]))
     // Desafio 9
-function encode() {
-    // seu código aqui
-}
+function encode(codificar) {
+    codificar = codificar.split("a").join("1");
+    codificar = codificar.split("e").join("2");
+    codificar = codificar.split("i").join("3");
+    codificar = codificar.split("o").join("4");
+    codificar = codificar.split("u").join("5");
+    return codificar
 
-function decode() {
-    // seu código aqui
 }
+console.log(encode("hi there!"));
+
+
+function decode(decodificar) {
+    decodificar = decodificar.split("1").join("a")
+    decodificar = decodificar.split("2").join("e")
+    decodificar = decodificar.split("3").join("i")
+    decodificar = decodificar.split("4").join("o")
+    decodificar = decodificar.split("5").join("u")
+
+
+    return decodificar;
+}
+console.log(decode("h3 th2r2!"))
 
 module.exports = {
     calcArea,
