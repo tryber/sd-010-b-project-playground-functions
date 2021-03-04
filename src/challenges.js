@@ -5,7 +5,7 @@ function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     compardor = true;
   }
-  return compardor
+  return compardor;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -16,13 +16,13 @@ function calcArea(base, height) {
 function splitSentence(string) {
   // seu código aqui
   let array = [];
-  let palavra = "";
-  for (let indexString = 0; indexString <= string.length ; indexString += 1) {
-    if (string[indexString] === " " || indexString === string.length) {
+  let palavra = '';
+  for (let indexString = 0; indexString <= string.length; indexString += 1) {
+    if (string[indexString] === ' ' || indexString === string.length) {
       array.push(palavra);
-      palavra = "";
+      palavra = '';
     } else {
-      palavra = palavra + string[indexString];
+      palavra += string[indexString];
     }
   }
   return array;
@@ -32,13 +32,13 @@ function concatName(arrayString) {
   // seu código aqui
   let primeiro = arrayString[0];
   let ultimo = arrayString[arrayString.length - 1];
+  let resultado = ultimo + ', ' + primeiro;
 
-  return ultimo  + ", " + primeiro;
+  return resultado;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
-  let pontos = ((wins * 3 ) + (ties * 1));
+  let pontos = (wins * 3  + ties * 1);
   return pontos; 
 }
 // Desafio 6
@@ -64,11 +64,11 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
   if (cat1 < cat2) {
-    menorTamanho = "cat1";
+    menorTamanho = 'cat1';
   } else if (cat2 < cat1) {
-    menorTamanho = "cat2";
+    menorTamanho = 'cat2';
   } else {
-    menorTamanho = "os gatos trombam e o rato foge";
+    menorTamanho = 'os gatos trombam e o rato foge';
   }
   return menorTamanho;
 }
@@ -78,13 +78,13 @@ function fizzBuzz(arrayNumber) {
   let list = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
-      list.push("fizzBuzz");
+      list.push('fizzBuzz');
     } else if (arrayNumber[index] % 3 === 0) {
-      list.push("fizz");
+      list.push('fizz');
     } else if (arrayNumber[index] % 5 === 0) {
-      list.push("buzz");
+      list.push('buzz');
     } else {
-      list.push("bug!");
+      list.push('bug!');
     }
   }
   return list;
@@ -94,18 +94,18 @@ function encode(string) {
   // seu código aqui
   let listEncode = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === "a") {
-      listEncode = listEncode + '1';
-    } else if (string[index] === "e") {
-      listEncode = listEncode + '2';
-    } else if (string[index] === "i") {
-      listEncode = listEncode + '3';
-    } else if (string[index] === "o") {
-      listEncode = listEncode + '4';
-    } else if (string[index] === "u") {
-      listEncode = listEncode + '5';
-    }else {
-      listEncode = listEncode + string[index];
+    if (string[index] === 'a') {
+      listEncode += '1';
+    } else if (string[index] === 'e') {
+      listEncode += '2';
+    } else if (string[index] === 'i') {
+      listEncode += '3';
+    } else if (string[index] === 'o') {
+      listEncode += '4';
+    } else if (string[index] === 'u') {
+      listEncode += '5';
+    } else {
+      listEncode += string[index];
     }
   }
   return listEncode;
@@ -114,18 +114,18 @@ function decode(string) {
   // seu código aqui
   let listDecode = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === "1") {
-      listDecode = listDecode + 'a';
-    } else if (string[index] === "2") {
-      listDecode = listDecode + 'e';
-    } else if (string[index] === "3") {
-      listDecode = listDecode + 'i';
-    } else if (string[index] === "4") {
-      listDecode = listDecode + 'o';
-    } else if (string[index] === "5") {
-      listDecode = listDecode + 'u';
-    }else {
-      listDecode = listDecode + string[index];
+    if (string[index] === '1') {
+      listDecode += 'a';
+    } else if (string[index] === '2') {
+      listDecode += 'e';
+    } else if (string[index] === '3') {
+      listDecode += 'i';
+    } else if (string[index] === '4') {
+      listDecode += 'o';
+    } else if (string[index] === '5') {
+      listDecode += 'u';
+    } else {
+      listDecode += string[index];
     }
   }
   return listDecode;
@@ -142,3 +142,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+console.log(footballPoints(6, 2));
