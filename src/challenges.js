@@ -75,11 +75,25 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';  
 }
-console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arryFB) {
   // seu código aqui
+  let novaArray = [];
+
+  for(let counter = 0; counter < arryFB.length; counter +=1){
+
+    if (arryFB[counter] % 3 == 0 && arryFB[counter] % 5 == 0) {
+      novaArray.push('fizzbuzz');
+    } else if (arryFB[counter] % 3 == 0){
+      novaArray.push('fizz');
+    } else if (arryFB[counter] % 5 == 0) {
+      novaArray.push('buzz');
+    } else {
+      novaArray.push('bug!');
+    }
+  }
+  return novaArray;
 }
 
 // Desafio 9
