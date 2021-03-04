@@ -83,8 +83,29 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
+
+// função troca caracter
+function changeCharacters(code, initialMessage) { // funcao auxiliar para o desafio 9. esta funcao apenas substituí os caracteres.
+  let finalMessage = '';
+  let objectKeyArray = Object.keys(code);
+  for (let index = 0; index < initialMessage.length; index += 1) {
+    let counter = 0;
+    let counter2 = 0;
+    for (let key in code) {
+      counter2 += 1;
+      if (initialMessage[index] === key) {
+        finalMessage += code[initialMessage[index]];
+        counter += 1;
+      } else if (counter2 === objectKeyArray.length && counter < 1) { // o counter2 garante que irá adicionar o caracter somente depois de verificado
+        finalMessage += initialMessage[index]; // todos os itens do objeto
+        counter += 1;
+      }
+    }
+  }
+  return finalMessage;
+}
+
 function encode(message) {
-  let codedMessagem = '';
   let translation = {
     a: 1,
     e: 2,
@@ -92,45 +113,20 @@ function encode(message) {
     o: 4,
     u: 5,
   };
-  for (let index = 0; index < message.length; index += 1) {
-    let counter = 0;
-    for (let key in translation) {
-      if (message[index] === key) {
-        codedMessagem += translation[message[index]];
-        counter += 1;
-      } else if (key === 'u' && counter < 1) { //se depois de ter verificado todas as key e nao for encontrado nenhuma igual, ai sim segue para o código.
-        codedMessagem += message[index];
-        counter += 1;
-      }
-    }
-  }
+  let codedMessagem = changeCharacters(translation, message);
   return codedMessagem;
 }
 
 function decode(message) {
-  let encodedMessagem = '';
-  for (let index in message) {
-    switch (message[index]) {
-      case '1':
-        encodedMessagem = encodedMessagem + 'a';
-        break;
-      case '2':
-        encodedMessagem = encodedMessagem + 'e';
-        break;
-      case '3':
-        encodedMessagem = encodedMessagem + 'i';
-        break;
-      case '4':
-        encodedMessagem = encodedMessagem + 'o';
-        break;
-      case '5':
-        encodedMessagem = encodedMessagem + 'u';
-        break;
-      default:
-        encodedMessagem = encodedMessagem + message[index];
-    }
-  }
-  return encodedMessagem;
+  let translation = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let decodedMessagem = changeCharacters(translation, message);
+  return decodedMessagem;
 }
 
 module.exports = {
