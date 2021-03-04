@@ -49,8 +49,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs(cat1 - mouse);
   let distance2 = Math.abs(cat2 - mouse);
   if (distance1 === distance2) {
-    return 'os gatos trombam e o rato foge'
-  } else if (distance1 > distance2) {
+    return 'os gatos trombam e o rato foge';
+  } if (distance1 > distance2) {
     return 'cat2';
   }
   return 'cat1';
@@ -76,18 +76,19 @@ function fizzBuzz(myArray) {
 // Desafio 9
 function encode(palavra) {
   for (let index = 0; index < palavra.length; index += 1) {
-    palavra = palavra.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
+    palavra = palavra.replace('a', 1).replace('e', 2).replace('i', 3);
+    palavra.replace('o', 4).replace('u', 5);
   }
   return palavra;
 }
 
 function decode(palavra) {
   for (let index = 0; index < palavra.length; index += 1) {
-    palavra = palavra.replace(1, 'a').replace(2, 'e').replace(3, 'i').replace(4, 'o').replace(5, 'u');
+    palavra = palavra.replace(1, 'a').replace(2, 'e').replace(3, 'i');
+    palavra.replace(4, 'o').replace(5, 'u');
   }
   return palavra;
 }
-
 
 
 
