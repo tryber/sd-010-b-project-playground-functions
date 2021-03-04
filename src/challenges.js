@@ -5,27 +5,30 @@ function compareTrue(a, b) {
   }
   return false;
 }
+//console.log(compareTrue(1,1))
 
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height / 2);
   return result;
 }
+//console.log(calcArea(10,50))
 
 // Desafio 3
 function splitSentence(palavra) {
   let separacao = palavra.split(' ');
   return separacao;
 }
+//console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName(name) {
   let last = name[name.length - 1];
   let first = name[0];
   let concatenation = `${last}, ${first}`;
-
   return concatenation;
 }
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -36,6 +39,7 @@ function footballPoints(wins, ties) {
   let totalPoints = parcialWinPoints + parcialTiePoints;
   return totalPoints;
 }
+//console.log(footballPoints(14,8))
 
 // Desafio 6
 function highestCount(numbers) {
@@ -53,6 +57,7 @@ function highestCount(numbers) {
   }
   return count;
 }
+//console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -66,6 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
+//console.log(catAndMouse(0,6,12))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -83,19 +89,19 @@ function fizzBuzz(array) {
   }
   return arr;
 }
-console.log(fizzBuzz([2,15,7,9,45]))
+//console.log(fizzBuzz([2,15,7,9,45]))
+
 // Desafio 9
 
 function encode(lowercase) {
   let encode = lowercase
-    .replace(/a/g, 1);
-    .replace(/e/g, 2);
-    .replace(/i/g, 3);
-    .replace(/o/g, 4);
+    .replace(/a/g, 1)
+    .replace(/e/g, 2)
+    .replace(/i/g, 3)
+    .replace(/o/g, 4)
     .replace(/u/g, 5);
   return encode;
 }
-
 function decode(text) {
   let decode = text
     .replace(/1/g, 'a')
@@ -105,6 +111,11 @@ function decode(text) {
     .replace(/5/g, 'u');
   return decode;
 }
+//console.log(encode('hi there'))
+//console.log(decode('h3 th2r2'))
+
+
+
 
 module.exports = {
   calcArea,
