@@ -88,23 +88,23 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
-      array.length[index] = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      array.length[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      array.length[index] = 'buzz';
+    if ( (array[index] % 3 == 0) && (array[index] % 5 == 0) ) {
+      array[index] = 'fizzBuzz';
+    } else if (array[index] % 3 == 0) {
+      array[index] = 'fizz';
+    } else if (array[index] % 5 == 0) {
+      array[index] = 'buzz';
     } else {
-      array = 'bug!';
+      array[index] = 'bug!';
     }
   } return array;
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
 }
-function decode() {
+function decode(string) {
   // seu código aqui
 }
 
