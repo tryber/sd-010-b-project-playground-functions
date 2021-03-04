@@ -35,9 +35,15 @@ console.log(splitSentence(phrase));
 // Para resolver o exercício 3 eu consultei um artigo do DevMedia sobre split. src = https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+let words = ["gabriel", "menezes", "dias", "santos"];
+
+function concatName(words) {
+  let firstWord = words[0];
+  let lastWord = words[words.length - 1];
+  return firstWord + ", " + lastWord;
 }
+  console.log(concatName(words));
 
 // Desafio 5
 function footballPoints() {
