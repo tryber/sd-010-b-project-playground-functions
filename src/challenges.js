@@ -94,8 +94,8 @@ function fizzBuzz(array) {
       array[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
       array[index] = 'buzz';
-    } else { 
-      array[index] = 'bug!'; 
+    } else {
+      array[index] = 'bug!';
     }
   } return array;
 }
@@ -103,21 +103,18 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let vogais = ['a, e, i, o, u'];
+  let vogais = ['a, e, i, o, u']
   for (let index = 0; index < string; index += 1) {
-    if (vogais[index] = string[index]) {
-      vogais;
-    }
-    return string;
+    vogais[index] = string[index];
+    return vogais;
   }
 }
 function decode(string) {
   // seu código aqui
-  let vogais = ['a, e, i, o, u'];
+  let vogais = ['a, e, i, o, u']
   for (let index = 0; index < string; index += 1) {
-    if (string[index] = vogais[index]) {
-      string;
-    }
+    string[index] = vogais[index];
+    return string;
   }
   return string;
 }
