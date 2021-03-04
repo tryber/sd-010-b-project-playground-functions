@@ -101,7 +101,7 @@ function hydrate(stringBar) {
   for (let index = 0; index < soNumb.length; index += 1){
     soma = soma + parseInt(soNumb[index]);
   }
-  return soma + " copos de água";
+  return soma + " copo de água";
 }
 
 module.exports = {
@@ -110,4 +110,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
