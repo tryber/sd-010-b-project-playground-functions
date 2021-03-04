@@ -106,61 +106,67 @@ console.log(fizzBuzz([5,15,4,45]));
 function encode(paramCodificado) {
   
     let arrayCodificado = paramCodificado.split('');
-
+    let stringCodificada;
+    
   for(let cont=0; cont < arrayCodificado.length; cont += 1){
-    if (arrayCodificado[cont] == a){
+    if (arrayCodificado[cont] == "a"){
       
-      arrayCodificado[cont] = "1";
-
-    } else if (arrayCodificado[cont] == e) {
-
-      arrayCodificado[cont] = "2";
-
-    } else if (arrayCodificado[cont] == i) {
-
-      arrayCodificado[cont] = "3";
+      arrayCodificado[cont] = 1;
       
-    } else if (arrayCodificado[cont] == o) {
+    } else if (arrayCodificado[cont] == "e") {
+
+      arrayCodificado[cont] = 2;
       
-      arrayCodificado[cont] = "4";
+    } else if (arrayCodificado[cont] == "i") {
 
-    } else if (arrayCodificado[cont] == u){
+      arrayCodificado[cont] = 3;
+      
+    } else if (arrayCodificado[cont] == "o") {
+      
+      arrayCodificado[cont] = 4;
+      
+    } else if (arrayCodificado[cont] == "u"){
 
-      arrayCodificado[cont] = "5";
-
+      arrayCodificado[cont] = 5;
+     
     }
   }
-  
+  stringCodificada = arrayCodificado.join("");
+  return stringCodificada;
 }
+
 function decode(paramDecodificado) {
 
   let arrayDecodificado = paramDecodificado.split('');
+  let stringDecodificada;
+  
+for(let cont=0; cont < arrayDecodificado.length; cont += 1){
+  if (arrayDecodificado[cont] == 1){
+    
+    arrayDecodificado[cont] = "a";
+    
+  } else if (arrayDecodificado[cont] == 2) {
 
-  for(let cont=0; cont < arrayDecodificado.length; cont += 1){
-    if (arrayDecodificado[cont] == 1){
-      
-      arrayDecodificado[cont] = "a";
+    arrayDecodificado[cont] = "e";
+    
+  } else if (arrayDecodificado[cont] == 3) {
 
-    } else if (arrayDecodificado[cont] == 2) {
+    arrayDecodificado[cont] = "i";
+    
+  } else if (arrayDecodificado[cont] == 4) {
+    
+    arrayDecodificado[cont] = "o";
+    
+  } else if (arrayDecodificado[cont] == 5){
 
-      arrayDecodificado[cont] = "e";
-
-    } else if (arrayDecodificado[cont] == 3) {
-
-      arrayDecodificado[cont] = "i";
-      
-    } else if (arrayDecodificado[cont] == 4) {
-      
-      arrayDecodificado[cont] = "o";
-
-    } else if (arrayDecodificado[cont] == 5){
-
-      arrayDecodificado[cont] = "u";
-
-    }
+    arrayDecodificado[cont] = "u";
+   
   }
-  return 
 }
+stringDecodificada = arrayDecodificado.join("");
+return stringDecodificada;
+}
+
 
 module.exports = {
   calcArea,
