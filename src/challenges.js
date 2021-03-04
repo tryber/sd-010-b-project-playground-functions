@@ -41,8 +41,8 @@ function highestCount(numbers) {
   }
   return counter;
 }
-numbers = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount(numbers));
+let user_numbers = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(user_numbers));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
