@@ -81,7 +81,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let segundo = Math.abs(cat2 - mouse);
   if (primeiro < segundo) {
     return primeiro;
-  } if (primeiro > segundo) {
+  } 
+  if (segundo < primeiro) {
     return segundo;
   }
   return 'os gatos trombam e o rato foge';
