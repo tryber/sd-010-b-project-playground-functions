@@ -68,19 +68,20 @@ function catAndMouse(mouse,cat1,cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let key =[];
-  if(array[key]%3===0)
-    {return "fizz"}
-    else if(array[key]%5===0)
-    return "Buzz"
-    else if(array[key]%3===0 && array[key]%5===0){
-      return "fizzBuzz"
-
-    }else {
-
-      return "bug"
-    }
-
+  if(array[key]%3===0){
+    return "fizz";
   }
+  else if(array[key]%5===0){
+    return "buzz";
+  }
+  else if(array[key]%3===0 && array[key]%5===0){
+      return "fizzBuzz";
+  }
+  else {
+      return "bug!";
+  }
+
+}
 
 // Desafio 9
 function encode() {
