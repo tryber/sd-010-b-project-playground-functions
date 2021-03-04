@@ -89,9 +89,6 @@ function decode(palavra) {
   }
   return palavra;
 }
-
-
-
 module.exports = {
   calcArea,
   catAndMouse,
