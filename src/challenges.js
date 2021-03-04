@@ -78,22 +78,22 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array, string) {
-  string = [];
+  string = "";
   for (let index = 0; index < array.length; index += 1){
     if (array[index] %3 === 0 && array[index] %5 === 0){
-      string.push("FizzBuzz");
+      string = "FizzBuzz";
     } 
     
     else if (array[index] %3 === 0){
-      string.push("Fizz");
+      string = "Fizz";
     } 
     
     else if (array[index] %5 === 0){
-      string.push("Buzzz");
+      string = "Buzzz";
     }
 
      else {
-      string.push("Bug");
+      string = "Bug";
     }
   }
   return string;
