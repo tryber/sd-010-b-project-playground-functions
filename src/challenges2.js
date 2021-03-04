@@ -1,22 +1,6 @@
 // Desafio 10
 function techList() {
   // seu código aqui
-  if (array.length == 0) {
-    return "Vazio!";
-  } else {
-    let arraySort = array.sort();
-    let objetoTech = {
-      tech: [],
-      name: name,
-    };
-    let finalArray = [];
-
-    for (let i = 0; i < arraySort.length; i += 1) {
-      objetoTech.tech.push = arraySort[i];
-      finalArray.push (objetoTech);
-    }
-    console.log (finalArray);
-  }
 }
 
 // Desafio 11
@@ -26,25 +10,26 @@ function generatePhoneNumber(array) {
   let weirdNumbers = false;
 
   for (let i = 0; i < array.length; i += 1) {
+
     if ((array[i] <= -1) || (array[i] >= 10)) {
       weirdNumbers = true;
     }   
 
     for (let j = 0; j < array.length; j += 1 ) {
       if (array[i] == array[j]){
-      repeatedNumbers += 1;
+        repeatedNumbers += 1;
         if (repeatedNumbers >= 3){
-         repeatedNumbersValidator += repeatedNumbers;
+          repeatedNumbersValidator += repeatedNumbers;
         }
       }
     }
     repeatedNumbers = 0;
   }
 
-  if ((weirdNumbers == true) || (repeatedNumbersValidator >= 3)){
-    return("não é possível gerar um número de telefone com esses valores")
-  } else if (array.length != 11) {
+  if (array.length != 11) {
     return("Array com tamanho incorreto.")
+  } else if ((weirdNumbers == true) || (repeatedNumbersValidator >= 3)){
+    return ("não é possível gerar um número de telefone com esses valores")
   } else {
     let string = '(';
 
@@ -60,7 +45,7 @@ function generatePhoneNumber(array) {
     for (let i = 7; i < array.length; i += 1) {
       string += array[i]
     }
-    return(string);
+    return (string);
   }
 }
 
