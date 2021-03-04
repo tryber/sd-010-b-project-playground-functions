@@ -31,15 +31,8 @@ function splitSentence(anyString) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let firstItem = '';
-  let lastItem = '';
-  for (let index in arrayString) {
-    if (index === 0) {
-      firstItem = arrayString[index];
-    } else if (index === NavigationPreloadManager,(arrayString.length - 1)) {
-      lastItem = arrayString[index];
-    }
-  }
+  let firstItem = arrayString[0];
+  let lastItem = arrayString[arrayString.length - 1];
   finalString = `${lastItem}, ${firstItem}`;
   return finalString;
 }
