@@ -2,17 +2,18 @@
 function techList(array, name) {
   // seu código aqui
   let arrayObjeto = [];
-  let objeto = {};
+  let objeto = {
+  };
   let resultado;
   array.sort();
   if (array.length == 0) {
-    resultado = "Vazio";
+    resultado = "Vazio!";
   } else {
     for (let index = 0; index < array.length; index += 1) {
       objeto.tech = array[index];
       objeto.name = name;
       arrayObjeto.push(objeto);
-      objeto = {}
+      objeto = {};
     }
     resultado = arrayObjeto;
   }
@@ -40,4 +41,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
