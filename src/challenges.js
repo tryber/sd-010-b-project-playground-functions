@@ -54,7 +54,7 @@ function highestCount(arrayOfNumbers) {
   let countHigh = false;
 
   for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (arrayOfNumbers[i] > highNumber) {
+    if (arrayOfNumbers[index] > highNumber) {
       highNumber = arrayOfNumbers[index];
     }
   }
