@@ -42,9 +42,26 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(number) {
+  let maximumNumber = 0;
+  let NumberOccurrances = 0;
+
+  for (let index = 0; index < number.length; index += 1){
+      if (maximumNumber < number[index]){
+        maximumNumber = number[index]
+      }
+    }
+    for(let key in number){
+      if (maximumNumber === number[key]){
+        NumberOccurrances += 1;
+        }
+      }
+  
+
+  return NumberOccurrances
 }
+  
+// exercicio resolvido após o plantão onde um colega tinha uma dúvida sobre esta questão. Além disso, também participei de um grupo de estudos onde verificamos esta questão.
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -79,14 +96,25 @@ function fizzBuzz(array) {
 //resolução após plantão de dúvidas com Fernando onde outro colega também estava com a mesma dúvida
 
 // Desafio 9
-function encode( ) {
+function encode(word) {
   
-}
+  
+  for (let index = 0; index < word.length; index +=1) {
+   word = word.replace("a", 1).replace("e", 2).replace("i", 3).replace("o", 4).replace("u", 5)
+  }
+  return word
+} console.log(encode("hi there"))
+//fiz este exercício com a ajuda dos colegas em grupo de estudos.
   
 
-function decode () {
-  // seu código aqui
-}
+function decode (word1) {
+  for (let index = 0; index < word1.length; index +=1) {
+    word1 =  word1.replace(1, "a").replace(2, "e").replace(3, "i").replace(4, "o").replace(5, "u")
+   }
+   return word1
+ }
+//fiz este exercício com a ajuda dos colegas em um grupo de estudos.
+
 
 module.exports = {
   calcArea,
