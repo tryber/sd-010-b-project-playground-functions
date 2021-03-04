@@ -61,8 +61,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(a) {
+  let dado = [];
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] % 15 === 0) {
+      dado.push("fizzBuzz");
+      dado.push('fizzBuzz');
+    } else if (a[i] % 3 === 0) {
+      dado.push("fizz");
+      dado.push('fizz');
+    } else if (a[i] % 5 === 0) {
+      dado.push("buzz");
+      dado.push('buzz');
+    } else {
+      dado.push("bug!")
+      dado.push('bug!');
+    }
+  }
+  return dado;
 }
 
 // Desafio 9
