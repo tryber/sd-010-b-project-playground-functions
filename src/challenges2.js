@@ -23,7 +23,7 @@ function generatePhoneNumber(arrayNumber) {
   let auxiliarString = '';
   let aux = 0;
 
-  if (arrayNumber.length > 11) {
+  if (arrayNumber.length != 11) {
     return 'Array com tamanho incorreto.';
   } else {
     for (let index in arrayNumber) {
@@ -50,7 +50,7 @@ function generatePhoneNumber(arrayNumber) {
     if (index == 0) {
       auxiliarString = auxiliarString + '(';
     } else if (index == 3) {
-      auxiliarString = auxiliarString + ')';
+      auxiliarString = auxiliarString + ') ';
     } else if (index == 9) {
       auxiliarString = auxiliarString + '-';
     } else {
