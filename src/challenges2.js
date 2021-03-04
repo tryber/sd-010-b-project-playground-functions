@@ -47,7 +47,7 @@ console.log(generatePhoneNumber(numeros));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-   let mensagem;
+  let mensagem;
   if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB)) {
     mensagem = true;
   } else {
@@ -63,25 +63,30 @@ console.log(triangleCheck(lineA, lineB, lineC));
 
 // Desafio 13
 function hydrate(frase) {
-let r = /\d+/g;
-let m;
-let numeros = [];
-let totalAgua=0;
-while ((m = r.exec(frase)) != null) {
-  numeros.push((m[0]));
+  let r = /\d+/g;
+  let m;
+  let numeros = [];
+  let mensagem;
+  while ((m = r.exec(frase)) != null) {
+    numeros.push((m[0]));
+  }
+  for (key in numeros) {
+    numeros[key] = parseInt(numeros[key]);
+  }
+  let total = 0;
+  for (key in numeros) {
+    total = total + numeros[key];
+  }
+
+  if (total === 1) {
+    mensagem = '1 copo de água';
+
+  } else if (total > 1) {
+    mensagem = total + " copos de água"
+  }
+  return mensagem;
 }
-for(let key in numeros){
-totalAgua = totalAgua + numeros[key];
-
-}
-console.log(typeof(numeros));
-
-
- return numeros;
-}
-let frase = "1 cachaça, 5 cervejas e 1 copo de vinho";
-
-
+let frase = "1 copo de vinho ";
 console.log(hydrate(frase));
 
 module.exports = {
