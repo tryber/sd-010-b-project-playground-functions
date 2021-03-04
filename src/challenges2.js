@@ -43,7 +43,7 @@ function generatePhoneNumber(arrayNumbers) {
 }
 /* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([0, 1, 6])); */
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+/* console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10])); */
 /* console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([])); */
@@ -71,9 +71,26 @@ console.log(triangleCheck(10, 1, 2));
 console.log(triangleCheck(10, 30, 8)); */
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numberString = string.match(/\d+/g).map(Number); //código retirado no site: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  let cont = 0;
+
+  for (let index = 0; index < numberString.length; index += 1) {
+    cont += numberString[index];
+  }
+
+  let suggestion = '';
+  suggestion = `${cont} copos de água`;
+
+  if (numberString.length === 1) {
+    suggestion = '1 copo de água';
+  }
+  return suggestion;
 }
+console.log(hydrate('1 cerveja'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('2 shots de tequila, 2 cervejas e 1 corote'));
+console.log(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
