@@ -59,7 +59,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  for (let index = 0; index > array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     let clone = array[index];
     if (clone === array) {
       return 2;
