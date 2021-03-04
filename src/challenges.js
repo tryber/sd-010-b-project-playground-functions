@@ -88,12 +88,47 @@ function fizzBuzz(arrayNumeros) {
      return container
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 **/Consultei o repositório do meu colega Vinicius Bodra para entender a resolução deste requisito.
+//Link do repositório do Vinicius: https://github.com/tryber/sd-010-b-project-playground-functions/pull/38/commits/4559969fc1b4ad584879446aa6079980baf3d39a
+
+function encode(anotherString) {
+  let newAnswer=[];
+    for(let index in anotherString){
+        if(anotherString[index]=="a"){
+            newAnswer+="1"
+        } else if(anotherString[index]=="e"){
+            newAnswer+="2"
+        } else if(anotherString[index]=="i"){
+            newAnswer+="3"
+        } else if(anotherString[index]=="o"){
+            newAnswer+="4"
+        } else if(anotherString[index]=="u"){
+            newAnswer+="5"
+        } else{
+            newAnswer+=anotherString[index]
+        }
+    }
+    return newAnswer
 }
-function decode() {
-  // seu código aqui
+function decode(oneMoreString) {
+  let anotherAnswer=[];
+    for(let arrayString in oneMoreString){
+        if(oneMoreString[arrayString]=="1"){
+            anotherAnswer+="a"
+        } else if(oneMoreString[arrayString]=="2"){
+            anotherAnswer+="e"
+        } else if(oneMoreString[arrayString]=="3"){
+            anotherAnswer+="i"
+        } else if(oneMoreString[arrayString]=="4"){
+            anotherAnswer+="o"
+        } else if(oneMoreString[arrayString]=="5"){
+            anotherAnswer+="u"
+        } else{
+            anotherAnswer+=oneMoreString[arrayString]
+        }
+    }
+    return anotherAnswer
+
 }
 
 module.exports = {
