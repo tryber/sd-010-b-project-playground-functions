@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (cat1 > cat2 > mouse) {
     return cat2;
-  } if (cat1< cat2 > mouse) {
+  } if (cat1 < cat2 > mouse) {
     return cat1;
   }
   return 'os gatos trombam e o rato foge';
