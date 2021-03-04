@@ -8,27 +8,19 @@ function compareTrue(info1, info2) {
   }
   return message;
 }
-console.log(compareTrue(false,true));
 
 // Desafio 2
 function calcArea(base,heigth) {
     let triangleArea = (base*heigth)/2;
     return triangleArea;
 } 
-console.log(calcArea(10,50));
-console.log(calcArea(5,2));
-console.log(calcArea(51,1));
 
 // Desafio 3 - fonte de pesquisa https://www.devmedia.com.br/javascript-split-
-let string;
-
 function splitSentence(string) {
+  let string;
   result = string.split(" "); 
   return result;
 }
-console.log(splitSentence('go Trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(parameter) {
@@ -38,20 +30,15 @@ function concatName(parameter) {
   }
     return result;
 }
-console.log(concatName(['Lucas','Cassiano','Ferraz','Paolillo']));
 
 // Desafio 5
-let result;
-
 function footballPoints(wins, ties) {
+  let result;
   let winsvalue = (wins * 3);
   let tiesvalue = (ties * 1);
     result = winsvalue + tiesvalue;
     return result;
 }
-console.log(footballPoints(14,8));
-console.log(footballPoints(1,2));
-console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount(numbers) {
@@ -65,9 +52,6 @@ function highestCount(numbers) {
     }
     return qtd;
   }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -83,7 +67,6 @@ function catAndMouse(mouse, cat1, cat2) {
     }
   return message;
 }
-console.log(catAndMouse(9,8,8));
 
 // Desafio 8
 function fizzBuzz() {
