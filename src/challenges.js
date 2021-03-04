@@ -59,20 +59,20 @@ function highestCount(arrayNumeros) {
   // seu código aqui
   let localizaMaior = 0;
   let contMaior = 0;
-  for (let i = 0; i <= arrayNumeros.length; i++) {
-    if (localizaMaior < arrayNumeros[i]) {
-      localizaMaior = arrayNumeros[i];
+  for (let localiza in arrayNumeros) {
+    if (localizaMaior < arrayNumeros[localiza]) {
+      localizaMaior = arrayNumeros[localiza];
     }
   }
 
-  for (let j = 0; j <= arrayNumeros.length; j++) {
-    if (localizaMaior == arrayNumeros[j]) {
+  for (let contador in arrayNumeros) {
+    if (localizaMaior == arrayNumeros[contador]) {
       contMaior++;
     }
   }
   return contMaior;
 }
-//console.log(highestCount([0, 0, 0]));
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -95,7 +95,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
 }
-console.log(catAndMouse(0, 3, 2));
+//console.log(catAndMouse(0, 3, 2));
 
 
 // Desafio 8
