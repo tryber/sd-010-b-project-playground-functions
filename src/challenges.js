@@ -23,13 +23,10 @@ function splitSentence(sentence) {
   let word = ''; // inicializa word com string vazia
 
   // percorre cada caracter de sentence
-  for (let indexSentence = 0; indexSentence < sentence.length; indexSentence += 1) {
-    // o caracter da posição indexSentence em sentence é armazenado em character
-    let character = sentence.charAt(indexSentence);
-
+  for (const character of sentence) {
     // constrói palavra: armazena em word se caracter diferente de espaço
     if (character !== ' ') {
-      word += character;
+      word += character; // concatena o caracter na string word
     } else { // fim da construção da palavra
       result.push(word); // armazena word no array result
       word = ''; // reinicializa word com string vazia
