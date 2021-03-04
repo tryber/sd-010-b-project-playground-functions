@@ -109,9 +109,19 @@ array. A cada vez que o loop passa pelo numero ele compara com a condição colo
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str1) {
+  let codigo1 = str1;
+  for (let index = 0; index < str1.length; index += 1) {
+    codigo1 = str1.replace('a', 1);
+    codigo1 = str1.replace('e', 2);
+    codigo1 = str1.replace('i', 3);
+    codigo1 = str1.replace('o', 4);
+    codigo1 = str1.replace('u', 5);
+  }
+  return codigo1
 }
+console.log(encode("hi there!"));
+
 function decode() {
   // seu código aqui
 }
