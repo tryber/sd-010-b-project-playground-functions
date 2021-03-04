@@ -63,10 +63,11 @@ function highestCount(arrayNumbers) {
     if (arrayNumbers[i] === numeroMaior) {
       vezesAparece = vezesAparece + 1;
     }
-  } 
- return vezesAparece;
+  }
+  return vezesAparece;
 }
 console.log(highestCount([1, 2, 3, 3, 4, 4, 4, 4]));
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
