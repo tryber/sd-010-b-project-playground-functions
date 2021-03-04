@@ -74,7 +74,7 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  cat1 = Math.abs(cat1 - mouse); // O método abs () retorna o valor absoluto de um número.
+  cat1 = Math.abs(cat1 - mouse);
   cat2 = Math.abs(cat2 - mouse);
   if (cat1 < cat2) {
     return cat1;
@@ -88,12 +88,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0) {
-      array = 'fizz';
+    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+      array[index] = 'fizzBuzz';
+    } else if (array[index] % 3 === 0) {
+      array[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
-      return 'buzz';
-    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      array = 'fizzBuzz';
+      array[index] = 'buzz';
     } else {
       array = 'bug!';
     }
