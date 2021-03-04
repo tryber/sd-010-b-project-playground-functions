@@ -2,10 +2,10 @@
 function compareTrue(num) {
   // seu código aqui
   if (num > 0 && num < 10){
-    return True;
+    return true;
   }
   else{
-    return False;
+    return false;
   }
 }
 
