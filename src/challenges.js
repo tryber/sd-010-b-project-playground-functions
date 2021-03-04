@@ -49,11 +49,24 @@ function footballPoints(wins, ties) {
   return resultado;
 }
 console.log(footballPoints(0, 0));
+
 // Desafio 6
-function highestCount() {
-
+function highestCount(arrayNumbers) {
+  let numeroMaior = 0;
+  let vezesAparece = 0;
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] > numeroMaior) {
+      numeroMaior = arrayNumbers[i];
+    }
+  }
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] === numeroMaior) {
+      vezesAparece = vezesAparece + 1;
+    }
+  } 
+ return vezesAparece;
 }
-
+console.log(highestCount([1, 2, 3, 3, 4, 4, 4, 4]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
