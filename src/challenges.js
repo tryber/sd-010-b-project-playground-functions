@@ -16,8 +16,9 @@ calcArea(10, 50);
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  console.log(['vamo', 'que', 'vamo']);
 }
+splitSentence();
 
 // Desafio 4
 function concatName() {
