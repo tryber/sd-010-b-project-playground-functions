@@ -37,7 +37,7 @@ function generatePhoneNumber(numbersphone) {
       bloco[numbersphone[index]] = quantidade;
     }
     for (keys in bloco) {
-      if (bloco[keys] > 3) {
+      if (bloco[keys] >= 3) {
         return("não é possível gerar um número de telefone com esses valores");
         istrue = true;
         break;
