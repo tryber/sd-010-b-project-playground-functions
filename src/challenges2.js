@@ -44,15 +44,8 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate(umaFrase) {
-  let fatiada = umaFrase.split('');
-  let soma = sum(fatiada);
-  let resultado = pluralSingular(soma);
-  return resultado;
+  //escreva seu codigo aqui
 }
-let frase1 = '1 cerveja';
-let frase2 = '1 cachaça, 5 cervejas e 1 copo de vinho';
-console.log(hydrate(frase2));
-console.log(hydrate(frase1));
 
 module.exports = {
   generatePhoneNumber,
