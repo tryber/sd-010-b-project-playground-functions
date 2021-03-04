@@ -25,7 +25,7 @@ function concatName(arrayParameter) {
   // seu código aqui
   let searchLastName = arrayParameter[arrayParameter.length - 1];
   let searchFirstName = arrayParameter[0];
-  let resultConcat = searchLastName + ',' + searchFirstName;
+  let resultConcat = searchLastName + ', ' + searchFirstName;
   return resultConcat;
 }
 
