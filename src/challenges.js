@@ -3,18 +3,19 @@ function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
   }
-  return false; 
+  return false;
 }
 // Desafio 2
 function calcArea(base, altura) {
-  
   return (base * altura) / 2;
 }
 // Desafio 3
-function splitSentence(a) {
-  let frase = a
-  return a.split(' ');
+function splitSentence(string) {
+  string
+  return string.split(' ');
 }
+console.log(splitSentence('frase de teste aqui'))
+
 // Desafio 4
 function concatName(array) {
   let conca = '';
@@ -34,7 +35,20 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount() {
-  
+  let highNumber = 0;
+  let highNumberCount = 0;
+  for (i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > highNumber) {
+      highNumber = numbers[i];
+    }
+  }
+  for (j = 0; j < numbers.length; j += 1 ) {
+    if (numbers[j] === highNumber) {
+     highNumberCount = (highNumberCount+1);
+     }
+
+  }
+  return highNumberCount  
 }
 // Desafio 7
 function catAndMouse() {
