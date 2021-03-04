@@ -58,19 +58,17 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(word) {
-  let codeArray = word;
-  for (let j = 0; j < codeArray.length; j += 1) {
-    codeArray = codeArray.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5); 
+  for (let i = 0; i < word.length; i += 1) {
+    word = word.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5)
   }
-  return codeArray;
+  return word;
 }
 
 function decode(word) {
-  let decodeArray = word;
-  for (let j = 0; j < decodeArray.length; j += 1) {
-    decodeArray = decodeArray.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5); 
+  for (let i = 0; i < word.length; i += 1) {
+    word = word.replace(1, 'a').replace(2, 'e').replace(3, 'i').replace(4, 'o').replace(5, 'u')
   }
-  return decodeArray;
+  return word;
 }
 
 module.exports = {
