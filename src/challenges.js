@@ -88,7 +88,7 @@ Global_Objects/Math/abs */
 function fizzBuzz(arrayNumbers) {
   let newArray = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] === 0) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       let palavra1 = 'fizzBuzz';
       newArray.push(palavra1);
     } else if (arrayNumbers[index] % 3 === 0) {
@@ -106,7 +106,7 @@ function fizzBuzz(arrayNumbers) {
 } /* Resposta: Para solucionar esse requisito fiz uma estrutura de repetição para iterar o
 array. A cada vez que o loop passa pelo numero ele compara com a condição colocada(ifs e else). se a condição for atingida faz um push, metodo para colocar um novo elemento na array(no caso essa essa array é uma vazia, newArray) na ultima posição do indice, assim fazer o retorno dessa nova array.
  */
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
