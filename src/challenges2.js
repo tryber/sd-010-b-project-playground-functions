@@ -55,7 +55,7 @@ function generatePhoneNumber(arrayOfNumber) {
       verifyNumberPossibility += 1;
     } else if ((arrayOfNumber[index] >= 0) && (arrayOfNumber[index] <= 9) && (arrayOfNumber.length == 11)) {
       verifyNumerOk += 1;
-    } else if (arrayOfNumber.length !== 11) {
+    } else if ((arrayOfNumber.length !== 11)||(arrayOfNumber == [])) {
       return 'Array com tamanho incorreto.';
     }
     if (verifyNumerOk === 11) {
@@ -65,6 +65,7 @@ function generatePhoneNumber(arrayOfNumber) {
     }
   }
 }
+console.log(generatePhoneNumber([1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) {
