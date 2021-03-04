@@ -82,12 +82,49 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array) {
+  let encodeFrase = '';
+  
+  for (let index = 0; index < array.length; index += 1){
+    if (array[index] === 'a') {
+      encodeFrase += 1;
+    } else if (array[index] === 'e') {
+      encodeFrase += 2;
+    } else if (array[index] === 'i') {
+      encodeFrase += 3;
+    } else if (array[index] === 'o') {
+      encodeFrase += 4;
+    } else if (array[index] === 'u') {
+      encodeFrase += 5;
+    } else {
+      encodeFrase += array[index];
+    }
+  }
+  return encodeFrase;
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(array) {
+  let decodeFrase = '';
+  
+  for (let index = 0; index < array.length; index += 1){
+    if (array[index] === '1') {
+      decodeFrase += 'a';
+    } else if (array[index] === '2') {
+      decodeFrase += 'e';
+    } else if (array[index] === '3') {
+      decodeFrase += 'i';
+    } else if (array[index] === '4') {
+      decodeFrase += 'o';
+    } else if (array[index] === '5') {
+      decodeFrase += 'u';
+    } else {
+      decodeFrase += array[index];
+    }
+  }
+  return decodeFrase;
 }
+
 
 module.exports = {
   calcArea,
