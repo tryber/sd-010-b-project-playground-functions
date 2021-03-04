@@ -76,13 +76,13 @@ function catAndMouse(mouse, cat1, cat2) {
     primeiroPegar = 'cat2';
   } else if (distanciaA < distanciaB) {
     primeiroPegar = 'cat1';
-  } else if (distanciaB === distanciaA) {
+  } else {
     primeiroPegar = 'Os gatos trombam e o rato foge';
   }
   return primeiroPegar;
 }
-console.log(catAndMouse(5, 3, 2));
 console.log(catAndMouse(5, 3, 6));
+console.log(catAndMouse(5, 3, 2));
 console.log(catAndMouse(5, 4, 4));
 
 // Desafio 8
