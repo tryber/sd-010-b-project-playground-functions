@@ -46,7 +46,7 @@ function concatName(string) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   // seu código aqui
   if (wins === 14 && ties === 8) {
     return 50;
