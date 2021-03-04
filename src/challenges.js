@@ -75,10 +75,12 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 > cat2 > mouse) {
-    return cat2;
-  } if (cat1 < cat2 > mouse) {
-    return cat1;
+  let primeiro = Math.abs(cat1 - mouse); // O método abs () retorna o valor absoluto de um número.
+  let segundo = Math.abs(cat2 - mouse);
+  if (primeiro < segundo) {
+    return primeiro;
+  } if (primeiro > segundo) {
+    return segundo;
   }
   return 'os gatos trombam e o rato foge';
 }
