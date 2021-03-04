@@ -45,13 +45,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-
-}
+function catAndMouse(mouse, cat1, cat2) {
+    let distance1 = (cat1 - mouse);
+    let distance2 = (cat2 - mouse);
+    if (distance1 < distance2) return 'cat1';
+    if (distance2 < distance1) return 'cat2';
+    if (distance1 === distance2) return 'os gatos trombam e o rato foge';
+  }
 
 // Desafio 8
 function fizzBuzz(myArray) {
-  let newArray = [ ];
+  let newArray = [];
   for (let index = 0; index < myArray.length; index += 1) {
     if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
       newArray.push('fizzBuzz');
@@ -67,23 +71,14 @@ function fizzBuzz(myArray) {
 }
 
 // Desafio 9
-function encode(palavra) {
-  let frase = 'hi there';
-  let novaFrase = '';
-  if (palavra === frase) {
-    novaFrase = frase.replace('hi there', 'h3 th2r2');
-  }
-  return novaFrase;
+function encode() {
+
 }
 
-function decode(palavra) {
-  let frase = 'h3 th2r2';
-  let novaFrase = '';
-  if (palavra === frase) {
-    novaFrase = frase.replace('h3 th2r2', 'hi there');
-  }
-  return novaFrase;
+function decode() {
+
 }
+
 
 module.exports = {
   calcArea,
