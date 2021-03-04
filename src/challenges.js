@@ -22,11 +22,9 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
-  string = 'go Trybe';
-  let resultado = string.split(' ');
-  return resultado;
+  return string.split(' ');
 }
-console.log(splitSentence());
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(arrayStrings) {
