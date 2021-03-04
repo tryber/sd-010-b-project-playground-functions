@@ -13,7 +13,7 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1)); 
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   let arraySentences = string.split(' ')
   return arraySentences  
 }
@@ -27,7 +27,7 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   let points = (wins * 3) + (ties * 1);
   return points;
 }
