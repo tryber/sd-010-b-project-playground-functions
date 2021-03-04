@@ -39,10 +39,10 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = (cat1 - mouse); let dist2 = (cat2 - mouse);
+  let dist1 = Math.abs(cat1 - mouse); dist2 = Math.abs(cat2 - mouse);
   if (dist1 < dist2) return 'cat1';
   if (dist2 < dist1) return 'cat2';
-  if (dist1 === dist2) return 'os gatos trombam e o rato foge';
+  if (cat1 === cat2) return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -60,7 +60,7 @@ function fizzBuzz(numbers) {
 function encode(word) {
   let codeArray = word;
   for (let j = 0; j < codeArray.length; j += 1) {
-    codeArray = codeArray.replace("a", 1).replace("e", 2).replace("i", 3).replace("o", 4).replace("u", 5); 
+    codeArray = codeArray.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5); 
   }
   return codeArray;
 }
@@ -68,7 +68,7 @@ function encode(word) {
 function decode(word) {
   let decodeArray = word;
   for (let j = 0; j < decodeArray.length; j += 1) {
-    decodeArray = decodeArray.replace("a", 1).replace("e", 2).replace("i", 3).replace("o", 4).replace("u", 5); 
+    decodeArray = decodeArray.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5); 
   }
   return decodeArray;
 }
