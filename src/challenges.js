@@ -106,16 +106,16 @@ function encode(string) {
   let vogais = ['a, e, i, o, u']
   for (let index = 0; index < string; index += 1) {
     vogais[index] = string[index];
+    return vogais;
   }
-  return vogais;
 }
 function decode(string) {
   // seu código aqui
   let vogais = ['a, e, i, o, u']
   for (let index = 0; index < string; index += 1) {
     string[index] = vogais[index];
+    return string;
   }
-  return string;
 }
 
 module.exports = {
