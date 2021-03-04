@@ -59,21 +59,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrNumber) {
-  // seu código aqui
   let resultArr = [];
   for (let index = 0; index < arrNumber.length; index += 1) {
     switch (true) {
-      case (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0):
-        resultArr.push('fizzbuzz');
+    case (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0):
+      resultArr.push('fizzbuzz');
       break;
-      case (arrNumber[index] % 3 === 0):
-        resultArr.push('fizz');
+    case (arrNumber[index] % 3 === 0):
+      resultArr.push('fizz');
       break;
-      case (arrNumber[index] % 5 === 0):
-        resultArr.push('buzz');
+    case (arrNumber[index] % 5 === 0):
+      resultArr.push('buzz');
       break;
-      default:
-        resultArr.push('bug!');
+    default:
+      resultArr.push('bug!');
       break;
     }
   }
