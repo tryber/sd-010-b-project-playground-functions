@@ -45,11 +45,10 @@ function generatePhoneNumber(phoneNumber) {
       }
     }
   } else {
-    saida = "Array com tamanho incorreto."
+    saida = "Array com tamanho incorreto.";
   }
   return saida;
 }
-console.log(generatePhoneNumber([0, 7, 3, 4, 5, 7, 1, 8, 9, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -63,7 +62,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return istriangle;
 }
-console.log(triangleCheck(10, 10, 10));
 
 // Desafio 13
 function hydrate(frase) {
@@ -77,7 +75,6 @@ function hydrate(frase) {
   }
   return `${soma} copo de água`;
 }
-console.log(hydrate('5 cervejas 25 pingaas'));
 
 module.exports = {
   generatePhoneNumber,

@@ -57,8 +57,8 @@ function catAndMouse(mouse, cat1, cat2) {
   return saida;
 }
 console.log(catAndMouse(4, 2, 5));
-// Desafio 8
 
+// Desafio 8
 function Verifica(number) {
   if (number % 3 === 0 && number % 2 !== 0 && number % 5 !== 0) {
     return 'fizz';
@@ -69,9 +69,8 @@ function Verifica(number) {
   if (number % 3 === 0 && number % 5 === 0) {
     return 'fizzBuzz';
   }
-  if (number % 3 !== 0 && number % 5 !== 0) {
-    return 'bug!';
-  }
+  (number % 3 !== 0 && number % 5 !== 0);
+  return 'bug!';
 }
 
 function fizzBuzz(arrayNumber) {
