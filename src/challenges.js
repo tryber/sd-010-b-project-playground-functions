@@ -43,14 +43,30 @@ function concatName(arrayOfStrings1) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let up = wins * 3;
-  let down = ties *1;
+  let down = ties * 1;
   let totalPoints = up + down;
-  return totalPoints
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayOfNumbers) {
+  let highNumber = false;
+  let countHigh = false;
+
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    if (arrayOfNumbers[i] > highNumber) {
+      highNumber = arrayOfNumbers[index];
+      return highNumber;
+    }
+  }
+
+  for (let index1 = 0; index1 < arrayOfNumbers.length; index1 += 1) {
+    if (arrayOfNumbers[index1] === highNumber) {
+      countHigh += 1;
+      return countHigh;
+    }
+  }
+
 }
 
 // Desafio 7
