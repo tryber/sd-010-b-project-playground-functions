@@ -101,6 +101,47 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([ 2, 15, 7, 9, 45]));
 
 
+// Desafio 9
+function encode(str) {
+  let encoderDict = {
+		a: 1,
+		e: 2,
+		i: 3,
+		o: 4,
+		u: 5
+	}
+
+	let arr = str.split("")
+
+
+	for (let index = 0; index < arr.length; index += 1){
+		for (key in encoderDict){
+			arr[index] = arr[index]===key ? encoderDict[key] : arr[index]
+		}
+	}
+
+	return arr.join("")
+}
+function decode(str) {
+  let decoderDict = {
+		1:"a",
+		2:"e",
+		3:"i",
+		4:"o",
+		5:"u"
+	}
+
+	let arr = str.split("")
+
+
+	for (let index = 0; index < arr.length; index += 1){
+		for (key in decoderDict){
+			arr[index] = arr[index]===key ? decoderDict[key] : arr[index]
+		}
+	}
+
+	return arr.join("")
+}
 
 module.exports = {
   calcArea,
