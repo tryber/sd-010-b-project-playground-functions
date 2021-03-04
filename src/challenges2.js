@@ -2,7 +2,6 @@
 function techList(tech, name) {
   let list = tech.sort();
   let result = [];
-  
   if (list.length > 1) {
     for (let i = 0; i < list.length; i += 1) {
       result.push({tech: list[i], name: name});
