@@ -1,17 +1,18 @@
 // Desafio 1
-function compareTrue(item1 = 10) {
-  if (item1 < 20 && 30) {
+function compareTrue(idade) {
+  if (idade < 30 && idade < 40) {
     console.log('True');
   } else {
     console.log('False');
   }
-  return true;
 }
+compareTrue(27);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  console.log([base * height] / 2);
 }
+calcArea(10, 50);
 
 // Desafio 3
 function splitSentence() {
