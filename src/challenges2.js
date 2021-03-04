@@ -104,7 +104,7 @@ function generatePhoneNumber(numbers) {
   
 } 
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -128,9 +128,20 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+
+	numbers = (frase.match(/\d+/g))
+
+	sum = 0
+
+	for (let index in numbers) {
+		sum += parseInt(numbers[index])
+	}
+  
+	return `${sum} copos de água`
 }
+
+//console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   generatePhoneNumber,
