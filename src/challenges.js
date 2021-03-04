@@ -68,7 +68,7 @@ function highestCount(array) {
     if (maiorNumero === array[index]) {
       contador += 1;
     }
-  } return contador;
+  }
 }
 
 // Desafio 7
