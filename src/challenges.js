@@ -54,11 +54,11 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(2, 4, 4));
 
 // Desafio 8
-let result = []
+let result = [];
 function fizzBuzz(numbers) {
   for (let i in numbers) {
-  if (numbers[i] % 15 == 0) result.push('fizzBuzz');
-    else if (numbers[i] % 3 == 0) result.push('fizz');
+    if (numbers[i] % 15 === 0) result.push('fizzBuzz');
+    else if (numbers[i] % 3 === 0) result.push('fizz');
     else if (numbers[i] % 5 == 0) result.push('buzz');
     else result.push('bug!');
   }
@@ -69,44 +69,40 @@ console.log(fizzBuzz(userNumbers));
 
 // Desafio 9
 function encode(word) {
-  let result = [];
+  let encode = [];
 
   for (let i = 0; i < word.length; i += 1) {
-    result[i] = word[i];
+    encode[i] = word[i];
   }
 
-  for (let j = 0; j < result.length; j += 1) {
-    if (result[j] === 'a') result[j] = '1';
-    if (result[j] === 'e') result[j] = '2';
-    if (result[j] === 'i') result[j] = '3';
-    if (result[j] === 'o') result[j] = '4';
-    if (result[j] === 'u') result[j] = '5';
+  for (let j = 0; j < encode.length; j += 1) {
+    if (encode[j] === 'a') encode[j] = '1';
+    if (encode[j] === 'e') encode[j] = '2';
+    if (encode[j] === 'i') encode[j] = '3';
+    if (encode[j] === 'o') encode[j] = '4';
+    if (encode[j] === 'u') encode[j] = '5';
   }
-
-  return result.join("");
+  return encode.join('');
 }
-
-console.log(encode('hi there!'));
+console.log(encode('Hi there!'));
 
 function decode(word) {
-  let result = [];
+  let decode = [];
 
   for (let i = 0; i < word.length; i += 1) {
-    result[i] = word[i];
+    decode[i] = word[i];
   }
 
-  for (let j = 0; j < result.length; j += 1) {
-    if (result[j] === '1') result[j] = 'a';
-    if (result[j] === '2') result[j] = 'e';
-    if (result[j] === '3') result[j] = 'i';
-    if (result[j] === '4') result[j] = 'o';
-    if (result[j] === '5') result[j] = 'u';
+  for (let j = 0; j < decode.length; j += 1) {
+    if (decode[j] === '1') decode[j] = 'a';
+    if (decode[j] === '2') decode[j] = 'e';
+    if (decode[j] === '3') decode[j] = 'i';
+    if (decode[j] === '4') decode[j] = 'o';
+    if (decode[j] === '5') decode[j] = 'u';
   }
-  
-  return result.join("");
+  return decode.join('');
 }
-
-console.log(decode('h3 th2r2!'));
+console.log(decode('H3 th2r2!'));
 
 module.exports = {
   calcArea,
