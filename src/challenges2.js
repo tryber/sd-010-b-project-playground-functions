@@ -34,8 +34,12 @@ function hydrate(drink) {
   for(let index = 0; index < numeros.length; index += 1) {
     soma += parseInt(numeros[index]);
   }
-  hydratar = soma + " copos de agua";
 
+  if(soma < 2){
+  hydratar = soma + " copo de agua";
+  } else {
+  hydratar = soma + " copos de agua";
+  }
   return hydratar;
 }
 
