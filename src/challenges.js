@@ -103,11 +103,23 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let vogais = ['a, e, i, o, u']
+  let cincoNumeros = '';
   for (let index = 0; index < string.length; index += 1) {
-    vogais[index] = string[index];
-    return vogais;
+    if (string[index] === a) {
+      cincoNumeros = 1;
+    } else if (string[index] === e) {
+      cincoNumeros = 2;
+    } else if (string[index] === i) {
+      cincoNumeros = 3;
+    } else if (string[index] === o) {
+      cincoNumeros = 4;
+    } else if (string[index] === u) {
+      cincoNumeros = 5;
+    } else {
+      cincoNumeros = string[index];
+    }
   }
+  return (cincoNumeros);
 }
 function decode(string) {
   // seu código aqui
