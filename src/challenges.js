@@ -27,8 +27,8 @@ console.log(calcArea(base, height));
 let phrase = "gabriel menezes dias dos santos";
 
 function splitSentence(phrase) {
-  let result = phrase.split(" ");
-  return result;
+  let splittedPhrase = phrase.split(" ");
+  return splittedPhrase;
 }
 console.log(splitSentence(phrase));
 
@@ -63,7 +63,7 @@ console.log(footballPoints(wins, ties));
 
 let numbers = [];
 let highest = 0;
-let result = 0;
+let count = 0;
 
 function highestCount(numbers) {
   for(let index in numbers) {
@@ -73,10 +73,10 @@ function highestCount(numbers) {
   }
   for(let index = 0; index < numbers.length; index +=1) {
     if(numbers[index] === highest) {
-      result = result += 1;
+      count = count += 1;
     }
   }
-  return result;
+  return count;
 }
 
 // Consegui entender esse desafio com a ajuda do meu colega de turma Teófilo Brandão, dando uma olhada no código dele com a devida autorização do mesmo.
@@ -103,21 +103,21 @@ console.log(catAndMouse(mouse, cat1, cat2));
 // Desafio 8
 
 let arrayNumbers = [];
-let result = [];
+let finalArray = [];
 
 function fizzBuzz(arrayNumbers) {
   for(let index = 0; index < arrayNumbers.length; index +=1) {
     if(arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 == 0) {
-      result.push("fizzBuzz");
+      finalArray.push("fizzBuzz");
     }else if(arrayNumbers[index] % 3 == 1 && arrayNumbers[index] % 5 == 0) {
-      result.push("buzz");
+      finalArray.push("buzz");
     }else if(arrayNumbers[index] % 3 == 0) {
-      result.push("fizz");
+      finalArray.push("fizz");
     }else {
-      result.push("bug!");
+      finalArray.push("bug!");
     }
   }
-  return result;
+  return finalArray;
 }
 
 // Desafio 9
