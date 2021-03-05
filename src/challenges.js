@@ -93,9 +93,31 @@ result = catAndMouse(1, 0, 2);
 console.log(result);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function evaluator(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
+
+function fizzBuzz(numbers) {
+  let newList = [];
+  for (let i = 0; i < numbers.length; i += 1) {
+    let number = numbers[i];
+    let resultEvaluator = evaluator(number);
+    newList.push(resultEvaluator);
+  }
+  return newList;
+}
+
+result = fizzBuzz([2, 15, 7, 9, 45]);
+console.log(result);
 
 // Desafio 9
 function encode() {
