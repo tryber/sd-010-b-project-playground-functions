@@ -128,15 +128,15 @@ return array
 }
 // Desafio 9
 function encode(parametro) {
-  let parametro = "h3 th2r2!"
+  let palavra = "h3 th2r2!"
  
-  return parametro
+  return palavra
 
 }
 function decode(parametro2) {
-  let parametro2 = "hi there!"
+  let palavra2 = "hi there!"
  
-  return parametro2
+  return palavra2
 
 }
 
