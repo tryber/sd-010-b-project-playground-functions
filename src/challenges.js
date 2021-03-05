@@ -19,7 +19,7 @@ function calcArea(height, base) {
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  let split = str.split(" ");  //Fonte do ".split" = <https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254>
+  let split = str.split(' ');
   return split;
 }
 
@@ -40,24 +40,33 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   // seu código aqui
   let check = 0;
-  for(let index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (check < array[index]) {
       check = array[index];
     }
   }
   let amount = 0;
-  for(let index = 0; index < array.length; index += 1) {
-    if(array[index] === check) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === check) {
       amount += 1;
     }
   }
-  return amount
+  return amount;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui /* Fonte da função Math.abs: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs> */                
+  let posMouse1 = Math.abs(mouse - cat1);
+  let posMouse2 = Math.abs(mouse - cat2);
+
+  if (posMouse1 < posMouse2) {
+    return "cat1";
+  } else if (posMouse2 < posMouse1) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 
 // Desafio 8
 function fizzBuzz() {
