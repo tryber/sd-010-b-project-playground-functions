@@ -112,7 +112,7 @@ function encode(palavra) {
   return  novaFrase ;
 }
 
-function decode(str) {
+function decode(palavra) {
   let frase = 'h3 th2r2';
   let novaFrase = ' ';
   if (palavra === frase) {
