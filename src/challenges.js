@@ -130,7 +130,7 @@ function encode(string) {
 console.log(encode('hi there!'))
 
 function decode(string) {
-  let decodingString = ' ';
+  let decodingString = '';
 
   for (let key = 0; key < string.split('').length; key += 1){
 
