@@ -53,7 +53,6 @@ function catAndMouse(mouse, cat1, cat2) {
   if ((mouse >= 0) && (cat1 >= 0) && (cat2 >= 0)) {
     let catDist1 = cat1 - mouse;
     let catDist2 = cat2 - mouse;
-    //let mouseDist = ();
     if (catDist1 === catDist2) {
       mouseDist = console.log('os gatos trombam e o rato foge');
     } else if (catDist1 > catDist2) {
@@ -65,8 +64,8 @@ function catAndMouse(mouse, cat1, cat2) {
     mouseDist = console.log('numero negativo');
   }
   return (mouseDist);
+  
 }
-(catAndMouse(1, 5, 5));
 
 // Desafio 8
 function fizzBuzz() {
