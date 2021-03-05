@@ -60,7 +60,7 @@ function highestCount(arrayEntry) {
   }
   for (let j = 0; j < arrayEntry.length; j++) {
     if (numeroMaior === arrayEntry[j]) {
-    numeroTotal++;
+      numeroTotal++;
     }
   }
   return numeroTotal;
@@ -76,11 +76,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (gotcha1 > gotcha2) {
     aim = "cat2";
-  } 
-  else if (gotcha2 > gotcha1) {
+  } else if (gotcha2 > gotcha1) {
     aim = "cat1";
-  }
-  else if (gotcha1 === gotcha2) {
+  } else if (gotcha1 === gotcha2) {
     aim = "os gatos trombam e o rato foge";
   }
   return aim;
@@ -92,19 +90,17 @@ function fizzBuzz(arrayFB) {
   let denote = [];
 
   for (let a = 0; a < arrayFB.length; a += 1) {
-    if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 !== 0) {
-      denote = denote.push('fizz');
+    if (arrayFB[a] % 3 === 0) {
+      return 'fizz';
     }
-    if (arrayFB[a] % 3 !== 0 && arrayFB[a] % 5 === 0) {
-      denote = denote.push('buzz');
+    if (arrayFB[a] % 5 === 0) {
+      return 'buzz';
     }
     if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 === 0) {
-      denote = denote.push('fizzBuzz');
+      return 'fizzBuzz';
     }
     if (arrayFB[a] % 3 !== 0 && arrayFB[a] % 5 !== 0) {
-      denote = denote.push('bug!');
-    }
-    return denote;
+      return 'bug!';
   }
 }
 
