@@ -1,8 +1,8 @@
 // Desafio 10
 // let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let techs = [];
-let name = "Jonnes";
-console.log(techList(techs, name));
+// let techs = [];
+// let name = "Jonnes";
+// console.log(techList(techs, name));
 function techList(techs, name) {
   if (techs.length === 0) {
     return "Vazio!"
