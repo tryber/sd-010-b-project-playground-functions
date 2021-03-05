@@ -6,10 +6,10 @@ function compareTrue(valor1, valor2) {
     return false;
   }
 }
-//console.log(compareTrue(true,false));
+// console.log(compareTrue(true,false));
 // Desafio 2
 function calcArea(base, altura) {
-  let calcArea = (base * altura) / 2;
+  calcArea = (base * altura) / 2;
   return calcArea;  
 }
 // Desafio 3
@@ -31,13 +31,13 @@ function footballPoints(wins, ties) {
 function highestCount(numbersArray) {
   let maiorArray = 0;
   let calcRep = 0;
-  for(let index = 0; index < numbersArray.length; index += 1 ) {
-    if (numbersArray[index] > maiorArray) {     
-      maiorArray = numbersArray[index];  
-    }   
+  for (let index = 0; index < numbersArray.length; index += 1 ) {
+    if (numbersArray[index] > maiorArray) {
+      maiorArray = numbersArray[index];
+    }
   }
-  for(let index2 = 0; index2 < numbersArray.length; index2 += 1) {
-    if (numbersArray[index2] == maiorArray ) {
+  for (let index2 = 0; index2 < numbersArray.length; index2 += 1) {
+    if (numbersArray[index2] === maiorArray) {
       calcRep += 1;
     }
   }
@@ -49,22 +49,22 @@ function highestCount(numbersArray) {
 function catAndMouse(mouse, cat1, cat2) {
   if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
     return 'os gatos trombam e o rato foge';    
-  } else if((cat1 - mouse) < (cat2 - mouse)) {
-    return 'cat1';    
-  } else if((cat1 - mouse) > (cat2 - mouse)){
+  } else if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';  
+  } else if ((cat1 - mouse) > (cat2 - mouse)) {
     return 'cat2';
   }
 }
-//console . log ( catAndMouse ( 0 , 3 , 2 ) ) ;
+// console.log( catAndMouse ( 0 , 3 , 2 ) ) ;
 // Desafio 8
 function fizzBuzz(numArray) {
   let resul = [];
-  for(let index = 0; index < numArray.length; index += 1) {
+  for (let index = 0; index < numArray.length; index += 1) {
     if ((numArray[index] % 3 === 0) && (numArray[index] % 5 === 0)) {
       resul.push('fizzBuzz');      
-    } else if(numArray[index] % 5 === 0) {
+    } else if (numArray[index] % 5 === 0) {
       resul.push('buzz');
-    } else if(numArray[index] % 3 === 0) {
+    } else if (numArray[index] % 3 === 0) {
       resul.push('fizz');
     } else {
       resul.push('bug!');
@@ -72,16 +72,16 @@ function fizzBuzz(numArray) {
   }  
   return resul;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45, 45, 15, 2]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45, 45, 15, 2]));
 // Desafio 9
- function encode(vowel) { // (Apredi como usar funcão replace) https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+function encode(vowel) { // (Apredi como usar funcão replace) https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
   return vowel.replace(/a/g, '1')
     .replace(/e/g, '2') //  https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
     .replace(/i/g, '3')
     .replace(/o/g, '4')
     .replace(/u/g, '5');
 }
-//console.log(encode("he there"));
+// console.log(encode("he there"));
 function decode(numberVowel) {
   return numberVowel.replace(/1/g, 'a')
     .replace(/2/g, 'e')
@@ -100,5 +100,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}; 
-
+};
