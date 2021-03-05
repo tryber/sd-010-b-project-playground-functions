@@ -27,7 +27,7 @@ function concatName(array) {
   let primeiroItem = array[0];
   let string = `${ultimoItem}, ${primeiroItem}`;
   return string;
-} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+} 
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -51,7 +51,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-//Pesquisei o Math.abs no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// Pesquisei o Math.abs no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
