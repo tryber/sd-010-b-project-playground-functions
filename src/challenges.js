@@ -61,7 +61,7 @@ console.log(footballPoints(wins, ties));
 
 // Desafio 6
 
-let numbers = [];
+let numbers;
 let highest = 0;
 let result = 0;
 
