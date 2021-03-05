@@ -73,10 +73,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let aim = 0;
 
   if (gotcha1 > gotcha2) {
-    aim = "cat1";
+    aim = "cat2";
   } 
   else if (gotcha2 > gotcha1) {
-    aim = "cat2";
+    aim = "cat1";
   }
   else if (gotcha1 === gotcha2) {
     aim = "os gatos trombam e o rato foge";
