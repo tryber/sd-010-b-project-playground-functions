@@ -81,7 +81,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let sumAB = Math.abs(lineA + lineB);
   let sumAC = Math.abs(lineA + lineC);
   let sumBC = Math.abs(lineB + lineC);
-  if (subAB < lineC < sumAB && subAC < lineB < sumAC && subBC < lineA < sumBC) {
+  if ((subAB < lineC && lineC < sumAB) && (subAC < lineB && lineB < sumAC) && (subBC < lineA && lineA < sumBC)) {
     triangle = true;
   }
   return triangle;
@@ -90,6 +90,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+
 }
 
 module.exports = {
