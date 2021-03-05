@@ -7,7 +7,6 @@ if (valor1 == true && valor2 == true) {
 else {
   return false;
 }
-
 }
 
 // Desafio 2
@@ -29,8 +28,11 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontuacao;
+  pontuacao = (wins * 3 + ties * 1);
+  return pontuacao;
 }
 
 // Desafio 6
