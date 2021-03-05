@@ -20,8 +20,8 @@ console.log(splitSentence('Go Trybe'));
 
 // OK - Desafio 4
 function concatName(stringsArray) {
-  let ultimoePrimeiroItemStringArray = (stringsArray[stringsArray.length - 1] + ', ' + stringsArray[0]);
-  return ultimoePrimeiroItemStringArray;
+  let ultimoePrimeiroItemString = (stringsArray[stringsArray.length - 1] + ', ' + stringsArray[0]);
+  return ultimoePrimeiroItemString;
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
@@ -54,12 +54,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = Math.abs(cat2 - mouse);
   
   if (distCat1 > distCat2) {
-    return "cat2";    
-  } else if (distCat1 < distCat2) {
-    return "cat1";
-    } else {
-      return "os gatos trombam e o rato foge";
-    }
+    return 'cat2';
+    } else if (distCat1 < distCat2) {
+      return 'cat1';
+      }
+  return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(4, 5, 2));
 
