@@ -123,11 +123,23 @@ function encode(string) {
 }
 function decode(string) {
   // seu código aqui
-  let vogais = ['a, e, i, o, u']
-  for (let index = 0; index < vogais.length; index += 1) {
-    string[index] = vogais[index];
-    return string;
+  let vogais = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 1) {
+      vogais = a;
+    } else if (string[index] === 2) {
+      vogais = e;
+    } else if (string[index] === 3) {
+      vogais = i;
+    } else if (string[index] === 4) {
+      vogais = o;
+    } else if (string[index] === 5) {
+      vogais = u;
+    } else {
+      vogais = string[index];
+    }
   }
+  return (vogais);
 }
 
 module.exports = {
