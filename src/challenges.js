@@ -20,7 +20,7 @@ function concatName(array) {
   
   conca = array[array.length - 1];
   conca = conca + ', '  + array[0];
-  return conca; 
+  return conca;   
 }
 
 // Desafio 5
@@ -42,31 +42,22 @@ function highestCount(numbers) {
   }
   for (j = 0; j < numbers.length; j += 1 ) {
     if (numbers[j] === highNumber) {
-     highNumberCount = (highNumberCount + 1);
-    }
+     highNumberCount = (highNumberCount+1);
+     }
   }
   return highNumberCount  
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   
-  if (cat1 < cat2 ) {
-    frase = 'cat1';
-    return frase;
-  } else if (cat1 > cat2 ) {
-    frase = 'cat2';
-    return frase;
-  } else if ( cat1 == cat2 ) {
-      frase = 'os gatos trobam e o rato foge'
-      return frase;
-  } 
+  
 }
 
-console.log(catAndMouse(3, 3, 2))
 
 
 // Desafio 8
 function fizzBuzz(numbers) {
+     
   string = [];
   for (i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
@@ -79,8 +70,11 @@ function fizzBuzz(numbers) {
       string[i] = 'bug!';
     }
   }
-  return string
+  return string;
 }
+
+console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
 // Desafio 9
 function encode() {
   // seu código aqui
