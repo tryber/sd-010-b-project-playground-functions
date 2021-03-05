@@ -42,16 +42,31 @@ function highestCount(qtdLarger) {
   let cont = 0;
   for (let i = 0; i < num.length; i += 1) {
     if (num[i] === high) {
-      cont = cont += 1;
+      cont += 1;
     }
   }
   return (cont);
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((mouse >= 0) && (cat1 >= 0) && (cat2 >= 0)) {
+    let catDist1 = cat1 - mouse;
+    let catDist2 = cat2 - mouse;
+    //let mouseDist = ();
+    if (catDist1 === catDist2) {
+      mouseDist = console.log('os gatos trombam e o rato foge');
+    } else if (catDist1 > catDist2) {
+      mouseDist = console.log('cat2');
+    } else {
+      mouseDist = console.log('cat1');
+    }
+  } else {
+    mouseDist = console.log('numero negativo');
+  }
+  return (mouseDist);
 }
+(catAndMouse(1, 5, 5));
 
 // Desafio 8
 function fizzBuzz() {
