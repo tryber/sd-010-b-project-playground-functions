@@ -49,8 +49,21 @@ function highestCount(numbers) {
 }
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  cat1 = 1;
+  cat2 = 3;
+  mouse = 1;
+  string = '';
+
+  if ( cat1 == cat2){
+    string = 'os gatos trombam e o rato foge';
+    return string;
+  }
 }
+
+console.log(catAndMouse(12 ,30 ,40))
+
+
+
 // Desafio 8
 function fizzBuzz(numbers) {
      
