@@ -1,15 +1,17 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
+  let retorno = Boolean;
   if (valor1 === true && valor2 === true) {
-    return true;
+    retorno = true;
   } else {
-    return false;
+    retorno = false;
   }
+  return retorno;
 }
-// console.log(compareTrue(true,false));
+// console.log(compareTrue(true,true));
 // Desafio 2
 function calcArea(base, altura) {
-  calcArea = (base * altura) / 2;
+  let calcArea = (base * altura) / 2;
   return calcArea;  
 }
 // Desafio 3
@@ -19,7 +21,7 @@ function splitSentence(myString) { // (Referencias sobre splits nesse site): htt
 }
 // Desafio 4
 function concatName(lassFirstArray) {
-  return lassFirstArray[lassFirstArray.length -1] + ', ' + lassFirstArray[0]; 
+  return lassFirstArray[lassFirstArray.length -1] + ', ' + lassFirstArray[0];
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
@@ -47,13 +49,15 @@ function highestCount(numbersArray) {
 // (Pesquisei sobre a função Math.abs, para entender sobre como ela transforma um numero)
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
+  let retorno = '';
   if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
-    return 'os gatos trombam e o rato foge';    
+    retorno = 'os gatos trombam e o rato foge';    
   } else if ((cat1 - mouse) < (cat2 - mouse)) {
-    return 'cat1';  
+    retorno = 'cat1';
   } else if ((cat1 - mouse) > (cat2 - mouse)) {
-    return 'cat2';
+    retorno = 'cat2';
   }
+  return retorno
 }
 // console.log( catAndMouse ( 0 , 3 , 2 ) ) ;
 // Desafio 8
@@ -61,7 +65,7 @@ function fizzBuzz(numArray) {
   let resul = [];
   for (let index = 0; index < numArray.length; index += 1) {
     if ((numArray[index] % 3 === 0) && (numArray[index] % 5 === 0)) {
-      resul.push('fizzBuzz');      
+      resul.push('fizzBuzz');
     } else if (numArray[index] % 5 === 0) {
       resul.push('buzz');
     } else if (numArray[index] % 3 === 0) {
