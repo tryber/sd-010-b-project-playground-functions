@@ -33,8 +33,59 @@ function sortByTech(a, b) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// (12) 34567-8901
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(numbers));
+
+function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) {
+    return "Array com tamanho incorreto.";
+  } else if (verifyArrayNumbers(numbers) === 3 || verify09(numbers) !== 0) {
+    return "não é possível gerar um número de telefone com esses valores";
+  } else {
+    return phoneNumber(numbers);
+  }
+}
+
+function verifyArrayNumbers(array) {
+  let countRepeated = new Array(10).fill(0); // I found how to fill an array with 0 at https://medium.com/@wisecobbler/4-ways-to-populate-an-array-in-javascript-836952aea79f
+  let aux = 0;
+  for (let i = 0; i < array.length; i++) {
+    countRepeated[array[i]]++;
+    if (countRepeated[array[i]] >= 3){
+      aux = 1;
+    }
+  }
+  if (aux === 0) {
+    return 0;
+  } else {
+    return 3;
+  }
+}
+
+function verify09(array) {
+  let aux = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] < 0 | array[i] > 9) {
+      aux = 1;
+    }
+  }
+  if (aux === 0) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
+function phoneNumber(array) {
+  let template = "(**) *****-****";
+  let j = 0;
+  for (let i = 0; i < template.length; i++) {
+    if (template[i] === "*"){
+      template = template.replace(template[i], array[j++]);
+    }
+  }
+  return template;
 }
 
 // Desafio 12
