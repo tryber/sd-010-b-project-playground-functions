@@ -17,7 +17,6 @@ function calcArea(base,heigth) {
 
 // Desafio 3 - fonte de pesquisa https://www.devmedia.com.br/javascript-split-
 function splitSentence(string) {
-  let string;
   result = string.split(" "); 
   return result;
 }
