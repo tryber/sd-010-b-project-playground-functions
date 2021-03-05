@@ -1,5 +1,5 @@
 // Desafio 10
-function techList() {
+function techList(nameTechs, nameUser) {
   // seu código aqui
   let result = []; let lista = {};
   for (let index = 0; index < nameTechs.sort().length; index += 1) {
@@ -12,10 +12,9 @@ function techList() {
 }// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], "Carlos"));
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(telefone) {
   // seu código aqui
-}
-
+} 
 // Desafio 12
 function triangleCheck() {
   // seu código aqui

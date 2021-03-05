@@ -87,20 +87,13 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(Array = []) {
+function fizzBuzz(Array) {
   let result = [];
   for (let index = 0; index < Array.length; index += 1) {
-    const DividePor3 = Array[index] % 3 === 0; const DividePor5 = Array[index] % 5 === 0;
-    const DividePor3ePor5 = DividePor3 && DividePor5;
-    if (DividePor3ePor5) {
-      result[index] = 'fizzBuzz';
-    } else if (DividePor3) {
-      result[index] = 'fizz';
-    } else if (DividePor5) {
-      result[index] = 'buzz';
-    } else {
-      result[index] = 'bug';
-    }
+    const dividePor3 = Array[index] % 3 === 0; const dividePor5 = Array[index] % 5 === 0;
+    const dividePor3ePor5 = dividePor3 && dividePor5;
+    result[index] = dividePor3ePor5 ? 'fizzBuzz' :
+    result[index] = dividePor3 ? 'fizz' : dividePor5 ? 'buzz' : 'bug';
   }
   return result;
 }
@@ -111,24 +104,24 @@ function encode(teste) {
   let result = '';
   for (let index = 0; index < teste.length; index += 1) {
     switch (teste[index]) {
-      case 'a':
-        result += '1';
-        break;
-      case 'e':
-        result += '2';
-        break;
-      case 'i':
-        result += '3';
-        break;
-      case 'o':
-        result += '4';
-        break;
-      case 'u':
-        result += '5';
-        break;
-      default:
-        result += teste[index];
-        break;
+    case 'a':
+      result += '1';
+      break;
+    case 'e':
+      result += '2';
+      break;
+    case 'i':
+      result += '3';
+      break;
+    case 'o':
+      result += '4';
+      break;
+    case 'u':
+      result += '5';
+      break;
+    default:
+      result += teste[index];
+      break;
     }
   }
   return result;
@@ -138,24 +131,24 @@ function decode(teste) {
   let result = '';
   for (let index = 0; index < teste.length; index += 1) {
     switch (teste[index]) {
-     case '1':
-       result += 'a';
-       break;
-     case '2':
-       result += 'e';
-       break;
-     case '3':
-       result += 'i';
-       break;
-     case '4':
-       result += 'o';
-       break;
-     case '5':
-       result += 'u';
-       break;
-     default:
-       result += teste[index];
-       break;
+    case '1':
+      result += 'a';
+      break;
+    case '2':
+      result += 'e';
+      break;
+    case '3':
+      result += 'i';
+      break;
+    case '4':
+      result += 'o';
+      break;
+    case '5':
+      result += 'u';
+      break;
+    default:
+      result += teste[index];
+      break;
     }
   } return result;
 }
