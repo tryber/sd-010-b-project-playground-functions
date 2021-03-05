@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(){
+function compareTrue(num1, num2){
   if (num1 > 0 && num2 < 10){
     return true;
   }
@@ -9,13 +9,13 @@ function compareTrue(){
 }
 
 // Desafio 2
-function calcArea(){
+function calcArea(base, heigth){
   let calculo = (base*heigth)/2;
   return calculo;
 }
 
 // Desafio 3
-function splitSentence(){
+function splitSentence(frase){
   let separar = frase.split(" ")
   return separar;
 }
@@ -26,7 +26,7 @@ function concatName(){
 }
 
 // Desafio 5
-function footballPoints(){
+function footballPoints(wins, ties){
   return (wins * 3) + ties;
 }
 
