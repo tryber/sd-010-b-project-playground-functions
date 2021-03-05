@@ -1,4 +1,22 @@
 // Frameworks
+function validatorRepeat(arr) {
+  let repeated = 0;
+  let qtt = arr.length;
+  arr.forEach((e) => {
+    let cont = null;
+
+    for (let i = 0; i < qtt; i += 1) {
+      if (e === arr[i]) {
+        cont +=1;
+      }
+    }
+
+    if (cont > repeated) repeated = cont;
+  });
+
+  return repeated;
+}
+
 function phoneNumberValidator(arr) {
   let maxNumber = Math.max(...arr);
   let minNumber = Math.min(...arr);
@@ -14,37 +32,19 @@ function phoneNumberValidator(arr) {
   return false;
 }
 
-function validatorRepeat(arr) {
-  let repeated = 0;
-  let qtt = arr.length;
-  arr.forEach((e) => {
-    let cont = null;
-
-    for (let i = 0; i < qtt; i+=1) {
-      if (e === arr[i]) {
-        cont+=1;
-      }
-    }
-
-    if (cont > repeated) repeated = cont;
-  });
-
-  return repeated;
-}
-
 function phoneNumber(arr) {
   let qtt = arr.length;
   let phone = null;
 
   phone = `(${arr[0]}${arr[1]}) `;
 
-  for (let i = 2; i <= 6; i+=1) {
+  for (let i = 2; i <= 6; i += 1) {
     phone += arr[i];
   }
 
   phone += '-';
 
-  for (let i = 7; i < qtt; i+=1) {
+  for (let i = 7; i < qtt; i +=1) {
     phone += arr[i];
   }
 
