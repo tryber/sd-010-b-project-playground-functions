@@ -1,11 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-return a === b && b === a;
+return (a && b);
 };
-let d = compareTrue(false, true);
-console.log(d);
-
+console.log(compareTrue(false, true));
 // Desafio 2
 function calcArea(base, heigth) {
   // seu código aqui
