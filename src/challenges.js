@@ -30,8 +30,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+//Creditos do Spread - https://www.luiztools.com.br/post/4-segredos-do-operador-spread-em-javascript/
 function highestCount(number) {
-  let highN = Math.max.apply(null, number);
+  let highN = Math.max(...number)
   let x = 0;
   for (let index = 0; index < number.length; index +=1) {    
     if (highN == number[index]) {
@@ -40,7 +41,6 @@ function highestCount(number) {
   }
   return x;
 }
-console.log (highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -52,12 +52,20 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log (catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {  
+  let zumbido = [];
+  for (let index = 0;index < array.length; index += 1) {
+    if (array[index] % 3 == 0) {
+      zumbido.push("fizz");      
+    } else if (array[index] % 5 == 0) {
+      zumbido.push("buzz");
+    }
+  }
+  return zumbido;
 }
+console.log (fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
