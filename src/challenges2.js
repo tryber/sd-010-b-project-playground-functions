@@ -1,21 +1,117 @@
+// Frameworks
+function validatorRepeat(arr) {
+  let repeated = 0;
+  let qtt = arr.length;
+  arr.forEach((e) => {
+    let cont = null;
+
+    for (let i = 0; i < qtt; i += 1) {
+      if (e === arr[i]) {
+        cont += 1;
+      }
+    }
+
+    if (cont > repeated) repeated = cont;
+  });
+
+  return repeated;
+}
+
+function phoneNumberValidator(arr) {
+  let maxNumber = Math.max(...arr);
+  let minNumber = Math.min(...arr);
+  let repeated = validatorRepeat(arr);
+
+  if (arr.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  if (maxNumber > 9 || minNumber < 0 || repeated >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return false;
+}
+
+function phoneNumber(arr) {
+  let qtt = arr.length;
+  let phone = null;
+
+  phone = `(${arr[0]}${arr[1]}) `;
+
+  for (let i = 2; i <= 6; i += 1) {
+    phone += arr[i];
+  }
+
+  phone += '-';
+
+  for (let i = 7; i < qtt; i += 1) {
+    phone += arr[i];
+  }
+
+  return phone;
+}
+function isTrueLine(A, B, C) {
+  if (Math.abs(B - C) < A && A < (B + C)) {
+    return true;
+  }
+  return false;
+}
+
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, paramterName) {
+  let list = [];
+  if (array.length < 1) {
+    return 'Vazio!';
+  }
+
+  array.sort();
+  array.forEach((e) => {
+    list.push({
+      tech: e,
+      name: paramterName,
+    });
+  });
+
+  return list;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+  let msgError = phoneNumberValidator(arr);
+
+  if (msgError) {
+    return msgError;
+  }
+
+  return phoneNumber(arr);
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // Aqui o que importar é somente a ordem do primeiro parâmetro
+  let resultA = isTrueLine(lineA, lineB, lineC);
+  let resultB = isTrueLine(lineB, lineA, lineC);
+  let resultC = isTrueLine(lineC, lineA, lineB);
+
+  if (resultA && resultB && resultC) {
+    return true;
+  }
+
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // Peguei a Regex deste forum: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  // Peguei o reduce da documentação do MDN: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+  let arrayNumbers = string.match(/\d+/g).map(Number);
+  let sumArray = arrayNumbers.reduce((acc, curr) => acc + curr);
+
+  if (sumArray === 1) {
+    return `${sumArray} copo de água`;
+  }
+
+  return `${sumArray} copos de água`;
 }
 
 module.exports = {
