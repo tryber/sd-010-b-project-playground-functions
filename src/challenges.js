@@ -98,11 +98,24 @@ function fizzBuzz(arryFB) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let newPhrase;
+function encode(phrase) {
+  // código creiado com a ajuda do https://pt.coredump.biz/questions/20343776/javascript-multiple-replace-with-regex-that-avoids-html-tags
+  newPhrase = phrase.replace(/a/gi, '1')
+    .replace(/e/gi, '2')
+    .replace(/i/gi, '3')
+    .replace(/o/gi, '4')
+    .replace(/u/gi, '5;');
+  return newPhrase;
 }
-function decode() {
+function decode(phraseDecode) {
   // seu código aqui
+  phraseDecode = newPhrase.replace(/1/gi, 'a')
+    .replace(/2/gi, 'e')
+    .replace(/3/gi, 'i')
+    .replace(/4/gi, 'o')
+    .replace(/5/gi, 'u');
+  return phraseDecode;
 }
 
 module.exports = {
