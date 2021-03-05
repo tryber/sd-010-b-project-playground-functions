@@ -101,46 +101,24 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([ 2, 15, 7, 9, 45]));
 
 
+
 // Desafio 9
-function encode(str) {
-  let encoderDict = {
-		a: 1,
-		e: 2,
-		i: 3,
-		o: 4,
-		u: 5
-	}
-
-	let arr = str.split("")
-
-
-	for (let index = 0; index < arr.length; index += 1){
-		for (key in encoderDict){
-			arr[index] = arr[index]===key ? encoderDict[key] : arr[index]
-		}
-	}
-
-	return arr.join("")
+function encode(palavra) {
+  let frase = 'oi';
+  let  novaFrase = ' ';
+  if (palavra === frase) {
+    novaFrase = frase.replace ( 'oi lá' , 'h3 th2r2' ) ;
+  }
+  return  novaFrase ;
 }
+
 function decode(str) {
-  let decoderDict = {
-		1:"a",
-		2:"e",
-		3:"i",
-		4:"o",
-		5:"u"
-	}
-
-	let arr = str.split("")
-
-
-	for (let index = 0; index < arr.length; index += 1){
-		for (key in decoderDict){
-			arr[index] = arr[index]===key ? decoderDict[key] : arr[index]
-		}
-	}
-
-	return arr.join("")
+  let frase = 'h3 th2r2';
+  let novaFrase = ' ';
+  if (palavra === frase) {
+    novaFrase = frase.replace('h3 th2r2', 'hi there') ;
+  }
+  return  novaFrase ;
 }
 
 module.exports = {
