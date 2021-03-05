@@ -1,5 +1,5 @@
 // Desafio 10
-const array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+//const array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 function techList(techs, name) {
   let resultadoFinal = [];
   let resultadoVazio = '';
@@ -17,7 +17,7 @@ function techList(techs, name) {
     return resultadoVazio;
   }
 }
-console.log(techList(array , 'Jessie'));
+//console.log(techList(array , 'Jessie'));
 // Desafio 11
 function generatePhoneNumber() {
   //nada
