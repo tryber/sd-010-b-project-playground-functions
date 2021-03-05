@@ -111,15 +111,20 @@ function fizzBuzz(arrayNumbers) {
   return response;
 }
 
+function encodeA(value) { let result = value === 'a' ? '1' : value; return result; }
+function encodeE(value) { let result = value === 'e' ? '2' : value; return result; }
+function encodeI(value) { let result = value === 'i' ? '3' : value; return result; }
+function encodeO(value) { let result = value === 'o' ? '4' : value; return result; }
+function encodeU(value) { let result = value === 'u' ? '5' : value; return result; }
+
 function verifyLetterToEncode(string) {
   let response = ['']; let letter = string;
   let encoder = {
-    // a(value) { let result = value === 'a' ? '1' : value; return result; },
-    a(value) { let result = value === 'a' ? '1' : value; return result; },
-    e(value) { let result = value === 'e' ? '2' : value; return result; },
-    i(value) { let result = value === 'i' ? '3' : value; return result; },
-    o(value) { let result = value === 'o' ? '4' : value; return result; },
-    u(value) { let result = value === 'u' ? '5' : value; return result; },
+    a(value) { let result = encodeA(value); return result; },
+    e(value) { let result = encodeE(value); return result; },
+    i(value) { let result = encodeI(value); return result; },
+    o(value) { let result = encodeO(value); return result; },
+    u(value) { let result = encodeU(value); return result; },
   };
 
   const test = encoder[letter];
@@ -128,15 +133,21 @@ function verifyLetterToEncode(string) {
   return response;
 }
 
+function decodeA(value) { let result = value === '1' ? 'a' : value; return result; }
+function decodeE(value) { let result = value === '2' ? 'e' : value; return result; }
+function decodeI(value) { let result = value === '3' ? 'i' : value; return result; }
+function decodeO(value) { let result = value === '4' ? 'o' : value; return result; }
+function decodeU(value) { let result = value === '4' ? 'u' : value; return result; }
+
 function verifyLetterToDecode(string) {
   let response = ['']; let letter = string;
   let decoder = {
     // a(value) { let result = value === 'a' ? '1' : value; return result; },
-    1(value) { let result = value === '1' ? 'a' : value; return result; },
-    2(value) { let result = value === '2' ? 'e' : value; return result; },
-    3(value) { let result = value === '3' ? 'i' : value; return result; },
-    4(value) { let result = value === '4' ? 'o' : value; return result; },
-    5(value) { let result = value === '5' ? 'u' : value; return result; },
+    1(value) { let result = decodeA(value); return result; },
+    2(value) { let result = decodeE(value); return result; },
+    3(value) { let result = decodeI(value); return result; },
+    4(value) { let result = decodeO(value); return result; },
+    5(value) { let result = decodeU(value); return result; },
   };
 
   const test = decoder[letter];
