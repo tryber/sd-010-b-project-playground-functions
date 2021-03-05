@@ -73,17 +73,17 @@ function highestCount(numero) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    if ((mouse * cat2) < (mouse * cat1)){
+    if (mouse < cat2 && cat2 < cat1){
       return 'cat2'
-  } else if ((mouse * cat1) < (mouse * cat2)){
+  } else if (mouse < cat1 && cat1 < cat2){
       return 'cat1'
   } else {
       return 'os gatos trombam e o rato foge'
   }
 } 
-console.log(catAndMouse(1, 3, 2))
-console.log(catAndMouse(1, 6, 12))
-console.log(catAndMouse(1, 6, 6))
+console.log(catAndMouse(0, 3, 2))
+console.log(catAndMouse(0, 6, 12))
+console.log(catAndMouse(0, 6, 6))
 
 // Desafio 8
 function fizzBuzz(numeros) {
