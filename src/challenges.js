@@ -26,7 +26,6 @@ function concatName(arrayStrings) {
   // seu código aqui
   let stringAux = arrayStrings;
   let stringConcat = `${stringAux.pop()}, ${stringAux.shift()}`;
-  //let stringConcat = (stringAux.pop() + ', ' + stringAux.shift());
   return stringConcat;
 }
 
