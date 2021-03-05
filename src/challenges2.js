@@ -7,7 +7,7 @@ function techList() {
 function generatePhoneNumber(array, name) {
   // seu código aqui
   array.sort();
-  
+  name;
 }
 
 // Desafio 12
