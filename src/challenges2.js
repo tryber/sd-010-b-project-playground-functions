@@ -1,5 +1,6 @@
 // Desafio 10
 function techList(technology, name) {
+  technology.sort();
   let register = [] //analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array 
   for (let index in technology) {
     if (technology === 0) { //conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/ 
