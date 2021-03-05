@@ -82,6 +82,7 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
+// agradecimentos https://pt.stackoverflow.com/questions/16963/como-substituir-uma-determinada-string-dentro-de-outra-string-em-javascript
 function encode(text) {
   let linha = text;
   for (let key in text) {
