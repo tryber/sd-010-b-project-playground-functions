@@ -119,23 +119,23 @@ function encode(string) {
   let palavraFatiada = string.split('');
   for (let index = 0; index < palavraFatiada.length; index += 1) {
     switch (true) {
-      case palavraFatiada[index] === 'a':
-        palavraFatiada[index] = 1;
-        break;
-      case palavraFatiada[index] === 'e':
-        palavraFatiada[index] = 2;
-        break;
-      case palavraFatiada[index] === 'i':
-        palavraFatiada[index] = 3;
-        break;
-      case palavraFatiada[index] === 'o':
-        palavraFatiada[index] = 4;
-        break;
-      case palavraFatiada[index] === 'u':
-        palavraFatiada[index] = 5;
-        break;
-      default:
-        break;
+    case palavraFatiada[index] === 'a':
+      palavraFatiada[index] = 1;
+      break;
+    case palavraFatiada[index] === 'e':
+      palavraFatiada[index] = 2;
+      break;
+    case palavraFatiada[index] === 'i':
+      palavraFatiada[index] = 3;
+      break;
+    case palavraFatiada[index] === 'o':
+      palavraFatiada[index] = 4;
+      break;
+    case palavraFatiada[index] === 'u':
+      palavraFatiada[index] = 5;
+      break;
+    default:
+       break;
     }
   }
   let resultado = palavraFatiada.join('');
@@ -146,23 +146,23 @@ function decode(string) {
   let palavraFatiada = string.split('');
   for (let index = 0; index < palavraFatiada.length; index += 1) {
     switch (true) {
-      case palavraFatiada[index] === '1':
-        palavraFatiada[index] = 'a';
-        break;
-      case palavraFatiada[index] === '2':
-        palavraFatiada[index] = 'e';
-        break;
-      case palavraFatiada[index] === '3':
-        palavraFatiada[index] = 'i';
-        break;
-      case palavraFatiada[index] === '4':
-        palavraFatiada[index] = 'o';
-        break;
-      case palavraFatiada[index] === '5':
-        palavraFatiada[index] = 'u';
-        break;
-      default:
-        break;
+    case palavraFatiada[index] === '1':
+      palavraFatiada[index] = 'a';
+      break;
+    case palavraFatiada[index] === '2':
+      palavraFatiada[index] = 'e';
+      break;
+    case palavraFatiada[index] === '3':
+      palavraFatiada[index] = 'i';
+      break;
+    case palavraFatiada[index] === '4':
+      palavraFatiada[index] = 'o';
+      break;
+    case palavraFatiada[index] === '5':
+      palavraFatiada[index] = 'u';
+      break;
+    default:
+      break;
     }
   }
   let resultado = palavraFatiada.join('');
