@@ -52,9 +52,9 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs e 
-  // https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
-  //  para entender o conceito de Math.abs
+// foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs e 
+// https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
+//  para entender o conceito de Math.abs
   let situation;
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
@@ -87,7 +87,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(string) {
-  //foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
+//foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
   let info = string.split('');
   for (let index = 0; index < string.length; index += 1) {
     if (info[index] === 'a') {
