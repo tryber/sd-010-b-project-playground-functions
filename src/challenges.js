@@ -77,8 +77,10 @@ function catAndMouse(mouse, cat1, cat2) {
       return 'cat1'
   } else if (mouse === 0 && mouse < cat2 && cat2 < cat1){
       return 'cat2'
-  } else {
+  } else if (mouse === 0 && mouse < cat1, cat2 && cat1 === cat2) {
       return 'os gatos trombam e o rato foge'
+  } else {
+    return 'Valores inválidos!'
   }
 } 
 console.log(catAndMouse(0, 3, 2))
