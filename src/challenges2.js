@@ -62,14 +62,14 @@ function fillWithNumbers(numbers) {
 
 // Função principal
 function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
   let validNumbers = checkNumbers(numbers);
   let counter = repetitionCounter(numbers);
 
   if (counter >= 3 || validNumbers === false) {
     return 'não é possível gerar um número de telefone com esses valores';
-  }
-  if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
   }
   let phoneNumber = fillWithNumbers(numbers);
   return phoneNumber;
