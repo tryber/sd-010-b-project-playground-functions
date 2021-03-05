@@ -81,45 +81,43 @@ function fizzBuzz(array) {
     }
   }
   return novaArray;
-}
+} 
 
 // Desafio 9
 function encode(string) {
-  let novaString = string.split('');
   let trocaCaracter = '';
-  for (let i = 0; i < novaString.length; i += 1) {
-    if (novaString[i] === 'a') {
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
       trocaCaracter += '1';
-    } else if (novaString[i] === 'e') {
+    } else if (string[i] === 'e') {
       trocaCaracter += '2';
-    } else if (novaString[i] === 'i') {
+    } else if (string[i] === 'i') {
       trocaCaracter += '3';
-    } else if (novaString[i] === 'o') {
+    } else if (string[i] === 'o') {
       trocaCaracter += '4';
-    } else if (novaString[i] === 'u') {
+    } else if (string[i] === 'u') {
       trocaCaracter += '5';
     } else {
-      trocaCaracter += novaString[i];
+      trocaCaracter += string[i];
     }
   }
   return trocaCaracter;
 }
 function decode(string) {
-  let novaString = string.split('');
   let trocaCaracter = '';
-  for (let i = 0; i < novaString.length; i += 1) {
-    if (novaString[i] === '1') {
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === '1') {
       trocaCaracter += 'a';
-    } else if (novaString[i] === '2') {
+    } else if (string[i] === '2') {
       trocaCaracter += 'e';
-    } else if (novaString[i] === '3') {
+    } else if (string[i] === '3') {
       trocaCaracter += 'i';
-    } else if (novaString[i] === '4') {
+    } else if (string[i] === '4') {
       trocaCaracter += 'o';
-    } else if (novaString[i] === '5') {
+    } else if (string[i] === '5') {
       trocaCaracter += 'u';
     } else {
-      trocaCaracter += novaString[i];
+      trocaCaracter += string[i];
     }
   }
   return trocaCaracter;
