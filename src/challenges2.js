@@ -4,7 +4,7 @@ function techList(tech, name) {
   for (let index in tech) {
     let bloco = {
       tech: tech[index],
-      name: name
+      name: name,
     }
     tecnologias.push(bloco);
   }
