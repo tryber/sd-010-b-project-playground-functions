@@ -1,14 +1,14 @@
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  items.sort(array);
-    if (array > name) {
-      return 1;
-    }
-    if (array < name) {
-      return -1;
-    }
-    return 0;
+  array.sort(array);
+  if (array > name) {
+    return 1;
+  }
+  if (array < name) {
+    return -1;
+  }
+  return 0;
 }
 
 // Desafio 11
