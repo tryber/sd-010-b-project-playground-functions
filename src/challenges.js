@@ -133,10 +133,10 @@ function encode(parametro) {
   return parametro
 
 }
-function decode(parametro) {
+function decode(parametro2) {
   let parametro = "hi there!"
  
-  return parametro
+  return parametro2
 
 }
 
