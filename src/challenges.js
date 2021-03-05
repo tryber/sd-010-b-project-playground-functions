@@ -76,10 +76,10 @@ function catAndMouse(mouse, cat1, cat2) {
   if (gotcha1 > gotcha2) {
     aim = "cat1";
   } 
-  else if(gotcha2 > gotcha1) {
+  else if (gotcha2 > gotcha1) {
     aim = "cat2";
   }
-  else (gotcha1 === gotcha2) {
+  else if (gotcha1 === gotcha2) {
     aim = "os gatos trombam e o rato foge";
   }
   return aim;
@@ -87,8 +87,8 @@ function catAndMouse(mouse, cat1, cat2) {
   
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFB) {
+  let denote = 0;
 }
 
 // Desafio 9
