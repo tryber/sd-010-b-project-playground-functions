@@ -50,6 +50,12 @@ function phoneNumber(arr) {
 
   return phone;
 }
+function isTrueLine(A, B, C) {
+  if (Math.abs(B - C) < A && A < (B + C)) {
+    return true;
+  }
+  return false;
+}
 
 // Desafio 10
 function techList(array, paramterName) {
@@ -82,21 +88,10 @@ function generatePhoneNumber(arr) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let resultA = null;
-  let resultB = null;
-  let resultC = null;
-
-  if (Math.abs(lineB -lineC) < lineA && lineA < (lineB+lineC)) {
-    resultA = true;
-  }
-
-  if (Math.abs(lineC-lineA) < lineB && lineB < (lineA+lineC)) {
-    resultB = true;
-  }
-
-  if (Math.abs(lineA-lineB) < lineC && lineC < (lineA+lineC)) {
-    resultC = true;
-  }
+  // Aqui o que importar é somente a ordem do primeiro parâmetro
+  let resultA = isTrueLine(lineA, lineB, lineC);
+  let resultB = isTrueLine(lineB, lineA, lineC);
+  let resultC = isTrueLine(lineC, lineA, lineB);
 
   if (resultA && resultB && resultC) {
     return true;
@@ -104,7 +99,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return false;
 }
-
+console.log(triangleCheck(10, 14, 8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
