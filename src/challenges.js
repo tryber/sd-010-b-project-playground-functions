@@ -107,7 +107,7 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
-  let encodingString = ' ';
+  let encodingString = '';
 
   for (let key = 0; key < string.split('').length; key += 1){
 
