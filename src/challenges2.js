@@ -52,7 +52,6 @@ function generatePhoneNumber(arrayOfNumber) {
   }
 }
 
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) {
@@ -70,7 +69,7 @@ function hydrate(stringWithGlasses) {
   let retorno = '';
   let sumOfGlasses = 0;
   for (let key in stringWithGlasses) {
-    if (typeof (stringWithGlasses[key]) === Number) {
+    if (typeof (stringWithGlasses[key]) === ) {
       sumOfGlasses += stringWithGlasses[key];
     }
   }
