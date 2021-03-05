@@ -5,7 +5,7 @@ function techList(techNames, nameList) {
     tech: 'techNames',
     name: nameList,
   };
-  objectList = techNames.sort(); 
+  objectList = techNames.sort();
   if (objectList.length === 0) {
     return 'Vazio!';
   } else {
@@ -19,7 +19,7 @@ function techList(techNames, nameList) {
   }
 }
 
-
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
