@@ -9,12 +9,11 @@ function techList(array, name) {
     for (let index = 0; index < array.length; index += 1) {
       lista.push({
         tech: array[index],
-        name
+        name: name
       });
-      lista;
     }
+    return lista;
   }
-  return array;
 }
 
 // Desafio 11
