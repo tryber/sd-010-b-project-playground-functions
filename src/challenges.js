@@ -21,7 +21,6 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(nomes) {
-  let nomes = [];
   let primeiroItem = nomes[0];
   let ultimoItem  = nomes.lastIndexOf();
   return ultimoItem + primeiroItem;
