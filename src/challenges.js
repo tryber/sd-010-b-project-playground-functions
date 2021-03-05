@@ -44,18 +44,18 @@ function highestCount(numbersArray) {
   return calcRep;
 }
 // Desafio 7
+// (Pesquisei sobre a função Math.abs, para entender sobre como ela transforma um numero)
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(cat1, cat2, mouse) {
-  let distCat1 = Math.abs(mouse - cat1);
-  let distCat2 = Math.abs(mouse - cat2);
-   if (distCat1 < distCat2) {
-    return 'cat1';
- } else if (distCat2 < distCat1) {
-   return 'cat2';
- } else {
-   return 'os gatos trombam e o rato foge';
- }
+  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
+    return 'os gatos trombam e o rato foge';    
+  } else if((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';    
+  } else if((cat1 - mouse) > (cat2 - mouse)){
+    return 'cat2';
+  }
 }
-//console.log(catAndMouse(1, 0, 2));
+//console . log ( catAndMouse ( 2 , 0 , 3 ) ) ;
 // Desafio 8
 function fizzBuzz(numArray) {
   let resul = [];
