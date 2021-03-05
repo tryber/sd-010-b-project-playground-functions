@@ -62,17 +62,18 @@ console.log(footballPoints(wins, ties));
 // Desafio 6
 
 let numbers = [];
-let highest = 0;
-let count = 0;
 
 function highestCount(numbers) {
+  let highest = 0;
+  let count = 0;
+  
   for(let index in numbers) {
     if(highest < numbers[index]) {
       highest = numbers[index];
     }
   }
-  for(let index = 0; index < numbers.length; index +=1) {
-    if(numbers[index] === highest) {
+  for(let index2 in numbers) {
+    if(numbers[index2] === highest) {
       count = count += 1;
     }
   }
@@ -106,10 +107,10 @@ let arrayNumbers = [];
 let finalArray = [];
 
 function fizzBuzz(arrayNumbers) {
-  for(let index = 0; index < arrayNumbers.length; index +=1) {
+  for(let index in arrayNumbers) {
     if(arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 == 0) {
       finalArray.push("fizzBuzz");
-    }else if(arrayNumbers[index] % 3 == 1 && arrayNumbers[index] % 5 == 0) {
+    }else if(arrayNumbers[index] % 5 == 0) {
       finalArray.push("buzz");
     }else if(arrayNumbers[index] % 3 == 0) {
       finalArray.push("fizz");
@@ -119,6 +120,7 @@ function fizzBuzz(arrayNumbers) {
   }
   return finalArray;
 }
+console.log(fizzBuzz(arrayNumbers));
 
 // Desafio 9
 function encode() {
