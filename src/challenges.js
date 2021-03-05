@@ -20,8 +20,8 @@ console.log(splitSentence('Go Trybe'));
 
 // OK - Desafio 4
 function concatName(stringsArray) {
-  let ultimoPrimeiroItem = (stringsArray[stringsArray.length - 1] + ", " + stringsArray[0]);
-  return ultimoPrimeiroItem;
+  let ultimoePrimeiroItemStringArray = (stringsArray[stringsArray.length - 1] + ', ' + stringsArray[0]);
+  return ultimoePrimeiroItemStringArray;
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
@@ -48,9 +48,20 @@ function highestCount(numbersArray) {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Para codificação desta função utilizei como referência a página https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  let distCat1 = Math.abs(cat1 - mouse);
+  let distCat2 = Math.abs(cat2 - mouse);
+  
+  if (distCat1 > distCat2) {
+    return "cat2";    
+  } else if (distCat1 < distCat2) {
+    return "cat1";
+    } else {
+      return "os gatos trombam e o rato foge";
+    }
 }
+console.log(catAndMouse(4, 5, 2));
 
 // Desafio 8
 function fizzBuzz() {
