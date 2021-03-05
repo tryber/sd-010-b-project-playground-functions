@@ -62,7 +62,7 @@ function fizzBuzz(array) {
     } else if (array[i] %5 == 0) {
       array1.push("buzz");
     } else {
-      array1.push("bug");
+      array1.push("bug!");
     }
   
   }  return array1;
