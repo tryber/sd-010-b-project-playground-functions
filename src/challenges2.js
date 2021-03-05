@@ -19,48 +19,41 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let padraoTelefone = 0;
   let limiteRepete = 0;
+  let padraoTelefone = 0;
   let numeroExcedente = false;
   for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] <= -1) || (array[index] >= 10)) {
+    if ((array[index] < 0) || (array[index] > 9)) {
       numeroExcedente = true;
     }
-  }
-  return Object.values(padraoTelefone).sort().reverse()[0];
-}
-
-function veirficaRepetidos(array) {
-  let  = true;
-  if (array >= 3) {
-    padrao = false;
-    return padrao;
-  }
-}
-    
-    if (array[index] < 0 || array[index] > 9) {
-      padrao = true;
-      return padrao = false;
-    }
-    if (index === 2) {
-      parentesesNumero += ')';
-      parentesesNumero += array[index];
-      return parentesesNumero;
-    }
-    if (index === 7) {
-      parentesesNumero += '-';
-      parentesesNumero += array[index];
-      return parentesesNumero;
-    }
-    if (array.length === 11) {
-      let numeroExcedente = padrao[array];
-      let limiteRepete = padrao[array];
-      if ( && ) {
-        return padrao(array);
+    for (let indexDois = 0; indexDois < array.length; indexDois +=1) {
+      if (array[index] === array[indexDois]) {
+        limiteRepete += 1;
+        if (limiteRepete >= 3) {
+          padraoTelefone += limiteRepete;
+        }
       }
-      return 'não é possível gerar um número de telefone com esses valores';
     }
-    return 'Array com tamanho incorreto.';
+    limiteRepete = 0;
+  }
+  if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
+    return "não é possível gerar um número de telefone com esses valores";
+  } else if (array.length !== 11) {
+    return "Array com tamanho incorreto.";
+  } else {
+    let padrao = '(';
+    for (let index = 0; index < 2; index += 1) {
+      padrao += array[index];
+    }
+    padrao += ') '
+    for (let index = 2; index < 7; index += 1) {
+      padrao += array[index];
+    }
+    padrao = '-';
+    for (let index = 7; index < array.length; index += 1) {
+      padrao += array[index];
+    }
+    return padrao;
   }
 }
 
