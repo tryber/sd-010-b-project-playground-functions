@@ -115,11 +115,9 @@ function encode(string) {
       cincoNumeros = '4';
     } else if (string[index] === 'u') {
       cincoNumeros = '5';
-    } else {
-      cincoNumeros = string[index];
     }
   }
-  return (cincoNumeros);
+  return cincoNumeros;
 }
 function decode(string) {
   // seu código aqui
@@ -135,11 +133,9 @@ function decode(string) {
       vogais = 'o';
     } else if (string[index] === '5') {
       vogais = 'u';
-    } else {
-      vogais = string[index];
     }
   }
-  return (vogais);
+  return vogais;
 }
 
 module.exports = {
