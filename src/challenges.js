@@ -94,7 +94,7 @@ function divisibleBy5(array, index) {
   if (array[index] % 5 === 0) {
     return 'buzz';
   }
-  return divisibleBy3(array, index); // se não for divisível por 5 chama a função auxiliar 3 para verificar se é divisível por 3.
+  return divisibleBy3(array, index); // se não for divisível por 5 chama a função auxiliar 1 para verificar se é divisível por 3.
 }
 
 // Função auxilar 3 - Verifica se é divisível por 5 e 3.

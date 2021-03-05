@@ -49,7 +49,7 @@ function repetitionCounter(numbers) {
   return repCounter;
 }
 
-// Função auxiliar 3 - Preenche os número no formado (xx) xxxxx-xxxx.
+// Função auxiliar 3 - Preenche os número no formado (xx) xxxxx-xxxx
 function fillWithNumbers(numbers) {
   let output = '(';
   for (let index = 0; index < numbers.length; index += 1) {
