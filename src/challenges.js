@@ -3,10 +3,7 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
     return true;
-  }
-  else {
-    return false;
-  }
+  } return false;
 }
 console.log(compareTrue(true, false));
 
@@ -48,12 +45,12 @@ function highestCount(arrayCount) {
   // seu código aqui
   let countRepeat = 0;
 
-  for (let index in arrayCount) {
+  for (let index = 0; index < arrayCount.length; index += 1) {
     let verificaNumero = arrayCount[index];
 
-    for (let index2 in arrayCount) {
+    for (let index2 = 0; index2 < arrayCount.length; index2 += 1) {
       if (verificaNumero === arrayCount[index2]) {
-        countRepeat++;
+        countRepeat += 1;
       }
     } break;
   }
@@ -74,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (resultCat1 > resultCat2) {
     return 'cat2';
   }
-  return 'os gatos trombam e o rato foge';  
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
