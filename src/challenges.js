@@ -60,31 +60,30 @@ function highestCount(arrayEntry) {
   }
   for (let j = 0; j < arrayEntry.length; j++) {
     if (numeroMaior === arrayEntry[j]) {
-      numeroTotal ++;
+      numeroTotal++;
     }
   }
   return numeroTotal
-
 }
 
 // Desafio 7
-// function catAndMouse(mouse, cat1, cat2) {
-//   let gotcha1 = mouse - cat1;
-//   let gotcha2 = mouse - cat2;
-//   let aim = 0;
+function catAndMouse(mouse, cat1, cat2) {
+  let gotcha1 = mouse - cat1;
+  let gotcha2 = mouse - cat2;
+  let aim = 0;
 
-//   if (gotcha1 > gotcha2) {
-//     aim = "cat1";
-//   } 
-//   else if (gotcha2 > gotcha1) {
-//     aim = "cat2";
-//   }
-//   else if (gotcha1 === gotcha2) {
-//     aim = "os gatos trombam e o rato foge";
-//   }
-//   return aim;
-// }
-  
+  if (gotcha1 > gotcha2) {
+    aim = "cat1";
+  } 
+  else if (gotcha2 > gotcha1) {
+    aim = "cat2";
+  }
+  else if (gotcha1 === gotcha2) {
+    aim = "os gatos trombam e o rato foge";
+  }
+  return aim;
+}
+
 
 // Desafio 8
 function fizzBuzz(arrayFB) {
