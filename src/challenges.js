@@ -64,15 +64,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   for (let i in array) {
-    if(array[num] % 3 === 0) {
-      array[num] = 'fizz';
-    } else if(array[num] % 5 === 0) {
-      array[num] = 'buzz';
-    } else if(array[num] % 3 === 0 && array[num] % 5 === 0) {
-      array[num] = 'fizzBuzz';
+    if (array[i] % 3 === 0) {
+      array[i] = 'fizz';
+    } else if (array[i] % 5 === 0) {
+      array[i] = 'buzz';
+    } else if (array[num] % 3 === 0 && array[i] % 5 === 0) {
+      array[i] = 'fizzBuzz';
     }
     else {
-      array[num] = 'bug!'
+      array[i] = 'bug!';
     }
   }
   return array;
