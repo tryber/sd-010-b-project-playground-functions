@@ -15,40 +15,63 @@ function techList(techs, inputName) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  let phoneNumber = '(';
-  let repetitionCounter = 0;
-  if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
+
+// Função auxiliar  1 - Verifica condicional dos números no array recebido.
+function checkNumbers(numbers) {
+  let output = '';
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      output = false;
     }
+  }
+  return output;
+}
+
+// Função auxiliar 2 - Verifica se há número repetidos e retorna o maior número de repetição
+function repetitionCounter(numbers) {
+  let repCounter = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
     let numberCounter = 0;
+
     for (let index2 = 0; index2 < numbers.length; index2 += 1) {
       if (numbers[index2] === numbers[index]) {
         numberCounter += 1;
       }
     }
-    if (numberCounter > repetitionCounter) {
-      repetitionCounter = numberCounter;
+    if (numberCounter > repCounter) {
+      repCounter = numberCounter;
     }
   }
-  if (repetitionCounter >= 3) {
+  return repCounter;
+}
+
+// Função auxiliar 3 - Preenche os número no formado (xx) xxxxx-xxxx.
+function fillWithNumbers(numbers) {
+  let output = '(';
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (index === 2) {
+      output += ') ';
+    }
+    if (index === 7) {
+      output += '-';
+    }
+    output += numbers[index];
+  }
+  return output;
+}
+
+// Função principal
+function generatePhoneNumber(numbers) {
+  let validNumbers = checkNumbers(numbers);
+  let counter = repetitionCounter(numbers);
+
+  if (counter >= 3 || validNumbers === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let index = 0; index < 2; index += 1) {
-    phoneNumber += numbers[index];
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
-  phoneNumber += ') ';
-  for (let index = 2; index < 7; index += 1) {
-    phoneNumber += numbers[index];
-  }
-  phoneNumber += '-';
-  for (let index = 7; index < numbers.length; index += 1) {
-    phoneNumber += numbers[index];
-  }
+  let phoneNumber = fillWithNumbers(numbers);
   return phoneNumber;
 }
 
