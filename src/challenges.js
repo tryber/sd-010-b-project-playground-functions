@@ -150,10 +150,10 @@ function encode(string) {
   let response = [''];
 
   for (let i = 0; i < string.length; i += 1) {
-    response[i] = verifyLetterToEncode(string[i]);
+    response += verifyLetterToEncode(string[i]);
   }
 
-  console.log(`[Requisito 9] - Encode ${response}`);
+  console.log(`[Requisito 9] - Encode: ${response}`);
 
   return response;
 }
@@ -162,10 +162,10 @@ function decode(string) {
   let response = [''];
 
   for (let i = 0; i < string.length; i += 1) {
-    response[i] = verifyLetterToDecode(string[i]);
+    response += verifyLetterToDecode(string[i]);
   }
 
-  console.log(`[Requisito 9] - Decode ${response}`);
+  console.log(`[Requisito 9] - Decode: ${response}`);
 
   return response;
 }
