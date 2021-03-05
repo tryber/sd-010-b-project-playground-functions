@@ -78,44 +78,40 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arryFB) {
-  // seu código aqui
-  let novaArray = [];
-
-  for(let counter = 0; counter < arryFB.length; counter +=1){
-
-    if (arryFB[counter] % 3 == 0 && arryFB[counter] % 5 == 0) {
-      novaArray.push('fizzbuzz');
-    } else if (arryFB[counter] % 3 == 0){
-      novaArray.push('fizz');
-    } else if (arryFB[counter] % 5 == 0) {
-      novaArray.push('buzz');
-    } else {
-      novaArray.push('bug!');
+function fizzBuzz(arrayFB) {
+  let newArray = [];
+  // laço For para percorrer a array da função fizzBuz
+  for (let index = 0; index < arrayFB.length; index += 1){
+    let arrayNumber = arrayFB[index]; //recebe os numeros da array da função fizzBuzz para fazer a comparação na função valuer(arrayNumber)
+    let result = valuer(arrayNumber); //chama a função para comparação e substituíção dos valores na array
+    newArray.push(result);
+  }
+  //função para comparar cada numero da array recebida da função fizzBuzz
+  function valuer(arrayNumber){
+    if (arrayNumber % 3 == 0 && arrayNumber % 5 == 0){
+      return 'fizzBuzz';
+    }
+    if (arrayNumber % 3 == 0 ){
+      return 'fizz';
+    }
+    if (arrayNumber % 5 == 0){
+      return 'buzz';
+    }
+    else {
+      return 'bug!';
     }
   }
-  return novaArray;
+  return newArray;
+}
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+
 }
 
-// Desafio 9
-function encode(phrase) {
-  // código creiado com a ajuda do https://pt.coredump.biz/questions/20343776/javascript-multiple-replace-with-regex-that-avoids-html-tags
-  let phraseEncode = phrase.replace(/a/gi, '1')
-    .replace(/e/gi, '2')
-    .replace(/i/gi, '3')
-    .replace(/o/gi, '4')
-    .replace(/u/gi, '5;');
-  return phraseEncode;
-}
-function decode(newPhrase) {
-  // seu código aqui
-  let phraseDecode = newPhrase.replace(/1/gi, 'a')
-    .replace(/2/gi, 'e')
-    .replace(/3/gi, 'i')
-    .replace(/4/gi, 'o')
-    .replace(/5/gi, 'u');
-  return phraseDecode;
-}
 module.exports = {
   calcArea,
   catAndMouse,
