@@ -19,20 +19,25 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let padraoTelefone = {};
-  let padrao = true;
-  let parentesesNumero = '(';
+  let padraoTelefone = 0;
+  let limiteRepete = 0;
+  let numeroExcedente = false;
   for (let index = 0; index < array.length; index += 1) {
-    if (padraoTelefone[array[index]]) {
-      padraoTelefone[array[index]] += 1;
-      return Object.values(padraoTelefone).sort().reverse()[0];
-    } else {
-      padraoTelefone[array[index]] = 1;
+    if ((array[index] <= -1) || (array[index] >= 10)) {
+      numeroExcedente = true;
     }
-    if (padraoTelefone[array] >= 3) {
-      padrao = false;
-      return padrao;
-    }
+  }
+  return Object.values(padraoTelefone).sort().reverse()[0];
+}
+
+function veirficaRepetidos(array) {
+  let  = true;
+  if (array >= 3) {
+    padrao = false;
+    return padrao;
+  }
+}
+    
     if (array[index] < 0 || array[index] > 9) {
       padrao = true;
       return padrao = false;
@@ -50,7 +55,7 @@ function generatePhoneNumber(array) {
     if (array.length === 11) {
       let numeroExcedente = padrao[array];
       let limiteRepete = padrao[array];
-      if (numeroExcedente && limiteRepete) {
+      if ( && ) {
         return padrao(array);
       }
       return 'não é possível gerar um número de telefone com esses valores';
