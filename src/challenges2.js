@@ -81,7 +81,7 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) { // Referência : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
     return true;
   }
   return false;
