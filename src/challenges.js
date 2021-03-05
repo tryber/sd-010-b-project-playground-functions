@@ -14,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ");
+  return str.split('');
 }
 
 // Desafio 4
@@ -56,14 +56,26 @@ function catAndMouse(mouse, cat1, cat2) {
   if ((cat2 - mouse) < (cat1 - mouse)) {
     return ca2;
   }
-  if (cat1 == cat2) {
+  if (cat1 === cat2) {
     return emp;
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(array) {
+  for (let i in array) {
+    if(array[num] % 3 === 0) {
+      array[num] = 'fizz';
+    } else if(array[num] % 5 === 0) {
+      array[num] = 'buzz';
+    } else if(array[num] % 3 === 0 && array[num] % 5 === 0) {
+      array[num] = 'fizzBuzz';
+    }
+    else {
+      array[num] = 'bug!'
+    }
+  }
+  return array;
 }
 
 // Desafio 9
