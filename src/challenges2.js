@@ -2,6 +2,7 @@
 //const array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 function techList(techs, name) {
   let resultadoFinal = [];
+  let resultadoVazio = '';
   if (techs !== 0) {
     let techOrdenados = techs.sort();
     for (let index = 0; index < techOrdenados.length; index += 1) {
@@ -10,15 +11,16 @@ function techList(techs, name) {
       resultado.name = name;
       resultadoFinal.push(resultado);
     }
+    return resultadoFinal;
   } else {
-    resultadoFinal = 'Vazio!';
+    resultadoVazio = 'Vazio!';
+    return resultadoVazio;
   }
-  return resultadoFinal;
 }
 //console.log(techList(array , 'Jessie'));
 // Desafio 11
 function generatePhoneNumber() {
-//nada  
+  //nada
 }
 
 // Desafio 12
