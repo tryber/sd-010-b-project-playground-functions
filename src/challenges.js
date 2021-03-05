@@ -50,36 +50,36 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   
-  if (cat1 < cat2 == true && cat1 - mouse < cat2 ) {
-    result = 'cat1';
-    return result;
-  } else if (cat2 < cat1 == true && cat2 - mouse < cat2 ) {
+  if ((cat1 - mouse) < (cat2 - mouse) == true && (cat1 - mouse < 0)) {
     result = 'cat2';
     return result;
-  } else  if (cat1 - mouse == cat2 || cat1 == cat2) {
-    result = 'os gatos se trombam e o rato foge';
+  } else if ((cat2 - mouse) < (cat1 - mouse) == true && (cat2 - mouse < 0)) {
+    result = 'cat1';
     return result;
+  } else {
+    result = 'os gatos trombam e gato foge';
+    return
   }
 }
-console.log(catAndMouse(1,4,3))
+console.log(catAndMouse(54, 55, 50))
 
 
 // Desafio 8
 function fizzBuzz(numbers) {
      
-  string = [];
+  frase = [];
   for (i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-      string[i] = 'fizzBuzz';
+      frase[i] = 'fizzBuzz';
     } else if (numbers[i] % 3 === 0) {
-      string[i] = 'fizz';
+      frase[i] = 'fizz';
     } else if (numbers[i] % 5 === 0) {
-      string[i] = 'buzz';
+      frase[i] = 'buzz';
     } else {
-      string[i] = 'bug!';
+      frase[i] = 'bug!';
     }
   }
-  return string;
+  return frase;
 }
 
 console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9]))
