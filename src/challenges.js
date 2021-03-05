@@ -1,5 +1,3 @@
-/* eslint-disable complexity */
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   let result = Boolean;
@@ -130,7 +128,6 @@ function decode(stringWithNumbers) {
   }
   return result;
 }
-console.log(decode('H4w 1r2 y45 t4d1y?'));
 
 module.exports = {
   calcArea,
