@@ -70,7 +70,7 @@ function fizzBuzz(array) {
   }
   return zumbido;
 }
-console.log (fizzBuzz([7, 9]));
+console.log (fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
