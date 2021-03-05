@@ -10,14 +10,12 @@ function compareTrue(num1, num2){
 
 // Desafio 2
 function calcArea(base, heigth){
-  let calculo = (base*heigth)/2;
-  return calculo;
+  return (base*heigth)/2;
 }
 
 // Desafio 3
 function splitSentence(frase){
-  let separar = frase.split(" ")
-  return separar;
+  return frase.split(" ");
 }
 
 // Desafio 4
