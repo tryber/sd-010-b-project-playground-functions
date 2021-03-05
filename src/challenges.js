@@ -3,9 +3,7 @@ function compareTrue(v1, v2) {
   if (v1 && v2 === true) {
     return true;
   }
-  else {
-    return false;
-  }
+  return false;
 }
 
 // Desafio 2
@@ -49,6 +47,15 @@ function catAndMouse(mouse, cat1, cat2) {
   ca1 = "cat1";
   ca2 = "cat2";
   emp = "os gatos trombam e o rato foge";
+  if (cat1 < 0) {
+    cat1 = cat1 * -1;
+  }
+  if (cat2 < 0) {
+    cat2 = cat2 * -1;
+  }
+  if (mouse < 0) {
+    mouse = mouse * -1;
+  }
   if ((cat1 - mouse) < (cat2 - mouse)) {
     return ca1;
   }
