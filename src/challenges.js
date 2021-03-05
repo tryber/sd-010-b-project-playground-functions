@@ -80,12 +80,41 @@ function fizzBuzz(arrNumber) {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+ let vowel = ['a', 'e', 'i', 'o', 'u'];
+ let number = [1, 2, 3, 4, 5];
+ let result = str.split('');
+ let totalResult;
+ for (let key in result){
+   for (let key2 in vowel){
+     if (result[key] === vowel[key2]) {
+       result[key] = number[key2];
+     }
+   }
+ }
+ totalResult = result.join('');
+ return totalResult;
 }
 
-function decode() {
+function decode(strD) {
   // seu código aqui
+  let change = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let arrayDecodificador = strD.split('');
+  arrayDecodificador.forEach((e, index) => {
+    for (let key in change) {
+      if (parseInt(e, 10) == change[key]) {
+        arrayDecodificador[index] = key;
+      }
+    }
+  });
+  return arrayDecodificador.join('');
 }
 
 module.exports = {
