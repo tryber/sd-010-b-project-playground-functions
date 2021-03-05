@@ -1,7 +1,6 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  // seu código aqui
-  if (num1 > 0 && num2 < 10) {
+  if (num1 >= 0 && num2 <= 10) {
     return true;
   }
   else {
@@ -10,28 +9,27 @@ function compareTrue(num1, num2) {
 }
 // Desafio 2
 function calcArea(base, heigth) {
-  // seu código aqui
   let calculo = (base*heigth)/2;
   return calculo;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  // seu código aqui
   let separar = frase.split(" ")
   return separar;
 }
 
 // Desafio 4
-function concatName(itens) {
-  // seu código aqui
-  
+function concatName(nomes) {
+  let nomes = [];
+  let primeiroItem = nomes[0];
+  let ultimoItem  = nomes.lastIndexOf();
+  return ultimoItem + primeiroItem;
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints() {
   // seu código aqui
-  return (wins*3)+ties;
 }
 
 // Desafio 6
