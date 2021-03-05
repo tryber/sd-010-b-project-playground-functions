@@ -66,6 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return string;
 }
 
+// Desafio 8
 function fizzBuzz(array) {
   let novaArray = [];
   for (let i = 0; i < array.length; i += 1) {
