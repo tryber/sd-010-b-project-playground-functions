@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
     frase = 'cat2';
     return frase;
   } else if ( cat1 == cat2 ) {
-      frase = 'os gatos trobam e o rato foge';
+      frase = 'os gatos trobam e o rato foge'
       return frase;
   } 
 }
@@ -67,7 +67,7 @@ console.log(catAndMouse(3, 3, 2))
 
 // Desafio 8
 function fizzBuzz(numbers) {
-     
+  string = [];
   for (i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
       string[i] = 'fizzBuzz';
