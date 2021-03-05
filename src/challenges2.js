@@ -52,7 +52,7 @@ function generatePhoneNumber(array) {
       numero2.push(letra);
     }
   }
-  let resultado = ddd.join('') + ' ' + numero.join('') + '-' + numero2.join('');
+  let resultado = '('+ddd.join('')+')' + ' ' + numero.join('') + '-' + numero2.join('');
   
   return resultado;
   }
