@@ -4,7 +4,6 @@ function compareTrue(a, b) {
     return true;
   }
   return false;
-
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -18,7 +17,7 @@ function splitSentence(palavra) {
 }
 // Desafio 4
 function concatName(array) {
-  return (array[array.length - 1] + ', ' + array[0]);
+  return (`${array[array.length - 1]}, ${ array[0]}`);
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -32,15 +31,15 @@ function highestCount(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (maior < array[index]) {
       maior = array[index];
-    };
-  };
+    }
+  }
   for (let index = 0; index < array.length; index += 1) {
-    if (maior == array[index]) {
+    if (maior === array[index]) {
       count += 1;
-    };
-  };
+    }
+  }
   return count;
-};
+}
 // Desafio 7
 //console.log(catAndMouse(1,9,-12))
 function catAndMouse(mouse, cat1, cat2) {
@@ -53,8 +52,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
-  };
-};
+  }
+}
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -68,9 +67,9 @@ function fizzBuzz(array) {
       arrayFizzBuzz.push('fizzBuzz');
     } else {
       arrayFizzBuzz.push('bug!');
-    };
+    }
 
-  };
+  }
   return (arrayFizzBuzz);
 }
 // Desafio 9
@@ -96,14 +95,14 @@ function encode(code) {
       case 'u':
         string[index] = '5';
         break;
-    };
-  };
+    }
+  }
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
-  };
+  }
   return `${frase}`;
 
-};
+}
 
 //console.log(decode('h2ll4'))
 function decode(code) {
@@ -111,28 +110,28 @@ function decode(code) {
   let string = code.split('');
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
-      case '1':
-        string[index] = 'a';
-        break;
-      case '2':
-        string[index] = 'e';
-        break;
-      case '3':
-        string[index] = 'i';
-        break;
-      case '4':
-        string[index] = 'o';
-        break;
-      case '5':
-        string[index] = 'u';
-        break;
-    };
-  };
+    case '1':
+      string[index] = 'a';
+      break;
+    case '2':
+      string[index] = 'e';
+      break;
+    case '3':
+      string[index] = 'i';
+      break;
+    case '4':
+      string[index] = 'o';
+      break;
+    case '5':
+      string[index] = 'u';
+      break;
+    }
+  }
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
-  };
+  }
   return `${frase}`;
-};
+}
 
 module.exports = {
   calcArea,
