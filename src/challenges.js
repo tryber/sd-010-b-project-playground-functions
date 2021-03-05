@@ -21,12 +21,10 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let array = [];
-  for(let key in frase){
-   array.push(frase[key]);
-  }
+  array = frase.split(" ");
+  
   return array;
 }
-
 
 
 // Desafio 4
