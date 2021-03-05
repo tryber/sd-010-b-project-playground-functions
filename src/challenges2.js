@@ -1,5 +1,6 @@
 // Desafio 10
 function techList(tech, name) {
+  tech.sort();
   let tecnologias = [];
   for (let index in tech) {
     let bloco = {
