@@ -1,18 +1,24 @@
 // Desafio 10
-let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let techs = [];
 let name = "Jonnes";
 console.log(techList(techs, name));
 function techList(techs, name) {
-  let list = [];
-  for (let i = 0; i < techs.length; i++) {
-    newTech = {
-      tech: techs[i],
-      name: name
-    };
-    list.push(newTech) // I found this push() function at https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
+  if (techs.length === 0) {
+    return "Vazio!"
+  } else {
+    let list = [];
+    for (let i = 0; i < techs.length; i++) {
+      newTech = {
+        tech: techs[i],
+        name: name
+      };
+      list.push(newTech) // I found this push() function at https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/
+    }
+    list.sort(sortByTech);
+  
+    return list;
   }
-  list.sort(sortByTech);
-  return list;
 }
 
 // I found this logic at https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
