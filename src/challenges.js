@@ -61,7 +61,7 @@ console.log(footballPoints(wins, ties));
 
 // Desafio 6
 
-let numbers;
+let numbers = [];
 let highest = 0;
 let result = 0;
 
@@ -71,14 +71,13 @@ function highestCount(numbers) {
       highest = numbers[index];
     }
   }
-  for(let index2 = 0; index2 < numbers.length; index2 +=1) {
-    if(numbers[index2] === highest) {
+  for(let index = 0; index < numbers.length; index +=1) {
+    if(numbers[index] === highest) {
       result = result += 1;
     }
   }
   return result;
 }
-console.log(highestCount(numbers));
 
 // Consegui entender esse desafio com a ajuda do meu colega de turma Teófilo Brandão, dando uma olhada no código dele com a devida autorização do mesmo.
 
@@ -102,8 +101,23 @@ console.log(catAndMouse(mouse, cat1, cat2));
 // Consegui resolver esse desafio de um jeito bem mais simples do que eu havia pensado inicialmente graças à imensa dica de como usar o Math.abs() que meu colega Emerson Saturnino apresentou em uma thread do Slack.
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+let arrayNumbers = [];
+let result = [];
+
+function fizzBuzz(arrayNumbers) {
+  for(let index = 0; index < arrayNumbers.length; index +=1) {
+    if(arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 == 0) {
+      result.push("fizzBuzz");
+    }else if(arrayNumbers[index] % 3 == 1 && arrayNumbers[index] % 5 == 0) {
+      result.push("buzz");
+    }else if(arrayNumbers[index] % 3 == 0) {
+      result.push("fizz");
+    }else {
+      result.push("bug!");
+    }
+  }
+  return result;
 }
 
 // Desafio 9
