@@ -59,7 +59,7 @@ if (distancia1 > distancia2) {
 else if (distancia1 < distancia2){
   valor = "cat1";
 }
-else {
+else if(distancia1 === distancia2) {
   valor = "os gatos trombam e o rato foge";
 }
 return valor;
