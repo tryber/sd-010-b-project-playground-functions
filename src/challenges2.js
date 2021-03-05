@@ -111,7 +111,7 @@ function hydrate(string) {
     return `${sumArray} copo de água`;
   }
 
-  return `${sumArray} copos de água`; 
+  return `${sumArray} copos de água`;
 }
 
 module.exports = {
