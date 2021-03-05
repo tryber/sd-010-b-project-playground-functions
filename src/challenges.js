@@ -52,9 +52,9 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-// foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs e 
-// https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
-//  para entender o conceito de Math.abs
+  //foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs e 
+  //https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
+  // para entender o conceito de Math.abs
   let situation;
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
@@ -69,38 +69,66 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let result = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
-      result.push('fizz'); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push para rever o conceito de push
-    } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
-      result.push('buzz');
-    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else {
-      result.push('bug!');
-    }
+function compareNumbers(numbers) {
+  let result = ''
+  if (numbers % 3 === 0 && numbers % 5 !== 0) {
+    result += 'fizz'; // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push para rever o conceito de push
+  } else if (numbers % 5 === 0 && numbers % 3 !== 0) {
+    result += 'buzz';
+  } else if (numbers % 3 === 0 && numbers % 5 === 0) {
+    result += 'fizzBuzz';
+  } else {
+    result += 'bug!';
   }
   return result;
 }
 
+function fizzBuzz(numbers) {
+  let result = [];//recebi a ajuda do Carlos Vieira - T10b para fazer o refatoramento
+  for (let index = 0; index < numbers.length; index += 1) {
+    let start = compareNumbers(numbers[index]);
+    result.push(start);
+  }
+  return result;
+}
 // Desafio 9
+function codeMaker(codeInfo) {
+  let info = '';
+  if (codeInfo === 'a') {
+    info = '1';
+  } else if (codeInfo === 'e') {
+    info = '2';
+  } else if (codeInfo === 'i') {
+    info = '3';
+  } else if (codeInfo === 'o') {
+    info = '4';
+  } else if (codeInfo === 'u') {
+    info = '5';
+  }
+  return info;
+}
+function decodeMaker(codeInfo) {
+  let info = '';
+  if (codeInfo === '1') {
+    info = 'a';
+  } else if (codeInfo === '2') {
+    info = 'e';
+  } else if (codeInfo === '3') {
+    info = 'i';
+  } else if (codeInfo === '4') {
+    info = 'o';
+  } else if (codeInfo === '5') {
+    info = 'u';
+  }
+  return info;
+}
+
 function encode(string) {
-//foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
+  //foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
   let info = string.split('');
   for (let index = 0; index < string.length; index += 1) {
-    if (info[index] === 'a') {
-      info[index] = '1';
-    } else if (info[index] === 'e') {
-      info[index] = '2';
-    } else if (info[index] === 'i') {
-      info[index] = '3';
-    } else if (info[index] === 'o') {
-      info[index] = '4';
-    } else if (info[index] === 'u') {
-      info[index] = '5';
-    }
+    let start = codemaker(info)
+    info.push(start)
   }
   string = info.join(''); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join para entender o conceito de join
   return string;
@@ -109,17 +137,8 @@ function encode(string) {
 function decode(array) {
   let info = array.split('');
   for (let index = 0; index < array.length; index += 1) {
-    if (info[index] === '1') {
-      info[index] = 'a';
-    } else if (info[index] === '2') {
-      info[index] = 'e';
-    } else if (info[index] === '3') {
-      info[index] = 'i';
-    } else if (info[index] === '4') {
-      info[index] = 'o';
-    } else if (info[index] === '5') {
-      info[index] = 'u';
-    }
+    let start = decodemaker(info)
+    info.push(start)
   }
   array = info.join('');
   return array;
