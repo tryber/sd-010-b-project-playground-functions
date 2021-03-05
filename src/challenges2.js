@@ -22,9 +22,23 @@ function triangleCheck(a, b, c) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  let hydratar = "";
+  let numeros = [];
+  let soma = 0;
+  for(let i = 0; i < drink.length; i += 1){
+    if(drink[i] >= 1 && drink[i] <= 9) {
+      numeros.push(drink[i]); 
+    }
+  }
+  for(let index = 0; index < numeros.length; index += 1) {
+    soma += parseInt(numeros[index]);
+  }
+  hydratar = soma + " copos de agua";
+
+  return hydratar;
 }
+
 
 module.exports = {
   generatePhoneNumber,
