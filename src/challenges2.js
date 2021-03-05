@@ -5,7 +5,7 @@ function techList(techs, name) {
   if (techs !== '') {
     let techOrdenados = techs.sort();
     for (let index = 0; index < techOrdenados.length; index += 1) {
-      let resultado = {tech: '', name: ''};
+      let resultado = { tech: '', name: '' };
       resultado.tech = techOrdenados[index];
       resultado.name = name;
       resultadoFinal.push(resultado);
@@ -15,10 +15,10 @@ function techList(techs, name) {
   }
   return resultadoFinal;
 }
-console.log(techList(array, 'Jessie'));
+//console.log(techList(array, 'Jessie'));
 // Desafio 11
 function generatePhoneNumber() {
-  
+//nada  
 }
 
 // Desafio 12
