@@ -8,7 +8,7 @@ function techList(array, name) {
     for (let index = 0; index < arrayOrdenada.length; index += 1) {
       let object = {
         tech: arrayOrdenada[index],
-        name: name,
+        name,
       };
       listOfObjetcts.push(object);
     }
@@ -49,7 +49,7 @@ function generatePhoneNumber(numbers) {
       feedback = 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  if (numbers.length != 11) {
+  if (numbers.length !== 11) {
     feedback = 'Array com tamanho incorreto.';
   }
   return feedback;
