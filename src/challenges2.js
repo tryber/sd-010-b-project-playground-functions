@@ -59,11 +59,22 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
+// Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e 
+// maior que o valor absoluto da diferença entre essas medidas.
 function triangleCheck(lineA, lineB, lineC) {
-  if ( Math.abs(lineA - lineA) > lineC ){
-    
+  if ( lineA + lineB >  lineC ){
+    if( Math.abs(lineA - lineB) < lineC){
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  else {
+    return false;
   }
 }
+
 
 // Desafio 13
 function hydrate() {
