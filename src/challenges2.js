@@ -4,8 +4,10 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array, name) {
   // seu código aqui
+  array.sort();
+  
 }
 
 // Desafio 12
