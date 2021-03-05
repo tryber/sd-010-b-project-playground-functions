@@ -20,7 +20,7 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  if (array.length > 11) return "Array com tamanho incorreto.";
+  if (array.length != 11) return "Array com tamanho incorreto.";
   else {
   let frequente = array[0];
   let count;
@@ -77,8 +77,15 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(palavra) {
+  let str = palavra;
+  let troca = palavra.replace(/\D/g, "").split('');
+  soma = 0;
+  for(let i = 0; i < troca.length; i++){
+    soma = soma + Number(troca[i]);
+  }
+  let resultado = soma+' copos de água';
+  return resultado;
 }
 
 module.exports = {
