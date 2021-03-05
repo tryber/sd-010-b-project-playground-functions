@@ -14,7 +14,7 @@ else {
 function calcArea(base, height) {
   // seu código aqui
 let areatriangulo;
-areatriangulo = (base*height)/2;
+areatriangulo = (base * height) / 2;
 return areatriangulo;
 }
 
