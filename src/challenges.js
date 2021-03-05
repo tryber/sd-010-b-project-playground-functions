@@ -87,7 +87,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayFB) {
-  let denote = [];
 
   for (let a = 0; a < arrayFB.length; a += 1) {
     if (arrayFB[a] % 3 === 0) {
@@ -101,7 +100,8 @@ function fizzBuzz(arrayFB) {
     }
     if (arrayFB[a] % 3 !== 0 && arrayFB[a] % 5 !== 0) {
       return 'bug!';
-  }
+    }
+}
 }
 
 // Desafio 9
