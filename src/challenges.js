@@ -54,14 +54,14 @@ function catAndMouse(mouse, cat1, cat2) {
     let catDist1 = cat1 - mouse;
     let catDist2 = cat2 - mouse;
     if (Math.abs(catDist1) === Math.abs(catDist2)) {
-      mouseDist = '"os gatos trombam e o rato foge"';
+      mouseDist = 'os gatos trombam e o rato foge';
     } else if (Math.abs(catDist1) > Math.abs(catDist2)) {
-      mouseDist = '"cat2"';
+      mouseDist = 'cat2';
     } else {
-      mouseDist = '"cat1"';
+      mouseDist = 'cat1';
     }
   } else {
-    mouseDist = '"numero negativo"';
+    mouseDist = 'numero negativo';
   }
   return (mouseDist);
 }
