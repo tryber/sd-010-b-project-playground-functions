@@ -10,9 +10,16 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+    let resultado;
+  if (Math.abs(a) < Math.abs(b + c) && Math.abs(a) > Math.abs(b - c) && Math.abs(a) > Math.abs(c - b)) {
+    resultado = true;
+  } else {
+    resultado = false;
+  }
+  return resultado;
 }
+
 
 // Desafio 13
 function hydrate() {
