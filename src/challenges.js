@@ -119,7 +119,7 @@ function encode(string) {
       cincoNumeros = string[index];
     }
   }
-  return cincoNumeros;
+  return (cincoNumeros);
 }
 function decode(string) {
   // seu código aqui
@@ -139,7 +139,7 @@ function decode(string) {
       vogais = string[index];
     }
   }
-  return vogais;
+  return (vogais);
 }
 
 module.exports = {
