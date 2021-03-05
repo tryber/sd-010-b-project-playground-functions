@@ -116,7 +116,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 
-// Função auxiliar  - Verifica e subtitui o caracter dado
+// Função auxiliar  - Verifica e subtitui o caracter informado.
 function changeCharacter(character) {
   let outputCharacter = '';
   let objectList = {
@@ -144,7 +144,7 @@ function encode(message) {
   return arrayMessage.join('');
 }
 
-// Função auxiliar  - Verifica e subtitui o caracter dado
+// Função auxiliar  - Verifica e subtitui o caracter informado.
 function changeCharacterReverse(character) {
   let outputCharacter = '';
   let objectList = {
