@@ -67,6 +67,8 @@ function highestCount(arrayEntry) {
 }
 
 // Desafio 7
+// Fonte utilizada para essa parte:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   let gotcha1 = Math.abs(mouse - cat1);
   let gotcha2 = Math.abs(mouse - cat2);
@@ -91,17 +93,18 @@ function fizzBuzz(arrayFB) {
 
   for (let a = 0; a < arrayFB.length; a += 1) {
     if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 != 0) {
-      denote = 'fizz';
+      denote.push('fizz');
     }
     if (arrayFB[a] % 3 != 0 && arrayFB[a] % 5 === 0) {
-      denote = 'buzz';
+      denote.push('buzz');
     }
     if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 === 0) {
-      denote = 'fizzBuzz';
+      denote.push('fizzBuzz');
     }
     if (arrayFB[a] % 3 != 0 && arrayFB[a] % 5 != 0) {
-      denote = 'bug!';
+      denote.push('bug!');
     }
+    return denote;
   }
 }
 
