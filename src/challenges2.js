@@ -19,6 +19,15 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
+  let padraoTelefone = [];
+  for (let index = 0; index <= array.length; index += 1) {
+    if (padraoTelefone[array[index]]){
+      padraoTelefone[array[index]] += 1;
+    } else {
+      padraoTelefone[array[index]] = 1;
+    }
+  }
+  return padraoTelefone;
 }
 
 // Desafio 12
