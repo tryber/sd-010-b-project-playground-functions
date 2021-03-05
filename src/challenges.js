@@ -50,18 +50,24 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   
-  if ((cat1 - mouse) < (cat2 - mouse) == true && (cat1 - mouse < 0)) {
+  if ((cat1 - mouse) < (cat2 - mouse) === true && (cat1 - mouse < 0)) {
     result = 'cat2';
     return result;
-  } else if ((cat2 - mouse) < (cat1 - mouse) == true && (cat2 - mouse < 0)) {
+  } else if ((cat2 - mouse) < (cat1 - mouse) === true && (cat2 - mouse < 0)) {
+    result = 'cat1';
+    return result;
+  } else if ((cat2 - mouse) < (cat1 - mouse) === true ) {
+    result = 'cat2';
+    return result;
+  } else if ((cat1 - mouse) < (cat2 - mouse) == true) {
     result = 'cat1';
     return result;
   } else {
-    result = 'os gatos trombam e gato foge';
-    return
+    result = 'os gatos se trombam e o rato foge';
+    return result;
   }
 }
-console.log(catAndMouse(54, 55, 50))
+console.log(catAndMouse(1, 2, 4))
 
 
 // Desafio 8
