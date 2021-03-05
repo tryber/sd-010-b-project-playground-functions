@@ -1,19 +1,19 @@
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+  items.sort(array);
+    if (array > name) {
+      return 1;
+    }
+    if (array < name) {
+      return -1;
+    }
+    return 0;
 }
 
 // Desafio 11
-function generatePhoneNumber(array, name) {
+function generatePhoneNumber(array) {
   // seu código aqui
-  array.sort(a, b)
-  if (a.name > b.name) {
-    return 1;
-  }
-  if (a.name < b.name) {
-    return -1;
-  }
-  return 0;
 }
 
 // Desafio 12
