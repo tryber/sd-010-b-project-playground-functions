@@ -3,14 +3,11 @@ function techList(array, name) {
   // seu código aqui
   array.sort();
   if (array.length < 1) {
-    return 'Vazio!';
+    'Vazio!';
   } else {
     let lista = [];
     for (let index = 0; index < array.length; index += 1) {
-      lista.push({
-        tech: array[index],
-        name: name
-      });
+      lista.push({tech: array[index], name: name});
     }
     return lista;
   }
