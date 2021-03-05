@@ -20,7 +20,7 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayOfNumber) {
-  let telePhoneNumber = `(${arrayOfNumber[0]}${arrayOfNumber[1]})${arrayOfNumber[2]}${arrayOfNumber[3]}${arrayOfNumber[4]}${arrayOfNumber[5]}${arrayOfNumber[6]}-${arrayOfNumber[7]}${arrayOfNumber[8]}${arrayOfNumber[9]}${arrayOfNumber[10]}`;
+  let telePhoneNumber = `(${arrayOfNumber[0]}${arrayOfNumber[1]}) ${arrayOfNumber[2]}${arrayOfNumber[3]}${arrayOfNumber[4]}${arrayOfNumber[5]}${arrayOfNumber[6]}-${arrayOfNumber[7]}${arrayOfNumber[8]}${arrayOfNumber[9]}${arrayOfNumber[10]}`;
   if (arrayOfNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (arrayOfNumber.length === 11) {
@@ -51,6 +51,7 @@ function generatePhoneNumber(arrayOfNumber) {
     }
   }
 }
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
