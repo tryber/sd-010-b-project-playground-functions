@@ -76,27 +76,38 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let result = ''; let distanciaCat1 = mouse - cat1; let distanciaCat2 = mouse - cat2;
-  if (distanciaCat1 === distanciaCat2 || cat1 === cat2) {
-    result = 'os gatos trombam e o rato foge';
-  } if (distanciaCat1 < distanciaCat2) {
+  if (distanciaCat1 > distanciaCat2) {
     result = 'cat2';
-  } if (distanciaCat1 > distanciaCat2) {
+  } else if (distanciaCat1 < distanciaCat2) {
     result = 'cat1';
+  } else {
+    result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
 
 // Desafio 8
-function fizzBuzz(Array) {
-  let result = [];
-  for (let index = 0; index < Array.length; index += 1) {
-    const dividePor3 = Array[index] % 3 === 0; const dividePor5 = Array[index] % 5 === 0;
-    const dividePor3ePor5 = dividePor3 && dividePor5;
-    result[index] = dividePor3ePor5 ? 'fizzBuzz' :
-    result[index] = dividePor3 ? 'fizz' : dividePor5 ? 'buzz' : 'bug';
+function condicional(Array) {
+  let result = '';
+  if (Array % 3 === 0 && Array % 5 === 0) {
+    result += 'fizzBuzz';
+  } else if (Array % 3 === 0) {
+    result += 'fizz';
+  } else if (Array % 5 === 0) {
+    result += 'Buzz';
+  } else {
+    result += 'bug';
   }
   return result;
 }
+function fizzBuzz(Array) {
+  let result = [];
+  for (let index = 0; index < Array.length; index += 1) {
+    let faz = condicional(Array[index]);
+    result.push(faz);
+  }
+  return result;
+} console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(teste) {
