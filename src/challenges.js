@@ -52,15 +52,20 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
+console.log (catAndMouse(0, -2, 2));
 
 // Desafio 8
-function fizzBuzz(array) {  
+function fizzBuzz(array) {
   let zumbido = [];
-  for (let index = 0;index < array.length; index += 1) {
-    if (array[index] % 3 == 0) {
-      zumbido.push("fizz");      
-    } else if (array[index] % 5 == 0) {
-      zumbido.push("buzz");
+  for (let index = 0; index < array.length; index += 1) {  
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      zumbido.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      zumbido.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      zumbido.push('Buzz');
+    } else if ((array[index] % 3 != 0 || array[index] % 5 != 0)) {
+      zumbido.push('bug');
     }
   }
   return zumbido;
