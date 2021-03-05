@@ -60,16 +60,16 @@ function highestCount(arrayEntry) {
   }
   for (let j = 0; j < arrayEntry.length; j++) {
     if (numeroMaior === arrayEntry[j]) {
-      numeroTotal++;
+    numeroTotal++;
     }
   }
-  return numeroTotal
+  return numeroTotal;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gotcha1 = mouse - cat1;
-  let gotcha2 = mouse - cat2;
+  let gotcha1 = Math.abs(mouse - cat1);
+  let gotcha2 = Math.abs(mouse - cat2);
   let aim = 0;
 
   if (gotcha1 > gotcha2) {
