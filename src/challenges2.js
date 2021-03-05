@@ -6,10 +6,11 @@ function techList() {
 // Desafio 11
 function generatePhoneNumber(array, name) {
   // seu código aqui
-  if (array > name) {
+  array.sort(a, b)
+  if (a.name > b.name) {
     return 1;
   }
-  if (array < name) {
+  if (a.name < b.name) {
     return -1;
   }
   return 0;
