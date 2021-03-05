@@ -137,7 +137,7 @@ function decodeA(value) { let result = value === '1' ? 'a' : value; return resul
 function decodeE(value) { let result = value === '2' ? 'e' : value; return result; }
 function decodeI(value) { let result = value === '3' ? 'i' : value; return result; }
 function decodeO(value) { let result = value === '4' ? 'o' : value; return result; }
-function decodeU(value) { let result = value === '4' ? 'u' : value; return result; }
+function decodeU(value) { let result = value === '5' ? 'u' : value; return result; }
 
 function verifyLetterToDecode(string) {
   let response = ['']; let letter = string;
