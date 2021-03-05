@@ -36,22 +36,21 @@ function footballPoints(wins, ties) {
   let result;
   let winsvalue = (wins * 3);
   let tiesvalue = (ties * 1);
-    result = winsvalue + tiesvalue;
-    return result;
+  result = winsvalue + tiesvalue;
+  return result;
 }
 
 // Desafio 6
 function highestCount(numbers) {
   let higherNumber = numbers[0];
   let qtd = 0;
-
   for (let index=0; index < numbers.length; index+=1) {
     if (higherNumber == numbers[index] ) {
-        qtd = qtd + 1;
-      }
+    qtd = qtd + 1;
     }
-    return qtd;
   }
+  return qtd;
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,10 +68,10 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(){
   // seu código aqui
 }
-
+    
 // Desafio 9
 function encode() {
   // seu código aqui
