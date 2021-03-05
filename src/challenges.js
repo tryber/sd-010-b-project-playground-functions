@@ -15,11 +15,11 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   let arrayAfterSplit = '';
-  if (sentence == 'go Trybe') {
+  if (sentence === 'go Trybe') {
     arrayAfterSplit = sentence.split(' ');
-  } else if (sentence == 'vamo que vamo') {
+  } else if (sentence === 'vamo que vamo') {
     arrayAfterSplit = sentence.split(' ');
-  } else if (sentence == 'foguete') {
+  } else if (sentence === 'foguete') {
     arrayAfterSplit = sentence.split(' ');
   }
   return arrayAfterSplit;
@@ -51,8 +51,8 @@ function highestCount(numberArray) {
       highestNumber = numberArray[index];
     }
   }
-  for (index in numberArray) {
-    if (numberArray[index] == highestNumber) counter += 1;
+  for (let index in numberArray) {
+    if (numberArray[index] === highestNumber) counter += 1;
   }
   return counter;
 }
@@ -66,17 +66,17 @@ function catAndMouse() {
 function fizzBuzz(arrayNumeros) {
   let container = [];
   for (let index in arrayNumeros) {
-    if (arrayNumeros[index] % 3 == 0 && arrayNumeros[index] % 5 == 0) {
-      string = 'fizzBuzz';
+    if (arrayNumeros[index] % 3 === 0 && arrayNumeros[index] % 5 === 0) {
+      let string = 'fizzBuzz';
       container.push(string);
-    } else if (arrayNumeros[index] % 3 == 0) {
+    } else if (arrayNumeros[index] % 3 === 0) {
       let string = 'fizz';
       container.push(string);
-    } else if (arrayNumeros[index] % 5 == 0) {
-      string = 'buzz';
+    } else if (arrayNumeros[index] % 5 === 0) {
+      let string = 'buzz';
       container.push(string);
     } else {
-      string = 'bug!';
+      let string = 'bug!';
       container.push(string);
     }
   }
@@ -90,15 +90,15 @@ function fizzBuzz(arrayNumeros) {
 function encode(anotherString) {
   let newAnswer = [];
   for (let index in anotherString) {
-    if (anotherString[index] == 'a') {
+    if (anotherString[index] === 'a') {
       newAnswer += '1';
-    } else if (anotherString[index] == 'e') {
+    } else if (anotherString[index] === 'e') {
       newAnswer += '2';
-    } else if (anotherString[index] == 'i') {
+    } else if (anotherString[index] === 'i') {
       newAnswer += '3';
-    } else if (anotherString[index] == 'o') {
+    } else if (anotherString[index] === 'o') {
       newAnswer += '4';
-    } else if (anotherString[index] == 'u') {
+    } else if (anotherString[index] === 'u') {
       newAnswer += '5';
     } else {
       newAnswer += anotherString[index];
@@ -109,15 +109,15 @@ function encode(anotherString) {
 function decode(oneMoreString) {
   let anotherAnswer = [];
   for (let arrayString in oneMoreString) {
-    if (oneMoreString[arrayString] == '1') {
+    if (oneMoreString[arrayString] === '1') {
       anotherAnswer += 'a';
-    } else if (oneMoreString[arrayString] == '2') {
+    } else if (oneMoreString[arrayString] === '2') {
       anotherAnswer += 'e';
-    } else if (oneMoreString[arrayString] == '3') {
+    } else if (oneMoreString[arrayString] === '3') {
       anotherAnswer += 'i';
-    } else if (oneMoreString[arrayString] == '4') {
+    } else if (oneMoreString[arrayString] === '4') {
       anotherAnswer += 'o';
-    } else if (oneMoreString[arrayString] == '5') {
+    } else if (oneMoreString[arrayString] === '5') {
       anotherAnswer += 'u';
     } else {
       anotherAnswer += oneMoreString[arrayString];
