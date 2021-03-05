@@ -39,10 +39,17 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let result = false; let lines = [];
-  lines.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC));
+  let result = false; let line = [];
+  line.push(Math.abs(lineA), Math.abs(lineB), Math.abs(lineC));
 
-  if ((lines[0] + lines[1]))
+  if ((line[0] + line[1]) > line[2] && (line[0] - line[1]) < line[2]) {
+    if ((line[0] + line[2]) > line[1] && (line[0] - line[2]) < line[1]) {
+      if ((line[2] + line[1]) > line[0] && (line[2] - line[1]) < line[0]) {
+        result = true;
+      }
+    }
+  }
+  return result;
 }
 
 // Desafio 13
