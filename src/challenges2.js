@@ -8,7 +8,7 @@ function techList(tech, name) {
   for (let i = 0; i < novaArray.length; i += 1) {
     objeto[i] = {
       tech: novaArray[i],
-      name: name,
+      name,
     };
   }
   return objeto;
@@ -42,12 +42,12 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let telefoneDDD = '(' + array[0] + array[1] + ')';
-  let telefoneParteUm = '' + array[2] + array[3] + array[4] + array[5] + array[6];
-  let telefoneParteDois = '' + array[7] + array[8] + array[9] + array[10];
-  let numTelefone = telefoneDDD + ' ' + telefoneParteUm + '-' + telefoneParteDois;
+  let telefoneDDD = `(${array[0]}${array[1]})`;
+  let telefoneParteUm = ` ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
+  let telefoneParteDois = `${array[7]}${array[8]}${array[9]}${array[10]}`;
+  let numTelefone = telefoneDDD + telefoneParteUm + '-'+ telefoneParteDois;
   return numTelefone;
-} 
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {

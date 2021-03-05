@@ -27,7 +27,7 @@ function concatName(array) {
   let primeiroItem = array[0];
   let string = `${ultimoItem}, ${primeiroItem}`;
   return string;
-} 
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -81,7 +81,7 @@ function fizzBuzz(array) {
     }
   }
   return novaArray;
-} 
+}
 
 // Desafio 9
 function encode(string) {
