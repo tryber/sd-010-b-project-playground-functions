@@ -109,7 +109,7 @@ function encode(phrase) {
     .replace(/e/gi, '2')
     .replace(/i/gi, '3')
     .replace(/o/gi, '4')
-    .replace(/u/gi, '5;');
+    .replace(/u/gi, '5');
   return newPhrase;
 }
 function decode(phraseDecode) {
