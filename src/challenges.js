@@ -61,13 +61,15 @@ function highestCount(array) {
   let maiorNumero = 0;
   let contador = 0;
   for (let index = 0; index < array.length; index += 1) {
-    array[index] > maiorNumero;
-    maiorNumero = array[index];
-  } 
-  for (let index = 0; index < array.length; index += 1) {
-    maiorNumero === array[index];
-    contador += 1;
-  } 
+    if (array[index] > maiorNumero) {
+      maiorNumero = array[index];
+    } 
+    for (let index = 0; index < array.length; index += 1) {
+      if (maiorNumero === array[index]) {
+        contador += 1;
+      }
+    }
+  }
   return contador;
 }
 
@@ -106,17 +108,17 @@ function encode(string) {
   let cincoNumeros = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
-      cincoNumeros += '1';
+      cincoNumeros = '1';
     } else if (string[index] === 'e') {
-      cincoNumeros += '2';
+      cincoNumeros = '2';
     } else if (string[index] === 'i') {
-      cincoNumeros += '3';
+      cincoNumeros = '3';
     } else if (string[index] === 'o') {
-      cincoNumeros += '4';
+      cincoNumeros = '4';
     } else if (string[index] === 'u') {
-      cincoNumeros += '5';
+      cincoNumeros = '5';
     } else {
-      cincoNumeros += string[index];
+      cincoNumeros = string[index];
     }
   }
   return (cincoNumeros);
@@ -126,17 +128,17 @@ function decode(string) {
   let vogais = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
-      vogais += 'a';
+      vogais = 'a';
     } else if (string[index] === '2') {
-      vogais += 'e';
+      vogais = 'e';
     } else if (string[index] === '3') {
-      vogais += 'i';
+      vogais = 'i';
     } else if (string[index] === '4') {
-      vogais += 'o';
+      vogais = 'o';
     } else if (string[index] === '5') {
-      vogais += 'u';
+      vogais = 'u';
     } else {
-      vogais += string[index];
+      vogais = string[index];
     }
   }
   return (vogais);
