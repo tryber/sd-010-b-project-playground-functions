@@ -12,20 +12,20 @@ return (base * heigth) / 2;
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence(arryNames) {
+function splitSentence(frase) {
   // seu código aqui
-return arryNames.split("/");
+  let divide = frase.split('/');
+return divide;
 };
-console.log(splitSentence('go/trybe'));
+console.log(splitSentence("go/Trybe"));
 
 // Desafio 4
-function concatName(arrNames) {
+function concatName() {
   // seu código aqui
-  let arryNames = ['captain', 'my', 'captain'];
-  let result = arryNames.concat();
-return arrNames;
+
 };
-console.log(concatName('captain, captain'));
+
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
