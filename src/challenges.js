@@ -48,19 +48,28 @@ function highestCount(numbers) {
   return highNumberCount  
 }
 // Desafio 7
-function catAndMouse() {
-  cat1 = 1;
-  cat2 = 3;
-  mouse = 1;
-  string = '';
+function catAndMouse(mouse, cat1, cat2) {
+  frase = '';
 
-  if ( cat1 == cat2){
-    string = 'os gatos trombam e o rato foge';
-    return string;
+  if (cat2 < cat1 && mouse > cat1 )  {
+    frase = 'cat2';
+    return frase;    
+  } else if (cat2 < cat1 && mouse < cat1 ){
+    frase = 'cat2'
+    return frase;
+  } else if (cat1 < cat2 && mouse < cat2 ) {
+    frase = 'cat1'
+    return frase;
+  } else if ( cat1 < cat2 && mouse > cat2) {
+    frase = 'cat1';
+    return frase;
+  } else {
+    frase = 'os gatos se trombam e o rato foge'
+    return frase;
   }
 }
 
-console.log(catAndMouse(12 ,30 ,40))
+console.log(catAndMouse(10, 1, 1))
 
 
 
