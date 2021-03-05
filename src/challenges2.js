@@ -24,7 +24,7 @@ function generatePhoneNumber(phone) {
         result = 'não é possível gerar um número de telefone com esses valores';
         }
         for (let j = 0; j < phone.length; j += 1) {
-          if (phone[i] == phone[j]) count += 1;
+          if (phone[i] === phone[j]) count += 1;
           if (count > 2) result = 'não é possível gerar um número de telefone com esses valores';
       }
     }
@@ -48,13 +48,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(word) {
-  let number = word.replace(/[^0-9]/g,''); //pesquisei sobre isso em stackoverflow
+  let number = word.replace(/[^0-9]/g, ''); // pesquisei sobre isso em stackoverflow
   let array = number.split(''); let result = 0;
 
   for (let i = 0; i < array.length; i += 1) {
-  result += parseInt(array[i]);
-}
-return (result === 1 ? result+' copo de água' : result +' copos de água');
+    result += parseInt(array[i]);
+  }
+  return (result === 1 ? result + ' copo de água' : result + ' copos de água');
 }
 
 console.log(hydrate('1 cerveja'));
