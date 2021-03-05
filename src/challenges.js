@@ -127,19 +127,12 @@ return array
 
 }
 // Desafio 9
-function encode(parametro) {
-  let palavra = "h3 th2r2!"
- 
-  return palavra
-
+function encode() {
+  // seu código aqui
 }
-function decode(parametro2) {
-  let palavra2 = "hi there!"
- 
-  return palavra2
-
+function decode() {
+  // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
