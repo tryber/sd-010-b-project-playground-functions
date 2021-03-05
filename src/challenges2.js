@@ -8,7 +8,7 @@ function techList(tech, name) {
     }
     tecnologias.push(bloco);
   }
-  if (tech === '') {
+  if (tech.length === 0) {
     return "Vazio!"
   }
   return tecnologias;
