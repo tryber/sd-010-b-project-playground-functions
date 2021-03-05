@@ -16,6 +16,17 @@ function techList(techs, inputName) {
 
 // Desafio 11
 
+// Função auxiliar 0 - Funcao idêntica à criada no requisito 6 para verificar a repeticao de um numero em um array. (arquivo chanllenges.js)
+function checkRepetition(anyNumber, arrayNumbers) {
+  let counter = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] === anyNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
+
 // Função auxiliar  1 - Verifica condicional dos números no array recebido.
 function checkNumbers(numbers) {
   let output = '';
@@ -31,15 +42,8 @@ function checkNumbers(numbers) {
 function repetitionCounter(numbers) {
   let repCounter = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    let numberCounter = 0;
-
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-      if (numbers[index2] === numbers[index]) {
-        numberCounter += 1;
-      }
-    }
-    if (numberCounter > repCounter) {
-      repCounter = numberCounter;
+    if (checkRepetition(numbers[index], numbers) > repCounter) { // Função checkRepetition criada para resolver requisito 6. Verifica quantas vezes um número se repete no array.
+      repCounter = checkRepetition(numbers[index], numbers);
     }
   }
   return repCounter;
