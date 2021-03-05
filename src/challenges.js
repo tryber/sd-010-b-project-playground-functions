@@ -26,11 +26,14 @@ function splitSentence(parameter) {
   return array
 }
 console.log(splitSentence("vamo que vamo"))
-
+console.log('-------------------------------------------')
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(parameter) {
+  
+  let concaString = parameter[parameter.length-1] + ', ' + parameter[0]
+  return concaString
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']))
 
 // Desafio 5
 function footballPoints() {
