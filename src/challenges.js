@@ -65,7 +65,6 @@ let numbers = [];
 
 function highestCount(numbers) {
   let highest = 0;
-  let count = 0;
   
   for(let index in numbers) {
     if(highest < numbers[index]) {
@@ -73,6 +72,8 @@ function highestCount(numbers) {
     }
   }
   for(let index2 in numbers) {
+    let count = 0;
+
     if(numbers[index2] === highest) {
       count = count += 1;
     }
