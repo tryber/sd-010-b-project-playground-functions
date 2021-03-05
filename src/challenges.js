@@ -11,25 +11,25 @@ function calcArea(base, altura) {
 }
 // Desafio 3
 function splitSentence(string) {
-  string
+  
   return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  let conca = '';
-  conca = array[array.length-1];
-  conca = conca + ', '  + array[array.length - array.length]
-  return conca;   
-} 
+  
+  conca = array[array.length - 1];
+  conca = conca + ', '  + array[0];
+  return conca; 
+}
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
   if (wins > 0 || ties > 0) {
     return pontos = (wins * 3) + (ties * 1);
-  } else {
-    return pontos;
-  }
+  } 
+  return pontos;  
 }
 // Desafio 6
 function highestCount(numbers) {
@@ -42,8 +42,8 @@ function highestCount(numbers) {
   }
   for (j = 0; j < numbers.length; j += 1 ) {
     if (numbers[j] === highNumber) {
-     highNumberCount = (highNumberCount+1);
-     }
+     highNumberCount = (highNumberCount + 1);
+    }
   }
   return highNumberCount  
 }
@@ -51,13 +51,13 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   
   if (cat1 < cat2 ) {
-    frase = 'cat1'
+    frase = 'cat1';
     return frase;
   } else if (cat1 > cat2 ) {
-    frase = 'cat2'
+    frase = 'cat2';
     return frase;
   } else if ( cat1 == cat2 ) {
-      frase = 'os gatos trobam e o rato foge'
+      frase = 'os gatos trobam e o rato foge';
       return frase;
   } 
 }
@@ -65,13 +65,11 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(3, 3, 2))
 
 
-
 // Desafio 8
 function fizzBuzz(numbers) {
      
-  let string = [];
-  for (i = 0; i < numbers.length; i += 1){
-    if (numbers[i]% 3 === 0 && numbers[i] % 5 === 0) {
+  for (i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
       string[i] = 'fizzBuzz';
     } else if (numbers[i] % 3 === 0) {
       string[i] = 'fizz';
