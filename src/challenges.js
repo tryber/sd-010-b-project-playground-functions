@@ -1,33 +1,32 @@
 // Desafio 1
-function compareTrue(num1, num2) {
-  if (num1 >= 0 && num2 <= 10) {
+function compareTrue(){
+  if (num1 > 0 && num2 < 10){
     return true;
   }
   else {
     return false;
   }
 }
+
 // Desafio 2
-function calcArea(base, heigth) {
+function calcArea(){
   let calculo = (base*heigth)/2;
   return calculo;
 }
 
 // Desafio 3
-function splitSentence(frase) {
+function splitSentence(){
   let separar = frase.split(" ")
   return separar;
 }
 
 // Desafio 4
-function concatName(nomes) {
-  let primeiroItem = nomes[0];
-  let ultimoItem  = nomes.lastIndexOf();
-  return ultimoItem + primeiroItem;
+function concatName(){
+
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints(){
   return (wins * 3) + ties;
 }
 
