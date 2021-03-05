@@ -94,7 +94,6 @@ function encode(string) {
         break;
       case 'e':
         encodeString += '2';
-        /* console.log("case E: " + string[index]); */
         break;
       case 'i':
         encodeString += '3';
@@ -109,7 +108,7 @@ function encode(string) {
         encodeString += string[index];
         break;
     }
-  }  
+  }
   return encodeString;
 }
 console.log(encode('hi there!'));
@@ -124,7 +123,6 @@ function decode(string) {
         break;
       case '2':
         decodeString += 'e';
-        /* console.log("case E: " + string[index]); */
         break;
       case '3':
         decodeString += 'i';
