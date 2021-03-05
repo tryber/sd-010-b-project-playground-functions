@@ -77,7 +77,7 @@ function hydrate(string) {
   if (copoAgua === 1) {
     resultado = '1 copo de água';
   } else {
-    resultado = copoAgua + ' copos de água';
+    resultado = `${copoAgua} copos de água`;
   }
   return resultado;
 }
