@@ -134,7 +134,7 @@ function encode(parametro) {
 
 }
 function decode(parametro2) {
-  let parametro = "hi there!"
+  let parametro2 = "hi there!"
  
   return parametro2
 
