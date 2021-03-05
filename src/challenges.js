@@ -15,6 +15,7 @@ function calcArea(base, height) {
 let areatriangulo;
 areatriangulo = (base * height) / 2;
 return areatriangulo;
+
 }
 
 // Desafio 3
@@ -23,8 +24,14 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(matrix) {
   // seu código aqui
+let primeiroNome = matrix[0];
+let ultimoNome = matrix[matrix.length -1];
+let resultado = ultimoNome + "," + primeiroNome;
+  
+ return resultado;
+  
 }
 
 // Desafio 5
