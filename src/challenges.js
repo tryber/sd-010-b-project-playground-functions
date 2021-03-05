@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return response;
 }
 
-// Funções auxiliares do [Requisito 8]
+// Função auxiliar do [Requisito 8]
 function fill(value) {
   let response;
   switch (value) {
@@ -88,6 +88,7 @@ function fill(value) {
   return response;
 }
 
+// Função auxiliar do [Requisito 8]
 function verify(value) {
   let result = 0; let response;
   if (value % 3 === 0) { result = 1; }
@@ -110,17 +111,68 @@ function fizzBuzz(arrayNumbers) {
   return response;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function verifyLetterToEncode(string) {
+  let response = ['']; let letter = string;
+  let encoder = {
+    // a(value) { let result = value === 'a' ? '1' : value; return result; },
+    a(value) { let result = value === 'a' ? '1' : value; return result; },
+    e(value) { let result = value === 'e' ? '2' : value; return result; },
+    i(value) { let result = value === 'i' ? '3' : value; return result; },
+    o(value) { let result = value === 'o' ? '4' : value; return result; },
+    u(value) { let result = value === 'u' ? '5' : value; return result; },
+  };
+
+  const test = encoder[letter];
+  response = test ? test(string) : string;
+
+  return response;
 }
-function decode() {
-  // seu código aqui
+
+function verifyLetterToDecode(string) {
+  let response = ['']; let letter = string;
+  let decoder = {
+    // a(value) { let result = value === 'a' ? '1' : value; return result; },
+    1(value) { let result = value === '1' ? 'a' : value; return result; },
+    2(value) { let result = value === '2' ? 'e' : value; return result; },
+    3(value) { let result = value === '3' ? 'i' : value; return result; },
+    4(value) { let result = value === '4' ? 'o' : value; return result; },
+    5(value) { let result = value === '5' ? 'u' : value; return result; },
+  };
+
+  const test = decoder[letter];
+  response = test ? test(string) : string;
+
+  return response;
+}
+
+// Desafio 9
+function encode(string) {
+  let response = [''];
+
+  for (let i = 0; i < string.length; i += 1) {
+    response[i] = verifyLetterToEncode(string[i]);
+  }
+
+  console.log(`[Requisito 9] - Encode ${response}`);
+
+  return response;
+}
+
+function decode(string) {
+  let response = [''];
+
+  for (let i = 0; i < string.length; i += 1) {
+    response[i] = verifyLetterToDecode(string[i]);
+  }
+
+  console.log(`[Requisito 9] - Decode ${response}`);
+
+  return response;
 }
 
 let concat = ['João', 'Victor', 'Pistório', 'Martins'];
 let numbers = [1, 2, 2, 3, 4, 4, 5, 5, 6, 7, 8, 9, 9, 9];
-let fizz = [9, 25];
+let fizz = [2, 15, 7, 9, 45];
 
 compareTrue(false, false);
 calcArea(10, 50);
@@ -130,6 +182,8 @@ footballPoints(14, 8);
 highestCount(numbers);
 catAndMouse(0, 3, 3);
 fizzBuzz(fizz);
+encode('hi there!');
+decode('h3 th2r2!');
 
 module.exports = {
   calcArea,
