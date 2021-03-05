@@ -79,20 +79,39 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 // Desafio 8
-function fizzBuzz(numbers) {
-  let fizzBuzzArray = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
-      fizzBuzzArray.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    } else {
-      fizzBuzzArray.push('bug!');
-    }
+
+// nota do dev: este requisito tive que fritar os neurônios para conseguir refatorar e passaar no lint test D:
+
+// Função auxilar 1 - Verifica se é divisível por 3.
+function divisibleBy3(array, index) {
+  if (array[index] % 3 === 0) {
+    return 'fizz';
   }
-  return fizzBuzzArray;
+  return 'bug!'; // se não for divisível nem por 5 nem por 3 retorna "bug!"
+}
+// Função auxilar 2 - Verifica se é divisível por 5.
+function divisibleBy5(array, index) {
+  if (array[index] % 5 === 0) {
+    return 'buzz';
+  }
+  return divisibleBy3(array, index); // se não for divisível por 5 chama a função auxiliar 3 para verificar se é divisível por 3.
+}
+
+// Função auxilar 3 - Verifica se é divisível por 5 e 3.
+function divisibleBy5And3(array, index) {
+  if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+    return 'fizzBuzz';
+  }
+  return divisibleBy5(array, index); // se não for divisível por ambos chama a função auxiliar 2 para verificar se é divisível por 5.
+}
+
+// Função principal
+function fizzBuzz(array) {
+  let answer = [];
+  for (let index = 0; index < array.length; index += 1) {
+    answer.push(divisibleBy5And3(array, index));
+  }
+  return answer;
 }
 
 // Desafio 9
