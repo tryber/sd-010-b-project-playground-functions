@@ -2,8 +2,8 @@
 function techList(nameTechs, nameUser) {
   // seu código aqui
   let result = []; let lista = {};
-  if (nameTechs === [] || nameUser === '') {
-    result = 'Array Vazio!';
+    if (nameTechs.length === 0 || nameUser === '') {
+    result = 'Vazio!';
   } else {
     for (let index = 0; index < nameTechs.sort().length; index += 1) {
       lista = {};
@@ -13,7 +13,7 @@ function techList(nameTechs, nameUser) {
     }
   }
   return result;
-} console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], ''));
+}// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Carlos'));
 
 // Desafio 11
 function generatePhoneNumber() {
