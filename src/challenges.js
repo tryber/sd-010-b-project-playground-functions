@@ -14,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ");
+  return str.split(' ');
 }
 
 // Desafio 4
@@ -36,7 +36,7 @@ function highestCount(num) {
   let vezes = 0;
   for (let key in num) {
     if (num[key] === max) {
-      vezes = vezes + 1;
+      vezes += 1;
     }
   }
   return vezes;
@@ -59,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  for (let i in array) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0) {
       array[i] = 'fizz';
     } else if (array[i] % 5 === 0) {
@@ -67,8 +67,8 @@ function fizzBuzz(array) {
     }
     if ((array[i] % 3) === 0 && (array[i] % 5) === 0) {
       array[i] = 'fizzBuzz';
-    }
-    else {
+    } 
+    if ((array[i] % 3) !== 0 && (array[i] % 5) !== 0) {
       array[i] = 'bug!';
     }
   }
