@@ -80,11 +80,17 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(palavra) {
   let str = palavra;
   let troca = palavra.replace(/\D/g, "").split('');
-  soma = 0;
+  let soma = 0;
+  let resultado;
   for(let i = 0; i < troca.length; i++){
     soma = soma + Number(troca[i]);
   }
-  let resultado = soma+' copos de água';
+  if ( soma == 1) { 
+    resultado = soma + ' copo de água';
+  }
+  else {
+    resultado = soma + ' copos de água';
+  }
   return resultado;
 }
 
