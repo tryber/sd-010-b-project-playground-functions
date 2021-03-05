@@ -54,18 +54,19 @@ function catAndMouse(mouse, cat1, cat2) {
     let catDist1 = cat1 - mouse;
     let catDist2 = cat2 - mouse;
     if (catDist1 === catDist2) {
-      mouseDist = console.log('os gatos trombam e o rato foge');
+      mouseDist = console.log("'os gatos trombam e o rato foge'");
     } else if (catDist1 > catDist2) {
-      mouseDist = console.log('cat2');
+      mouseDist = console.log("'cat2'");
     } else {
-      mouseDist = console.log('cat1');
+      mouseDist = console.log("'cat1'");
     }
   } else {
-    mouseDist = console.log('numero negativo');
+    mouseDist = console.log("'numero negativo'");
   }
   return (mouseDist);
   
 }
+(catAndMouse(1, 4, 3));
 
 // Desafio 8
 function fizzBuzz() {
