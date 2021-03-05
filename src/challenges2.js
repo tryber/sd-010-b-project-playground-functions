@@ -2,11 +2,15 @@
 function techList(technologies, name) {
   // seu código aqui
   let listTech = [];
-  for (let index = 0; index < technologies.length; index += 1) {
-    listTech[index] = {
-      tech: technologies[index],
-      name: name
-    };
+  if (technologies.length === 0) {
+    return 'Vazio!';
+  }else {
+    for (let index = 0; index < technologies.length; index += 1) {
+      listTech[index] = {
+        tech: technologies[index],
+        name: name
+      };
+    }
   }
   return listTech;
 }
