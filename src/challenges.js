@@ -25,9 +25,9 @@ function splitSentence(string) {
 function concatName(array) {
   let ultimoItem = array[array.length - 1];
   let primeiroItem = array[0];
-  let string = (ultimoItem + ', ' + primeiroItem);
+  let string = `${ultimoItem}, ${primeiroItem}`;
   return string;
-}
+} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
