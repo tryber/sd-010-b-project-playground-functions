@@ -92,16 +92,16 @@ function fizzBuzz(arrayFB) {
   let denote = [];
 
   for (let a = 0; a < arrayFB.length; a += 1) {
-    if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 != 0) {
+    if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 !== 0) {
       denote = denote.push('fizz');
     }
-    if (arrayFB[a] % 3 != 0 && arrayFB[a] % 5 === 0) {
+    if (arrayFB[a] % 3 !== 0 && arrayFB[a] % 5 === 0) {
       denote = denote.push('buzz');
     }
     if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 === 0) {
       denote = denote.push('fizzBuzz');
     }
-    if (arrayFB[a] % 3 != 0 && arrayFB[a] % 5 != 0) {
+    if (arrayFB[a] % 3 !== 0 && arrayFB[a] % 5 !== 0) {
       denote = denote.push('bug!');
     }
     return denote;
