@@ -105,12 +105,11 @@ function hydrate(string) {
   // Peguei a Regex deste forum: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
   // Peguei o reduce da documentação do MDN: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
   let arrayNumbers = string.match(/\d+/g).map(Number);
-  let sumArray = arrayNumbers.reduce((accumulator, currentValue) => { 
-    return accumulator + currentValue;
-  });
+  let sumArray = arrayNumbers.reduce((acc, curr) => acc + curr);
 
   return `${sumArray} copos de água`;
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   generatePhoneNumber,
