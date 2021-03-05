@@ -108,9 +108,9 @@ function encode(phrase) {
     .replace(/u/gi, '5;');
   return newPhrase;
 }
-function decode(phraseDecode) {
+function decode(newPhrase) {
   // seu código aqui
-  phraseDecode = newPhrase.replace(/1/gi, 'a')
+  let phraseDecode = newPhrase.replace(/1/gi, 'a')
     .replace(/2/gi, 'e')
     .replace(/3/gi, 'i')
     .replace(/4/gi, 'o')
