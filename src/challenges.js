@@ -19,23 +19,23 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  tam = arr.length;
-  conc = arr[tam - 1] + ", " + arr[0];
+  let tam = arr.length;
+  let conc = arr[tam - 1] + ', ' + arr[0];
   return conc;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  total = wins * 3 + ties;
+  let total = wins * 3 + ties;
   return total;
 }
 
 // Desafio 6
 function highestCount(num) {
-  max = Math.max(...num);
-  vezes = 0;
+  let max = Math.max(...num);
+  let vezes = 0;
   for (let key in num) {
-    if (num[key] == max) {
+    if (num[key] === max) {
       vezes = vezes + 1;
     }
   }
@@ -44,18 +44,12 @@ function highestCount(num) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  ca1 = "cat1";
-  ca2 = "cat2";
-  emp = "os gatos trombam e o rato foge";
-  if (cat1 < 0) {
-    cat1 = cat1 * -1;
-  }
-  if (cat2 < 0) {
-    cat2 = cat2 * -1;
-  }
-  if (mouse < 0) {
-    mouse = mouse * -1;
-  }
+  let ca1 = 'cat1';
+  let ca2 = 'cat2';
+  let emp = 'os gatos trombam e o rato foge';
+  Math.abs(cat1);
+  Math.abs(cat2);
+  Math.abs(mouse);
   if ((cat1 - mouse) < (cat2 - mouse)) {
     return ca1;
   }
