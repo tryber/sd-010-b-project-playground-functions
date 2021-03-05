@@ -7,7 +7,7 @@ function validatorRepeat(arr) {
 
     for (let i = 0; i < qtt; i += 1) {
       if (e === arr[i]) {
-        cont +=1;
+        cont += 1;
       }
     }
 
@@ -44,7 +44,7 @@ function phoneNumber(arr) {
 
   phone += '-';
 
-  for (let i = 7; i < qtt; i +=1) {
+  for (let i = 7; i < qtt; i += 1) {
     phone += arr[i];
   }
 
