@@ -78,28 +78,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// função para comparar cada numero da array recebida da função fizzBuzz
+function valuerFizzBuzz(arrayNumber) {
+  if (arrayNumber % 3 === 0 && arrayNumber % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (arrayNumber % 3 === 0) {
+    return 'fizz';
+  }
+  if (arrayNumber % 5 === 0) {
+    return 'buzz';
+  } return 'bug!';
+}
+
 function fizzBuzz(arrayFB) {
   let newArray = [];
   // laço For para percorrer a array da função fizzBuz
-  for (let index = 0; index < arrayFB.length; index += 1){
-    let arrayNumber = arrayFB[index]; //recebe os numeros da array da função fizzBuzz para fazer a comparação na função valuer(arrayNumber)
-    let result = valuer(arrayNumber); //chama a função para comparação e substituíção dos valores na array
+  for (let index = 0; index < arrayFB.length; index += 1) {
+    let arrayNumber = arrayFB[index]; // recebe os numeros da array da função fizzBuzz para fazer a comparação na função valuer(arrayNumber)
+    let result = valuerFizzBuzz(arrayNumber); // chama a função para comparação e substituíção dos valores na array
     newArray.push(result);
-  }
-  //função para comparar cada numero da array recebida da função fizzBuzz
-  function valuer(arrayNumber){
-    if (arrayNumber % 3 == 0 && arrayNumber % 5 == 0){
-      return 'fizzBuzz';
-    }
-    if (arrayNumber % 3 == 0 ){
-      return 'fizz';
-    }
-    if (arrayNumber % 5 == 0){
-      return 'buzz';
-    }
-    else {
-      return 'bug!';
-    }
   }
   return newArray;
 }
