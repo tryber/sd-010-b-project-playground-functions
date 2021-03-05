@@ -76,9 +76,24 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// [Usado para converter para inteiro] https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript?gclid=CjwKCAiAp4KCBhB6EiwAxRxbpJ2ZoSCbAtRVGcAMrWejN_yykSX5ZMwplEhMSeZuVmqyOR3L9KiJnRoC_n4QAvD_BwE
+
+// [Extrair digitos de strings] https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+function hydrate(string) {
+  let str = string;
+  let extrairNumeros = [];
+  let total = 0; 
+
+  for (let i = 0; i < str.length; i += 1) {
+    extrairNumeros[i] = str[i].replace(/\D/g, '');
+    if (extrairNumeros[i] !== '') {
+      total += parseInt(extrairNumeros[i]); 
+    }
+  }
+  total += ' copos de água';
+  return total;
 }
+console.log(hydrate('1 cerveja, 1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
