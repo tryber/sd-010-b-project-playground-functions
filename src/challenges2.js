@@ -1,12 +1,12 @@
 // Desafio 10
 function techList(techs, inputName) {
-  let ordenedList = techs.sort();
+  let ordenedList = techs.sort(); // Dica do colega Emerson Saturnino (turma 10 tribo B) de organizar o array antes de usá-lo. Transparência é um valor.
   let resultList = [];
   if (techs.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < ordenedList.length; index += 1) {
-    resultList.push(list = {
+    resultList.push({
       tech: techs[index],
       name: inputName,
     });
