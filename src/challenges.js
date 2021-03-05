@@ -65,7 +65,7 @@ function highestCount(array) {
     maiorNumero = array[index];
   } 
   for (let index = 0; index < array.length; index += 1) {
-    maiorNumero === array[index;
+    maiorNumero === array[index];
     contador += 1;
   } 
   return contador;
