@@ -63,7 +63,7 @@ function fizzBuzz(array) {
     } else if (array[index] % 3 === 0) {
       zumbido.push('fizz');
     } else if (array[index] % 5 === 0) {
-      zumbido.push('Buzz');
+      zumbido.push('buzz');
     } else if ((array[index] % 3 != 0 || array[index] % 5 != 0)) {
       zumbido.push('bug!');
     }
