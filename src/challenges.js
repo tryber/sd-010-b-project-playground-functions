@@ -116,51 +116,61 @@ function fizzBuzz(array) {
 
 // Desafio 9
 
-// função troca caracter
-function changeCharacters(code, initialMessage) { // funcao auxiliar para o desafio 9. esta funcao apenas substituí os caracteres.
-  let finalMessage = '';
-  let objectKeyArray = Object.keys(code);
-  for (let index = 0; index < initialMessage.length; index += 1) {
-    let counter = 0;
-    let counter2 = 0;
-    for (let key in code) {
-      counter2 += 1;
-      if (initialMessage[index] === key) {
-        finalMessage += code[initialMessage[index]];
-        counter += 1;
-      } else if (counter2 === objectKeyArray.length && counter < 1) { // o counter2 garante que irá adicionar o caracter somente depois de verificado
-        finalMessage += initialMessage[index]; // todos os itens do objeto
-        counter += 1;
-      }
-    }
-  }
-  return finalMessage;
-}
-
-function encode(message) {
-  let translation = {
+// Função auxiliar  - Verifica e subtitui o caracter dado
+function changeCharacter(character) {
+  let outputCharacter = '';
+  let objectList = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
     u: 5,
   };
-  let codedMessagem = changeCharacters(translation, message);
-  return codedMessagem;
+  for (let key in objectList) {
+    if (key === character) {
+      outputCharacter = objectList[key];
+      return outputCharacter;
+    }
+  }
+  return character;
 }
 
-function decode(message) {
-  let translation = {
+// Função
+function encode(message) {
+  let arrayMessage = message.split('');
+  for (let index = 0; index < arrayMessage.length; index += 1) {
+    arrayMessage[index] = changeCharacter(arrayMessage[index]);
+  }
+  return arrayMessage.join('');
+}
+
+// Função auxiliar  - Verifica e subtitui o caracter dado
+function changeCharacterReverse(character) {
+  let outputCharacter = '';
+  let objectList = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
   };
-  let decodedMessagem = changeCharacters(translation, message);
-  return decodedMessagem;
+  for (let key in objectList) {
+    if (key === character) {
+      outputCharacter = objectList[key];
+      return outputCharacter;
+    }
+  }
+  return character;
 }
 
+// Função Principal
+function decode(message) {
+  let arrayMessage = message.split('');
+  for (let index = 0; index < arrayMessage.length; index += 1) {
+    arrayMessage[index] = changeCharacterReverse(arrayMessage[index]);
+  }
+  return arrayMessage.join('');
+}
 module.exports = {
   calcArea,
   catAndMouse,
