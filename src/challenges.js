@@ -19,8 +19,11 @@ function splitSentence(content) {
 }
 
 // Desafio 4
-function concatName(thingy) {
-  return thingy[-1] && thingy[0];
+function concatName(stronk) {
+  let firstStronk = stronk[0];
+  let lastStronk = stronk[stronk.length - 1];
+  let result = `${lastStronk}, ${firstStronk}`;
+  return result;
 }
 
 // Desafio 5
