@@ -43,7 +43,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumero) {
+function highestCount() {
   // seu código aqui
 
 }
@@ -54,14 +54,15 @@ function catAndMouse(mouse, cat1, cat2) {
 let distancia1 = math.abs(mouse - cat1);
 let distancia2 = math.abs(mouse - cat2);
 if (distancia1 > distancia2) {
-  return "cat2";
+  valor = "cat2";
 }
 else if (distancia1 < distancia2){
-  return "cat1";
+  valor = "cat1";
 }
 else {
-  return "Os gatos trombam e o rato foge";
+  valor = "os gatos trombam e o rato foge";
 }
+return valor;
 }
 
 // Desafio 8
