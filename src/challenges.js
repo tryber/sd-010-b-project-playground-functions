@@ -10,7 +10,6 @@ function compareTrue(bool1, bool2) {
     return false;
   }
 }
-console.log(compareTrue(bool1, bool2));
 
 // Desafio 2
 
@@ -20,7 +19,6 @@ let height = 50;
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(base, height));
 
 // Desafio 3
 
@@ -30,7 +28,6 @@ function splitSentence(phrase) {
   let splittedPhrase = phrase.split(" ");
   return splittedPhrase;
 }
-console.log(splitSentence(phrase));
 
 // Para resolver o exercício 3 eu consultei um artigo do DevMedia sobre split. src = https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254#:~:text=O%20m%C3%A9todo%20split()%20divide,das%20substrings%20resultantes%20no%20array.
 
@@ -43,12 +40,11 @@ function concatName(words) {
   let lastWord = words[words.length - 1];
   return lastWord + ", " + firstWord;
 }
-  console.log(concatName(words));
 
 // Desafio 5
 
-let wins = 5;
-let ties = 1;
+let wins;
+let ties;
 
 function footballPoints(wins, ties) {
   if(wins == 0 && ties == 0) {
@@ -57,28 +53,25 @@ function footballPoints(wins, ties) {
     return (ties + (wins * 3));
   }
 }
-console.log(footballPoints(wins, ties));
 
 // Desafio 6
 
 let numbers = [];
+let highest = 0;
+let result = 0;
 
 function highestCount(numbers) {
-  let highest = 0;
-  
   for(let index in numbers) {
     if(highest < numbers[index]) {
       highest = numbers[index];
     }
   }
-  for(let index2 in numbers) {
-    let count = 0;
-
+  for(let index2 = 0; index2 < numbers.length; index2 +=1) {
     if(numbers[index2] === highest) {
-      count = count += 1;
+      result = result += 1;
     }
   }
-  return count;
+  return result;
 }
 
 // Consegui entender esse desafio com a ajuda do meu colega de turma Teófilo Brandão, dando uma olhada no código dele com a devida autorização do mesmo.
@@ -98,7 +91,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   }
 }
-console.log(catAndMouse(mouse, cat1, cat2));
 
 // Consegui resolver esse desafio de um jeito bem mais simples do que eu havia pensado inicialmente graças à imensa dica de como usar o Math.abs() que meu colega Emerson Saturnino apresentou em uma thread do Slack.
 
@@ -121,9 +113,9 @@ function fizzBuzz(arrayNumbers) {
   }
   return finalArray;
 }
-console.log(fizzBuzz(arrayNumbers));
 
 // Desafio 9
+
 function encode() {
   // seu código aqui
 }
