@@ -1,7 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-}
+let pizzaIsGood = true;
+let hamburguerIsGood = true;
+let chocolatePizzaIsGood = false;
+function compareTrue(parameter1, parameter2) {
+  if (parameter1 && parameter2 == true) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}console.log(compareTrue(pizzaIsGood, chocolatePizzaIsGood))
 
 // Desafio 2
 function calcArea() {
