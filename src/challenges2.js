@@ -107,7 +107,11 @@ function hydrate(string) {
   let arrayNumbers = string.match(/\d+/g).map(Number);
   let sumArray = arrayNumbers.reduce((acc, curr) => acc + curr);
 
-  return `${sumArray} copos de água`;
+  if (sumArray = 1) {
+    return `${sumArray} copo de água`;
+  }
+  
+  return `${sumArray} copos de água`; 
 }
 
 module.exports = {
