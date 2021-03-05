@@ -52,7 +52,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // Para codificação desta função utilizei como referência a página https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   let distCat1 = Math.abs(cat1 - mouse);
   let distCat2 = Math.abs(cat2 - mouse);
-  
+
   if (distCat1 > distCat2) {
     return 'cat2';
   } else if (distCat1 < distCat2) {
@@ -64,9 +64,23 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(14, 5, 12));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersArray) {
+  let newArray = [];
+
+  for (let index in numbersArray) {
+    if ((numbersArray[index] % 3 == 0) && (numbersArray[index] % 5 == 0)) {
+      newArray.push('fizzBuzz');
+    } else if (numbersArray[index] % 3 == 0) {
+      newArray.push('fizz');
+    } else if (numbersArray[index] % 5 == 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
