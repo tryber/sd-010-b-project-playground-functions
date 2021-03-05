@@ -80,31 +80,29 @@ function encode(code) {
   let string = code.split('');
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]) {
-      case 'a':
-        string[index] = '1';
-        break;
-      case 'e':
-        string[index] = '2';
-        break;
-      case 'i':
-        string[index] = '3';
-        break;
-      case 'o':
-        string[index] = '4';
-        break;
-      case 'u':
-        string[index] = '5';
-        break;
+    case 'a':
+      string[index] = '1';
+      break;
+    case 'e':
+      string[index] = '2';
+      break;
+    case 'i':
+      string[index] = '3';
+      break;
+    case 'o':
+      string[index] = '4';
+      break;
+    case 'u':
+      string[index] = '5';
+      break;
     }
   }
   for (let index = 0; index < string.length; index += 1) {
     frase += `${string[index]}`;
   }
   return `${frase}`;
-
 }
 
-//console.log(decode('h2ll4'))
 function decode(code) {
   let frase = '';
   let string = code.split('');

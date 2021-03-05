@@ -61,9 +61,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let difBC = Math.abs(lineB - lineC);
   if ((sumAB > lineC) && (sumBC > lineA) && (sumAC > lineB) && (difAC < lineB) && (difAB < lineC) && (difBC < lineA)) {
     return true;
-  } else {
-    return false;
   }
+    return false;
+
 }
 
 
