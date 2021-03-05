@@ -63,13 +63,13 @@ function fizzBuzz(array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       array[i] = 'fizzBuzz';
     } else if (array[i] % 3 === 0) {
-      array[i] = 'fizz';
+        array[i] = 'fizz';
     } else if (array[i] % 5 === 0) {
-      array[i] = 'buzz';
+        array[i] = 'buzz';
     } else {
-      array[i] = 'bug!';
-      } 
-  } 
+        array[i] = 'bug!';
+      }
+  }
   return array;
 }
 
