@@ -19,23 +19,23 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let padraoTelefone;
-  let padrao;
+  let padraoTelefone = {};
+  let padrao = true;
   let parentesesNumero = '(';
   for (let index = 0; index < array.length; index += 1) {
     if (padraoTelefone[array[index]]) {
       padraoTelefone[array[index]] += 1;
       return Object.values(padraoTelefone).sort().reverse()[0];
     } else {
-        padraoTelefone[array[index]] = 1;
+      padraoTelefone[array[index]] = 1;
     }
     if (padraoTelefone[array] >= 3) {
       padrao = false;
       return padrao;
     }
-    if (array[index] < 0 || array[index] >9) {
+    if (array[index] < 0 || array[index] > 9) {
       padrao = true;
-      return padrao;
+      return padrao = false;
     }
     if (index === 2) {
       parentesesNumero += ')';
