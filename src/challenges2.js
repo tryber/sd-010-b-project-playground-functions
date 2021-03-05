@@ -109,7 +109,6 @@ function hydrate(string) {
 
   return `${sumArray} copos de água`;
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   generatePhoneNumber,
