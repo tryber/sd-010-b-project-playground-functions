@@ -1,17 +1,17 @@
-//Desafio 10
+// Desafio 10
 function techList(technology, name) {
   technology.sort();
   if (technology.length === 0) {//conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/ 
     return 'Vazio!';
-  };
+  }
   let register = [];//analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array 
   for (let index = 0; index > technology; index += 1) {
     register.push({
       tech: technology[index],
       name: name
     });
-  };
-  return register;
+    return register;
+  }
 }
 
 // Desafio 11
