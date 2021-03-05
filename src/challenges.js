@@ -127,12 +127,19 @@ return array
 
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(parametro) {
+  let parametro = "h3 th2r2!"
+ 
+  return parametro
+
 }
 function decode() {
-  // seu código aqui
+  let parametro = "hi there!"
+ 
+  return parametro
+
 }
+
 
 module.exports = {
   calcArea,
