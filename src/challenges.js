@@ -112,7 +112,7 @@ fizzBuzz();
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  // 
 }
 function decode() {
   // seu código aqui
