@@ -49,7 +49,7 @@ function highestCount(numbers) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
+  //usei o math.abs pra pegar os valores absolutos das diferenças > https://javascript.plainenglish.io/javascript-algorithm-cats-and-a-mouse-fd60fb1811ba
   if ( (Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse)) === true) {
     result = 'cat1';
     return result;
@@ -57,12 +57,12 @@ function catAndMouse(mouse, cat1, cat2) {
     result = 'cat2'
     return result;
   } else if ( Math.abs(cat1 - mouse) == (cat2 - mouse) ) {
-    result = 'os gatos se trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
     return result;
   }  
 }
 
-console.log(catAndMouse(1, 0, 2))
+console.log(catAndMouse(1, 3, 1))
 
 
 // Desafio 8
