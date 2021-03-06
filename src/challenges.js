@@ -78,12 +78,56 @@ function fizzBuzz(numeros) {
 // console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(mensagem) {
+  let codigo = [];
+  for (let i = 0; i < mensagem.length; i +=1) {
+    if (mensagem[i] === 'a') {
+      codigo.push('1');
+    } else if (mensagem[i] === 'e') {
+      codigo.push('2');
+    } else if (mensagem[i] === 'i') {
+      codigo.push('3');
+    } else if (mensagem[i] === 'o') {
+      codigo.push('4');
+    } else if (mensagem[i] === 'u') {
+      codigo.push('5');
+    } else {
+      (codigo.push(mensagem[i]))
+    }
+  }
+//  return codigo;
+  let mensagemCod = '';
+  for (let j = 0; j < codigo.length; j += 1) {
+    mensagemCod = mensagemCod += codigo[j];
+  }
+  return mensagemCod;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('cheira minha virilha'));
+
+function decode(mensagem) {
+  let codigo = [];
+  for (let i = 0; i < mensagem.length; i +=1) {
+    if (mensagem[i] === '1') {
+      codigo.push('a');
+    } else if (mensagem[i] === '2') {
+      codigo.push('e');
+    } else if (mensagem[i] === '3') {
+      codigo.push('i');
+    } else if (mensagem[i] === '4') {
+      codigo.push('o');
+    } else if (mensagem[i] === '5') {
+      codigo.push('u');
+    } else {
+      (codigo.push(mensagem[i]))
+    }
+  }
+  let mensagemCod = '';
+  for (let j = 0; j < codigo.length; j += 1) {
+    mensagemCod = mensagemCod += codigo[j];
+  }
+  return mensagemCod;
 }
+// console.log(decode('ch23r1 m3nh1 v3r3lh1'));
 
 module.exports = {
   calcArea,
