@@ -68,14 +68,14 @@ function fizzBuzz(numeros) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       listaArray.push('fizzBuzz');
     } else if (numeros[i] % 5 === 0) {
-      listaArray.push('Buzz');
+      listaArray.push('buzz');
     } else if (numeros[i] % 3 === 0) {
       listaArray.push('fizz');
     } else (listaArray.push('bug!'));
   }
   return listaArray;
 }
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
