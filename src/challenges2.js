@@ -17,46 +17,6 @@ function techList(array, nameUser) {
 /* console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 "Lucas")) */
 
-function setKeysWithZero(numbers) {
-  let numQtd = {};
-  for (let index = 0; index < numbers.length; index += 1) {
-    numQtd[numbers[index]] = 0;
-  }
-  return numQtd;
-}
-
-function compareItemNumbers(number, key, numQtd) {
-  if (number === key) {
-    numQtd[key] += 1;
-  }
-  return numQtd;
-}
-
-function sumQtdNumbers(numbers) {
-  let numQtd = setKeysWithZero(numbers);
-  for (let i = 0; i < numbers.length; i += 1) {
-    for (let key = 0; key < numQtd.length; key += 1) {
-      compareItemNumbers(numbers[i], key, numQtd);
-    }
-  }
-  return numQtd;
-}
-
-function tresVezesOuMais(numbers) {
-  let numQtdToArray = [];
-  let cont = 0;
-  let numQtd = sumQtdNumbers(numbers);
-  for (let key = 0; key < numQtd.length; key += 1) {
-    numQtdToArray[cont += 1] = numQtd[key];
-  }
-  let messege = null;
-  if (numQtdToArray.sort()[numQtdToArray.length - 1] >= 3) {
-    messege = false;
-  } else {
-    messege = true;
-  }
-  return messege;
-}
 
 // Desafio 11
 function verifyNumbersLessThenZeroAndBiggerThenNine(numbers) {
@@ -82,27 +42,66 @@ function addMaskInPhoneNumber(numbers) {
   return numbers;
 }
 
+function attributeNumberInStringNumber(numbers) {
+  let stringNumber = '';
+  for (let index = 0; index < numbers.length; index += 1) {
+    stringNumber += numbers[index];
+  }
+  return stringNumber;
+}
+
+function quantasVezesONumeroApareceNoArray(number, numbers) {
+  let cont = 0;
+  for (let n = 0; n < numbers.length; n += 1) {
+    if (number === numbers[n]) {
+      cont += 1;
+    }
+  }
+  return cont;
+}
+
+function maiorRepeticao(relNumQtd) {
+  let numberMore = 0;
+  for (let key in relNumQtd) {
+    if (relNumQtd[key] > numberMore) {
+      numberMore = relNumQtd[key];
+    }
+  }
+  let messege = null;
+  if (numberMore >= 3) {
+    messege = true;
+  } else {
+    messege = false;
+  }
+  return messege;
+}
+
+function tresVezesOuMais(numbers) {
+  let relNumQtd = {}; let qtd = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    qtd = quantasVezesONumeroApareceNoArray(numbers[index], numbers);
+    relNumQtd[numbers[index]] = qtd;
+  }
+  return maiorRepeticao(relNumQtd);
+}
+/* console.log(tresVezesOuMais([1, 1, 1, 2])); */
+
 function generatePhoneNumber(numbers) {
-  let maiorQueTresNumeros = false;
   let menorQueZeromaiorQueNove = verifyNumbersLessThenZeroAndBiggerThenNine(numbers);
   let menorQueZero = menorQueZeromaiorQueNove[0];
   let maiorQueNove = menorQueZeromaiorQueNove[1];
-  if (tresVezesOuMais(numbers) == false) {
-    maiorQueTresNumeros = true;
-  }
-  if (numbers.length != 11) {return 'Array com tamanho incorreto'
-  } else if (maiorQueNove || menorQueZero || maiorQueTresNumeros) {
-    return "não é possível gerar um número de telefone com esses valores"
+  let messege = null;
+  if (numbers.length !== 11) {
+    messege = 'Array com tamanho incorreto';
+  } else if (maiorQueNove || menorQueZero || tresVezesOuMais(numbers)) {
+    messege = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    let numbers = addMaskInPhoneNumber(numbers);
-    stringNumber = '';
-    for (let index in numbers) {
-      stringNumber += numbers[index]
-    }
-    return stringNumber
+    numbers = addMaskInPhoneNumber(numbers);
+    messege = attributeNumberInStringNumber(numbers);
   }
+  return messege;
 }
-
+/* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let messege = null;
@@ -117,8 +116,8 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return messege;
 }
-console.log(triangleCheck(10, 14, 8));
-
+/* console.log(triangleCheck(10, 14, 8));
+ */
 // Desafio 13
 function hydrate(frase) {
   let numbers = (frase.match(/\d+/g));
@@ -132,7 +131,7 @@ function hydrate(frase) {
   return `${sum} copos de água`;
 }
 
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); */
 
 module.exports = {
   generatePhoneNumber,
