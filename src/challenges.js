@@ -93,46 +93,33 @@ function fizzBuzz(numbers) {
 }
 // Desafio 9
 function codeMaker(codeInfo) {
-  let info = '';
   if (codeInfo === 'a') {
-    info = '1';
+    codeInfo = '1';
   } else if (codeInfo === 'e') {
-    info = '2';
+    codeInfo = '2';
   } else if (codeInfo === 'i') {
-    info = '3';
+    codeInfo = '3';
   } else if (codeInfo === 'o') {
-    info = '4';
+    codeInfo = '4';
   } else if (codeInfo === 'u') {
-    info = '5';
+    codeInfo = '5';
   }
-  return info;
+  return codeInfo;
 }
-// if (info[index] === 'a') {
-//   info[index] = '1';
-// } else if (info[index] === 'e') {
-//   info[index] = '2';
-// } else if (info[index] === 'i') {
-//   info[index] = '3';
-// } else if (info[index] === 'o') {
-//   info[index] = '4';
-// } else if (info[index] === 'u') {
-//   info[index] = '5';
-// }
 
 function decodeMaker(codeInfo) {
-  let info = '';
   if (codeInfo === '1') {
-    info = 'a';
+    codeInfo = 'a';
   } else if (codeInfo === '2') {
-    info = 'e';
+    codeInfo = 'e';
   } else if (codeInfo === '3') {
-    info = 'i';
+    codeInfo = 'i';
   } else if (codeInfo === '4') {
-    info = 'o';
+    codeInfo = 'o';
   } else if (codeInfo === '5') {
-    info = 'u';
+    codeInfo = 'u';
   }
-  return info;
+  return codeInfo;
 }
 
 function encode(string) {
