@@ -50,22 +50,22 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   // seu código aqui
   let count = 0;
-  let aux = 0;
+  let aux = numbers[0];
 
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > count) {
-      count = numbers[index];
+  for (let index in numbers) {
+    if (numbers[index] > aux) {
+      aux = numbers[index];
     }
   }
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (count === numbers[index]) {
-      aux += 1;
+  for (let index in numbers) {
+    if (numbers[index] === aux) {
+      count += 1;
     }
   }
-  return aux;
+  return count;
 }
 
-// console.log(highestCount([0,0,0]));
+console.log(highestCount([0, 9, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(6, 3, 12));
+// console.log(catAndMouse(6, 3, 12));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
