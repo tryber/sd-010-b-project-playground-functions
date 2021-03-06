@@ -24,7 +24,6 @@ function concatName() {
   return names[names.length-1] + ',' + names[0];
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
@@ -33,7 +32,9 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let numbers = [];
-  return Math.max.apply(numbers);
+  for(i = 0; i > numbers.length; i += 1){
+    return Math.max(numbers.length);
+  }
   }
 
 // Desafio 7
