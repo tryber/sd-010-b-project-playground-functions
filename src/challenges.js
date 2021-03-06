@@ -73,14 +73,14 @@ function highestCount(numero) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    if ((mouse + cat1) > (mouse + cat2)){
-      return 'cat2'
-  } else if ((mouse + cat1) < (mouse + cat2)){
+    if ((mouse + cat1) < (mouse + cat2)){
       return 'cat1'
+  } else if ((mouse + cat1) === (mouse + cat2)){
+      return 'os gatos trombam e o gato foge'
   } else {
-      return 'os gatos trombam e o rato foge'
+      return 'cat2'
   }
-} 
+  }
 console.log(catAndMouse(0, 3, 2))
 console.log(catAndMouse(0, 6, 12))
 console.log(catAndMouse(0, 6, 6))
