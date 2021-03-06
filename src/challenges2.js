@@ -34,12 +34,12 @@ function generatePhoneNumber(array) {
         }
       }
     }
-    return limiteRepete = 0;
+    limiteRepete = 0;
   }
   if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
-    return ('não é possível gerar um número de telefone com esses valores');
+    console.log('não é possível gerar um número de telefone com esses valores');
   } else if (array.length !== 11) {
-    return ('Array com tamanho incorreto.');
+    console.log('Array com tamanho incorreto.');
   } else {
     let padrao = '(';
     for (let index = 0; index < 2; index += 1) {
