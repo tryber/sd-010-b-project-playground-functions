@@ -125,7 +125,7 @@ function decode(string) {
   // seu código aqui
   let vogais = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1' || '2' || '3' || '4' || '5') {
+    if (string[index] === '1' || string[index] === '2' || string[index] === '3' || string[index] === '4' || string[index] === '5') {
       vogais += 'a' || 'b' || 'c' || 'd' || 'e';
     } else {
       vogais += string[index];
