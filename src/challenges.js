@@ -137,11 +137,11 @@ function encode(auxEn) {
   return change.join('') //Aqui o join reune as strings separadas pelo '.split()'
 }
 
-function decode() {
+function decode(auxDe) {
   // aqui, basicamente acontece o contrário da function anterior - apenas peguei o código e reescrevi
 
-  let change = auxEn.split('');
-  for (let i = 0; i < auxEn.length; i += 1) {
+  let change = auxDe.split('');
+  for (let i = 0; i < auxDe.length; i += 1) {
     switch (change[i].toLowercase()) {
       // Usei .toLowerCase() para reduzir toda string pra minúsculo, por precaução;
       //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
@@ -165,7 +165,7 @@ function decode() {
         change[i] = 5;
         break;
     }
-  }
+  } return change.join('')
 }
 
 module.exports = {
