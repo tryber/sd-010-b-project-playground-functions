@@ -61,7 +61,7 @@ function highestCount(array) {
     } 
   return countNumber;
 }
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse (mouse, cat1, cat2) {
@@ -106,12 +106,36 @@ return arrResult
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+ function encode(phrase) {
+  let result = "";
+  let objDb = {a : 1, e : 2, i : 3, o : 4, u : 5};
+
+   for (let i in phrase){
+      if (objDb[phrase[i]]){
+      result += objDb[phrase[i]];    
+    } else {
+      result += phrase[i];
+    } 
+  };
+  return result;
+ };
+console.log(encode("go Trybe!"));
+
+function decode(phraseCode) {
+  let result = "";
+  let objDb = {1 : "a", 2 : "e", 3 : "i", 4 : "o", 5 : "u"};
+
+   for (let i in phraseCode){
+      if (objDb[phraseCode[i]]){
+      result += objDb[phraseCode[i]];    
+    } else {
+      result += phraseCode[i];
+    } 
+  };
+ return result;
+};
+console.log(decode("g4 Tryb2!"));
+
 
 module.exports = {
   calcArea,
