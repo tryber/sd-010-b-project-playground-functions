@@ -38,14 +38,14 @@ function footballPoints(wins, ties) {
 function highestCount(n) {
   let numeroMaior = 0;
   let contador = 0;
-  for(let i = 0; i < n.length; i += 1){
-    if (n[i] >= numeroMaior){
+  for (let i = 0; i < n.length; i += 1) {
+    if (n[i] >= numeroMaior) {
       numeroMaior = n[i];
     }
   }
   
-  for(let i = 0; i < n.length; i += 1){
-    if(numeroMaior == n[i]){
+  for (let i = 0; i < n.length; i += 1) {
+    if (numeroMaior === n[i]) {
       contador += 1;
     } 
   }
@@ -56,9 +56,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let position1 = Math.abs(cat1 - mouse);
   let position2 = Math.abs(cat2 - mouse);
 
-  if(position1 === position2){
+  if (position1 === position2) {
     return 'os gatos trombam e o rato foge';
-  } else if(position1 > position2){
+  } else if (position1 > position2) {
     return 'cat2';
   } else {
     return 'cat1';
@@ -67,12 +67,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(n) {
   let resultado = [];
-  for(let i = 0; i < n.length; i += 1){
-    if(n[i] % 5 == 0 && n[i] % 3 == 0){
+  for (let i = 0; i < n.length; i += 1){
+    if(n[i] % 5 === 0 && n[i] % 3 === 0) {
       resultado.push('fizzBuzz');
-    } else if (n[i] % 5 == 0 && n[i] % 3 != 0){
+    } else if (n[i] % 5 === 0 && n[i] % 3 !== 0) {
       resultado.push('buzz');
-    } else if (n[i] % 3 == 0 && n[i] % 5 != 0){
+    } else if (n[i] % 3 === 0 && n[i] % 5 !== 0) {
       resultado.push('fizz');
     } else {
       resultado.push('bug!');
@@ -83,16 +83,16 @@ function fizzBuzz(n) {
 // Desafio 9
 function encode(string) {
   let palavra = '';
-  for(let i = 0; i < string.length; i += 1) {
-    if(string[i] == 'a'){
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a'){
       palavra += '1';
-    } else if(string[i] == 'e') {
+    } else if(string[i] === 'e') {
       palavra += '2';
-    } else if(string[i] == 'i') {
+    } else if(string[i] === 'i') {
       palavra += '3';
-    } else if(string[i] == 'o') {
+    } else if(string[i] === 'o') {
       palavra += '4';
-    } else if(string[i] == 'u') {
+    } else if(string[i] === 'u') {
       palavra += '5';
     } else {
       palavra += string[i];
@@ -105,15 +105,15 @@ function encode(string) {
 function decode(string) {
   let palavra = '';
   for(let i = 0; i < string.length; i += 1) {
-    if(string[i] == '1'){
+    if(string[i] === '1'){
       palavra += 'a';
-    } else if(string[i] == '2') {
+    } else if(string[i] === '2') {
       palavra += 'e';
-    } else if(string[i] == '3') {
+    } else if(string[i] === '3') {
       palavra += 'i';
-    } else if(string[i] == '4') {
+    } else if(string[i] === '4') {
       palavra += 'o';
-    } else if(string[i] == '5') {
+    } else if(string[i] === '5') {
       palavra += 'u';
     } else {
       palavra += string[i];
