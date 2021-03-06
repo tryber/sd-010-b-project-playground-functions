@@ -2,18 +2,21 @@
 function techList(seilah, nome) {
   let tecAlfa = seilah.sort();
   let tecnologias = {
-   tech: "NomeTech",
-   name: nome,
-  }
+    tech: 'NomeTech',
+    name: nome,
+  };
   let retorno = [];
   for (let cont in tecAlfa) {
     tecnologias.tech = tecAlfa[cont]
     let teste = [];
-    for (let key in tecnologias) {
-      teste[key] = (tecnologias[key]);
-    }
+      for (let key in tecnologias) {
+        teste[key] = (tecnologias[key]);
+        if (tecnologias.tech == 'NomeTech') {
+          return 'Vazio!'
+        };
+    };
     retorno[cont] = teste;
- }
+ };
   return retorno;
 }
 
