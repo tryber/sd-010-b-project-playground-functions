@@ -107,9 +107,34 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let stringToEncode = '';
+  for (let iString = 0; iString < phrase.length; iString += 1) {
+      switch (phrase[iString]) {
+        case 'a':
+          stringToEncode += '1';
+          break;
+        case 'e':
+          stringToEncode += '2';
+          break;
+        case 'i':
+          stringToEncode += '3';
+          break;
+        case 'o':
+          stringToEncode += '4';
+          break;
+        case 'u':
+          stringToEncode += '5';
+          break;
+        default:
+          stringToEncode += phrase[iString];
+          break;
+      }
+  }
+  return stringToEncode
 }
+console.log(encode('hi there!'));
+
 function decode() {
   // seu código aqui
 }
