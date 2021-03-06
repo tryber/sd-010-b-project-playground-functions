@@ -107,6 +107,18 @@ function codeMaker(codeInfo) {
   }
   return info;
 }
+// if (info[index] === 'a') {
+//   info[index] = '1';
+// } else if (info[index] === 'e') {
+//   info[index] = '2';
+// } else if (info[index] === 'i') {
+//   info[index] = '3';
+// } else if (info[index] === 'o') {
+//   info[index] = '4';
+// } else if (info[index] === 'u') {
+//   info[index] = '5';
+// }
+
 function decodeMaker(codeInfo) {
   let info = '';
   if (codeInfo === '1') {
@@ -126,8 +138,8 @@ function decodeMaker(codeInfo) {
 function encode(string) {
   //foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
   let info = string.split('');
-  for (let index = 0; index < string.length; index += 1) {
-    let start = codeMaker(info)
+  for (let index = 0; index < info.length; index += 1) {
+    let start = codeMaker(info[index])
     info.push(start)
   }
   string = info.join(''); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join para entender o conceito de join
@@ -136,13 +148,14 @@ function encode(string) {
 
 function decode(array) {
   let info = array.split('');
-  for (let index = 0; index < array.length; index += 1) {
-    let start = decodeMaker(info)
+  for (let index = 0; index < info.length; index += 1) {
+    let start = decodeMaker(info[index])
     info.push(start)
   }
   array = info.join('');
   return array;
 }
+console.log(encode('help'))
 
 module.exports = {
   calcArea,
