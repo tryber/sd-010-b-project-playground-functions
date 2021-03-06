@@ -96,7 +96,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(Array) {
   let result = [];
-  for (let index = 0; index < Array.length - 1; index += 1) {
+  for (let index = 0; index < Array.length; index += 1) {
     result[index] = condition(Array[index]);
   }
   return result;
