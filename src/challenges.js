@@ -49,25 +49,18 @@ function highestCount(numbers) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
-  if ((cat1 - mouse) < (cat2 - mouse) === true && (cat1 - mouse < 0)) {
+  result = "os gatos trombam e o rato foge";
+  if ( (cat1 - mouse > cat2 - mouse) === true ) {
     result = 'cat2';
     return result;
-  } else if ((cat2 - mouse) < (cat1 - mouse) === true && (cat2 - mouse < 0)) {
-    result = 'cat1';
+  } else if ( (cat1 - mouse < cat2 - mouse) === true ) {
+    result = 'cat1'
     return result;
-  } else if ((cat2 - mouse) < (cat1 - mouse) === true ) {
-    result = 'cat2';
-    return result;
-  } else if ((cat1 - mouse) < (cat2 - mouse) == true) {
-    result = 'cat1';
-    return result;
-  } else {
-    result = 'os gatos se trombam e o rato foge';
-    return result;
-  }
+  }   
+  return result;
 }
-console.log(catAndMouse(1, 2, 4))
+
+console.log(catAndMouse(4, 5, 0))
 
 
 // Desafio 8
@@ -88,7 +81,7 @@ function fizzBuzz(numbers) {
   return frase;
 }
 
-console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
 
 // Desafio 9
 function encode() {
