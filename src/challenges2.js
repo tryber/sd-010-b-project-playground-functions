@@ -40,21 +40,20 @@ function generatePhoneNumber(array) {
     return ('Array com tamanho incorreto.');
   } else if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
     return ('não é possível gerar um número de telefone com esses valores');
-  } else {
-    let string = '(';
-    for (let index = 0; index < 2; index += 1) {
-      string += array[index];
-    }
-    string += ') ';
-    for (let index = 2; index < 7; index += 1) {
-      string += array[index];
-    }
-    string += '-';
-    for (let index = 7; index < array.length; index += 1) {
-      string += array[index];
-    }
-    return (string);
   }
+  let string = '(';
+  for (let index = 0; index < 2; index += 1) {
+    string += array[index];
+  }
+  string += ') ';
+  for (let index = 2; index < 7; index += 1) {
+    string += array[index];
+  }
+  string += '-';
+  for (let index = 7; index < array.length; index += 1) {
+    string += array[index];
+  }
+  return (string);
 }
 
 // Desafio 12
