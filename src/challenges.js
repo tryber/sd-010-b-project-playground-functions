@@ -81,7 +81,7 @@ function encode(string) {
     }
   }
   return encodedString;
-};
+}
 console.log(encode('hi there'));
 
 function decode(string) {
@@ -101,7 +101,7 @@ function decode(string) {
     }
   }
   return decodedString;
-};
+}
 console.log(decode('h3 th2r2!'));
 
 module.exports = {
