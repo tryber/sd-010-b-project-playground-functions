@@ -26,7 +26,7 @@ function generatePhoneNumber(array) {
     if ((array[index] < 0) || (array[index] > 9)) {
       numeroExcedente = true;
     }
-    for (let indexDois = 0; indexDois < array.length; indexDois +=1) {
+    for (let indexDois = 0; indexDois < array.length; indexDois += 1) {
       if (array[index] === array[indexDois]) {
         limiteRepete += 1;
         if (limiteRepete >= 3) {
@@ -37,15 +37,15 @@ function generatePhoneNumber(array) {
     limiteRepete = 0;
   }
   if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
-    return "não é possível gerar um número de telefone com esses valores";
+    return 'não é possível gerar um número de telefone com esses valores';
   } else if (array.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   } else {
     let padrao = '(';
     for (let index = 0; index < 2; index += 1) {
       padrao += array[index];
     }
-    padrao += ') '
+    padrao += ') ';
     for (let index = 2; index < 7; index += 1) {
       padrao += array[index];
     }
