@@ -42,7 +42,6 @@ function highestCount(arrayNumber) {
   }
   return displayHighestNumber;
 }
-console.log(highestCount([09,10,11,12]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {

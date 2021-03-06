@@ -38,8 +38,16 @@ function generatePhoneNumber(array) {
   return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+ if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+   return true;
+ } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+   return true;
+ } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+   return true;
+ } else {
+   return false;
+ }
 }
 
 // Desafio 13
