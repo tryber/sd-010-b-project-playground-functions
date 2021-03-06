@@ -100,7 +100,7 @@ function fizzBuzz(Array = []) {
     result[index] = condition(Array[index]);
   }
   return result;
-}  
+}
 function condition(Array) {
   let result = '';
   if (Array % 3 === 0 && Array % 5 === 0) {
