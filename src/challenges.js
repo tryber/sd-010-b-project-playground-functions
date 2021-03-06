@@ -27,6 +27,7 @@ function splitSentence(parameter) {
 }
 console.log(splitSentence("vamo que vamo"))
 console.log('-------------------------------------------')
+
 // Desafio 4
 function concatName(parameter) {
   
@@ -34,11 +35,20 @@ function concatName(parameter) {
   return concaString
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']))
+console.log('--------------------------------------------')
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winPointValue = 3
+  let tiePointValue = 1
+  let victoryPoints = winPointValue * wins
+  let tiePoints = tiePointValue * ties
+  let totalPoints = victoryPoints + tiePoints
+  
+  return totalPoints
 }
+console.log(footballPoints(1, 2))
+console.log('----------------------------------')
 
 // Desafio 6
 function highestCount() {
