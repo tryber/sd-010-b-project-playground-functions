@@ -33,7 +33,7 @@ function generatePhoneNumber(phoneNum) {
     } else {
       obj[phoneNum[index]] += 1;
     };
-    if (phoneNum[index] < 0 || phoneNum[index] > 9 || phoneNum[index] >= 3) {
+    if (phoneNum[index] < 0 || phoneNum[index] > 9 || obj[phoneNum[index]] >= 3) {
       return "não é possível gerar um número de telefone com esses valores";
     };
     if (index <= 1) {
@@ -47,7 +47,7 @@ function generatePhoneNumber(phoneNum) {
   return `(${ddd}) ${fisrtPart}-${secondPart}`
 };
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 
 // Desafio 12
