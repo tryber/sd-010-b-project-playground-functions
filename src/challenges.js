@@ -39,12 +39,12 @@ function concatName(array) {
   let last;
   for (let i = 0; i < array.length; i += 1) {
     if (i === array.length - 1) {
-      last = array[i];
+      last = array[i] + ', ';
     } else if (i === 0) {
       first = array[i];
     }
   }
-  help = last + ', ' + first;
+  help = last + first;
   return help;
 }
 console.log(concatName(['foquete', 'não', 'tem', 'ré']));
