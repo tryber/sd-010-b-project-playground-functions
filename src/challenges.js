@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(num1, num2){
+function compareTrue(num1, num2) {
   if (num1 > 0 && num2 < 10){
     return true;
   }
@@ -9,22 +9,23 @@ function compareTrue(num1, num2){
 }
 
 // Desafio 2
-function calcArea(base, heigth){
+function calcArea(base, heigth) {
   return (base*heigth)/2;
 }
 
 // Desafio 3
-function splitSentence(frase){
+function splitSentence(frase) {
   return frase.split(" ");
 }
 
 // Desafio 4
-function concatName(){
-
+function concatName() {
+  names = ['foguete','não','tem','ré'];
+  return names[names.length-1] + names[0];
 }
 
 // Desafio 5
-function footballPoints(wins, ties){
+function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
