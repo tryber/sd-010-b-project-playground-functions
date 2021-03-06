@@ -17,38 +17,56 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function validArray(array) {
+
+function arrayLength (array) {
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return false;
+  } else {
+    return true;
   }
+}
 
+function arrayRange (array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+    if ((array[index] < 0) || (array[index] > 9)) {
+      return false;
+    } 
   }
+  return true;
+}
 
-  for (let index = 0; index < array.lenght; index += 1) {
-    let count = 0;
-    for (let internIndex = 0; internIndex < array.lenght; internIndex += 1) {
+function arrayCount (array) {
+  let count = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    for (let internIndex = 0; internIndex < array.length; internIndex += 1) {
       if (array[index] === array[internIndex]) {
         count += 1;
       }
     }
     if (count >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+      return false;
+    } 
+    count = 0;
   }
-
-
-
+  return true;
 }
 
-
-
-
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
+  let validNumber = '(xx) xxxxx-xxxx';
+
+  if (arrayLength(array) === false) {
+    return 'Array com tamanho incorreto.';
+  } else if (arrayRange(array) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else if (arrayCount(array) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    array.forEach(element => {
+      validNumber = validNumber.replace('x', element);
+    });
+  }
+  return validNumber;
 }
 
 // Desafio 12
