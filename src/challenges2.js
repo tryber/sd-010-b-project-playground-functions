@@ -18,11 +18,14 @@ function techList(arr, name) {
 
 // Desafio 11
 
+// regex based on https://stackoverflow.com/questions/42104546/java-regular-expressions-to-validate-phone-numbers/42105140
+
 const concat = (arr) => {
   let telefone = arr.toString().replace(/\D/g, '');
   let combine = telefone.match(/^(\d{2})(\d{5})(\d{4})$/);
   return `(${combine[1]}) ${combine[2]}-${combine[3]}`;
 };
+
 const conditionals = (arr, numbers) => {
   for (let item of arr) {
     numbers[item] += 1;
