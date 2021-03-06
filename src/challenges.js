@@ -52,11 +52,11 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   let resultado;
   if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
-    resultado = console.log('cat1');
+    resultado = 'cat1';
   } else if ((Math.abs(mouse - cat1)) > (Math.abs(mouse - cat2))) {
-    resultado = console.log('cat2');
+    resultado = 'cat2';
   } else {
-    resultado = console.log('os gatos trombam e o rato foge');
+    resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
 }
