@@ -86,43 +86,86 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-// function fizzBuzz(arrayFB) {
-//   let emptyArray = [];
+function fizzBuzz(arrayFB) {
+  let emptyArray = [];
 
-//   for (let a = 0; a < arrayFB.length; a += 1) {
-//     if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 !== 0) {
-//       emptyArray.push('fizz');
-//     }
-//     else if (arrayFB[a] % 5 === 0 && arrayFB[a] % 3 !== 0) {
-//       emptyArray.push('buzz');
-//     }
-//     else if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 === 0) {
-//       emptyArray.push('fizzBuzz');
-//     }
-//     else {
-//       emptyArray.push('bug!');
-//     }
-//   } return console.log(emptyArray)
-// }
-function fizzBuzz(arrNumbers) {
-  let fizzBuzzBugArray = [];
-  for (const key in arrNumbers) {
-    if (arrNumbers[key] % 3 === 0 && arrNumbers[key] % 5 === 0) fizzBuzzBugArray.push('fizzBuzz');
-    else if (arrNumbers[key] % 3 === 0) fizzBuzzBugArray.push('fizz');
-    else if (arrNumbers[key] % 5 === 0) fizzBuzzBugArray.push('buzz');
-    else fizzBuzzBugArray.push('bug!');
+  for (let a = 0; a < arrayFB.length; a += 1) {
+    if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 !== 0) {
+      emptyArray.push('fizz');
+    } else if (arrayFB[a] % 5 === 0 && arrayFB[a] % 3 !== 0) {
+      emptyArray.push('buzz');
+    } else if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 === 0) {
+      emptyArray.push('fizzBuzz');
+    } else {
+      emptyArray.push('bug!');
+    }
   }
-  return console.log(fizzBuzzBugArray);
+  return console.log(emptyArray)
 }
-
+fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(auxEn) {
+  //utilizei: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch
+  //utilizei o método .split para que seja feito a separação de palavras por espaços vazios;
+  let change = auxEn.split('');
+  for (let i = 0; i < auxEn.length; i += 1) {
+    switch (change[i].toLowercase()) {
+      // Usei .toLowerCase() para reduzir toda string pra minúsculo, por precaução;
+      //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+      case 'a':
+        change[i] = 1;
+        break;
+
+      case 'e':
+        change[i] = 2;
+        break;
+
+      case 'i':
+        change[i] = 3;
+        break;
+
+      case 'o':
+        change[i] = 4;
+        break;
+
+      case 'u':
+        change[i] = 5;
+        break;
+    }
+  }
+  return change.join('') //Aqui o join reune as strings separadas pelo '.split()'
 }
 
 function decode() {
-  // seu código aqui
+  // aqui, basicamente acontece o contrário da function anterior - apenas peguei o código e reescrevi
+
+  let change = auxEn.split('');
+  for (let i = 0; i < auxEn.length; i += 1) {
+    switch (change[i].toLowercase()) {
+      // Usei .toLowerCase() para reduzir toda string pra minúsculo, por precaução;
+      //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+      case '1':
+        change[i] = 1;
+        break;
+
+      case '2':
+        change[i] = 2;
+        break;
+
+      case '3':
+        change[i] = 3;
+        break;
+
+      case '4':
+        change[i] = 4;
+        break;
+
+      case '5':
+        change[i] = 5;
+        break;
+    }
+  }
 }
 
 module.exports = {
