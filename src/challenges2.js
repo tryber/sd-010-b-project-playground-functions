@@ -58,8 +58,15 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let valorDoTriangulo;
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+    valorDoTriangulo = true;
+  } else {
+    valorDoTriangulo = false;
+  }
+  return valorDoTriangulo;
 }
 
 // Desafio 13
