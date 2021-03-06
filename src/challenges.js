@@ -60,7 +60,7 @@ function highestCount(repeteMaior) {
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let distancia1 = Math.abs (cat1 - mouse);
+  let distancia1 = Math.abs (cat1-mouse);
   let distancia2 = Math.abs (cat2 - mouse);
 
   if (distancia1 > distancia2) {
@@ -81,7 +81,7 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 
-function fizzBuzz(divisivelArray) {
+function fizzBuzz(divisivelArray){ 
   let resultadoDividir = [];
 
   for (let cont=0; cont < divisivelArray.length; cont += 1) {
@@ -168,6 +168,7 @@ return stringDecodificada;
 }
 
 
+// eslint-disable-next-line no-undef
 module.exports = {
   calcArea,
   catAndMouse,
