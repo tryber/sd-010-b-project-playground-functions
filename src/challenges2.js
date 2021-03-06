@@ -1,6 +1,13 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, nom) {
+  let obj = {}
+  if (tec === {}) {
+    return "Vazio!";
+  }
+  for (let i in tec) {
+    obj = obj + {tech: tec[i], name: nom};
+  }
+  return obj;
 }
 
 // Desafio 11
