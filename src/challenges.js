@@ -62,9 +62,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function FizzBuzz(numeros) {
+function fizzBuzz(numeros) {
   let listaArray = [];
-  for (let i = 0; i < numeros.length; i ++) {
+  for (let i = 0; i < numeros.length; i += 1) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       listaArray.push('fizzBuzz');
     } else if (numeros[i] % 5 === 0) {
@@ -75,7 +75,7 @@ function FizzBuzz(numeros) {
   }
   return listaArray;
 }
-//console.log(FizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
