@@ -127,7 +127,7 @@ function encode(string) {
   //foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
   let info = string.split('');
   for (let index = 0; index < string.length; index += 1) {
-    let start = codemaker(info)
+    let start = codeMaker(info)
     info.push(start)
   }
   string = info.join(''); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join para entender o conceito de join
@@ -137,7 +137,7 @@ function encode(string) {
 function decode(array) {
   let info = array.split('');
   for (let index = 0; index < array.length; index += 1) {
-    let start = decodemaker(info)
+    let start = decodeMaker(info)
     info.push(start)
   }
   array = info.join('');
