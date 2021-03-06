@@ -34,20 +34,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(contador) {
-  let maiorNumero = contador[0];
+function highestCount(cont) {
+  let maiorNumero = cont[0];
   let vezesMaiorNumero = 0;
-  for (let i = 1; i < contador.length; i++) {
-    if (contador[i] > maiorNumero[0]) {
-      maiorNumero = contador[i];
+  for (let i = 1; i < cont.length; i+= 1) {
+    if (cont[i] > maiorNumero[0]) {
+      maiorNumero = cont[i];
     }
   }
-  for (let i = 0; i < contador.length; i++) {
-    if (contador[i] == maiorNumero) {
-      vezesMaiorNumero ++;
+  for (let i = 0; i < cont.length; i+= 1) {
+    if (cont[i] === maiorNumero) {
+      vezesMaiorNumero += 1;
     }
   }
-  return vezesMaiorNumero;  
+  return vezesMaiorNumero;
 }
 
 // Desafio 7
@@ -55,21 +55,21 @@ function catAndMouse(mouse, cat1, cat2) {
   let cCat1 = 0;
   let cCat2 = 0;
   if (cat1 > mouse) {
-    for (let i = cat1; i > mouse; i--) {
-      cCat1 ++;
+    for (let i = cat1; i > mouse; i-= 1) {
+      cCat1 += 1;
     }
   } else if (cat1 < mouse) {
-    for (let i = cat1; i < mouse; i++) {
-      cCat1 ++;
+    for (let i = cat1; i < mouse; i+= 1) {
+      cCat1 += 1;
     }    
   }
   if (cat2 > mouse) {
-    for (let i = cat2; i > mouse; i--) {
-      cCat2 ++;
+    for (let i = cat2; i > mouse; i-= 1) {
+      cCat2 += 1;
     }
   } else if (cat2 < mouse) {
-    for (let i = cat2; i > mouse; i++) {
-      cCat2 ++;
+    for (let i = cat2; i > mouse; i+= 1) {
+      cCat2 += 1;
     }    
   }
   if (cCat1 > cCat2) {
@@ -82,27 +82,31 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz (ary) {
-  let novaArray = [];
-  let arr = [];
-  for (let i = 0; i > ary.length; i++) {
-    arr.push(ary[i]);
-    // if (ary[i] % 3 === 0 && ary[i] % 5 === 0) {
-    //   novaArray.push('fizzBuzz');      
-    // } else if (ary[i] % 3 === 0) {
-    //   novaArray.push('fizz');
-    // } else if (ary[i] % 5 === 0) {
-    //   novaArray.push('buzz');
-    // } else {
-    //   novaArray.push('bug!');
-    // }
+  let novaArray = [];  
+  for (let i = 0; i < ary.length; i+= 1) {
+    if (ary[i] % 3 === 0 && ary[i] % 5 === 0) {
+      novaArray.push('fizzBuzz');      
+    } else if (ary[i] % 3 === 0) {
+      novaArray.push('fizz');
+    } else if (ary[i] % 5 === 0) {
+      novaArray.push('buzz');
+    }
+      novaArray.push('bug!');    
   }
-  return arr;
-  // return arr;
+  return novaArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let  a = 1, e = 2, i = 3, o = 4, u = 5;
+  let codificado = '';
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] = 'a') {
+      string[i].push(1);
+      codificado = string;
+    }
+  }
+  return codificado;
 }
 function decode() {
   // seu código aqui
