@@ -91,19 +91,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let numberArray = array
 
-  for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] % 3 === 0 ) && (array[index] % 5 === 0 )){
-      array[index] = "fizzBuzz";
-    } else if (array[index] % 3 === 0) {
-      array[index] = "fizz";
-    } else if (array[index] % 5 === 0) {
-      array[index] = "buzz";
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if ((numberArray[index] % 3 === 0 ) && (numberArray[index] % 5 === 0 )){
+      numberArray[index] = "fizzBuzz";
+    } else if (numberArray[index] % 3 === 0) {
+      numberArray[index] = "fizz";
+    } else if (numberArray[index] % 5 === 0) {
+      numberArray[index] = "buzz";
     } else {
-      array[index] = "bug!"
+      numberArray[index] = "bug!"
     }    
   }
-  return numberArray
+  return numberArray;
 }
 
 
