@@ -1,14 +1,16 @@
 // Desafio 10
 
 function techList(array, nome) {
-  array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+  if (array.length === 0) return 'Vazio!';
   array = array.sort();
+  const newArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    array[index] = {
+    newArray.push({
       tech: array[index],
-      name: nome,
-    };
+      nome,
+    });
   }
+  return newArray;
 }
 
 // Desafio 11
@@ -22,11 +24,9 @@ function triangleCheck() {
 // REFERÊNCIAS: https://stackoverflow.com/ , https://developer.mozilla.org/
 // Desafio 13
 function hydrate(string) {
-  let regex = /\d+/g;
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  let matches = string.match(regex);
-  matches = matches.map(Number);
-  return `${matches.reduce(reducer)} copos de água`;
+  string = string.match(/\d+/g).map(Number).reduce(reducer);
+  return `${string} copo${string > 1 ? 's' : ''} de água`;
 }
 
 module.exports = {

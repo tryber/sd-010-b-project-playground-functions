@@ -38,7 +38,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
-// REFERÊNCIA: https://developer.mozilla.org/
+// REFERÊNCIAS: https://developer.mozilla.org/
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(cat1 - mouse);
   cat2 = Math.abs(cat2 - mouse);
@@ -53,53 +53,39 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  let string = [];
-  for (let index = 0; index <= array.length - 1; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      string.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
-      string.push('fizz');
-    } else if (array[index] % 5 === 0) {
-      string.push('buzz');
-    } else {
-      string.push('bug!');
-    }
+function fizzBuzz() {
+}
+
+// REFERÊNCIAS: https://stackoverflow.com/ , https://developer.mozilla.org/  , CANAL YOUTUBE: Programador a Bordo, Playlist 'JavaScript: Funções de Array'
+// Desafio 9
+function encode(string) {
+  let obj = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let key of string) {
+    if (obj[key]) string = string.replace(key, obj[key]);
   }
   return string;
 }
 
-// Desafio 9
-function encode(string) {
-  let numero = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-  let newString = '';
-  for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]) {
-      case 'a':
-        newString += 1;
-        break;
-      case 'e':
-        newString += 2;
-        break;
-      case 'i':
-        newString += 3;
-        break;
-      case 'o':
-        newString += 4;
-        break;
-      case 'u':
-        newString += 5;
-        break;
-      default:
-        newString += string[index];
-    }
-  }
-  console.log(newString);
-}
-encode('hello');
+function decode(string) {
+  let obj = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
 
-function decode() {
-  // seu código aqui
+  for (let key of string) {
+    if (obj[key]) string = string.replace(key, obj[key]);
+  }
+  return string;
 }
 
 module.exports = {
