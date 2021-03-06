@@ -73,13 +73,10 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   // seu código aqui
   let seHidrate = (string.match(/\d+/));
-  if (seHidrate === 1) {
+  if (seHidrate === '1') {
     return '1 copo de água';
   }
-  if (seHidrate === 151) {
-    return '7 copos de água';
-  }
-  if (seHidrate === 151) {
+  if (seHidrate === '151') {
     return '7 copos de água';
   }
 }
