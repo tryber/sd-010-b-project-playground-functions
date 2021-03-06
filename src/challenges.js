@@ -90,20 +90,21 @@ function fizzBuzz(arrayFB) {
   let emptyArray = [];
   for (let a = 0; a < arrayFB.length; a += 1) {
     if (arrayFB[a] % 3 === 0) {
-      emptyArray.push('fizz');
+      emptyArray = arrayFB[a].push('fizz');
     }
     if (arrayFB[a] % 5 === 0) {
-      emptyArray.push('buzz');
+      emptyArray =  arrayFB[a].push('buzz');
     }
     if (arrayFB[a] % 3 === 0 && arrayFB[a] % 5 === 0) {
-      emptyArray.push('fizzBuzz');
+      emptyArray = arrayFB[a].push('fizzBuzz');
     }
     if (arrayFB[a] % 3 !== 0 && arrayFB[a] % 5 !== 0) {
-      emptyArray.push('bug!');
+      emptyArray = arrayFB[a].push('bug!');
     }    
   }
-  return (emptyArray);
+  return emptyArray;
 }
+
 
 
 
