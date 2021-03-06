@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-	let value = null;
+  let value = null;
 
   if (value1 && value2) {
     value = true;
@@ -18,21 +18,21 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentenca) {
-	let sentenca += ' ';
+  sentenca += ' ';
   let splitWords = [];
-	word = '';
-	let length = sentenca.length - 1;
+  let word = '';
+  let length = sentenca.length - 1;
 
-	for (let i = 0; i < sentenca.length; i += 1) {
-		if (sentenca[i] != " ") {
-			word += sentenca[i];
-		} else if (sentenca[i] === ' ' || i === length) {
-			splitWords.push(word);
-			word = '';
-		}
-	}
+  for (let i = 0; i < sentenca.length; i += 1) {
+    if (sentenca[i] !== ' ') {
+      word += sentenca[i];
+    } else if (sentenca[i] === ' ' || i === length) {
+      splitWords.push(word);
+      word = '';
+    }
+  }
 
-	return splitWords
+  return splitWords;
 }
 
 // Desafio 4
@@ -46,139 +46,124 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-	let higherNumber = 0;
-
-	for (let number in numbers) {
-		if (numbers[number] > higherNumber) {
-			higherNumber = numbers[number]
-		}
-	}
-	cont = 0
-	for (let index in numbers) {
-		if (numbers[index] == higherNumber) {
-			cont++
-		}
-	}
-
-	return cont
-  
+function getMaxNumber(numbers) {
+  let higherNumber = 0;
+  for (let number in numbers) {
+    if (numbers[number] > higherNumber) {
+      higherNumber = numbers[number];
+    }
+  }
+  return higherNumber;
 }
 
-//console.log(highestCount([100, 4, 11, 4, 4, 9, 2, 1, 11, 11, 11, 100]))
+function highestCount(numbers) {
+  let higherNumber = getMaxNumber(numbers);
+
+  let cont = 0;
+  for (let index in numbers) {
+    if (numbers[index] === higherNumber) {
+      cont += 1;
+    }
+  }
+
+  return cont;
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
-	let disRatoGato1 = mouse-cat1
-	let disRatoGato2 = mouse-cat2
-
-	if (disRatoGato1 < 0) {
-		disRatoGato1*=-1
-	}
-	if (disRatoGato2 < 0) {
-		disRatoGato2*=-1
-	}
-
-	if (disRatoGato1 < disRatoGato2) {
-		return "cat1"
-	} else if (disRatoGato2 < disRatoGato1) {
-		return "cat2"
-	} else {
-		return "os gatos trombam e o rato foge"
-	}
-
-}
-
-//	console.log(catAndMouse(100, 99, 99))
-
-// Desafio 8
-function fizzBuzz(numbers) {
-  	for (let index in numbers) {
-	  	if (numbers[index]%3 == 0 && numbers[index]%5 == 0) {
-		  	numbers[index] = "fizzBuzz"
-	  	} else if (numbers[index]%3 == 0 && numbers[index]%5 != 0) {
-		  	numbers[index] = "fizz"
-	  	} else if (numbers[index]%3 != 0 && numbers[index]%5 == 0) {
-			numbers[index] = "Buzz"
-	  	} else {
-			numbers[index] = "bug!"
-		}
+  let disRatoGato1 = mouse - cat1;
+  let disRatoGato2 = mouse - cat2;
+  if (disRatoGato1 < 0) {
+    disRatoGato1 *= -1;
+  }
+  if (disRatoGato2 < 0) {
+    disRatoGato2 *= -1;
+  }
+  let messege = '';
+  if (disRatoGato1 < disRatoGato2) {
+    messege = 'cat1';
+  } else if (disRatoGato2 < disRatoGato1) {
+    messege = 'cat2';
+  } else {
+    messege = 'os gatos trombam e o rato foge';
   }
 
-  return numbers
-
+  return messege;
 }
 
-//console.log(fizzBuzz([2, 15, 7, 9, 45]))
+// Desafio 8
+function conditionalStructuresFizzBuzz(num) {
+  let messege = null;
+  if (num % 3 === 0 && num % 5 === 0) {
+    messege = 'fizzBuzz';
+  } else if (num % 3 === 0) {
+    messege = 'fizz';
+  } else if (num % 5 === 0) {
+    messege = 'buzz';
+  } else {
+    messege = 'bug!';
+  }
+  return messege;
+}
 
-
-
-
-
-
-
+function fizzBuzz(numbers) {
+  for (let number = 0; number < numbers.length; number += 1) {
+    numbers[number] = conditionalStructuresFizzBuzz(numbers[number]);
+  }
+  return numbers;
+}
 
 // Desafio 9
+function iterateLetters(letters, letterArray) {
+  for (let letter in letters) {
+    if (letterArray === letter) {
+      letterArray = letters[letter];
+    }
+  }
+  return letterArray;
+}
+function attributeNumbersInLetters(sentence) {
+  let letters = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  for (let index = 0; index < sentence.length; index += 1) {
+    sentence[index] = iterateLetters(letters, sentence[index]);
+  }
+  return sentence;
+}
 function encode(sentence) {
-
-	sentence = [...sentence]
-
-	let letters = {
-			a: 1,
-			e: 2,
-			i: 3,
-			o: 4,
-			u: 5
-		}
-
-		for (let caracter in sentence) {
-			for (let letter in letters) {
-				if (sentence[caracter] == letter) {
-					sentence[caracter] = letters[letter]
-				}
-			}
-		}
-
-		let returnSentece = ""
-
-		for (let caracter in sentence) {
-			returnSentece += sentence[caracter]
-		}
-	return returnSentece
+  sentence = [...sentence];
+  let returnSentece = '';
+  for (let index = 0; index < attributeNumbersInLetters(sentence).length; index += 1) {
+    returnSentece += sentence[index];
+  }
+  return returnSentece;
 }
 
-//console.log(encode(sentence = "hi there!"))
-
+function attributeLettersInNumbers(letters, letterOrNumber) {
+  for (let letter in letters) {
+    if (letterOrNumber === letter) {
+      letterOrNumber = letters[letter];
+    }
+  }
+  return letterOrNumber;
+}
 function decode(sentence) {
-	sentence = [...sentence]
+  sentence = [...sentence];
 
-	let letters = {
-			1: 'a',
-			2: 'e',
-			3: 'i',
-			4: 'o',
-			5: 'u'
-		}
+  let letters = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
 
-		for (let caracter in sentence) {
-			for (let letter in letters) {
-				if (sentence[caracter] == letter) {
-					sentence[caracter] = letters[letter]
-				}
-			}
-		}
+  for (let index = 0; index < sentence.length; index += 1) {
+    sentence[index] = attributeLettersInNumbers(letters, sentence[index]);
+  }
 
-		let returnSentece = ""
+  let returnSentece = '';
 
-		for (let caracter in sentence) {
-			returnSentece += sentence[caracter]
-		}
-	return returnSentece
+  for (let index = 0; index < sentence.length; index += 1) {
+    returnSentece += sentence[index];
+  }
+  return returnSentece;
 }
 
-//console.log(decode(sentence = "h3 th2r2!"))
-
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
