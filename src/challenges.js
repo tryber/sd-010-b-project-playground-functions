@@ -69,9 +69,24 @@ function highestCount(arrayNumbers) {
 console.log(highestCount([1, 2, 3, 3, 4, 4, 4, 4]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Position = Math.abs(mouse - cat1);
+  let cat2Position = Math.abs(mouse - cat2);
+  let resultado = '';
+
+  if (cat1Position < cat2Position) {
+    return resultado = 'cat1';
+  }
+
+  if (cat2Position < cat1Position) {
+    return resultado = 'cat2';
+  }
+
+  if (cat1Position === cat2Position) {
+    return resultado = 'os gatos trombam e o rato foge';
+  }
 }
+console.log(catAndMouse(5, 3, 8));
 
 // Desafio 8
 function fizzBuzz() {
