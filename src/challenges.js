@@ -41,10 +41,11 @@ console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
-// Desafio 6
+// Desafio 6 - pensamento construido a partir da função math.max 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(numbers) {
   let count = 0;
-  let highest = ;
+  let highest = Math.max(...numbers);
 
   for (let num of numbers) {
     if (num === highest) {
@@ -54,9 +55,9 @@ function highestCount(numbers) {
 
   return count;
 }
-console.log(highestCount[9, 1, 2, 3, 9, 5, 7]);
-console.log(highestCount[0, 4, 4, 4, 9, 2, 1]);
-console.log(highestCount[0, 0, 0]);
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 
 // Desafio 7
