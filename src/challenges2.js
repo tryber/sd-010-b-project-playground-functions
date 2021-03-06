@@ -72,12 +72,12 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
-  let seHidrate = (string.replace(/\d+/g,"")).split('');
+  let seHidrate = (string.replace(/\d+/g, '')).split('');
   let beber = 0;
   for (let index = 0; index < seHidrate.length; index += 1){
     beber += parseInt(seHidrate[index]);
   }
-  if (beber === '1') {
+  if (beber === 1) {
     return `${beber} copo de água`;
   } else {
     return `${beber} copos de água`;
