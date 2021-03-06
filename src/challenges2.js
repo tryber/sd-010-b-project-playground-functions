@@ -18,28 +18,30 @@ function techList(technology, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  //   // seu código aqui
-  //   Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
-
-  // Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
-
-  // Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
-
-  // Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
-
-  // O que será verificado:
-
-  // Retorne a string "Array com tamanho incorreto." caso o array tenha o tamanho diferente de 11
-
-  // Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum dos números da array seja menor que 0
-
-  // Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array seja maior que 9
-
-  // Retorne a string "não é possível gerar um número de telefone com esses valores" caso algum número da array se repeti 3 vezes ou mais
-
-  // Retorne um número de telefone, respeitando parênteses, traços e espaços caso os números da array estejam de acordo com as restrições
+  let phoneId = '';
+  let number = 0;
+  let show = 0;
+  if (numbers.length !== 11) {
+    console.log('Array com tamanho incorreto');
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] < 0 || numbers[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    if (numbers[index] > number) {
+      number = numbers[index];
+      show = 0;
+    }
+    if (numbers[index] === number) {
+      show += 1;
+    }
+    if (show >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  phoneId = '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
+  return phoneId;
 }
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
