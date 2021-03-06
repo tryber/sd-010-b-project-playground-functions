@@ -135,9 +135,33 @@ function encode(phrase) {
 }
 console.log(encode('hi there!'));
 
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let stringToDecode = '';
+  for (let iString = 0; iString < phrase.length; iString += 1) {
+    switch (phrase[iString]) {
+      case '1':
+        stringToDecode += 'a';
+        break;
+      case '2':
+        stringToDecode += 'e';
+        break;
+      case '3':
+        stringToDecode += 'i';
+        break;
+      case '4':
+        stringToDecode += 'o';
+        break;
+      case '5':
+        stringToDecode += 'u';
+        break;
+      default:
+        stringToDecode += phrase[iString];
+        break;
+    }
+  }
+  return stringToDecode
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
