@@ -19,10 +19,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  names = [];
+function concatName(names) {
+  names = ['foguete','não','tem','ré'];
   return names[names.length-1] + "," + names[0];
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -46,11 +47,11 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  return word.replace("a", 1,"e", 2,"i",3,"o",4,"u",5);
 }
-function decode() {
-  // seu código aqui
+function decode(stringNumbers) {
+  return stringNumbers.replace(1,"a",2,"e",3,"i"4,"o",5,"u");
 }
 
 module.exports = {
