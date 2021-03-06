@@ -47,10 +47,12 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(word) {
+function encode() {
+  let word  = ["aeiou"];
   return word.replace("a", 1,"e", 2,"i",3,"o",4,"u",5);
 }
-function decode(stringNumbers) {
+function decode() {
+  let stringNumbers = ["12345"];
   return stringNumbers.replace(1,"a",2,"e",3,"i"4,"o",5,"u");
 }
 
