@@ -50,14 +50,15 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let resultado;
   if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
-    console.log('cat1');
+    resultado = console.log('cat1');
   } else if ((Math.abs(mouse - cat1)) > (Math.abs(mouse - cat2))) {
-    console.log('cat2');
+    resultado = console.log('cat2');
   } else {
-    console.log('os gatos trombam e o rato foge');
+    resultado = console.log('os gatos trombam e o rato foge');
   }
-  return console.log('');
+  return resultado;
 }
 
 // Desafio 8
