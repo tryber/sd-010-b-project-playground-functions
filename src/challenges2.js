@@ -1,5 +1,5 @@
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   let objectListOutput = [];
   let object = {
     tech,
@@ -19,7 +19,7 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arrayOfNumber) {
   let telePhoneNumber = `(${arrayOfNumber[0]}${arrayOfNumber[1]}) ${arrayOfNumber[2]}${arrayOfNumber[3]}${arrayOfNumber[4]}${arrayOfNumber[5]}${arrayOfNumber[6]}-${arrayOfNumber[7]}${arrayOfNumber[8]}${arrayOfNumber[9]}${arrayOfNumber[10]}`; // Restruturei essa parte do código baseado no código do colega Robson Cardozo (Apenas olhei por alto! =])
   if (arrayOfNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -53,7 +53,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) {
     return true;
   } if ((lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC))) {
@@ -65,7 +65,7 @@ function triangleCheck() {
 }
 
 // Desafio 13 // Busquei sobre essa questão no link: https://www.youtube.com/watch?v=pfkkdzeyx6U
-function hydrate() {
+function hydrate(stringWithGlasses) {
   let getNumber = /\d+/g;
   let arrayWithNumbers = stringWithGlasses.match(getNumber);
   let sumOfGlasses = 0;

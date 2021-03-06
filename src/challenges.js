@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(value1, value2) {
   let result = Boolean;
   if ((value1 === true) && (value2 === true)) {
     result = true;
@@ -10,20 +10,20 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   let arrayDeStrings = [];
   arrayDeStrings = string.split(' ');
   return arrayDeStrings;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   let ultimoItem = '';
   let primeiroItem = array[0];
   for (let i = 0; i < array.length; i += 1) {
@@ -33,14 +33,14 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   let points = 0;
   points = 3 * wins + ties;
   return points;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayOfValues) {
   let biggest = arrayOfValues[0];
   let sum = 0;
   for (let i in arrayOfValues) {
@@ -56,7 +56,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   let lesserDistance = [];
   for (let index = 0; index < 3; index += 1) {
     if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
@@ -71,7 +71,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayOfNumbers) {
   let result = [];
   for (let key in arrayOfNumbers) {
     if ((arrayOfNumbers[key] % 3 === 0) && (arrayOfNumbers[key] % 5 !== 0)) {
@@ -88,7 +88,7 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   let result = [];
   for (let key in string) {
     if (string[key] === 'a') {
@@ -107,7 +107,7 @@ function encode() {
   }
   return result;
 }
-function decode() {
+function decode(stringWithNumbers) {
   let result = [];
   for (let key in stringWithNumbers) {
     if (stringWithNumbers[key] === '1') {
