@@ -20,8 +20,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName() {
-  names = ['foguete','não','tem','ré'];
-  return names[names.length-1] + ","+ names[0];
+  names = [];
+  return names[names.length-1] + "," + names[0];
 }
 
 // Desafio 5
