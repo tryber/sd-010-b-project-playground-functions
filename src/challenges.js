@@ -109,11 +109,11 @@ function condition(Array) {
   return result;
 }
 // Desafio 9
-function encode(teste) {
+function encode(test) {
   // seu código aqui
   let result = '';
-  for (let index = 0; index < teste.length; index += 1) {
-    switch (teste[index]) {
+  for (let index = 0; index < test.length; index += 1) {
+    switch (test[index]) {
     case 'a':
       result += '1';
       break;
@@ -130,17 +130,17 @@ function encode(teste) {
       result += '5';
       break;
     default:
-      result += teste[index];
+      result += test[index];
       break;
     }
   }
   return result;
 }
-function decode(teste) {
+function decode(test) {
   // seu código aqui
   let result = '';
-  for (let index = 0; index < teste.length; index += 1) {
-    switch (teste[index]) {
+  for (let index = 0; index < test.length; index += 1) {
+    switch (test[index]) {
     case '1':
       result += 'a';
       break;
@@ -157,7 +157,7 @@ function decode(teste) {
       result += 'u';
       break;
     default:
-      result += teste[index];
+      result += test[index];
       break;
     }
   } return result;

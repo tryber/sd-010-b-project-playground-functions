@@ -13,7 +13,7 @@ function techList(nameTechs, nameUser) {
     result[index] = lista;
   }
   return result;
-} console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Carlos'));
+}
 
 // Desafio 11
 function generatePhoneNumber() {
