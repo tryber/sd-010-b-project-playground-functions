@@ -114,7 +114,7 @@ function fizzBuzz(arrNumbers) {
   }
   return console.log(fizzBuzzBugArray);
 }
-fizzBuzz ([9, 25])
+
 
 // Desafio 9
 function encode() {
