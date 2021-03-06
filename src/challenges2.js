@@ -123,10 +123,17 @@ function hydrate(string) {
       numOfCups += parseInt(character, 10);
     }
   }
-  cupsOfWater = `${numOfCups} ${cupsOfWater}`;
+
+  if (numOfCups === 1) {
+    cupsOfWater = `${numOfCups} copo de água`;
+  } else {
+    cupsOfWater = `${numOfCups} ${cupsOfWater}`;
+  }
 
   return cupsOfWater;
 }
+
+console.log(hydrate('2'));
 
 module.exports = {
   generatePhoneNumber,
