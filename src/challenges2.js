@@ -41,19 +41,19 @@ function generatePhoneNumber(array) {
   } else if (array.length !== 11) {
     console.log('Array com tamanho incorreto.');
   } else {
-    let padrao = '(';
+    let string = '(';
     for (let index = 0; index < 2; index += 1) {
-      padrao += array[index];
+      string += array[index];
     }
-    padrao += ') ';
+    string += ') ';
     for (let index = 2; index < 7; index += 1) {
-      padrao += array[index];
+      string += array[index];
     }
-    padrao += '-';
+    string += '-';
     for (let index = 7; index < array.length; index += 1) {
-      padrao += array[index];
+      string += array[index];
     }
-    return padrao;
+    console.log (string);
   }
 }
 
