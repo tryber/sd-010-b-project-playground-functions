@@ -3,17 +3,16 @@ function techList(tecnologias, name) {
   let info = {
    };
 }
-
 // Desafio 11
 
 function generatePhoneNumber(numero) {
-  let telefone = "";
+  let telefone = '';
 
-  telefone = ("(" + numero[0] + numero[1] + ")" + " " + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + "-" + numero[7] + numero[8] + numero[9] + numero[10]);
+  telefone = ('(' + numero[0] + numero[1] + ')' + ' ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10]);
 
   for(let i = 0; i < numero.length; i += 1) {
     if(numero[i] > 9 || numero[i] < 0){
-      telefone = "não é possível gerar um número de telefone com esses valores"
+      telefone = 'não é possível gerar um número de telefone com esses valores'
     }
   }
   let contador = 0;
@@ -30,16 +29,14 @@ function generatePhoneNumber(numero) {
     contador = 0;
   }
   if(repeticoes.length > 0){
-    telefone = "não é possível gerar um número de telefone com esses valores";
+    telefone = 'não é possível gerar um número de telefone com esses valores';
   }
 
   if(numero.length !== 11){
-    telefone =  "Array com tamanho incorreto.";
+    telefone =  'Array com tamanho incorreto.';
   } 
   return telefone;
 }
-
-
 // Desafio 12
 function triangleCheck(a, b, c) {
     let resultado;
@@ -50,8 +47,6 @@ function triangleCheck(a, b, c) {
   }
   return resultado;
 }
-
-
 // Desafio 13
 function hydrate(drink) {
   let hydratar = "";
@@ -67,9 +62,9 @@ function hydrate(drink) {
   }
 
   if(soma < 2){
-  hydratar = soma + " copo de água";
+  hydratar = soma + ' copo de água';
   } else {
-  hydratar = soma + " copos de água";
+  hydratar = soma + ' copos de água';
   }
   return hydratar;
 }
