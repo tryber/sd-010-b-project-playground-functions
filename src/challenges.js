@@ -1,15 +1,16 @@
+// eslint-disable-next-line no-unused-vars
+const { METHODS } = require('http');
+
 // Desafio 1
 function compareTrue(firstName, midleName) {
   // seu código aqui
-  if(firstName == true && midleName == true){
+  if (firstName === true && midleName === true) {
     return true;
-  }else{
-    return false;
   }
+  return false;
 }
-//  console.log(compareTrue(true, true))
-  
- 
+// console.log(compareTrue(true, true));
+
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -18,23 +19,22 @@ function calcArea(base, height) {
 }
 //  console.log(calcArea(51,1));
 
-
-  // Desafio 3
+// Desafio 3
 function splitSentence(phrase) {
   // seu código aqui
-    let phrases = phrase;
-    return phrases.split(" ");
-  }  
+  let phrases = phrase;
+  return phrases.split(' ');
+}
 
 // console.log(splitSentence("he he he kkk kkk kkk"));
-
 
 // Desafio 4
 function concatName(names = []) {
   // seu código aqui
-  let sem = [] = names[names.length - 1]
-  let sema = names[0]
-  let seman = sem + ', ' +  sema;
+  let sem;
+  sem = names[names.length - 1];
+  let sema = names[0];
+  let seman = `${sem}, ${sema}`;
   return seman;
 }
 
@@ -43,53 +43,47 @@ function concatName(names = []) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-    let qtdPts = (wins * 3) + ties;
-    return qtdPts;
+  let qtdPts = (wins * 3) + ties;
+  return qtdPts;
 }
- // console.log(footballPoints(1,2));
+// console.log(footballPoints(1,2));
 
 // Desafio 6
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(numbers) {
   // seu código aqui
-   let count = 0;
-   let aux = 0;
-    
-   for(let index = 0; index < numbers.length; index += 1){
-   if(numbers[index] > count){
-     count = numbers[index];
-   }  
+  let count = 0;
+  let aux = 0;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > count) {
+      count = numbers[index];
+    }
   }
-   for(let index = 0; index < numbers.length; index += 1){
-     
-    if(count == numbers[index]){
-       aux += 1;
-     }
-   }
-    return aux;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (count === numbers[index]) {
+      aux += 1;
+    }
+  }
+  return aux;
 }
 
- // console.log(highestCount([0,0,0]));
+// console.log(highestCount([0,0,0]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let dist = 0;
-  
-  if(cat1 < cat2){
-    dist = cat1 - mouse;
+  if (cat1 < cat2) {
+    Math.abs(cat1 - mouse);
     return 'cat1';
-    }else if(cat2 < cat1){
-    dist = cat2 - mouse;
-    return 'cat2'
-  }else if(cat1 == cat2){
+  } if (cat2 < cat1) {
+    Math.abs(cat2 - mouse);
+    return 'cat2';
+  } if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   }
-    
 }
-
-  
-  console.log(catAndMouse(2,15,10));
-  
-
+console.log(catAndMouse(6, 6, 6));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
