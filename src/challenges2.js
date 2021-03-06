@@ -89,9 +89,31 @@ function phoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+let a = 10, b = 14, c = 8;
+console.log(triangleCheck(a, b, c));
+function triangleCheck(lineA, lineB, lineC) {
+  if (lessThanSumGreaterThanAbs(lineA, lineB, lineC) === true ) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
+function lessThanSumGreaterThanAbs(a, b, c) {
+  if ((a < (b + c)) && (a > Math.abs(b - c))) {
+    return true;
+  } else if ((b < (a + c)) && (b > Math.abs(a - c))){
+    return true;
+  } else if ((c < (a + b)) && (c > Math.abs(a - b))) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// function greaterThanAbs(a, b, c) {
+//   if ()
+// }
 
 // Desafio 13
 function hydrate() {
