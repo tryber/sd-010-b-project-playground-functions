@@ -1,6 +1,7 @@
 // Desafio 10
 function techList(arrayTech, name) {
   let objFinal = [];
+  arrayTech.sort();
   if (arrayTech.length !== 0) {
     for (let index = 0; index < arrayTech.length; index += 1) {
       let obj = {
@@ -15,6 +16,7 @@ function techList(arrayTech, name) {
     return 'Vazio!'
   };
 };
+
 
 // Desafio 11
 function generatePhoneNumber(phoneNum) {
@@ -32,7 +34,7 @@ function generatePhoneNumber(phoneNum) {
       obj[phoneNum[index]] += 1;
     };
     if (obj[phoneNum[index]] < 0 || obj[phoneNum[index]] > 9 || obj[phoneNum[index]] >= 3) {
-      return "não é possível gerar um numero de telefone com esses valores";
+      return "não é possível gerar um número de telefone com esses valores";
     };
     if (index <= 1) {
       ddd += phoneNum[index];
