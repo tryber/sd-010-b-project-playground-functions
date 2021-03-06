@@ -34,7 +34,7 @@ function generatePhoneNumber(array) {
         }
       }
     }
-    limiteRepete = 0;
+    return limiteRepete = 0;
   }
   if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
     return 'não é possível gerar um número de telefone com esses valores';
