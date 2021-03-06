@@ -79,9 +79,26 @@ console.log(catAndMouse(0,6,12));
 console.log(catAndMouse(0,6,6));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(numbersFB) {
+  let resultFizzBuzz = [];
+  for (let num of numbersFB) {
+    if (num % 3 == 0 && num % 5 == 0 ) {
+    resultFizzBuzz.push('fizzBuzz');
+    } else if (num % 3 == 0){
+    resultFizzBuzz.push('fizz');
+    } else if (num % 5 == 0) {
+    resultFizzBuzz.push('buzz');
+    } else {
+    resultFizzBuzz.push('bug!');
+    }
+    }
+    return resultFizzBuzz;
+  }
+  
+
+console.log(fizzBuzz ([2, 15, 7, 9, 45]));
+console.log(fizzBuzz ([7, 9]));
+console.log(fizzBuzz ([9, 25]));
 
 // Desafio 9
 function encode() {
