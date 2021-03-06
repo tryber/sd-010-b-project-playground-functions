@@ -11,8 +11,8 @@ function generatePhoneNumber(numero) {
   telefone = ('(' + numero[0] + numero[1] + ')' + ' ' + numero[2] + numero[3] + numero[4] + numero[5] + numero[6] + '-' + numero[7] + numero[8] + numero[9] + numero[10]);
 
   for (let i = 0; i < numero.length; i += 1) {
-    if(numero[i] > 9 || numero[i] < 0){
-      telefone = 'não é possível gerar um número de telefone com esses valores'
+    if (numero[i] > 9 || numero[i] < 0) {
+      telefone = 'não é possível gerar um número de telefone com esses valores';
     }
   }
   let contador = 0;
@@ -33,13 +33,13 @@ function generatePhoneNumber(numero) {
   }
 
   if (numero.length !== 11) {
-    telefone =  'Array com tamanho incorreto.';
+    telefone = 'Array com tamanho incorreto.';
   } 
   return telefone;
 }
 // Desafio 12
 function triangleCheck(a, b, c) {
-    let resultado;
+  let resultado;
   if (Math.abs(a) < Math.abs(b + c) && Math.abs(a) > Math.abs(b - c) && Math.abs(a) > Math.abs(c - b)) {
     resultado = true;
   } else {
@@ -68,7 +68,6 @@ function hydrate(drink) {
   }
   return hydratar;
 }
-
 
 module.exports = {
   generatePhoneNumber,
