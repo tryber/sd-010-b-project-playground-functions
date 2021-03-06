@@ -14,10 +14,10 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  let divide = frase.split('/');
-return divide;
+  
+return frase.split(' ');
 };
-console.log(splitSentence("go/Trybe"));
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName() {
