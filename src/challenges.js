@@ -94,13 +94,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(Array) {
+function fizzBuzz(Array = []) {
   let result = [];
   for (let index = 0; index < Array.length; index += 1) {
     result[index] = condition(Array[index]);
   }
   return result;
-}
+} console.log(fizzBuzz([2, 15, 7, 9, 45]));
+  console.log(fizzBuzz([2, 15, 7, 9, 45]));
 function condition(Array) {
   let result = '';
   if (Array % 3 === 0 && Array % 5 === 0) {
@@ -110,7 +111,7 @@ function condition(Array) {
   } else if (Array % 5 === 0) {
     result = 'buzz';
   } else {
-    result = 'bug';
+    result = 'bug!';
   }
   return result;
 }
