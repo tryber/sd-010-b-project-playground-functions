@@ -24,7 +24,7 @@ function generatePhoneNumber(number) {
     for (let index = 0; index < number.length; index += 1) {
       numberPhone += number[index];
       if (number[index] === 2) {
-        numberPhone += ')';
+        numberPhone += ') ';
       }
       if (number[index] === 7) {
         numberPhone += '-';
@@ -43,7 +43,7 @@ function isCheckConditions(number) {
     return result;
   }
   for (let index = 0; index < number.length; index += 1) {
-    if (number[index] < 0 || number[index] > 9) {
+    if (number[index] <= 0 || number[index] > 9) {
       result = 'não é possível gerar um número de telefone com esses valores';
       return result;
     }
@@ -55,13 +55,13 @@ function isCheckConditions(number) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  lineA = Math.abs(lineA);
-  lineB = Math.abs(lineB);
-  lineC = Math.abs(lineC);
-  let soma = lineA + lineB > lineC && lineB + lineC > lineA;
-  let result = false;
+  let lineAabs = Math.abs(lineA);
+  let lineBabs = Math.abs(lineB);
+  let lineCabs = Math.abs(lineC);
+  let soma = lineA < lineAabs || lineB < lineBabs || lineC < lineCabs;
+  let result = true;
   if (soma) {
-    return true;
+    return false;
   }
   return result;
 }
