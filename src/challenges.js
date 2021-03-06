@@ -98,20 +98,21 @@ function encode(textLine) {
   return (phrase);
 
 }
+//console.log(encode("hi there!"));
 
 function decode(textLine) {
   let phrase = textLine.split('');
   let letters = ['a', 'e', 'i', 'o', 'u'];
   for (i = 0; i < phrase.length; i += 1) {
     for (l = 0; l < letters.length; l += 1) {
-      if (phrase[i] == l){
+      if (phrase[i] === l){
             phrase[i] = letters[l-1];    
       }
     }
   }
   return (phrase);
-
 }
+//console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
