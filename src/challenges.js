@@ -83,14 +83,34 @@ function fizzBuzz(text) {
   }
   return (words);
 }
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(textLine) {
+  let phrase = textLine.split('');
+  let letters = ['a', 'e', 'i', 'o', 'u'];
+  for (i = 0; i < phrase.length; i += 1) {
+    for (l = 0; l < letters.length; l += 1) {
+      if (phrase[i] === letters[l]){
+            phrase[i] = l+1;     
+      }
+    }
+  }
+  return (phrase);
+
 }
-function decode() {
-  // seu código aqui
+
+function decode(textLine) {
+  let phrase = textLine.split('');
+  let letters = ['a', 'e', 'i', 'o', 'u'];
+  for (i = 0; i < phrase.length; i += 1) {
+    for (l = 0; l < letters.length; l += 1) {
+      if (phrase[i] == l){
+            phrase[i] = letters[l-1];    
+      }
+    }
+  }
+  return (phrase);
+
 }
 
 module.exports = {
