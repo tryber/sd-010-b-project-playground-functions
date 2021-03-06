@@ -78,6 +78,7 @@ function hydrate(string) {
   if (string.match(/\d+/) === '151') {
     return '7 copos de água';
   }
+  return string;
 }
 
 module.exports = {
