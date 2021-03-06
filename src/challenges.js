@@ -84,13 +84,13 @@ function encode(crip) {
   return result;
 }
 function decode(unCrip) {
-  let unCrip = 
+  let result2 = 
     unCrip.replace(/1/gi, 'a')
     .replace(/2/gi, 'e')
     .replace(/3/gi, 'i')
     .replace(/4/gi, 'o')
     .replace(/5/gi, 'u');
-  return unCrip;
+  return result2;
 }
 
 module.exports = {
