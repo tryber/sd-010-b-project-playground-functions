@@ -7,22 +7,26 @@ function compareTrue(a, b) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) /2);
+  return ((base * height) / 2);
 // seu código aqui
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
+  var result = string.split(" ")
+  return result;
 // seu código aqui
 }
 
 // Desafio 4
-function concatName() {
-// seu código aqui
+function concatName(stringName) {
+
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  var pontos = ((wins*3) + ( ties*1));
+  return pontos;
 // seu código aqui
 }
 
@@ -60,6 +64,8 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
-console.log(compareTrue( true, false))
-console.log(calcArea(5, 2))
+}
+console.log(compareTrue( true, false));
+console.log(calcArea(5, 2));
+console.log(splitSentence("go tybe"));
+console.log(footballPoints(0,0));
