@@ -100,8 +100,7 @@ function fizzBuzz(Array = []) {
     result[index] = condition(Array[index]);
   }
   return result;
-} console.log(fizzBuzz([2, 15, 7, 9, 45]));
-  console.log(fizzBuzz([2, 15, 7, 9, 45]));
+}  
 function condition(Array) {
   let result = '';
   if (Array % 3 === 0 && Array % 5 === 0) {
