@@ -84,7 +84,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return error;
   }
 }
-console.log(catAndMouse(1,0,2))
 
 
 
@@ -106,7 +105,7 @@ function fizzBuzz(array) {
   }
   return numberArray
 }
-fizzBuzz();
+
 
 
 // Desafio 9
