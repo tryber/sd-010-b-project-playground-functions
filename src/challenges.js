@@ -74,11 +74,47 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(crip) {
+  let crip1 = crip.split('');
+  for (let i in crip1) {
+    if (crip1[i] === 'a') {
+      crip1[i] = 1;
+    }
+    if (crip1[i] === 'e') {
+      crip1[i] = 2;
+    }
+    if (crip1[i] === 'i') {
+      crip1[i] = 3;
+    }
+    if (crip1[i] === 'o') {
+      crip1[i] = 4;
+    }
+    if (crip1[i] === 'u') {
+      crip1[i] = 5;
+    }
+  }
+  return crip1.split(',');
 }
-function decode() {
-  // seu código aqui
+function decode(crip1) {
+  let crip = crip1.split('');
+  for (let i in crip) {
+    if (crip[i] === 1) {
+      crip[i] = 'a';
+    }
+    if (crip[i] === 2) {
+      crip[i] = 'e';
+    }
+    if (crip[i] === 3) {
+      crip[i] = 'i';
+    }
+    if (crip[i] === 4) {
+      crip[i] = 'o';
+    }
+    if (crip[i] === 5) {
+      crip[i] = 'u';
+    }
+  }
+  return crip.split(',');
 }
 
 module.exports = {
