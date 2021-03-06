@@ -63,12 +63,12 @@ function fizzBuzz(array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       array[i] = 'fizzBuzz';
     } else if (array[i] % 3 === 0) {
-        array[i] = 'fizz';
+          array[i] = 'fizz';
     } else if (array[i] % 5 === 0) {
-        array[i] = 'buzz';
+          array[i] = 'buzz';
     } else {
-        array[i] = 'bug!';
-      }
+          array[i] = 'bug!';
+        }
   }
   return array;
 }
@@ -76,7 +76,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(crip) {
   let crip1 = crip.split('');
-  for (let i in crip1) {
+  for (let i in crip1 = crip.split('')) {
     if (crip1[i] === 'a') {
       crip1[i] = 1;
     }
@@ -92,8 +92,7 @@ function encode(crip) {
     if (crip1[i] === 'u') {
       crip1[i] = 5;
     }
-  }
-  return crip1.split(',');
+  } return crip1.split(',');
 }
 function decode(crip1) {
   let crip = crip1.split('');
@@ -113,8 +112,7 @@ function decode(crip1) {
     if (crip[i] === 5) {
       crip[i] = 'u';
     }
-  }
-  return crip.split(',');
+  } return crip.split(',');
 }
 
 module.exports = {
