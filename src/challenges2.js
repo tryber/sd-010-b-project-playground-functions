@@ -23,7 +23,7 @@ function generatePhoneNumber(array) {
   let padraoTelefone = 0;
   let numeroExcedente = false;
   for (let index = 0; index < array.length; index += 1) {
-    if ((array[index] < 0) || (array[index] > 9)) {
+    if ((array[index] <= -1) || (array[index] >= 10)) {
       numeroExcedente = true;
     }
     for (let indexDois = 0; indexDois < array.length; indexDois += 1) {
