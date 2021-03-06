@@ -36,10 +36,10 @@ function generatePhoneNumber(array) {
     }
     limiteRepete = 0;
   }
-  if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
-    console.log("não é possível gerar um número de telefone com esses valores");
-  } else if (array.length !== 11) {
-    console.log("Array com tamanho incorreto.");
+  if (array.length !== 11) {
+    return ("Array com tamanho incorreto.");
+  } else if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
+    return ("não é possível gerar um número de telefone com esses valores");
   } else {
     let string = '(';
     for (let index = 0; index < 2; index += 1) {
@@ -53,7 +53,7 @@ function generatePhoneNumber(array) {
     for (let index = 7; index < array.length; index += 1) {
       string += array[index];
     }
-    console.log (string);
+    return (string);
   }
 }
 
