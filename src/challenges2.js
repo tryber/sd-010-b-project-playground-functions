@@ -37,9 +37,9 @@ function generatePhoneNumber(array) {
     return limiteRepete = 0;
   }
   if ((numeroExcedente === true) || (padraoTelefone >= 3)) {
-    return 'não é possível gerar um número de telefone com esses valores';
+    return ('não é possível gerar um número de telefone com esses valores');
   } else if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    return ('Array com tamanho incorreto.');
   } else {
     let padrao = '(';
     for (let index = 0; index < 2; index += 1) {
@@ -49,7 +49,7 @@ function generatePhoneNumber(array) {
     for (let index = 2; index < 7; index += 1) {
       padrao += array[index];
     }
-    padrao = '-';
+    padrao += '-';
     for (let index = 7; index < array.length; index += 1) {
       padrao += array[index];
     }
