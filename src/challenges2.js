@@ -79,9 +79,8 @@ function hydrate(string) {
   }
   if (beber === 1) {
     return `${beber} copo de água`;
-  } else {
-    return `${beber} copos de água`;
   }
+  return `${beber} copos de água`;
 }
 
 module.exports = {
