@@ -138,24 +138,25 @@ function decodeMaker(codeInfo) {
 function encode(string) {
   //foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split para entender o conceito de split
   let info = string.split('');
-  for (let index = 0; index < info.length; index += 1) {
-    let start = codeMaker(info[index])
-    info.push(start)
+  let codec = [];
+  for (let index = 0; index < string.length; index += 1) {
+    let start = codeMaker(info[index]);
+    codec.push(start);
   }
-  string = info.join(''); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join para entender o conceito de join
+  string = codec.join(''); // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join para entender o conceito de join
   return string;
 }
 
 function decode(array) {
   let info = array.split('');
-  for (let index = 0; index < info.length; index += 1) {
-    let start = decodeMaker(info[index])
-    info.push(start)
+  let codec = [];
+  for (let index = 0; index < array.length; index += 1) {
+    let start = decodeMaker(array[index]);
+    codec.push(start);
   }
-  array = info.join('');
+  array = codec.join('');
   return array;
 }
-console.log(encode('help'))
 
 module.exports = {
   calcArea,
