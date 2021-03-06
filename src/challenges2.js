@@ -114,8 +114,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numOfCups = 0;
+  let cupsOfWater = 'copos de água';
+
+  for (let character of string) {
+    if (Number.isInteger(parseInt(character, 10))) {
+      numOfCups += parseInt(character, 10);
+    }
+  }
+  cupsOfWater = `${numOfCups} ${cupsOfWater}`;
+
+  return cupsOfWater;
 }
 
 module.exports = {
