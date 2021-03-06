@@ -43,7 +43,7 @@ function isCheckConditions(number) {
     return result;
   }
   for (let index = 0; index < number.length; index += 1) {
-    if (number[index] <= 0 || number[index] > 9) {
+    if (number[index] < 0 || number[index] > 9) {
       result = 'não é possível gerar um número de telefone com esses valores';
       return result;
     }
@@ -55,16 +55,15 @@ function isCheckConditions(number) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let lineAabs = Math.abs(lineA);
-  let lineBabs = Math.abs(lineB);
+  let lineAabs = Math.abs(lineA); let lineBabs = Math.abs(lineB);
   let lineCabs = Math.abs(lineC);
-  let soma = lineA < lineAabs || lineB < lineBabs || lineC < lineCabs;
-  let result = true;
-  if (soma) {
+  let somaLine = lineA < lineAabs || lineB < lineBabs || lineC < lineCabs;
+  let soma = lineA > lineB + lineC || lineB > lineC + lineA || lineC > lineA + lineB;
+  if (somaLine || soma) {
     return false;
   }
-  return result;
-}
+  return true;
+} console.log(triangleCheck(6, 2, 2));
 
 // Desafio 13
 function hydrate() {
