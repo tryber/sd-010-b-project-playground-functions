@@ -15,10 +15,9 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(num) {
- 
-}
+function generatePhoneNumber() {
 
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let mensagem;
@@ -44,11 +43,11 @@ function hydrate(frase) {
   while ((m = r.exec(frase)) != null) {
     numbers.push((m[0]));
   }
-  for (key in numbers) {
+  for (let key in numbers) {
     numbers[key] = parseInt(numbers[key]);
   }
   let total = 0;
-  for (key in numbers) {
+  for (let key in numbers) {
     total = total + numbers[key];
   }
 
@@ -56,11 +55,12 @@ function hydrate(frase) {
     mensagem = '1 copo de água';
 
   } else if (total > 1) {
-    mensagem = total + " copos de água"
+    mensagem = total + ' copos de água';
   }
   return mensagem;
 }
-let frase = "1 cerveja ";
+let frase = '1 cerveja ';
+console.log(hydrate(frase));
 
 module.exports = {
   generatePhoneNumber,
