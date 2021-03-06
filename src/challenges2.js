@@ -17,7 +17,6 @@ function techList(array, nameUser) {
 /* console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 "Lucas")) */
 
-
 // Desafio 11
 function verifyNumbersLessThenZeroAndBiggerThenNine(numbers) {
   let menorQueZero = false;
@@ -130,8 +129,6 @@ function hydrate(frase) {
 
   return `${sum} copos de água`;
 }
-
-/* console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); */
 
 module.exports = {
   generatePhoneNumber,
