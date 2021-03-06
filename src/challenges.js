@@ -125,16 +125,8 @@ function decode(string) {
   // seu código aqui
   let vogais = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
-      vogais += 'a';
-    } else if (string[index] === '2') {
-      vogais += 'e';
-    } else if (string[index] === '3') {
-      vogais += 'i';
-    } else if (string[index] === '4') {
-      vogais += 'o';
-    } else if (string[index] === '5') {
-      vogais += 'u';
+    if (string[index] === '1', '2', '3', '4', '5') {
+      vogais += 'a', 'b', 'c', 'd', 'e';
     } else {
       vogais += string[index];
     }
@@ -154,3 +146,23 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+/*function decode(string) {
+  // seu código aqui
+  let vogais = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === '1') {
+      vogais += 'a';
+    } else if (string[index] === '2') {
+      vogais += 'e';
+    } else if (string[index] === '3') {
+      vogais += 'i';
+    } else if (string[index] === '4') {
+      vogais += 'o';
+    } else if (string[index] === '5') {
+      vogais += 'u';
+    } else {
+      vogais += string[index];
+    }
+  }
+  return vogais;
+}*/
