@@ -20,7 +20,7 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayOfNumber) {
-  let telePhoneNumber = `(${arrayOfNumber[0]}${arrayOfNumber[1]}) ${arrayOfNumber[2]}${arrayOfNumber[3]}${arrayOfNumber[4]}${arrayOfNumber[5]}${arrayOfNumber[6]}-${arrayOfNumber[7]}${arrayOfNumber[8]}${arrayOfNumber[9]}${arrayOfNumber[10]}`;
+  let telePhoneNumber = `(${arrayOfNumber[0]}${arrayOfNumber[1]}) ${arrayOfNumber[2]}${arrayOfNumber[3]}${arrayOfNumber[4]}${arrayOfNumber[5]}${arrayOfNumber[6]}-${arrayOfNumber[7]}${arrayOfNumber[8]}${arrayOfNumber[9]}${arrayOfNumber[10]}`; // Restruturei essa parte do código baseado no código do colega Robson Cardozo (Apenas olhei por alto! =])
   if (arrayOfNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else if (arrayOfNumber.length === 11) {
@@ -40,7 +40,7 @@ function generatePhoneNumber(arrayOfNumber) {
     }
     let verifyNumberPossibilitty = 0;
     for (let key3 in arrayOfNumber) {
-      if((arrayOfNumber[key3] > 9) || (arrayOfNumber[key3] < 0) || (repeated >= 3)) {
+      if ((arrayOfNumber[key3] > 9) || (arrayOfNumber[key3] < 0) || (repeated >= 3)) {
         verifyNumberPossibilitty += 1;
       }
     }
@@ -64,17 +64,21 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// Desafio 13  ==>>>>> Nao terminei essa ainda!!! Voltar nela!!! <<<<<<==
+// Desafio 13 // Busquei sobre essa questão no link: https://www.youtube.com/watch?v=pfkkdzeyx6U
 function hydrate(stringWithGlasses) {
-  let retorno = '';
+  let getNumber = /\d+/g;
+  let arrayWithNumbers = stringWithGlasses.match(getNumber);
   let sumOfGlasses = 0;
-  for (let key in stringWithGlasses) {
-    if (typeof (stringWithGlasses[key]) === ) {
-      sumOfGlasses += stringWithGlasses[key];
+  for (let key in arrayWithNumbers) {
+    if (arrayWithNumbers.length > 0) {
+      sumOfGlasses += parseInt(arrayWithNumbers[key], 10); // Vi sobre o parseInt na aula ao vivo de hoje (5.3)
     }
   }
-  retorno = `${sumOfGlasses} copos de água`;
-  return retorno;
+  if (arrayWithNumbers.length === 1) {
+    return `${sumOfGlasses} copo de água`;
+  } else {
+    return `${sumOfGlasses} copos de água`;
+  }
 }
 
 module.exports = {
