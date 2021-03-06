@@ -63,56 +63,34 @@ function fizzBuzz(array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       array[i] = 'fizzBuzz';
     } else if (array[i] % 3 === 0) {
-          array[i] = 'fizz';
+      array[i] = 'fizz';
     } else if (array[i] % 5 === 0) {
-          array[i] = 'buzz';
+      array[i] = 'buzz';
     } else {
-          array[i] = 'bug!';
-        }
+      array[i] = 'bug!';
+    }
   }
   return array;
 }
 
 // Desafio 9
 function encode(crip) {
-  let crip1 = crip.split('');
-  for (let i in crip1 = crip.split('')) {
-    if (crip1[i] === 'a') {
-      crip1[i] = 1;
-    }
-    if (crip1[i] === 'e') {
-      crip1[i] = 2;
-    }
-    if (crip1[i] === 'i') {
-      crip1[i] = 3;
-    }
-    if (crip1[i] === 'o') {
-      crip1[i] = 4;
-    }
-    if (crip1[i] === 'u') {
-      crip1[i] = 5;
-    }
-  } return crip1.split(',');
+  let result = 
+    crip.replace(/a/gi, '1')
+    .replace(/e/gi, '2')
+    .replace(/i/gi, '3')
+    .replace(/o/gi, '4')
+    .replace(/u/gi, '5;');
+  return result;
 }
-function decode(crip1) {
-  let crip = crip1.split('');
-  for (let i in crip) {
-    if (crip[i] === 1) {
-      crip[i] = 'a';
-    }
-    if (crip[i] === 2) {
-      crip[i] = 'e';
-    }
-    if (crip[i] === 3) {
-      crip[i] = 'i';
-    }
-    if (crip[i] === 4) {
-      crip[i] = 'o';
-    }
-    if (crip[i] === 5) {
-      crip[i] = 'u';
-    }
-  } return crip.split(',');
+function decode(unCrip) {
+  let unCrip = 
+    unCrip.replace(/1/gi, 'a')
+    .replace(/2/gi, 'e')
+    .replace(/3/gi, 'i')
+    .replace(/4/gi, 'o')
+    .replace(/5/gi, 'u');
+  return unCrip;
 }
 
 module.exports = {
