@@ -17,7 +17,7 @@ function splitSentence(frase) {
   let split = [];
   let temp = [];
   for (let cont = 0; cont < frase.length; cont += 1) {
-    if (' ' === frase[cont]) {
+    if (frase[cont] === ' ') {
       split.push(temp);
       temp = [];
       cont += 1;
@@ -60,9 +60,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) !== Math.abs(cat2 - mouse)) {
     if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
       return 'cat1';
-    } 
-    return 'cat2';
     }
+    return 'cat2';
+  }
   return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
@@ -79,7 +79,7 @@ function fizzBuzz(numeros) {
       resposta.push('bug!');
     }
   }
-  return(resposta)
+  return (resposta);
 }
 
 // Desafio 9
@@ -107,7 +107,7 @@ function encode(string) {
       break;
     }
   }
-  return codigo
+  return codigo;
 }
 function decode(string) {
   let codigo = '';
