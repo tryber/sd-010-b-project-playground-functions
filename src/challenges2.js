@@ -1,12 +1,31 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(seilah, nome) {
+  if (seilah === undefined) {
+    return 'Vazio!';
+  };
+  let tecAlfa = seilah.sort();
+  let tecnologias = {
+    tech: 'NomeTech',
+    name: nome,
+  };
+  let retorno = [];
+  for (let cont in tecAlfa) {
+    tecnologias.tech = tecAlfa[cont];
+    let teste = [];
+    for (let key in tecnologias) {
+      teste[key] = (tecnologias[key]);
+    }
+    retorno[cont] = teste;
+ }
+  return retorno;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(numeros) {
+
+
+
+  
 
 // Desafio 12
 function triangleCheck() {
