@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringName) {
-  return stringName[stringName.length - 1] + ',' + stringName[0];
+  return '${stringName[stringName.length - 1]}, ${stringName[0]}';
 }
 
 // Desafio 5
@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function higherValue(highers) {
   let higher = 0;
-  for(let n in highers) {
+  for (let n in highers) {
     if( highers[n] > higher) {
       higher = highers[n];
     }
@@ -43,8 +43,8 @@ function highestCount(values) {
   let acres = 0;
   let higher = higherValue(values);
   for (let j in values) {
-    if ( values[j] === higher) {
-       acres ++;
+    if (values[j] === higher) {
+       acres +1 ;
     }
   }
   return acres;
@@ -64,15 +64,16 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
+  let result = 0;
   for (let n in numbers){
-    if(numbers[n] % 3 == 0 && numbers[n] % 5 == 0){
-     return 'bugfizzBuz!'
-    }if (numbers[n] % 3 == 0){
-      return 'fizz'
-    }if ( numbers[n] % 5 == 0){
-      return 'buzz'
+    if (numbers[n] % 3 === 0 && numbers[n] % 5 === 0) {
+     result = 'bugfizzBuz!';
+    } if (numbers[n] % 3 === 0) {
+      result = 'fizz';
+    } if ( numbers[n] % 5 === 0) {
+      result = 'buzz';
   }
-  return 'bug!'
+  result = 'bug!';
   }
 }
   console.log(fizzBuzz([2,15,7,9,45]));
