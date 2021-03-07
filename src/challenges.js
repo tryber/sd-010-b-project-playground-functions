@@ -88,11 +88,11 @@ function fizzBuzz(array) {
   let output = [];
   for (let index = 0; index < array.length; index += 1) {
     if (divisibleByThreeAndFive(array[index])) {
-      output.push(divisibleByThreeAndFive(array[index]));
+      output.push('fizzBuzz');
     } else if (divisibleByThree(array[index])) {
-      output.push(divisibleByThree(array[index]));
+      output.push('fizz');
     } else if (divisibleByFive(array[index])) {
-      output.push(divisibleByFive(array[index]));
+      output.push('buzz');
     } else {
       output.push('bug!');
     }
@@ -100,6 +100,9 @@ function fizzBuzz(array) {
   return output;
   // seu código aqui
 }
+// Create a new fizzbuzz using an array to call the auxiliary functions
+// let callFunctions = [divisibleByThreeAndFive(array[index]), divisibleByThree(array[index]), divisibleByFive(array[index])];
+
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 function findVowel(char) {
