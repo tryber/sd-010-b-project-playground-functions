@@ -93,27 +93,35 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 console.log(catAndMouse(10, 7, 6))
+console.log("-----------------------------------")
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
-
-// Desafio 9
-function encode() {
-  let novaFrase = [];
-  for (let index = 0; index < frase.length; index++) {
-    novaFrase.push(frase[index]);
-  }
-  for (let key in codes) {
-    // frase.split(novaPalavra[novaPalavra]).join(codes[key])
-    for (let index = 0; index < novaFrase.length; index += 1) {
-      if (key == novaFrase[index]) {
-        novaFrase[index] = codes[key];
-      }
+function fizzBuzz(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      console.log("fizzBuzz")
+    }
+    else if (array[index] % 5 === 0) {
+      console.log("buzz")
+    }
+    else if (array[index] % 3 === 0) {
+      console.log("fizz")
+    }
+    else {
+      console.log("bug!")
     }
   }
-  return novaFrase.join('');
+}
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log('------------------------------------')
+// Desafio 9
+function encode() {
+  let a = 1
+  let e = 2
+  let i = 3
+  let o = 4
+  let u = 5
+  
 }
 function decode() {
   // seu código aqui
