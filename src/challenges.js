@@ -61,10 +61,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return result;
   }  
 }
-
-console.log(catAndMouse(1, 3, 1))
-
-
 // Desafio 8
 function fizzBuzz(numbers) {
      
@@ -86,14 +82,27 @@ function fizzBuzz(numbers) {
 
 
 // Desafio 9
-function encode() {
+function encode(text) {
   
-  
-  // seu código aqui
+  text = text.replace(/a/g,'1');
+  text = text.replace(/e/g,'2');
+  text = text.replace(/i/g,'3');
+  text = text.replace(/o/g,'4');
+  text = text.replace(/u/g,'5');
+  return text;
 }
-function decode() {
-  // seu código aqui
+  console.log(encode('apenas mais uma frase de teste'))
+
+function decode(text) {
+  text = text.replace(/1/g,'a');
+  text = text.replace(/2/g,'e');
+  text = text.replace(/3/g,'i');
+  text = text.replace(/4/g,'o');
+  text = text.replace(/5/g,'u');
+  return text;
 }
+
+console.log(decode('1p2n1s m13s 5m1 fr1s2 d2 t2st2'))
 
 module.exports = {
   calcArea,
