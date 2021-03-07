@@ -7,8 +7,7 @@ function techList(namesTechs, name) {
   namesTechs.sort();
   for(let i in namesTechs){
     objTechList.push({
-      tech : namesTechs[i],
-      name : name
+      tech : namesTechs[i],name
     })
   }
   return objTechList;
