@@ -4,8 +4,49 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(arrayNumbers) {
   // seu código aqui
+  let unformatedPhoneNumber = [];
+  let formatedNumber = "";
+
+  let countNumberOfTimes = 0;
+  let parentisisNumber = "";
+  let firstNumbers = "";
+  let lastNumbers = "";
+
+  const messageErrorOne = "não é possível gerar um número de telefone com esses valores";
+
+  if (arrayNumbers.length !== 11) {
+    return "Array com tamanho incorreto."
+  }
+
+  for (let numbers in arrayNumbers) {
+    let actualNumber = arrayNumbers[numbers];
+    for (let compare in arrayNumbers) {
+      if (actualNumber === arrayNumbers[compare]) {
+        countNumberOfTimes += 1;
+      }
+    }
+    if (countNumberOfTimes >= 3 || arrayNumbers[numbers] < 0 || arrayNumbers[numbers] > 9) {
+      return messageErrorOne;
+    } else {
+      unformatedPhoneNumber.push(arrayNumbers[numbers]);
+    }
+    countNumberOfTimes = 0;
+  }
+
+  for (let format in unformatedPhoneNumber) {
+    if (format < 2) {
+      parentisisNumber += unformatedPhoneNumber[format];
+    }
+
+    else if (format >= 2 && format < 7) {
+      firstNumbers += unformatedPhoneNumber[format];
+    } else {
+      lastNumbers += unformatedPhoneNumber[format];
+    }
+  }
+  return "(" + parentisisNumber + ") " + firstNumbers + "-" + lastNumbers;
 }
 
 // Desafio 12

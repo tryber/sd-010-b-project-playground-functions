@@ -140,7 +140,7 @@ function fizzBuzz(nums) {
 function encode(uncodedString) {
   // seu código aqui
   let letrasCodificar = ['a', 'e', 'i', 'o', 'u'];
-  let algoritmo = [1, 2, 3, 4, 5];
+  let algoritmo = ['1', '2', '3', '4', '5'];
   let saveToCode = '';
   let saveCodedString = '';
 
@@ -159,15 +159,15 @@ function encode(uncodedString) {
 
 function decode(codedString) {
   // seu código aqui
-  let leAlgoritmo = [1, 2, 3, 4, 5];
-  let letrasDescodificar = ['a', 'e', 'i', 'o', 'u'];
+  let leAlgoritmo = ['1', '2', '3', '4', '5'];
+  let letrasToDecode = ['a', 'e', 'i', 'o', 'u'];
   let saveToDecode = '';
   let saveDecodedString = '';
 
   for (let indexDecode = 0; indexDecode < codedString.length; indexDecode += 1) {
     saveToDecode = codedString[indexDecode];
     for (let indexDecoding = 0; indexDecoding < leAlgoritmo.length; indexDecoding += 1) {
-      if (leAlgoritmo[indexDecoding] == saveToDecode) saveToDecode = letrasDescodificar[indexDecoding];
+      if (leAlgoritmo[indexDecoding] === saveToDecode) saveToDecode = letrasToDecode[indexDecoding];
     }
     saveDecodedString += saveToDecode;
   }
