@@ -1,8 +1,9 @@
 // Desafio 10
 function techList(tec, nom) {
   let obj = [];
-  for (let i = 0; i < tec.length; i++) {
-    obj[i] = { tech: tec[i], name: nom };
+  let newTec = tec.sort();
+  for (let i = 0; i < tec.length; i += 1) {
+    obj[i] = { tech: newTec[i], name: nom };
   }
   return obj;
 }
