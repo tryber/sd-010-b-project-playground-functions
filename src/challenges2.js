@@ -14,9 +14,7 @@ function techList(technology, name) {
     };
   }
   return register;
-
 }
-
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let phoneId = '';
@@ -72,13 +70,13 @@ function hydrate(string) {
   let numbers = 0;
   let totalNumber = 0;
   for (let index = 0; index < resultNumbers.length; index += 1) {
-    numbers = parseInt(resultNumbers[index]);
+    numbers = parseInt(resultNumbers[index], 10);
     totalNumber = totalNumber + numbers;
   }
   if (totalNumber === 1) {
     totalNumber = '1 copo de água';
   } else {
-    totalNumber = totalNumber + (' copos de água');
+    totalNumber = `${totalNumber} copos de água`;
   }
   return totalNumber;
 }
