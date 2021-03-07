@@ -70,7 +70,7 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // Utilizei o math.abs a partir de code review de projetos dos colegas da turma.
+  // Utilizei o math.abs a partir de code review que fiz do projeto do Matheus Gois
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
   if (cat1 < cat2) {
