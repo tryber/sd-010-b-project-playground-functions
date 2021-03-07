@@ -1,10 +1,11 @@
-
+// Desafio 1
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo === true) return true;
   return false;
   }
-
-  function calcArea(base, heigth) {
+ 
+// Desafio 2
+function calcArea(base, heigth) {
   let calculo = ((base * heigth) / 2);
   return calculo;
  }
@@ -19,7 +20,7 @@ function splitSentence(text) {
 function concatName(words) {
   return `${words[words.length - 1]}, ${words[0]}`;
 }
-// Desafio  
+// Desafio  5
 function footballPoints(wins, ties) {
   let totalPoints = ((wins * 3) + ties);
   return totalPoints;
@@ -48,7 +49,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return "os gatos trombam e o rato foge";
 }
-console.log(catAndMouse(4, 7, 4));
+
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
@@ -65,7 +66,7 @@ function fizzBuzz(array) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode(transLettersNumbers) {
   let number = '';
@@ -97,8 +98,6 @@ function encode(transLettersNumbers) {
 function decode() {
   // seu código aqui
 }
-
-
 
 module.exports = {
   calcArea,
