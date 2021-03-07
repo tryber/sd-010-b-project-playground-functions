@@ -10,7 +10,7 @@ function techList(technology, name) {
   for (let index = 0; index < technology.length; index += 1) {
     register[index] = {
       tech: technology[index],
-      name: name,
+      name: name
     };
   }
   return register;
@@ -60,7 +60,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 // foi usado o canal de youtube "All Things JavaScript LLC" no video https://www.youtube.com/watch?v=pfkkdzeyx6U
 function hydrate(string) {
-  let frase = string
+  let frase = string;
   let reg = /\d+/g;
   // função pra encontrar numero \ com um ou mais digitos d+ em toda expressão g
   let resultNumbers = frase.match(reg);
