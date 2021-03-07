@@ -69,14 +69,14 @@ function fizzBuzz() {
 function encode() {
   let word  = "aeiou";
   for (let i = 0; i < word.length; i += 1)
-  //return word.replaceAll('a','1').replaceAll('e','2').replaceAll('i','3').replaceAll('o','4').replaceAll('u','5');
-  return word.replaceAll('a','1','e','2','i','3','o','4','u','5');
+  return word.replaceAll('a','1').replaceAll('e','2').replaceAll('i','3').replaceAll('o','4').replaceAll('u','5');
+  //return word.replaceAll('a','1','e','2','i','3','o','4','u','5');
 }
 function decode() {
   let stringNumbers = "12345";
   for (let i = 0; i < word.length; i += 1)
-  //return word.replaceAll('1','a').replaceAll('2','e').replaceAll('3','i').replaceAll('4','o').replaceAll('5','u');
-  return stringNumbers.replaceAll('1','a','2','e','3','i','4','o','5','u');
+  return word.replaceAll('1','a').replaceAll('2','e').replaceAll('3','i').replaceAll('4','o').replaceAll('5','u');
+  //return stringNumbers.replaceAll('1','a','2','e','3','i','4','o','5','u');
 }
 
 module.exports = {
