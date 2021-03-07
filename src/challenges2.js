@@ -121,9 +121,8 @@ function hydrate(str) {
   }
   if (result <= 1) {
     return `${result} copo de água`;
-  } else {
-    return `${result} copos de água`;
   }
+  return `${result} copos de água`;
 }
 
 module.exports = {
