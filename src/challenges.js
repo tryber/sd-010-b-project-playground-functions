@@ -25,7 +25,8 @@ function concatName(arrayParameter) {
   // seu código aqui
   let searchLastName = arrayParameter[arrayParameter.length - 1];
   let searchFirstName = arrayParameter[0];
-  let resultConcat = searchLastName + ', ' + searchFirstName;
+  let separator = ', ';
+  let resultConcat = searchLastName + separator + searchFirstName;
   return resultConcat;
 }
 
@@ -55,8 +56,25 @@ function highestCount(terms) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let win = '';
+  if (mouse < cat1 && mouse < cat2 && cat1 < cat2) {
+    win = 'cat1';
+  } 
+  if (mouse < cat2 && mouse < cat1 && cat2 < cat1) {
+    win = 'cat2';
+  } 
+  if (mouse > cat1 && mouse > cat2 && cat1 > cat2) {
+    win = 'cat1';
+  } 
+  if (mouse > cat2 && mouse > cat1 && cat2 > cat1) {
+    win = 'cat2';
+  } 
+  if (mouse === cat1 && mouse === cat2 && cat1 === cat2) {
+    win = 'os gatos trombam e o rato foge';
+  }
+  return win;
 }
 
 // Desafio 8
