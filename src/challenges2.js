@@ -1,16 +1,16 @@
 // Desafio 10
 function techList(technology, name) {
   technology.sort();
-  // conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/   
+// conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/   
   if (technology.length === 0) {
     return 'Vazio!';
   }
   let register = [];
-  // analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array que fez dirença na hora de registrar os meus loopings.
+// analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array que fez diferença na hora de registrar os meus loopings.
   for (let index = 0; index < technology.length; index += 1) {
     register[index] = {
       tech: technology[index],
-      name: name
+      name: name,
     };
   }
   return register;
@@ -26,7 +26,7 @@ function generatePhoneNumber(numbers) {
     if (numbers[index] < 0 || numbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {// recebi a ajuda do colega Luiz Paulo Lima para que fizesse a comparação entre os index's
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) { // recebi a ajuda do colega Luiz Paulo Lima para que fizesse a comparação entre os index's
       if (numbers[index] === numbers[index2]) {
         show += 1;
       }
@@ -47,11 +47,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let result = true;
   if (partA < Math.abs(partB + partC) && Math.abs(partB - partC) < partA) {
     result = true;
-  }
-  else if (partB < Math.abs(partA + partC) && Math.abs(partA - partC) < partB) {
+  } else if (partB < Math.abs(partA + partC) && Math.abs(partA - partC) < partB) {
     result = true;
-  }
-  else if (partC < Math.abs(partA + partB) && Math.abs(partA - partB) < partC) {
+  } else if (partC < Math.abs(partA + partB) && Math.abs(partA - partB) < partC) {
     result = true;
   } else {
     result = false;
