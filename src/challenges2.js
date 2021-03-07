@@ -23,7 +23,6 @@ function generatePhoneNumber(phone) {
     let isValid = true;
     let moreThanThree = 0;
     let phoneSorted = phone.sort();
-    console.log(phoneSorted);
     let currentNumber = phoneSorted[0];
     for (let i = 0; i < phoneSorted.length; i++) {
       if (phoneSorted[i] != currentNumber) {
@@ -32,7 +31,7 @@ function generatePhoneNumber(phone) {
       } else {
         moreThanThree++;
       }
-      if (phoneSorted[i] < 0 || phoneSorted[i] > 9 || moreThanThree > 3) {
+      if (phoneSorted[i] < 0 || phoneSorted[i] > 9 || moreThanThree >= 3) {
         isValid = false;
         break;
       }
@@ -45,7 +44,7 @@ function generatePhoneNumber(phone) {
       phoneSorted.splice(9, 0, '-');
       return phoneSorted.join("");
     } else {
-      return 'não é possível gerar um número de telefone com esses valores.';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   } else {
     return "Array com tamanho incorreto.";
