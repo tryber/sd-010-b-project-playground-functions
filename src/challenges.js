@@ -30,6 +30,7 @@ function splitSentence(userEntry) {
 }
 
 // Desafio 4
+
 // Fonte utilizada para esta parte:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -53,7 +54,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayEntry) {
   let numeroMaior = 0;
   let numeroTotal = 0;
-  for (let i = 0; i < arrayEntry.length; i++) {
+  for (let i = 0; i < arrayEntry.length; i) {
     if (arrayEntry[i] > numeroMaior) {
       numeroMaior = arrayEntry[i];
     }
@@ -106,13 +107,12 @@ fizzBuzz([2, 15, 7, 9, 45])
 
 // Desafio 9
 function encode(auxEn) {
-  //utilizei: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch
-  //utilizei o método .split para que seja feito a separação de palavras por espaços vazios;
   let change = auxEn.split('');
+  
+
   for (let i = 0; i < auxEn.length; i += 1) {
-    switch (change[i].toLowercase()) {
-      // Usei .toLowerCase() para reduzir toda string pra minúsculo, por precaução;
-      //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+
+    switch (change[i]) {
       case 'a':
         change[i] = 1;
         break;
@@ -133,40 +133,39 @@ function encode(auxEn) {
         change[i] = 5;
         break;
     }
-  }
-  return change.join('') //Aqui o join reune as strings separadas pelo '.split()'
-}
+  }  return console.log(change.join(''))
+} 
+
 
 function decode(auxDe) {
-  // aqui, basicamente acontece o contrário da function anterior - apenas peguei o código e reescrevi
 
   let change = auxDe.split('');
+
   for (let i = 0; i < auxDe.length; i += 1) {
-    switch (change[i].toLowercase()) {
-      // Usei .toLowerCase() para reduzir toda string pra minúsculo, por precaução;
-      //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+
+    switch (change[i]) {
       case '1':
-        change[i] = 1;
+        change[i] = 'a';
         break;
 
       case '2':
-        change[i] = 2;
+        change[i] = 'e';
         break;
 
       case '3':
-        change[i] = 3;
+        change[i] = 'i';
         break;
 
       case '4':
-        change[i] = 4;
+        change[i] = 'o';
         break;
 
       case '5':
-        change[i] = 5;
+        change[i] = 'u';
         break;
     }
-  } return change.join('')
-}
+  } return console.log(change.join(''))
+} 
 
 module.exports = {
   calcArea,
