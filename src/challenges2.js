@@ -109,8 +109,11 @@ function hydrate(string) {
       storeNumbers += 5
     }
   }
-  return (`${storeNumbers} copos de água`)
-
+  if (storeNumbers > 1) {
+    return (`${storeNumbers} copos de água`)
+  } else {
+    return (`${storeNumbers} copo de água`)
+  }
 }
 
 module.exports = {
