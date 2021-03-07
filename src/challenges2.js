@@ -75,9 +75,26 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+  let nome = string;
+  let numb = /\d+/g;
+  let nam = nome.match(numb);
+  let arr = []
+    for(let index = 0; index < nam.length; index +=1){
+        arr.push(parseInt(nam[index]))
+    }
+/*  Peguei a refência de manipulação do Reduce por arrow function no: 
+  https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers */
+    
+  let soma = arr.reduce((a,b)=> a + b);
+      
+      if(soma!= 1){ 
+      return `${soma} copos de água`
+    } else {
+      return `${soma} copo de água`
+    }
+  }
+  // console.log(hydrate("1 cachaça"))
 
 module.exports = {
   generatePhoneNumber,
