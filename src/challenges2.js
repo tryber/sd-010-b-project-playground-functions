@@ -15,9 +15,57 @@ function techList(namesTechs, name) {
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Adão"));
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// function generatePhoneNumber() {
+// }
+function arrayLength (arrNumbers){
+  let result = false;
+  if (arrNumbers.length != 11){
+    result = true;
+  }
+  if (arrayLength) {return result};
 }
+function arrNumMaxMin (arrNumbers){
+  let result = false;
+  for  (let i in arrNumbers){
+    if (arrNumbers[i] < 0 || arrNumbers[i] > 9){
+      result = true;    
+    }
+  }
+  return result;
+}
+function countNum (arrNumbers, num){
+  let countNumber = 0;
+  for (let i in arrNumbers){
+    if (num == arrNumbers[i]){
+      countNumber += 1;
+    } 
+  }
+  return countNumber;
+}
+function checkNumberRepeated (arrNumbers){
+  let sumNumRepeated = 0;
+  let result = false;
+  for (let i in arrNumbers){
+    sumNumRepeated = countNum(arrNumbers, arrNumbers[i]);
+    if (sumNumRepeated >= 3){
+      result = true;
+     }
+  }
+  return result;
+}
+// resolução baseado na pesquisa https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+// resolução baseado na pesquisa https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+function generatePhoneNumber(arrNumbers){
+if (arrayLength(arrNumbers)) return 'Array com tamanho incorreto.';
+if (arrNumMaxMin(arrNumbers) || checkNumberRepeated(arrNumbers)) return 'não é possível gerar um número de telefone com esses valores';
+let joinArrNumbers = arrNumbers.join('');
+let DDD = joinArrNumbers.slice(0, 2);
+let prefix = joinArrNumbers.slice(2, 7);
+let sufix = joinArrNumbers.slice(7, 11);
+let numberPhone = '(' + DDD + ')' + prefix + '-' + sufix;
+return numberPhone;
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 9, 9, 1, 8, 7]));
 
 // Desafio 12
 function triangleCheck() {
