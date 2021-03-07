@@ -106,22 +106,16 @@ function fizzBuzz(arrayFB) {
 // Desafio 9
 function encode(auxEn) {
   let change = auxEn.split('');
-  for (let i = 0; i < auxEn.length; i += 1) {
-    switch (change[i]) {
-      case 'a':
-        change[i] = 1;
+  for (let i = 0; i < auxEn.length; i += 1) { switch (change[i]) {
+      case 'a': change[i] = 1;
         break;
-      case 'e':
-        change[i] = 2;
+      case 'e': change[i] = 2;
         break;
-      case 'i':
-        change[i] = 3;
+      case 'i': change[i] = 3;
         break;
-      case 'o':
-        change[i] = 4;
+      case 'o': change[i] = 4;
         break;
-      case 'u':
-        change[i] = 5;
+      case 'u': change[i] = 5;
         break;
     }
   }
@@ -130,22 +124,16 @@ function encode(auxEn) {
 
 function decode(auxDe) {
   let change = auxDe.split('');
-  for (let i = 0; i < auxDe.length; i += 1) {
-    switch (change[i]) {
-      case '1':
-        change[i] = 'a';
+  for (let i = 0; i < auxDe.length; i += 1) { switch (change[i]) {
+      case '1': change[i] = 'a';
         break;
-      case '2':
-        change[i] = 'e';
+      case '2': change[i] = 'e';
         break;
-      case '3':
-        change[i] = 'i';
+      case '3': change[i] = 'i';
         break;
-      case '4':
-        change[i] = 'o';
+      case '4': change[i] = 'o';
         break;
-      case '5':
-        change[i] = 'u';
+      case '5': change[i] = 'u';
         break;
     }
   }
