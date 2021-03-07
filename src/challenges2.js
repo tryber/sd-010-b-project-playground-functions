@@ -2,12 +2,13 @@
 function techList(namesTechs, name) {
   let objTechList = [];
   if (namesTechs.length == 0){
-    return "Vazio"
+    return "Vazio!"
   }
   namesTechs.sort();
   for(let i in namesTechs){
     objTechList.push({
-      tech : namesTechs[i],name
+      tech : namesTechs[i],
+      name : name
     })
   }
   return objTechList;
