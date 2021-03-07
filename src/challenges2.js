@@ -43,23 +43,18 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, LineB, LineC) {
   // seu código aqui
-  // Para tanto, tenha em mente algumas considerações:
-
-  // Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
-  
-  // Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
-  
-  // O retorno da sua função deverá ser um booleano.
-  
-  // Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-  
-  // O que será verificado:
-  
-  // Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
-  
-  // Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
-  
-  // Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
+   //formula do triangulo tirada do site https://brainly.LineCm.br/tarefa/34489130#:~:text=respondido-,Para%20LineCnstruir%20um%20tri%C3%A2ngulo%2C%20%C3%A9%20necess%C3%A1rio%20que%20a%20medida%20de,%C3%A9%20chamado%20condi%C3%A7%C3%A3o%20de%20exist%C3%AAncia.
+   if (lineA < Math.abs(lineB + lineC) && Math.abs(lineB - lineC) < lineA) {
+    return true;
+  }
+  else if (lineB < Math.abs(lineA + lineC) && Math.abs(lineA - lineC) < lineB) {
+    return true;
+  }
+  else if (lineC < Math.abs(lineA + lineB) && Math.abs(lineA - lineB) < lineC) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
