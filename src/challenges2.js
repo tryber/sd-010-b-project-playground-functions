@@ -7,17 +7,14 @@ function techList() {
 function generatePhoneNumber(arrayNumbers) {
   // seu código aqui
   let unformatedPhoneNumber = [];
-  let formatedNumber = "";
-
   let countNumberOfTimes = 0;
-  let parentisisNumber = "";
-  let firstNumbers = "";
-  let lastNumbers = "";
-
-  const messageErrorOne = "não é possível gerar um número de telefone com esses valores";
+  let parentisisNumber = '';
+  let firstNumbers = '';
+  let lastNumbers = '';
+  const messageErrorOne = 'não é possível gerar um número de telefone com esses valores';
 
   if (arrayNumbers.length !== 11) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.';
   }
 
   for (let numbers in arrayNumbers) {
@@ -38,20 +35,24 @@ function generatePhoneNumber(arrayNumbers) {
   for (let format in unformatedPhoneNumber) {
     if (format < 2) {
       parentisisNumber += unformatedPhoneNumber[format];
-    }
-
-    else if (format >= 2 && format < 7) {
+    } else if (format >= 2 && format < 7) {
       firstNumbers += unformatedPhoneNumber[format];
     } else {
       lastNumbers += unformatedPhoneNumber[format];
     }
   }
-  return "(" + parentisisNumber + ") " + firstNumbers + "-" + lastNumbers;
+  return '(' + parentisisNumber + ') ' + firstNumbers + '-' + lastNumbers;
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(linhaA, linhaB, linhaC) {
   // seu código aqui
+  let isTriangle = true;
+
+  if (Math.abs(linhaA > (linhaB + linhaC) || linhaB > (linhaA + linhaC) || linhaC > (linhaA + linhaB))) {
+    isTriangle = false;
+  }
+  return isTriangle;
 }
 
 // Desafio 13
