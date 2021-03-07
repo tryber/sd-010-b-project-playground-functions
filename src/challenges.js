@@ -22,9 +22,12 @@ function splitSentence(texto) {
 console.log(splitSentence("Lara Capila"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let primeiro = array[0];
+  let ultimo = array[array.length -1];
+  return ultimo + ', ' + primeiro;
 }
+console.log(concatName(['Lara', 'Karoline', 'De', 'Oliveira', 'Capila']));
 
 // Desafio 5
 function footballPoints() {
