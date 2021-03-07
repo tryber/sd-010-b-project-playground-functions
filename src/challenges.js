@@ -2,8 +2,6 @@
 function compareTrue(num1, num2) {
   if (num1 > 0 && num2 < 10){
     return true;
-  } else {
-    return false;
   }
 }
 
@@ -38,7 +36,7 @@ function catAndMouse() {
   
 // Desafio 8
 function fizzBuzz(numbers = []) {
-  for (let i = 0; i <= numbers; i += 1)
+  for (let i = 0; i >= numbers; i += 1)
   if (numbers % 3 === 0) {
     return "fizz";
   } else if (numbers % 5 === 0 ) {
@@ -48,8 +46,7 @@ function fizzBuzz(numbers = []) {
   } else {
     return "bug!";
   }    
-}
-  
+}  
 // Desafio 9
 function encode() {
   
