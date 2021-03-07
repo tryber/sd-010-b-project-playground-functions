@@ -20,8 +20,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(arr) {
   let tam = arr.length;
-  let conc = arr[tam - 1] + ', ' + arr[0];
-  return conc;
+  return arr[tam - 1] + ', ' + arr[0];;
 }
 
 // Desafio 5

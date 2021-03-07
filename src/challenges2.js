@@ -1,13 +1,13 @@
 // Desafio 10
 function techList(tech, name) {
-  let list = [];
   let obj = {
     tech,
     name,
   };
-  let newTech = obj.tech.sort();
-  for (let i in newTech) {
-    list.push({
+  let objList = [];
+  let list = obj.tech.sort();
+  for (let i in list) {
+    objList.push({
       tech: list[i],
       name,
     });
@@ -15,9 +15,8 @@ function techList(tech, name) {
   if (obj.tech.length <= 0) {
     return 'Vazio!';
   }
-  return list;
+  return objList;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
