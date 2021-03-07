@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(num1, num2) {
-  if (num1 > 0 && num2 < 10){
+function compareTrue(num1) {
+  if (num1 > 0 && num1 < 10){
     return true;
   }
 }
@@ -36,7 +36,7 @@ function catAndMouse() {
   
 // Desafio 8
 function fizzBuzz(numbers = []) {
-  for (let i = 0; i >= numbers; i += 1)
+  for (let i = 0; i = numbers; i += 1)
   if (numbers % 3 === 0) {
     return "fizz";
   } else if (numbers % 5 === 0 ) {
