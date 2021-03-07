@@ -46,18 +46,20 @@ function triangleCheck(lineA, lineB, lineC) {
    //formula do triangulo tirada do site https://brainly.LineCm.br/tarefa/34489130#:~:text=respondido-,Para%20LineCnstruir%20um%20tri%C3%A2ngulo%2C%20%C3%A9%20necess%C3%A1rio%20que%20a%20medida%20de,%C3%A9%20chamado%20condi%C3%A7%C3%A3o%20de%20exist%C3%AAncia.
    let partA = lineA;
    let partB = lineB;
-   let partC = lineC
+   let partC = lineC;
+   let result = true;
    if (partA < Math.abs(partB + partC) && Math.abs(partB - partC) < partA) {
-    return true;
+    result = true;
   }
   else if (partB < Math.abs(partA + partC) && Math.abs(partA - partC) < partB) {
-    return true;
+    result =  true;
   }
   else if (partC < Math.abs(partA + partB) && Math.abs(partA - partB) < partC) {
-    return true;
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result;
 }
 
 // Desafio 13
