@@ -1,13 +1,14 @@
 // Desafio 10
 function techList(technology, name) {
   technology.sort();
-  if (technology.length === 0) { // conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/ 
+// conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/   
+  if (technology.length === 0) {
     return 'Vazio!';
   }
   let register = [];
-  // analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array que fez dirença na hora de registrar os meus loopings.
+// analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array que fez dirença na hora de registrar os meus loopings.
   for (let index = 0; index < technology.length; index += 1) {
-    register.push({
+    register = ({
       tech: technology[index],
       name: name
     });
@@ -26,7 +27,7 @@ function generatePhoneNumber(numbers) {
     let show = 0;
     if (numbers[index] < 0 || numbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
-    }
+    } 
     for (let index2 = 0; index2 < numbers.length; index2 += 1) {// recebi a ajuda do colega Luiz Paulo Lima para que fizesse a comparação entre os index's
       if (numbers[index] === numbers[index2]) {
         show += 1;
@@ -37,7 +38,6 @@ function generatePhoneNumber(numbers) {
     }
   }
   phoneId = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
-  return phoneId;
   return phoneId;
 }
 // Desafio 12
@@ -71,7 +71,7 @@ function hydrate(string) {
   // função para pegar a string e fazer o comparativo com a formula acima
   let numbers = 0;
   let totalNumber = 0;
-  for (index = 0; index < resultNumbers.length; index += 1) {
+  for (let index = 0; index < resultNumbers.length; index += 1) {
     numbers = parseInt(resultNumbers[index]);
     totalNumber = totalNumber + numbers;
   }

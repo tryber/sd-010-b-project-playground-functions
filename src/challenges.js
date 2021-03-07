@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(first, second) {
   let resultCompare;
-  if (first && second === true) { 
+  if (first && second === true) {
     resultCompare = true;
   } else {
     resultCompare = false;
@@ -52,7 +52,7 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  /* foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs e 
+/* foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs e 
   https://qastack.com.br/programming/4652104/convert-a-negative-number-to-a-positive-one-in-javascript#:~:text=46-,Math.,regulares%3A%20x%20%3D%20%2Dx%20.&text=O%20sinal%20de%20menos%20(%2D),n%C3%BAmeros%20negativos%20em%20n%C3%BAmeros%20positivos.
   para entender o conceito de Math.abs */
   let situation;
