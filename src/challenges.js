@@ -16,9 +16,9 @@ let splitSentence = (phrase) => {
 }
 
 // Desafio 4
-names = [];
+names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 let concatName = () => {
-  return (names.length - 1) + ',' + names[0];
+  return (names.length - 1).concat  + ',' + names[0];
 }
 
 // Desafio 5
