@@ -51,7 +51,7 @@ function generatePhoneNumber(phone) {
     return "Array com tamanho incorreto.";
   }
 }
-console.log(generatePhoneNumber([1, 2, 3, 6, 5, 6, 7, 8, 1, 0, 6]));
+// console.log(generatePhoneNumber([1, 2, 3, 6, 5, 6, 7, 8, 1, 0, 6]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) {
