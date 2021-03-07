@@ -107,19 +107,19 @@ function fizzBuzz(arrayFB) {
 function encode(auxEn) {
   let change = auxEn.split('');
   for (let i = 0; i < auxEn.length; i += 1) {
-    if (change[i] == 'a') {
+    if (change[i] === 'a') {
       change[i] = 1;
     }
-    if (change[i] == 'e') {
+    if (change[i] === 'e') {
       change[i] = 2;
     }
-    if (change[i] == 'i') {
+    if (change[i] === 'i') {
       change[i] = 3;
     }
     if (change[i] == 'o') {
       change[i] = 4;
     }
-    if (change[i] == 'u') {
+    if (change[i] === 'u') {
       change[i] = 5;
     }
   }
@@ -129,22 +129,20 @@ function encode(auxEn) {
 function decode(auxDe) {
   let change = auxDe.split('');
   for (let i = 0; i < auxDe.length; i += 1) {
-    switch (change[i]) {
-      case '1':
-        change[i] = 'a';
-        break;
-      case '2':
-        change[i] = 'e';
-        break;
-      case '3':
-        change[i] = 'i';
-        break;
-      case '4':
-        change[i] = 'o';
-        break;
-      case '5':
-        change[i] = 'u';
-        break;
+    if (change[i] === 1) {
+      change[i] = 'a';
+    }
+    if (change[i] === 2) {
+      change[i] = 'e';
+    }
+    if (change[i] === 3) {
+      change[i] = 'i';
+    }
+    if (change[i] == 4) {
+      change[i] = 'o';
+    }
+    if (change[i] === 5) {
+      change[i] = 'u';
     }
   }
   return console.log(change.join(''));
