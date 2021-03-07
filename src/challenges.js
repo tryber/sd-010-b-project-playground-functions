@@ -71,9 +71,28 @@ function highestCount(array) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionMouse = mouse;
+  let positionCat1 = cat1;
+  let positionCat2 = cat2;
+
+  if ( positionMouse > positionCat1 && positionCat1 > positionCat2) {
+    console.log('cat1')
+  }
+  else if (positionMouse > positionCat2 && positionCat2 > positionCat1) {
+    console.log('cat2')
+  }
+  else if (positionCat1 == positionCat2) {
+    console.log("os gatos trombam e o rato foge")
+  }
+  else if (positionMouse < positionCat1 && positionCat1 < positionCat2) {
+    console.log("cat1")
+  }
+  else if (positionMouse < positionCat2 && positionCat2 < positionCat1) {
+    console.log('cat2')
+  }
 }
+console.log(catAndMouse(10, 7, 6))
 
 // Desafio 8
 function fizzBuzz() {
@@ -82,7 +101,19 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let novaFrase = [];
+  for (let index = 0; index < frase.length; index++) {
+    novaFrase.push(frase[index]);
+  }
+  for (let key in codes) {
+    // frase.split(novaPalavra[novaPalavra]).join(codes[key])
+    for (let index = 0; index < novaFrase.length; index += 1) {
+      if (key == novaFrase[index]) {
+        novaFrase[index] = codes[key];
+      }
+    }
+  }
+  return novaFrase.join('');
 }
 function decode() {
   // seu código aqui
