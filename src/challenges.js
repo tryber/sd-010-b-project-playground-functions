@@ -21,7 +21,6 @@ function splitSentence(string) {
 function concatName(stringName) {
   return stringName[stringName.length - 1] + ',' + stringName[0];
 }
-let stringName = ['foguete', 'não', 'tem', 'ré'];
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -31,7 +30,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {}
-  
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let catnumber1 = Math.abs(mouse - cat1);
@@ -41,7 +40,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (catnumber2 < catnumber1) {
     return 'cat2';
   }
-    return 'Os gatos trombam e o rato foge'; 
+  return 'Os gatos trombam e o rato foge';
 }
 // Desafio 8
 function fizzBuzz() {
@@ -67,4 +66,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
