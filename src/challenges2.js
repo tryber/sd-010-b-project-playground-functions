@@ -68,11 +68,11 @@ function hydrate(stringReceived) {
   }
 
   if (calculateHydratation > 1) {
-    hydrateMessage = calculateHydratation + ' copos de água';
+    hydrateMessage = ' copos de água';
   } else {
-    hydrateMessage = calculateHydratation + ' copo de água'
+    hydrateMessage = ' copo de água';
   }
-  return hydrateMessage;
+  return calculateHydratation + hydrateMessage;
 }
 
 module.exports = {
