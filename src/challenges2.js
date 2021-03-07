@@ -44,13 +44,16 @@ function generatePhoneNumber(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
    //formula do triangulo tirada do site https://brainly.LineCm.br/tarefa/34489130#:~:text=respondido-,Para%20LineCnstruir%20um%20tri%C3%A2ngulo%2C%20%C3%A9%20necess%C3%A1rio%20que%20a%20medida%20de,%C3%A9%20chamado%20condi%C3%A7%C3%A3o%20de%20exist%C3%AAncia.
-   if (lineA < Math.abs(lineB + lineC) && Math.abs(lineB - lineC) < lineA) {
+   let partA = lineA;
+   let partB = lineB;
+   let partC = lineC
+   if (partA < Math.abs(partB + partC) && Math.abs(partB - partC) < partA) {
     return true;
   }
-  else if (lineB < Math.abs(lineA + lineC) && Math.abs(lineA - lineC) < lineB) {
+  else if (partB < Math.abs(partA + partC) && Math.abs(partA - partC) < partB) {
     return true;
   }
-  else if (lineC < Math.abs(lineA + lineB) && Math.abs(lineA - lineB) < lineC) {
+  else if (partC < Math.abs(partA + partB) && Math.abs(partA - partB) < partC) {
     return true;
   } else {
     return false;
