@@ -15,9 +15,11 @@ function calcArea(base, height) {
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(texto) {
+  let result = texto.split(" ");
+  return result;
 }
+console.log(splitSentence("Lara Capila"));
 
 // Desafio 4
 function concatName() {
