@@ -30,7 +30,7 @@ function generatePhoneNumber(number) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   } 
-  return ('(' + number[0] + number[1] + ')' + ' ' + number[2] + number[3] + number[4] + number[5] + number[6] + '-' + number[7] + number[8] + number[9] + number[10]) 
+  return ('(' + number[0] + number[1] + ')' + ' ' + number[2] + number[3] + number[4] + number[5] + number[6] + '-' + number[7] + number[8] + number[9] + number[10]);
 }
 
 // Desafio 12
@@ -67,7 +67,7 @@ function hydrate(frase) {
   }
   if (total === 1) {
     mensagem = '1 copo de água';
-  } else if (total > 1)   {
+  } else if (total > 1) {
     mensagem = total + ' copos de água';
   }
   return mensagem;
