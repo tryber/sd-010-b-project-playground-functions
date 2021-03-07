@@ -59,9 +59,9 @@ function highestCount(arrayEntry) {
       numeroMaior = arrayEntry[i];
     }
   }
-  for (let j = 0; j < arrayEntry.length; j++) {
+  for (let j = 0; j < arrayEntry.length; j += 1) {
     if (numeroMaior === arrayEntry[j]) {
-      numeroTotal++;
+      numeroTotal += 1;
     }
   }
   return numeroTotal;
@@ -76,15 +76,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let aim = 0;
 
   if (gotcha1 > gotcha2) {
-    aim = "cat2";
+    aim = 'cat2';
   } else if (gotcha2 > gotcha1) {
-    aim = "cat1";
+    aim = 'cat1';
   } else if (gotcha1 === gotcha2) {
-    aim = "os gatos trombam e o rato foge";
-  }
-  return aim;
+    aim = 'os gatos trombam e o rato foge';
+  } return aim;
 }
-
 
 // Desafio 8
 function fizzBuzz(arrayFB) {
@@ -101,34 +99,27 @@ function fizzBuzz(arrayFB) {
       emptyArray.push('bug!');
     }
   }
-  return console.log(emptyArray)
+  return console.log(emptyArray);
 }
-fizzBuzz([2, 15, 7, 9, 45])
+
 
 // Desafio 9
 function encode(auxEn) {
   let change = auxEn.split('');
-  
-
   for (let i = 0; i < auxEn.length; i += 1) {
-
     switch (change[i]) {
       case 'a':
         change[i] = 1;
         break;
-
       case 'e':
         change[i] = 2;
         break;
-
       case 'i':
         change[i] = 3;
         break;
-
       case 'o':
         change[i] = 4;
         break;
-
       case 'u':
         change[i] = 5;
         break;
@@ -136,30 +127,22 @@ function encode(auxEn) {
   }  return console.log(change.join(''))
 } 
 
-
 function decode(auxDe) {
-
   let change = auxDe.split('');
-
   for (let i = 0; i < auxDe.length; i += 1) {
-
     switch (change[i]) {
       case '1':
         change[i] = 'a';
         break;
-
       case '2':
         change[i] = 'e';
         break;
-
       case '3':
         change[i] = 'i';
         break;
-
       case '4':
         change[i] = 'o';
         break;
-
       case '5':
         change[i] = 'u';
         break;
