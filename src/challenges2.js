@@ -1,10 +1,11 @@
 // Desafio 10
 function techList(technology, name) {
   technology.sort();
-  if (technology.length === 0) {//conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/ 
+  if (technology.length === 0) { // conceito de array vazio lido no site https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/ 
     return 'Vazio!';
   }
-  let register = [];//analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array 
+  let register = [];
+  // analisei o raciocinio da colega Leticia Galvão - T10B na questao,  porque não estava registrando todos os looping vi que ao inves de objeto ela usava um array que fez dirença na hora de registrar os meus loopings.
   for (let index = 0; index < technology.length; index += 1) {
     register.push({
       tech: technology[index],
@@ -26,7 +27,7 @@ function generatePhoneNumber(numbers) {
     if (numbers[index] < 0 || numbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {//recebi a ajuda do colega Luiz Paulo Lima para que fizesse a comparação entre os index's
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {// recebi a ajuda do colega Luiz Paulo Lima para que fizesse a comparação entre os index's
       if (numbers[index] === numbers[index2]) {
         show += 1;
       }
@@ -41,7 +42,7 @@ function generatePhoneNumber(numbers) {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  //formula do triangulo tirada do site https://brainly.LineCm.br/tarefa/34489130#:~:text=respondido-,Para%20LineCnstruir%20um%20tri%C3%A2ngulo%2C%20%C3%A9%20necess%C3%A1rio%20que%20a%20medida%20de,%C3%A9%20chamado%20condi%C3%A7%C3%A3o%20de%20exist%C3%AAncia.   let partA = lineA;
+  // formula do triangulo tirada do site https://brainly.LineCm.br/tarefa/34489130#:~:text=respondido-,Para%20LineCnstruir%20um%20tri%C3%A2ngulo%2C%20%C3%A9%20necess%C3%A1rio%20que%20a%20medida%20de,%C3%A9%20chamado%20condi%C3%A7%C3%A3o%20de%20exist%C3%AAncia.   let partA = lineA;
   let partA = lineA;
   let partB = lineB;
   let partC = lineC;
@@ -65,9 +66,9 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let frase = string
   let reg = /\d+/g;
-  //função pra encontrar numero \ com um ou mais digitos d+ em toda expressão g
+  // função pra encontrar numero \ com um ou mais digitos d+ em toda expressão g
   let resultNumbers = frase.match(reg);
-  //função para pegar a string e fazer o comparativo com a formula acima
+  // função para pegar a string e fazer o comparativo com a formula acima
   let numbers = 0;
   let totalNumber = 0;
   for (index = 0; index < resultNumbers.length; index += 1) {
