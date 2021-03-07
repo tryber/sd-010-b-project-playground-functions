@@ -10,9 +10,9 @@ function techList(technology, name) {
       tech: technology[index],
       name: name
     });
-
-    return register;
   }
+    return register;
+  
 }
 
 // Desafio 11
@@ -35,12 +35,14 @@ function generatePhoneNumber(numbers) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  phoneId = `(${numbers[0]}${numbers[1]}) ${numbers[2]} + ${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  phoneId = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  return phoneId;
   return phoneId;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   //formula do triangulo tirada do site https://brainly.LineCm.br/tarefa/34489130#:~:text=respondido-,Para%20LineCnstruir%20um%20tri%C3%A2ngulo%2C%20%C3%A9%20necess%C3%A1rio%20que%20a%20medida%20de,%C3%A9%20chamado%20condi%C3%A7%C3%A3o%20de%20exist%C3%AAncia.   let partA = lineA;
+  let partA = lineA;
   let partB = lineB;
   let partC = lineC;
   let result = true;
