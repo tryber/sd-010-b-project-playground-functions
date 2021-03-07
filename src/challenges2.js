@@ -11,8 +11,8 @@ function techList(technology, name) {
       name: name
     });
   }
-    return register;
-  
+  return register;
+
 }
 
 // Desafio 11
@@ -68,33 +68,18 @@ function hydrate(string) {
   //função pra encontrar numero \ com um ou mais digitos d+ em toda expressão g
   let resultNumbers = frase.match(reg);
   //função para pegar a string e fazer o comparativo com a formula acima
-  //   Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
-
-  // Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
-
-  // String recebida:
-  //   "1 cerveja"
-  // String retornada:
-  //   "1 copo de água"
-  // String recebida:
-  //   "1 cachaça, 5 cervejas e 1 copo de vinho"
-  // String retornada:
-  //   "7 copos de água"
-  // String recebida:
-  //   "1 cachaça, 5 cervejas e 1 copo de vinho"
-  // String retornada:
-  //   "7 copos de água"
-  // Notas
-
-  // Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
-
-  // O número na frente de cada bebida está no intervalo entre 1 e 9.
-
-  // Dica: pesquise por algo similar a get all integers inside a string js.
-
-  // O que será verificado:
-
-  // Retorne a sugestão de quantos copos de água deve-se beber ao receber uma string
+  let numbers = 0;
+  let totalNumber = 0;
+  for (index = 0; index < resultNumbers.length; index += 1) {
+    numbers = parseInt(resultNumbers[index]);
+    totalNumber = totalNumber + numbers;
+  }
+  if (totalNumber === 1) {
+    totalNumber = '1 copo de água';
+  } else {
+    totalNumber = totalNumber + (' copos de água');
+  }
+  return totalNumber;
 }
 
 module.exports = {
