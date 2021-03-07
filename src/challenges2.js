@@ -1,11 +1,21 @@
 // Desafio 10
 function techList(tec, nom) {
-  let obj = [];
-  tec = tec.sort();
-  for (let i = 0; i < tec.length; i += 1) {
-    obj[i] = { tech: tec[i], name: nom };
+  let list = [];
+  let obj = {
+    tec,
+    nom,
+  };
+  let newTec = obj.tec.sort();
+  for (let i in newTec) {
+    list.push({
+      tech: list[i],
+      nom,
+    })
   }
-  return obj;
+  if (tec.length <= 0) {
+    return 'Vazio!'
+  }
+  return list;
 }
 
 // Desafio 11
