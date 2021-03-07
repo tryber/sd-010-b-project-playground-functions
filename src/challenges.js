@@ -174,7 +174,7 @@ function decode(string3) {
     else if (armazem[i2] === "2"){
       armazem2.push("e")
     } else if (armazem[i2] === "3"){
-      armazem2.push("c")
+      armazem2.push("i")
     } else if (armazem[i2]  === "4"){
       armazem2.push("o")
     } else if (armazem[i2] === "5"){
