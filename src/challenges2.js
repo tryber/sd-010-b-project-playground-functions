@@ -1,13 +1,13 @@
 // Desafio 10
 
-function techList(array, nome) {
+function techList(array, name) {
   if (array.length === 0) return 'Vazio!';
   array = array.sort();
   const newArray = [];
   for (let index = 0; index < array.length; index += 1) {
     newArray.push({
       tech: array[index],
-      nome,
+      name,
     });
   }
   return newArray;
