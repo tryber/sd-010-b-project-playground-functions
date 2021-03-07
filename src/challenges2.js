@@ -27,21 +27,24 @@ function checkNumbers(array) {
   return true;
 }
 
-function validateTimes(array) {
-  let counter = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    let element = array[index];
-    counter = 0;
-    for (let key in array) {
-      if (array[key] === element) {
-        counter += 1;
-      }
-    }
-    if (counter >= 3) {
-      return false;
+function counter(item, array) {
+  let count = 0;
+  for (let number of array) {
+    if (item === number) {
+      count += 1;
     }
   }
-  return true;
+  return count;
+}
+
+function validateTimes(array) {
+  for (let key of array) {
+    let answer = counter(key, array);
+    if (answer >= 3) {
+      return false;
+    }
+    return true;
+  }
 }
 
 function buildOutput(array) {
@@ -63,7 +66,6 @@ function buildOutput(array) {
   }
   return output;
 }
-// console.log(validateTimes([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -77,7 +79,7 @@ function generatePhoneNumber(array) {
   return buildOutput(numbers);
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 function checkSum(a, b, c) {
   if ((a < b + c) && (b < a + c) && c < b + a) {
