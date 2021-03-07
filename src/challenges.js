@@ -109,21 +109,17 @@ function encode(auxEn) {
   for (let i = 0; i < auxEn.length; i += 1) {
     if (change[i] === 'a') {
       change[i] = 1;
-    }
-    if (change[i] === 'e') {
+    } if (change[i] === 'e') {
       change[i] = 2;
-    }
-    if (change[i] === 'i') {
+    } if (change[i] === 'i') {
       change[i] = 3;
-    }
-    if (change[i] == 'o') {
+    } if (change[i] === 'o') {
       change[i] = 4;
-    }
-    if (change[i] === 'u') {
+    } if (change[i] === 'u') {
       change[i] = 5;
     }
   }
-  return console.log(change.join(''));
+  return change.join('');
 }
 
 function decode(auxDe) {
@@ -131,21 +127,17 @@ function decode(auxDe) {
   for (let i = 0; i < auxDe.length; i += 1) {
     if (change[i] === 1) {
       change[i] = 'a';
-    }
-    if (change[i] === 2) {
+    } if (change[i] === 2) {
       change[i] = 'e';
-    }
-    if (change[i] === 3) {
+    } if (change[i] === 3) {
       change[i] = 'i';
-    }
-    if (change[i] == 4) {
+    } if (change[i] === 4) {
       change[i] = 'o';
-    }
-    if (change[i] === 5) {
+    } if (change[i] === 5) {
       change[i] = 'u';
     }
   }
-  return console.log(change.join(''));
+  return change.join('');
 }
 
 module.exports = {
