@@ -1,34 +1,35 @@
 // Desafio 1
-// let a = 1, b = 1;
+// let a = true, b = true;
 // console.log(compareTrue(a, b));
-function compareTrue(fisrtValue, secondValue) {
-  if ((fisrtValue == true) && (secondValue == true)) {
-    return true;
-  } else {
-    return false;
-  }
+function compareTrue(firstValue, secondValue) {
+  // if (fisrtValue && secondValue) {
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  return (firstValue && secondValue);
 }
 
 // Desafio 2
 // let base = 51, height = 1;
 // console.log(calcArea(base, height));
 function calcArea(base, height) {
-  return ((base * height)/2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 // let sentence = "vamo que vamo";
 // console.log(splitSentence(sentence));
 function splitSentence(sentence) {
-  let words = [];
-  return words = sentence.split(" "); // I found the split() function at https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+  // let words = [];
+  return sentence.split(' '); // I found the split() function at https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
 }
 
 // Desafio 4
 // let array = ['captain', 'my', 'captain'];
 // console.log(concatName(array));
 function concatName(contact) {
-  return contact[contact.length - 1].concat(', ',  contact[0]); // I found the concat() function at https://www.w3schools.com/jsref/jsref_concat_string.asp
+  return contact[contact.length - 1].concat(', ', contact[0]); // I found the concat() function at https://www.w3schools.com/jsref/jsref_concat_string.asp
 }
 
 // Desafio 5
@@ -39,21 +40,30 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// let numbers = [0, 0, 0];
+// let numbers = [6, 7, 9, 9, 7, 7];
 // console.log(highestCount(numbers));
-function highestCount(arrayNumbers) {
-  let bigger = 0, times = 0;
+function getBigger(arrayNumbers) {
+  let bigger = 0;
   for (let i = 0; i < arrayNumbers.length; i++) {
     if (arrayNumbers[i] >= bigger) {
       bigger = arrayNumbers[i];
     }
   }
-  for (let i = 0; i < arrayNumbers.length; i++) {
-    if (bigger === arrayNumbers[i]) {
+  return bigger;
+}
+
+function manyTimes(arrayNumbers) {
+  let times = 0;
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (getBigger(arrayNumbers) === arrayNumbers[i]) {
       times++;
     }
   }
-  return times
+  return times;
+}
+
+function highestCount(arrayNumbers) {
+  return manyTimes(arrayNumbers);
 }
 
 // Desafio 7
