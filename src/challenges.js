@@ -103,7 +103,6 @@ function fizzBuzz(arrayFB) {
   return console.log(emptyArray);
 }
 
-
 // Desafio 9
 function encode(auxEn) {
   let change = auxEn.split('');
