@@ -1,19 +1,19 @@
 // Desafio 10
-function techList(tec, nom) {
+function techList(tech, name) {
   let list = [];
   let obj = {
-    tec,
-    nom,
+    tech,
+    name,
   };
-  let newTec = obj.tec.sort();
-  for (let i in newTec) {
+  let newTech = obj.tech.sort();
+  for (let i in newTech) {
     list.push({
       tech: list[i],
-      nom,
-    })
+      name,
+    });
   }
   if (tec.length <= 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   }
   return list;
 }
