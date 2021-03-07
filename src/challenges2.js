@@ -15,24 +15,67 @@ function techList(techArray, yourName) {
   }
   return objArr;
 }
-console.log(techList([], 'Lucas'));
 
 // Desafio 11
-function generatePhoneNumber(arrNumbers) {
-  /* let phoneNumber = [];
-  let openParenthesis = '(';
-  let closeParenthesis = ')';
-  let blank = ' ';
-  let dash = '-';
-  phoneNumber.push(openParenthesis);
-  //xNNxxNNNNNxNNNN
-  for (let index = 0; index < arrNumbers.length; index += 1) {
-    if (index >= 0 && index<=1) {
-      
+/*
+* Recorri a esses sites pra entender o funcionamento da função slice() e splice().
+*Link: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice
+*Link: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/add-items-using-splice
+*/
+function isNotBetween0And9(arrNumbers) {
+  for (const index in arrNumbers) {
+    if (arrNumbers[index] > 9 || arrNumbers[index] < 0) {
+      return true;
     }
-  } */
+  }
+  return false;
 }
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+function isRepeatedValues(arrNumbers) {
+  for (const index in arrNumbers) {
+    let count = 0;
+    let valueToBeChecked = arrNumbers[index];
+    for (const index2 in arrNumbers) {
+      if (arrNumbers[index2] === valueToBeChecked) count += 1;
+    }
+    if (count > 2) return true;
+  }
+  return false;
+}
+
+function isPhoneNumberArray(arrNumbers) {
+  let response;
+  if (arrNumbers.length !== 11) response = 'Array com tamanho incorreto.';
+  else if (isNotBetween0And9(arrNumbers) || isRepeatedValues(arrNumbers)) {
+    response = 'não é possível gerar um número de telefone com esses valores';
+  } else response = true;
+  return response;
+}
+
+function generatePhoneNumber(arrNumbers) {
+  let aux;
+  const responseIsPhoneArray = isPhoneNumberArray(arrNumbers);
+  if (responseIsPhoneArray !== true) {
+    return isPhoneNumberArray(arrNumbers);
+  }
+
+  for (let index = 0; index < arrNumbers.length; index += 1) {
+    if (index === 0) {
+      aux = arrNumbers.slice(index, index + 1);
+      arrNumbers.splice(index, 1, `(${aux}`);
+    }
+    if (index === 2) {
+      aux = arrNumbers.slice(index, index + 1);
+      arrNumbers.splice(index, 1, `) ${aux}`);
+    }
+    if (index === 7) {
+      aux = arrNumbers.slice(index, index + 1);
+      arrNumbers.splice(index, 1, `-${aux}`);
+    }
+  }
+  return arrNumbers.join('');
+}
+console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
