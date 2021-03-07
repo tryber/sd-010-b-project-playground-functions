@@ -20,13 +20,32 @@ function techList(array,name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numero) {
+  let resultado ;
+  
+  if(numero === 11){
+
+  } 
+  if else (numero < 11)
+  {
+
+  }
+  else {
+    resultado = "Array com tamanho incorreto."
+  }
+
+  console.log(resultado)
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  let resultado ;
+  if ((lineA+lineB > lineC&&lineC+lineB > lineA&&lineC+lineA > lineB )&& (Math.abs(lineA-lineB) < lineC && Math.abs(lineC-lineB) < lineA && Math.abs(lineC-lineA )< lineB ))  {
+    resultado = true
+  } else{
+    resultado = false
+  }
+  console.log(resultado)
 }
 
 // Desafio 13
