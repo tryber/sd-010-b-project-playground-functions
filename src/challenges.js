@@ -60,8 +60,33 @@ function fizzBuzz(array) {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(transLettersNumbers) {
+  let number = '';
+  for (let index = 0; index < transLettersNumbers.length; index += 1) {
+    switch (transLettersNumbers[index]) {
+      case 'a':
+        number += 1;
+        break;
+      case 'e':
+        number += 2;
+        break;
+      case 'i':
+        number += 3;
+        break;
+      case 'o':
+        number += 4;
+        break;
+      case 'u':
+        number += 5;
+        break;
+      default:
+        number += transLettersNumbers[index];
+        break;
+    }
+  }
+  return number;
+}
+function decode(transNumbersLetter) {
 }
 function decode() {
   // seu código aqui
