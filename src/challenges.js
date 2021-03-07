@@ -81,6 +81,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+//about replace https://www.w3schools.com/jsref/jsref_replace.asp
 function encode(str) {
   // seu código aqui
   for (let index = 0; index < str.length; index += 1) {

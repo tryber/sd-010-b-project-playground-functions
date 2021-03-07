@@ -66,6 +66,9 @@ function generatePhoneNumber(array) {
       validNumber = validNumber.replace('x', element);
     });
   }
+  //had a lot of problems with replace method and array, this link helped a lot
+  //https://www.freecodecamp.org/news/javascript-foreach-how-to-loop-through-an-array-in-js/
+
   return validNumber;
 }
 
@@ -84,6 +87,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(str) {
   // seu código aqui
+  // about regular expressions https://www.youtube.com/watch?v=pfkkdzeyx6U
   let count = 0;
   let regular = /\d+/g;
   let regularArray = str.match(regular);
