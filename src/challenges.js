@@ -54,7 +54,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayEntry) {
   let numeroMaior = 0;
   let numeroTotal = 0;
-  for (let i = 0; i < arrayEntry.length; i) {
+  for (let i = 0; i < arrayEntry.length; i += 1) {
     if (arrayEntry[i] > numeroMaior) {
       numeroMaior = arrayEntry[i];
     }
@@ -81,7 +81,8 @@ function catAndMouse(mouse, cat1, cat2) {
     aim = 'cat1';
   } else if (gotcha1 === gotcha2) {
     aim = 'os gatos trombam e o rato foge';
-  } return aim;
+  }
+  return aim;
 }
 
 // Desafio 8
@@ -124,8 +125,9 @@ function encode(auxEn) {
         change[i] = 5;
         break;
     }
-  }  return console.log(change.join(''))
-} 
+  }
+  return console.log(change.join(''))
+}
 
 function decode(auxDe) {
   let change = auxDe.split('');
@@ -147,8 +149,9 @@ function decode(auxDe) {
         change[i] = 'u';
         break;
     }
-  } return console.log(change.join(''))
-} 
+  }
+  return console.log(change.join(''));
+}
 
 module.exports = {
   calcArea,
