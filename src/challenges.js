@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringName) {
- let nameConcat = stringName[stringName.length - 1] +',' + stringName[0];
+ let nameConcat = stringName[stringName.length - 1] +', ' + stringName[0];
  return nameConcat;
 }
 // Desafio 5
@@ -51,9 +51,10 @@ function highestCount(values) {
 }
 
 // Desafio 7
+// utilizei math.abs a partir de pesquisas na internet e orientação de alguma thread no slack
 function catAndMouse(mouse, cat1, cat2) {
-  let catnumber1 = Math.abs(mouse - cat1);
-  let catnumber2 = Math.abs(mouse - cat2);
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
   if (catnumber1 < catnumber2) {
     return 'cat1';
   } if (catnumber2 < catnumber1) {
@@ -64,17 +65,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let result = 0;
+  let result = [];
   for (let n in numbers){
     if (numbers[n] % 3 === 0 && numbers[n] % 5 === 0) {
-     result = 'bugfizzBuz!';
-    } if (numbers[n] % 3 === 0) {
-      result = 'fizz';
-    } if ( numbers[n] % 5 === 0) {
-      result = 'buzz';
-  }
-  result = 'bug!';
+     result.push ('fizzBuz!');
+    } else if (numbers[n] % 3 === 0) {
+      result.push ('fizz');
+    } else if ( numbers[n] % 5 === 0) {
+      result.push ('buzz');
+  }else
+  result.push ('bug!');
 }
+return result;
 }
   console.log(fizzBuzz([2,15,7,9,45]));
 
