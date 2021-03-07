@@ -59,9 +59,8 @@ function catAndMouse(mouse, cat1, cat2) {
   else {
     return "os gatos trombam e o rato foge";
   }
-} console.log(catAndMouse(0, 3, 2))
+}
 
-let array = [7, 9];
 // Desafio 8
 function fizzBuzz(array) {
   let arrayIndx = [];
@@ -82,12 +81,54 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(string) {
+  let array = " ";
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === "a") {  
+      array[index] += "1"; 
+    }
+    else if (string[index] === "e") {
+      array[index] += "2";
+    }
+    else if (string[index] === "i") {
+      array[index] += "3"; 
+    }
+    else if (string[index] === "o") {
+      array[index] += "4";
+    }
+    else if (string[index] === "u") {
+      array[index] += "5";
+    }
+    else {
+      array[index] += string[index]
+    }
+  } return array;
+} console.log(encode("hi there"));
+
+function decode(string) {
+  let array = " ";
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === "1") {
+      array[index] = "a" + array[index];
+    }
+    else if (string[index] === "2") {
+      array[index] = "b" + array[index];
+    }
+    else if (string[index] === "3") {
+      array[index] = "c" + array[index];
+    }
+    else if (string[index] === "4") {
+      array[index] = "o" + array[index];
+    }
+    else if (string[index] === "5") {
+      array[index] = "u" + array[index];
+    }
+    else {
+      array[index] += string[index];
+    }
+  }
+  return array;  
+} console.log(decode("h1 th3r3"))
 
 module.exports = {
   calcArea,
