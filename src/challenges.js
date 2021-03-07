@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(num1) {
-  if (num1 > 0 && num1 < 10){
+  if (num1 > 0 && num1 < 10) {
     return true;
   }
 }
 
 // Desafio 2
-function calcArea(base, heigth) {
+let calcArea = (base, heigth) => {
   return (base * heigth) / 2;
 }
 
