@@ -65,46 +65,49 @@ function catAndMouse(mouse, cat1, cat2) {
 // auxiliary functions Desafio 8
 function divisibleByThree(number) {
   if (number % 3 === 0) {
-    return 'fizz';
+    return true;
   }
   return false;
 }
 
 function divisibleByFive(number) {
   if (number % 5 === 0) {
-    return 'buzz';
+    return true;
   }
   return false;
 }
 
 function divisibleByThreeAndFive(number) {
   if ((number % 3 === 0) && (number % 5 === 0)) {
-    return 'fizzBuzz';
+    return true;
   }
+  return false;
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   let output = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (divisibleByThreeAndFive(array[index])) {
+    switch (true) {
+    case (divisibleByThreeAndFive(array[index])):
       output.push('fizzBuzz');
-    } else if (divisibleByThree(array[index])) {
+      break;
+    case (divisibleByThree(array[index])):
       output.push('fizz');
-    } else if (divisibleByFive(array[index])) {
+      break;
+    case (divisibleByFive(array[index])):
       output.push('buzz');
-    } else {
+      break;
+    default:
       output.push('bug!');
     }
   }
   return output;
-  // seu código aqui
 }
-// Create a new fizzbuzz using an array to call the auxiliary functions
-// let callFunctions = [divisibleByThreeAndFive(array[index]), divisibleByThree(array[index]), divisibleByFive(array[index])];
-
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+// função auxiliar do Encode
 function findVowel(char) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < vowels.length; index += 1) {
@@ -113,6 +116,7 @@ function findVowel(char) {
     }
   }
 }
+
 // Desafio 9
 function encode(string) {
   let answer = '';
