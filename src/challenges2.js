@@ -98,12 +98,33 @@ function triangleCheck(lineA, lineB, lineC){
   }
   return result;
 }
-console.log(triangleCheck(10, 5, 15))
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // resolução baseado na pesquisa https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+  // Expressões Regulares /\d+/ = pesquisa por números dentro da string retornando
+  // os números de 1 ou mais algarismos (por causa do +)
+  // g = global => faz a pesquisa não parar na primeira ocorrência, sendo assim busca
+  // por números do começo ao fim da string
+  // variavel.match() => retorna uma array de informações com base no parâmetro de pesquisa
+  // indicado dentro da função (no caso a ExpReg = /\d+/g)
+  let expReg = /\d+/g;
+  let numbers = string.match(expReg);
+  let sum = 0;
+  let result = '';
+  for (let i in numbers){
+    sum += parseInt(numbers[i]);
+  }
+  if (sum == 1){
+    result = sum + ' copo de água';
+  } else {
+    result = sum + ' copos de água';
+  }
+  return result
 }
+  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+  
 
 module.exports = {
   generatePhoneNumber,
