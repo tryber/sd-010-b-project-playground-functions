@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue() {
- 
 }
 
 // Desafio 2
@@ -33,16 +32,16 @@ function catAndMouse() {
 }
   
 // Desafio 8
-function fizzBuzz() {
-  for (var i = 1; i <= n; i+= 1) {
+function fizzBuzz(numbers) {
+  for (var i = 1; i <= numbers; i+= 1) {
     if (i % 3 === 0) {
-        console.log( "fizz");
-    }else if (i % 5 === 0) {
-        console.log("buzz");
-    }else if (i % 3 === 0 && i % 5 === 0) {
-        console.log("fizzBuzz");
-    }else {
-        console.log("bug");
+        return "fizz";
+    } else if (i % 5 === 0) {
+        return "buzz";
+    } else if (i % 3 === 0 && i % 5 === 0) {
+        return "fizzBuzz";
+    } else {
+        return "bug!";
     }
   }
 }
