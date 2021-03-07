@@ -44,7 +44,7 @@ function highestCount(values) {
   let higher = higherValue(values);
   for (let j in values) {
     if (values[j] === higher) {
-       acres +1 ;
+       acres ++ ;
     }
   }
   return acres;
@@ -55,9 +55,9 @@ function highestCount(values) {
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(mouse - cat1);
   cat2 = Math.abs(mouse - cat2);
-  if (catnumber1 < catnumber2) {
+  if (cat1 < cat2) {
     return 'cat1';
-  } if (catnumber2 < catnumber1) {
+  } if (cat2 < cat1) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
@@ -68,7 +68,7 @@ function fizzBuzz(numbers) {
   let result = [];
   for (let n in numbers){
     if (numbers[n] % 3 === 0 && numbers[n] % 5 === 0) {
-     result.push ('fizzBuz!');
+     result.push ('fizzBuz');
     } else if (numbers[n] % 3 === 0) {
       result.push ('fizz');
     } else if ( numbers[n] % 5 === 0) {
@@ -78,7 +78,6 @@ function fizzBuzz(numbers) {
 }
 return result;
 }
-  console.log(fizzBuzz([2,15,7,9,45]));
 
 // Desafio 9
 function encode(string1) {
