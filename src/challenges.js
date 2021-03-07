@@ -32,18 +32,15 @@ function catAndMouse() {
 }
   
 // Desafio 8
-function fizzBuzz(numbers) {
-  for (var i = 1; i <= numbers; i+= 1) {
-    if (i % 3 === 0) {
-        return "fizz";
-    } else if (i % 5 === 0) {
-        return "buzz";
-    } else if (i % 3 === 0 && i % 5 === 0) {
-        return "fizzBuzz";
-    } else {
-        return "bug!";
-    }
-  }
+function fizzBuzz (numbers) {
+  if ( numbers % 3 === 0 && numbers % 5 === 0)
+    return "fizz";
+  else if (numbers % 3 === 0)
+    return "buzz";
+  else if (numbers % 5 === 0 ) 
+    return "fizzBuzz";
+  else
+    return "bug!";    
 }
   
 // Desafio 9
