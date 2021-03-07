@@ -75,39 +75,40 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function returnNumberOfString(str){
+function returnNumberOfString(str) {
   let numEcontrado = [];
   for (let index = 0; index < str.length; index += 1) {
     switch (str[index]) {
-      case '0':
+    case '0':
       numEcontrado.push(str[index]);
       break;
-      case '1':
+    case '1':
       numEcontrado.push(str[index]);
       break;
-      case '2':
+    case '2':
       numEcontrado.push(str[index]);
       break;
-      case '3':
+    case '3':
       numEcontrado.push(str[index]);
       break;
-      case '4':
+    case '4':
       numEcontrado.push(str[index]);
       break;
-      case '5':
+    case '5':
       numEcontrado.push(str[index]);
       break;
-      case '6':
+    case '6':
       numEcontrado.push(str[index]);
       break;
-      case '7':
+    case '7':
       numEcontrado.push(str[index]);
       break;
-      case '8':
+    case '8':
       numEcontrado.push(str[index]);
       break;
-      case '9':
+    case '9':
       numEcontrado.push(str[index]);
+      break;
     }
   }
   return numEcontrado;
