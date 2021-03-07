@@ -62,9 +62,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = Math.abs(mouse - cat2);
   let catName = "";
   if (distCat1 < distCat2) {
-    catName = "Cat1";
+    catName = "cat1";
   } else if (distCat2 < distCat1) {
-    catName = "Cat2";
+    catName = "cat2";
   } else {
     catName = "Cats estão na mesma distância do Mouse";
   }
