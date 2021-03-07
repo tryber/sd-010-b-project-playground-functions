@@ -15,9 +15,9 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(fulName) {
-  return fulName[fulName.length - 1] + ', ' + fulName[0];
+  return `${fulName[fulName.length - 1]}, ${fulName[0]}`;
 }
-
+// console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
@@ -31,27 +31,31 @@ function highestCount(values) {
   let indexes = [];
   while (i !== -1) {
     indexes.push(i);
-    i = values.indexOf(max, ++i);
+    i = values.indexOf(max, i += 1);
   }
   return indexes.length;
 }
+// console.log(highestCount([9, 1, 9, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanceCat1 = Math.abs(cat1 - mouse);
-  distanceCat2 = Math.abs(cat2 - mouse);
-  return (distanceCat1 != distanceCat2 ? (distanceCat1 < distanceCat2 ? "cat1" : "cat2") : "os gatos trombam e o rato foge");
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
+  let leastDist = (distanceCat1 < distanceCat2 ? 'cat1' : 'cat2');
+  return (distanceCat1 != distanceCat2 ? leastDist : 'os gatos trombam e o rato foge');
 }
+// console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzBug = [];
-  for (let i = 0; i < numbers.length; i++) {
-    fizzBuzzBug[i] = (numbers[i] % 3 == 0 && numbers[i] % 5 == 0 ? "fizzBuzz" : (numbers[i] % 3 == 0 ? "fizz" : (numbers[i] % 5 == 0 ? "buzz" : "bug!")));
+  for (let i = 0; i < numbers.length; i += 1) {
+    // fizzBuzzBug[i] = (numbers[i] % 3 == 0 && numbers[i] % 5 == 0 ? "fizzBuzz" : (numbers[i] % 3 == 0 ? "fizz" : (numbers[i] % 5 == 0 ? "buzz" : "bug!")));
+    fizzBuzzBug[i] = (numbers[i] % 3 === 0 && numbers[i] % 5 === 0 ? 'fizzBuzz' : false) || (numbers[i] % 3 === 0 ? 'fizz' : false) || (numbers[i] % 5 === 0 ? 'buzz' : 'bug!');
   }
   return fizzBuzzBug;
 }
-
+// console.log(fizzBuzz([5, 10, 2, 15, 7, 9, 45]));
 // Desafio 9
 // a função a seguir funciona, porém não passa no teste automatizado.
 // function encode(sentence) {
@@ -75,11 +79,11 @@ function encode(sentence) {
   let vowels = 'aeiou';
   // let replace;
   // let regex;
-  for (let i = 0; i < vowels.length; i++) {
-    for (let j = 0; j < sentence.length; j++) {
+  for (let i = 0; i < vowels.length; i += 1) {
+    for (let j = 0; j < sentence.length; j += 1) {
       // replace = sentence[j];
       // regex = new RegExp(replace,"g");
-      if (sentence[j] == vowels[i]) {
+      if (sentence[j] === vowels[i]) {
         sentence = sentence.replace(vowels[i], i + 1);
       }
     }
@@ -107,11 +111,11 @@ function encode(sentence) {
 // }
 
 function decode(encSentence) {
-  let vowels = 'aeiou'
+  let vowels = 'aeiou';
   let numbers = '12345';
-  for (let i = 0; i < numbers.length; i++) {
-    for (let j = 0; j < encSentence.length; j++) {
-      if (encSentence[j] == numbers[i]) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    for (let j = 0; j < encSentence.length; j += 1) {
+      if (encSentence[j] === numbers[i]) {
         encSentence = encSentence.replace(numbers[i], vowels[i]);
       }
     }
