@@ -100,8 +100,8 @@ function fizzBuzz(arrayFB) {
       emptyArray.push('bug!');
     }
   }
-  return console.log(emptyArray);
-}
+  return emptyArray;
+} console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(auxEn) {
@@ -125,20 +125,21 @@ function encode(auxEn) {
 function decode(auxDe) {
   let change = auxDe.split('');
   for (let i = 0; i < auxDe.length; i += 1) {
-    if (change[i] === 1) {
+    if (change[i] === '1') {
       change[i] = 'a';
-    } if (change[i] === 2) {
+    } if (change[i] === '2') {
       change[i] = 'e';
-    } if (change[i] === 3) {
+    } if (change[i] === '3') {
       change[i] = 'i';
-    } if (change[i] === 4) {
+    } if (change[i] === '4') {
       change[i] = 'o';
-    } if (change[i] === 5) {
+    } if (change[i] === '5') {
       change[i] = 'u';
     }
   }
   return change.join('');
 }
+decode('h3 th2r2')
 
 module.exports = {
   calcArea,
