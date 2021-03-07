@@ -112,10 +112,15 @@ function lessThanSumGreaterThanAbs(a, b, c) {
 }
 
 // Desafio 13
-// let orderPad = "9 cachaça, 5 cervejas e 4 copo de vinho";
+// let orderPad = "0 cachaça, 0 cervejas e 0 copo de vinho";
 // console.log(hydrate(orderPad));
 function hydrate(orderPad) {
-  return cupsOfWater(getDigits(orderPad)) + " copos de água";
+  let water = cupsOfWater(getDigits(orderPad));
+  if (water > 1) {
+    return water + " copos de água";
+  } else {
+    return water + " copo de água";
+  }
 }
 
 // I took the logic of getDigits and cupsOfWater from this video: https://youtu.be/pfkkdzeyx6U
