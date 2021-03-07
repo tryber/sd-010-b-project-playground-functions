@@ -57,10 +57,20 @@ function highestCount(numbers) {
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
+  let catName = "";
+  if (distCat1 < distCat2) {
+    catName = "Cat1";
+  } else if (distCat2 < distCat1) {
+    catName = "Cat2";
+  } else {
+    catName = "Cats estão na mesma distância do Mouse";
+  }
+  return catName;
 }
-
+console.log(catAndMouse(2, 4, 4));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
