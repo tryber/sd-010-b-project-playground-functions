@@ -9,9 +9,9 @@ function techList(tech, name) {
   }
 
   for (let index = 0; index < sortArray.length; index += 1) {
-    finalArrayWithObjects.push({tech: sortArray[index], name});
+    finalArrayWithObjects.push({ tech: sortArray[index], name });
   }
-    return finalArrayWithObjects;
+  return finalArrayWithObjects;
 }
 
 // Desafio 11
@@ -23,6 +23,7 @@ function generatePhoneNumber(arrayNumbers) {
   let firstNumbers = '';
   let lastNumbers = '';
   const messageErrorOne = 'não é possível gerar um número de telefone com esses valores';
+  const symbols = ['(', ') ', '-'];
 
   if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -30,16 +31,15 @@ function generatePhoneNumber(arrayNumbers) {
 
   for (let numbers = 0; numbers < arrayNumbers.length; numbers += 1) {
     let actualNumber = arrayNumbers[numbers];
-    for (let compare = 0; compare < arrayNumbers; compare += 1) {
+    for (let compare = 0; compare < arrayNumbers.length; compare += 1) {
       if (actualNumber === arrayNumbers[compare]) {
         countNumberOfTimes += 1;
       }
     }
     if (countNumberOfTimes >= 3 || arrayNumbers[numbers] < 0 || arrayNumbers[numbers] > 9) {
       return messageErrorOne;
-    } else {
-      unformatedPhoneNumber.push(arrayNumbers[numbers]);
     }
+    unformatedPhoneNumber.push(arrayNumbers[numbers]);
     countNumberOfTimes = 0;
   }
 
@@ -52,7 +52,7 @@ function generatePhoneNumber(arrayNumbers) {
       lastNumbers += unformatedPhoneNumber[format];
     }
   }
-  return '(' + parentisisNumber + ') ' + firstNumbers + '-' + lastNumbers;
+  return symbols[0] + parentisisNumber + symbols[1] + firstNumbers + symbols[2] + lastNumbers;
 }
 
 // Desafio 12
@@ -74,7 +74,7 @@ function hydrate(stringReceived) {
   let calculateHydratation = 0;
   let hydrateMessage = '';
 
-  for (let calculate in extractNumbers) {
+  for (let calculate = 0; calculate < extractNumbers.length; calculate += 1) {
     calculateHydratation += parseInt(extractNumbers[calculate]);
   }
 
