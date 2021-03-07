@@ -19,9 +19,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringName) {
-  return '${stringName[stringName.length - 1]}, ${stringName[0]}';
+ let nameConcat = stringName[stringName.length - 1] +',' + stringName[0];
+ return nameConcat;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = ((wins * 3) + (ties * 1));
@@ -59,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } if (catnumber2 < catnumber1) {
     return 'cat2';
   }
-  return 'Os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -74,7 +74,7 @@ function fizzBuzz(numbers) {
       result = 'buzz';
   }
   result = 'bug!';
-  }
+}
 }
   console.log(fizzBuzz([2,15,7,9,45]));
 
