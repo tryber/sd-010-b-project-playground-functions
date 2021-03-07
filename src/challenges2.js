@@ -34,16 +34,15 @@ function sortByTech(a, b) {
 
 // Desafio 11
 // (12) 34567-8901
-// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(generatePhoneNumber(numbers));
-
-function generatePhoneNumber(numbers) {
-  if (numbers.length !== 11) {
+// let amountOfDrinks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(amountOfDrinks));
+function generatePhoneNumber(amountOfDrinks) {
+  if (amountOfDrinks.length !== 11) {
     return "Array com tamanho incorreto.";
-  } else if (verifyArrayNumbers(numbers) === 3 || verify09(numbers) !== 0) {
+  } else if (verifyArrayNumbers(amountOfDrinks) === 3 || verify09(amountOfDrinks) !== 0) {
     return "não é possível gerar um número de telefone com esses valores";
   } else {
-    return phoneNumber(numbers);
+    return phoneNumber(amountOfDrinks);
   }
 }
 
@@ -89,8 +88,8 @@ function phoneNumber(array) {
 }
 
 // Desafio 12
-let a = 10, b = 14, c = 8;
-console.log(triangleCheck(a, b, c));
+// let a = 10, b = 14, c = 8;
+// console.log(triangleCheck(a, b, c));
 function triangleCheck(lineA, lineB, lineC) {
   if (lessThanSumGreaterThanAbs(lineA, lineB, lineC) === true ) {
     return true;
@@ -99,6 +98,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
+// I found the Math.abs() function at https://www.w3schools.com/jsref/jsref_abs.asp
 function lessThanSumGreaterThanAbs(a, b, c) {
   if ((a < (b + c)) && (a > Math.abs(b - c))) {
     return true;
@@ -111,13 +111,26 @@ function lessThanSumGreaterThanAbs(a, b, c) {
   }
 }
 
-// function greaterThanAbs(a, b, c) {
-//   if ()
-// }
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// let orderPad = "9 cachaça, 5 cervejas e 4 copo de vinho";
+// console.log(hydrate(orderPad));
+function hydrate(orderPad) {
+  return cupsOfWater(getDigits(orderPad)) + " copos de água";
+}
+
+// I took the logic of getDigits and cupsOfWater from this video: https://youtu.be/pfkkdzeyx6U
+function getDigits(orderPad) {
+  let regExp = /\d+/g; // regExp: Regular Expression, to get amount of drinks
+  let amountOfDrinks = orderPad.match(regExp); // Add digits to the amountOfDrinks array
+  return amountOfDrinks;
+}
+
+function cupsOfWater(digits) {
+  let total = 0;
+  for (let i = 0; i < digits.length; i++) {
+    total += parseInt(digits[i]);
+  }
+  return total;
 }
 
 module.exports = {
