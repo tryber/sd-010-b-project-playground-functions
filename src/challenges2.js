@@ -75,24 +75,23 @@ function generatePhoneNumber(arrNumbers) {
   }
   return arrNumbers.join('');
 }
-console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let sumLinesAB = lineA + lineB;
-  let sumLinesAC = lineA + lineC;
-  let sumLinesBC = lineB + lineC;
-  let diffLinesAB = Math.abs(lineA - lineB);
-  let diffLinesAC = Math.abs(lineA - lineC);
-  let diffLinesBC = Math.abs(lineB - lineC);
+  let sumABCompareC = (lineA + lineB) > lineC;
+  let sumACCompareB = (lineA + lineC) > lineB;
+  let sumBCCompareA = (lineB + lineC) > lineA;
+  let diffABCompareC = Math.abs(lineA - lineB) < lineC;
+  let diffACCompareB = Math.abs(lineA - lineC) < lineB;
+  let diffBCCompareA = Math.abs(lineB - lineC) < lineA;
   let isTriangle;
 
-  if ((lineA > sumLinesBC) || (lineB > sumLinesAC) || (lineC > sumLinesAB)) isTriangle = false;
-  else if ((lineA < diffLinesBC) || (lineB < diffLinesAC) || (lineC < diffLinesAB)) isTriangle = false;
+  if (!sumABCompareC || !sumACCompareB || !sumBCCompareA) isTriangle = false;
+  else if (!diffABCompareC || !diffACCompareB || !diffBCCompareA) isTriangle = false;
   else isTriangle = true;
   return isTriangle;
 }
-
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
