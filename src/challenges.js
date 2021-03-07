@@ -71,20 +71,22 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function fizzBuzz(numbers) {
-  let result = [];//recebi a ajuda do Carlos Vieira - T10b para fazer o refatoramento
+  let result = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers % 3 === 0) {
-      result += 'fizz'; // foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push para rever o conceito de push
-    } else if (numbers % 5 === 0) {
-      result += 'buzz';
-    } else if (numbers % 3 === 0 && numbers % 5 === 0) {
-      result += 'fizzBuzz';
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
+      result.push('fizz');// foi utilizado o site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push para rever o conceito de push
+    } else if (numbers[index] % 5 === 0 && numbers[index] % 3 !== 0) {
+      result.push('buzz');
+    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      result.push('fizzBuzz');
     } else {
-      result += 'bug!';
+      result.push('bug!');
     }
-    return result;
   }
   return result;
+
+
+
 }
 // Desafio 9
 function codeMaker(codeInfo) {
