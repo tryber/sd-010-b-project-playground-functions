@@ -62,7 +62,7 @@ let joinArrNumbers = arrNumbers.join('');
 let DDD = joinArrNumbers.slice(0, 2);
 let prefix = joinArrNumbers.slice(2, 7);
 let sufix = joinArrNumbers.slice(7, 11);
-let numberPhone = '(' + DDD + ')' + prefix + '-' + sufix;
+let numberPhone = '(' + DDD + ')' + ' ' + prefix + '-' + sufix;
 return numberPhone;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 9, 9, 1, 8, 7]));
