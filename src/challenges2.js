@@ -19,14 +19,14 @@ function generatePhoneNumber(arrayNumbers) {
   if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
     let cont = 0;
-    for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
-      if (arrayNumbers[index] === arrayNumbers[index2]) {
+    for (let j = 0; j < arrayNumbers.length; j += 1) {
+      if (arrayNumbers[i] === arrayNumbers[j]) {
         cont += 1;
       }
     }
-    if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9 || cont >= 3) {
+    if (arrayNumbers[i] < 0 || arrayNumbers[i] > 9 || cont >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
@@ -65,13 +65,13 @@ function hydrate(frase) {
   }
   let total = 0;
   for (let key in numbers) {
-    total = total + numbers[key];
+    total += numbers[key];
   }
 
   if (total === 1) {
     mensagem = '1 copo de água';
 
-  } else if (total > 1) {
+  } else if (total > 1)   {
     mensagem = total + ' copos de água';
   }
   return mensagem;
