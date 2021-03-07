@@ -52,7 +52,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  for (var i = 1; i <= n; i+= 1) {
+    if (i % 3 === 0) {
+        console.log( "fizz");
+    }else if (i % 5 === 0) {
+        console.log("buzz");
+    }else if (i % 3 === 0 && i % 5 === 0) {
+        console.log("fizzBuzz");
+    }else {
+        console.log("bug");
+    }
+    }
 }
 
 // Desafio 9
