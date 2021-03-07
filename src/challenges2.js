@@ -43,16 +43,21 @@ function validateTimes(array) {
   }
   return true;
 }
+
 function buildOutput(array) {
   let output = '';
   for (let index = 0; index < array.length; index += 1) {
-    if (index === 0) {
+    switch (true) {
+    case (index === 0):
       output += `(${array[index]}`;
-    } else if (index === 1) {
-      output += `${array[index]}) `;
-    } else if (index === 6) {
+      break;
+    case (index === 1):
+      output += `${array[index]})`;
+      break;
+    case (index === 6):
       output += `${array[index]}-`;
-    } else {
+      break;
+    default:
       output += `${array[index]}`;
     }
   }
@@ -72,7 +77,7 @@ function generatePhoneNumber(array) {
   return buildOutput(numbers);
 }
 
-console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 function checkSum(a, b, c) {
   if ((a < b + c) && (b < a + c) && c < b + a) {
