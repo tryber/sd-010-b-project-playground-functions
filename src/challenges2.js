@@ -38,29 +38,29 @@ function techList(techs, name) {
 // console.log(generatePhoneNumber(amountOfDrinks));
 function verifyArrayNumbers(array) {
   let countRepeated = new Array(10).fill(0); // I found how to fill an array with 0 at https://medium.com/@wisecobbler/4-ways-to-populate-an-array-in-javascript-836952aea79f
-  let aux = 0;
+  let threeOrMore = false;
   for (let i = 0; i < array.length; i += 1) {
     countRepeated[array[i]] += 1;
     if (countRepeated[array[i]] >= 3) {
-      aux = 1;
+      threeOrMore = true;
     }
   }
-  return aux;
+  return threeOrMore;
 }
 
 function verify09(array) {
-  let aux = 0;
+  let outOfRange = false;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9) {
-      aux = 1;
+      outOfRange = true;
     }
   }
-  return aux;
+  return outOfRange;
 }
 
 function phoneNumber(array) {
   let template = '(**) *****-****';
-  let j = 0;
+  let j = -1;
   for (let i = 0; i < template.length; i += 1) {
     if (template[i] === '*') {
       template = template.replace(template[i], array[j += 1]);
@@ -73,7 +73,7 @@ function generatePhoneNumber(amountOfDrinks) {
   let reply;
   if (amountOfDrinks.length !== 11) {
     reply = 'Array com tamanho incorreto.';
-  } else if (verifyArrayNumbers(amountOfDrinks) === 3 || verify09(amountOfDrinks) !== 0) {
+  } else if (verifyArrayNumbers(amountOfDrinks) || verify09(amountOfDrinks)) {
     reply = 'não é possível gerar um número de telefone com esses valores';
   } else {
     reply = phoneNumber(amountOfDrinks);
