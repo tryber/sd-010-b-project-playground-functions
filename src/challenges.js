@@ -45,14 +45,18 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount(array) {
+function highestValue(array) {
   let maiorValor = 0;
-  let aparicoes = 0;
   for (let index = 0; index < array.length; index += 1) { // primeiro encontro o maior valor
     if (maiorValor < array[index]) {
       maiorValor = array[index];
     }
   }
+  return maiorValor;
+}
+function highestCount(array) {
+  let aparicoes = 0;
+  let maiorValor = highestValue(array);
   for (let a = 0; a < array.length; a += 1) {
     if (maiorValor === array[a]) {
       aparicoes += 1;
@@ -66,23 +70,15 @@ console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 === 0) {
-    cat1 += mouse;
-  } else {
-    cat1 -= mouse;
-  }
-  if (cat2 === 0) {
-    cat2 += mouse;
-  } else {
-    cat2 -= mouse;
-  }
+  // Utilizei o math.abs a partir de code review de projetos dos colegas da turma.
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
   if (cat1 < cat2) {
     return 'cat1';
-  } else if (cat2 < cat1) {
+  } if (cat2 < cat1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(1, 3, 2));
 console.log(catAndMouse(10, 4, 22));

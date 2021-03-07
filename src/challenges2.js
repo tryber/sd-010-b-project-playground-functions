@@ -4,7 +4,7 @@ function techList(array, name) {
   for (let index = 0; index < array.sort().length; index += 1) {
     listaDeTecnologias.push({
       tech: array[index],
-      name: name,
+      name,
     });
   }
   if (listaDeTecnologias.length === 0) {
@@ -15,6 +15,7 @@ function techList(array, name) {
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
+
 function generatePhoneNumber(array) {
   let telefone = '';
   if (array.length !== 11) {
@@ -32,7 +33,8 @@ function generatePhoneNumber(array) {
     }
     telefone += array[i];
   }
-  return `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
+  return `(${telefone.substring(0, 2)}) ${telefone.substring(2, 7)}-${telefone.substring(7, 11)}`;
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
@@ -52,10 +54,10 @@ console.log(triangleCheck(6, 1, 10));
 // Desafio 13
 function hydrate(string) {
   let regex = /\d+/g;
-  let numeros = string.match(regex);
+  let numeros = string.match(regex); // pego apenas os numeros da string em forma de lista
   let soma = 0;
   for (let i = 0; i < numeros.length; i += 1) {
-    soma += parseInt(numeros[i], 10);
+    soma += parseInt(numeros[i], 10); // transforma os numeros(str) da lista em int e soma
   }
   if (soma === 1) {
     return `${soma} copo de água`;
