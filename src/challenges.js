@@ -19,8 +19,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringName) {
- let nameConcat = stringName[stringName.length - 1] +', ' + stringName[0];
- return nameConcat;
+  let nameConcat = stringName[stringName.length - 1] + ', ' + stringName[0];
+  return nameConcat;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 function higherValue(highers) {
   let higher = 0;
   for (let n in highers) {
-    if( highers[n] > higher) {
+    if (highers[n] > higher) {
       higher = highers[n];
     }
   }
@@ -44,7 +44,7 @@ function highestCount(values) {
   let higher = higherValue(values);
   for (let j in values) {
     if (values[j] === higher) {
-       acres ++ ;
+      acres++;
     }
   }
   return acres;
@@ -66,34 +66,22 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  for (let n in numbers){
+  for (let n in numbers) {
     if (numbers[n] % 3 === 0 && numbers[n] % 5 === 0) {
-     result.push ('fizzBuz');
+      result.push('fizzBuz');
     } else if (numbers[n] % 3 === 0) {
-      result.push ('fizz');
-    } else if ( numbers[n] % 5 === 0) {
-      result.push ('buzz');
-  }else
-  result.push ('bug!');
-}
+      result.push('fizz');
+    } else if (numbers[n] % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+  }
+  }
 return result;
 }
 
 // Desafio 9
 function encode(string1) {
-  let vogais = ['a', 'e', 'i', 'o', 'u']
-  let numeros = [1, 2, 3, 4, 5]
-  for (let l in string1){
-    for(let v in vogais){
-      for (let n in numeros){
-       (vogais[v] == numeros[n])
-    
-    if( string1[l] === vogais[v]){
-      return string1[n]
-    }
-  }
-}
-}
 }
 console.log(encode(['hi, there']));
 function decode() {
