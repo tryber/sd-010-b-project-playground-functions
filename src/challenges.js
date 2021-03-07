@@ -132,11 +132,38 @@ function fizzBuzz(fbList) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function test(obj, sentence) {
+  let result = '';
+  for (let i in sentence) {
+    if (obj[sentence[i]] !== undefined) {
+      result += obj[sentence[i]];
+    } else {
+      result += sentence[i];
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+function encode(sentence) {
+  let coding = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  return test(coding, sentence);
+}
+
+function decode(sentence) {
+  let coding = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  return test(coding, sentence);
 }
 
 module.exports = {
