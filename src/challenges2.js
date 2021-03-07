@@ -19,23 +19,25 @@ function techList(technology, name) {
 // Desafio 11
 function generatePhoneNumber() {
   let phoneId = '';
-  let show = 0;
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto';
+  } else {
+    phoneId = '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
   }
   for (let index = 0; index < numbers.length; index += 1) {
+    let show = 0;
     if (numbers[index] < 0 || numbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let index2 = 0; index2 < numbers.length; index2 += 1)
+    for (let index2 = 0; index2 < numbers.length; index2 += 1) {//recebi a ajuda do colega Luiz Paulo Lima para que fizesse a comparação entre os index's
       if (numbers[index] === numbers[index2]) {
         show += 1;
       }
+    }
+    if (show >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
-  if (show >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  phoneId = '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
   return phoneId;
 }
 // Desafio 12
