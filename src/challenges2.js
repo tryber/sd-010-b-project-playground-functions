@@ -38,13 +38,17 @@ function counter(item, array) {
 }
 
 function validateTimes(array) {
+  let answerArray = [];
   for (let key of array) {
     let answer = counter(key, array);
     if (answer >= 3) {
-      return false;
+      answerArray.push(answer);
     }
-    return true;
   }
+  if (answerArray.includes(3)) {
+    return false;
+  }
+  return true;
 }
 
 function buildOutput(array) {
@@ -79,7 +83,7 @@ function generatePhoneNumber(array) {
   return buildOutput(numbers);
 }
 
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 function checkSum(a, b, c) {
   if ((a < b + c) && (b < a + c) && c < b + a) {
