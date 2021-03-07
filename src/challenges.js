@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(num1) {
+let compareTrue = (num1) => {
   if (num1 > 0 && num1 < 10) {
     return true;
   }
@@ -11,7 +11,7 @@ let calcArea = (base, heigth) => {
 }
 
 // Desafio 3
-function splitSentence(phrase) {
+let splitSentence = (phrase) => {
   return phrase.split(' ');
 }
 
@@ -21,7 +21,7 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints(wins, ties) {
+let footballPoints = (wins, ties) => {
   return (wins * 3) + ties;
 }
 // Desafio 6
