@@ -20,14 +20,14 @@ function splitSentence(frase) {
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-//function concatName(str) {
+function concatName(str) {
   // seu código aqui
-//  return str.concat([str[0],str.length -1]);
-// }
-// Desafio 5
-//function footballPoints() {
+ return str.concat([str[0],str.length -1]);
+ }
+//Desafio 5
+function footballPoints() {
   // seu código aqui
-//}
+}
 // Desafio 6
 let numbers = [9, 1, 2, 3, 9, 5, 7];
 let higherNumber = 0;
