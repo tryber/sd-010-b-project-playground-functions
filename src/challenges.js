@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distCat2 < distCat1) {
     catName = "cat2";
   } else {
-    catName = "Cats estão na mesma distância do Mouse";
+    catName = "os gatos trombam e o rato foge";
   }
   return catName;
 }
