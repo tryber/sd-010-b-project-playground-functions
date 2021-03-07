@@ -52,7 +52,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log (catAndMouse(0, -2, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -70,14 +69,48 @@ function fizzBuzz(array) {
   }
   return zumbido;
 }
-console.log (fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let codes = {
+  a: '1',
+  b: '2',
+  c: '3',
+  d: '4',
+  e: '5'
 }
+console.log (Object.length);
+
+function encode(frase) {
+  let novaFrase = [];
+  for (let index = 0; index < frase.length; index++) {
+    novaFrase.push(frase[index]);    
+  }
+  for (let key in codes) {
+    // frase.split(novaPalavra[novaPalavra]).join(codes[key])
+    for (let index = 0; index < novaFrase.length; index += 1) {      
+			if (key == novaFrase[index]) {
+        novaFrase[index] = codes[key];
+      }
+    }
+  }
+  return novaFrase.join('');
+}
+
+
 function decode() {
-  // seu código aqui
+  let novaFrase = [];
+  for (let index = 0; index < frase.length; index++) {
+    novaFrase.push(frase[index]);    
+  }
+  for (let key in codes) {
+    // frase.split(novaPalavra[novaPalavra]).join(codes[key])
+    for (let index = 0; index < novaFrase.length; index += 1) {      
+			if (codes[key] == novaFrase[index]) {
+        novaFrase[index] = key;
+      }
+    }
+  }
+  return novaFrase.join('');
 }
 
 module.exports = {
