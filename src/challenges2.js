@@ -6,12 +6,12 @@ function techList(tech, name) {
 
   if (tech.length === 0) {
     return 'Vazio!';
-  } else {
-    for (let index in sortArray) {
-      finalArrayWithObjects.push({ tech: sortArray[index], name, });
-    }
   }
-  return finalArrayWithObjects;
+
+  for (let index = 0; index < sortArray.length; index += 1) {
+    finalArrayWithObjects.push({tech: sortArray[index], name});
+  }
+    return finalArrayWithObjects;
 }
 
 // Desafio 11
@@ -28,9 +28,9 @@ function generatePhoneNumber(arrayNumbers) {
     return 'Array com tamanho incorreto.';
   }
 
-  for (let numbers in arrayNumbers) {
+  for (let numbers = 0; numbers < arrayNumbers.length; numbers += 1) {
     let actualNumber = arrayNumbers[numbers];
-    for (let compare in arrayNumbers) {
+    for (let compare = 0; compare < arrayNumbers; compare += 1) {
       if (actualNumber === arrayNumbers[compare]) {
         countNumberOfTimes += 1;
       }
