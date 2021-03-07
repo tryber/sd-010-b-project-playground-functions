@@ -53,41 +53,72 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
+// a função a seguir funciona, porém não passa no teste automatizado.
+// function encode(sentence) {
+//   let vowels = 'aeiou';
+//   let replace;
+//   let regex;
+//   for (let i = 0; i < vowels.length; i++) {
+//     for (let j = 0; j < sentence.length; j++) {
+//       replace = sentence[j];
+//       regex = new RegExp(replace,"g");
+//       if (sentence[j] == vowels[i]) {
+//         sentence = sentence.replace(regex, i + 1);
+//         break;
+//       }
+//     }
+//   }
+//   return sentence;
+// }
+
 function encode(sentence) {
   let vowels = 'aeiou';
-  let replace;
-  let regex;
+  // let replace;
+  // let regex;
   for (let i = 0; i < vowels.length; i++) {
     for (let j = 0; j < sentence.length; j++) {
-      replace = sentence[j];
-      regex = new RegExp(replace,"g");
+      // replace = sentence[j];
+      // regex = new RegExp(replace,"g");
       if (sentence[j] == vowels[i]) {
-        sentence = sentence.replace(regex, i + 1);
-        break;
+        sentence = sentence.replace(vowels[i], i + 1);
       }
     }
   }
   return sentence;
 }
+// console.log(encode('esvaziou o vazio'));
+// O mesmo acontece na função decode, funciona, mas não passa no teste automatizado.
+// function decode(encSentence) {
+//   let vowels = 'aeiou'
+//   let numbers = '12345';
+//   let replace;
+//   let regex;
+//   for (let i = 0; i < numbers.length; i++) {
+//     for (let j = 0; j < encSentence.length; j++) {
+//       replace = encSentence[j]; // https://stackoverflow.com/questions/494035/how-do-you-use-a-variable-in-a-regular-expression
+//       regex = new RegExp(replace,"g");
+//       if (encSentence[j] == numbers[i]) {
+//         encSentence = encSentence.replace(regex, vowels[i]);
+//         break;
+//       }
+//     }
+//   }
+//   return encSentence;
+// }
 
 function decode(encSentence) {
   let vowels = 'aeiou'
   let numbers = '12345';
-  let replace;
-  let regex;
   for (let i = 0; i < numbers.length; i++) {
     for (let j = 0; j < encSentence.length; j++) {
-      replace = encSentence[j]; // https://stackoverflow.com/questions/494035/how-do-you-use-a-variable-in-a-regular-expression
-      regex = new RegExp(replace,"g");
       if (encSentence[j] == numbers[i]) {
-        encSentence = encSentence.replace(regex, vowels[i]);
-        break;
+        encSentence = encSentence.replace(numbers[i], vowels[i]);
       }
     }
   }
   return encSentence;
 }
-
+// console.log(decode('2sv1z345 4 v1z34'));
 module.exports = {
   calcArea,
   catAndMouse,
