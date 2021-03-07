@@ -119,7 +119,11 @@ function hydrate(str) {
   for (let index = 0; index < numEcontrado.length; index += 1) {
     result += Number(numEcontrado[index]);
   }
-  return `${result} copos de água`;
+  if (result <= 1) {
+    return `${result} copo de água`;
+  } else {
+    return `${result} copos de água`;
+  }
 }
 
 module.exports = {
