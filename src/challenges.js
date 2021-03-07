@@ -1,51 +1,155 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(param1, param2) {
+  if (param1 && param2) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return ((base * height) / 2);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(' ');
+  return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let response = [];
+  for (let index = (array.length - 1); index >= 0; index -= 1) {
+    if ((index === 0) || (index === (array.length - 1))) {
+      response.push(array[index]);
+    }
+  }
+  return response.join(', ');
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (3 * wins) + (1 * ties);
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let biggest = array[0];
+  let count = 0;
+  for (let index in array) {
+    if (array[index] === biggest) {
+      count += 1;
+    } else if (array[index] > biggest) {
+      biggest = array[index];
+      count = 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  }
+  if (distanceCat2 < distanceCat1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
+}
+
+// auxiliary functions Desafio 8
+function divisibleByThree(number) {
+  if (number % 3 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function divisibleByFive(number) {
+  if (number % 5 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function divisibleByThreeAndFive(number) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let output = [];
+  for (let index = 0; index < array.length; index += 1) {
+    switch (true) {
+    case (divisibleByThreeAndFive(array[index])):
+      output.push('fizzBuzz');
+      break;
+    case (divisibleByThree(array[index])):
+      output.push('fizz');
+      break;
+    case (divisibleByFive(array[index])):
+      output.push('buzz');
+      break;
+    default:
+      output.push('bug!');
+    }
+  }
+  return output;
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+// função auxiliar do Encode
+function findVowel(char) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < vowels.length; index += 1) {
+    if (char === vowels[index]) {
+      return index + 1;
+    }
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let answer = '';
+  for (let letter in string) {
+    if (findVowel(string[letter])) {
+      answer += findVowel(string[letter]);
+    } else {
+      answer += (string[letter]);
+    }
+  }
+  return answer;
 }
 
+function translateNumbers(int) {
+  let table = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  for (let key in table) {
+    if (int === key) {
+      return table[key];
+    }
+  }
+}
+
+function decode(string) {
+  let answer = '';
+  for (let letter in string) {
+    if (translateNumbers(string[letter])) {
+      answer += translateNumbers(string[letter]);
+    } else {
+      answer += (string[letter]);
+    }
+  }
+  return answer;
+}
 module.exports = {
   calcArea,
   catAndMouse,
