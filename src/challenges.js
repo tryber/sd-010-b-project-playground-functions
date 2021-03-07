@@ -32,22 +32,20 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount() {}
   
-  
 // Desafio 7
-function catAndMouse(mouse,cat1, cat2) {
-  let catnumber1 = Math.abs(mouse-cat1);
-  let catnumber2 = Math.abs(mouse -cat2);
+function catAndMouse(mouse, cat1, cat2) {
+  let catnumber1 = Math.abs(mouse - cat1);
+  let catnumber2 = Math.abs(mouse - cat2);
   if (catnumber1 < catnumber2) {
-    return "cat1";
+    return 'cat1';
   } else if (catnumber2 < catnumber1) {
-    return "cat2";
-  } else {
-    return "Os gatos trombam e o rato foge";
+    return 'cat2';
   }
+    return 'Os gatos trombam e o rato foge'; 
 }
 // Desafio 8
 function fizzBuzz() {
-  
+
 }
 
 // Desafio 9
