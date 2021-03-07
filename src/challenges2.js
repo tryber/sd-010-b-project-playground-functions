@@ -8,7 +8,7 @@ function techList(namesTechs, name) {
   for(let i in namesTechs){
     objTechList.push({
       tech : namesTechs[i],
-      name
+      name : name
     })
   }
   return objTechList;
@@ -68,9 +68,37 @@ return numberPhone;
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 9, 9, 1, 8, 7]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+//function triangleCheck() {
+//}
+function checkLineA (lineA, lineB, lineC){
+  let result = false;
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+    result = true
+  }
+  return result;
 }
+function checkLineB (lineA, lineB, lineC){
+  let result = false;
+  if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+    result = true
+  }
+  return result;
+}
+function checkLineC (lineA, lineB, lineC){
+  let result = false;
+  if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)){
+    result = true
+  }
+  return result;
+}
+function triangleCheck(lineA, lineB, lineC){
+  let result = false;
+  if (checkLineA(lineA, lineB, lineC) && checkLineB(lineA, lineB, lineC) && checkLineC(lineA, lineB, lineC)){
+    result = true;
+  }
+  return result;
+}
+console.log(triangleCheck(10, 5, 15))
 
 // Desafio 13
 function hydrate() {
