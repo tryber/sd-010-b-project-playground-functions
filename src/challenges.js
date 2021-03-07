@@ -93,11 +93,12 @@ function encode(transLettersNumbers) {
   }
   return number;
 }
-function decode(transNumbersLetter) {
-}
+
 function decode() {
   // seu código aqui
 }
+
+
 
 module.exports = {
   calcArea,
