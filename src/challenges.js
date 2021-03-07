@@ -90,12 +90,55 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let text = string.split('');
+  let textCopie = text;
+  for (index = 0; index < text.length; index++) {
+    if (text[index] == "a"){
+      textCopie[index] = 1;
+    }
+    if (text[index] == "e"){
+      textCopie[index] = 2;
+    }
+    if (text[index] == "i"){
+      textCopie[index] = 3;
+    }
+    if (text[index] == "o"){
+      textCopie[index] = 4;
+    }
+    if (text[index] == "u"){
+      textCopie[index] = 5;
+    }
+  }
+  let convert = textCopie.join('');
+  return convert;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there'));
+
+function decode(string) {
+  let text = string.split('');
+  let textCopie = text;
+  for (index = 0; index < text.length; index++) {
+    if (text[index] == 1){
+      textCopie[index] = "a";
+    }
+    if (text[index] == 2){
+      textCopie[index] = "e";
+    }
+    if (text[index] == 3){
+      textCopie[index] = "i";
+    }
+    if (text[index] == 4){
+      textCopie[index] = "o";
+    }
+    if (text[index] == 5){
+      textCopie[index] = "u";
+    }
+  }
+  let convert = textCopie.join('');
+  return convert;
 }
+console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
