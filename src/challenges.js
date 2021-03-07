@@ -84,10 +84,8 @@ function fizzBuzz(numbers) {
     }
   }
   return result;
-
-
-
 }
+
 // Desafio 9
 function codeMaker(codeInfo) {
   if (codeInfo === 'a') {

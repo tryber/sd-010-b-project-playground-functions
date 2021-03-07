@@ -20,7 +20,7 @@ function techList(technology, name) {
 function generatePhoneNumber(numbers) {
   let phoneId = '';
   if (numbers.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   } else {
     phoneId = '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
   }
@@ -41,8 +41,25 @@ function generatePhoneNumber(numbers) {
   return phoneId;
 }
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, LineB, LineC) {
   // seu código aqui
+  // Para tanto, tenha em mente algumas considerações:
+
+  // Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+  
+  // Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+  
+  // O retorno da sua função deverá ser um booleano.
+  
+  // Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
+  
+  // O que será verificado:
+  
+  // Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois
+  
+  // Retorne false quando a medida de qualquer um dos lados seja menor que o valor absoluto da diferença entre essas medidas
+  
+  // Retorne true quando a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
 }
 
 // Desafio 13
