@@ -18,41 +18,40 @@ function techList(techs, name) {
 
 // Desafio 11
 function generatePhoneNumber(phone) {
+  let originalPhone = phone.join('');
   if (phone.length == 11) {
     let isValid = true;
     let moreThanThree = 0;
-    // let phoneSorted = phone.split('').sort();
-    let phoneSorted = [...phone].sort().join('');
+    let phoneSorted = phone.sort();
     console.log(phoneSorted);
-    // [...str].sort().join("");
     let currentNumber = phoneSorted[0];
     for (let i = 0; i < phoneSorted.length; i++) {
       if (phoneSorted[i] != currentNumber) {
         currentNumber = phoneSorted[i];
-        moreThanThree = 0;
+        moreThanThree = 1;
       } else {
         moreThanThree++;
       }
-      if (phone[i] < 0 || phone[i] > 9 || moreThanThree > 3) {
+      if (phoneSorted[i] < 0 || phoneSorted[i] > 9 || moreThanThree > 3) {
         isValid = false;
         break;
       }
     }
     if (isValid) {
-      phoneSorted = [...phone];
+      phoneSorted = originalPhone.split('');
       // https://stackoverflow.com/questions/586182/how-to-insert-an-item-into-an-array-at-a-specific-index-javascript
       phoneSorted.splice(0, 0, '(');
-      phoneSorted.splice(3, 0, ')');
+      phoneSorted.splice(3, 0, ') ');
       phoneSorted.splice(9, 0, '-');
       return phoneSorted.join("");
     } else {
-      return "Não é possível gerar um número de telefone com esses valores.";
+      return 'não é possível gerar um número de telefone com esses valores.';
     }
   } else {
     return "Array com tamanho incorreto.";
   }
 }
-console.log(generatePhoneNumber('12547898745'));
+console.log(generatePhoneNumber([1, 2, 3, 6, 5, 6, 7, 8, 1, 0, 6]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) {
