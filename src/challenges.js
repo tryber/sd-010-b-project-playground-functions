@@ -127,12 +127,69 @@ return array
 
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string2) {
+  let texto = string2;
+  let EP = texto.split("")
+  let armazem =[];
+  let armazem2 = [];
+  for(let i in EP){
+    armazem.push(EP[i])
+  }
+  for (let i2 in armazem){
+    if (armazem[i2] === "a"){
+      armazem2.push("1")}
+  
+    else if (armazem[i2] === "e"){
+      armazem2.push("2")
+    } else if (armazem[i2] === "i"){
+      armazem2.push("3")
+    } else if (armazem[i2]  === "o"){
+      armazem2.push("4")
+    } else if (armazem[i2] === "u"){
+      armazem2.push("5")
+    }
+  else {
+    armazem2.push(armazem[i2])
+
+  }
+  }
+let resultado =armazem2.join("")
+  
+  return resultado 
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(string3) {
+  let texto = string3;
+  let EP = texto.split("")
+  let armazem =[];
+  let armazem2 = [];
+  for(let i in EP){
+    armazem.push(EP[i])
+  }
+  for (let i2 in armazem){
+    if (armazem[i2] === "1"){
+      armazem2.push("a")}
+  
+    else if (armazem[i2] === "2"){
+      armazem2.push("e")
+    } else if (armazem[i2] === "3"){
+      armazem2.push("c")
+    } else if (armazem[i2]  === "4"){
+      armazem2.push("o")
+    } else if (armazem[i2] === "5"){
+      armazem2.push("u")
+    }
+  else {
+    armazem2.push(armazem[i2])
+
+  }
+  }
+let resultado =armazem2.join("")
+  
+  return resultado 
 }
+
 
 module.exports = {
   calcArea,
