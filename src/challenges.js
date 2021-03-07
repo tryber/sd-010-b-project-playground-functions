@@ -68,7 +68,7 @@ function fizzBuzz(numbers) {
   let result = [];
   for (let n in numbers) {
     if (numbers[n] % 3 === 0 && numbers[n] % 5 === 0) {
-      result.push('fizzBuz');
+      result.push('fizzBuzz');
     } else if (numbers[n] % 3 === 0) {
       result.push('fizz');
     } else if (numbers[n] % 5 === 0) {
