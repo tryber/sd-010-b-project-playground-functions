@@ -56,8 +56,23 @@ function triangleCheck(linhaA, linhaB, linhaC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(stringReceived) {
   // seu código aqui
+  // Para retornar todos os numeros da string, consoante o sugerido no exercício, pesquisei por expressões regulares para extrair números de uma string e usei o método explicado no seguinte link "https://www.encodedna.com/javascript/how-to-get-numbers-from-a-string-in-javascript.htm":
+  let extractNumbers = stringReceived.match(/\d+/g);
+  let calculateHydratation = 0;
+  let hydrateMessage = '';
+
+  for (let calculate in extractNumbers) {
+    calculateHydratation += parseInt(extractNumbers[calculate]);
+  }
+
+  if (calculateHydratation > 1) {
+    hydrateMessage = calculateHydratation + ' copos de água';
+  } else {
+    hydrateMessage = calculateHydratation + ' copo de água'
+  }
+  return hydrateMessage;
 }
 
 module.exports = {
