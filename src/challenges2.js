@@ -52,7 +52,7 @@ function buildOutput(array) {
       output += `(${array[index]}`;
       break;
     case (index === 1):
-      output += `${array[index]})`;
+      output += `${array[index]}) `;
       break;
     case (index === 6):
       output += `${array[index]}-`;
