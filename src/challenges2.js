@@ -23,10 +23,9 @@ function generatePhoneNumber(number) {
     let numberPhone = '(';
     for (let index = 0; index < number.length; index += 1) {
       numberPhone += number[index];
-      if (number[index] === 2) {
+      if (index === 2) {
         numberPhone += ') ';
-      }
-      if (number[index] === 7) {
+      } if (index === 6) {
         numberPhone += '-';
       }
     }
@@ -34,24 +33,36 @@ function generatePhoneNumber(number) {
   }
   let result = conditionTrue;
   return result;
-}
-
+} console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 1]));
 function isCheckConditions(number) {
-  let result = '';
+  let mesage = 'não é possível gerar um número de telefone com esses valores';
   if (number.length !== 11) {
-    result = 'Array com tamanho incorreto.';
-    return result;
+    return 'Array com tamanho incorreto.';
+  }
+  if (repetTresVezes(number) === true){
+    return mesage;
   }
   for (let index = 0; index < number.length; index += 1) {
     if (number[index] < 0 || number[index] > 9) {
-      result = 'não é possível gerar um número de telefone com esses valores';
-      return result;
+      return mesage;
     }
   }
-  result = false;
-  return result;
+  return false;
 }
-
+function repetTresVezes(number) {
+  for (let index = 0; index < number.length; index += 1) {
+    let count = [];
+    for (let index2 = 0; index2 < number.length; index2 += 1) {
+      if (number[index] === number[index2]) {
+        count.push('x');
+      }
+      if (count.length > 2) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
@@ -63,7 +74,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
   return true;
-} console.log(triangleCheck(6, 2, 2));
+}
 
 // Desafio 13
 function hydrate() {
