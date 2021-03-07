@@ -21,7 +21,10 @@ function generatePhoneNumber(phone) {
   if (phone.length == 11) {
     let isValid = true;
     let moreThanThree = 0;
-    let phoneSorted = phone.split('').sort();
+    // let phoneSorted = phone.split('').sort();
+    let phoneSorted = [...phone].sort().join('');
+    console.log(phoneSorted);
+    // [...str].sort().join("");
     let currentNumber = phoneSorted[0];
     for (let i = 0; i < phoneSorted.length; i++) {
       if (phoneSorted[i] != currentNumber) {
@@ -36,7 +39,7 @@ function generatePhoneNumber(phone) {
       }
     }
     if (isValid) {
-      phoneSorted = phone.split('');
+      phoneSorted = [...phone];
       // https://stackoverflow.com/questions/586182/how-to-insert-an-item-into-an-array-at-a-specific-index-javascript
       phoneSorted.splice(0, 0, '(');
       phoneSorted.splice(3, 0, ')');
@@ -49,7 +52,7 @@ function generatePhoneNumber(phone) {
     return "Array com tamanho incorreto.";
   }
 }
-
+console.log(generatePhoneNumber('12547898745'));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineB + lineA) {
