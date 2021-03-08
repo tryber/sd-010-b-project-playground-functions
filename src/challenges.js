@@ -14,8 +14,8 @@ function calcArea(base, heigh) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  let split = string.split(' ');
+function splitSentence(s) {
+  let split = s.split(' ');
 
   for (let i = 0; i < split.lenght; i += 1) {
     split[i] += ' ';
@@ -24,8 +24,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  let firstN = name.split(' ')[0];
+  let surname = name.split(' ').pop();
+  console.log(surname, firstN);
 }
 
 // Desafio 5
