@@ -58,9 +58,8 @@ function generatePhoneNumber(numero) {
     } else {
     resultado = "Array com tamanho incorreto."
   }
-      for (let index in numero) {
-        let verificadorRepeticao = numero[index] + 1;
-        if (repeticao[verificadorRepeticao] >= 3) {
+      for (let index = 0; index < repeticao.length; index++) {
+        if (repeticao[index] > 2) {
           resultado = "não é possível gerar um número de telefone com esses valores";
         }
       }
@@ -68,7 +67,7 @@ function generatePhoneNumber(numero) {
         return resultado;
 }
 
-console.log(generatePhoneNumber([2, 2, 3, 4, 5, 7, 7, 8, 9, 0, 2]))
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]))
 
 // Desafio 12
 function triangleCheck() {
