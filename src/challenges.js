@@ -82,7 +82,7 @@ console.log(catAndMouse(5, 2, 2));
 // Desafio 8
 function fizzBuzz(array) {
   for (let i = 0; i < array.length; i += 1) {
-    if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
+    if (array[i] % 15 === 0) {
       array[i] = 'fizzBuzz';
     } else if (array[i] % 3 === 0) {
       array[i] = 'fizz';
