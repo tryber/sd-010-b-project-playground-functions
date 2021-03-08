@@ -1,8 +1,4 @@
 // Desafio 10
-// let techs = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-// let techs = [];
-// let name = "Jonnes";
-// console.log(techList(techs, name));
 // I found this logic at https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
 function sortByTech(a, b) {
   if (a.tech < b.tech) {
@@ -33,9 +29,6 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-// (12) 34567-8901
-// let amountOfDrinks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(generatePhoneNumber(amountOfDrinks));
 function verifyArrayNumbers(array) {
   let countRepeated = new Array(10).fill(0); // I found how to fill an array with 0 at https://medium.com/@wisecobbler/4-ways-to-populate-an-array-in-javascript-836952aea79f
   let threeOrMore = false;
@@ -82,8 +75,6 @@ function generatePhoneNumber(amountOfDrinks) {
 }
 
 // Desafio 12
-// let a = 10, b = 14, c = 8;
-// console.log(triangleCheck(a, b, c));
 // I found the Math.abs() function at https://www.w3schools.com/jsref/jsref_abs.asp
 function testA(a, b, c) {
   return ((a < (b + c)) && (a > Math.abs(b - c)));
@@ -107,8 +98,6 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-// let orderPad = "1 cachaça, 5 cervejas e 6 copo de vinho";
-// console.log(hydrate(orderPad));
 // I took the logic of getDigits and cupsOfWaterCups from this video: https://youtu.be/pfkkdzeyx6U
 function getDigits(orderPad) {
   let regExp = /\d+/g; // regExp: Regular Expression, to get amount of drinks
