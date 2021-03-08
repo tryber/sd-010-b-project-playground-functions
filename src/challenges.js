@@ -10,8 +10,7 @@ function compareTrue(firstValue, secondValue) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let area = (base * height) / 2;
-  return area;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -35,31 +34,26 @@ function splitSentence(phrase) {
 function concatName(Array) {
   // seu código aqui
   let endArray = '';
-  let result = '';
   for (let index = 0; index < Array.length; index += 1) {
     if (index === Array.length - 1) {
       endArray = Array[index];
     }
   }
-  result = `${endArray}, ${Array[0]}`;
+  let result = `${endArray}, ${Array[0]}`;
   return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let ptsWins = 0;
-  let result = 0;
-  ptsWins = wins * 3;
-  result = ptsWins + ties;
-  return result;
+  let ptsWins = wins * 3;
+  return ptsWins + ties;
 }
 
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
-  let larger = numbers[0];
-  let result = 0;
+  let larger = numbers[0]; let result = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > larger) {
       larger = numbers[index];
@@ -94,13 +88,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(Array = []) {
-  let result = [];
-  for (let index = 0; index < Array.length; index += 1) {
-    result[index] = condition(Array[index]);
-  }
-  return result;
-}
 function condition(Array) {
   let result = '';
   if (Array % 3 === 0 && Array % 5 === 0) {
@@ -114,6 +101,14 @@ function condition(Array) {
   }
   return result;
 }
+function fizzBuzz(Array = []) {
+  let result = [];
+  for (let index = 0; index < Array.length; index += 1) {
+    result[index] = condition(Array[index]);
+  }
+  return result;
+}
+
 // Desafio 9
 function encode(test) {
   // seu código aqui
