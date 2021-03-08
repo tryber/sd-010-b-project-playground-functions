@@ -79,10 +79,19 @@ function triangleCheck(lineA, lineB, lineC) {
 triangleCheck(10, 14, 8);
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Feito com ajuda do site: https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-147.php
+
+function hydrate(string) {
+  let count = 0;
+  for(let index = 0; index < string.length; index += 1){
+    if(/[0-9]/.test(string[index])){
+      count += parseInt(string[index]);
+    }
+    return count + ' copos de água';
+  }
 }
 
+hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')
 module.exports = {
   generatePhoneNumber,
   techList,
