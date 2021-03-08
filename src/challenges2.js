@@ -10,7 +10,7 @@ function techList(array, name) {
     for (let i = 0; i < array.length; i += 1) {
       let techDesired = {
         tech: '',
-        nome: name,
+        name: name,
       };
       techDesired.tech = array[i];
       help.push(techDesired);
@@ -50,13 +50,13 @@ function generatePhoneNumber(array) {
   if (cond === true) {
     resposta = '(';
     for (const key in array) {
-      if (parseInt(key) === 2){
+      if (parseInt(key) === 2) {
         resposta += ') ' + array[key];
       } else if (parseInt(key) === 7) {
         resposta += '-' + array[key];
       } else {
         resposta += array[key];
-      }      
+      }
     }
   }
   return resposta;
@@ -90,11 +90,11 @@ function hydrate(string) {
       total += parseInt(extrairNumeros[i]);
     }
   }
-  if (total === 1){
+  if (total === 1) {
     total += ' copo de água';
   } else {
     total += ' copos de água';
-  }  
+  }
   return total;
 }
 console.log(hydrate('1 cerveja'));
