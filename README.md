@@ -214,7 +214,7 @@ Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['g
 
 - Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
 
-- Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
+- Retorne o valor ['vamo', 'que', vamo']. se a função receber a string 'vamo que vamo'
 
 - Retorne o valor ['foguete'] se a função receber a string 'foguete'
 
