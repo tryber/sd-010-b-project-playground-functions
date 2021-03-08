@@ -19,14 +19,12 @@ function generatePhoneNumber(numeros) {
     return 'Array com tamanho incorreto.'
   };
   for (let index = 0; index < numeros.length; index += 1) {
-
     if (numeros[index] < 0 || numeros[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
 
     let contador = 0;
     for (let index2 = 0; index2 < numeros.length; index2 += 1) {
-
       if (numeros[index] === numeros[index2]) {
         contador += 1;
       } if (contador >= 3) {
