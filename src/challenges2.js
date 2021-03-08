@@ -1,13 +1,14 @@
 // Desafio 10
 function techList(arr, name) {
   let obj = [];
-  if (arr.length == 0) {
+  if (arr.length === 0) {
     return 'Vazio!';
   } else {
 
     for (let index = 0; index < arr.length; index += 1) {
       obj.tech = arr[index];
       obj.name = name;
+      obj.push(arr.tech.name[index])
     }
   }
   return obj;

@@ -60,7 +60,7 @@ function highestCount(array) {
     
       numberCount = 1;	
     }
-  else if (array[index] == highestNumber){
+  else if (array[index] === highestNumber){
   numberCount += 1;
       }
     
@@ -82,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (positionMouse > positionCat2 && positionCat2 > positionCat1) {
     lesserDistance = 'cat2'
   }
-  else if (positionCat1 == positionCat2) {
+  else if (positionCat1 === positionCat2 && positionCat1 === positionMouse) {
     lesserDistance = "os gatos trombam e o rato foge"
   }
   else if (positionMouse < positionCat1 && positionCat1 < positionCat2) {
@@ -93,7 +93,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return lesserDistance
 }
-console.log(catAndMouse(10, 7, 6))
+console.log(catAndMouse(0, 6, 12))
 console.log("-----------------------------------")
 
 // Desafio 8
