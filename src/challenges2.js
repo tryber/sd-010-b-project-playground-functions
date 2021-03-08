@@ -1,8 +1,6 @@
 // Desafio 10
 function techList() {
 
-
-
 }
 
 // Desafio 11
@@ -13,8 +11,8 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(a, b, c) {
   let triCheck = false;
-  
-  if (a < b + c === true && a > Math.abs(b - c) === true ) {
+
+  if (a < b + c === true && a > Math.abs(b - c) === true) {
     triCheck = true;
   }
   return triCheck;
@@ -22,20 +20,19 @@ function triangleCheck(a, b, c) {
 
 // Desafio 13
 function hydrate(caracteres) {
-  
-  let arrayNumbers = caracteres.match(/[0-9]/g)
+  let result = '';
+  let arrayNumbers = caracteres.match(/[0-9]/g);
   let soma = 0;
-  for (key of arrayNumbers ) {
-  soma = parseInt(soma) + parseInt(key)
+  for (let key of arrayNumbers) {
+    soma = soma += parseInt(key);
   }
   if (soma === 1) {
     result = soma + ' copo de água';
   } else {
     result = soma + ' copos de água';
   }
-  return result; 
-} 
-
+  return result;
+}
 
 module.exports = {
   generatePhoneNumber,
