@@ -44,21 +44,19 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(telefone) {
   // seu código aqui
-  let resultado = 0;
-  let maiorNumero = 0;
- let numeros = telefone;
- for (let index = 0; index < numeros.length; index += 1) {
- if (numeros[index] > maiorNumero) {
-   maiorNumero = numeros[index];
- }
- }
-
- for (let index1 = 0; index1 < numeros.length; index +=1) {
-  if (maiorNumero === numeros[index1]) {
-  resultado += 1;
+  let maiorNumero;
+  let soma;
+  for (let index = 0; index < telefone.length; index += 1 ) {
+    if (telefone[index] > maiorNumero) {
+      maiorNumero = telefone[index];
+    }
   }
- }
- return resultado;
+  for (let index = 0; index < telefone.length; index += 1 ) {
+    if (maiorNumero === telefone[index]) {
+        soma += 1;
+    }
+   }
+return soma;
 
 }
 
