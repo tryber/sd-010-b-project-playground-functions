@@ -36,12 +36,12 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let highNumber = 0;
   let highNumberCount = 0;
-  for (i = 0; i < numbers.length; i += 1) {
+  for ( let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > highNumber) {
       highNumber = numbers[i];
     }
   }
-  for (j = 0; j < numbers.length; j += 1 ) {
+  for ( let j = 0; j < numbers.length; j += 1 ) {
     if (numbers[j] === highNumber) {
      highNumberCount = (highNumberCount+1);
      }
@@ -57,7 +57,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if ( (Math.abs(cat2 - mouse)) < (Math.abs(cat1 - mouse)) === true ) {
     result = 'cat2'
     return result;
-  } else if ( Math.abs(cat1 - mouse) == (cat2 - mouse) ) {
+  } else if ( Math.abs(cat1 - mouse) === (cat2 - mouse) ) {
     result = 'os gatos trombam e o rato foge';
     return result;
   }  
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
      
   frase = [];
-  for (i = 0; i < numbers.length; i += 1) {
+  for ( let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
       frase[i] = 'fizzBuzz';
     } else if (numbers[i] % 3 === 0) {
