@@ -4,9 +4,9 @@ function techList(arrTech, name) {
    box[0].name = "Paulo"
    console.log(box[0]); */
 
-  arrTech = arrTech.sort()
+  arrTech = arrTech.sort();
 
-  let arrNewTech = []
+  let arrNewTech = [];
 
   for (let i = 0; i < arrTech.legth; i++) {
     arrNewTech.push({
@@ -14,7 +14,7 @@ function techList(arrTech, name) {
       name: name
     })
   }
-  return arrNewTech
+  return arrNewTech;
 }
 
 // Desafio 11

@@ -1,51 +1,51 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
-    return true
+    return true;
   }
   else {
-    return false
+    return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(breakString) {
-  return breakString.split(" ")
+  return breakString.split(" ");
 }
 
 // Desafio 4
 function concatName(arrayStrings) {
-  return arrayStrings[arrayStrings.length - 1] + ", " + arrayStrings[0]
+  return arrayStrings[arrayStrings.length - 1] + ", " + arrayStrings[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  let maxNumber = 0
-  let maxNumberRepeat = 0
+  let maxNumber = 0;
+  let maxNumberRepeat = 0;
 
   for (let i = 0; i < arrayNumbers.length; i++) {
     if (arrayNumbers[i] > maxNumber) {
-      maxNumber = arrayNumbers[i]
+      maxNumber = arrayNumbers[i];
     }
   }
 
   for (let i = 0; i < arrayNumbers.length; i++) {
     if (arrayNumbers[i] === maxNumber) {
-      maxNumberRepeat++
+      maxNumberRepeat++;
     }
   }
 
-  return maxNumberRepeat
+  return maxNumberRepeat;
 }
 
 // Desafio 7
@@ -64,31 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let mouseCat1;
-  let mouseCat2;
-
-  if (mouse > cat1) {
-    mouseCat1 = mouse - cat1;
-  } else {
-    mouseCat1 = cat1 - mouse;
-  }
-
-  if (mouse > cat2) {
-    mouseCat2 = mouse - cat2;
-  } else {
-    mouseCat2 = cat2 - mouse;
-  }
-
-  if (mouseCat1 < mouseCat2) {
-    return 'Cat1';
-  } else if (mouseCat1 > mouseCat2) {
-    return 'Cat2';
-  }
-  return 'Os gatos trombam e o rato foge.';
-}
-
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
 
@@ -103,28 +78,28 @@ function fizzBuzz(arrayNumbers) {
 
   for (let i = 0; i < arrayNumbers.length; i++) {
     if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
-      returnArray.push("fizzBuzz")
+      returnArray.push("fizzBuzz");
     }
     else if (arrayNumbers[i] % 3 === 0) {
-      returnArray.push("fizz")
+      returnArray.push("fizz");
     }
     else if (arrayNumbers[i] % 5 === 0) {
-      returnArray.push("buzz")
+      returnArray.push("buzz");
     }
     else {
-      returnArray.push("bug!")
+      returnArray.push("bug!");
     }
   }
-  return returnArray
+  return returnArray;
 }
 
 // Desafio 9
 function encode(inputText) {
-  return inputText.replace(/a/g, "1").replace(/e/g, "2").replace(/i/g, "3").replace(/o/g, "4").replace(/u/g, "5")
+  return inputText.replace(/a/g, "1").replace(/e/g, "2").replace(/i/g, "3").replace(/o/g, "4").replace(/u/g, "5");
 }
 
 function decode(inputText) {
-  return inputText.replace(/1/g, "a").replace(/2/g, "e").replace(/3/g, "i").replace(/4/g, "o").replace(/5/g, "u")
+  return inputText.replace(/1/g, "a").replace(/2/g, "e").replace(/3/g, "i").replace(/4/g, "o").replace(/5/g, "u");
 }
 
 module.exports = {
