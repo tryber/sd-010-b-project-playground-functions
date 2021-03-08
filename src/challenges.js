@@ -22,9 +22,9 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array) {
-  ultimoValor = array.length - 1
-  resultado = array[ultimoValor] + ", " + array[0]
-  return resultado
+  ultimoValor = array.length - 1;
+  resultado = array[ultimoValor] + ", " + array[0];
+  return resultado;
 }
 
 // Desafio 5
@@ -39,7 +39,7 @@ function highestCount(numeros) {
   recorrencia = 0;
     for (index = 0; index < numeros.length; index++) {
       if (numeros[index] == maiorNumero) {
-        recorrencia++
+        recorrencia++;
       }
     }
   return recorrencia;

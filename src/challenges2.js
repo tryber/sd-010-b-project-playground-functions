@@ -67,12 +67,18 @@ function generatePhoneNumber(numero) {
         return resultado;
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]))
+//console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let resultado = false;
+  if (lineA < (lineB + lineC) && lineB < (lineC + lineA) && lineC < (lineB + lineA))   {
+    resultado = true;
+  }
+  return resultado;
 }
+
+console.log(triangleCheck(3, 5, 1));
 
 // Desafio 13
 function hydrate() {
