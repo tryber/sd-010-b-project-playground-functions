@@ -96,7 +96,7 @@ function encode(frase) {
 }
 
 
-function decode() {
+function decode(frase) {
   let novaFrase = [];
   for (let index = 0; index < frase.length; index++) {
     novaFrase.push(frase[index]);    
