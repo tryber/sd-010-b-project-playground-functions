@@ -10,7 +10,7 @@ function techList(array, name) {
     for (let i = 0; i < array.length; i += 1) {
       let techDesired = {
         tech: '',
-        name: name,
+        names: name,
       };
       techDesired.tech = array[i];
       help.push(techDesired);
@@ -26,38 +26,38 @@ function generatePhoneNumber(array) {
   let cont = 0;
   let condicao = true;
   if (array.length === 11) {
-      for (let i = 0; i < array.length; i += 1) {
-          if ((array[i] < 0) || (array[i] > 9)) {
-              answer = 'não é possível gerar um número de telefone com esses valores';
-              condicao = false;
-          } else {
-              for (let j = 0; j < array.length; j += 1) {
-                  if (i !== j) {
-                      if (array[i] === array[j]) {
-                          cont += 1;                                                  
-                      }               
-                  }                     
-              }  
-          }
+    for (let i = 0; i < array.length; i += 1) {
+      if ((array[i] < 0) || (array[i] > 9)) {
+        answer = 'não é possível gerar um número de telefone com esses valores';
+        condicao = false;
+      } else {
+        for (let j = 0; j < array.length; j += 1) {
+          if (i !== j) {
+            if (array[i] === array[j]) {
+                cont += 1;                                                  
+            }               
+          }                     
+        }  
       }
+    }
   }else {
-      answer = 'Array com tamanho incorreto.';
-      condicao = false;
+    answer = 'Array com tamanho incorreto.';
+    condicao = false;
   }
   if ((cont >= 3) || (condicao === false)) {
-      answer = 'não é possível gerar um número de telefone com esses valores';
+    answer = 'não é possível gerar um número de telefone com esses valores';
   } else {
-      for (let x = 0; x < array.length; x += 1) {
-          if (x === 0) {
-              answer += '(' + array[x]; 
-          } else if (x === 2) {
-              answer += ') ' + array[x]; 
-          } else if (x === 7) {
-              answer += '-' + array[x];
-          } else {
-              answer += array[x];
-          }                
-      }
+    for (let x = 0; x < array.length; x += 1) {
+      if (x === 0) {
+        answer += '(' + array[x]; 
+      } else if (x === 2) {
+        answer += ') ' + array[x]; 
+      } else if (x === 7) {
+        answer += '-' + array[x];
+      } else {
+        answer += array[x];
+      }                
+    }
   }  
   return answer;  
 }
