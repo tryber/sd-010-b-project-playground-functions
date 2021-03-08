@@ -1,21 +1,17 @@
 // Desafio 10
 function techList(array, name) {
   let techName = {
-    tech: array.sort,
-    name,
+    tech: array.sort(),
+    name: name
   };
-
   if (array.length == 0) {
     console.log('Vazio!');
-
-    for (i = 0; i < array.length; i += 1) {
-      let techName = {
-        tech: array.sort,
-        name,
-      };
-    }
   }
-  return (techName);
+  let teste = [];
+  for (i = 0; i < array.length; i += 1) {
+    teste.push({ tech: array[i], name });
+  }
+  return (teste);
 }
 console.log(techList(['JavaScript', 'CSS', 'HTML'], 'Lucas'));
 
