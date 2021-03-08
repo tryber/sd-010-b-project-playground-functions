@@ -13,7 +13,6 @@ function calcArea(base, height) {
   let areatriangulo;
   areatriangulo = (base * height) / 2;
   return areatriangulo;
-
 }
 
 // Desafio 3
@@ -25,7 +24,7 @@ function splitSentence() {
 function concatName(matrix) {
   // seu código aqui
 let primeiroNome = matrix[0];
-let ultimoNome = matrix[matrix.length -1];
+let ultimoNome = matrix[matrix.length - 1];
 let resultado = ultimoNome + ", " + primeiroNome;
   
  return resultado;
@@ -49,20 +48,20 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-let valor
+let valor;
 let distancia1 = (mouse - cat1);
 let distancia2 = (mouse - cat2);
 if (distancia1 > distancia2) {
-  valor = "cat2";
+  valor = 'cat2';
 }
-else if (distancia1 < distancia2){
-  valor = "cat1";
+else if (distancia1 < distancia2) {
+  valor = 'cat1';
 }
-else if(distancia1 === distancia2) {
-  valor = "os gatos trombam e o rato foge";
+else if (distancia1 === distancia2) {
+  valor = 'os gatos trombam e o rato foge';
 }
-return valor;
-}
+  return valor;
+  }
 
 // Desafio 8
 function fizzBuzz() {
