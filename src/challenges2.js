@@ -25,28 +25,32 @@ function techList(techs, name) {
   }
   return result;
 }
-let array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let name = 'Lucas';
-console.log(techList(array, name));
 
 // Desafio 11
+function value(number) {
+  let result = true;
+  for (const i in number) {
+    if (number[i] < 0 || number[i] > 9) {
+      result = false;
+    }
+  }
+  return result;
+}
+
 function numberTests(number) {
   let result = '';
-  for (let i in number) {
-    if (number.length !== 11) {
-      result = 'Array com tamanho incorreto.';
-      break;
-    } else if (number[i] < 0 || number[i] > 9) {
+  for (let i = 0; i < number.length; i += 1) {
+    if (value(number) === false) {
       result = 'não é possível gerar um número de telefone com esses valores';
       break;
+    } else if (number.length !== 11) {
+      result = 'Array com tamanho incorreto.';
     } else {
       result += number[i];
     }
   }
   return result;
 }
-// const x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(numberTests(x));
 
 function generatePhoneNumber(numArray) {
   let result = '';
@@ -62,8 +66,6 @@ function generatePhoneNumber(numArray) {
   }
   return result;
 }
-// const x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(generatePhoneNumber(x));
 
 // Desafio 12
 function difCheck(a, b, c) {
