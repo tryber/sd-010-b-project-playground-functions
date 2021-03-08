@@ -25,8 +25,8 @@ function techList(tecnologias, name) {
       {
         tech: arrayOrdenado[4],
         name: name,
-      }
-      ];
+      },
+    ];
   }
   return info;
 }

@@ -112,7 +112,7 @@ function decode(string) {
       palavra += 'u';
     } else {
       palavra += string[i];
-        }
+    }
   }
   return palavra;
 }
