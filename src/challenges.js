@@ -20,17 +20,7 @@ function splitSentence(breakString) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  if (Array.isArray(arrayStrings)) {
-    if (arrayStrings.length > 0) {
-      return arrayStrings[arrayStrings.length - 1] + arrayStrings[0]
-    }
-    else {
-      return "Array can not be empty!"
-    }
-  }
-  else {
-    return "Input isn't a Array, please try again!"
-  }
+  return arrayStrings[arrayStrings.length - 1] + arrayStrings[0]
 }
 
 // Desafio 5
@@ -59,13 +49,48 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let diffCat1 = cat1 - mouse
+  let diffCat2 = cat2 - mouse
+
+  if (diffCat1 < diffCat2) {
+    return "Cat1"
+  }
+  else if (diffCat1 > diffCat2) {
+    return "Cat2"
+  }
+  else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+
+  let returnArray = []
+
+  /* Para cada número da Array que seja divisível apenas por 3, apresente uma string "fizz";
+  Para cada número da Array que seja divisível apenas por 5, apresente uma string "buzz";
+  Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+  Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+  Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
+   */
+
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
+      returnArray.push("fizzBuzz")
+    }
+    else if (arrayNumbers[i] % 3 === 0) {
+      returnArray.push("fizz")
+    }
+    else if (arrayNumbers[i] % 5 === 0) {
+      returnArray.push("buzz")
+    }
+    else {
+      returnArray.push("bug")
+    }
+  }
+  return returnArray
 }
 
 // Desafio 9
