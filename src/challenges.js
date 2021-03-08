@@ -57,26 +57,20 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(0, 0));
 
 // Desafio 6
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
+// Usado a função para retornar o maior valor;
 function highestCount(array) {
-  let largerRepeat = 0;
-  let cont = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[i] > array[j]) {
-        if (largerRepeat < array[i]) {
-          largerRepeat = array[i];
-        }
-      }
+  const max = Math.max.apply(null, array);
+  let qtdNum = 0;
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (max == array[index]) {
+      qtdNum += 1;
     }
   }
-  for (let i = 0; i < array.length; i += 1) {
-    if (largerRepeat === array[i]) {
-      cont += 1;
-    }
-  }
-  return cont;
+  return qtdNum;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
