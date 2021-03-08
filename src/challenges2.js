@@ -6,27 +6,27 @@ function techList(tecnologias, name) {
     info = 'Vazio!';
   } else {
     info = [
-    {
-      tech: arrayOrdenado[0],
-      name: name,
-    },
-    {
-      tech: arrayOrdenado[1],
-      name: name,
-    },
-    {
-      tech: arrayOrdenado[2],
-      name: name,
-    },
-    {
-      tech: arrayOrdenado[3],
-      name: name,
-    },
-    {
-      tech: arrayOrdenado[4],
-      name: name,
-    }
-    ];
+      {
+        tech: arrayOrdenado[0],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[1],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[2],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[3],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[4],
+        name: name,
+      }
+      ];
   }
   return info;
 }
