@@ -54,15 +54,15 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, ]));
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     return true
-  } else if (lineB < lineA + lineC && Math.abs(lineA - lineC)) {
+  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     return true
-  } else if (lineC < lineB + lineA && Math.abs(lineB - lineA)) {
+  } else if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) {
     return true
   } else {
     return false
   }
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(16, 9, 2));
 
 // Desafio 13
 function hydrate() {
