@@ -91,10 +91,22 @@ function triangleCheck(lineA, lineB, lineC) {
   else isTriangle = true;
   return isTriangle;
 }
-console.log(triangleCheck(10, 14, 8));
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+/*
+*Consultei o freeCodeCamp para saber como encontrar números em uma expressão regular.
+*Link: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/regular-expressions/match-all-numbers
+*/
+function hydrate(strDrinks) {
+  let total = 0;
+  let numRegex = /\d/g;
+  let result = strDrinks.match(numRegex);
+  for (let index = 0; index < result.length; index += 1) {
+    result[index] = parseInt(result[index], 10);
+    total += result[index];
+  }
+  if (total > 1) return `${total} copos de água`;
+  return `${total} copo de água`;
 }
 
 module.exports = {
