@@ -62,15 +62,16 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return message;
 }
-console.log(catAndMouse(10, 4, 22));
+
 // Desafio 8
 function fizzBuzz(arrNumbers) {
   let fizzBuzzBugArray = [];
+  let isNumberMod3Equal0, isNumberMod5Equal0, isNumberMod3And5Equal0;
   for (const key in arrNumbers) {
-    if (arrNumbers[key] % 3 === 0 && arrNumbers[key] % 5 === 0) fizzBuzzBugArray.push('fizzBuzz');
-    else if (arrNumbers[key] % 3 === 0) fizzBuzzBugArray.push('fizz');
-    else if (arrNumbers[key] % 5 === 0) fizzBuzzBugArray.push('buzz');
-    else fizzBuzzBugArray.push('bug!');
+    isNumberMod3Equal0 = arrNumbers[key] % 3 === 0;
+    isNumberMod5Equal0 = arrNumbers[key] % 5 === 0;
+    isNumberMod3And5Equal0 = isNumberMod3Equal0 && isNumberMod5Equal0;
+    (isNumberMod3And5Equal0) ? fizzBuzzBugArray.push('fizzBuzz') : (isNumberMod3Equal0) ? fizzBuzzBugArray.push('fizz') : (isNumberMod5Equal0) ? fizzBuzzBugArray.push('buzz') : fizzBuzzBugArray.push('bug!');
   }
   return fizzBuzzBugArray;
 }
