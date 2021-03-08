@@ -18,17 +18,12 @@ return (base*height)/2;
   
 }
 
-
 // Desafio 3
 function splitSentence(stringuinha) {
   // seu código aqui
   let separateOfStrings = stringuinha.split(" ");
   return separateOfStrings;
 }
-
-let array = "eu to de sacanagem";
-bilugastral = splitSentence(array);
-console.log(bilugastral);
 
 // Desafio 4
 function concatName(stringuinha) {
@@ -118,9 +113,24 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringuinha) {
   // seu código aqui
+  let encoder = stringuinha;
+for(let i = 0; i < stringuinha.length; i += 1){
+  encoder = encoder.replace('a','1');
+  encoder = encoder.replace('e','2');
+  encoder = encoder.replace('i','3');
+  encoder = encoder.replace('o','4');
+  encoder = encoder.replace('u','5');
 }
+  return encoder;
+}
+
+let dat = 'eu to de boa';
+let mat = encode(dat);
+console.log(mat);
+
+
 function decode() {
   // seu código aqui
 }
