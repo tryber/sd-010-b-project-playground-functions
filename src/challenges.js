@@ -69,9 +69,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(mouse - cat1);
   let dist2 = Math.abs(mouse - cat2);
   if (dist1 < dist2) {
-    return 'cat1';
-  }
-  else if (dist1 > dist2) {
+  return 'cat1';
+    }
+  if (dist1 > dist2) {
     return 'cat2';
   }
   else return 'os gatos trombam e o rato foge';
@@ -83,7 +83,20 @@ console.log(catAndMouse(0, 3, 3));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+  function fizzBuzz(array) {
+    let cosc = [];
+    for(let i = 0; i < array.length; i++){
+      if(array[i] %3 == 0 && array[i] %5 != 0) cosc.push("fizz");
+      else if(array[i] %3 != 0 && array[i] %5 == 0) cosc.push("buzz");
+      else if(array[i] %3 == 0 && array[i] %5 == 0) cosc.push("fizzBuzz");
+      else cosc.push("bug!");
+    }
+  
+    return cosc;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
