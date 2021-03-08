@@ -73,12 +73,11 @@ function fizzBuzz(array) {
 // Desafio 9
 let codes = {
   a: '1',
-  b: '2',
-  c: '3',
-  d: '4',
-  e: '5'
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5'
 }
-console.log (Object.length);
 
 function encode(frase) {
   let novaFrase = [];
@@ -112,6 +111,7 @@ function decode() {
   }
   return novaFrase.join('');
 }
+console.log(encode('hello!'));
 
 module.exports = {
   calcArea,
