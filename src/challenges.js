@@ -83,15 +83,15 @@ console.log(catAndMouse(0, 3, 3));
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-    let cosc = [];
-    for(let i = 0; i < array.length; i+= 1){
-      if(array[i] %3 == 0 && array[i] %5 != 0) cosc.push("fizz");
-      else if(array[i] %3 != 0 && array[i] %5 == 0) cosc.push("buzz");
-      else if(array[i] %3 == 0 && array[i] %5 == 0) cosc.push("fizzBuzz");
-      else cosc.push("bug!");
-    }
+  let cosc = [];
+  for (let i = 0; i < array.length; i+= 1){
+    if (array[i] %3 ===0 && array[i] %5 !== 0) cosc.push('fizz');
+    else if (array[i] %3 !== 0 && array[i] %5 === 0) cosc.push('buzz');
+    else if (array[i] %3 === 0 && array[i] %5 ===0) cosc.push('fizzBuzz');
+    else cosc.push('bug!');
+  }
   
-    return cosc;
+  return cosc;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
