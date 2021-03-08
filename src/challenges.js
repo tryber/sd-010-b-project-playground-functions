@@ -81,11 +81,10 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 3, 3));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
-  function fizzBuzz(array) {
     let cosc = [];
-    for(let i = 0; i < array.length; i++){
+    for(let i = 0; i < array.length; i+= 1){
       if(array[i] %3 == 0 && array[i] %5 != 0) cosc.push("fizz");
       else if(array[i] %3 != 0 && array[i] %5 == 0) cosc.push("buzz");
       else if(array[i] %3 == 0 && array[i] %5 == 0) cosc.push("fizzBuzz");
