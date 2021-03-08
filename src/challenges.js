@@ -39,10 +39,12 @@ function concatName(nome1,nome2) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  return ((wins * 3) + (ties * 1));
 }
 
-//console.log(footballPoints(1,8));
+//console.log(footballPoints(14, 8));
+//console.log(footballPoints(1, 2));
+//console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
