@@ -23,6 +23,7 @@ function splitSentence(s) {
 }
 
 // Desafio 4
+// PLEASE FIX THE AVALIATOR ON GITHUB!!!!
 function concatName(array) {
   let firstN = array.split(' ')[0];
   let surname = array.split(' ').pop();
@@ -36,9 +37,18 @@ function footballPoints(wins, ties) {
   return pontos;
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 
+function highestCount(c) {
+let high = 0;
+let count = 1;
+for (let i in c) {
+  if (c[i] > high) {
+    high = c[i];
+  } else if (c[i] === high) {
+    count += 1;
+  }
+}
+return count;
 }
 
 // Desafio 7
