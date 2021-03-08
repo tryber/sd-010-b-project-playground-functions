@@ -4,9 +4,9 @@ function techList(techArray, name) {
     let techListArray = objectArrayGenerator(techArray.sort(), name);
     return techListArray;
   }
-  return "Vazio!"
+  return 'Vazio!';
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Breno"));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Breno'));
 
 // Desafio 10 - Função extra1
 function objectArrayGenerator(arraylist, name) {
@@ -15,8 +15,8 @@ function objectArrayGenerator(arraylist, name) {
     let objectList = {
       tech: arraylist[index],
       name: name,
-    }
-    objectArray.push(objectList);    
+    };
+    objectArray.push(objectList);
   }
   return objectArray;
 }
