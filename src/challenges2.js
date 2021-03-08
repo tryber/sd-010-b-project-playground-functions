@@ -28,7 +28,7 @@ function generatePhoneNumber(arrayTelefone) {
    
    
     if (arrayTelefone[cont] < 0 || arrayTelefone[cont] > 9){
-      return "não é possivel gerar um número de telefone com esses valores";
+      return "não é possível gerar um número de telefone com esses valores";
     }
 
     for (let cont2 =0; cont2 <arrayTelefone.length; cont2 += 1){
@@ -36,7 +36,7 @@ function generatePhoneNumber(arrayTelefone) {
         duplicado += 1;
       }
       if (duplicado > 2){
-        return "não é possivel gerar um número de telefone com esses valores";
+        return "não é possível gerar um número de telefone com esses valores";
       }
     }   
 }
