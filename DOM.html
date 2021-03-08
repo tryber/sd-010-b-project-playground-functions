@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<style>
+  .classP {
+    font-style: italic;
+    color: blue;
+  }
+</style>
+
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="classP">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="classP">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+
+      document.getElementById("page-title").innerText = "Matrix";
+
+      document.getElementById("subtitle").innerText = "O melhor filme da decáda 2000"
+
+      document.getElementById("second-paragraph").innerText = 'Com cenas de efeito especiais muito realista para época...'
+
+      document.getElementsByClassName("classP")[0].style.color = "#f3f3f3";
+
+      document.getElementsByTagName("h4")[0].innerText = "teste";
+    </script>
+  </body>
+</html>
