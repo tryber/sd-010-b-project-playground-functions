@@ -86,7 +86,6 @@ function fizzBuzz(numbers){
 }
 
 // Desafio 9 // fontes de pesquisa: https://github.com/tryber/sd-010-b-project-playground-functions/pull/142 e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference
-
 function encode(phrase) {
   let newPhrase = [];
   for (let index in phrase) {
