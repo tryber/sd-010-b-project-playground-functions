@@ -1,7 +1,10 @@
 // Desafio 10
-function techList(techList, name) {
-  let techListArray = objectArrayGenerator(techList.sort(), name);
-  return techListArray;
+function techList(techArray, name) {
+  if (techArray.length !== 0) {
+    let techListArray = objectArrayGenerator(techArray.sort(), name);
+    return techListArray;
+  }
+  return "Vazio!"
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Breno"));
 
