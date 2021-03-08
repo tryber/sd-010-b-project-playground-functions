@@ -5,7 +5,7 @@ function techList(array,name) {
   let objeto = {};
   let novoarray =[];
   
-  if (tecnologias.length==0) {
+  if (tecnologias.length===0) {
     return "Vazio"
     
   }
@@ -19,13 +19,9 @@ function techList(array,name) {
   
    
     return novoarray
-  } 
-  
-    console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
+  }console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
   "Lucas"))
   
-
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
