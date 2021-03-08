@@ -23,7 +23,7 @@ function generatePhoneNumber(arrayTelefone) {
   for (let cont = 0; cont < arrayTelefone.length; cont += 1){
 
     if (arrayTelefone.length != 11){
-      return  "Array com tamanho incorreto";
+      return  "Array com tamanho incorreto.";
     }
    
     if (arrayTelefone[cont] < 0 || arrayTelefone[cont] > 9){
