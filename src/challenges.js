@@ -47,28 +47,45 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
+// function fizzBuzz(numbers) {
+//   let fizzBuzzBug = [];
+//   let fizz, buzz;
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     // fizzBuzzBug[i] = (numbers[i] % 3 == 0 && numbers[i] % 5 == 0 ? "fizzBuzz" : (numbers[i] % 3 == 0 ? "fizz" : (numbers[i] % 5 == 0 ? "buzz" : "bug!")));
+//     fizz = (numbers[i] % 3 === 0);
+//     buzz = (numbers[i] % 5 === 0);
+//     if (fizz) {
+//       if (buzz) {
+//         fizzBuzzBug[i] = 'fizzBuzz';
+//       } else {
+//         fizzBuzzBug[i] = 'fizz';
+//       }
+//     } else if (buzz) {
+//       fizzBuzzBug[i] = 'buzz';
+//     } else {
+//       fizzBuzzBug[i] = 'bug!';
+//     }
+//     // fizzBuzzBug[i] = ( fizz && buzz ? 'fizzBuzz' : false) || (fizz ? 'fizz' : false) || (buzz ? 'buzz' : 'bug!');
+//   }
+//   return fizzBuzzBug;
+// }
+
 function fizzBuzz(numbers) {
   let fizzBuzzBug = [];
-  let fizz, buzz;
   for (let i = 0; i < numbers.length; i += 1) {
-    // fizzBuzzBug[i] = (numbers[i] % 3 == 0 && numbers[i] % 5 == 0 ? "fizzBuzz" : (numbers[i] % 3 == 0 ? "fizz" : (numbers[i] % 5 == 0 ? "buzz" : "bug!")));
-    fizz = (numbers[i] % 3 === 0);
-    buzz = (numbers[i] % 5 === 0);
-    if (fizz) {
-      if (buzz) {
-        fizzBuzzBug[i] = 'fizzBuzz';
-      } else {
-        fizzBuzzBug[i] = 'fizz';
-      }
-    } else if (buzz) {
-      fizzBuzzBug[i] = 'buzz';
-    } else {
-      fizzBuzzBug[i] = 'bug!';
-    }
-    // fizzBuzzBug[i] = ( fizz && buzz ? 'fizzBuzz' : false) || (fizz ? 'fizz' : false) || (buzz ? 'buzz' : 'bug!');
+    let word = 'bug!';
+    let fizz = (numbers[i] % 3 === 0);
+    let buzz = (numbers[i] % 5 === 0);
+    word = (fizz) ? 'fizz' : word;
+    word = (buzz) ? 'buzz' : word;
+    word = (fizz && buzz) ? 'fizzBuzz' : word;
+    fizzBuzzBug[i] = word;
   }
   return fizzBuzzBug;
 }
+// https://stackoverflow.com/questions/32289340/alternative-to-nested-ternary-operator-in-js
+// answered Sep 12 '17 at 18:41 K McCabe
+
 // console.log(fizzBuzz([5, 10, 2, 15, 7, 9, 45]));
 // Desafio 9
 // a função a seguir funciona, porém não passa no teste automatizado.
@@ -103,33 +120,30 @@ function fizzBuzz(numbers) {
 // }
 
 function encode(sentence) {
-  // let vowels = 'aeiou';
   for (let i = 0; i < sentence.length; i += 1) {
-    switch (sentence[i]) {
-      case 'a':
-      sentence = sentence.replace('a', 1);
-      break;
-      case 'e':
-        sentence = sentence.replace('e', 2);
-      break;
-      case 'i':
-        sentence = sentence.replace('i', 3);
-      break;
-      case 'o':
-        sentence = sentence.replace('o', 4);
-      break;
-      case 'u':
-        sentence = sentence.replace('u', 5);
-      break;
-      default:
-      break;
-    }
-    // sentence = sentence.replace(vowels[i], i + 1);
-    
+    sentence = change(sentence, sentence[i]);
   }
   return sentence;
 }
-console.log(encode('esvaziou o vazio'));
+
+function change(sentence, key) {
+  switch (key) {
+    case 'a':
+    return sentence.replace('a', 1);
+    case 'e':
+    return sentence.replace('e', 2);
+    case 'i':
+    return sentence.replace('i', 3);
+    case 'o':
+    return sentence.replace('o', 4);
+    case 'u':
+    return sentence.replace('u', 5);
+    default:
+    return sentence;
+  }
+}
+
+// console.log(encode('esvaziou o vazio'));
 // O mesmo acontece na função decode, funciona, mas não passa no teste automatizado.
 // function decode(encSentence) {
 //   let vowels = 'aeiou'
@@ -163,34 +177,59 @@ console.log(encode('esvaziou o vazio'));
 //   return encSentence;
 // }
 
+// function decode(sentence) {
+//   for (let i = 0; i < sentence.length; i += 1) {
+//     switch (sentence[i]) {
+//       case '1':
+//       sentence = sentence.replace('1', 'a');
+//       break;
+//       case '2':
+//       sentence = sentence.replace('2', 'e');
+//       break;
+//       case '3':
+//       sentence = sentence.replace('3', 'i');
+//       break;
+//       case '4':
+//       sentence = sentence.replace('4', 'o');
+//       break;
+//       case '5':
+//       sentence = sentence.replace('5', 'u');
+//       break;
+//       default:
+//       break;
+//     }
+//     // sentence = sentence.replace(vowels[i], i + 1);
+    
+//   }
+//   return sentence;
+// }
+
 function decode(sentence) {
   for (let i = 0; i < sentence.length; i += 1) {
-    switch (sentence[i]) {
-      case '1':
-      sentence = sentence.replace('1', 'a');
-      break;
-      case '2':
-        sentence = sentence.replace('2', 'e');
-      break;
-      case '3':
-        sentence = sentence.replace('3', 'i');
-      break;
-      case '4':
-        sentence = sentence.replace('4', 'o');
-      break;
-      case '5':
-        sentence = sentence.replace('5', 'u');
-      break;
-      default:
-      break;
-    }
-    // sentence = sentence.replace(vowels[i], i + 1);
-    
+    sentence = encChange(sentence, sentence[i]);
   }
   return sentence;
 }
 
-console.log(decode('2sv1z345 4 v1z34'));
+function encChange(sentence, key) {
+  switch (key) {
+    case '1':
+    return sentence.replace('1', 'a');
+    case '2':
+    return sentence.replace('2', 'e');
+    case '3':
+    return sentence.replace('3', 'i');
+    case '4':
+    return sentence.replace('4', 'o');
+    case '5':
+    return sentence.replace('5', 'u');
+    default:
+    return sentence;
+  }
+}
+
+// console.log(decode('2sv1z345 4 v1z34'));
+
 module.exports = {
   calcArea,
   catAndMouse,
