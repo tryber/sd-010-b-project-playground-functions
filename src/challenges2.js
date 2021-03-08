@@ -87,11 +87,11 @@ function hydrate(string) {
     if(/[0-9]/.test(string[index])){
       count += parseInt(string[index]);
     }
-    if(count === 1){
-      return count + ' copo de água';
-    }else{
-      return count + ' copos de água';
-    }
+  }
+  if(count === 1){
+    return count + ' copo de água';
+  }else{
+    return count + ' copos de água';
   }
 }
 
