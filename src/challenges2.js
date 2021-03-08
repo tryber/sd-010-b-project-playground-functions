@@ -20,24 +20,21 @@ function convert(array, target1, target2) {
 let check = (array) => {
   let counts = {};
   array.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
-  array = Object.values(counts).some(index => index >= 3);
+  array = Object.values(counts).some((index) => index >= 3);
   return array;
 };
 function generatePhoneNumber(array) {
-  if (array.length > 11) return ('Array com tamanho incorreto');
-  if (array.some(index => index < 0)) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  if (array.some(index => index > 9)) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  if (check(array)) return 'não é possível gerar um número de telefone com esses valores';
+  let message = 'não é possível gerar um número de telefone com esses valores';
+  if (array.length === 11) return ('Array com tamanho incorreto');
+  if (array.some((index) => index < 0)) return message;
+  if (array.some((index) => index > 9)) return message;
+  if (check(array)) return message;
   let number1 = convert(array, 2, 7);
   let number2 = convert(array, 7);
   let dd = convert(array, 0, 2);
   return `(${dd}) ${number1}-${number2}`;
 }
-
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
