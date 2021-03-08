@@ -70,20 +70,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(fizzBuzz) {
   // seu código aqui
-  let emptyArray = [];
-  for (let i = 0; i < emptyArray.length; i += 1) {
-    if (emptyArray[i] % 3 === 0 ) {
-      emptyArray.push ('fizz');
-    } else if (emptyArray[i] % 5 === 0 ) {
-      emptyArray.push ('buzz');
-    } else if (emptyArray[i] % 3 === 0 && emptyArray[i] % 5 === 0 ) {
-      emptyArray.push ('fizzBuzz');
+  let array = [];
+  for (let i = 0; i < fizzBuzz.length; i += 1) {
+    if (array[i] % 3 === 0 ) {
+      array = fizzBuzz.push('fizz');
+
+    } else if (array[i] % 5 === 0 ) {
+      array = fizzBuzz.push('buzz');
+
+    } else if (array[i] % 3 === 0 && array[i] % 5 === 0 ) {
+      array = fizzBuzz.push('fizzBuzz');
+      
     } else {
-      emptyArray.push ('bug!');
+      array = fizzBuzz.push('bug!');
     }   
   }
+  return console.log(fizzbuzz);
 }
 console.log(fizzBuzz([9]));
 
