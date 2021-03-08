@@ -59,7 +59,6 @@ function highestCount(telefone) {
   
   
   }
-  
       return soma;
 
 }
@@ -67,19 +66,21 @@ function highestCount(telefone) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-let valor;
-let distancia1 = (mouse - cat1);
-let distancia2 = (mouse - cat2);
-if (distancia1 > distancia2) {
-  valor = 'cat2';
-}
-else if (distancia1 < distancia2) {
-  valor = 'cat1';
-}
-else if (distancia1 === distancia2) {
-  valor = 'os gatos trombam e o rato foge';
-}
-  return valor;
+ 
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
+  
+  if (distancia1 > distancia2){
+      resultado = 'cat2';
+  }
+  else if (distancia1 < distancia2) {
+      resultado = 'cat1';
+  }
+  else {
+      resultado = 'os gatos trombam e o rato foge';
+  }
+  
+  return resultado;
   }
 
 // Desafio 8
