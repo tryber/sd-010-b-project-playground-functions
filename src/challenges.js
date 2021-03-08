@@ -125,41 +125,41 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function encode(arrayString) {
-  let newString = ''
-  for (let index in arrayString) {
-    if (arrayString[index] == 'a') {
-      newString = newString + '1';
-    } else if (arrayString[index] == 'e') {
-      newString = newString + '2';
-    } else if (arrayString[index] == 'i') {
-      newString = newString + '3';
-    } else if (arrayString[index] == 'o') {
-      newString = newString + '4';
-    } else if (arrayString[index] == 'u') {
-      newString = newString + '5';
+function encode(string) {
+  let newString = '';
+  for (let index in string) {
+    if (string[index] === 'a') {
+      newString += '1';
+    } else if (string[index] === 'e') {
+      newString += '2';
+    } else if (string[index] === 'i') {
+      newString += '3';
+    } else if (string[index] === 'o') {
+      newString += '4';
+    } else if (string[index] === 'u') {
+      newString += '5';
     } else {
-      newString = newString + arrayString[index];
+      newString += string[index];
     }
   }
   return newString;
 }
 
-function decode(arrayString) {
-  let newString = ''
-  for (let index in arrayString) {
-    if (arrayString[index] == '1') {
-      newString = newString + 'a';
-    } else if (arrayString[index] == '2') {
-      newString = newString + 'e';
-    } else if (arrayString[index] == '3') {
-      newString = newString + 'i';
-    } else if (arrayString[index] == '4') {
-      newString = newString + 'o';
-    } else if (arrayString[index] == '5') {
-      newString = newString + 'u';
+function decode(string) {
+  let newString = '';
+  for (let index in string) {
+    if (string[index] === '1') {
+      newString += 'a';
+    } else if (string[index] === '2') {
+      newString += 'e';
+    } else if (string[index] === '3') {
+      newString += 'i';
+    } else if (string[index] === '4') {
+      newString += 'o';
+    } else if (string[index] === '5') {
+      newString += 'u';
     } else {
-      newString = newString + arrayString[index];
+      newString += string[index];
     }
   }
   return newString;

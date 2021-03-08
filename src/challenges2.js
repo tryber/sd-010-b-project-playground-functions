@@ -87,7 +87,7 @@ function hydrate(string) {
     }
   }
   if (count === 1) {
-    return `${count} copo de água`;
+    return `${count } copo de água`;
   }
   return `${count} copos de água`;
 }
