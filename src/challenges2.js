@@ -1,6 +1,20 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrTech, name) {
+  /*  let box = [{ tech: "React", name: "Nikolas" }, {}]
+   box[0].name = "Paulo"
+   console.log(box[0]); */
+
+  arrTech = arrTech.sort()
+
+  let arrNewTech = []
+
+  for (let i = 0; i < arrTech.leght; i++) {
+    arrNewTech.push({
+      tech: arrTech[i],
+      name: name
+    })
+  }
+  return arrNewTech
 }
 
 // Desafio 11
