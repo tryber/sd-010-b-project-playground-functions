@@ -85,13 +85,48 @@ function fizzBuzz(numbers){
     return result;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 // fontes de pesquisa: https://github.com/tryber/sd-010-b-project-playground-functions/pull/142 e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference
+
+function encode(phrase) {
+  let newPhrase = [];
+  for (let index in phrase) {
+    if (phrase[index] === 'a') {
+      newPhrase += '1';
+    } else if (phrase[index] === 'e') {
+      newPhrase += '2';
+    } else if (phrase[index] === 'i') {
+      newPhrase += '3';
+    } else if (phrase[index] === 'o') {
+      newPhrase += '4';
+    } else if (phrase[index] === 'u') {
+      newPhrase += '5';
+    } else {
+      newPhrase += phrase[index];
+    }
+  }
+  return newPhrase;
 }
-function decode() {
-  // seu código aqui
+ 
+function decode(phrase_2) {
+  let newPhrase_2 = [];
+  for (let index in phrase_2) {
+    if (phrase_2[index] === '1') {
+      newPhrase_2 += 'a';
+    } else if (phrase_2[index] === '2') {
+      newPhrase_2 += 'e';
+    } else if (phrase_2[index] === '3') {
+      newPhrase_2 += 'i';
+    } else if (phrase_2[index] === '4') {
+      newPhrase_2 += 'o';
+    } else if (phrase_2[index] === '5') {
+      newPhrase_2 += 'u';
+    } else {
+      newPhrase_2 += phrase_2[index];
+    }
+  }
+  return newPhrase_2;
 }
+
 
 module.exports = {
   calcArea,
