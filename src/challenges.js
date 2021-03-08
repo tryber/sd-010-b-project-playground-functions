@@ -3,7 +3,7 @@ let pizzaIsGood = true;
 let hamburguerIsGood = true;
 let chocolatePizzaIsGood = false;
 function compareTrue(parameter1, parameter2) {
-  if (parameter1 && parameter2 == true) {
+  if (parameter1 && parameter2 === true) {
     return true;
   }
   else {
@@ -98,20 +98,22 @@ console.log("-----------------------------------")
 
 // Desafio 8
 function fizzBuzz(array) {
-  let result;
+  let result = [];
+  
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result = "fizzBuzz"
+      result.push( "fizzBuzz")
     }
     else if (array[index] % 5 === 0) {
-      result = "buzz"
+      result.push("buzz")
     }
     else if (array[index] % 3 === 0) {
-      result = "fizz"
+      result.push("fizz")
     }
     else {
-      result = "bug!"
+      result.push("bug!")
     }
+    
   }
   return result
 }

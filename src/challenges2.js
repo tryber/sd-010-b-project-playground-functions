@@ -1,8 +1,16 @@
 // Desafio 10
 function techList(arr, name) {
-  arr = [];
-  let obj = arr.name;
-  name = "";
+  let obj = [];
+  if (arr.length == 0) {
+    return 'Vazio!';
+  } else {
+
+    for (let index = 0; index < arr.length; index += 1) {
+      obj.tech = arr[index];
+      obj.name = name;
+    }
+  }
+  return obj;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 "Lucas"))
