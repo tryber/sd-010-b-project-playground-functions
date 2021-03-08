@@ -1,15 +1,15 @@
 // Desafio 10
 
 function techList(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    let obj = new Object ();
-      obj.tech = array[index];
-      obj.name = 'name';
-      if (array[index] === '') {
-        console.log ('Vazio!');
-      }
-      console.log(obj);
+  let obj = {};
+  for (let index = 0; index < array.length; index += 1) {    
+    obj.tech = array[index];
+    obj.name = name
+    if (array[index] === '') {
+      console.log('Vazio!');
+    }
   }
+  return obj;
 }
 console.log (techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
 
@@ -34,3 +34,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
