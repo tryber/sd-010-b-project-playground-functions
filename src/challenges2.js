@@ -30,19 +30,19 @@ function generatePhoneNumber(arrayTelefone) {
       return "não é possivel gerar um número de telefone com esses valores";
     }
 
-    if (arrayTelefone == arrayTelefone[cont]){
-      duplicado += 1;
-    }
-  
+    for (let cont2 =0; cont2 <arrayTelefone.length; cont2 += 1){
+      if (arrayTelefone[cont]  === arrayTelefone[cont2]){
+        duplicado += 1;
+      }
+      if (duplicado > 2){
+        return "não é possivel gerar um número de telefone com esses valores";
+      }
+    }   
 }
-  if (duplicado >2){
-    return "não é possivel gerar um número de telefone com esses valores";
-  }
   let numeroTelefone = "(" + arrayTelefone[0].toString() + arrayTelefone[1].toString() + ") " + arrayTelefone[2].toString() + arrayTelefone[3].toString() + arrayTelefone[4].toString() + arrayTelefone[5].toString() + arrayTelefone[6].toString() + "-" + arrayTelefone[7].toString() + arrayTelefone[8].toString() + arrayTelefone[9].toString() + arrayTelefone[10].toString() 
   
   return numeroTelefone;
 }
-
 
 // Desafio 12
 function triangleCheck() {
