@@ -101,12 +101,53 @@ console.log(fizzBuzz ([7, 9]));
 console.log(fizzBuzz ([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let codes = {
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5'
 }
-function decode() {
-  // seu código aqui
+let deCod = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u'
 }
+
+function encode(phrase) {
+  let newPhrase = [];
+    for (let index of phrase) {
+      newPhrase.push(index);
+    }
+    for (let key in codes) {
+      for (let index2 = 0;index2 < newPhrase.length; index2 += 1) {
+        if (key === newPhrase[index2]) {
+          newPhrase[index2] = codes[key];
+        }
+      }
+    }
+  return newPhrase.join('');
+  }
+
+function decode(phrase) {
+  let newPhrase = [];
+    for (let index of phrase) {
+      newPhrase.push(index);
+  }
+    for (let key in deCod) {
+      for (let index3 = 0; index3 < newPhrase.length; index3 += 1) {
+        if (key == newPhrase[index3]) {
+         newPhrase[index3] = deCod[key];
+      }
+    }
+  }
+return newPhrase.join('');
+}
+
+console.log(encode("hi there!"));
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
