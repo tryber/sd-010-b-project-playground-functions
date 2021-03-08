@@ -18,8 +18,8 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-   let array = frase.split(" ");
-   return array;
+  let array = frase.split(" ");
+  return array;
 }
 
 // Desafio 4
@@ -42,8 +42,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(telefone) {
   // seu código aqui
+  let resultado = 0;
+  let maiorNumero = 0;
+ let numeros = telefone;
+ for (let index = 0; index < numeros.length; index += 1) {
+ if (numeros[index] > maiorNumero) {
+   maiorNumero = numeros[index];
+ }
+ }
+
+ for (let index1 = 0; index1 < numeros.length; index +=1) {
+  if (maiorNumero === numeros[index1]) {
+  resultado += 1;
+  }
+ }
+ return resultado;
 
 }
 
