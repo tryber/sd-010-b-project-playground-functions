@@ -29,10 +29,19 @@ function verifySize(array) {
   return response;
 }
 
+function verifyValue(value) {
+  let counter = 0;
+  if (value < 0 || value > 9) {
+    counter = 1;
+  }
+  return counter;
+}
+
 function verifyValues(array) {
-  let response;
+  let response; let counter = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9) {
+    counter = verifyValue(array[i]);
+    if (counter !== 0) {
       response = 'não é possível gerar um número de telefone com esses valores';
     } else { response = 'ok'; }
   }
@@ -145,7 +154,7 @@ function hydrate() {
 
 let tech = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 // let vazio = [];
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 9];
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 
 techList(tech, 'João');
 generatePhoneNumber(numbers);
