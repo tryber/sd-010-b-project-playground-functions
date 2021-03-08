@@ -34,17 +34,14 @@ console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(array) {
-  let help;
-  let first;
-  let last;
+  let help = [];
   for (let i = 0; i < array.length; i += 1) {
     if (i === array.length - 1) {
-      last = array[i] + ', ';
+      help[0] = array[i];
     } else if (i === 0) {
-      first = array[i];
+      help[1] = array[i];
     }
   }
-  help = last + first;
   return help;
 }
 console.log(concatName(['foquete', 'não', 'tem', 'ré']));
@@ -64,7 +61,7 @@ function highestCount(array) {
   let qtdNum = 0;
 
   for (let index = 0; index < array.length; index += 1) {
-    if (max == array[index]) {
+    if (max === array[index]) {
       qtdNum += 1;
     }
   }
