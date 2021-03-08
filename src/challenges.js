@@ -12,11 +12,11 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(51, 1));
+console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(texto) {
-  let result = texto.split('');
+  let result = texto.split(' ');
   return result;
 }
 console.log(splitSentence('Lara Capila'));
@@ -36,25 +36,25 @@ function footballPoints(wins, ties) {
   let resultado = vitorias + empates;
   return resultado;
 }
-console.log(footballPoints(1, 2));
+console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(numbers) {
   let maxNumber = 0;
-  for (let index = 0; index < numbers.length; index ++) {
+  for (let index = 0; index < numbers.length; index++) {
     if (numbers[index] > maxNumber) { 
       maxNumber = numbers[index];
     }
   }
   let cont = 0;
-  for (let index = 0; index < numbers.length; index ++) {
+  for (let index = 0; index < numbers.length; index++) {
     if (numbers[index] === maxNumber) { 
       cont ++;
     }
   }
   return cont;
 }
-console.log(highestCount([1, 2, 2]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -70,11 +70,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return catName;
 }
-console.log(catAndMouse(2, 4, 4));
+console.log(catAndMouse(2, 5, 7));
 // Desafio 8
 function fizzBuzz(array) {
   let arrayReturn = [];
-  for (let index = 0; index < array.length; index ++) {
+  for (let index = 0; index < array.length; index++) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayReturn[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
@@ -87,13 +87,13 @@ function fizzBuzz(array) {
   }
   return arrayReturn;
 }
-console.log(fizzBuzz([9, 25]));
+console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
 function encode(string) {
-  let text = string.split('');
+  let text = string.split(' ');
   let textCopie = text;
-  for (let index = 0; index < text.length; index ++) {
+  for (let index = 0; index < text.length; index++) {
     if (text[index] === 'a') {
       textCopie[index] = 1;
     }
@@ -110,13 +110,13 @@ function encode(string) {
       textCopie[index] = 5;
     }
   }
-  let convert = textCopie.join('');
+  let convert = textCopie.join(' ');
   return convert;
 }
 console.log(encode('hi there'));
 
 function decode(string) {
-  let text = string.split('');
+  let text = string.split(' ');
   let textCopie = text;
   for (let index = 0; index < text.length; index++) {
     if (text[index] === 1) {
@@ -135,7 +135,7 @@ function decode(string) {
       textCopie[index] = 'u';
     }
   }
-  let convert = textCopie.join('');
+  let convert = textCopie.join(' ');
   return convert;
 }
 console.log(decode('h3 th2r2'));
