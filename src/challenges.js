@@ -34,16 +34,8 @@ console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(array) {
-  let help = [];
-  let string;
-  for (let i = 0; i < array.length; i += 1) {
-    if (i === array.length - 1) {
-      help[0] = array[i];
-    } else if (i === 0) {
-      help[1] = array[i];
-    }
-  }
-  string = help;
+  let string = array[array.length - 1] + ', ';
+  string += array[0];
   return string;
 }
 console.log(concatName(['foquete', 'não', 'tem', 'ré']));
