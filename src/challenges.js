@@ -1,12 +1,10 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
   // seu código aqui
-if (valor1 == true && valor2 == true) {
+if (valor1 === true && valor2 === true) {
   return true;
 }
-else {
   return false;
-}
 }
 
 // Desafio 2
@@ -51,8 +49,8 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-let distancia1 = math.abs(mouse - cat1);
-let distancia2 = math.abs(mouse - cat2);
+let distancia1 = mouse - cat1;
+let distancia2 = (mouse - cat2);
 if (distancia1 > distancia2) {
   valor = "cat2";
 }
