@@ -8,7 +8,7 @@ function techList(techNames, nameList) {
   objectList = techNames.sort();
   if (objectList.length === 0) {
     return 'Vazio!';
-  } else {
+  }
     for (let key in objectList) {
       listOrdered.push({
         tech: objectList[key],
@@ -16,10 +16,7 @@ function techList(techNames, nameList) {
       }) 
     }
     return listOrdered;
-  }
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript', 'Cobol'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
