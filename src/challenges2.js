@@ -19,7 +19,7 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 function generatePhoneNumber(arrayTel) {
   let telefone = ""
   if (arrayTel.length != 11) {
-    return "array com tamanho incorreto";
+    return "Array com tamanho incorreto";
   }
   for (let key in arrayTel) {
     let repete = 0;
