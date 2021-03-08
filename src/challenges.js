@@ -91,11 +91,11 @@ function fizzBuzz(fizzBuzz) {
 function encode(lowercase) {
   // seu código aqui
   let code = {
-    1: 'a'
-    2: 'e'
-    3: 'i'
-    4: 'o'
-    5: 'u'
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
   
   let arr = str.split('');
@@ -114,27 +114,27 @@ function encode(lowercase) {
 function decode(str) {
   // seu código aqui
   let code = {
-    1: 'a'
-    2: 'e'
-    3: 'i'
-    4: 'o'
-    5: 'u'
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
   
-  let array = str.split('');
+  let arr = str.split('');
   
-  for (let i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < arr.length; i += 1) {
     for (let key in code) {
-      if (array[i] === key) {
-        array[i] = code[key];
+      if (arr[i] === key) {
+        arr[i] = code[key];
       }
     }
   }
   
-  return array.join('');
+  return arr.join('');
 }
 
-console.log(encode("hi there!"))
+console.log(decode(""))
 
 module.exports = {
   calcArea,
