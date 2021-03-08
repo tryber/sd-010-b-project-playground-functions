@@ -1,4 +1,5 @@
 // Desafio 10
+
 function obj(array, name) {
   let result = [];
   for (let i = 0; i < array.length; i += 1) {
@@ -18,7 +19,7 @@ function techList(techs, name) {
   let result = [];
   let array = techs.sort();
 
-  if (array === []) {
+  if (techs.length === 0) {
     result = 'Vazio!';
   } else {
     result = obj(array, name);
@@ -44,7 +45,7 @@ function numberTests(number) {
       result = 'não é possível gerar um número de telefone com esses valores';
       break;
     } else if (number.length !== 11) {
-      result = 'Array com tamanho incorreto.';
+      result = 'array com tamanho incorreto.';
     } else {
       result += number[i];
     }
@@ -55,11 +56,11 @@ function numberTests(number) {
 function generatePhoneNumber(numArray) {
   let result = '';
   let number = numberTests(numArray);
-  if (number[0] !== 'A' && number[0] !== 'N') {
+  if (number[0] !== 'a' && number[0] !== 'n') {
     const ddd = number.slice(0, -9);
     const initNumber = number.slice(2, -4);
     const endNumber = number.slice(-4);
-    let phoneNumber = `(${ddd}) ${initNumber} - ${endNumber}`;
+    let phoneNumber = `(${ddd}) ${initNumber}-${endNumber}`;
     result = phoneNumber;
   } else {
     result = number;
@@ -69,13 +70,13 @@ function generatePhoneNumber(numArray) {
 
 // Desafio 12
 function difCheck(a, b, c) {
-  if (Math.abs(a - b) > c && Math.abs(b - c) > a && Math.abs(c - a) > b) {
+  if (Math.abs(a - b) > c || Math.abs(b - c) > a || Math.abs(c - a) > b) {
     return false;
   }
 }
 function triangleCheck(a, b, c) {
   let triangle = false;
-  if (a + b < c && b + c < a && a + c < b) {
+  if (a + b < c || b + c < a || a + c < b) {
     triangle = false;
   } else if (difCheck(a, b, c) !== false) {
     triangle = true;
