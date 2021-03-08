@@ -41,13 +41,13 @@ console.log(footballPoints(14, 8));
 // Desafio 6
 function highestCount(numbers) {
   let maxNumber = 0;
-  for (let index = 0; index < numbers.length; index++) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > maxNumber) { 
       maxNumber = numbers[index];
     }
   }
   let cont = 0;
-  for (let index = 0; index < numbers.length; index++) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === maxNumber) { 
       cont ++;
     }
@@ -74,7 +74,7 @@ console.log(catAndMouse(2, 5, 7));
 // Desafio 8
 function fizzBuzz(array) {
   let arrayReturn = [];
-  for (let index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       arrayReturn[index] = 'fizzBuzz';
     } else if (array[index] % 3 === 0) {
@@ -93,7 +93,7 @@ console.log(fizzBuzz([7, 9]));
 function encode(string) {
   let text = string.split(' ');
   let textCopie = text;
-  for (let index = 0; index < text.length; index++) {
+  for (let index = 0; index < text.length; index += 1) {
     if (text[index] === 'a') {
       textCopie[index] = 1;
     }
@@ -113,12 +113,12 @@ function encode(string) {
   let convert = textCopie.join(' ');
   return convert;
 }
-console.log(encode('hi there'));
+console.log(encode('hi there!'));
 
 function decode(string) {
   let text = string.split(' ');
   let textCopie = text;
-  for (let index = 0; index < text.length; index++) {
+  for (let index = 0; index < text.length; index += 1) {
     if (text[index] === 1) {
       textCopie[index] = 'a';
     }
@@ -138,7 +138,7 @@ function decode(string) {
   let convert = textCopie.join(' ');
   return convert;
 }
-console.log(decode('h3 th2r2'));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,

@@ -3,7 +3,7 @@ function techList(tech, nome) {
   if (tech.length !== 0) {
     let techOrdem = tech.sort();
     let objetosArray = [];
-    for (let index = 0; index < techOrdem.length; index++) {
+    for (let index = 0; index < techOrdem.length; index += 1) {
       let objeto = {
         tech: techOrdem[index],
         name: nome,
