@@ -90,29 +90,30 @@ function encode(textLine) {
   let letters = ['a', 'e', 'i', 'o', 'u'];
   for (i = 0; i < phrase.length; i += 1) {
     for (l = 0; l < letters.length; l += 1) {
-      if (phrase[i] === letters[l]){
-            phrase[i] = l+1;     
+      if (phrase[i] === letters[l]) {
+        phrase[i] = l + 1;
       }
     }
+    phrase1 = phrase.join(' ');
   }
-  return (phrase);
-
+  return (phrase1);
 }
-//console.log(encode("hi there!"));
+console.log(encode('hi there!'));
 
 function decode(textLine) {
   let phrase = textLine.split('');
   let letters = ['a', 'e', 'i', 'o', 'u'];
   for (i = 0; i < phrase.length; i += 1) {
     for (l = 0; l < letters.length; l += 1) {
-      if (phrase[i] === l){
-            phrase[i] = letters[l-1];    
+      if ((parseInt(phrase[i]) === (l + 1))) {
+        phrase[i] = letters[l];
       }
     }
+    phrase1 = phrase.join(' ');
   }
-  return (phrase);
+  return (phrase1);
 }
-//console.log(decode("h3 th2r2!"));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
