@@ -66,13 +66,19 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let sum = 0; 
+  let num = string.replace(/[^0-9]/g,'');      
+  let arrayNum = num.split('')
+  for (let index = 0; index < arrayNum.length; index += 1) {    
+    sum += parseInt(arrayNum[index]);
+  }
+  return `${sum} copos de água`;
 }
 
+//REFERENCIA => https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
 module.exports = {
   generatePhoneNumber,
   techList,
