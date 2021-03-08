@@ -40,13 +40,14 @@ function highestCount(valores) {
   let max = 0;
   let repeat = 0;
   for (let index = 0; index < valores.length; index += 1) {
-      if (valores[index] > max) {
-          max = valores[index]
-      }
-  } for (let key in valores) {
-      if (valores[key] === max) {
-          repeat += 1
-      }
+    if (valores[index] > max) {
+      max = valores[index]
+    }
+  }
+  for (let key in valores) {
+    if (valores[key] === max) {
+      repeat += 1
+    }
   }
   return repeat
 }
@@ -99,7 +100,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(string) {
-  let stringPronto = []; 
+  let stringPronto = [];
   let stringPronta = "";
   for (let key in string) {
     if (string[key] === "a") {
