@@ -12,41 +12,38 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Breno'));
 function objectArrayGenerator(arraylist, name) {
   let objectArray = [];
   for (let index = 0; index < arraylist.length; index += 1) {
-    let objectList = {
-      tech: arraylist[index],
-      name: name,
-    };
+    let objectList = {tech: arraylist[index], name: name};
     objectArray.push(objectList);
   }
   return objectArray;
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneNumberArray) {
-  if (phoneNumberArray.length !== 11) {
-    return "Array com tamanho incorreto.";
+function generatePhoneNumber(phNumArray) {
+  if (phNumArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
 
-  for (let index = 0; index < phoneNumberArray.length; index += 1) {
-    if ((phoneNumberArray[index] < 0) || (phoneNumberArray[index] > 9)) {
-      return "não é possível gerar um número de telefone com esses valores2";
+  for (let index = 0; index < phNumArray.length; index += 1) {
+    if ((phNumArray[index] < 0) || (phNumArray[index] > 9)) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
-  for (let index1 = 0; index1 < phoneNumberArray.length; index1 += 1) {
+  for (let index1 = 0; index1 < phNumArray.length; index1 += 1) {
     let repeatCounter = 0;
-    for (let index2 = 1; index2 < phoneNumberArray.length; index2 += 1){
-      if (phoneNumberArray[index1] === phoneNumberArray[index2]) {
+    for (let index2 = 1; index2 < phNumArray.length; index2 += 1){
+      if (phNumArray[index1] === phNumArray[index2]) {
         repeatCounter += 1;
       }
 
       if (repeatCounter === 3) {
-        return "não é possível gerar um número de telefone com esses valores3";
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     }
   }
 
-  return (`(${phoneNumberArray[0]}${phoneNumberArray[1]}) ${phoneNumberArray[2]}${phoneNumberArray[3]}${phoneNumberArray[4]}${phoneNumberArray[5]}${phoneNumberArray[6]}-${phoneNumberArray[7]}${phoneNumberArray[8]}${phoneNumberArray[9]}${phoneNumberArray[10]}`);
+  return (`(${phNumArray[0]}${phNumArray[1]}) ${phNumArray[2]}${phNumArray[3]}${phNumArray[4]}${phNumArray[5]}${phNumArray[6]}-${phNumArray[7]}${phNumArray[8]}${phNumArray[9]}${phNumArray[10]}`);
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
