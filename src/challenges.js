@@ -33,7 +33,7 @@ function splitSentence(anyString) {
 function concatName(arrayString) {
   let firstItem = arrayString[0];
   let lastItem = arrayString[arrayString.length - 1];
-  finalString = `${lastItem}, ${firstItem}`;
+  let finalString = `${lastItem}, ${firstItem}`;
   return finalString;
 }
 
@@ -46,16 +46,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumber) {
-  let highestNumber = 0;
+function highestNumber(arrayNumber) {
+  let highestN = 0;
   for (let index in arrayNumber) {
-    if (arrayNumber[index] > highestNumber) {
-      highestNumber = arrayNumber[index];
+    if (arrayNumber[index] > highestN) {
+      highestN = arrayNumber[index];
     }
   }
+  return highestN;
+}
+
+function highestCount(arrayNumber) {
   let quantityHighestNumber = 0;
   for (let index in arrayNumber) {
-    if (highestNumber == arrayNumber[index]) {
+    if (highestNumber(arrayNumber) === arrayNumber[index]) {
       quantityHighestNumber += 1;
     }
   }
@@ -70,16 +74,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Steps = 0;
 
   if (cat1 < mouse) {
-      cat1Steps = mouse - cat1;
+    cat1Steps = mouse - cat1;
   }
   if (cat2 < mouse) {
-      cat2Steps = mouse - cat2;
+    cat2Steps = mouse - cat2;
   }
   if (cat1 > mouse) {
-      cat1Steps = cat1 - mouse;
+    cat1Steps = cat1 - mouse;
   }
   if (cat2 > mouse) {
-      cat2Steps = cat2 - mouse;
+    cat2Steps = cat2 - mouse;
   }
   if (cat1Steps > cat2Steps) {
     return 'cat2';
@@ -110,16 +114,16 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode(arrayString) {
   let newString = ''
-  for(let index in arrayString){
-    if(arrayString[index] == 'a'){
+  for (let index in arrayString) {
+    if (arrayString[index] == 'a') {
       newString = newString + '1';
-    } else if(arrayString[index] == 'e'){
+    } else if (arrayString[index] == 'e') {
       newString = newString + '2';
-    } else if(arrayString[index] == 'i'){
+    } else if (arrayString[index] == 'i') {
       newString = newString + '3';
-    } else if(arrayString[index] == 'o'){
+    } else if (arrayString[index] == 'o') {
       newString = newString + '4';
-    } else if(arrayString[index] == 'u'){
+    } else if (arrayString[index] == 'u') {
       newString = newString + '5';
     } else {
       newString = newString + arrayString[index];
@@ -130,16 +134,16 @@ function encode(arrayString) {
 
 function decode(arrayString) {
   let newString = ''
-  for(let index in arrayString){
-    if(arrayString[index] == '1'){
+  for (let index in arrayString) {
+    if (arrayString[index] == '1') {
       newString = newString + 'a';
-    } else if(arrayString[index] == '2'){
+    } else if (arrayString[index] == '2') {
       newString = newString + 'e';
-    } else if(arrayString[index] == '3'){
+    } else if (arrayString[index] == '3') {
       newString = newString + 'i';
-    } else if(arrayString[index] == '4'){
+    } else if (arrayString[index] == '4') {
       newString = newString + 'o';
-    } else if(arrayString[index] == '5'){
+    } else if (arrayString[index] == '5') {
       newString = newString + 'u';
     } else {
       newString = newString + arrayString[index];
