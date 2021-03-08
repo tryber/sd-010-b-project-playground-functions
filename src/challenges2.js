@@ -64,8 +64,8 @@ function generatePhoneNumber(number) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let lineAabs = Math.abs(lineA); let lineBabs = Math.abs(lineB);
-  let lineCabs = Math.abs(lineC);
+  let lineAabs = lineA * (-1); let lineBabs = lineB * (-1);
+  let lineCabs = lineC * (-1);
   let somaLine = lineA < lineAabs || lineB < lineBabs || lineC < lineCabs;
   let soma = lineA > lineB + lineC || lineB > lineC + lineA || lineC > lineA + lineB;
   if (somaLine || soma) {
