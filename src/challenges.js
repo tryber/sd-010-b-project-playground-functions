@@ -48,21 +48,21 @@ function highestCount(arrayNumbers) {
   return maxNumberRepeat
 }
 
-// Desafio 7 - OtherWay
-/* function catAndMouse(mouse, cat1, cat2) {
-  let diffCat1 = Math.abs(cat1 - mouse)
-  let diffCat2 = Math.abs(cat2 - mouse)
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  let diffCat1 = Math.abs(cat1 - mouse);
+  let diffCat2 = Math.abs(cat2 - mouse);
 
   if (diffCat1 < diffCat2) {
-    return "Cat1"
+    return "cat1";
   }
   else if (diffCat1 > diffCat2) {
-    return "Cat2"
+    return "cat2";
   }
   else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
-} */
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -73,13 +73,13 @@ function catAndMouse(mouse, cat1, cat2) {
     mouseCat1 = mouse - cat1;
   } else {
     mouseCat1 = cat1 - mouse;
-    }
+  }
 
   if (mouse > cat2) {
     mouseCat2 = mouse - cat2;
   } else {
     mouseCat2 = cat2 - mouse;
-    }
+  }
 
   if (mouseCat1 < mouseCat2) {
     return 'Cat1';

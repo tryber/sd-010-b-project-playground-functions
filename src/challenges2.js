@@ -8,7 +8,7 @@ function techList(arrTech, name) {
 
   let arrNewTech = []
 
-  for (let i = 0; i < arrTech.leght; i++) {
+  for (let i = 0; i < arrTech.legth; i++) {
     arrNewTech.push({
       tech: arrTech[i],
       name: name
