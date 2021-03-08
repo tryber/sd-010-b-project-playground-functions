@@ -2,16 +2,17 @@
 
 function techList(array, name) {
   let obj = {};
-  for (let index = 0; index < array.length; index += 1) {    
-    obj.tech = array[index];
-    obj.name = name;
-    if (array[index] === 0) {
-      console.log('Vazio!');
+  if (array.length == 0) {
+    return 'Vazio!';
+  } else {
+    for (let index = 0; index < array.length; index += 1) {
+      obj.tech = array[index];
+      obj.name = name;
     }
   }
   return obj;
 }
-console.log (techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Ederson'));
+console.log(techList([]));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -34,4 +35,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
