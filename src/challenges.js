@@ -20,7 +20,7 @@ function splitSentence(breakString) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  return arrayStrings[arrayStrings.length - 1] + arrayStrings[0]
+  return arrayStrings[arrayStrings.length - 1] + ", " + arrayStrings[0]
 }
 
 // Desafio 5
@@ -50,8 +50,8 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let diffCat1 = cat1 - mouse
-  let diffCat2 = cat2 - mouse
+  let diffCat1 = Math.abs(cat1 - mouse)
+  let diffCat2 = Math.abs(cat2 - mouse)
 
   if (diffCat1 < diffCat2) {
     return "Cat1"
@@ -87,7 +87,7 @@ function fizzBuzz(arrayNumbers) {
       returnArray.push("buzz")
     }
     else {
-      returnArray.push("bug")
+      returnArray.push("bug!")
     }
   }
   return returnArray
