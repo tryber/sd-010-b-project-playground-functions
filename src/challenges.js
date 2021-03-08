@@ -10,9 +10,9 @@ if (valor1 === true && valor2 === true) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-let areatriangulo;
-areatriangulo = (base * height) / 2;
-return areatriangulo;
+  let areatriangulo;
+  areatriangulo = (base * height) / 2;
+  return areatriangulo;
 
 }
 
@@ -49,8 +49,8 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let valor
-let distancia1 = mouse - cat1;
+let valor
+let distancia1 = (mouse - cat1);
 let distancia2 = (mouse - cat2);
 if (distancia1 > distancia2) {
   valor = "cat2";
