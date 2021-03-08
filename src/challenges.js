@@ -37,7 +37,8 @@ function splitSentence(userEntry) {
 // https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
 
 function concatName(arrayOfStrings1) {
-  let lastFirst = (arrayOfStrings1[arrayOfStrings1.length - 1] + ', ' + arrayOfStrings1[0]);
+  //let lastFirst = arrayOfStrings1[arrayOfStrings1.length - 1] + ', ' + arrayOfStrings1[0];
+  let lastFirst = `${arrayOfStrings1[arrayOfStrings1.length - 1]}, ${arrayOfStrings1[0]}`
   return lastFirst;
 }
 
@@ -139,7 +140,7 @@ function decode(auxDe) {
   }
   return change.join('');
 }
-decode('h3 th2r2')
+
 
 module.exports = {
   calcArea,
