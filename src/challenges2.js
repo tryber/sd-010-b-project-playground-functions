@@ -50,8 +50,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(cupDrink) {
   // seu código aqui
+  let reducer = (acc, currentValue) => acc + currentValue; // soma valores dentro da getItengers
+  let removerLetters = cupDrink.replace(/\D/gi, ''); // remover as letras
+  let convertInArrayString = []; // criar nova array para receber as letras
+  convertInArrayString = removerLetters.split(''); // converter em array(string)
+  let getItengers = []; // criar nova array para receber os numeros
+  for (let index = 0; index < convertInArrayString.length; index += 1) {
+    getItengers.push(parseInt(convertInArrayString[index]));
+  }
+  let sum = getItengers.reduce(reducer);
+
+  if (sum > 1) { return `${sum} copos de água`; }
+  if (sum === 1) { return `${sum} copo de água`; }
 }
 
 module.exports = {
