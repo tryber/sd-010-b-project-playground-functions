@@ -1,6 +1,21 @@
 // Desafio 10
 function techList(techList, name) {
-  
+  let techListArray = objectArrayGenerator(techList.sort(), name);
+  return techListArray;
+}
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Breno"));
+
+// Desafio 10 - Função extra1
+function objectArrayGenerator(arraylist, name) {
+  let objectArray = [];
+  for (let index = 0; index < arraylist.length; index += 1) {
+    let objectList = {
+      tech: arraylist[index],
+      name: name,
+    }
+    objectArray.push(objectList);    
+  }
+  return objectArray;
 }
 
 // Desafio 11
