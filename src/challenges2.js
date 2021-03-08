@@ -1,24 +1,7 @@
 // Desafio 10
-function techList(arrayTech,name) {
-  let finalList = [];
-  let object = {
-    arrayTech,
-    name,
-  };
-  
-  if (object.length === 0) {
-    return "Vazio";
-  }     
-    let orderlyTechList = object.arrayTech.sort();  
-    for (let key in orderlyTechList) {
-          finalList.push({
-          tech: orderlyTechList[key],
-          name,
-          });
-    }
-  return finalList;
-  }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+function techList() {
+    // seu código aqui
+}
 
 // Desafio 11
 function generatePhoneNumber() {
