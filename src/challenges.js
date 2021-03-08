@@ -76,7 +76,7 @@ let codes = {
   e: '2',
   i: '3',
   o: '4',
-  u: '5'
+  u: '5',
 }
 
 function encode(frase) {
@@ -86,7 +86,7 @@ function encode(frase) {
   }
   for (let key in codes) {
     // frase.split(novaPalavra[novaPalavra]).join(codes[key])
-    for (let index = 0; index < novaFrase.length; index += 1) {      
+    for (let index = 0; index < novaFrase.length; index += 1) {
 			if (key == novaFrase[index]) {
         novaFrase[index] = codes[key];
       }
@@ -103,7 +103,7 @@ function decode(frase) {
   }
   for (let key in codes) {
     // frase.split(novaPalavra[novaPalavra]).join(codes[key])
-    for (let index = 0; index < novaFrase.length; index += 1) {      
+    for (let index = 0; index < novaFrase.length; index += 1) {
 			if (codes[key] == novaFrase[index]) {
         novaFrase[index] = key;
       }
