@@ -63,28 +63,35 @@ function highestCount(arrayNumber) {
       quantityHighestNumber += 1;
     }
   }
-
   return quantityHighestNumber;
 }
 
 // Desafio 7
-
-function catAndMouse(mouse, cat1, cat2) {
+function stepsCat1(mouse, cat1) {
   let cat1Steps = 0;
-  let cat2Steps = 0;
-
   if (cat1 < mouse) {
     cat1Steps = mouse - cat1;
-  }
-  if (cat2 < mouse) {
-    cat2Steps = mouse - cat2;
   }
   if (cat1 > mouse) {
     cat1Steps = cat1 - mouse;
   }
+  return cat1Steps;
+}
+
+function stepsCat2(mouse, cat2) {
+  let cat2Steps = 0;
+  if (cat2 < mouse) {
+    cat2Steps = mouse - cat2;
+  }
   if (cat2 > mouse) {
     cat2Steps = cat2 - mouse;
   }
+  return cat2Steps;
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Steps = stepsCat1(mouse, cat1);
+  let cat2Steps = stepsCat2(mouse, cat2);
   if (cat1Steps > cat2Steps) {
     return 'cat2';
   }
@@ -95,18 +102,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function verificationFizzBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(arrayNumber) {
-  fizzBuzzArray = [];
-  for (let index in arrayNumber) {
-    if (arrayNumber[index] % 3 == 0 && arrayNumber[index] % 5 == 0) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (arrayNumber[index] % 3 == 0 && arrayNumber[index] % 5 != 0) {
-      fizzBuzzArray.push('fizz');
-    } else if (arrayNumber[index] % 3 != 0 && arrayNumber[index] % 5 == 0) {
-      fizzBuzzArray.push('buzz');
-    } else {
-      fizzBuzzArray.push('bug!');
-    }
+  let fizzBuzzArray = [];
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    let number = arrayNumber[index];
+    arrayNumber.push(verificationFizzBuzz(number));
   }
   return fizzBuzzArray;
 }
