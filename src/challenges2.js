@@ -2,7 +2,6 @@
 function techList(tech, name) {
   let lista = tech.sort();
   let resultado = [];
-  function techList() {
 
     if (lista.length > 1) {
       for (let index = 0; index < lista.length; index += 1) {
@@ -12,7 +11,7 @@ function techList(tech, name) {
       resultado = 'Vazio!';
     }
     return resultado;
-  }
+  };
 
   // Desafio 11
   function generatePhoneNumber(numeros) {
