@@ -1,12 +1,12 @@
 // Desafio 10
 function techList(tecnologia, pessoa) {
     let objeto = []
-    tecnologia2 = tecnologia.sort();
+    let tecnologia2 = tecnologia.sort(); //.sort coloca em ordem alfabetica
     if (tecnologia2.length == 0) {
       return 'Vazio!';
     }
     for (let key in tecnologia2) {
-      objeto.push({ tech: tecnologia2[key], name: pessoa });
+      objeto.push({ tech: tecnologia2[key], name: pessoa }); // : para fazer objeto
     }
     return objeto;
   }
