@@ -53,7 +53,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+let check = (number) => {
+  if (number % 3 === 0 && number % 5 === 0) return 'fizzBuzz';
+  if (number % 3 === 0) return 'fizz';
+  if (number % 5 === 0) return 'buzz';
+  return 'fizz';
+};
+function fizzBuzz(number) {
+  let newArray = [];
+  for (let index of number) {
+    newArray.push(check(index));
+  }
+  return newArray;
 }
 
 // REFERÊNCIAS: https://stackoverflow.com/ , https://developer.mozilla.org/  , CANAL YOUTUBE: Programador a Bordo, Playlist 'JavaScript: Funções de Array'
