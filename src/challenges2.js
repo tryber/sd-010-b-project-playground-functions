@@ -2,33 +2,42 @@
 function techList() {
   // seu código aqui
 }
+
 // Desafio 11
-// function numTests(number) {
-//   let result = [];
-//   for (let i in number) {
-//     if (number.length !== 11) {
-//       return "Array com tamanho incorreto.";
-
-//     } else if (number[i] < 0) {
-//       return "não é possível gerar um número de telefone com esses valores";
-
-//     } else if (number[i] > 9) {
-//       return "não é possível gerar um número de telefone com esses valores";
-
-//     } else {
-//       result.push(number[i]);
-//     }
-//   }
-//   return result
-// }
-// let cell = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-// console.log(numTests(cell));
-
-function generatePhoneNumber() {
-  // let result = '';
-  // let phoneNumber = `(${}) ${} - ${}`;
-  // return result
+function numberTests(number) {
+  let result = '';
+  for (let i in number) {
+    if (number.length !== 11) {
+      result = 'Array com tamanho incorreto.';
+      break;
+    } else if (number[i] < 0 || number[i] > 9) {
+      result = 'não é possível gerar um número de telefone com esses valores';
+      break;
+    } else {
+      result += number[i];
+    }
+  }
+  return result;
 }
+// const x = [1, 2, 3, 4, 5, 16, 7, 8, 9, 0, 1];
+// console.log(numberTests(x));
+
+function generatePhoneNumber(numArray) {
+  let result = '';
+  let number = numberTests(numArray);
+  if (number[0] !== 'A' && number[0] !== 'N') {
+    const ddd = number.slice(0, -9);
+    const initNumber = number.slice(2, -4);
+    const endNumber = number.slice(-4);
+    let phoneNumber = `(${ddd}) ${initNumber} - ${endNumber}`;
+    result = phoneNumber;
+  } else {
+    result = number;
+  }
+  return result;
+}
+const x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(x));
 
 // Desafio 12
 function difCheck(a, b, c) {
