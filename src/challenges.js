@@ -1,9 +1,8 @@
 // Desafio 1
 let compareTrue = (num1) => {
-  if (num1 > 0 && num1 < 10) {
-    return true;
-  }
+  if (num1 > 0 && num1 < 10){}  
 }
+console.log(true);
 
 // Desafio 2
 let calcArea = (base, heigth) => {
