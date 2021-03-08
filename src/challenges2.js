@@ -30,11 +30,11 @@ function generatePhoneNumber(array) {
     } else {
       for (let x in array) {
         for (let y in array) {
-          if((x !== y) && (array[x] === array[y])) {
+          if ((x !== y) && (array[x] === array[y])) {
             resposta += 1;
           }
         }
-        if(resposta >= 3) {
+        if (resposta >= 3) {
           resposta = 'não é possível gerar um número de telefone com esses valores';
           break;
         } else if (parseInt(x) === array.length - 1) {
