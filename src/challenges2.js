@@ -1,7 +1,33 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function obj(array, name) {
+  let result = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === '') {
+      array[i] = 'Vazio';
+    }
+    let list = {
+      tech: array[i],
+      name,
+    };
+    result.push(list);
+  }
+  return result;
 }
+
+function techList(techs, name) {
+  let result = [];
+  let array = techs.sort();
+
+  if (array === []) {
+    result = 'Vazio!';
+  } else {
+    result = obj(array, name);
+  }
+  return result;
+}
+let array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+let name = 'Lucas';
+console.log(techList(array, name));
 
 // Desafio 11
 function numberTests(number) {
@@ -19,7 +45,7 @@ function numberTests(number) {
   }
   return result;
 }
-// const x = [1, 2, 3, 4, 5, 16, 7, 8, 9, 0, 1];
+// const x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 // console.log(numberTests(x));
 
 function generatePhoneNumber(numArray) {
@@ -36,8 +62,8 @@ function generatePhoneNumber(numArray) {
   }
   return result;
 }
-const x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(x));
+// const x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(x));
 
 // Desafio 12
 function difCheck(a, b, c) {
