@@ -126,14 +126,18 @@ for(let i = 0; i < stringuinha.length; i += 1){
   return encoder;
 }
 
-let dat = 'eu to de boa';
-let mat = encode(dat);
-console.log(mat);
-
-
-function decode() {
+function decode(stringuinha) {
   // seu código aqui
-}
+  let encoder = stringuinha;
+  for(let i = 0; i < stringuinha.length; i += 1){
+    encoder = encoder.replace('1','a');
+    encoder = encoder.replace('2','e');
+    encoder = encoder.replace('3','i');
+    encoder = encoder.replace('4','o');
+    encoder = encoder.replace('5','u');
+  }
+    return encoder;
+  }
 
 module.exports = {
   calcArea,
