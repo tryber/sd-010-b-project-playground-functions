@@ -90,9 +90,9 @@ function hydrate(drink) {
   }
 
   if (soma < 2) {
-    hydratar = soma + ' copo de água';
+    hydratar = '${soma} +  copo de água';
   } else {
-    hydratar = soma + ' copos de água';
+    hydratar = '${soma} +  copos de água';
   }
   return hydratar;
 }
