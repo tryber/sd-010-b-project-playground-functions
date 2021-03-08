@@ -39,7 +39,7 @@ function generatePhoneNumber(arrayTelefone) {
       }
     }   
 }
-  let numeroTelefone = "(" + arrayTelefone[0].toString() + arrayTelefone[1].toString() + ") " + arrayTelefone[2].toString() + arrayTelefone[3].toString() + arrayTelefone[4].toString() + arrayTelefone[5].toString() + arrayTelefone[6].toString() + "-" + arrayTelefone[7].toString() + arrayTelefone[8].toString() + arrayTelefone[9].toString() + arrayTelefone[10].toString() 
+  let numeroTelefone = `(${arrayTelefone[0]}${arrayTelefone[1]}) ${arrayTelefone[2]}${arrayTelefone[3]}${arrayTelefone[4]}${arrayTelefone[5]}${arrayTelefone[6]}-${arrayTelefone[7]}${arrayTelefone[8]}${arrayTelefone[9]}${arrayTelefone[10]}`;
   
   return numeroTelefone;
 }
