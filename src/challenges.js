@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let highNumber = 0;
   let highNumberCount = 0;
-  for ( let i = 0; i < numbers.length; i += 1) {
+  for ( i = 0; i < numbers.length;  i += 1) {
     if (numbers[i] > highNumber) {
       highNumber = numbers[i];
     }
@@ -94,7 +94,7 @@ function encode(text) {
 }
 
 function decode(text) {
-  //usei o replace() para fazer as respectivas mudanças nas strings, referência do text.replace() > https://www.w3schools.com/jsref/jsref_replace.asp
+  //usei o replace() para fazer as respectivas mudanças nas strings, referência do replace() > https://www.w3schools.com/jsref/jsref_replace.asp
   text = text.replace(/1/g, 'a');
   text = text.replace(/2/g, 'e');
   text = text.replace(/3/g, 'i');
