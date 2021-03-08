@@ -17,21 +17,18 @@ function calcArea(base, height) {
 function splitSentence(frase) {
   let array = [];
   array = frase.split(' ');
-  
   return array;
 }
 // Desafio 4
 function concatName(variavel) {
   let resultado = '';
-  resultado = variavel[variavel.length -1] + ', ' + variavel[0];
-
+  resultado = (variavel[variavel.length - 1] + ', ' + variavel[0]);
   return resultado;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
   pontos = (3 * wins + 1 * ties);
-
   return pontos;  
 }
 // Desafio 6
@@ -43,7 +40,6 @@ function highestCount(n) {
       numeroMaior = n[i];
     }
   }
-  
   for (let i = 0; i < n.length; i += 1) {
     if (numeroMaior === n[i]) {
       contador += 1;
@@ -55,14 +51,15 @@ function highestCount(n) {
 function catAndMouse(mouse, cat1, cat2) {
   let position1 = Math.abs(cat1 - mouse);
   let position2 = Math.abs(cat2 - mouse);
-
+  let resultado = '';
   if (position1 === position2) {
-    return 'os gatos trombam e o rato foge';
+    resultado = 'os gatos trombam e o rato foge';
   } else if (position1 > position2) {
-    return 'cat2';
+    resultado = 'cat2';
   } else {
-    return 'cat1';
+    resultado = 'cat1';
   }
+  return resultado;
 }
 // Desafio 8
 function fizzBuzz(n) {

@@ -2,8 +2,8 @@
 function techList(tecnologias, name) {
   let arrayOrdenado = tecnologias.sort();
   let info = [];
-  if (arrayOrdenado.length === 0){
-    info = 'Vazio!'
+  if (arrayOrdenado.length === 0) {
+    info = 'Vazio!';
   } else {
       info = [
       {
