@@ -55,18 +55,18 @@ function triangleCheck(lineA, lineB, lineC) {
   let soma1 = lineB + lineC;
   let soma2 = lineA + lineC;
   let soma3 = lineB + lineA;
-  
-  if (lineA < soma1) {
+
+  if (lineA < soma1 && lineA > Math.abs(lineB - lineC)) {
     return true
-  } else if (lineB < soma2) {
+  } else if (lineB < soma2 && Math.abs(lineA - lineC)) {
     return true
-  } else if (lineC < soma3) {
+  } else if (lineC < soma3 && Math.abs(lineB - lineA)) {
     return true
   } else {
     return false
   }
 }
-console.log(triangleCheck(10, 5, 2));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
