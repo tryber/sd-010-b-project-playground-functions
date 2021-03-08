@@ -24,11 +24,11 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Junior'));
 function generatePhoneNumber(array) {
   let resposta = 1;
   let cond = false;
-  if(array.length === 11) {
-    if ((Math.min.apply(Math ,array) < 0) || (Math.max.apply(Math ,array) > 9)) {
+  if (array.length === 11) {
+    if ((Math.min.apply(Math,array) < 0) || (Math.max.apply(Math,array) > 9)) {
       resposta = 'não é possível gerar um número de telefone com esses valores';
     } else {
-      for(let x in array){
+      for (let x in array) {
         for (let y in array) {
           if(x !== y){
             if (array[x] === array[y]) {
@@ -92,10 +92,14 @@ function hydrate(string) {
       total += parseInt(extrairNumeros[i]);
     }
   }
-  total += ' copos de água';
+  if (total === 1){
+    total += ' copo de água';
+  } else {
+    total += ' copos de água';
+  }  
   return total;
 }
-console.log(hydrate('1 cerveja, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
