@@ -10,7 +10,7 @@ function techList(array, name) {
     for (let i = 0; i < array.length; i += 1) {
       let techDesired = {
         tech: '',
-        names: name,
+        name: name,
       };
       techDesired.tech = array[i];
       help.push(techDesired);
@@ -34,9 +34,9 @@ function generatePhoneNumber(array) {
         for (let j = 0; j < array.length; j += 1) {
           if (i !== j) {
             if (array[i] === array[j]) {
-              cont += 1;                                       
-            }    
-          }                   
+              cont += 1;
+            }
+          }
         }
       }
     }
@@ -93,7 +93,7 @@ function hydrate(string) {
   total += ' copos de água';
   return total;
 }
-console.log(hydrate('1 cerveja, 1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cerveja, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
