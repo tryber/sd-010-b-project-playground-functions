@@ -6,7 +6,7 @@ function techList(tecnologia, pessoa) {
       return 'Vazio!';
     }
     for (let key in tecnologia2) {
-      objeto.push({ tech: tecnologia2[key], name: pessoa }); // : para fazer objeto
+      objeto.push({ tech: tecnologia2[key], name: pessoa }) // : para fazer objeto
     }
     return objeto;
   }
