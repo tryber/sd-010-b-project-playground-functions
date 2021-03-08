@@ -86,20 +86,55 @@ function fizzBuzz(fizzBuzz) {
   }
   return array;
 }
-array0 = [2, 15, 7, 9, 45];
-array1 = [7, 9];
-array2 = [9, 25];
-console.log(fizzBuzz(array0));
-console.log(fizzBuzz(array1));
-console.log(fizzBuzz(array2));
 
 // Desafio 9
-function encode() {
+function encode(lowercase) {
   // seu código aqui
+  let code = {
+    1: 'a'
+    2: 'e'
+    3: 'i'
+    4: 'o'
+    5: 'u'
+  };
+  
+  let arr = str.split('');
+  
+  for (let i = 0; i < arr.length; i += 1) {
+    for (let key in code) {
+      if (arr[i] === code[key]) {
+        arr[i] = key;
+      }
+    }
+  }
+  
+  return arr.join('');
 }
-function decode() {
+
+function decode(str) {
   // seu código aqui
+  let code = {
+    1: 'a'
+    2: 'e'
+    3: 'i'
+    4: 'o'
+    5: 'u'
+  };
+  
+  let array = str.split('');
+  
+  for (let i = 0; i < array.length; i += 1) {
+    for (let key in code) {
+      if (array[i] === key) {
+        array[i] = code[key];
+      }
+    }
+  }
+  
+  return array.join('');
 }
+
+console.log(encode("hi there!"))
 
 module.exports = {
   calcArea,
