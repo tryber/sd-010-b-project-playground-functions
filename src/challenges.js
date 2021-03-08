@@ -134,8 +134,6 @@ function decode(str) {
   return arr.join('');
 }
 
-console.log(decode(""))
-
 module.exports = {
   calcArea,
   catAndMouse,
