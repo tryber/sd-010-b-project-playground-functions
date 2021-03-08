@@ -3,14 +3,13 @@ function compareTrue(numeroImpar1, numeroImpar2) {
   let confirmacao = false;
   if (numeroImpar1 % 2 !== 0 && numeroImpar2 % 2 !== 0) {
     confirmacao = true;
-  } 
+  }
   return confirmacao;
 }
 // Desafio 2
 function calcArea(base, height) {
   let triangulo = 0;
   triangulo = ((base * height) / 2);
-
   return triangulo;
 }
 // Desafio 3
@@ -22,14 +21,14 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(variavel) {
   let resultado = '';
-  resultado = (variavel[variavel.length - 1] + ', ' + variavel[0]);
+  resultado = variavel[variavel.length - 1] + ', ' + variavel[0];
   return resultado;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
   pontos = (3 * wins + 1 * ties);
-  return pontos;  
+  return pontos;
 }
 // Desafio 6
 function highestCount(n) {
@@ -43,7 +42,7 @@ function highestCount(n) {
   for (let i = 0; i < n.length; i += 1) {
     if (numeroMaior === n[i]) {
       contador += 1;
-    } 
+    }
   }
   return contador;
 }

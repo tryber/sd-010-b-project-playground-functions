@@ -5,28 +5,28 @@ function techList(tecnologias, name) {
   if (arrayOrdenado.length === 0) {
     info = 'Vazio!';
   } else {
-      info = [
-      {
-        tech: arrayOrdenado[0],
-        name: name,
-      },
-      {
-        tech: arrayOrdenado[1],
-        name: name,
-      },
-      {
-        tech: arrayOrdenado[2],
-        name: name,
-      },
-      {
-        tech: arrayOrdenado[3],
-        name: name,
-      },
-      {
-        tech: arrayOrdenado[4],
-        name: name,
-      }
-      ];
+    info = [
+    {
+      tech: arrayOrdenado[0],
+      name: name,
+    },
+    {
+      tech: arrayOrdenado[1],
+      name: name,
+    },
+    {
+      tech: arrayOrdenado[2],
+      name: name,
+    },
+    {
+      tech: arrayOrdenado[3],
+      name: name,
+    },
+    {
+      tech: arrayOrdenado[4],
+      name: name,
+    }
+    ];
   }
   return info;
 }
@@ -62,7 +62,7 @@ function generatePhoneNumber(numero) {
 
   if (numero.length !== 11) {
     telefone = 'Array com tamanho incorreto.';
-  } 
+  }
   return telefone;
 }
 // Desafio 12
@@ -82,7 +82,7 @@ function hydrate(drink) {
   let soma = 0;
   for (let i = 0; i < drink.length; i += 1) {
     if (drink[i] >= 1 && drink[i] <= 9) {
-      numeros.push(drink[i]); 
+      numeros.push(drink[i]);
     }
   }
   for (let index = 0; index < numeros.length; index += 1) {
@@ -90,9 +90,9 @@ function hydrate(drink) {
   }
 
   if (soma < 2) {
-  hydratar = soma + ' copo de água';
+    hydratar = soma + ' copo de água';
   } else {
-  hydratar = soma + ' copos de água';
+    hydratar = soma + ' copos de água';
   }
   return hydratar;
 }
