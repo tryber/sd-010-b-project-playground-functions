@@ -2,16 +2,15 @@
 // Refatorei o código após ver um exemplo do Emerson Saturino em uma thread no slack
 function techList(arrayList, name) {
   let organizedArray = [];
-  if (arrayList.length == 0) {
+  if (arrayList.length === 0) {
     return 'Vazio!';
-  } else {
-    arrayList.sort();
-    for (let index in arrayList) {
-      organizedArray.push({
-        tech: arrayList[index],
-        name: name,
-      })
-    }
+  }
+  arrayList.sort();
+  for (let index = 0; index < arrayList.length; index += 1) {
+    organizedArray.push({
+      tech: arrayList[index],
+      name,
+    });
   }
   return organizedArray;
 }
@@ -25,24 +24,23 @@ function generatePhoneNumber(arrayNumber) {
 
   if (arrayNumber.length != 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let index in arrayNumber) {
-      for (let secondIndex in arrayNumber) {
-        if (arrayNumber[index] === arrayNumber[secondIndex]) {
-          countRepeatNumbers += 1;
-        }
-      }
-      if (countRepeatNumbers >= 3) {
-        verifyRepeatNumbers = true;
-        countRepeatNumbers = 0;
-      } else {
-        countRepeatNumbers = 0;
+  }
+  for (let index in arrayNumber) {
+    for (let secondIndex in arrayNumber) {
+      if (arrayNumber[index] === arrayNumber[secondIndex]) {
+        countRepeatNumbers += 1;
       }
     }
-    for (let index in arrayNumber) {
-      if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || verifyRepeatNumbers == true) {
-        return "não é possível gerar um número de telefone com esses valores";
-      }
+    if (countRepeatNumbers >= 3) {
+      verifyRepeatNumbers = true;
+      countRepeatNumbers = 0;
+    } else {
+      countRepeatNumbers = 0;
+    }
+  }
+  for (let index in arrayNumber) {
+    if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || verifyRepeatNumbers == true) {
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
 
@@ -70,7 +68,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let sumAB = lineA + lineB;
   let sumBC = lineB + lineC;
   let sumAC = lineA + lineC;
-  if(absAB < lineC && lineC < sumAB && absBC < lineA && lineA < sumBC && absAC < lineB && lineB < sumAC){
+  if (absAB < lineC && lineC < sumAB && absBC < lineA && lineA < sumBC && absAC < lineB && lineB < sumAC) {
     return true;
   } else {
     return false;
@@ -83,16 +81,15 @@ triangleCheck(10, 14, 8);
 
 function hydrate(string) {
   let count = 0;
-  for(let index = 0; index < string.length; index += 1){
-    if(/[0-9]/.test(string[index])){
-      count += parseInt(string[index]);
+  for (let index = 0; index < string.length; index += 1) {
+    if (/[0-9]/.test(string[index])) {
+      count += parseInt(string[index], 10);
     }
   }
-  if(count === 1){
-    return count + ' copo de água';
-  }else{
-    return count + ' copos de água';
+  if (count === 1) {
+    return `${count} copo de água`;
   }
+  return `${count} copos de água`;
 }
 
 hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')
