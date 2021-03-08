@@ -94,7 +94,8 @@ function encode(textLine) {
         phrase[i] = l + 1;
       }
     }
-    phrase1 = phrase.join(' ');
+      phrase1 = phrase.join('');
+    
   }
   return (phrase1);
 }
@@ -109,7 +110,7 @@ function decode(textLine) {
         phrase[i] = letters[l];
       }
     }
-    phrase1 = phrase.join(' ');
+    phrase1 = phrase.join('');
   }
   return (phrase1);
 }
