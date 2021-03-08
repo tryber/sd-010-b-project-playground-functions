@@ -25,7 +25,7 @@ function techList(array, name) {
 }
 // Funções auxiliares do [Requisito 10]
 function verifySize(array) {
-  let response = array.length > 11 ? 'Array com tamanho incorreto' : 'ok';
+  let response = array.length !== 11 ? 'Array com tamanho incorreto.' : 'ok';
   return response;
 }
 
@@ -106,6 +106,12 @@ function generatePart3(array) {
   return response;
 }
 
+function generateResponse(size, values, repetition) {
+  if (size !== 'ok') { return size; }
+  if (values !== 'ok') { return values; }
+  if (repetition !== 'ok') { return repetition; }
+}
+
 // Desafio 11
 function generatePhoneNumber(array) {
   let verifysize = verifySize(array); let verifyvalues = verifyValues(array);
@@ -120,6 +126,8 @@ function generatePhoneNumber(array) {
     console.log(`Tamanho do Array: ${verifysize}`);
     console.log(`Valores do Array: ${verifyvalues}`);
     console.log(`Repetições no Array: ${verifyrepetition}`);
+    response = generateResponse(verifysize, verifyvalues, verifyrepetition);
+    console.log(`Response Final: ${response}`);
   }
 
   return response;
@@ -137,7 +145,7 @@ function hydrate() {
 
 let tech = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 // let vazio = [];
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 9];
 
 techList(tech, 'João');
 generatePhoneNumber(numbers);
