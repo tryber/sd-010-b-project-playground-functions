@@ -16,7 +16,6 @@ function calcArea(base, heigh) {
 // Desafio 3
 function splitSentence(s) {
   let split = s.split(' ');
-
   for (let i = 0; i < split.lenght; i += 1) {
     split[i] += ' ';
   }
@@ -24,9 +23,9 @@ function splitSentence(s) {
 }
 
 // Desafio 4
-function concatName(name) {
-  let firstN = name.split(' ')[0];
-  let surname = name.split(' ').pop();
+function concatName(array) {
+  let firstN = array.split(' ')[0];
+  let surname = array.split(' ').pop();
   // LINT made me write line consoleLog like this, es-lint prefer-template error
   console.log(`${surname},  ${firstN}`);
 }
