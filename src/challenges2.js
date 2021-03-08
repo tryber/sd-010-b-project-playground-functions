@@ -1,8 +1,36 @@
 // Desafio 10
 function techList(tecnologias, name) {
-  let info = {
-   };
+  let arrayOrdenado = tecnologias.sort();
+  let info = [];
+  if (arrayOrdenado.length === 0){
+    info = 'Vazio!'
+  } else {
+      info = [
+      {
+        tech: arrayOrdenado[0],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[1],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[2],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[3],
+        name: name,
+      },
+      {
+        tech: arrayOrdenado[4],
+        name: name,
+      }
+      ];
+  }
+  return info;
 }
+
 // Desafio 11
 
 function generatePhoneNumber(numero) {
