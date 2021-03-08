@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringName) {
-  let nameConcat = stringName[stringName.length - 1] + ', ' + stringName[0];
+  let nameConcat = `${stringName[stringName.length - 1]}, ${stringName[0]}`;
   return nameConcat;
 }
 // Desafio 5
@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let result = [];
   for (let n in numbers) {
-    if (numbers[n] % 3 === 0 && numbers[n] % 5 === 0) {
+    if (numbers[n] % 15 === 0 ) {
       result.push('fizzBuzz');
     } else if (numbers[n] % 3 === 0) {
       result.push('fizz');
@@ -75,9 +75,9 @@ function fizzBuzz(numbers) {
       result.push('buzz');
     } else {
       result.push('bug!');
+    }
   }
-  }
-return result;
+  return result;
 }
 
 // Desafio 9
@@ -99,4 +99,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};

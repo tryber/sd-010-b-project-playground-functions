@@ -5,12 +5,11 @@ function techList(tech, name) {
   }
   let out = [];
   tech.sort();
-  for (var tc in tech) {
+  for ( let tc in tech) {
     let out_obj = {};
     out_obj.tech = tech[tc];
     out_obj.name = name;
     out.push(out_obj);
-    
   }
   return out;
 }
