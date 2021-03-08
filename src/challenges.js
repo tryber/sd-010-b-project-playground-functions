@@ -66,7 +66,7 @@ function highestCount(telefone) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
- 
+  let resultado;
   let distancia1 = Math.abs(mouse - cat1);
   let distancia2 = Math.abs(mouse - cat2);
   
@@ -77,15 +77,32 @@ function catAndMouse(mouse, cat1, cat2) {
       resultado = 'cat1';
   }
   else {
-      resultado = 'os gatos trombam e o rato foge';
+  resultado = 'os gatos trombam e o rato foge';
   }
   
-  return resultado;
-  }
+return resultado;
+}
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
   // seu código aqui
+  
+for (let index = 0; index < numeros.length; index+= 1) {
+ if ((numeros[index] % 3 === 0) && ((numeros[index] % 5) === 0)){
+   numeros[index] = 'fizzBuzz';
+ }
+else if ((numeros[index] % 3 === 0) && ((numeros[index] % 5) > 0)) {
+    numeros[index] = 'fizz';
+}
+else if ((numeros[index] % 3 > 0) && ((numeros[index] % 5) === 0)) {
+    numeros[index] = 'buzz';
+}
+else {
+    numeros[index] = 'bug!'
+}
+}
+
+return numeros;
 }
 
 // Desafio 9
