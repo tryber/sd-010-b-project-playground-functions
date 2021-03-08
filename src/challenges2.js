@@ -12,7 +12,7 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Breno'));
 function objectArrayGenerator(arraylist, name) {
   let objectArray = [];
   for (let index = 0; index < arraylist.length; index += 1) {
-    let objectList = {tech: arraylist[index], name: name};
+    let objectList = { tech: arraylist[index], name: name };
     objectArray.push(objectList);
   }
   return objectArray;
@@ -32,7 +32,7 @@ function generatePhoneNumber(phNumArray) {
 
   for (let index1 = 0; index1 < phNumArray.length; index1 += 1) {
     let repeatCounter = 0;
-    for (let index2 = 1; index2 < phNumArray.length; index2 += 1){
+    for (let index2 = 1; index2 < phNumArray.length; index2 += 1) {
       if (phNumArray[index1] === phNumArray[index2]) {
         repeatCounter += 1;
       }
@@ -48,7 +48,7 @@ function generatePhoneNumber(phNumArray) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
