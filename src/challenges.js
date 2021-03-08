@@ -38,7 +38,7 @@ function highestCount(numbers) {
   }
   for (let j = 0; j < numbers.length; j += 1) {
     if (numbers[j] === highNumber) {
-      highNumberCount = highNumberCount + 1;
+      highNumberCount = highNumberCount += 1;
     }
   }
   return highNumberCount;
