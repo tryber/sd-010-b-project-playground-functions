@@ -75,6 +75,10 @@ function hydrate(string) {
   for (let index = 0; index < arrayNum.length; index += 1) {    
     sum += parseInt(arrayNum[index]);
   }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+
   return `${sum} copos de água`;
 }
 
