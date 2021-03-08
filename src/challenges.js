@@ -1,82 +1,66 @@
 // Desafio 1
-function compareTrue(input1, input2) {
-  if (input1 === true && input2 === true) {
-    return true;
+function compareTrue(valor1, valor2) {
+  if (valor1 === true && valor2 === true) {
+    return true
   }
-  return false;
+  else {
+    return false
+  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  return (base * height) / 2
 }
 
 // Desafio 3
-function splitSentence(string) {
-  let stringSeparada = string.split(' ');
-  return stringSeparada;
+function splitSentence(breakString) {
+  return breakString.split(" ")
 }
 
 // Desafio 4
-function concatName(items) {
-  let lastItem = items[items.length - 1];
-  let firstItem = items[0];
-  let lastAndFirstItems = `${lastItem}, ${firstItem}`;
-
-  return lastAndFirstItems;
+function concatName(arrayStrings) {
+  if (Array.isArray(arrayStrings)) {
+    if (arrayStrings.length > 0) {
+      return arrayStrings[arrayStrings.length - 1] + arrayStrings[0]
+    }
+    else {
+      return "Array can not be empty!"
+    }
+  }
+  else {
+    return "Input isn't a Array, please try again!"
+  }
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = ((wins * 3) + ties);
-
-  return totalPoints;
+  return (wins * 3) + ties
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  let higherNumber = numbers[0];
-  let repetitionHigherNumber = 0;
+function highestCount(arrayNumbers) {
+  let maxNumber = 0
+  let maxNumberRepeat = 0
 
-  for (let x = 0; x < numbers.length; x++) {
-    if (numbers[x] > higherNumber) {
-      higherNumber = numbers[x];
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    if (arrayNumbers[i] > maxNumber) {
+      maxNumber = arrayNumbers[i]
     }
   }
 
-  for (let y = 0; y < numbers.length; y++) {
-    if (numbers[y] === higherNumber) {
-      repetitionHigherNumber++;
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    if (arrayNumbers[i] === maxNumber) {
+      maxNumberRepeat++
     }
   }
 
-  return repetitionHigherNumber;
+  return maxNumberRepeat
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let mouseCat1;
-  let mouseCat2;
-
-  if (mouse > cat1) {
-    mouseCat1 = mouse - cat1;
-  } else {
-      mouseCat1 = cat1 - mouse;
-    }
-
-  if (mouse > cat2) {
-    mouseCat2 = mouse - cat2;
-  } else {
-      mouseCat2 = cat2 - mouse;
-    }
-
-  if (mouseCat1 < mouseCat2) {
-    return 'Cat1';
-  } else if (mouseCat1 > mouseCat2) {
-    return 'Cat2';
-  } else {
-    return 'Os gatos trombam e o rato foge.';
-  }
+function catAndMouse() {
+  // seu código aqui
 }
 
 // Desafio 8
