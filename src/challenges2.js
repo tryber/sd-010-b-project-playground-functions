@@ -85,6 +85,7 @@ function hydrate(drinks) {
   let numeros = drinks.match(/\d/g);
   let numerosInt = [];
   let soma = 0;
+  let frase = "";
 
   for (let index in numeros) {
     numerosInt.push(parseInt(numeros[index]));
@@ -92,10 +93,16 @@ function hydrate(drinks) {
   for (let index in numerosInt) {
     soma += numerosInt[index];
   }
-  return soma + " copos de água";
+  if (numeros.length > 1) {
+    frase = " copos de água"
+  } else {
+    frase = " copo de água"
+  }
+
+  return soma + frase;
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
+console.log(hydrate("1 cachaça"))
 
 module.exports = {
   generatePhoneNumber,
