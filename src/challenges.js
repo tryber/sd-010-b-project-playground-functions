@@ -27,7 +27,8 @@ function splitSentence(s) {
 function concatName(name) {
   let firstN = name.split(' ')[0];
   let surname = name.split(' ').pop();
-  console.log(surname + ', ' + firstN);
+  // LINT made me write line consoleLog like this, es-lint prefer-template error
+  console.log(`${surname},  ${firstN}`);
 }
 
 // Desafio 5
