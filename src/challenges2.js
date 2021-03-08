@@ -9,7 +9,7 @@ function techList(array,name) {
     return "Vazio!";
      }
   for (let index in tecnologias) {
-    objet o= {tech: tecnologias[index],
+    objeto= {tech: tecnologias[index],
       name: nome}
       novoarray.push(objeto)
     }
