@@ -27,7 +27,7 @@ function concatName(sentence) {
   return lastWord + ', ' + firstWord;
 }
 
-  // Desafio 5
+// Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = (wins * 3) + (ties * 1);
   return totalPoints;

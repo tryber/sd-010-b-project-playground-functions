@@ -19,7 +19,8 @@ function techList(techNames, nameList) {
   }
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript', 'Cobol'], 'Lucas'));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -31,9 +32,17 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(sentence) {
+  let reg = /\d+/g;
+  let sum = 0;
+  let arrayNumbers = sentence.match(reg);
+  for (let result of arrayNumbers) {
+    sum += result;   
+  }
+  return sum;
 }
+
+//console.log(hydrate('First number is 1, and a second number 5. Here is the last number 1.'));
 
 module.exports = {
   generatePhoneNumber,
