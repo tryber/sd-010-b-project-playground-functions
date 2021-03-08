@@ -20,32 +20,40 @@ function techList(array,name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numero) {
-  let resultado ;
+function generatePhoneNumber(comparador) {
+  let numero = comparador 
+  let resultado 
   
-  if(numero === 11){
 
-  } 
-  if else (numero < 11)
-  {
+  for (let index in numero) {
+    let count = 0;
 
+    for (let index2 in numero ) {
+      if  (numero[index] === numero[index2]) { count += 1; }
+  } if (count >= 3 ){
+    resultado= "não é possível gerar um número de telefone com esses valores"
   }
-  else {
-    resultado = "Array com tamanho incorreto."
-  }
-
-  console.log(resultado)
+    }
+   
+    if (numero[i] <  0 || numero[i] >  9  ){
+      resultado = "não é possível gerar um número de telefone com esses valores" ;
+  } else if(numero === 11){
+    resultado =  
+     }
+  
 }
+  
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
   let resultado ;
-  if ((lineA+lineB > lineC&&lineC+lineB > lineA&&lineC+lineA > lineB )&& (Math.abs(lineA-lineB) < lineC && Math.abs(lineC-lineB) < lineA && Math.abs(lineC-lineA )< lineB ))  {
+  if ((lineA+lineB > lineC&&lineC+lineB > lineA&&lineC+lineA > lineB ) && (Math.abs(lineA-lineB) < lineC && Math.abs(lineC-lineB) < lineA && Math.abs(lineC-lineA )< lineB ))  {
     resultado = true
   } else{
     resultado = false
   }
-  console.log(resultado)
+  
+  return resultado
 }
 
 // Desafio 13
