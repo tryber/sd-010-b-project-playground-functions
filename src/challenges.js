@@ -111,7 +111,6 @@ function decode(frase) {
   }
   return novaFrase.join('');
 }
-console.log(encode('hello!'));
 
 module.exports = {
   calcArea,
