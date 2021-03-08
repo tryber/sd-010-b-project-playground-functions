@@ -72,7 +72,7 @@ function hydrate(string) {
   for (let index = 0; index < quantidade.length; index += 1) {
     pinga += parseInt(quantidade[index]);
   }
-  return `${pinga} copo de água`;
+  return `${pinga} copos de água`;
   
   
 }console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
