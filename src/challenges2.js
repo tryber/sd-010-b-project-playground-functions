@@ -31,6 +31,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+function somaDrinks(lista) {
+  let quant = 0;
+  let frase = "";
+  for (let i = 0; i < lista.length; i += 1){
+    quant += lista[i]; 
+    if (quant === 1) {
+      frase = "copo de água"; 
+    } else {
+      frase = "copos de água";
+    }
+  }
+  return quant + " " + frase; 
+}
+
 function hydrate(stringDrink) {
   // seu código aqui
   let quantDrink = stringDrink.replace(/([^\d])+/gim, '');
@@ -41,13 +55,7 @@ function hydrate(stringDrink) {
   }
   return somaDrinks(separarString);
 }
-function somaDrinks(lista) {
-  let quant = 0;
-  for (let i = 0; i < lista.length; i += 1) {
-    quant += lista[i];
-  }
-  return `${quant} copos de água`;
-}
+
 
 module.exports = {
   generatePhoneNumber,
