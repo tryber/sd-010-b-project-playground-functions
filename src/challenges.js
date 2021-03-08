@@ -23,7 +23,7 @@ function splitSentence(text) {
 // Desafio 4
 function concatName(array) {
   let ultimoArray = array.length - 1;
-  let primeiroUltimo = ultimoArray + ', ' + array[0];
+  let primeiroUltimo = array[ultimoArray] + ', ' + array[0];
   return primeiroUltimo;
 }
 
@@ -85,29 +85,53 @@ function fizzBuzz (ary) {
   let novaArray = [];  
   for (let i = 0; i < ary.length; i+= 1) {
     if (ary[i] % 3 === 0 && ary[i] % 5 === 0) {
-      novaArray.push('fizzBuzz');      
+      novaArray.push('fizzBuzz');     
     } else if (ary[i] % 3 === 0) {
       novaArray.push('fizz');
     } else if (ary[i] % 5 === 0) {
       novaArray.push('buzz');
-    }
-      novaArray.push('bug!');    
+    } else {
+       novaArray.push('bug!');
+    }    
   }
   return novaArray;
 }
 
 // Desafio 9
-function encode(string) {
-  let  a = 1, e = 2, i = 3, o = 4, u = 5;
-  let codificado = '';
-  for (let i = 0; i < string.length; i += 1) {
-    if (string[i] = 'a') {
-      string[i].push(1);
-      codificado = string;
-    }
-  }
-  return codificado;
-}
+// function encode(string) {
+//   /* fonte de conhecimento
+//   developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace */
+//   let pegaLetra = [];
+//   let trocaLetra = '';
+//   for (let i = 0; i < string.length; i++) {    
+//     if (string[i] == 'a') {
+//       pegaLetra.push(string[i]);
+//     } else if (string[i] == 'e') {
+//       pegaLetra.push(string[i]);
+//     } else if (string[i] == 'i') {
+//       pegaLetra.push(string[i]);
+//     } else if (string[i] == 'o') {
+//       pegaLetra.push(string[i]);
+//     } else if (string[i] == 'u') {
+//       pegaLetra.push(string[i]);
+//     }
+//   }
+//   for (let i = 0; i < string.length; i++) {
+//     if (string[i] == 'a') {      
+//     } else if (string[i] == 'e') {
+//       pegaLetra.push(string[i]);
+//     } else if (string[i] == 'i') {
+//       pegaLetra.push(string[i]);
+//     } else if (string[i] == 'o') {
+//       pegaLetra.push(string[i]);
+//     } else if (string[i] == 'u') {
+//       pegaLetra.push(string[i]);
+//     }
+//   }
+
+  
+//   return stringFinal;
+// }
 function decode() {
   // seu código aqui
 }
