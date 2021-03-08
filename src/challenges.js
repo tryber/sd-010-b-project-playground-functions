@@ -17,6 +17,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(nome1,nome2) {
+  
   return nome1 + nome2;
 }
 
