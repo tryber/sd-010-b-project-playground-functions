@@ -42,8 +42,11 @@ function generatePhoneNumber(arrayNumbers) {
 }
 
 // Desafio 12
-function triangleCheck(lineA,lineB, lineC) {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) { return false; }
+  
+  if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineA - lineB)) { return false; } return true;
 }
 
 // Desafio 13
