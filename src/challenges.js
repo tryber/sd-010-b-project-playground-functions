@@ -119,28 +119,28 @@ function fizzBuzz(numbers) {
 //   return sentence;
 // }
 
+function change(sentence, key) {
+  switch (key) {
+  case 'a':
+    return sentence.replace('a', 1);
+  case 'e':
+    return sentence.replace('e', 2);
+  case 'i':
+    return sentence.replace('i', 3);
+  case 'o':
+    return sentence.replace('o', 4);
+  case 'u':
+    return sentence.replace('u', 5);
+  default:
+    return sentence;
+  }
+}
+
 function encode(sentence) {
   for (let i = 0; i < sentence.length; i += 1) {
     sentence = change(sentence, sentence[i]);
   }
   return sentence;
-}
-
-function change(sentence, key) {
-  switch (key) {
-    case 'a':
-    return sentence.replace('a', 1);
-    case 'e':
-    return sentence.replace('e', 2);
-    case 'i':
-    return sentence.replace('i', 3);
-    case 'o':
-    return sentence.replace('o', 4);
-    case 'u':
-    return sentence.replace('u', 5);
-    default:
-    return sentence;
-  }
 }
 
 // console.log(encode('esvaziou o vazio'));
@@ -199,33 +199,32 @@ function change(sentence, key) {
 //       break;
 //     }
 //     // sentence = sentence.replace(vowels[i], i + 1);
-    
 //   }
 //   return sentence;
 // }
+
+function encChange(sentence, key) {
+  switch (key) {
+  case '1':
+    return sentence.replace('1', 'a');
+  case '2':
+    return sentence.replace('2', 'e');
+  case '3':
+    return sentence.replace('3', 'i');
+  case '4':
+    return sentence.replace('4', 'o');
+  case '5':
+    return sentence.replace('5', 'u');
+  default:
+    return sentence;
+  }
+}
 
 function decode(sentence) {
   for (let i = 0; i < sentence.length; i += 1) {
     sentence = encChange(sentence, sentence[i]);
   }
   return sentence;
-}
-
-function encChange(sentence, key) {
-  switch (key) {
-    case '1':
-    return sentence.replace('1', 'a');
-    case '2':
-    return sentence.replace('2', 'e');
-    case '3':
-    return sentence.replace('3', 'i');
-    case '4':
-    return sentence.replace('4', 'o');
-    case '5':
-    return sentence.replace('5', 'u');
-    default:
-    return sentence;
-  }
 }
 
 // console.log(decode('2sv1z345 4 v1z34'));
