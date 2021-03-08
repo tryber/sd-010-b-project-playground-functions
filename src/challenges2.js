@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(tecnologia, pessoa) {
-    let objeto = []
+    let objeto = [];
     let tecnologia2 = tecnologia.sort(); //.sort coloca em ordem alfabetica
     if (tecnologia2.length == 0) {
       return 'Vazio!';
@@ -10,7 +10,7 @@ function techList(tecnologia, pessoa) {
     }
     return objeto;
   }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
