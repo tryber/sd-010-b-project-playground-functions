@@ -23,10 +23,9 @@ function splitSentence(s) {
 }
 
 // Desafio 4
-// PLEASE FIX THE AVALIATOR ON GITHUB!!!!
-function concatName(array) {
-  let firstN = array.split(' ')[0];
-  let surname = array.split(' ').pop();
+function concatName(s) {
+  let firstN = s[0];
+  let surname = s[s.lenght - 1];
   // LINT made me write line consoleLog like this, es-lint prefer-template error
   console.log(`${surname},  ${firstN}`);
 }
@@ -40,7 +39,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(c) {
   let high = 0;
-  let count = 1;
+  let count = 0;
   for (let i in c) {
     if (c[i] > high) {
       high = c[i];
@@ -48,7 +47,7 @@ function highestCount(c) {
       count += 1;
     }
   }
-  return count;
+  return count + 1;
 }
 
 // Desafio 7
