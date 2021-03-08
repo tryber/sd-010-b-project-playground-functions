@@ -8,6 +8,7 @@ function techList(array) {
       if (array[index] === '') {
         console.log ('Vazio!');
       }
+      console.log(obj);
   }
 }
 console.log (techList(["React", "Jest", "HTML", "CSS", "JavaScript"]));
