@@ -69,48 +69,51 @@ function highestCount(array) {
   return numberCount
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
-
+console.log('-------------------------------')
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let positionMouse = mouse;
   let positionCat1 = cat1;
   let positionCat2 = cat2;
-
+  let lesserDistance;
   if ( positionMouse > positionCat1 && positionCat1 > positionCat2) {
-    console.log('cat1')
+    lesserDistance = 'cat1'
   }
   else if (positionMouse > positionCat2 && positionCat2 > positionCat1) {
-    console.log('cat2')
+    lesserDistance = 'cat2'
   }
   else if (positionCat1 == positionCat2) {
-    console.log("os gatos trombam e o rato foge")
+    lesserDistance = "os gatos trombam e o rato foge"
   }
   else if (positionMouse < positionCat1 && positionCat1 < positionCat2) {
-    console.log("cat1")
+    lesserDistance = "cat1"
   }
   else if (positionMouse < positionCat2 && positionCat2 < positionCat1) {
-    console.log('cat2')
+    lesserDistance = 'cat2'
   }
+  return lesserDistance
 }
 console.log(catAndMouse(10, 7, 6))
 console.log("-----------------------------------")
 
 // Desafio 8
 function fizzBuzz(array) {
+  let result;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      console.log("fizzBuzz")
+      result = "fizzBuzz"
     }
     else if (array[index] % 5 === 0) {
-      console.log("buzz")
+      result = "buzz"
     }
     else if (array[index] % 3 === 0) {
-      console.log("fizz")
+      result = "fizz"
     }
     else {
-      console.log("bug!")
+      result = "bug!"
     }
   }
+  return result
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 console.log('------------------------------------')
