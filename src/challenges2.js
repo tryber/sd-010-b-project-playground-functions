@@ -10,7 +10,7 @@ function techList(array, name) {
     for (let i = 0; i < array.length; i += 1) {
       let techDesired = {
         tech: '',
-        name: name,
+        nome: name,
       };
       techDesired.tech = array[i];
       help.push(techDesired);
@@ -25,15 +25,13 @@ function generatePhoneNumber(array) {
   let resposta = 1;
   let cond = false;
   if (array.length === 11) {
-    if ((Math.min.apply(Math,array) < 0) || (Math.max.apply(Math,array) > 9)) {
+    if ((Math.min.apply(Math, array) < 0) || (Math.max.apply(Math, array) > 9)) {
       resposta = 'não é possível gerar um número de telefone com esses valores';
     } else {
       for (let x in array) {
         for (let y in array) {
-          if(x !== y){
-            if (array[x] === array[y]) {
-              resposta += 1;
-            }
+          if((x !== y) && (array[x] === array[y])) {
+            resposta += 1;
           }
         }
         if(resposta >= 3) {

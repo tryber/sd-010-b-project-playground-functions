@@ -34,7 +34,7 @@ console.log(splitSentence('Go trybe'));
 
 // Desafio 4
 function concatName(array) {
-  let virgula = ", ";
+  let virgula = ', ';
   let string = array[array.length - 1] + virgula;
   string += array[0];
   return string;
