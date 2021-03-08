@@ -20,6 +20,9 @@ function triangleCheck(a, b, c) {
 
 // Desafio 13
 function hydrate(caracteres) {
+  // https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
+  // https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  
   let result = '';
   let arrayNumbers = caracteres.match(/[0-9]/g);
   let soma = 0;

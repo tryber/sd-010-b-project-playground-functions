@@ -13,14 +13,12 @@ function calcArea(base, altura) {
 function splitSentence(string) {
   return string.split(' ');
 }
-
 // Desafio 4
 function concatName(array) {
   let lastFirst = '';
   lastFirst = array[array.length - 1] + ', ' + array[0];
   return lastFirst;
 }
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos = 0;
@@ -40,7 +38,7 @@ function highestCount(numbers) {
   }
   for (let j = 0; j < numbers.length; j += 1) {
     if (numbers[j] === highNumber) {
-      highNumberCount += (highNumberCount + 1);
+      highNumberCount = highNumberCount + 1;
     }
   }
   return highNumberCount;
