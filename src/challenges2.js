@@ -36,14 +36,14 @@ function hydrate(stringDrink) {
   let quantDrink = stringDrink.replace(/([^\d])+/gim, '');
   /* Linha 63 feita consultando o stackoverflow, não conhecia essa função antes. */
   let separarString = quantDrink.split('');
-  for (i = 0; i < separarString.length; i++) {
+  for (let i = 0; i < separarString.length; i += 1) {
     separarString[i] = parseInt(separarString[i]);
   }
   return somaDrinks(separarString);
 }
 function somaDrinks(lista) {
-  var quant = 0;
-  for (i = 0; i < lista.length; i++) {
+  let quant = 0;
+  for (let i = 0; i < lista.length; i += 1) {
     quant += lista[i];
   }
   return `${quant} copos de água`;
