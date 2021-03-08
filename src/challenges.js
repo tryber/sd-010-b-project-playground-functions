@@ -105,45 +105,23 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
+// https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
+// usando o metodo replace para remover a ocorerencia de vogais
 function encode(string) {
-  let stringEncode = '';
-  let help = string;
-  for (let i = 0; i < help.length; i += 1) {
-    if (help[i] === 'a') {
-      stringEncode += '1';
-    } else if (help[i] === 'e') {
-      stringEncode += '2';
-    } else if (help[i] === 'i') {
-      stringEncode += '3';
-    } else if (help[i] === 'o') {
-      stringEncode += '4';
-    } else if (help[i] === 'u') {
-      stringEncode += '5';
-    } else {
-      stringEncode += help[i];
-    }
-  }
-  return stringEncode;
+  string = string.replace(/a/gi, "1");
+  string = string.replace(/e/gi, "2");
+  string = string.replace(/i/gi, "3");
+  string = string.replace(/o/gi, "4");
+  string = string.replace(/u/gi, "5");
+  return string;
 }
 function decode(string) {
-  let stringEncode = '';
-  let help = string;
-  for (let i = 0; i < help.length; i += 1) {
-    if (help[i] === '1') {
-      stringEncode += 'a';
-    } else if (help[i] === '2') {
-      stringEncode += 'e';;
-    } else if (help[i] === '3') {
-      stringEncode += 'i';
-    } else if (help[i] === '4') {
-      stringEncode += 'o';
-    } else if (help[i] === '5') {
-      stringEncode += 'u';
-    } else {
-      stringEncode += help[i];
-    }
-  }
-  return stringEncode;
+  string = string.replace(/1/gi, "a");
+  string = string.replace(/2/gi, "e");
+  string = string.replace(/3/gi, "i");
+  string = string.replace(/4/gi, "o");
+  string = string.replace(/5/gi, "u");
+  return string;
 }
 console.log(encode('hi there!'));
 console.log(decode('h3 th2r2!'));
