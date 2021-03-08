@@ -98,7 +98,7 @@ function fizzBuzz (ary) {
 }
 
 // Desafio 9
-// function encode(string) {
+function encode() {
 //   /* fonte de conhecimento
 //   developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace */
 //   let pegaLetra = [];
@@ -131,7 +131,7 @@ function fizzBuzz (ary) {
 
   
 //   return stringFinal;
-// }
+}
 function decode() {
   // seu código aqui
 }

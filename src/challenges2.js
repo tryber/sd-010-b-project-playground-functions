@@ -4,10 +4,10 @@ function techList() {
 }
 
 // Desafio 11
-// function generatePhoneNumber() {
-//   // seu código aqui
-//   // não comecei ainda.
-// }
+function generatePhoneNumber() {
+  // seu código aqui
+  // não comecei ainda.
+}
 
 // Desafio 12
 function triangleCheck() {
