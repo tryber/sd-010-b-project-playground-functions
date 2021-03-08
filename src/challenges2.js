@@ -34,13 +34,13 @@ function generatePhoneNumber(array) {
         for (let j = 0; j < array.length; j += 1) {
           if (i !== j) {
             if (array[i] === array[j]) {
-                cont += 1;                                                  
-            }               
-          }                     
-        }  
+              cont += 1;                                       
+            }    
+          }                   
+        }
       }
     }
-  }else {
+  } else {
     answer = 'Array com tamanho incorreto.';
     condicao = false;
   }
@@ -49,17 +49,17 @@ function generatePhoneNumber(array) {
   } else {
     for (let x = 0; x < array.length; x += 1) {
       if (x === 0) {
-        answer += '(' + array[x]; 
+        answer += '(' + array[x];
       } else if (x === 2) {
-        answer += ') ' + array[x]; 
+        answer += ') ' + array[x];
       } else if (x === 7) {
         answer += '-' + array[x];
       } else {
         answer += array[x];
-      }                
+      }
     }
-  }  
-  return answer;  
+  }
+  return answer;
 }
 console.log(generatePhoneNumber([1, 11, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
@@ -82,12 +82,12 @@ console.log(triangleCheck(10, 14, 8));
 function hydrate(string) {
   let str = string;
   let extrairNumeros = [];
-  let total = 0; 
+  let total = 0;
 
   for (let i = 0; i < str.length; i += 1) {
     extrairNumeros[i] = str[i].replace(/\D/g, '');
     if (extrairNumeros[i] !== '') {
-      total += parseInt(extrairNumeros[i]); 
+      total += parseInt(extrairNumeros[i]);
     }
   }
   total += ' copos de água';
