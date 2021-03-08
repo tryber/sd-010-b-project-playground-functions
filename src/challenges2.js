@@ -8,10 +8,10 @@ function techList(arr, name) {
     for (let index = 0; index < arr.length; index += 1) {
       obj.tech = arr[index];
       obj.name = name;
-      obj.push(arr.tech.name[index])
+      return obj;
     }
   }
-  return obj;
+  
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 "Lucas"))

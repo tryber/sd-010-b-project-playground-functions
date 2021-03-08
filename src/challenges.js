@@ -82,36 +82,35 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (positionMouse > positionCat2 && positionCat2 > positionCat1) {
     lesserDistance = 'cat2'
   }
-  else if (positionCat1 === positionCat2 && positionCat1 === positionMouse) {
+  else if (positionCat1 === positionCat2 && positionCat1 === positionMouse && positionCat2 === positionMouse) {
     lesserDistance = "os gatos trombam e o rato foge"
   }
   else if (positionMouse < positionCat1 && positionCat1 < positionCat2) {
     lesserDistance = "cat1"
   }
   else if (positionMouse < positionCat2 && positionCat2 < positionCat1) {
-    lesserDistance = 'cat2'
+    lesserDistance = 'cat2';
   }
-  return lesserDistance
+  return lesserDistance;
 }
-console.log(catAndMouse(0, 6, 12))
-console.log("-----------------------------------")
+console.log(catAndMouse(0, 6, 12));
+console.log('-----------------------------------');
 
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
-  
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      result.push( "fizzBuzz")
+      result.push( 'fizzBuzz')
     }
     else if (array[index] % 5 === 0) {
-      result.push("buzz")
+      result.push('buzz')
     }
     else if (array[index] % 3 === 0) {
-      result.push("fizz")
+      result.push('fizz')
     }
     else {
-      result.push("bug!")
+      result.push('bug!')
     }
     
   }
