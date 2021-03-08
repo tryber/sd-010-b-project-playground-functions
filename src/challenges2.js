@@ -31,7 +31,7 @@ function verifySize(array) {
 
 function verifyValue(value) {
   let counter = 0;
-  if (value < 0 || value > 9) {
+  if (Math.sign(value) === -1 || value > 9) {
     counter = 1;
   }
   return counter;
@@ -40,7 +40,7 @@ function verifyValue(value) {
 function verifyValues(array) {
   let response; let counter = 0;
   for (let i = 0; i < array.length; i += 1) {
-    counter = verifyValue(array[i]);
+    counter += verifyValue(array[i]);
     if (counter !== 0) {
       response = 'não é possível gerar um número de telefone com esses valores';
     } else { response = 'ok'; }
@@ -56,7 +56,7 @@ function counterRepetitions(value1, value2) {
 
 function repetitionString(value) {
   let response;
-  if (value > 3) {
+  if (value > 2) {
     response = 'não é possível gerar um número de telefone com esses valores';
   } else { response = 'ok'; }
   return response;
@@ -155,9 +155,12 @@ function hydrate() {
 let tech = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 // let vazio = [];
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let test = [9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1];
+let test2 = [1, 2, 18, 0, 5, 3, 17, 8, 9, 1, 8];
+let test3 = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
 
 techList(tech, 'João');
-generatePhoneNumber(numbers);
+generatePhoneNumber(test3);
 
 module.exports = {
   generatePhoneNumber,
