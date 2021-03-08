@@ -37,8 +37,7 @@ function splitSentence(userEntry) {
 // https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
 
 function concatName(arrayOfStrings1) {
-  //let lastFirst = arrayOfStrings1[arrayOfStrings1.length - 1] + ', ' + arrayOfStrings1[0];
-  let lastFirst = `${arrayOfStrings1[arrayOfStrings1.length - 1]}, ${arrayOfStrings1[0]}`
+  let lastFirst = `${arrayOfStrings1[arrayOfStrings1.length - 1]}, ${arrayOfStrings1[0]}`;
   return lastFirst;
 }
 
@@ -51,7 +50,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
 function highestCount(arrayEntry) {
   let numeroMaior = 0;
   let numeroTotal = 0;
@@ -140,7 +138,6 @@ function decode(auxDe) {
   }
   return change.join('');
 }
-
 
 module.exports = {
   calcArea,
