@@ -25,7 +25,7 @@ let check = (array) => {
 };
 function generatePhoneNumber(array) {
   let message = 'não é possível gerar um número de telefone com esses valores';
-  if (array.length !== 11) return ('Array com tamanho incorreto');
+  if (array.length !== 11) return ('Array com tamanho incorreto.');
   if (array.some((index) => index < 0)) return message;
   if (array.some((index) => index > 9)) return message;
   if (check(array)) return message;
