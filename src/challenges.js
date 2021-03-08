@@ -16,11 +16,11 @@ let splitSentence = (phrase) => {
 }
 
 // Desafio 4
-names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 let concatName = () => {
   let ultimoItem = names[names.length - 1]
   let primeiroItem = names[0];
-  return ultimoItem.concat(primeiroItem);
+  return ultimoItem.concat(',').concat(primeiroItem);
 }
 
 // Desafio 5
@@ -38,7 +38,7 @@ function catAndMouse() {
 }
   
 // Desafio 8
-function fizzBuzz(numbers = []) {
+let fizzBuzz = (numbers = []) => {
   for (let i = 0; i = numbers; i += 1)
   if (numbers % 3 === 0) {
     return "fizz";
