@@ -1,47 +1,31 @@
 // Desafio 1
-// let a = true, b = true;
-// console.log(compareTrue(a, b));
 function compareTrue(firstValue, secondValue) {
-  // if (fisrtValue && secondValue) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
   return (firstValue && secondValue);
 }
 
 // Desafio 2
-// let base = 51, height = 1;
-// console.log(calcArea(base, height));
 function calcArea(base, height) {
   return ((base * height) / 2);
 }
 
 // Desafio 3
-// let sentence = "vamo que vamo";
-// console.log(splitSentence(sentence));
+// I found the split() function at https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
 function splitSentence(sentence) {
-  // let words = [];
-  return sentence.split(' '); // I found the split() function at https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+  return sentence.split(' ');
 }
 
 // Desafio 4
-// let array = ['captain', 'my', 'captain'];
-// console.log(concatName(array));
+// I found the concat() function at https://www.w3schools.com/jsref/jsref_concat_string.asp
 function concatName(contact) {
-  return contact[contact.length - 1].concat(', ', contact[0]); // I found the concat() function at https://www.w3schools.com/jsref/jsref_concat_string.asp
+  return contact[contact.length - 1].concat(', ', contact[0]);
 }
 
 // Desafio 5
-// let win = 0, tie = 0;
-// console.log(footballPoints(win, tie));
 function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
 
 // Desafio 6
-// let numbers = [6, 7, 9, 9, 7, 7];
-// console.log(highestCount(numbers));
 function getBigger(arrayNumbers) {
   let bigger = 0;
   for (let i = 0; i < arrayNumbers.length; i += 1) {
@@ -67,8 +51,7 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-// let m = 5, c1 = 2, c2 = 3;
-// console.log(catAndMouse(m, c1, c2));
+// For this challenge I took the Math.abs() function from https://www.w3schools.com/jsref/jsref_abs.asp
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance;
   let cat2Distance;
@@ -88,8 +71,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// let array = [15, 9, 5, 4];
-// console.log(fizzBuzz(array));
 function mod3(number) {
   if ((number % 3) === 0) {
     return true;
@@ -118,22 +99,12 @@ function verifyEachN(number) {
 function fizzBuzz(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
     numbers[i] = verifyEachN(numbers[i]);
-    // if (mod3(numbers[i]) && mod5(numbers[i])) {
-    //   numbers[i] = 'fizzBuzz';
-    // } else if (mod3(numbers[i])) {
-    //   numbers[i] = 'fizz';
-    // } else if (mod5(numbers[i])) {
-    //   numbers[i] = 'buzz';
-    // } else {
-    //   numbers[i] = 'bug!';
-    // }
   }
   return numbers;
 }
 
 // Desafio 9
 // I found the replace() function at https://www.w3schools.com/jsref/jsref_replace.asp
-// let code = '1 cachaça, 5 cervejas e 1 copo de vinho';
 function encode(string) {
   string = string.replace(/a/g, 1);
   string = string.replace(/e/g, 2);
@@ -142,8 +113,7 @@ function encode(string) {
   string = string.replace(/u/g, 5);
   return string;
 }
-// console.log(encode(code));
-// code = '1 cachaça, 5 cervejas e 1 copo de vinho';
+
 function decode(string) {
   string = string.replace(/1/g, 'a');
   string = string.replace(/2/g, 'e');
@@ -152,7 +122,6 @@ function decode(string) {
   string = string.replace(/5/g, 'u');
   return string;
 }
-// console.log(decode(code));
 
 module.exports = {
   calcArea,
