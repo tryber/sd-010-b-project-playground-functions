@@ -61,34 +61,39 @@ function catAndMouse(mouse, cat1, cat2) {
   let posMouse2 = Math.abs(mouse - cat2);
 
   if (posMouse1 < posMouse2) {
-    return "cat1";
+    return 'cat1';
   } else if (posMouse2 < posMouse1) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz(fizzBuzz) {
+function fizzBuzz(array) {
   // seu código aqui
-  let array = [];
-  for (let i in fizzBuzz) {
-    if (fizzBuzz[i] % 3 == 0 && fizzBuzz[i] == 0) {
-      array.push("fizzBuzz");
-    } else if (fizzBuzz[i] % 3 == 0) {
-      array.push("fizz");
-    } else if (fizzBuzz[i] % 5 == 0) {
-      array.push("buzz");
-    } else {
-      array.push("bug!")
+let result = [];
+for(let key in array  ){
+  switch(true){
+    case ((array[key]%3 == 0) && (array[key]%5 != 0)):
+      result.push('fizz');
+      break;
+    case ((array[key]%3 != 0) && (array[key]%5 == 0)):
+      result.push('buzz');
+      break;
+    case ((array[key]%3 == 0) && (array[key]%5 == 0)):
+      result.push('fizzBuzz');
+      break;
+    case ((array[key]%3 != 0) && (array[key]%5 != 0)):
+      result.push('bug!');
+      break;
     }
   }
-  return array;
+  return result;
 }
 
 // Desafio 9
-function encode(lowercase) {
+function encode() {
   // seu código aqui
   let code = {
     1: 'a',
@@ -96,19 +101,16 @@ function encode(lowercase) {
     3: 'i',
     4: 'o',
     5: 'u',
-  };
-  
-  let arr = str.split('');
-  
-  for (let i = 0; i < arr.length; i += 1) {
+  };  
+  let array = str.split('');
+  for (let i = 0; i < array.length; i += 1) {
     for (let key in code) {
-      if (arr[i] === code[key]) {
-        arr[i] = key;
+      if (array[i] === code[key]) {
+        array[i] = key;
       }
     }
   }
-  
-  return arr.join('');
+  return array.join('');
 }
 
 function decode(str) {
@@ -120,18 +122,16 @@ function decode(str) {
     4: 'o',
     5: 'u',
   };
+  let array = str.split('');
   
-  let arr = str.split('');
-  
-  for (let i = 0; i < arr.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     for (let key in code) {
-      if (arr[i] === key) {
-        arr[i] = code[key];
+      if (array[i] === key) {
+        array[i] = code[key];
       }
     }
   }
-  
-  return arr.join('');
+  return array.join('');
 }
 
 module.exports = {
