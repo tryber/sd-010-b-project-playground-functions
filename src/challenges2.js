@@ -62,12 +62,11 @@ function hydrate(numeroBebidas) {
   let arrayNumb = (numeroBebidas).match(toFind);
   let totalNumb = 0;
   for (let cont = 0; cont < arrayNumb.length; cont += 1 ){
-  totalNumb += (arrayNumb[cont]);
+  totalNumb += (arrayNumb[cont]*1);
   }
   return totalNumb + " copos de água";
 }
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 // eslint-disable-next-line no-undef
 module.exports = {
