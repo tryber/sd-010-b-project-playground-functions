@@ -18,7 +18,6 @@ function techList(arrayTecnologia,name) {
 
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
-  let numeroArray =""
   let duplicado = 0;
     
   for (let cont = 0; cont < arrayTelefone.length; cont += 1){
@@ -34,16 +33,12 @@ function generatePhoneNumber(arrayTelefone) {
     if (arrayTelefone == arrayTelefone[cont]){
       duplicado += 1;
     }
-
-
-    for(cont = 2; cont <arrayTelefone.length; cont += 1){
-    numeroArray = numeroArray + arrayTelefone[cont].toString();
-  }
+  
 }
   if (duplicado >2){
     return "não é possivel gerar um número de telefone com esses valores";
   }
-  let numeroTelefone = "(" + arrayTelefone[0].toString() + arrayTelefone[1].toString() + ") " + numeroArray;
+  let numeroTelefone = "(" + arrayTelefone[0].toString() + arrayTelefone[1].toString() + ") " + arrayTelefone[2].toString() + arrayTelefone[3].toString() + arrayTelefone[4].toString() + arrayTelefone[5].toString() + arrayTelefone[6].toString() + "-" + arrayTelefone[7].toString() + arrayTelefone[8].toString() + arrayTelefone[9].toString() + arrayTelefone[10].toString() 
   
   return numeroTelefone;
 }

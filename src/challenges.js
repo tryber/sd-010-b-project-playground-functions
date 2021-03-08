@@ -168,6 +168,7 @@ return stringDecodificada;
 }
 
 
+
 // eslint-disable-next-line no-undef
 module.exports = {
   calcArea,
