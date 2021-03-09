@@ -23,27 +23,27 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(num) {
-let maior = count = 0;
-for (let c = 0; c < num.length; c++){
-  if (num[c] > maior){
-    maior = num[c]; 
-  }
-  else if (num[c] == maior){
+let maior = Math.max.apply(null, num);
+let count = 0; 
+for(let i = 0; i < num.length; i++){
+  if(num[i] === high){
     count++;
   }
-  console.log(count);
 }
+return count;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let retorno = '';
-  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
-    retorno = 'os gatos trombam e o rato foge';
-  } else if ((cat1 - mouse) < (cat2 - mouse)) {
-    retorno = 'cat1';
-  } else if ((cat1 - mouse) > (cat2 - mouse)) {
-    retorno = 'cat2';
+  if (cat1 - mouse === cat2 - mouse ){
+    return 'os gatos trombam e o rato foge';
+  } 
+  else if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';
+  } 
+  else if ((cat1 - mouse) > (cat2 - mouse)) {
+    return 'cat2';
   }
   return retorno;
 }
