@@ -37,20 +37,20 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  points = 3 * wins + ties;
+  let points = 3 * wins + ties;
   return points;
 }
 
 // Desafio 6
 function highestCount(array) {
-  let highest;
-  let times;
-  for (let i = 0; i < array.length; i += 1) {
-    if ((array[i] > highest) || (highest == null)) {
+  let highest = array[0];
+  let times = 1;
+  for (let i = 1; i < array.length; i += 1) {
+    if (array[i] > highest) {
       highest = array[i];
       times = 0;
     }
-    if (array[i] == highest) {
+    if (array[i] === highest) {
       times += 1;
     }
   }
@@ -64,11 +64,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let result;
   if (dist1 < dist2) {
     result = 'cat1';
-  }
-  else if (dist2 < dist1) {
+  } else if (dist2 < dist1) {
     result = 'cat2';
-  }
-  else {
+  } else {
     result = 'os gatos trombam e o rato foge';
   }
   return result;
