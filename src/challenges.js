@@ -67,7 +67,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(1, 0, 2));
 
-
 // Desafio 8 // fonte de pesquisa: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions
 function fizzBuzz(numbers) {
   let result = [];
