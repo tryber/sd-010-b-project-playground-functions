@@ -6,17 +6,17 @@ function techList(techArray, name) {
   if (letTechArray.length > 0 ){
   for (let key in letTechArray){
     let objeto = {};
-    objeto.tech=letTechArray[key];
-    objeto.name=name;
+    objeto.tech = letTechArray[key];
+    objeto.name = name;
     guardaArrayFinal.push(objeto);
   } 
   }else {
-    return "Vazio!"
+    return "Vazio!";
   }
 return guardaArrayFinal;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Alexandre"))
-console.log(techList([], "Alexandre"))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Alexandre"));
+console.log(techList([], "Alexandre"));
 
 // Desafio 11
 function generatePhoneNumber() {
