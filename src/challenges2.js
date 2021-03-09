@@ -24,25 +24,25 @@ console.log(techList(['JavaScript', 'CSS', 'HTML'], 'Lucas'));
 function generatePhoneNumber(number) {
   array = number;
   if (array.length > 11) {
-    let phone = "Array com tamanho incorreto.";
+    let phone = 'Array com tamanho incorreto.';
     return(phone); 
   }
   for (i = 0; i < array.length; i += 1){
    if (((parseInt(array[i]))<0) || ((parseInt(array[i]))>9)) {
-    let phone = "não é possível gerar um número de telefone com esses valores";
+    let phone = 'não é possível gerar um número de telefone com esses valores';
     return(phone);
    }
   } 
   let count = 1;
-  for (i = 0; i < array.length; i += 1){
+ // for (i = 0; i < array.length; i += 1){
    for (l = i+1; l < array.length; l += 1) {
      if (array[i] === array[l]) {
       count += 1;
-      }
-    }
+      }  
+   // }
   } 
    if (count >= 3) {
-    let phone = "não é possível gerar um número de telefone com esses valores";
+    let phone = 'não é possível gerar um número de telefone com esses valores';
     return(phone); 
   }
     //verificação do formato de saída no código do colega Trybe Carlos Eduardo Margato
@@ -51,7 +51,7 @@ function generatePhoneNumber(number) {
     return (phone);    
    }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
