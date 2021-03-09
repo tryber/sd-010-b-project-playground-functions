@@ -34,11 +34,22 @@ function highestCount(num) {
   }
   return count;
 }
+// Fonte da função utilizada para retornar a variavel high --- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
+    return 'os gatos trombam e o rato foge';
+  } 
+  else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  }
+  else {
+    return 'cat2';
+  }
 }
+// Fonte da função utilizada para retornar valores absolutos --- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
 function fizzBuzz() {
