@@ -115,7 +115,7 @@ function encode(string) {
   }
   return newString;
 }
-function decode() {
+function decode(string) {
   let newString = '';
   for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
@@ -145,7 +145,6 @@ function decode() {
 function technologies(array, name) {
   if (array != null) {
     array.sort();
-    name = "Lucas";
     let technologies = [''];
     for (let i = 0; i < array.length; i += 1) {
       technologies[i] = {
