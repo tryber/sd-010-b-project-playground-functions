@@ -65,15 +65,18 @@ console.log(triangleCheck(10, 14, 8));
 function hydrate(drinksString) {
   // Para implementação desta função, utilizei o vídeo a seguir como referência: https://trybecourse.slack.com/files/U015FA7FG8J/F017FQ9QN93/screen_recording_2020-07-21_at_20.42.43.mov
   let stringOfNumbers = drinksString.replace(/\D/g, '');
+  // console.log(stringOfNumbers);
   let glassesOfWater = 0;
 
   for (let index in stringOfNumbers) {
-    glassesOfWater += parseInt(stringOfNumbers[index]);
+    // console.log(stringOfNumbers[index]);
+    // console.log(parseInt(stringOfNumbers[index]));
+    glassesOfWater = glassesOfWater + parseInt(stringOfNumbers[index]);
   }
 
-  return (glassesOfWater + ' copos de agua');
+  return glassesOfWater + ' copos de agua';
 }
-console.log(hydrate('1 cerveja'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
