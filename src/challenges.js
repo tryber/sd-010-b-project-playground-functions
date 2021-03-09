@@ -53,7 +53,7 @@ let catAndMouse = (mouse, cat1, cat2) => {
 let fizzBuzz = (arrN) => {
   let resultFb = [];
     for (let i = 0; i < arrN.length; i++) {
-      retorno.push(
+      resultFb.push(
         arrN[i] % 3 === 0 && arrN[index] % 5 === 0 ? "fizzBuzz" : 
         arrN[i] % 3 === 0 ? "fizz" : 
         arrN[i] % 5 === 0 ? "buzz" : "bug!"
