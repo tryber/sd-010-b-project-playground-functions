@@ -70,12 +70,44 @@ function fizzBuzz(array) {
 }
 // exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(entrada) {
+  let resultado = '';
+  for (let index = 0; index < entrada.length; index += 1) {
+    if (entrada[index] === 'a') {
+      resultado += 1;
+    } else if (entrada[index] === 'e') {
+      resultado += 2;
+    } else if (entrada[index] === 'i') {
+      resultado += 3;
+    } else if (entrada[index] === 'o') {
+      resultado += 4;
+    } else if (entrada[index] === 'u') {
+      resultado += 5;
+    } else {
+      resultado += entrada[index];
+    }
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+// exemplo de chamada da função:  encode("palavra");
+function decode(saida) {
+  let amostra;
+  for (let index = 0; index < saida.length; index += 1) {
+    if (saida[index] === 1) {
+      amostra = saida.replace(/1/g, 'a');
+    } else if (saida[index] === 2) {
+      amostra = saida.replace(/2/g, 'e');
+    } else if (saida[index] === 3) {
+      amostra = saida.replace(/3/g, 'i');
+    } else if (saida[index] === 4) {
+      amostra = saida.replace(/4/g, 'o');
+    } else if (saida[index] === 5) {
+      amostra = saida.replace(/5/g, 'u');
+    } else amostra = saida[index];
+  }
+  return amostra;
 }
+// exemplo de chamada da função: decode('p1l1vr1');
 
 module.exports = {
   calcArea,
