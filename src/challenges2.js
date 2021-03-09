@@ -5,13 +5,15 @@ function techList(array, name) {
     name: name
   };
   if (array.length == 0) {
+    let empty = '';
     console.log('Vazio!');
+    return(empty);
   }
-  let teste = [];
+  let full = [];
   for (i = 0; i < array.length; i += 1) {
-    teste.push({ tech: array[i], name });
+    full.push({ tech: array[i], name });
   }
-  return (teste);
+  return (full);
 }
 console.log(techList(['JavaScript', 'CSS', 'HTML'], 'Lucas'));
 
