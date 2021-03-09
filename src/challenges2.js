@@ -15,10 +15,9 @@ function techList(array, name) {
   }
   return objArray;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Ederson'));
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
