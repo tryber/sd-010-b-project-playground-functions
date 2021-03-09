@@ -161,7 +161,7 @@ function technologies(array, name) {
 // Desafio 11
 function generatePhoneNumber(number) {
   let returnMsg;
-  if (number.length != 11) {
+  if (number.length !== 11) {
     returnMsg = 'Array com tamanho incorreto.';
   } else {
     let numberTimes;
@@ -185,7 +185,7 @@ function generatePhoneNumber(number) {
         }
       }
     }
-    if (possibleNumber != false) {
+    if (possibleNumber !== false) {
       returnMsg = '(' + number[0] + number[1] + ')' + number[2] + number[3] + number[4] + number[5] + number[6] + '-' + number[7] + number[8] + number[9] + number[10];
     } else {
       returnMsg = 'não é possível gerar um número de telefone com esses valores';
@@ -194,6 +194,28 @@ function generatePhoneNumber(number) {
   return returnMsg;
 }
 
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  let trueOrFalse;
+  if (lineA > (lineB + lineC)) { trueOrFalse = false; }
+  else if (lineB > (lineA + lineC)) { trueOrFalse = false; }
+  else if (lineC > (lineA + lineB)) { trueOrFalse = false; }
+  else if (lineA < Math.abs(lineB - lineC)) { trueOrFalse = false; }
+  else if (lineB < Math.abs(lineA - lineC)) { trueOrFalse = false; }
+  else if (lineC < Math.abs(lineA - lineB)) { trueOrFalse = false; }
+  else { trueOrFalse = true; }
+ return trueOrFalse;
+}
+
+// Desafio 13
+function hydrate(string) {
+  let drinks = string.replace(/\D/g, "");
+  let water = 0;
+  for (let i = 0; i < drinks.length; i += 1) {
+    water += parseInt(drinks[i]);
+  }
+  return (water + ' copos de água')
+}
 
 module.exports = {
   calcArea,
