@@ -4,7 +4,7 @@ function techList(array, name) {
   let arrayNomes = array.sort();
   let arrayObj = [];
   for (let i = 0; i < arrayNomes.length; i += 1) {
-    arrayObj.push({tech: arrayNomes[i], name: name });
+    arrayObj.push({ tech: arrayNomes[i], name: name });
   }
   if (arrayObj.length > 0) {
     return arrayObj;
@@ -27,22 +27,22 @@ function triangleCheck(lineA, lineB, lineC) {
   } if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
     return result;
   }
-  return result = false;
+  return false;
 }
 
 // Desafio 13
 function somaDrinks(lista) {
   let quant = 0;
-  let frase = "";
-  for (let i = 0; i < lista.length; i += 1){
-    quant += lista[i]; 
+  let frase = '';
+  for (let i = 0; i < lista.length; i += 1) {
+    quant += lista[i];
     if (quant === 1) {
-      frase = "copo de água"; 
+      frase = 'copo de água';
     } else {
-      frase = "copos de água";
+      frase = 'copos de água';
     }
   }
-  return quant + " " + frase; 
+  return quant + " " + frase;
 }
 
 function hydrate(stringDrink) {
