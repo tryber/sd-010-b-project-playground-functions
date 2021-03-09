@@ -64,7 +64,11 @@ function hydrate(numeroBebidas) {
   for (let cont = 0; cont < arrayNumb.length; cont += 1 ){
   totalNumb += (arrayNumb[cont]*1);
   }
+  if (totalNumb == 1){
+    return totalNumb + " copo de água";
+  } else{
   return totalNumb + " copos de água";
+  }
 }
 
 
