@@ -1,8 +1,8 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bol, bole) {
+  return bol && bole;
 }
-
+// exemplo de chamada da função: compareTrue(true, false);
 // Desafio 2
 function calcArea() {
   // seu código aqui
