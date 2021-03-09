@@ -13,10 +13,10 @@ function techList(techArray, name) {
     return "Vazio!"
   }
 }
-return guardaArrayFinal.sort();
+return guardaArrayFinal;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Alexandre"))
-console.log(techList([""], "Alexandre"))
+console.log(techList([0], "Alexandre"))
 
 // Desafio 11
 function generatePhoneNumber() {
