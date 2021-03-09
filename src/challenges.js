@@ -1,8 +1,6 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true) {
-    return true;
-  } 
+  return bool1 && bool1;
 }
 // Desafio 2
 function calcArea(base, heigth) {
@@ -32,17 +30,17 @@ for(let i = 0; i < num.length; i++){
     count = count + 1;
   }
 }
-return count;
+  return count;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-if (cat1 === cat2){
+if (Math.abs((cat1 - mouse === cat2 - mouse))){
   return 'os gatos trombam e o rato foge';
 } 
-else if ((cat1 - mouse) < (cat2 - mouse)) {
+else if (Math.abs((cat1 - mouse) < (cat2 - mouse))) {
   return 'cat1';
 } 
-else if ((cat1 - mouse) > (cat2 - mouse)) {
+else if (Math.abs((cat1 - mouse) > (cat2 - mouse))) {
   return 'cat2';
 }
 }
