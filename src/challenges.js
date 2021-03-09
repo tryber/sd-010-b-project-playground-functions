@@ -17,10 +17,9 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence() {
-  let str = "Coisa dificil gente";
-  let res = str.split(" ");
-  console.log(res);
+function splitSentence(frase) {
+let result = frase.split(" ");
+return result;
 }
 
 // Desafio 4
