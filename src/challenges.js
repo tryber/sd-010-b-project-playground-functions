@@ -1,6 +1,5 @@
 // Desafio 1
 let pizzaIsGood = true;
-let hamburguerIsGood = true;
 let chocolatePizzaIsGood = false;
 function compareTrue(parameter1, parameter2) {
   if (parameter1 && parameter2 === true) {
@@ -72,28 +71,24 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 console.log('-------------------------------')
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let positionMouse = mouse;
-  let positionCat1 = cat1;
-  let positionCat2 = cat2;
+  mouse;
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
   let lesserDistance;
-  if ( positionMouse > positionCat1 && positionCat1 > positionCat2) {
+  if ( distanceCat1 < distanceCat2) {
     lesserDistance = 'cat1'
   }
-  else if (positionMouse > positionCat2 && positionCat2 > positionCat1) {
+  else if (distanceCat2 < distanceCat1) {
     lesserDistance = 'cat2'
   }
-  else if (positionCat1 === positionCat2 && positionCat1 === positionMouse && positionCat2 === positionMouse) {
+  else if (distanceCat1 === distanceCat2) {
     lesserDistance = "os gatos trombam e o rato foge"
   }
-  else if (positionMouse < positionCat1 && positionCat1 < positionCat2) {
-    lesserDistance = "cat1"
-  }
-  else if (positionMouse < positionCat2 && positionCat2 < positionCat1) {
-    lesserDistance = 'cat2';
-  }
+  
+  
   return lesserDistance;
 }
-console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 0, 0));
 console.log('-----------------------------------');
 
 // Desafio 8

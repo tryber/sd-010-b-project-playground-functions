@@ -8,10 +8,10 @@ function techList(arr, name) {
     for (let index = 0; index < arr.length; index += 1) {
       obj.tech = arr[index];
       obj.name = name;
-      return obj;
+      obj.push()
     }
   }
-  
+  return obj;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 "Lucas"))
@@ -37,3 +37,13 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+
+
+
+
+
+
+
+
+
