@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(info1, info2) {
   let message;
-  if (info1 == true && info2 == true) {
+  if (info1 === true && info2 === true) {
     message = true;
   } else {
     message = false;
@@ -10,24 +10,24 @@ function compareTrue(info1, info2) {
 }
 
 // Desafio 2
-function calcArea(base,heigth) {
-    let triangleArea = (base*heigth)/2;
-    return triangleArea;
+function calcArea(base, heigth) {
+  let triangleArea = (base * heigth) / 2;
+  return triangleArea;
 } 
 
 // Desafio 3 - fonte de pesquisa https://www.devmedia.com.br/javascript-split-
 function splitSentence(string) {
-  result = string.split(" "); 
+  result = string.split(''); 
   return result;
 }
 
 // Desafio 4
 function concatName(parameter) {
   let result;
-  for (let index = 0; index < parameter.length; index+=1) {
-    result = (parameter[parameter.length-1] + ', ' +parameter[0]);
+  for (let index = 0; index < parameter.length; index += 1) {
+    result = (parameter[parameter.length-1] + ',' +parameter[0]);
   }
-    return result;
+  return result;
 }
 
 // Desafio 5
@@ -43,9 +43,9 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let higherNumber = numbers[0];
   let qtd = 0;
-  for (let index=0; index < numbers.length; index+=1) {
-    if (higherNumber == numbers[index] ) {
-    qtd = qtd + 1;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (higherNumber === numbers[index] ) {
+      qtd = qtd + 1;
     }
   }
   return qtd;
@@ -56,33 +56,33 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Mouse = Math.abs(cat1 - mouse);
   let cat2Mouse = Math.abs(cat2 - mouse);
   let message;
-    if (cat1Mouse > cat2Mouse) {
-        message = 'cat2';
-    } else if (cat2Mouse > cat1Mouse) {
-        message = 'cat1';
-    } else {
-        message = 'os gatos trombam e o rato foge';
-    }
+  if (cat1Mouse > cat2Mouse) {
+    message = 'cat2';
+  } else if (cat2Mouse > cat1Mouse) {
+    message = 'cat1';
+  } else {
+    message = 'os gatos trombam e o rato foge';
+  }
   return message;
 }
-console.log(catAndMouse(1,0,2));
+console.log(catAndMouse(1, 0, 2));
 
 
 // Desafio 8 // fonte de pesquisa: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Functions
-function fizzBuzz(numbers){
-    let result = [];
-      for (let index = 0; index < numbers.length; index +=1) {
-        if (numbers[index] % 3 == 0 && numbers[index] % 5 == 0) {
-          result.push("fizzBuzz");
-        } else if (numbers[index] % 3 == 0)  {
-          result.push("fizz");    
-        } else if (numbers[index] % 5 == 0) {
-          result.push("buzz");
-        } else {
-          result.push("bug!");
-      }
-    }
-    return result;
+function fizzBuzz(numbers) {
+  let result = [];
+    for (let index = 0; index < numbers.length; index +=1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      result.push('fizz');    
+    } else if (numbers[index] % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+  }
+  }
+return result;
 }
 
 // Desafio 9 // fontes de pesquisa: https://github.com/tryber/sd-010-b-project-playground-functions/pull/142 e https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference
@@ -125,7 +125,6 @@ function decode(phrase_2) {
   }
   return newPhrase_2;
 }
-
 
 module.exports = {
   calcArea,

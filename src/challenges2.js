@@ -1,24 +1,24 @@
 // Desafio 10 // Neste desafio contei com a ajuda dos meus colegas Carlos Vieira e Wellington Passo, que auxiliaram a enxergar algumas fragilidades do código.
-function techList(arrayTech,name) {
+function techList(arrayTech, name) {
   let finalList = [];
   let object = {
     arrayTech,
-    name
+    name,
   };
-  if (object.arrayTech.length === 0 || object.name === "") {
+  if (object.arrayTech.length === 0 || object.name === '') {
     return 'Vazio!';
   }
-    let orderlyTechList = object.arrayTech.sort();
-      for (let key in orderlyTechList) {
-          finalList.push({
-          tech: orderlyTechList[key],
-          name: name
-          });
-    }
-  return finalList;
+  let orderlyTechList = object.arrayTech.sort();
+  for (let key in orderlyTechList) {
+    finalList.push({
+    tech: orderlyTechList[key],
+    name: name,
+    });
   }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-console.log(techList([], "Lucas"));
+return finalList;
+}
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+console.log(techList([], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
