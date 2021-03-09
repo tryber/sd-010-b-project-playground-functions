@@ -20,10 +20,12 @@ function concatName(array) {
 }
 // exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsForWin = 3;
+  let points = (wins * pointsForWin) + ties;
+  return points;
 }
-
+// exemplo de chamada da função: footballPoints(10, 10);
 // Desafio 6
 function highestCount() {
   // seu código aqui
