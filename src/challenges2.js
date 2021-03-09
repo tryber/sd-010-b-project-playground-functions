@@ -84,13 +84,9 @@ function hydrate(phrase) {
     }
   } 
   if (numbers === 1) {
-    let message = console.log(numbers + ' copo de água');
-   } 
-  else {        
-    let message = console.log(numbers + ' copos de água');       
-       }    
-  
-  return(message);   
+    return `${numbers} copo de água`; 
+  }
+  return `${numbers} copos de água`; 
 }
 
 module.exports = {
