@@ -55,19 +55,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(num) {
   let resultado = num.map((n) => {
-  if (n % 3 === 0 && num % 5 === 0){
-    return 'fizzBuzz';
-  }
-  else if (n % 5 === 0){
-    return 'buzz';
-  }
-  else if (n % 3 === 0){
-    return 'fizz';
-  }
-  else{
+    if (n % 3 === 0 && n % 5 === 0) {
+      return 'fizzBuzz';
+    }
+    if (n % 5 === 0) {
+      return 'buzz';
+    }
+    if (n % 3 === 0) {
+      return 'fizz';
+    }
     return 'bug!';
-  }
-});
+  });
   return resultado;
 }
 // Fonte da função utilizada para retornar o novo array --- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
