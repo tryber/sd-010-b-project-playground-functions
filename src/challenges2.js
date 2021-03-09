@@ -1,6 +1,7 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+let techList = (sibeA, sibeB, sideC) => {
+
 }
 
 // Desafio 11

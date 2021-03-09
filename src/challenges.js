@@ -23,11 +23,15 @@ let footballPoints = (wins, ties) => {
   return (wins * 3) + ties;
 }
 // Desafio 6
-function highestCount() {
-  
+//https://stackoverflow.com/questions/46640420/how-to-find-number-of-occurrence-of-highest-element-in-an-javascript-array/46640571
+let highestCount = (arrNum) => {
+  return arrNum.reduce(function(r,a){
+    
+  }, undefined).count;
 }
 
 // Desafio 7
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 let catAndMouse = (mouse, cat1, cat2) => {
   let cat1Position = Math.abs(mouse - cat1);
   let cat2Position = Math.abs(mouse - cat2);
@@ -38,7 +42,6 @@ let catAndMouse = (mouse, cat1, cat2) => {
   }
   return 'os gatos trombam e o rato foge';
 }
-
   
 // Desafio 8
 let fizzBuzz = () => {
