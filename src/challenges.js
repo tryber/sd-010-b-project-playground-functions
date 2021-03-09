@@ -37,7 +37,7 @@ function highestCount(num) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
     return 'os gatos trombam e o rato foge';
-  } 
+  }
   else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
@@ -45,25 +45,23 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
 }
-
 // Desafio 8
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 function fizzBuzz(num) {
   let resultado = num.map((n) => {
-  if (n % 3 == 0 && n % 5 == 0){
-    return 'fizzBuzz';
-  }
-  if (n % 5 == 0){
-    return 'buzz';
-  }
-  if (n % 3 == 0){
-    return 'fizz';
-  }
+    if (n % 3 === 0 && n % 5 === 0) {
+      return 'fizzBuzz';
+    }
+    if (n % 5 === 0) {
+      return 'buzz';
+    }
+    if (n % 3 === 0) {
+      return 'fizz';
+    }
     return 'bug!';
-});
+  });
   return resultado;
 }
-console.log(fizzBuzz([12, 15, 5, 20, 2, 4]));
 // Desafio 9
 function encode() {
   // seu código aqui
