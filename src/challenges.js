@@ -30,16 +30,20 @@ function splitSentence(frase) {
 //console.log(splitSentence("foguete"));
 
 // Desafio 4
-function concatName(nome1,nome2) {
-  
-  return nome1 + nome2;
+function concatName(lista) {
+  let concatenacao = `${lista[lista.length -1 ]}, ${lista[0]}`;
+  return concatenacao;
 }
+
+//console.log(concatName(arrayprimeiro = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(concatName(arraysegundo = ['foguete', 'não', 'tem', 'ré']));
+//console.log(concatName(arrayterceiro = ['captain', 'my', 'captain']));
 
 //console.log(concatName("Aderson Santos","da Silva"));
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  return ((wins * 3) + (ties * 1));
+function footballPoints(vencer, empate) {
+  return ((vencer * 3) + (empate * 1));
 }
 
 //console.log(footballPoints(14, 8));
