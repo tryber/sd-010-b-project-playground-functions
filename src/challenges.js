@@ -197,9 +197,9 @@ function generatePhoneNumber(number) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let trueOrFalse;
-  if ((lineA > (lineB + lineC)) || (lineB > (lineA + lineC)) || (lineC > (lineA + lineB)) ||
-    (lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC)) ||
-    (lineC < Math.abs(lineA - lineB))) { trueOrFalse = false; }
+  if ((lineA > (lineB + lineC)) || (lineB > (lineA + lineC)) || (lineC > (lineA + lineB))
+    || (lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC))
+    || (lineC < Math.abs(lineA - lineB))) { trueOrFalse = false; }
   else { trueOrFalse = true; }
   return trueOrFalse;
 }
