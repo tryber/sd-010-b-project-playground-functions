@@ -35,10 +35,10 @@ function triangleCheck(linhaA, linhaB, linhaC) {
   return false;
 }
 
-//console.log(triangleCheck(10, 14, 8));
-//console.log(triangleCheck(3, 4, 5));
-//console.log(triangleCheck(5, 12, 13));
-//console.log(triangleCheck(1, 2, 5));
+// console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(3, 4, 5));
+// console.log(triangleCheck(5, 12, 13));
+// console.log(triangleCheck(1, 2, 5));
 
 // Desafio 13
 function hydrate() {

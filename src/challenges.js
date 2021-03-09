@@ -88,9 +88,11 @@ function fizzBuzz(arrayNumeros) {
   function verificacao(numero){
     if(( numero % 3 == 0 ) && ( numero % 5 == 0 )){
       return "fizzBuzz";
-    }else if(numero % 3 == 0){
+    }
+    if(numero % 3 == 0){
       return "fizz";
-    }else if(numero % 5 == 0){
+    }
+    if(numero % 5 == 0){
       return "buzz";
     }else{
       return "bug";
@@ -104,9 +106,9 @@ function fizzBuzz(arrayNumeros) {
     return array;
 }
 
-console.log(fizzBuzz(arrayprimeiro = [2, 15, 7, 9, 45]));
-console.log(fizzBuzz(arraysegundo = [7, 9]));
-console.log(fizzBuzz(arrayterceiro = [9, 25]));
+// console.log(fizzBuzz(arrayprimeiro = [2, 15, 7, 9, 45]));
+// console.log(fizzBuzz(arraysegundo = [7, 9]));
+// console.log(fizzBuzz(arrayterceiro = [9, 25]));
 
 // Desafio 9
 function encode(string) {
