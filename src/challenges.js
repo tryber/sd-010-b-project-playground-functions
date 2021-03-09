@@ -25,7 +25,7 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(lastFirst) {
-  return `${lastFirst[lastFirst.length - 1]}, ${lastFirst[0]};`
+  return `${lastFirst[lastFirst.length - 1]}, ${lastFirst[0]}`;
 }
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -67,9 +67,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Distance = Math.abs(mouse - cat2);
   if (cat1Distance < cat2Distance) {
     haunt = 'cat1';
-    } if (cat1Distance > cat2Distance) {
+  } if (cat1Distance > cat2Distance) {
     haunt = 'cat2';
-    } if (cat1Distance === cat2Distance || cat1 === cat2) {
+  } if (cat1Distance === cat2Distance || cat1 === cat2) {
     haunt = 'os gatos trombam e o rato foge';
   }
   return haunt;
@@ -84,11 +84,11 @@ function fizzBuzz(numbersFB) {
   for (let num of numbersFB) {
     if (num % 3 === 0 && num % 5 === 0) {
       resultFizzBuzz.push('fizzBuzz');
-      } else if (num % 3 === 0){
+    } else if (num % 3 === 0) {
       resultFizzBuzz.push('fizz');
-      } else if (num % 5 === 0) {
+    } else if (num % 5 === 0) {
       resultFizzBuzz.push('buzz');
-      } else {
+    } else {
       resultFizzBuzz.push('bug!');
     }
   }
@@ -106,40 +106,40 @@ let codes = {
   i: '3',
   o: '4',
   u: '5',
-}
+};
 
 function encode(phrase) {
   let newPhrase = [];
-    for (let index of phrase) {
-      newPhrase.push(index);
+  for (let index of phrase) {
+    newPhrase.push(index);
     }
-    for (let key in codes) {
-      for (let index2 = 0;index2 < newPhrase.length; index2 += 1) {
-        if (key === newPhrase[index2]) {
-          newPhrase[index2] = codes[key];
-        }
+  for (let key in codes) {
+    for (let index2 = 0;index2 < newPhrase.length; index2 += 1) {
+      if (key === newPhrase[index2]) {
+        newPhrase[index2] = codes[key];
       }
     }
-  return newPhrase.join('');
   }
+  return newPhrase.join('');
+}
 
 function decode(phrase) {
   let newPhrase = [];
-    for (let index of phrase) {
-      newPhrase.push(index);
+  for (let index of phrase) {
+    newPhrase.push(index);
   }
-    for (let [key, value] of Object.entries(codes)) {
-      for (let index3 = 0; index3 < newPhrase.length; index3 += 1) {
-        if (value == newPhrase[index3]) {
-          newPhrase[index3] = key;
-        }
+  for (let [key, value] of Object.entries(codes)) {
+    for (let index3 = 0; index3 < newPhrase.length; index3 += 1) {
+      if (value == newPhrase[index3]) {
+        newPhrase[index3] = key;
       }
     }
-  return newPhrase.join('');
   }
+  return newPhrase.join('');
+}
 
-console.log(encode("hi there!"));
-console.log(decode("h3 th2r2!"));
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
