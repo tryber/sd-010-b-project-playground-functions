@@ -145,14 +145,14 @@ function decode(string) {
 function technologies(array, name) {
   if (array != null) {
     array.sort();
-    let technologies = [''];
+    let techs = [''];
     for (let i = 0; i < array.length; i += 1) {
-      technologies[i] = {
+      techs[i] = {
         tech: array[i],
         name: name
       };
     }
-    return technologies;
+    return techs;
   } else {
     return 'Vazio!';
   }
