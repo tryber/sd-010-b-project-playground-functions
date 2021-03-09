@@ -197,18 +197,11 @@ function generatePhoneNumber(number) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let trueOrFalse;
-  if (lineA > (lineB + lineC)) { trueOrFalse = false; } else {
-    if (lineB > (lineA + lineC)) { trueOrFalse = false; } else {
-      if (lineC > (lineA + lineB)) { trueOrFalse = false; } else {
-        if (lineA < Math.abs(lineB - lineC)) { trueOrFalse = false; } else {
-          if (lineB < Math.abs(lineA - lineC)) { trueOrFalse = false; } else {
-            if (lineC < Math.abs(lineA - lineB)) { trueOrFalse = false; } else { trueOrFalse = true; }
-          }
-        }
-      }
-    }
-  }
- return trueOrFalse;
+  if ((lineA > (lineB + lineC)) || (lineB > (lineA + lineC)) || (lineC > (lineA + lineB)) ||
+    (lineA < Math.abs(lineB - lineC)) || (lineB < Math.abs(lineA - lineC)) ||
+    (lineC < Math.abs(lineA - lineB))) { trueOrFalse = false; }
+  else { trueOrFalse = true; }
+  return trueOrFalse;
 }
 
 // Desafio 13
