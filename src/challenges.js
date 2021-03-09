@@ -1,5 +1,3 @@
-//  Inciando o projeto
-
 // Desafio 1
 function compareTrue(v1, v2) {
   return v1 === true && v2 === true;
@@ -11,23 +9,30 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  return arr[arr.length - 1] + ', ' + arr[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(W,T) {
+  return W *3 + T;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(num) {
+  let high = Math.max.apply(null,  num);
+  let count = 0;
+  for(let i = 0; i < num.length; i++){
+    if(num[i] === high){
+      count++;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
