@@ -16,17 +16,17 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(text) {
-  let word = [''];
+  let words = [''];
   let wordCount = 0;
   for (let i = 0; i < text.length; i += 1) {
     if (text[i] !== ' ') {
-      word[wordCount] += text[i];
+      words[wordCount] += text[i];
     } else {
-      word.push('');
+      words.push('');
       wordCount += 1;
     }
   }
-  return word;
+  return words;
 }
 
 // Desafio 4
@@ -75,12 +75,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let strings = [''];
-  for (i = 0; i < array.length; i += 1) {
-    if (((array[i] % 3) == 0) && ((array[i] % 5) == 0)) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (((array[i] % 3) === 0) && ((array[i] % 5) === 0)) {
       strings[i] = 'fizzBuzz';
-    } else if ((array[i] % 3) == 0) {
+    } else if ((array[i] % 3) === 0) {
       strings[i] = 'fizz';
-    } else if ((array[i] % 5) == 0) {
+    } else if ((array[i] % 5) === 0) {
       strings[i] = 'buzz';
     } else {
       strings[i] = 'bug!';
@@ -90,11 +90,55 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = '';
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case 'a':
+        newString += '1';
+        break;
+      case 'e':
+        newString += '2';
+        break;
+      case 'i':
+        newString += '3';
+        break;
+      case 'o':
+        newString += '4';
+        break;
+      case 'u':
+        newString += '5';
+        break;
+      default:
+        newString += string[i];
+    }
+  }
+  return newString;
 }
 function decode() {
-  // seu código aqui
+  let newString = '';
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case '1':
+        newString += 'a';
+        break;
+      case '2':
+        newString += 'e';
+        break;
+      case '3':
+        newString += 'i';
+        break;
+      case '4':
+        newString += 'o';
+        break;
+      case '5':
+        newString += 'u';
+        break;
+      default:
+        newString += string[i];
+    }
+  }
+  return newString;
 }
 
 module.exports = {
