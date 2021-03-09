@@ -55,13 +55,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(num) {
   let resultado = num.map((n) => {
-  if (n % 3 == 0 && num % 5 == 0){
+  if (n % 3 === 0 && num % 5 === 0){
     return 'fizzBuzz';
   }
-  else if (n % 5 == 0){
+  else if (n % 5 === 0){
     return 'buzz';
   }
-  else if (n % 3 == 0){
+  else if (n % 3 === 0){
     return 'fizz';
   }
   else{
