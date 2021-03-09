@@ -51,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } if (umGato > outroGato) {
     return 'cat2';
   } if (umGato === outroGato) {
-    return 'os gatos se trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 }
 
