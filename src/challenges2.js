@@ -40,7 +40,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (Math.abs(lineA, lineB, lineC) - Math.min(lineA, lineB, lineC) < Math.min(lineA, lineB, lineC)) {
+  if ((Math.max(lineA, lineB, lineC) - Math.min(lineA, lineB, lineC)) < Math.min(lineA, lineB, lineC)) {
     if (lineA < Math.abs(lineB + lineC) && lineA) {
       return true;
     } else if (lineB < Math.abs(lineA + lineC)) {
@@ -52,7 +52,6 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
