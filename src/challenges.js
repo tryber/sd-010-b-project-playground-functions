@@ -73,16 +73,21 @@ console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount(array) {
   let maiorNumero = 0;
-  let chaveRepetidor = 1;
-  let numeroVezes = 0;
-  for (let index in array){
-    if (array[chaveRepetidor] > array[index]){
-      maiorNumero = array[index]
-    }
+  let arrayOrganizado = array.sort();
+  let numeroVezes = [0];
+  
+  for (let i = 0; i < arrayOrganizado.length; i += 1){
+    if (arrayOrganizado[i] >= maiorNumero){
+      maiorNumero = arrayOrganizado[i];
+    
+    } 
+    numeroVezes.push(maiorNumero)
   }
-  return maiorNumero;
+  return numeroVezes;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
+console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 //Busquei orientação na PR do meu colega de turma André Hammel, exclusivamente nesta questão, para resolver a questão dos resultados negativos das subtrações. link:https://github.com/tryber/sd-010-b-project-playground-functions/pull/117/commits/49ea1e6e7f2d5bb22a91741d7d0cdcd183e17562
