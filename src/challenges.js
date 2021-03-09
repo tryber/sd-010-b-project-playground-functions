@@ -24,7 +24,7 @@ function concatName(array) {
   let firstN = array[0];
   let surname = array[array.lenght - 1];
   // LINT made me write line consoleLog like this, es-lint prefer-template error
-  ret = `${surname},  ${firstN}`;
+  let ret = `${surname},  ${firstN}`;
   return ret;
 }
 
