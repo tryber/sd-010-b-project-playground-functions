@@ -70,7 +70,6 @@ function fizzBuzz(num) {
 });
   return resultado;
 }
-console.log(fizzBuzz([12, 10, 5, 20, 13]));
 // Fonte da função utilizada para retornar o novo array --- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 // Desafio 9
