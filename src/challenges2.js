@@ -35,7 +35,7 @@ let hydrate = (num) => {
   let numbersArr = numbers.split("");
   let somaNumbers = 0;
   for (let i = 0; i < numbersArr.length; i++) {
-    somaNumeros += parseInt(numbersArr[i]);    
+    somaNumbers += parseInt(numbersArr[i]);    
   }
   return somaNumbers === 1 ? somaNumbers+" copo de água" : somaNumbers +" copos de água";
 }
