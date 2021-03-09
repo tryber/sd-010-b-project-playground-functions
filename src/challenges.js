@@ -29,23 +29,22 @@ let maior = Math.max.apply(null, num);
 let count = 0; 
 for(let i = 0; i < num.length; i++){
   if(num[i] === high){
-    count++;
+    count = count + 1;
   }
 }
 return count;
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 - mouse === cat2 - mouse ){
-    return 'os gatos trombam e o rato foge';
-  } 
-  else if ((cat1 - mouse) < (cat2 - mouse)) {
-    return 'cat1';
-  } 
-  else if ((cat1 - mouse) > (cat2 - mouse)) {
-    return 'cat2';
-  }
-  return retorno;
+if (cat1 === cat2){
+  return 'os gatos trombam e o rato foge';
+} 
+else if ((cat1 - mouse) < (cat2 - mouse)) {
+  return 'cat1';
+} 
+else if ((cat1 - mouse) > (cat2 - mouse)) {
+  return 'cat2';
+}
 }
 
 // Desafio 8
