@@ -41,7 +41,10 @@ function highestCount(c) {
   for (let i = 0; i < c.length; i += 1) {
     if (c[i] > storage) {
       storage = c[i];
-    } else if (c[i] === storage) {
+    }
+  }
+  for (let i = 0; i < c.length; i += 1) {
+    if (storage === c[i]) {
       count += 1;
     }
   }
