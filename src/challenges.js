@@ -43,15 +43,26 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse() {}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function fizzBuzz(array) {
+  let arrayFizBuz = [];
+  for (let index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      arrayFizBuz.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      arrayFizBuz.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      arrayFizBuz.push('buzz');
+    } else {
+      arrayFizBuz.push('bug!');
+    }
+  }
+  return arrayFizBuz;
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
