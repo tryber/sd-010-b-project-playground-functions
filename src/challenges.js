@@ -24,13 +24,17 @@ function concatName(string) {
   // seu código aqui
   let ultimoItem = string[string.length - 1];
   let primeiroItem = string[0];
-  let result = ultimoItem + ',' + primeiroItem;
+  let result = ultimoItem + ', ' + primeiroItem;
   return result;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 //Desafio 5
 function footballPoints() {
   // seu código aqui
+  let wins = 3;
+  let ties = 1;
+  quantidade = 0;
+
 }
 // Desafio 6
 function highestCount(array) {
