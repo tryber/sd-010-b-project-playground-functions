@@ -26,7 +26,13 @@ let footballPoints = (wins, ties) => {
 //https://stackoverflow.com/questions/46640420/how-to-find-number-of-occurrence-of-highest-element-in-an-javascript-array/46640571
 let highestCount = (arrNum) => {
   return arrNum.reduce(function(r,a){
-    
+    if (!r || a > r.value) {
+      return { value: a, count: 1};
+    }
+    if (r.value === a) {
+      r.count++;
+    }
+    return r;
   }, undefined).count;
 }
 
