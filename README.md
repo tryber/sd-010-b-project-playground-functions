@@ -1,3 +1,4 @@
+
 ### Termos e acordos
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do
@@ -213,7 +214,7 @@ Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['g
 
 - Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
 
-- Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
+- Retorne o valor ['vamo', 'que', vamo']. se a função receber a string 'vamo que vamo'
 
 - Retorne o valor ['foguete'] se a função receber a string 'foguete'
 
@@ -290,7 +291,8 @@ Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
 
 **O que será verificado:**
 
-- Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para função fizzBuzz
+- Retorne as strings ['bug!', '
+fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para função fizzBuzz
 
 - Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para função fizzBuzz
 
