@@ -62,14 +62,26 @@ function highestCount(numeros) {
   return contador;
 }
 
-console.log(highestCount(arrayprimeiro = [9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount(arraysegundo = [0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount(arrayterceiro = [0, 0, 0]));
+//console.log(highestCount(arrayprimeiro = [9, 1, 2, 3, 9, 5, 7]));
+//console.log(highestCount(arraysegundo = [0, 4, 4, 4, 9, 2, 1]));
+//console.log(highestCount(arrayterceiro = [0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(rato, gato1, gato2) {
+  let distancia1 = Math.abs(rato - gato1);
+  let distancia2 = Math.abs(rato - gato2);
+  if(distancia1 == distancia2){
+    return "os gatos trombam e o rato foge";
+  }else if(distancia1 < distancia2){
+    return "gato1";
+  }else{
+    return "gato2";
+  }
 }
+
+console.log(catAndMouse(5, 2, 7));
+console.log(catAndMouse(6, 12, 18));
+console.log(catAndMouse(6, 9, 9));
 
 // Desafio 8
 function fizzBuzz() {
