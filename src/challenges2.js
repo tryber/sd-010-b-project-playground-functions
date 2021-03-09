@@ -29,19 +29,33 @@ function techList(techs, name) {
 
 // Desafio 11
 function value(number) {
-  let result = true;
   for (const i in number) {
     if (number[i] < 0 || number[i] > 9) {
-      result = false;
+      return false;
     }
   }
-  return result;
+  return true;
 }
 
-function numberTests(number) {
+function repeatNumber (number) {
+  for (let i = 0; i < number.length; i += 1) {
+    let count = [];
+    for (let j = 0; j < number.length; j += 1) {
+      if (number[i] === number[j]) {
+        count.push('x');
+      }
+      if (count.length > 2) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function testNumber(number) {
   let result = '';
   for (let i = 0; i < number.length; i += 1) {
-    if (value(number) === false) {
+    if (value(number) === false || repeatNumber(number) === true) {
       result = 'não é possível gerar um número de telefone com esses valores';
       break;
     } else if (number.length !== 11) {
@@ -55,8 +69,8 @@ function numberTests(number) {
 
 function generatePhoneNumber(numArray) {
   let result = '';
-  let number = numberTests(numArray);
-  if (number[0] !== 'a' && number[0] !== 'n') {
+  let number = testNumber(numArray);
+  if (number[0] !== 'A' && number[0] !== 'n') {
     const ddd = number.slice(0, -9);
     const initNumber = number.slice(2, -4);
     const endNumber = number.slice(-4);
@@ -67,6 +81,7 @@ function generatePhoneNumber(numArray) {
   }
   return result;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function difCheck(a, b, c) {
