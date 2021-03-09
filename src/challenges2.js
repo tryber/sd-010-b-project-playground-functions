@@ -38,26 +38,20 @@ function generatePhoneNumber(numeros) {
       default:
         phoneNumber = `${phoneNumber}${numeros[numberIndex]}`;
         break;
-        } contador = 0;
+      } contador = 0;
     } return phoneNumber;
   } return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > lineB && lineC) {
-    if (lineA > lineB + lineC) {
-      return false;
-    }
-  } else if (lineB > lineA && lineC) {
-    if (lineB > lineA + lineC) {
-      return false;
-    }
-  } else if (lineC > lineA && lineB) {
-    if (lineC > lineB + lineA) {
-      return false;
-    }
-  } return true;
+function triangleCheck (lineA, lineB, lineC){
+  if (lineA > lineB + lineC) {
+    return false;
+  } if (lineB > lineA + lineC) {
+    return false;
+  } if (lineC > lineB + lineA) {
+    return false;
+  } return true
 }
 
 // Desafio 13
@@ -66,13 +60,13 @@ function hydrate(pedido) {
   pedido = pedido.replace(/\D/g, '');
   pedido = pedido.split('');
   for (let index = 0; index < pedido.length; index += 1) {
-    pedido[index] = parseInt(pedido[index]);
+    pedido[index] = parseInt(pedido[index],10);
     soma += pedido[index];
   }
-  if (soma > 1){
-  return (`${soma} copos de água`);
-  } return (`${soma} copo de água`)
-  }
+  if (soma > 1) {
+    return (`${soma} copos de água`);
+  } return (`${soma} copo de água`);
+}
 
 module.exports = {
   generatePhoneNumber,

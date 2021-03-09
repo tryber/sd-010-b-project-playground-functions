@@ -88,16 +88,16 @@ function encode(codigo) {
 
 function decode(codigo2) {
   let vogais = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
   };
   codigo2 = codigo2.split('');
   for (let letraindex = 0; letraindex < codigo2.length; letraindex += 1) {
     for (let key in vogais) {
-      if (codigo2[letraindex] == vogais[key]) {
+      if (codigo2[letraindex] === vogais[key]) {
         codigo2[letraindex] = key;
       }
     }
@@ -105,6 +105,7 @@ function decode(codigo2) {
   codigo2 = codigo2.join('');
   return codigo2;
 }
+console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
