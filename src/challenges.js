@@ -54,10 +54,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 15 === 0) {
+      array[index] = 'fizzBuzz';
+    } else if (array[index] % 3 === 0) {
+      array[index] = 'fizz';
+    } else if (array[index] % 5 === 0) {
+      array[index] = 'buzz';
+    } else {
+      array[index] = 'bug!';
+    }
+  }
+  return array;
 }
-
+// exemplo de chamada da função:  fizzBuzz([10,3,6,5,15]);
 // Desafio 9
 function encode() {
   // seu código aqui
