@@ -197,24 +197,28 @@ function generatePhoneNumber(number) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let trueOrFalse;
-  if (lineA > (lineB + lineC)) { trueOrFalse = false; }
-  else if (lineB > (lineA + lineC)) { trueOrFalse = false; }
-  else if (lineC > (lineA + lineB)) { trueOrFalse = false; }
-  else if (lineA < Math.abs(lineB - lineC)) { trueOrFalse = false; }
-  else if (lineB < Math.abs(lineA - lineC)) { trueOrFalse = false; }
-  else if (lineC < Math.abs(lineA - lineB)) { trueOrFalse = false; }
-  else { trueOrFalse = true; }
+  if (lineA > (lineB + lineC)) { trueOrFalse = false; } else {
+    if (lineB > (lineA + lineC)) { trueOrFalse = false; } else {
+      if (lineC > (lineA + lineB)) { trueOrFalse = false; } else {
+        if (lineA < Math.abs(lineB - lineC)) { trueOrFalse = false; } else {
+          if (lineB < Math.abs(lineA - lineC)) { trueOrFalse = false; } else {
+            if (lineC < Math.abs(lineA - lineB)) { trueOrFalse = false; } else { trueOrFalse = true; }
+          }
+        }
+      }
+    }
+  }
  return trueOrFalse;
 }
 
 // Desafio 13
 function hydrate(string) {
-  let drinks = string.replace(/\D/g, "");
+  let drinks = string.replace(/\D/g, '');
   let water = 0;
   for (let i = 0; i < drinks.length; i += 1) {
-    water += parseInt(drinks[i]);
+    water += parseInt(drinks[i], 10);
   }
-  return (water + ' copos de água')
+  return (water + ' copos de água');
 }
 
 module.exports = {
