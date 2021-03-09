@@ -70,7 +70,7 @@ function testNumber(number) {
 function generatePhoneNumber(numArray) {
   let result = '';
   let number = testNumber(numArray);
-  if (number[0] !== 'A' && number[0] !== 'n') {
+  if (number[0] !== 'A' && number[0] !== 'a' && number[0] !== 'n') {
     const ddd = number.slice(0, -9);
     const initNumber = number.slice(2, -4);
     const endNumber = number.slice(-4);
