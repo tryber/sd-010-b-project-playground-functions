@@ -48,37 +48,20 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let feedback = '';
-  let stepscat1 = 0;
-  let stepscat2 = 0;
-  if (mouse > cat1) {
-    for (let cat1pos = cat1; cat1pos !== mouse; cat1pos += 1) {
-      stepscat1 += 1;
-    }
-  } else if (mouse < cat1) {
-    for (let cat1pos = cat1; cat1pos !== mouse; cat1pos -= 1) {
-      stepscat1 += 1;
-    }
-  }
-  if (mouse > cat2) {
-    for (let cat2pos = cat2; cat2pos !== mouse; cat2pos += 1) {
-      stepscat2 += 1;
-    }
-  } else if (mouse < cat2) {
-    for (let cat2pos = cat2; cat2pos !== mouse; cat2pos -= 1) {
-      stepscat2 += 1;
-    }
-  }
-  if (stepscat1 < stepscat2) {
-    feedback = 'cat1';
-  } else if (stepscat2 < stepscat1) {
-    feedback = 'cat2';
-  } else if (stepscat1 === stepscat2) {
-    feedback = 'os gatos trombam e o rato foge';
-  }
-  return feedback;
-}
+  let cat1diff = Math.abs(mouse - cat1);
+  let cat2diff = Math.abs(mouse - cat2);
+  let catWinner = '';
 
+  if (cat2diff < cat1diff) {
+    catWinner = 'cat2';
+  } else if (cat1diff < cat2diff) {
+    catWinner = 'cat1';
+  } else {
+    catWinner = 'os gatos trombam e o rato foge';
+  }
+  return catWinner;
+}
+console.log(catAndMouse(0, -12, 12));
 // Desafio 8
 function fizzBuzz(array) {
   let feedback = [];
