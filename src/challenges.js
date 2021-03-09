@@ -134,9 +134,27 @@ function encode(string) {
 
 //console.log(encode("hi there!"));
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let novaString = "";
+  for(let indice in string){
+    if(string[indice] == "1"){
+      novaString += "a";
+    }else if(string[indice] == "2"){
+      novaString += "e";
+    }else if(string[indice] == "3"){
+      novaString += "i";
+    }else if(string[indice] == "4"){
+      novaString += "o"
+    }else if(string[indice] == "5"){
+      novaString += "u";
+    }else{
+      novaString += string[indice];
+    }
+  }
+  return novaString;
 }
+
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
