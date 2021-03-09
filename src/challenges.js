@@ -7,24 +7,18 @@
       return false
     }
   }
-}
-
 // Desafio 2
   function calcArea(base, heigth) {
     return (base * heigth) / 2
   }
-}
-
 // Desafio 3
   function splitSentence(string) {
     let separador = string.split(" ");
       return separador;
   }
-}
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  return name[name.length-1] + ", " + name[0]
 }
 
 // Desafio 5
