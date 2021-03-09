@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(techArray, name) {
-  let letTechArray = techArray;
+  let letTechArray = techArray.sort();
   let guardaArrayFinal = [];
   
   for (let key in letTechArray){
@@ -13,7 +13,7 @@ function techList(techArray, name) {
     return "Vazio!"
   }
 }
-return guardaArrayFinal;
+return guardaArrayFinal.sort();
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Alexandre"))
 console.log(techList([""], "Alexandre"))
