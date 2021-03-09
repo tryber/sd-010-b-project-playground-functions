@@ -29,6 +29,7 @@ function footballPoints(wins, ties) {
   let points = (3 * wins) + ties;
   return points;
 }
+// console.log(footballPoints(15, 8));
 // Desafio 6
 function highestCount(numbersArray) {
   let maiorArray = 0;
