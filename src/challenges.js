@@ -154,7 +154,7 @@ function decode(string) {
   return novaString;
 }
 
-console.log(decode("h3 th2r2!"));
+//console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
