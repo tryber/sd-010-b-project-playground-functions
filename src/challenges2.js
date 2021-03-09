@@ -1,11 +1,11 @@
 // Desafio 10
 function techList(array, nome) {
   let organizado = [];
-  if(array.length == 0){
+  if (array.length === 0){
     return "Vazio";
   }
   array.sort();
-  for(let indice = 0; indice < array.length; array += 1){
+  for (let indice = 0; indice < array.length; array += 1){
     organizado.push({Tecnologia: array[indice], nome, });
   }
   return organizado;
@@ -29,17 +29,16 @@ function triangleCheck(linhaA, linhaB, linhaC) {
   let somaAB = linhaA + linhaB;
   let somaAC = linhaA + linhaC;
   let somaBC = linhaB + linhaC;
-  if( juncaoAB < linhaC && linhaC < somaAB && juncaoAC < linhaB && linhaB < somaAC && juncaoBC < linhaA && linhaA < somaBC){
+  if (juncaoAB < linhaC && linhaC < somaAB && juncaoAC < linhaB && linhaB < somaAC && juncaoBC < linhaA && linhaA < somaBC){
     return true;
-  }else{
-    return false;
   }
+  return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
-console.log(triangleCheck(3, 4, 5));
-console.log(triangleCheck(5, 12, 13));
-console.log(triangleCheck(1, 2, 5));
+//console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(3, 4, 5));
+//console.log(triangleCheck(5, 12, 13));
+//console.log(triangleCheck(1, 2, 5));
 
 // Desafio 13
 function hydrate() {

@@ -1,8 +1,8 @@
 // Desafio 1
-function compareTrue(boolean1,boolean2) {
-  if(boolean1 && boolean2){
+function compareTrue(boolean1, boolean2) {
+  if (boolean1 && boolean2){
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -13,12 +13,12 @@ function compareTrue(boolean1,boolean2) {
 
 // Desafio 2
 function calcArea(base, altura) {
-  return ((base * altura) / 2);
+  return (( base * altura ) / 2);
 }
 
-//console.log(calcArea(10, 50));
-//console.log(calcArea(5, 2));
-//console.log(calcArea(51, 1));
+// console.log(calcArea(10, 50));
+// console.log(calcArea(5, 2));
+// console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(frase) {
@@ -31,7 +31,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(lista) {
-  let concatenacao = `${lista[lista.length -1]}, ${lista[0]}`;
+  let concatenacao = `${lista[lista.length - 1]}, ${lista[0]}`;
   return concatenacao;
 }
 
@@ -43,7 +43,7 @@ function concatName(lista) {
 
 // Desafio 5
 function footballPoints(vencer, empate) {
-  return ((vencer * 3) + (empate * 1));
+  return (( vencer * 3 ) + ( empate * 1 ));
 }
 
 //console.log(footballPoints(14, 8));
@@ -54,8 +54,8 @@ function footballPoints(vencer, empate) {
 function highestCount(numeros) {
   let contador = 0;
   let maior = Math.max(...numeros);
-  for(let chave in numeros){
-    if(numeros[chave] === maior){
+  for (let chave in numeros){
+    if (numeros[chave] === maior){
       contador += 1;
     }
   }
@@ -70,12 +70,12 @@ function highestCount(numeros) {
 function catAndMouse(rato, gato1, gato2) {
   let distancia1 = Math.abs(rato - gato1);
   let distancia2 = Math.abs(rato - gato2);
-  if(distancia1 == distancia2){
+  if (distancia1 === distancia2){
     return "os gatos trombam e o rato foge";
-  }else if(distancia1 < distancia2){
-    return "gato1";
-  }else{
-    return "gato2";
+  } else if ( distancia1 < distancia2 ){
+    return "cat1";
+  } else {
+    return "cat2";
   }
 }
 
@@ -86,7 +86,7 @@ function catAndMouse(rato, gato1, gato2) {
 // Desafio 8
 function fizzBuzz(numero) {
   function verificacao(numero){
-    if(numero % 3 == 0 && numero % 5 == 0){
+    if(( numero % 3 == 0 ) && ( numero % 5 == 0 )){
       return "fizzBuzz";
     }else if(numero % 3 == 0){
       return "fizz";
@@ -99,7 +99,7 @@ function fizzBuzz(numero) {
 
   function fizzBuzz(arrayNumeros){
     let array = [];
-    for(let indice = 0; indice < arrayNumeros.length; indice += 1){
+    for (let indice = 0; indice < arrayNumeros.length; indice += 1){
       let numero = arrayNumeros[indice];
       array.push(verificacao(numero));
     }
@@ -114,18 +114,18 @@ function fizzBuzz(numero) {
 // Desafio 9
 function encode(string) {
   let novaString = "";
-  for(let indice in string){
-    if(string[indice] == "a"){
+  for (let indice in string){
+    if (string[indice] === "a"){
       novaString += "1";
-    }else if(string[indice] == "e"){
+    } else if (string[indice] === "e"){
       novaString += "2";
-    }else if(string[indice] == "i"){
+    } else if (string[indice] === "i"){
       novaString += "3";
-    }else if(string[indice] == "o"){
+    } else if (string[indice] === "o"){
       novaString += "4";
-    }else if(string[indice] == "u"){
+    } else if (string[indice] === "u"){
       novaString += "5";
-    }else{
+    } else {
       novaString += string[indice];
     }
   }
@@ -136,18 +136,18 @@ function encode(string) {
 
 function decode(string) {
   let novaString = "";
-  for(let indice in string){
-    if(string[indice] == "1"){
+  for (let indice in string){
+    if (string[indice] === "1"){
       novaString += "a";
-    }else if(string[indice] == "2"){
+    } else if (string[indice] === "2"){
       novaString += "e";
-    }else if(string[indice] == "3"){
+    } else if (string[indice] === "3"){
       novaString += "i";
-    }else if(string[indice] == "4"){
+    } else if (string[indice] === "4"){
       novaString += "o"
-    }else if(string[indice] == "5"){
+    } else if (string[indice] === "5"){
       novaString += "u";
-    }else{
+    } else {
       novaString += string[indice];
     }
   }
