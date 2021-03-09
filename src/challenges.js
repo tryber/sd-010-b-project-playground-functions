@@ -10,7 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ");
+  return str.split(' ');
 }
 
 // Desafio 4
@@ -52,9 +52,26 @@ function catAndMouse(mouse, cat1, cat2) {
 // Fonte da função utilizada para retornar valores absolutos --- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function fizzBuzz(num) {
+  let resultado = num.map((n) => {
+  if (n % 3 == 0 && num % 5 == 0){
+    return 'fizzBuzz';
+  }
+  else if (n % 5 == 0){
+    return 'buzz';
+  }
+  else if (n % 3 == 0){
+    return 'fizz';
+  }
+  else{
+    return 'bug!';
+  }
+});
+  return resultado;
 }
+console.log(fizzBuzz([12, 10, 5, 20, 13]));
+// Fonte da função utilizada para retornar o novo array --- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 // Desafio 9
 function encode() {
