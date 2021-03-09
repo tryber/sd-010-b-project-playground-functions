@@ -28,7 +28,6 @@ function concatName(matrix) {
   let primeiroNome = matrix[0];
   let ultimoNome = matrix[matrix.length - 1];
   let resultado = ultimoNome + ', ' + primeiroNome;
-  
  return resultado;
   
 }
