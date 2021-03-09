@@ -40,12 +40,16 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((Math.abs(lineB - lineC) < lineA < Math.abs(lineB + lineC)) && (Math.abs(lineA - lineC) < lineB < Math.abs(lineA + lineC)) && (Math.abs(lineA - lineB) < lineC < Math.abs(lineA + lineB))) {
+  if ((Math.abs(lineB) - Math.abs(lineC) < lineA < Math.abs(lineB) + Math.abs(lineC)) && (Math.abs(lineA) - Math.abs(lineC) < lineB < Math.abs(lineA + lineC)) && (Math.abs(lineA) - Math.abs(lineB) < lineC < Math.abs(lineA) + Math.abs(lineB))) {
     return true;
   } else {
     return false;
   }
 }
+console.log(triangleCheck(16, 9, 2));
+let a = 5;
+let b = -5;
+console.log(Math.abs(a) + Math.abs(b));
 
 // Desafio 13
 function hydrate() {
