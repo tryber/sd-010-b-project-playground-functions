@@ -44,14 +44,14 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
-function triangleCheck (lineA, lineB, lineC){
+function triangleCheck (lineA, lineB, lineC) {
   if (lineA > lineB + lineC) {
     return false;
   } if (lineB > lineA + lineC) {
     return false;
   } if (lineC > lineB + lineA) {
     return false;
-  } return true
+  } return true;
 }
 
 // Desafio 13
@@ -60,7 +60,7 @@ function hydrate(pedido) {
   pedido = pedido.replace(/\D/g, '');
   pedido = pedido.split('');
   for (let index = 0; index < pedido.length; index += 1) {
-    pedido[index] = parseInt(pedido[index],10);
+    pedido[index] = parseInt(pedido[index], 10);
     soma += pedido[index];
   }
   if (soma > 1) {

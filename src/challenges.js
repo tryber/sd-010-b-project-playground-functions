@@ -105,7 +105,6 @@ function decode(codigo2) {
   codigo2 = codigo2.join('');
   return codigo2;
 }
-console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
