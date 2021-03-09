@@ -19,7 +19,25 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Ederson'))
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    let numerosIguais = 0;
+    for (let indexIgual = 0; indexIgual < array.length; indexIgual += 1) {
+      if (array[index] === array[indexIgual]) {
+        numerosIguais += 1;
+          if (numerosIguais > 2) {
+            return 'não é possível gerar um número de telefone com esses valores';
+          }
+      }
+    }
+  }
+  if (Math.min(...array) < 0 || Math.max(...array) > 9) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  }
 }
 
 // Desafio 12

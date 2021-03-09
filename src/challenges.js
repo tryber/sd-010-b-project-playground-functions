@@ -15,7 +15,7 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let palavras = frase.split(" ");
+  let palavras = frase.split(' ');
   return palavras;
 }
 
@@ -30,11 +30,11 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-//Creditos do Spread - https://www.luiztools.com.br/post/4-segredos-do-operador-spread-em-javascript/
+// Creditos do Spread - https://www.luiztools.com.br/post/4-segredos-do-operador-spread-em-javascript/
 function highestCount(number) {
   let highN = Math.max(...number)
   let x = 0;
-  for (let index = 0; index < number.length; index +=1) {    
+  for (let index = 0; index < number.length; index += 1) {
     if (highN == number[index]) {
       x = x + 1;
     }    
