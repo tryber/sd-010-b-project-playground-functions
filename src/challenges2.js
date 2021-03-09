@@ -31,15 +31,15 @@ function generatePhoneNumber(numbers) {
   let feedback = '';
   for (let i = 0; i < numbers.length; i += 1) {
     switch (i) {
-      case 0:
-        feedback += '(';
-        break;
-      case 2:
-        feedback += ') ';
-        break;
-      case 7:
-        feedback += '-';
-        break;
+    case 0:
+      feedback += '(';
+      break;
+    case 2:
+      feedback += ') ';
+      break;
+    case 7:
+      feedback += '-';
+      break;
     }
     feedback += numbers[i];
   }
@@ -59,9 +59,9 @@ function generatePhoneNumber(numbers) {
 function triangleCheck(lineA, lineB, lineC) {
   let check = false;
   if (
-    (lineA < lineB + lineC && lineA > Math.abs(lineC - lineB)) ||
-    (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA)) ||
-    (lineC < lineB + lineA && lineC > Math.abs(lineA - lineB))
+    (lineA < lineB + lineC && lineA > Math.abs(lineC - lineB))
+    || (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA))
+    || (lineC < lineB + lineA && lineC > Math.abs(lineA - lineB))
   ) {
     check = true;
   }
