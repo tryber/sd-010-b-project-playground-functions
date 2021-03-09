@@ -111,7 +111,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let receivedString = string.toLowerCase();
+  let receivedString = string;
   let newString = ''
   for (let value of receivedString){
     if (value === 'a') {
@@ -130,9 +130,9 @@ function encode(string) {
   }
   return newString;
 }
-
+console.log(encode("hi there!"));
 function decode(string) {
-  let receivedString = string.toLowerCase();
+  let receivedString = string;
   let newString = ''
   for (let value of receivedString){
     if (value === '1') {
@@ -151,6 +151,7 @@ function decode(string) {
   }
   return newString;
 }
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
