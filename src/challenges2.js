@@ -1,5 +1,4 @@
 // Desafio 10
-
 function techList(array, name) {
   let objArray = [];
   let objOrder = array.sort();
@@ -26,9 +25,9 @@ function generatePhoneNumber(array) {
     for (let indexIgual = 0; indexIgual < array.length; indexIgual += 1) {
       if (array[index] === array[indexIgual]) {
         numerosIguais += 1;
-          if (numerosIguais > 2) {
-            return 'não é possível gerar um número de telefone com esses valores';
-          }
+        if (numerosIguais > 2) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
       }
     }
   }
@@ -40,9 +39,20 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA, lineB, lineC) - Math.min(lineA, lineB, lineC) < Math.min(lineA, lineB, lineC)) {
+    if (lineA < Math.abs(lineB + lineC) && lineA) {
+      return true;
+    } else if (lineB < Math.abs(lineA + lineC)) {
+      return true;
+    } else if (lineC < Math.abs(lineB + lineA)) {
+      return true;
+    }
+  } else {
+    return false;
+  }
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
