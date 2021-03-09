@@ -58,14 +58,16 @@ function highestNumber(arrayNumber) {
 
 function highestCount(arrayNumber) {
   let quantityHighestNumber = 0;
+  let highestN = highestNumber(arrayNumber);
   for (let index in arrayNumber) {
-    if (highestNumber(arrayNumber) === arrayNumber[index]) {
+    if (highestN === arrayNumber[index]) {
       quantityHighestNumber += 1;
     }
   }
   return quantityHighestNumber;
 }
 
+highestCount([1,1,2,4,5,6,9,9,1])
 // Desafio 7
 function stepsCat1(mouse, cat1) {
   let cat1Steps = 0;
@@ -119,7 +121,7 @@ function fizzBuzz(arrayNumber) {
   let fizzBuzzArray = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
     let number = arrayNumber[index];
-    arrayNumber.push(verificationFizzBuzz(number));
+    fizzBuzzArray.push(verificationFizzBuzz(number));
   }
   return fizzBuzzArray;
 }
