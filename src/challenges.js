@@ -52,19 +52,19 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let disRatoGato1 = mouse-cat1
-	let disRatoGato2 = mouse-cat2
+  let distanciaGato1 = mouse-cat1
+	let distanciaGato2 = mouse-cat2
 
-	if (disRatoGato1 < 0) {
-		disRatoGato1*=-1
+	if (distanciaGato1 < 0) {
+		distanciaGato1*=-1
 	}
-	if (disRatoGato2 < 0) {
-		disRatoGato2*=-1
+	if (distanciaGato2 < 0) {
+		distanciaGato2*=-1
 	}
 
-	if (disRatoGato1 < disRatoGato2) {
+	if (distanciaGato1 < distanciaGato2) {
 		return "cat1"
-	} else if (disRatoGato2 < disRatoGato1) {
+	} else if (distanciaGato2 < distanciaGato1) {
 		return "cat2"
 	} else {
 		return "os gatos trombam e o rato foge"
