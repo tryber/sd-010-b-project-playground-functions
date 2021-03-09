@@ -71,9 +71,9 @@ function hydrate(drinksString) {
     glassesOfWater += parseInt(stringOfNumbers[index]);
   }
 
-  return (glassesOfWater + ' copos de água');
+  return (glassesOfWater + ' copos de agua');
 }
-console.log(hydrate('7 copos de água'));
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
