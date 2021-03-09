@@ -53,18 +53,27 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   } else if ((lineB > lineA + lineC) || (lineB < (Math.abs(lineA - lineC)))) {
     return false;
-    } else if ((lineC > lineA + lineB) || (lineC < (Math.abs(lineA - lineB)))) {
-      return false;
-      } else {
-        return true;
-        }
+  } else if ((lineC > lineA + lineB) || (lineC < (Math.abs(lineA - lineB)))) {
+    return false;
+  } else {
+    return true;
+  }
 }
-console.log(triangleCheck(10, 14, 8) );
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinksString) {
+  // Para implementação desta função, utilizei o vídeo a seguir como referência: https://trybecourse.slack.com/files/U015FA7FG8J/F017FQ9QN93/screen_recording_2020-07-21_at_20.42.43.mov
+  let stringOfNumbers = drinksString.replace(/\D/g, '');
+  let glassesOfWater = 0;
+
+  for (let index in stringOfNumbers) {
+    glassesOfWater += parseInt(stringOfNumbers[index]);
+  }
+
+  return (`${glassesOfWater} copos de água`);
 }
+console.log(hydrate("3 cachaça, 9 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
