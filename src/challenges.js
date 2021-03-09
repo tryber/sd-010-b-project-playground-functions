@@ -20,11 +20,11 @@ function splitSentence(s) {
 }
 
 // Desafio 4
-function concatName(array) {
-  let firstN = array[0];
-  let surname = array[array.length - 1];
+function concatName(a) {
+  let firstN = a[0];
+  let surname = a[a.length - 1];
   // LINT made me write line consoleLog like this, es-lint prefer-template error
-  let ret = `${surname},  ${firstN}`;
+  let ret = `${surname}, ${firstN}`;
   return ret;
 }
 
