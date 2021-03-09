@@ -17,9 +17,10 @@ function calcArea(base, height) {
 
 
 // Desafio 3
-function splitSentence(frase) {
-  frase = "Go trybe"
-  let res = frase.split(" ")
+function splitSentence() {
+  let frase = "Go trybe";
+  let res = (" ");
+
 }
 
 // Desafio 4
