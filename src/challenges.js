@@ -88,7 +88,7 @@ function encode(string) {
   let encodeString = '';
 
   for (let index = 0; index < string.length; index += 1) {
-  switch (string[index]) {
+    switch (string[index]) {
     case 'a':
       encodeString += '1';
       break;
@@ -117,7 +117,7 @@ function decode(string) {
   let decodeString = '';
 
   for (let index = 0; index < string.length; index += 1) {
-  switch (string[index]) {
+    switch (string[index]) {
     case '1':
       decodeString += 'a';
       break;
