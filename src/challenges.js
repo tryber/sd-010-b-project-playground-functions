@@ -41,23 +41,10 @@ let catAndMouse = (mouse, cat1, cat2) => {
 
   
 // Desafio 8
-let fizzBuzz = (arraynumbers) => {
-  let result = [];
-  let element = "";
-  for (let i = 0; i < arraynumbers.length; i += 1) {
-    if (arraynumbers[i] % 3 === 0) {
-      element = 'fizz';
-    } else if (arraynumbers[i] % 5 === 0) {
-      element = 'buzz';
-    } else if (arraynumbers[i] % 3 === 0 && arraynumbers[i] % 5 === 0) {
-      element = 'fizzBuzz';
-    } else {
-      element = 'bug!';
-    }
-  }
-  return result;
-}   
- console.log(result([2, 15, 7, 9, 45]));
+let fizzBuzz = () => {
+  
+}
+  
 // Desafio 9
 function encode() {
   
