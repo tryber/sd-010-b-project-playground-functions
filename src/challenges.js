@@ -1,8 +1,7 @@
 // Desafio 1
-let compareTrue = (num1) => {
-  if (num1 > 0 && num1 < 10){}  
+function compareTrue (x, y) {
+  return x && y;
 }
-console.log(true);
 
 // Desafio 2
 let calcArea = (base, heigth) => {
@@ -15,11 +14,8 @@ let splitSentence = (phrase) => {
 }
 
 // Desafio 4
-let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-let concatName = () => {
-  let ultimoItem = names[names.length - 1]
-  let primeiroItem = names[0];
-  return ultimoItem.concat(',').concat(primeiroItem);
+  let concatName = (names) => {
+    return `${names[names.length - 1]}, ${names[0]}`;
 }
 
 // Desafio 5
