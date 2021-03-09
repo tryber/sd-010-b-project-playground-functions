@@ -94,7 +94,10 @@ function hydrate(entrada) {
   for (let i = 0; i < cups.length; i += 1) {
     soma += parseInt(cups[i], 10);
   }
-  return `${soma} copos de água`;
+  if (cups > 1) {
+    return `${soma} copos de água`;
+  }
+  return `${soma} copo de água`;
 }
 
 module.exports = {
