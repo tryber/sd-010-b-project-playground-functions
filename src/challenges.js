@@ -75,54 +75,50 @@ function fizzBuzz(numbers) {
       result.push('buzz');
     } else {
       result.push('bug!');
-    
+    }
+    return result;
   }
-  return result;
-}
 }
 
 // Desafio 9
 // Exercicio resolvido com dicas dos plantões, code review de colegas, e pesquisas https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/HasOwnProperty.
 function changeword(word) {
-  let str = { a: 1, e: 2, i: 3, o: 4, u:5};
+  let str = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   for (let v in str) {
-    if(v === word) {
+    if (v === word) {
       word = str[v];
     }
-}
-return word
+  }
+  return word;
 }
 function encode(strings) {
   let phrase = strings.split('');
   for (let v in phrase) {
-    if(Object.prototype.hasOwnProperty.call(phrase,v)) {
+    if (Object.prototype.hasOwnProperty.call(phrase, v)) {
       phrase[v] = changeword(phrase[v]);
     }
   }
   return phrase.join('');
 }
-console.log(encode('hello'));
-
 
 function unchangeword(word) {
-  let str = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5:'u'};
+  let str = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   for (let v in str) {
-    if(v === word) {
+    if (v === word) {
       word = str[v];
     }
-}
-return word;
+  }
+  return word;
 }
 function decode(strings) {
   let phrase = strings.split('');
   for (let v in phrase) {
-    if(Object.prototype.hasOwnProperty.call(phrase,v)) {
+    if (Object.prototype.hasOwnProperty.call(phrase, v)) {
       phrase[v] = unchangeword(phrase[v]);
     }
   }
   return phrase.join('');
 }
-console.log(decode('h2ll4'));
 
 module.exports = {
   calcArea,
