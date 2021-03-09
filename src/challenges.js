@@ -1,3 +1,7 @@
+//dúvidas esclarecidas com o apoio dos plantões de Isaac e Gisele, e dos colegas participantes
+//e pesquisas realizadas nos sites: Trybe (tutoriais), Alura, Devmedia, Developer Mozilla, Stackoverflow
+// Sitepoint e Ricardo Reis
+
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {

@@ -1,3 +1,7 @@
+//dúvidas esclarecidas com o apoio dos plantões de Isaac e Gisele, e dos colegas participantes
+//e pesquisas realizadas nos sites: Trybe (tutoriais), Alura, Devmedia, Developer Mozilla, Stackoverflow
+// Sitepoint e Ricardo Reis
+
 // Desafio 10
 function techList(array, name) {
   let techName = {
@@ -17,9 +21,37 @@ function techList(array, name) {
 console.log(techList(['JavaScript', 'CSS', 'HTML'], 'Lucas'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(number) {
+  array = number;
+  if (array.length > 11) {
+    let phone = "Array com tamanho incorreto.";
+    return(phone); 
+  }
+  for (i = 0; i < array.length; i += 1){
+   if (((parseInt(array[i]))<0) || ((parseInt(array[i]))>9)) {
+    let phone = "não é possível gerar um número de telefone com esses valores";
+    return(phone);
+   }
+  } 
+  let count = 1;
+  for (i = 0; i < array.length; i += 1){
+   for (l = i+1; l < array.length; l += 1) {
+     if (array[i] === array[l]) {
+      count += 1;
+      }
+    }
+  } 
+   if (count >= 3) {
+    let phone = "não é possível gerar um número de telefone com esses valores";
+    return(phone); 
+  }
+    //verificação do formato de saída no código do colega Trybe Carlos Eduardo Margato
+    phone= `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  
+    return (phone);    
+   }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
