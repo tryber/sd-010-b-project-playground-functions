@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue (x, y) {
+let compareTrue = (x, y) => {
   return x && y;
 }
 
@@ -28,7 +28,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+let catAndMouse = (mouse, cat1, cat2) => {
   let cat1Position = Math.abs(mouse - cat1);
   let cat2Position = Math.abs(mouse - cat2);
   if (cat1Position < cat2Position) {
@@ -41,18 +41,22 @@ function catAndMouse(mouse, cat1, cat2) {
 
   
 // Desafio 8
-let fizzBuzz = (numbers = []) => {
-  for (let i = 0; i = numbers; i += 1)
-  if (numbers % 3 === 0) {
-    return "fizz";
-  } else if (numbers % 5 === 0 ) {
-    return "buzz";
-  } else if ( numbers % 3 === 0 && numbers % 5 === 0) {
-    return "fizzBuzz";
-  } else {
-    return "bug!";
-  }    
-}  
+let fizzBuzz = (arraynumbers) => {
+  let result = [];
+  for (let value of arraynumbers) {
+    if (value % 3 === 0 && value % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (value % 3 === 0) {
+      result.push('fizz');
+    } else if (value % 5 === 0) {
+      arrResult.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
+}   
+ 
 // Desafio 9
 function encode() {
   
