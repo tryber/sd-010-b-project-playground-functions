@@ -1,21 +1,21 @@
 // Desafio 1
-  function compareTrue(bool1, bool2) {
-    if(bool1 === true && bool2 === true){
-      return true
-    } 
+function compareTrue(bool1, bool2) {
+  if (bool1 === true && bool2 === true) {
+    return true
+  } 
   else {
-      return false
-    }
+    return false
   }
+}
 // Desafio 2
-  function calcArea(base, heigth) {
-    return (base * heigth) / 2
-  }
+function calcArea(base, heigth) {
+  return (base * heigth) / 2
+}
 // Desafio 3
-  function splitSentence(string) {
-    let separador = string.split(" ");
-      return separador;
-  }
+function splitSentence(string) {
+  let separador = string.split(" ");
+  return separador;
+}
 // Desafio 4
 function concatName(name) {
   return name[name.length-1] + ", " + name[0]
