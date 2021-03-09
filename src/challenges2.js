@@ -5,8 +5,7 @@ function techList(array, name) {
     name: name
   };
   if (array.length == 0) {
-    let empty = '';
-    console.log('Vazio!');
+    let empty = 'Vazio!';
     return(empty);
   }
   let full = [];
