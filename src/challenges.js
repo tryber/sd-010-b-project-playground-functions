@@ -4,10 +4,10 @@ function compareTrue(bol, bole) {
 }
 // exemplo de chamada da função: compareTrue(true, false);
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
-
+// exemplo de chamada da função: calcArea(10, 4);
 // Desafio 3
 function splitSentence() {
   // seu código aqui
