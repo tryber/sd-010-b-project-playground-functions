@@ -24,7 +24,10 @@ return result;
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  names.lastIndexOf(searchElement[fromIndex = names.length - 1]);
+  return names;
+
 }
 
 // Desafio 5
