@@ -54,12 +54,13 @@ function repeatNumber (number) {
 
 function testNumber(number) {
   let result = '';
+  if (number.length !== 11) {
+    result = 'Array com tamanho incorreto.';
+  }
   for (let i = 0; i < number.length; i += 1) {
     if (value(number) === false || repeatNumber(number) === true) {
       result = 'não é possível gerar um número de telefone com esses valores';
       break;
-    } else if (number.length !== 11) {
-      result = 'Array com tamanho incorreto.';
     } else {
       result += number[i];
     }
@@ -81,7 +82,7 @@ function generatePhoneNumber(numArray) {
   }
   return result;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 4, 4, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([]));
 
 // Desafio 12
 function difCheck(a, b, c) {
