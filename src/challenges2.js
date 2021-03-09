@@ -74,7 +74,7 @@ function generatePhoneNumber(arrayPhone) {
    return "Array com tamanho incorreto.";
  }
 }
-generatePhoneNumber();
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
