@@ -8,7 +8,7 @@ function calcArea(base, heigth) {
 }
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' '); 
+  return string.split(' ');
 }
 // Desafio 4
 function concatName(name) {
@@ -23,33 +23,44 @@ function footballPoints(wins, ties) {
 // Desafio 6
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 function highestCount(num) {
-let maior = Math.max.apply(null, num);
-let count = 0; 
-for(let i = 0; i < num.length; i++){
-  if(num[i] === maior){
-    count = count + 1;
+  let maior = Math.max.apply(null, num);
+  let count = 0;
+  for (let i = 0; i < num.length; i++){
+    if (num[i] === maior) {
+      count = count + 1;
+    }
   }
-}
-  return count;
-}
+    return count;
+  }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
-  return 'os gatos trombam e o rato foge';
-} 
-else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-  return 'cat1';
-} 
-else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-  return 'cat2';
-}
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
+    return 'os gatos trombam e o rato foge';
+  } 
+  else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  }
+  else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(num) {
+  let resultado = num.map((n) => {
+  if (num % 3 === 0 && num % 5 === 0){
+    return 'fizzBuzz';
+  }
+  if (num % 5 === 0){
+    return 'buzz';
+  }
+  if (num % 3 === 0){
+    return 'fizz';
+  }
+  return 'bug!';
+});
+  return resultado;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -69,4 +80,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
