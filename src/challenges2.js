@@ -76,10 +76,22 @@ console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(phrase) {
-  array = splitSentence(phrase);
+  let letters = phrase.split(' ');
+  let numbers = 0;
+  for (let i = 0; i < letters.length; i += 1) {
+    if ((parseInt(letters[i])) >= 0) {
+      numbers = numbers + parseInt(letters[i]);
+    }
+  } 
+  if (numbers === 1) {
+    console.log(numbers + " copo de água");
+   } 
+  else {        
+    console.log(numbers + " copos de água");       
+       }    
   
-}
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+  return(numbers);   
+}  
 
 module.exports = {
   generatePhoneNumber,
