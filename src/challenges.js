@@ -43,15 +43,16 @@ let catAndMouse = (mouse, cat1, cat2) => {
 // Desafio 8
 let fizzBuzz = (arraynumbers) => {
   let result = [];
+  let element = "";
   for (let value of arraynumbers) {
-    if (value % 3 === 0 && value % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (value % 3 === 0) {
-      result.push('fizz');
+    if (value % 3 === 0) {
+      element.push('fizz');
     } else if (value % 5 === 0) {
-      arrResult.push('buzz');
+      element.push('buzz');
+    } else if (value % 3 === 0 && value % 5 === 0) {
+      element.push('fizzBuzz');
     } else {
-      result.push('bug!');
+      element.push('bug!');
     }
   }
   return result;
