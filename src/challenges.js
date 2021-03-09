@@ -14,7 +14,7 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(name) {
-  return name[name.length-1] + ", " + name[0];
+  return name[name.length - 1] + ', ' + name[0];
 }
 
 // Desafio 5
@@ -25,18 +25,19 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(num) {
 let maior = count = 0;
-for (let c = 0; c < numbers.length; c++){
+for (let c = 0; c < num.length; c++){
   if (c > maior){
-    maior = numbers[0]; 
+    maior = c; 
   }
-  if (c === maior){
-    count++
+  else if (c === maior){
+    count++;
   }
+  return count;
 }
-
+}
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if
 }
 
 // Desafio 8
@@ -63,4 +64,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
