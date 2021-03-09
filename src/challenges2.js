@@ -40,14 +40,8 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((Math.max(lineA, lineB, lineC) - Math.min(lineA, lineB, lineC)) < Math.min(lineA, lineB, lineC)) {
-    if (lineA < Math.abs(lineB + lineC) && lineA) {
-      return true;
-    } else if (lineB < Math.abs(lineA + lineC)) {
-      return true;
-    } else if (lineC < Math.abs(lineB + lineA)) {
-      return true;
-    }
+  if ((Math.abs(lineB - lineC) < lineA < Math.abs(lineB + lineC)) && (Math.abs(lineA - lineC) < lineB < Math.abs(lineA + lineC)) && (Math.abs(lineA - lineB) < lineC < Math.abs(lineA + lineB))) {
+    return true;
   } else {
     return false;
   }
