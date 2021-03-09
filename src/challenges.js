@@ -27,10 +27,18 @@ function footballPoints(wins, ties) {
 }
 // exemplo de chamada da função: footballPoints(10, 10);
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maxNumber = Math.max(...array);
+  let repeatCounter = 0;
+  let index;
+  for (index = 0; index < array.length; index += 1) {
+    if (maxNumber === array[index]) {
+      repeatCounter += 1;
+    }
+  }
+  return repeatCounter;
 }
-
+// exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
