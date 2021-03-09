@@ -63,11 +63,19 @@ let fizzBuzz = (arrN) => {
 }
   
 // Desafio 9
-function encode() {
-  
+function encode(arrStr) {
+  let result = arrStr;
+  for (i = 0; i <arrStr.length; i++) {
+    result = result.replace("a", 1).replace("e", 2).replace("i", 3).replace("o", 4).replace("u", 5);
+  }
+  return result;
 }
-function decode() {
-  
+function decode(arrNum) {
+  let result = arrNum;
+  for (i = 0; i <arrNum.length; i++) {
+    result = result.replace(1 , "a").replace(2, "e").replace(3, "i").replace(4, "o").replace(5, "u");
+  }
+  return result;
 }
 
 module.exports = {
