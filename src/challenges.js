@@ -9,10 +9,10 @@ function calcArea(base, height) {
 }
 // exemplo de chamada da função: calcArea(10, 4);
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
-
+// exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
 function concatName() {
   // seu código aqui
