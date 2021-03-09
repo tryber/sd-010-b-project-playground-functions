@@ -40,10 +40,19 @@ function highestCount(array) {
 }
 // exemplo de chamada da função: highestCount([10,11,8,11]);
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mCat1 = Math.abs(mouse - cat1);
+  let mCat2 = Math.abs(mouse - cat2);
+  let pow = 'os gatos trombam e o rato foge';
+  if (mCat1 < mCat2) {
+    return 'cat1';
+  }
+  if (mCat1 > mCat2) {
+    return 'cat2';
+  }
+  return pow;
 }
-
+// exemplo de chamada da função: catAndMouse(10,5,4);
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
