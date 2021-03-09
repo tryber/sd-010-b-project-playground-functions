@@ -141,6 +141,24 @@ function decode() {
   return newString;
 }
 
+// Desafio 10
+function technologies(array, name) {
+  if (array != null) {
+    array.sort();
+    name = "Lucas";
+    let technologies = [''];
+    for (let i = 0; i < array.length; i += 1) {
+      technologies[i] = {
+        tech: array[i],
+        name: name
+      };
+    }
+    return technologies;
+  } else {
+    return 'Vazio!';
+  }
+}
+
 module.exports = {
   calcArea,
   catAndMouse,
