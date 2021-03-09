@@ -84,14 +84,14 @@ function hydrate(phrase) {
     }
   } 
   if (numbers === 1) {
-    console.log(numbers + ' copo de água');
+    message = console.log(numbers + ' copo de água');
    } 
   else {        
-    console.log(numbers + ' copos de água');       
+    message = console.log(numbers + ' copos de água');       
        }    
   
-  return(numbers);   
-}  
+  return(message);   
+}
 
 module.exports = {
   generatePhoneNumber,
