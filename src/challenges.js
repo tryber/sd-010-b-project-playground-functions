@@ -76,8 +76,8 @@ function fizzBuzz(numbers) {
     } else {
       result.push('bug!');
     }
-    return result;
   }
+    return result;
 }
 
 // Desafio 9
