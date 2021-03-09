@@ -71,9 +71,9 @@ function hydrate(drinksString) {
     glassesOfWater += parseInt(stringOfNumbers[index]);
   }
 
-  return (`${glassesOfWater} copos de água`);
+  return (glassesOfWater + ' copos de água');
 }
-console.log(hydrate("3 cachaça, 9 cervejas e 1 copo de vinho"));
+console.log(hydrate('7 copos de água'));
 
 module.exports = {
   generatePhoneNumber,
