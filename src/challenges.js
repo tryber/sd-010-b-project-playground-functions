@@ -107,14 +107,33 @@ function fizzBuzz(numero) {
   }
 }
 
-console.log(fizzBuzz(arrayprimeiro = [2, 15, 7, 9, 45]));
-console.log(fizzBuzz(arraysegundo = [7, 9]));
-console.log(fizzBuzz(arrayterceiro = [9, 25]));
+//console.log(fizzBuzz(arrayprimeiro = [2, 15, 7, 9, 45]));
+//console.log(fizzBuzz(arraysegundo = [7, 9]));
+//console.log(fizzBuzz(arrayterceiro = [9, 25]));
 
 // Desafio 9
 function encode(string) {
-  // seu código aqui
+  let novaString = "";
+  for(let indice in string){
+    if(string[indice] == "a"){
+      novaString += "1";
+    }else if(string[indice] == "e"){
+      novaString += "2";
+    }else if(string[indice] == "i"){
+      novaString += "3";
+    }else if(string[indice] == "o"){
+      novaString += "4";
+    }else if(string[indice] == "u"){
+      novaString += "5";
+    }else{
+      novaString += string[indice];
+    }
+  }
+  return novaString;
 }
+
+//console.log(encode("hi there!"));
+
 function decode() {
   // seu código aqui
 }
