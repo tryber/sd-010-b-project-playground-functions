@@ -20,92 +20,87 @@ function splitSentence(frase) {
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-
-function concatName(string){
+function concatName(string) {
   // seu código aqui
   let ultimoItem = string[string.length - 1];
   let primeiroItem = string[0];
-  let result = ultimoItem  + ','+ primeiroItem;
+  let result = ultimoItem + ',' + primeiroItem;
   return result;
 }
- console.log(concatName((['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])));
- console.log(concatName(['foguete', 'não', 'tem', 'ré']));
- console.log(concatName(['captain', 'my', 'captain']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 //Desafio 5
 function footballPoints() {
   // seu código aqui
 }
 // Desafio 6
-let numbers = [9, 1, 2, 3, 9, 5, 7];
-let higherNumber = 0;
-function highestCount(higherNumber) {
-  // seu código aqui
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] === higherNumber) {
-    higherNumber++;
-  }
-  
-}
-return higherNumber;
-}
 
+function highestCount(arr) {
+  // seu código aqui
+  let num = 0;
+  for (let index = 0; index < arr.length; index++) {
+    let count = 0;
+    for (let index2 = index + 1; index2 < arr.length; index2++) {
+      if (arr[index] === arr[index2]) {
+        count++;
+        num = arr[index];
+      }
+    }
+  }
+  return num;
+}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  // seu código aqui
-  let result = ''; 
-  let distanciaCat1 = mouse - cat1; 
-  let distanciaCat2 = mouse - cat2;
-  if (distanciaCat1 === distanciaCat2 || cat1 === cat2) {
-    result = 'os gatos trombam e o rato foge';
-  } if (distanciaCat1 > distanciaCat2) {
-    result = "cat1";
-  } if ( distanciaCat2 < distanciaCat1) {
-    result = "cat2";
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqu
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
+  if (cat1 < cat2) {
+    return 'cat1';
   }
-  return result;
-
-};
+  if (cat2 < cat1) {
+    return 'cat2';
+  }
+    return 'os gatos trombam e o rato foge';
+}
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
+  let array = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      console.log("fizzBuzz")
-    }
-    else if (array[index] % 5 === 0) {
-      console.log("buzz")
-    }
-    else if (array[index] % 3 === 0) {
-      console.log("fizz")
-    }
-    else {
-      console.log("bug!")
+      console.log('fizzBuzz');
+    } else if (array[index] % 5 === 0) {
+      console.log('buzz');
+    } else if (array[index] % 3 === 0) {
+      console.log('fizz');
+    } else {
+      console.log('bug!');
     }
   }
   return array;
 }
-
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode(phrase) {
   // seu código aqui
-     let newPhrase = phrase.replace(/a/gi, '1')
-      .replace(/e/gi, '2')
-      .replace(/i/gi, '3')
-      .replace(/o/gi, '4')
-      .replace(/u/gi, '5')
-    return newPhrase;
-}  
+  let newPhrase = phrase
+    .replace(/a/gi, '1')
+    .replace(/e/gi, '2')
+    .replace(/i/gi, '3')
+    .replace(/o/gi, '4')
+    .replace(/u/gi, '5');
+  return newPhrase;
+}
 
 function decode(phraseDecode) {
   // seu código aqui
-  let decod = phraseDecode.replace(/1/gi, 'a')
-  .replace(/2/gi, 'e')
-  .replace(/3/gi, 'i')
-  .replace(/4/gi, 'o')
-  .replace(/5/gi, 'u')
-return decod;
-
+  let decod = phraseDecode
+    .replace(/1/gi, 'a')
+    .replace(/2/gi, 'e')
+    .replace(/3/gi, 'i')
+    .replace(/4/gi, 'o')
+    .replace(/5/gi, 'u');
+  return decod;
 }
 
 module.exports = {
