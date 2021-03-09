@@ -2,6 +2,8 @@
 //e pesquisas realizadas nos sites: Trybe (tutoriais), Alura, Devmedia, Developer Mozilla, Stackoverflow
 // Sitepoint e Ricardo Reis
 
+const { splitSentence } = require("./challenges");
+
 // Desafio 10
 function techList(array, name) {
   let techName = {
@@ -25,33 +27,33 @@ function generatePhoneNumber(number) {
   array = number;
   if ((array.length < 11) || (array.length > 11)) {
     let phone = 'Array com tamanho incorreto.';
-    return(phone); 
+    return phone;
   }
   for (i = 0; i < array.length; i += 1){
-   if (((parseInt(array[i]))<0) || ((parseInt(array[i]))>9)) {
+   if (array[i] < 0 || array[i] > 9) { 
     let phone = 'não é possível gerar um número de telefone com esses valores';
     return(phone);
    }
-  } 
-  let count = 1;
- for (i = 0; i < array.length; i += 1){
-   for (l = i+1; l < array.length; l += 1) {
-     if (array[i] === array[l]) {
-      count += 1;
-      }  
-   }
-  } 
-   if (count >= 3) {
-    let phone = 'não é possível gerar um número de telefone com esses valores';
-    return(phone); 
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    let count = 0;
+    for (let l = 1; l < array.length; l += 1) {
+      if (array[i] === array[l]) {
+        count += 1;
+      }
+     //ajuda do colega Trybe Carlos Vieira para resolução do erro no contador da repetição 
+      if (array[i] < 0 || array[i] > 9 || count >= 3) {
+        let phone = 'não é possível gerar um número de telefone com esses valores';
+        return(phone);
+      }
+    }
   }
     //verificação do formato de saída no código do colega Trybe Carlos Eduardo Margato
-    phone= `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
-  
-    return (phone);    
+    phone= `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]
+}${array[8]}${array[9]}${array[10]}`;
+    return (phone);
    }
-
-console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -73,9 +75,11 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  array = splitSentence(phrase);
+  
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
