@@ -84,7 +84,7 @@ function catAndMouse(rato, gato1, gato2) {
 //console.log(catAndMouse(6, 9, 9));
 
 // Desafio 8
-function fizzBuzz(numero) {
+function fizzBuzz(arrayNumeros) {
   function verificacao(numero){
     if(( numero % 3 == 0 ) && ( numero % 5 == 0 )){
       return "fizzBuzz";
@@ -96,20 +96,17 @@ function fizzBuzz(numero) {
       return "bug";
     }
   }
-
-  function fizzBuzz(arrayNumeros){
-    let array = [];
+  let array = [];
     for (let indice = 0; indice < arrayNumeros.length; indice += 1){
       let numero = arrayNumeros[indice];
       array.push(verificacao(numero));
     }
     return array;
-  }
 }
 
-//console.log(fizzBuzz(arrayprimeiro = [2, 15, 7, 9, 45]));
-//console.log(fizzBuzz(arraysegundo = [7, 9]));
-//console.log(fizzBuzz(arrayterceiro = [9, 25]));
+console.log(fizzBuzz(arrayprimeiro = [2, 15, 7, 9, 45]));
+console.log(fizzBuzz(arraysegundo = [7, 9]));
+console.log(fizzBuzz(arrayterceiro = [9, 25]));
 
 // Desafio 9
 function encode(string) {
