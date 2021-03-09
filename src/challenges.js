@@ -114,14 +114,36 @@ function fizzBuzz(arrayNumbers) {
   return finalArray;
 }
 
-
 // Desafio 9
 
-function encode() {
-  // seu código aqui
+let recieved = "hi there"
+
+function encode(recieved) {
+  let letters = ["a", "e", "i", "o", "u"];
+  let numbers = ["1", "2", "3", "4", "5"];
+  for(let key in letters) {
+    return key;
+  }
+  for(let index in numbers) {
+    if(index === key) {
+      recieved.replace(letters[key], numbers[index]);
+    }
+  }
+  return recieved;
 }
-function decode() {
-  // seu código aqui
+
+function decode(recieved) {
+  let letters = ["a", "e", "i", "o", "u"];
+  let numbers = ["1", "2", "3", "4", "5"];
+  for(let key in letters) {
+    return key;
+  }
+  for(let index in numbers) {
+    if(index === key) {
+      recieved.replace(numbers[index], letters[key]);
+    }
+  }
+  return recieved;
 }
 
 module.exports = {
