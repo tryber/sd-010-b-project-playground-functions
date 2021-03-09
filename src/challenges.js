@@ -158,6 +158,43 @@ function technologies(array, name) {
   }
 }
 
+// Desafio 11
+function generatePhoneNumber(number) {
+  let returnMsg;
+  if (number.length != 11) {
+    returnMsg = 'Array com tamanho incorreto.';
+  } else {
+    let numberTimes;
+    let controlNumber;
+    let possibleNumber = true;
+    for (let index = 0; index < number.length; index += 1) {
+      if ((number[index] < 0) || (number[index] > 9)) {
+        possibleNumber = false;
+        break;
+      } else {
+        numberTimes = 0;
+        controlNumber = number[index];
+        for (let index2 = 0; index2 < number.length; index2 += 1) {
+          if (number[index2] === controlNumber) {
+            numberTimes += 1;
+          }
+        }
+        if (numberTimes > 2) {
+          possibleNumber = false;
+          break;
+        }
+      }
+    }
+    if (possibleNumber != false) {
+      returnMsg = '(' + number[0] + number[1] + ')' + number[2] + number[3] + number[4] + number[5] + number[6] + '-' + number[7] + number[8] + number[9] + number[10];
+    } else {
+      returnMsg = 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return returnMsg;
+}
+
+
 module.exports = {
   calcArea,
   catAndMouse,
