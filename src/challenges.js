@@ -26,18 +26,26 @@ function footballPoints(wins, ties) {
 function highestCount(num) {
 let maior = count = 0;
 for (let c = 0; c < num.length; c++){
-  if (c > maior){
-    maior = c; 
+  if (num[c] > maior){
+    maior = num[c]; 
   }
-  else if (c === maior){
+  else if (num[c] == maior){
     count++;
   }
-  return count;
+  console.log(count);
 }
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if
+  let retorno = '';
+  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
+    retorno = 'os gatos trombam e o rato foge';
+  } else if ((cat1 - mouse) < (cat2 - mouse)) {
+    retorno = 'cat1';
+  } else if ((cat1 - mouse) > (cat2 - mouse)) {
+    retorno = 'cat2';
+  }
+  return retorno;
 }
 
 // Desafio 8
