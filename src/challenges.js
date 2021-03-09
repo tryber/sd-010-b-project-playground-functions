@@ -14,10 +14,11 @@ function splitSentence(string) {
 }
 // exemplo de chamada da função: splitSentence("Xablau is life");
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let space = ', ';
+  return array[array.length - 1] + space + array[0];
 }
-
+// exemplo de chamada da função: concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
