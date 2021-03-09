@@ -22,9 +22,23 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangle = Boolean;
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+
+  if ((a < b+c) && (b < a+c) && (c < a+b)) {
+    if ((a > (Math.abs(b-c))) && (b > (Math.abs(a-c))) && (c > (Math.abs(a-b)))) {
+    }
+      triangle = true;
+      return(triangle);
+    
+  }
+  triangle = false;     
+  return(triangle);
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
