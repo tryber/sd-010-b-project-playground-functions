@@ -64,7 +64,7 @@ function hydrate(numeroBebidas) {
   for (let cont = 0; cont < arrayNumb.length; cont += 1 ){
   totalNumb += (arrayNumb[cont]*1);
   }
-  return totalNumb + " copo de água";
+  return totalNumb + " copos de água";
 }
 
 
