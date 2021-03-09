@@ -43,7 +43,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {}
+function catAndMouse(mouse, cat1, cat2) {
+  let tom = Math.abs(cat1 - mouse);
+  let outroGato = Math.abs(cat2 - mouse);
+  if (tom > outroGato) {
+    return 'cat1';
+  } if (tom < outroGato) {
+    return 'cat2';
+  } if (tom === outroGato) {
+    return 'os gatos se trombam e o rato foge';
+  }
+}
 
 // Desafio 8
 // eslint-disable-next-line complexity
@@ -62,7 +72,6 @@ function fizzBuzz(array) {
   }
   return arrayFizBuz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
