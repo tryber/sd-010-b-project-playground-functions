@@ -33,24 +33,24 @@ function footballPoints() {
   // seu código aqui
 }
 // Desafio 6
-
 function highestCount(array) {
   // seu código aqui
-  let num = 0;
   let maior = 0;
   let contador = 0;
   for (let index = 0; index < array.length; index++) {
-    let count = 0;
-    for (let index2 = index + 1; index2 < array.length; index2++) {
-      if (array[index] === array[index2]) {
-        count++;
-        num = array[index];
-      }
+    if (array[index] > maior) {
+      maior = array[index];
     }
   }
-  return num;
+  for (let index = 0; index < array.length; index += 1) {
+    if (maior === array[index]) {
+      contador += 1;
+    }
+  }
+
+  return contador;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 0, 0]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqu
