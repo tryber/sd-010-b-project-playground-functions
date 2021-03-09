@@ -61,24 +61,46 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return catWinner;
 }
-console.log(catAndMouse(0, -12, 12));
+
 // Desafio 8
+function check3(number) {
+  let response = false;
+  if (number % 3 === 0 && number % 5 !== 0) {
+    response = true;
+  }
+  return response;
+}
+function check5(number) {
+  let response = false;
+  if (number % 5 === 0 && number % 3 !== 0) {
+    response = true;
+  }
+  return response;
+}
+function check5and3(number) {
+  let response = false;
+  if (number % 5 === 0 && number % 3 === 0) {
+    response = true;
+  }
+  return response;
+}
+
 function fizzBuzz(array) {
   let feedback = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      feedback.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
+    if (check3(array[i]) === true) {
       feedback.push('fizz');
-    } else if (array[i] % 5 === 0) {
+    } else if (check5(array[i]) === true) {
       feedback.push('buzz');
+    } else if (check5and3(array[i]) === true) {
+      feedback.push('fizzBuzz');
     } else {
       feedback.push('bug!');
     }
   }
   return feedback;
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 // Consultei o site da w3schools pra usar a função replace nas duas funções
 // link: https://www.w3schools.com/jsref/jsref_replace.asp
