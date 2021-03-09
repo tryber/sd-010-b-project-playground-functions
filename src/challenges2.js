@@ -4,7 +4,7 @@ let techList = () => {
 }
 
 // Desafio 11
-function generatePhoneNumber(argArray, names) {
+let generatePhoneNumber =(argArray) => {
   let result = [];
   argArray.sort();
   for (let argName of argArray) {
@@ -30,9 +30,16 @@ function triangleCheck(sideA, sideB, sideC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+let hydrate = (num) => {
+  let numbers = num.replace(/[^0-9]/g,'');
+  let numbersArr = numbers.split("");
+  let somaNumbers = 0;
+  for (let i = 0; i < numbersArr.length; i++) {
+    somaNumeros += parseInt(numbersArr[i]);    
+  }
+  return somaNumbers === 1 ? somaNumbers+" copo de água" : somaNumbers +" copos de água";
 }
+
 
 module.exports = {
   generatePhoneNumber,
