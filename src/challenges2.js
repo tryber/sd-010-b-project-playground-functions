@@ -37,20 +37,20 @@ function value(number) {
   return true;
 }
 
-function repeatNumber (number) {
-  for (let i = 0; i < number.length; i += 1) {
-    let count = [];
-    for (let j = 0; j < number.length; j += 1) {
-      if (number[i] === number[j]) {
-        count.push('x');
-      }
-      if (count.length > 2) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
+// function repeatNumber(number) {
+//   for (let i = 0; i < number.length; i += 1) {
+//     let count = [];
+//     for (let j = 0; j < number.length; j += 1) {
+//       if (number[i] === number[j]) {
+//         count.push('x');
+//       }
+//       if (count.length > 2) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// }
 
 function testNumber(number) {
   let result = '';
@@ -58,7 +58,7 @@ function testNumber(number) {
     result = 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < number.length; i += 1) {
-    if (value(number) === false || repeatNumber(number) === true) {
+    if (value(number) === false) {
       result = 'não é possível gerar um número de telefone com esses valores';
       break;
     } else {
