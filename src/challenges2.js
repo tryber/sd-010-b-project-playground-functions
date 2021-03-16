@@ -17,12 +17,13 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let arrayIn = array;
+ 
+  // verificações
+  const verifyCounterTo3 = counterTo3(arrayIn);
+
   if (arrayIn.length !== 11) {
     return "Array com tamanho incorreto."
   }
-
-  const verifyCounterTo3 = counterTo3(arrayIn)
-  console.log(verifyCounterTo3);
 
   for (let i = 0; i < arrayIn.length; i += 1) {
     if (arrayIn[i] < 0 || arrayIn[i] > 9 || verifyCounterTo3 === false)
@@ -49,14 +50,26 @@ function generatePhoneNumber(array) {
       return true
     }
   }
+generateCorrectString(arrayIn);
+  function generateCorrectString(param) {
+    let arrayIn3 = param;
+    let stringArray = [];
+    for (let i = 0; i < arrayIn3.length; i += 1) {
+      stringArray.push(String(arrayIn3[i]));
+    }
+    stringArray.splice(0,0,'(')
+    stringArray.splice(3,0,')')
+    stringArray.splice(4,0,' ')
+    stringArray.splice(10,0,'-')
+    console.log(stringArray);
+    return stringArray
+    // String(n)
+    // ou
+    // n.toString()
+  }
+
 }
-
-function generateCorrectString() {
-  let correctString = '(';
-
-}
-
-generatePhoneNumber([1, 2, 3, 4, 9, 6, 7, 8, 9, 9, 0]);
+generatePhoneNumber([1, 2, 3, 4, 9, 6, 7, 8, 5, 9, 0]);
 
 // Desafio 12
 function triangleCheck() {
