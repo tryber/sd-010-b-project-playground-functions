@@ -50,7 +50,8 @@ function generatePhoneNumber(array) {
       return true
     }
   }
-generateCorrectString(arrayIn);
+
+  let correctString = generateCorrectString(arrayIn);
   function generateCorrectString(param) {
     let arrayIn3 = param;
     let stringArray = [];
@@ -61,15 +62,16 @@ generateCorrectString(arrayIn);
     stringArray.splice(3,0,')')
     stringArray.splice(4,0,' ')
     stringArray.splice(10,0,'-')
-    console.log(stringArray);
-    return stringArray
-    // String(n)
-    // ou
-    // n.toString()
-  }
 
+    let finishedString = '';
+    for (let i = 0; i < stringArray.length; i += 1) {
+      finishedString += stringArray[i];
+    }
+    return finishedString;
+  }
+return correctString;
 }
-generatePhoneNumber([1, 2, 3, 4, 9, 6, 7, 8, 5, 9, 0]);
+generatePhoneNumber([9, 2, 4, 3, 3, 3, 7, 8, 9, 0, 1]);
 
 // Desafio 12
 function triangleCheck() {
