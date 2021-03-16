@@ -1,25 +1,52 @@
 // Desafio 10
-function techList(array,name) {
+function techList(array, name) {
   let futureLearning = [];
-for (index in array.sort()) {
-  let addFutureLearning = {}
-  addFutureLearning.tech = array[index];
-  addFutureLearning.name = name;
-  futureLearning.push(addFutureLearning);
-}
+  for (index in array.sort()) {
+    let addFutureLearning = {};
+    addFutureLearning.tech = array[index];
+    addFutureLearning.name = name;
+    futureLearning.push(addFutureLearning);
+  }
 
-  if (array.length === 0){
-    return "Vazio!";
-  } else {
-    return futureLearning;
-  } 
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  return futureLearning;
 }
-
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let arrayIn = array;
+  if (arrayIn.length !== 11) {
+    return "Array com tamanho incorreto."
+  }
+
+  const verifyCounterTo3 = counterTo3(arrayIn)
+
+  for (let i = 0; i < arrayIn.length; i += 1) {
+    if (arrayIn[i] < 0 || arrayIn[i] > 9 || verifyCounterTo3 === false)
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+
+  function counterTo3(param) {
+  let arrayIn2 = param
+  let counter = 0;
+  for (i = 0; i < arrayIn2.length; i += 1) {
+    let doesItRepeat = arrayIn2[i];
+    for (j = 0; j <arrayIn2.length; j += 1){
+      if (doesItRepeat === arrayIn2[j]) {
+        counter += 1;
+        if (counter >= 3) {
+           return false
+        } else {
+          counter = 0
+        }
+      }
+    }
+  }
 }
+}
+generatePhoneNumber([3,2,6,7,8,5,3,2,6,3,1]);
 
 // Desafio 12
 function triangleCheck() {
