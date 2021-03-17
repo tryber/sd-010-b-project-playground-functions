@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
   // seu código aqui
-  if (firstValue === true && secondValue === true) {
+  if (firstValue && secondValue) {
     return true;
   }
   return false;
@@ -31,15 +31,15 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName(Array) {
+function concatName(array) {
   // seu código aqui
   let endArray = '';
-  for (let index = 0; index < Array.length; index += 1) {
-    if (index === Array.length - 1) {
-      endArray = Array[index];
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === array.length - 1) {
+      endArray = array[index];
     }
   }
-  let result = `${endArray}, ${Array[0]}`;
+  let result = `${endArray}, ${array[0]}`;
   return result;
 }
 
