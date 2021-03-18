@@ -117,8 +117,7 @@ function encode(frase) {
   }
   return newfrase;
 }
-function decode() {
-  let frase = 'h3 th2r2!';
+function decode(frase) {
   let newfrase = '';
   for (let index = 0; index < frase.length; index += 1) {
     let key = '';
