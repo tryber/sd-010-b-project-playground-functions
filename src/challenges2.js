@@ -24,7 +24,7 @@ function generatePhoneNumber(numberTel) {
   let formatedNumber = '';
 
   if (numberTel.length != 11) {
-    codeError = 1;
+    return "Array com tamanho incorreto.";
   } else {
     let indexNumberTel = 0;
     for (let index = 0; index < 15; index += 1) {
@@ -44,46 +44,71 @@ function generatePhoneNumber(numberTel) {
 
     for (let index = 0; index < numberTel.length; index += 1) {
       if (numberTel[index] > 9 || numberTel[index] < 0) {
-        codeError = 2;
+        return "não é possível gerar um número de telefone com esses valores";
       }
     }
 
-    numberTel.sort();
-    let numberArmazenado;
-    let contXnumber = 0;
-    for (let index = 0; index < numberTel.length; index += 1) {
-      if (index === 0) {
-        numberArmazenado = numberTel[index];
-        contXnumber = 1;
-      } else {
-        if (numberTel[index] === numberArmazenado) {
-          contXnumber += 1;
-        } else {
+    if (codeError == 0) {
+      numberTel.sort();
+      let numberArmazenado;
+      let contXnumber = 0;
+      for (let index = 0; index < numberTel.length; index += 1) {
+        if (index === 0) {
           numberArmazenado = numberTel[index];
           contXnumber = 1;
-        }
+        } else {
+          if (numberTel[index] === numberArmazenado) {
+            contXnumber += 1;
+          } else {
+            numberArmazenado = numberTel[index];
+            contXnumber = 1;
+          }
 
-        if (contXnumber >= 3) {
-          codeError = 3;
+          if (contXnumber >= 3) {
+            codeError = 3;
+          }
         }
       }
-    }
-  }
 
-  if (codeError === 0) {
-    return formatedNumber;
-  } else if (codeError === 1) {
-    return "Array com tamanho incorreto.";
-  } else if (codeError === 2) {
-    return "não é possível gerar um número de telefone com esses valores";
-  } else if (codeError === 3) {
-    return "não é possível gerar um número de telefone com esses valores";
+      if (codeError == 0) {
+        return formatedNumber;
+      } else {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+    }
   }
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let retorno = true;
+  let subAbsolute = lineA - lineB - lineC;
 
+  Math.abs(subAbsolute);
+
+  if (lineA > (lineB + lineC)){
+    retorno = false;
+    return retorno;
+  } else if (lineB > (lineA + lineC)) {
+    retorno = false;
+    return retorno;
+  } else if (lineC > (lineA + lineB)) {
+    retorno = false;
+    return retorno;
+  } else {
+    if (lineA < subAbsolute) {
+      retorno = false;
+    return retorno;
+    } else if (lineB < subAbsolute) {
+      retorno = false;
+    return retorno;
+    } else if (lineC < subAbsolute) {
+      retorno = false;
+    return retorno;
+    } else {
+      return retorno;
+    }
+  }
 }
 
 // Desafio 13
