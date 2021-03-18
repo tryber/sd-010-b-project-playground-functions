@@ -113,10 +113,19 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  let frase = "1 cachaça, 5 cervejas e 1 copo de vinho";
+  let sum = 0;
+
+  let teste = frase.match(/\d+/g).map(Number);
+
+  for (let index = 0; index < teste.length; index += 1) {
+    sum += teste[index];
+
+  }
+  return (sum + " copos de água");
 }
 
-
+hydrate();
 module.exports = {
   generatePhoneNumber,
   techList,
