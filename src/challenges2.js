@@ -125,7 +125,6 @@ function hydrate() {
   return (sum + " copos de água");
 }
 
-hydrate();
 module.exports = {
   generatePhoneNumber,
   techList,
