@@ -112,8 +112,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  let frase = "1 cachaça, 5 cervejas e 1 copo de vinho";
+function hydrate(frase) {
   let sum = 0;
 
   let teste = frase.match(/\d+/g).map(Number);
