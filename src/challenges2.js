@@ -77,9 +77,9 @@ function generatePhoneNumber(numberTel) {
     return "não é possível gerar um número de telefone com esses valores";
   } else if (codeError === 3) {
     return "não é possível gerar um número de telefone com esses valores";
+  }
 }
 
-generatePhoneNumber();
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
