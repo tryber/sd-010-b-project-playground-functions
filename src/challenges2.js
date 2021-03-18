@@ -56,7 +56,6 @@ function generatePhoneNumber(numberTel) {
   }
 }
 
-generatePhoneNumber();
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
