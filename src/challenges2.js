@@ -21,54 +21,55 @@ function techList(techno, name) {
 // Desafio 11
 function generatePhoneNumber(numberTel) {
   let codeError = 0;
+  let formatedNumber = '';
 
   if (numberTel.length != 11) {
     codeError = 1;
-  }
-
-  let formatedNumber = '';
-  let indexNumberTel = 0;
-  for (let index = 0; index < 15; index += 1) {
-    if (index === 0) {
-      formatedNumber += "(";
-    } else if (index === 3) {
-      formatedNumber += ")";
-    } else if (index === 4) {
-      formatedNumber += " ";
-    } else if (index === 10) {
-      formatedNumber += "-";
-    } else {
-      formatedNumber += numberTel[indexNumberTel];
-      indexNumberTel += 1;
-    }
-  }
-
-  for (let index = 0; index < numberTel.length; index += 1) {
-    if (numberTel[index] > 9 || numberTel[index] < 0) {
-      codeError = 2;
-    }
-  }
-
-  numberTel.sort();
-  let numberArmazenado;
-  let contXnumber = 0;
-  for (let index = 0; index < numberTel.length; index += 1) {
-    if (index === 0) {
-      numberArmazenado = numberTel[index];
-      contXnumber = 1;
-    } else {
-      if (numberTel[index] === numberArmazenado) {
-        contXnumber += 1;
+  } else {
+    let indexNumberTel = 0;
+    for (let index = 0; index < 15; index += 1) {
+      if (index === 0) {
+        formatedNumber += "(";
+      } else if (index === 3) {
+        formatedNumber += ")";
+      } else if (index === 4) {
+        formatedNumber += " ";
+      } else if (index === 10) {
+        formatedNumber += "-";
       } else {
+        formatedNumber += numberTel[indexNumberTel];
+        indexNumberTel += 1;
+      }
+    }
+
+    for (let index = 0; index < numberTel.length; index += 1) {
+      if (numberTel[index] > 9 || numberTel[index] < 0) {
+        codeError = 2;
+      }
+    }
+
+    numberTel.sort();
+    let numberArmazenado;
+    let contXnumber = 0;
+    for (let index = 0; index < numberTel.length; index += 1) {
+      if (index === 0) {
         numberArmazenado = numberTel[index];
         contXnumber = 1;
-      }
+      } else {
+        if (numberTel[index] === numberArmazenado) {
+          contXnumber += 1;
+        } else {
+          numberArmazenado = numberTel[index];
+          contXnumber = 1;
+        }
 
-      if (contXnumber >= 3) {
-        codeError = 3;
+        if (contXnumber >= 3) {
+          codeError = 3;
+        }
       }
     }
   }
+
   if (codeError === 0) {
     return formatedNumber;
   } else if (codeError === 1) {
