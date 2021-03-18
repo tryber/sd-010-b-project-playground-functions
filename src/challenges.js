@@ -91,12 +91,61 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let newfrase = '';
+  for (let index = 0; index < frase.length; index += 1) {
+    let key = '';
+    if (frase[index] === 'a') {
+      key = 1;
+      newfrase = newfrase + key;
+    } else if (frase[index] === 'e') {
+      key = 2;
+      newfrase = newfrase + key;
+    } else if (frase[index] === 'i') {
+      key = 3;
+      newfrase = newfrase + key;
+    } else if (frase[index] === 'o') {
+      key = 4;
+      newfrase = newfrase + key;
+    } else if (frase[index] === 'u') {
+      key = 5;
+      newfrase = newfrase + key;
+    } else {
+      key = frase[index];
+      newfrase = newfrase + key;
+    }
+  }
+  return newfrase;
 }
 function decode() {
-  // seu código aqui
+  let frase = 'h3 th2r2!';
+  let newfrase = '';
+  for (let index = 0; index < frase.length; index += 1) {
+    let key = '';
+    if (frase[index] == 1) {
+      key = 'a';
+      newfrase = newfrase + key;
+    } else if (frase[index] == 2) {
+      key = 'e';
+      newfrase = newfrase + key;
+    } else if (frase[index] == 3) {
+      key = 'i';
+      newfrase = newfrase + key;
+    } else if (frase[index] == 4) {
+      key = 'o';
+      newfrase = newfrase + key;
+    } else if (frase[index] == 5) {
+      key = 'u';
+      newfrase = newfrase + key;
+    } else {
+      key = frase[index];
+      newfrase = newfrase + key;
+    }
+  }
+
+  return newfrase;
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
