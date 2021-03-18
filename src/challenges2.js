@@ -19,43 +19,69 @@ function techList(techno, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numberTel) {
-  let verificaTamanho = 0;
-  let auxIndex = 0;
+function generatePhoneNumber() {
+  let numberTel = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+  let codeError = 0;
 
   if (numberTel.length != 11) {
-    return "Array com tamanho incorreto.";
-  } else {
-    for (let indexVerTamanho = 0; indexVerTamanho < numberTel.length; indexVerTamanho += 1) {
-      if (numberTel[indexVerTamanho] > 9 || numberTel[indexVerTamanho] < 0) {
-        verificaTamanho = 1;
-      }
-    }
+    codeError = 1;
+  }
 
-    if (verificaTamanho === 1) {
-      return "não é possível gerar um número de telefone com esses valores";
+  let formatedNumber = '';
+  let indexNumberTel = 0;
+  for (let index = 0; index < 15; index += 1) {
+    if (index === 0) {
+      formatedNumber += "(";
+    } else if (index === 3) {
+      formatedNumber += ")";
+    } else if (index === 4) {
+      formatedNumber += " ";
+    } else if (index === 10) {
+      formatedNumber += "-";
     } else {
-      let formatedNumber = '';
-
-      for (let indexCreateNumber = 0; indexCreateNumber < 15; indexCreateNumber++) {
-        if (indexCreateNumber === 0) {
-          formatedNumber += "(";
-        } else if (indexCreateNumber === 3) {
-          formatedNumber += ")";
-        } else if (indexCreateNumber === 4) {
-          formatedNumber += " ";
-        } else if (indexCreateNumber === 10) {
-          formatedNumber += "-";
-        } else {
-          formatedNumber += numberTel[auxIndex];
-          auxIndex += 1;
-        }
-      }
-      return formatedNumber;
+      formatedNumber += numberTel[indexNumberTel];
+      indexNumberTel += 1;
     }
+  }
+
+  for (let index = 0; index < numberTel.length; index += 1) {
+    if (numberTel[index] > 9 || numberTel[index] < 0) {
+      codeError = 2;
+    }
+  }
+
+  numberTel.sort();
+  let numberArmazenado;
+  let contXnumber = 0;
+  for (let index = 0; index < numberTel.length; index += 1) {
+    if (index === 0) {
+      numberArmazenado = numberTel[index];
+      contXnumber = 1;
+    } else {
+      if (numberTel[index] === numberArmazenado) {
+        contXnumber += 1;
+      } else {
+        numberArmazenado = numberTel[index];
+        contXnumber = 1;
+      }
+
+      if (contXnumber >= 3) {
+        codeError = 3;
+      }
+    }
+  }
+  if (codeError === 0) {
+    console.log(formatedNumber);
+  } else if (codeError === 1) {
+    console.log("Array com tamanho incorreto.")
+  } else if (codeError === 2) {
+    console.log("não é possível gerar um número de telefone com esses valores");
+  } else if (codeError === 3) {
+    console.log("não é possível gerar um número de telefone com esses valores");
   }
 }
 
+generatePhoneNumber();
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
