@@ -7,19 +7,19 @@ function techList(techno, name) {
     return "Vazio!";
   } else {
     for (let index = 0; index < techno.length; index += 1) {
-      let arrayAux = [];
-      let index0 = "tech: \""+techno[index]+"\"";
-      let index1 = "name: \""+name+"\"";
-      arrayAux.push(index0);
-      arrayAux.push(index1);
-      newArray.push(arrayAux);
+      let nome = name;
+      let objList = {
+        tech: techno[index],
+        name: nome
+      }
+
+      newArray.push(objList);
     }
 
     return newArray;
   }
 }
 
-techList();
 // Desafio 11
 function generatePhoneNumber() {
 
