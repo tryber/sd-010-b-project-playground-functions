@@ -1,17 +1,13 @@
-function techList(array, name) {
-  let futureLearning = [];
-  for (index in array.sort()) {
-    let addFutureLearning = {};
-    addFutureLearning.tech = array[index];
-    addFutureLearning.name = name;
-    futureLearning.push(addFutureLearning);
+function triangleCheck(a, b, c) {
+const aIn = Math.abs(a);
+const bIn = Math.abs(b);
+const cIn = Math.abs(c);
+  if (aIn > bIn + cIn || bIn > aIn + cIn || cIn > aIn + bIn) {
+    return false;
+  } else if (aIn < bIn - cIn || bIn < aIn - cIn || cIn < aIn - bIn) {
+    return false
+  } else {
+    return true
   }
-
-  if (array.length === 0) {
-    return 'Vazio!';
-  }
-  return futureLearning;
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],
-  'Lucas'));
+console.log(triangleCheck(1, 2, 5));
