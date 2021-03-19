@@ -90,7 +90,19 @@ function triangleCheck(a, b, c) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  const stringIn = string;
+  let numberSum = 0;
+  for (let i = 0; i < stringIn.length; i += 1) {
+    if (parseInt(stringIn[i])) {
+      numberSum += parseInt(stringIn[i]); 
+    }
+  }
+  const stringSum = String(numberSum);
+   if (numberSum === 1) {
+     return `${stringSum} copo de água`;
+   } else {
+     return  `${stringSum} copos de água`
+   }
 }
 
 module.exports = {
