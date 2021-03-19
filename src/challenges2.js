@@ -112,8 +112,8 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(teste) {
-  let numbers = teste.match(/\d+/g).map(Number);
+function hydrate(text) {
+  let numbers = text.match(/\d+/g).map(Number);
   let sum = 0;
 
   for (let index = 0; index < numbers.length; index += 1) {
@@ -125,7 +125,6 @@ function hydrate(teste) {
   return welcome;
 }
 
-hydrate();
 module.exports = {
   generatePhoneNumber,
   techList,
