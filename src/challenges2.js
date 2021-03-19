@@ -89,7 +89,7 @@ function triangleCheck(a, b, c) {
   }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   const stringIn = string;
   let numberSum = 0;
   for (let i = 0; i < stringIn.length; i += 1) {
