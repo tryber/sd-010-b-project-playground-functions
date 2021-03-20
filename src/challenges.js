@@ -40,7 +40,7 @@ function highestCount(arrayNumeros) {
     }
   }
   for (let index = 0; index < arrayNumeros.length; index += 1) {
-    if (maiorNumero = arrayNumeros[index]) {
+    if (maiorNumero === arrayNumeros[index]) {
       quantidadeAparicoes += 1;
     }
   }
