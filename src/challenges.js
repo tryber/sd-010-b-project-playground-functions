@@ -72,8 +72,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numerosRecebidos) {
+  let arrayResultado = [];
+  for (let index = 0; index < numerosRecebidos.length; index += 1) {
+    if (((numerosRecebidos[index] / 3) % 2 === 0) && ((numerosRecebidos[index] / 3) % 2 === 0)) {
+      arrayResultado.push('fizzBuzz');
+    }
+    else if ((numerosRecebidos[index] / 3) % 2 === 0) {
+      arrayResultado.push('fizz')
+    }
+    else if ((numerosRecebidos[index] / 5) % 2 === 0) {
+      arrayResultado.push('buzz')
+    }
+    else {
+      arrayResultado.push('bug');
+    }
+  }
+  return arrayResultado;
 }
 
 // Desafio 9
