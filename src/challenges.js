@@ -85,7 +85,7 @@ function fizzBuzz(numerosRecebidos) {
       arrayResultado.push('buzz')
     }
     else {
-      arrayResultado.push('bug');
+      arrayResultado.push('bug!');
     }
   }
   return arrayResultado;
