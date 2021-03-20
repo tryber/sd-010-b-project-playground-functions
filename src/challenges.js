@@ -20,7 +20,7 @@ function splitSentence(stringRecebida) {
 
 // Desafio 4
 function concatName(stringRecebida) {
-  let nomeConcatenado = stringRecebida[0] + ', ' + stringRecebida[(stringRecebida.length)-1];
+  let nomeConcatenado = stringRecebida[(stringRecebida.length)-1] + ", " + stringRecebida[0];
   return nomeConcatenado;
 }
 
