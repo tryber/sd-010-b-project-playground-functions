@@ -40,8 +40,7 @@ function generatePhoneNumber(numeroRecebido) {
   numeroRecebido.splice(10,0, '-');
 
   let numeroFormatado = '';
-  numeroFormatado = numeroRecebido.join();
-  numeroFormatado = numeroFormatado.replace(/,/gi, '');
+  numeroFormatado = numeroRecebido.join('');
   return numeroFormatado;
 }
 
