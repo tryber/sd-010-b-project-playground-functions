@@ -39,8 +39,7 @@ function generatePhoneNumber(numeroRecebido) {
   numeroRecebido.splice(4,0, ' ');
   numeroRecebido.splice(10,0, '-');
 
-  let numeroFormatado = '';
-  numeroFormatado = numeroRecebido.join('');
+  let numeroFormatado = numeroRecebido.join('');
   return numeroFormatado;
 }
 
