@@ -73,7 +73,13 @@ function hydrate(stringRecebida) {
   for (let index = 0; index < numerosRecebidos.length; index += 1) {
     coposDeAgua += parseInt(numerosRecebidos[index], 10);
   }
-  let mensagem = coposDeAgua + ' copos de água';
+  let mensagem = '';
+  if (coposDeAgua = 1) {
+    mensagem = coposDeAgua + ' copo de água';
+  }
+  else {
+    mensagem = coposDeAgua + ' copos de água';
+  }
   return mensagem;
 }
 
