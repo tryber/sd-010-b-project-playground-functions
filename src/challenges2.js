@@ -4,7 +4,7 @@ function techList(nomesTecnologias, name) {
     nomesTecnologias = nomesTecnologias.sort();
     let listatecnologias = [];
     for(index = 0; index < nomesTecnologias.length; index += 1) {
-      listatecnologias.push([tech: nomesTecnologias[index], 'name': name]);
+      listatecnologias.push({'tech': nomesTecnologias[index], 'name': name});
     }
   }
   else {

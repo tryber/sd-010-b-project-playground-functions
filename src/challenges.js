@@ -93,11 +93,11 @@ function fizzBuzz(numerosRecebidos) {
 
 // Desafio 9
 function encode(stringTransformada) {
-  stringTransformada = stringTransformada.replace(/a/gi, '1');
-  stringTransformada = stringTransformada.replace(/e/gi, '2');
-  stringTransformada = stringTransformada.replace(/i/gi, '3');
-  stringTransformada = stringTransformada.replace(/o/gi, '4');
-  stringTransformada = stringTransformada.replace(/u/gi, '5');
+  stringTransformada = stringTransformada.replace(/a/g, '1');
+  stringTransformada = stringTransformada.replace(/e/g, '2');
+  stringTransformada = stringTransformada.replace(/i/g, '3');
+  stringTransformada = stringTransformada.replace(/o/g, '4');
+  stringTransformada = stringTransformada.replace(/u/g, '5');
   return stringTransformada;
 }
 
