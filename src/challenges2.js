@@ -1,6 +1,7 @@
 // Desafio 10
 function techList(nomesTecnologias, name) {
   if (nomesTecnologias.length > 0) {
+    nomesTecnologias = nomesTecnologias.sort();
     let listatecnologias = [];
     for(index = 0; index < nomesTecnologias.length; index += 1) {
       listatecnologias.push([tech: nomesTecnologias[index], 'name': name]);
