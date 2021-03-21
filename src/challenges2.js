@@ -38,7 +38,9 @@ function generatePhoneNumber(numeroRecebido) {
   numeroRecebido.splice(3,0, ')');
   numeroRecebido.splice(4,0, ' ');
   numeroRecebido.splice(10,0, '-');
-  return numeroRecebido;
+
+  let numeroFormatado = numeroRecebido.join('');
+  return numeroFormatado;
 }
 
 // Desafio 12
