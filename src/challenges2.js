@@ -45,12 +45,25 @@ function generatePhoneNumber(numeroRecebido) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if((lineB - lineC < lineA < lineB + lineC) && (lineA - lineC < lineB < lineA + lineC) && (lineA - lineB < lineC < lineA + lineB)) {
-    return true;
-  }
-  else {
+  if (lineA > (lineB + lineC)) {
+    if (lineA > Math.abs(lineB-lineC) || lineA > Math.abs(lineC-lineB)) {
     return false;
+    }
   }
+
+  if (lineB > (lineA + lineC)) {
+    if (lineB > Math.abs(lineA-lineC) || lineB > Math.abs(lineC-lineA)) {
+    return false;
+    }
+  }
+
+  if (lineC > (lineB + lineA)) {
+    if (lineC > Math.abs(lineB-lineA) || lineC > Math.abs(lineA-lineB)) {
+    return false;
+    }
+  }
+
+  return true;
 }
 
 // Desafio 13
