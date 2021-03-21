@@ -102,11 +102,11 @@ function encode(stringTransformada) {
 }
 
 function decode(stringTransformada) {
-  stringTransformada = stringTransformada.replace(/1/gi, 'a');
-  stringTransformada = stringTransformada.replace(/2/gi, 'e');
-  stringTransformada = stringTransformada.replace(/3/gi, 'i');
-  stringTransformada = stringTransformada.replace(/4/gi, 'o');
-  stringTransformada = stringTransformada.replace(/5/gi, 'u');
+  stringTransformada = stringTransformada.replace(/1/g, 'a');
+  stringTransformada = stringTransformada.replace(/2/g, 'e');
+  stringTransformada = stringTransformada.replace(/3/g, 'i');
+  stringTransformada = stringTransformada.replace(/4/g, 'o');
+  stringTransformada = stringTransformada.replace(/5/g, 'u');
   return stringTransformada;
 }
 
