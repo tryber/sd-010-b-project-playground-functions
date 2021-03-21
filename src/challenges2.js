@@ -67,8 +67,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringRecebida) {
+  numerosRecebidos = stringRecebida.replace(/\D/g, '');
+  let coposDeAgua = 0;
+  for (let index = 0; index < numerosRecebidos.length; index += 1) {
+    coposDeAgua += parseInt(numerosRecebidos[index], 10);
+  }
+  let mensagem = coposDeAgua + ' copos de água';
+  return mensagem;
 }
 
 module.exports = {
