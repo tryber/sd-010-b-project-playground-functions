@@ -74,8 +74,8 @@ function hydrate(stringRecebida) {
     coposDeAgua += parseInt(numerosRecebidos[index], 10);
   }
   let mensagem = '';
-  if (coposDeAgua = 1) {
-    mensagem = coposDeAgua + ' copo de água';
+  if (coposDeAgua === 1) {
+    mensagem = '1 copo de água';
   }
   else {
     mensagem = coposDeAgua + ' copos de água';
