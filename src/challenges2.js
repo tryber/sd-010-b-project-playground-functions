@@ -1,18 +1,17 @@
 // Desafio 10
-function techList(nomesTecnologias, name) {
-  if (nomesTecnologias.length > 0) {
-    nomesTecnologias.sort();
-    let listatecnologias = [];
-    for(let index in nomesTecnologias) {
-      listatecnologias.push({tech: nomesTecnologias[index], 
+function techList(technologies, name) {
+  technologies.sort();
+  let techObjects = [];
+  for (let index in technologies) {
+    techObjects.push({
+      tech: technologies[index],
       name: name,
-      });
-    }
+    })
   }
-  else {
+  if (technologies.length === 0) {
     return 'Vazio!';
   }
-  return listatecnologias;
+  return techObjects;
 }
 
 // Desafio 11
