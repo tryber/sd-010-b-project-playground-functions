@@ -92,11 +92,14 @@ function fizzBuzz(numerosRecebidos) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringRecebida) {
+  stringTransformada = stringRecebida.replace(/a/g, '1') + stringRecebida.replace(/b/g, '2') + stringRecebida.replace(/c/g, '3') + stringRecebida.replace(/d/g, '4') + stringRecebida.replace(/e/g, '5');
+  return stringTransformada;
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringRecebida) {
+  stringTransformada = stringRecebida.replace(/1/g, 'a') + stringRecebida.replace(/2/g, 'b') + stringRecebida.replace(/3/g, 'c') + stringRecebida.replace(/4/g, 'd') + stringRecebida.replace(/5/g, 'e');
+  return stringTransformada;
 }
 
 module.exports = {
