@@ -91,7 +91,7 @@ function generatePhoneNumber(numbers) {
   let maiorQueNove = menorQueZeromaiorQueNove[1];
   let messege = null;
   if (numbers.length !== 11) {
-    messege = 'Array com tamanho incorreto';
+    messege = 'Array com tamanho incorreto.';
   } else if (maiorQueNove || menorQueZero || tresVezesOuMais(numbers)) {
     messege = 'não é possível gerar um número de telefone com esses valores';
   } else {
@@ -102,12 +102,14 @@ function generatePhoneNumber(numbers) {
 }
 /* console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); */
 // Desafio 12
+/* REFERENCIA: https://mundoeducacao.uol.com.br/matematica/condicao-existencia-um-triangulo.htm */
+const validateSidesTriangle = (line1, line2, line3) => Math.abs(line2 - line3) < line1 
+&& line2 + line3 > line1;
 function triangleCheck(lineA, lineB, lineC) {
   let messege = null;
-  if (
-    Math.abs(lineB + lineC) < lineA < lineB + lineC
-    && Math.abs(lineA + lineC) < lineB < lineA + lineC
-    && Math.abs(lineA + lineB) < lineC < lineA + lineB
+  if (validateSidesTriangle(lineA, lineB, lineC)
+  && validateSidesTriangle(lineB, lineA, lineC)
+  && validateSidesTriangle(lineC, lineA, lineB)
   ) {
     messege = true;
   } else {
@@ -115,8 +117,8 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return messege;
 }
-/* console.log(triangleCheck(10, 14, 8));
- */
+/* console.log(triangleCheck(10, 14, 8)); */
+
 // Desafio 13
 function hydrate(frase) {
   let numbers = (frase.match(/\d+/g));
