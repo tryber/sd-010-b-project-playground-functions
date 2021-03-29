@@ -121,6 +121,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(frase) {
+  let messege = null;
   let numbers = (frase.match(/\d+/g));
 
   let sum = 0;
@@ -128,8 +129,9 @@ function hydrate(frase) {
   for (let index = 0; index < numbers.length; index += 1) {
     sum += parseInt(numbers[index], 10);
   }
-
-  return `${sum} copos de água`;
+  
+  messege = sum === 1 ? `${sum} copo de água` : `${sum} copos de água`;
+  return messege;
 }
 
 module.exports = {
