@@ -1,5 +1,6 @@
 // Desafio 10
 function techList(array, nameUser) {
+  array.sort();
   let messege = null;
   let arrayReturn = [];
   if (array.length === 0) {
@@ -15,7 +16,7 @@ function techList(array, nameUser) {
 }
 
 /* console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas")) */
+"Lucas")); */
 
 // Desafio 11
 function verifyNumbersLessThenZeroAndBiggerThenNine(numbers) {
