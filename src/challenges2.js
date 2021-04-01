@@ -1,28 +1,28 @@
 // Desafio 10
 function techList(nomesTecnologias, name) {
-  let listaTecnologias = [];
+  const listaTecnologias = [];
   if (nomesTecnologias.length > 0) {
-    nomesTecnologias.sort();
-    for (let index in nomesTecnologias) {
-      listaTecnologias.push({tech: nomesTecnologias[index], 
-      name: name,
-      });
-    }
-    return listaTecnologias;
+    nomesTecnologias.sort()
+    for (const index in nomesTecnologias) {
+      listaTecnologias.push({tech: nomesTecnologias[index],
+        name: name
+      })
+    };
+    return listaTecnologias
   }
   else {
-    return 'Vazio!';
+    return 'Vazio!'
   }
 }
 
 // Desafio 11
 function generatePhoneNumber(numeroRecebido) {
-    if (numeroRecebido.length !== 11) {
-    return 'Array com tamanho incorreto.';
+  if (numeroRecebido.length !== 11) {
+    return 'Array com tamanho incorreto.'
   }
   for (let index = 0; index < numeroRecebido.length; index += 1) {
     if (numeroRecebido[index] < 0 || numeroRecebido[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return 'não é possível gerar um número de telefone com esses valores'
     }
     let contagemRepitidos = 0;
     for (let index2 = 0; index2 < numeroRecebido.length; index2 += 1) {
@@ -39,7 +39,7 @@ function generatePhoneNumber(numeroRecebido) {
   numeroRecebido.splice(4,0, ' ');
   numeroRecebido.splice(10,0, '-');
 
-  let numeroFormatado = numeroRecebido.join('');
+  const numeroFormatado = numeroRecebido.join('');
   return numeroFormatado;
 }
 
@@ -47,19 +47,19 @@ function generatePhoneNumber(numeroRecebido) {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA > (lineB + lineC)) {
     if (lineA > Math.abs(lineB-lineC) || lineA > Math.abs(lineC-lineB)) {
-    return false;
+      return false;
     }
   }
 
   if (lineB > (lineA + lineC)) {
     if (lineB > Math.abs(lineA-lineC) || lineB > Math.abs(lineC-lineA)) {
-    return false;
+      return false;
     }
   }
 
   if (lineC > (lineB + lineA)) {
     if (lineC > Math.abs(lineB-lineA) || lineC > Math.abs(lineA-lineB)) {
-    return false;
+      return false;
     }
   }
 
@@ -68,7 +68,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(stringRecebida) {
-  numerosRecebidos = stringRecebida.replace(/\D/g, '');
+  let numerosRecebidos = stringRecebida.replace(/\D/g, '');
   let coposDeAgua = 0;
   for (let index = 0; index < numerosRecebidos.length; index += 1) {
     coposDeAgua += parseInt(numerosRecebidos[index], 10);
@@ -76,8 +76,7 @@ function hydrate(stringRecebida) {
   let mensagem = '';
   if (coposDeAgua === 1) {
     mensagem = '1 copo de água';
-  }
-  else {
+  } else {
     mensagem = coposDeAgua + ' copos de água';
   }
   return mensagem;
