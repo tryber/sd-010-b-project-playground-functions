@@ -10,32 +10,17 @@ function techList(techArray, yourName) {
 
 // Desafio 11
 /*
-* Recorri a esses sites pra entender o funcionamento da função slice() e splice().
-*Link: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice
-*Link: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/add-items-using-splice
+* Recorri ao seguinte link pra pesquisar como contar elementos duplicados dentro de um array.
+*Source: Source: https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript/19395302#19395302
 */
-function isNotBetween0And9(arrNumbers) {
-  for (const index in arrNumbers) {
-    if (arrNumbers[index] > 9 || arrNumbers[index] < 0) {
-      return true;
-    }
-  }
-  return false;
-}
-
 function isRepeatedValues(arrNumbers) {
-  for (const index in arrNumbers) {
-    let count = 0;
-    let valueToBeChecked = arrNumbers[index];
-    for (const index2 in arrNumbers) {
-      if (arrNumbers[index2] === valueToBeChecked) count += 1;
-    }
-    if (count > 2) return true;
-  }
-  return false;
+  let countItemsObj = {};
+  arrNumbers.forEach((number) => { countItemsObj[number] = (countItemsObj[number] || 0) + 1; });
+  return Object.values(countItemsObj).includes(3);
 }
 
 function isPhoneNumberArray(arrNumbers) {
+  const isNotBetween0And9 = (arr) => arr.some((number) => number < 0 || number > 9);
   let response;
   if (arrNumbers.length !== 11) response = 'Array com tamanho incorreto.';
   else if (isNotBetween0And9(arrNumbers) || isRepeatedValues(arrNumbers)) {
@@ -43,29 +28,17 @@ function isPhoneNumberArray(arrNumbers) {
   } else response = true;
   return response;
 }
-
+/*
+* Recorri ao seguinte link pra formatar a saída no formato de telefone
+* Source: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex
+*/
 function generatePhoneNumber(arrNumbers) {
-  let aux;
   const responseIsPhoneArray = isPhoneNumberArray(arrNumbers);
   if (responseIsPhoneArray !== true) {
     return isPhoneNumberArray(arrNumbers);
   }
-
-  for (let index = 0; index < arrNumbers.length; index += 1) {
-    if (index === 0) {
-      aux = arrNumbers.slice(index, index + 1);
-      arrNumbers.splice(index, 1, `(${aux}`);
-    }
-    if (index === 2) {
-      aux = arrNumbers.slice(index, index + 1);
-      arrNumbers.splice(index, 1, `) ${aux}`);
-    }
-    if (index === 7) {
-      aux = arrNumbers.slice(index, index + 1);
-      arrNumbers.splice(index, 1, `-${aux}`);
-    }
-  }
-  return arrNumbers.join('');
+  const phoneNumber = arrNumbers.join('').replace(/(\d{2})(\d{5})(\d{4})/g, '($1) $2-$3');
+  return phoneNumber;
 }
 
 // Desafio 12
