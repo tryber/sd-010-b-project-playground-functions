@@ -28,22 +28,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestValue(arrNumbers) {
-  let highest = 0;
-  for (const key in arrNumbers) {
-    if (highest <= arrNumbers[key]) highest = arrNumbers[key];
-  }
-  return highest;
-}
-
-//tentar resolver com objetos {item: n; repetidos: n de repetição}
 function highestCount(arrNumbers) {
-  let highest = highestValue(arrNumbers);
-  let count = 0;
-  for (const key in arrNumbers) {
-    if (highest === arrNumbers[key]) count += 1;
-  }
-  return count;
+  const maxNumber = Math.max(...arrNumbers);
+  const maxNumberArr = arrNumbers.filter((number) => number === maxNumber);
+  return maxNumberArr.length;
 }
 
 // Desafio 7
