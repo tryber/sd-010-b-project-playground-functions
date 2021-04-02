@@ -1,44 +1,40 @@
 // Desafio 1 Playgroynd Functions
-function compareTrue (value1, value2) {
+function compareTrue(value1, value2) {
   if (value1 && value2) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 
 // Desafio 2
-function calcArea (base, height) {
-  const areaTriangulo = (base * height) / 2
-  return areaTriangulo
+function calcArea(base, height) {
+  const areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
-function splitSentence (stringRecebida) {
+function splitSentence(stringRecebida) {
   let stringTransformada = stringRecebida.split(' ');
   return stringTransformada;
 }
 
 // Desafio 4
-function concatName (stringRecebida) {
+function concatName(stringRecebida) {
   let nomeConcatenado = `${stringRecebida[stringRecebida.length - 1]}, ${stringRecebida[0]}`;
   return nomeConcatenado;
 }
 
 // Desafio 5
-function footballPoints (wins, ties) {
+function footballPoints(wins, ties) {
   let pontosGanhos = (wins * 3) + ties;
   return pontosGanhos;
 }
 
 // Desafio 6
-function highestCount (arrayNumeros) {
-  let maiorNumero = arrayNumeros[0];
+function highestCount(arrayNumeros) {
+
   let quantidadeAparicoes = 0;
-  for (let index = 0; index < arrayNumeros.length; index += 1) {
-    if (maiorNumero < arrayNumeros[index]) {
-      maiorNumero = arrayNumeros[index];
-    }
-  }
+  let maiorNumero = acharMaiorNumero(arrayNumeros);
 
   for (let index = 0; index < arrayNumeros.length; index += 1) {
     if (maiorNumero === arrayNumeros[index]) {
@@ -49,8 +45,16 @@ function highestCount (arrayNumeros) {
   return quantidadeAparicoes;
 }
 
+const acharMaiorNumero = (arr) => {
+  let maiorNumero = arrayNumeros[0];
+  for(let index = 0; index += arr.length; index += 1) {
+    if (maiorNumero < arr[index]) maiorNumero = arr[index];
+  }
+  return maiorNumero;
+}
+
 // Desafio 7
-function catAndMouse (mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let distIgual = 'os gatos trombam e o rato foge';
   let cat1s = Math.abs(cat1 - mouse);
   let cat2s = Math.abs(cat2 - mouse);
@@ -67,7 +71,7 @@ function catAndMouse (mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz (numerosRecebidos) {
+function fizzBuzz(numerosRecebidos) {
   let arrayResultado = [];
   for (let index = 0; index < numerosRecebidos.length; index += 1) {
     if ((numerosRecebidos[index] % 3) === 0 && (numerosRecebidos[index] % 5) === 0) {
@@ -84,7 +88,7 @@ function fizzBuzz (numerosRecebidos) {
 }
 
 // Desafio 9
-function encode (stringTransformada) {
+function encode(stringTransformada) {
   stringTransformada = stringTransformada.replace(/a/g, '1');
   stringTransformada = stringTransformada.replace(/e/g, '2');
   stringTransformada = stringTransformada.replace(/i/g, '3');
@@ -93,7 +97,7 @@ function encode (stringTransformada) {
   return stringTransformada;
 }
 
-function decode (stringTransformada) {
+function decode(stringTransformada) {
   stringTransformada = stringTransformada.replace(/1/g, 'a');
   stringTransformada = stringTransformada.replace(/2/g, 'e');
   stringTransformada = stringTransformada.replace(/3/g, 'i');
