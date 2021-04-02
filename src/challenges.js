@@ -75,7 +75,7 @@ function encode(decodeMessage) {
   };
   const decodeMessageChars = decodeMessage.toLowerCase().split('');
   const encodeMessageChars = decodeMessageChars.map((char) => {
-    if (Object.prototype.hasOwnProperty.call(vowels, char)) {
+    if (vowels[char]) {
       char = vowels[char];
     }
     return char;
@@ -93,7 +93,7 @@ function decode(encodeMessage) {
   };
   const encodeMessageChars = encodeMessage.toLowerCase().split('');
   const decodeMessageChars = encodeMessageChars.map((char) => {
-    if (Object.prototype.hasOwnProperty.call(numbers, char)) {
+    if (numbers[char]) {
       char = numbers[char];
     }
     return char;
