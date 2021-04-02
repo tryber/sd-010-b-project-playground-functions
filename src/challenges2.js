@@ -1,19 +1,11 @@
 // Desafio 10
-function checkEmptyArray(arr) {
-  if (arr.indexOf('') === 0 || arr.length < 1) return true;
-  return false;
-}
-
 function techList(techArray, yourName) {
-  if (checkEmptyArray(techArray) === true) {
+  const checkEmptyArray = techArray.some((item) => item === '' || item.match(/^\W+/g));
+  if (checkEmptyArray) {
     return 'Vazio!';
   }
-  let objArr = [];
-  let sortTechList = techArray.sort();
-  for (const key in sortTechList) {
-    objArr.push({ tech: sortTechList[key], name: yourName });
-  }
-  return objArr;
+  const newTechArr = techArray.sort().map((techItem) => ({ tech: techItem, name: yourName }));
+  return newTechArr;
 }
 
 // Desafio 11
