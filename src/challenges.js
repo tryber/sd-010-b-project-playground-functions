@@ -31,10 +31,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumeros) {
 
-  let quantidadeAparicoes = 0;
+const acharMaiorNumero = (arr) => {
+  let maiorNumero = arr[0];
+  for(let index = 0; index += arr.length; index += 1) {
+    if (maiorNumero < arr[index]) maiorNumero = arr[index];
+  }
+  return maiorNumero;
+}
+
+function highestCount(arrayNumeros){
   let maiorNumero = acharMaiorNumero(arrayNumeros);
+  let quantidadeAparicoes = 0;
 
   for (let index = 0; index < arrayNumeros.length; index += 1) {
     if (maiorNumero === arrayNumeros[index]) {
@@ -45,13 +53,7 @@ function highestCount(arrayNumeros) {
   return quantidadeAparicoes;
 }
 
-const acharMaiorNumero = (arr) => {
-  let maiorNumero = arrayNumeros[0];
-  for(let index = 0; index += arr.length; index += 1) {
-    if (maiorNumero < arr[index]) maiorNumero = arr[index];
-  }
-  return maiorNumero;
-}
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -107,14 +109,14 @@ function decode(stringTransformada) {
 }
 
 module.exports = {
-calcArea,
-catAndMouse,
-compareTrue,
-concatName,
-decode,
-encode,
-fizzBuzz,
-footballPoints,
-highestCount,
-splitSentence,
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
 };
