@@ -34,13 +34,13 @@ function footballPoints(wins, ties) {
 
 const acharMaiorNumero = (arr) => {
   let maiorNumero = arr[0];
-  for(let index = 0; index += arr.length; index += 1) {
+  for (let index = 0; index < arr.length; index += 1) {
     if (maiorNumero < arr[index]) maiorNumero = arr[index];
   }
   return maiorNumero;
-}
+};
 
-function highestCount(arrayNumeros){
+function highestCount(arrayNumeros) {
   let maiorNumero = acharMaiorNumero(arrayNumeros);
   let quantidadeAparicoes = 0;
 
@@ -52,8 +52,6 @@ function highestCount(arrayNumeros){
 
   return quantidadeAparicoes;
 }
-
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
