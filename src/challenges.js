@@ -64,56 +64,41 @@ function fizzBuzz(arrNumbers) {
 }
 
 // Desafio 9
-//tentar fazer com objetos
+// tentar fazer com objetos
 function encode(decodeMessage) {
-  let arrMessage = decodeMessage.split('');
-  for (let index = 0; index < arrMessage.length; index += 1) {
-    switch (arrMessage[index].toLowerCase()) {
-      case 'a':
-        arrMessage[index] = 1;
-        break;
-      case 'e':
-        arrMessage[index] = 2;
-        break;
-      case 'i':
-        arrMessage[index] = 3;
-        break;
-      case 'o':
-        arrMessage[index] = 4;
-        break;
-      case 'u':
-        arrMessage[index] = 5;
-        break;
-      default:
-        break;
+  const vowels = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  const decodeMessageChars = decodeMessage.toLowerCase().split('');
+  const encodeMessageChars = decodeMessageChars.map((char) => {
+    if (Object.prototype.hasOwnProperty.call(vowels, char)) {
+      char = vowels[char];
     }
-  }
-  return arrMessage.join('');
+    return char;
+  });
+  return encodeMessageChars.join('');
 }
+
 function decode(encodeMessage) {
-  let arrMessage = encodeMessage.split('');
-  for (let index = 0; index < arrMessage.length; index += 1) {
-    switch (arrMessage[index]) {
-      case '1':
-        arrMessage[index] = 'a';
-        break;
-      case '2':
-        arrMessage[index] = 'e';
-        break;
-      case '3':
-        arrMessage[index] = 'i';
-        break;
-      case '4':
-        arrMessage[index] = 'o';
-        break;
-      case '5':
-        arrMessage[index] = 'u';
-        break;
-      default:
-        break;
+  const numbers = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  const encodeMessageChars = encodeMessage.toLowerCase().split('');
+  const decodeMessageChars = encodeMessageChars.map((char) => {
+    if (Object.prototype.hasOwnProperty.call(numbers, char)) {
+      char = numbers[char];
     }
-  }
-  return arrMessage.join('');
+    return char;
+  });
+  return decodeMessageChars.join('');
 }
 
 module.exports = {
