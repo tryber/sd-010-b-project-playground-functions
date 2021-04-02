@@ -52,15 +52,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrNumbers) {
-  let fizzBuzzBugArray = [];
-  let isNumberMod3Equal0, isNumberMod5Equal0, isNumberMod3And5Equal0;
-  for (const key in arrNumbers) {
-    isNumberMod3Equal0 = arrNumbers[key] % 3 === 0;
-    isNumberMod5Equal0 = arrNumbers[key] % 5 === 0;
-    isNumberMod3And5Equal0 = isNumberMod3Equal0 && isNumberMod5Equal0;
-    (isNumberMod3And5Equal0) ? fizzBuzzBugArray.push('fizzBuzz') : (isNumberMod3Equal0) ? fizzBuzzBugArray.push('fizz') : (isNumberMod5Equal0) ? fizzBuzzBugArray.push('buzz') : fizzBuzzBugArray.push('bug!');
-  }
-  return fizzBuzzBugArray;
+  const fizzBuzzBugArr = arrNumbers.reduce((arr, number) => {
+    let message;
+    if (number % 3 === 0 && number % 5 === 0) message = 'fizzBuzz';
+    else if (number % 3 === 0) message = 'fizz';
+    else if (number % 5 === 0) message = 'buzz';
+    else message = 'bug!';
+    return arr.concat(message);
+  }, []);
+  return fizzBuzzBugArr;
 }
 
 // Desafio 9
