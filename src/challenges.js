@@ -19,9 +19,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  const arrayStrings = arr;
-  let returnString = `${arrayStrings[arrayStrings.length - 1]}, ${arrayStrings[0]}`;
-  return returnString;
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
@@ -38,6 +36,7 @@ function highestValue(arrNumbers) {
   return highest;
 }
 
+//tentar resolver com objetos {item: n; repetidos: n de repetição}
 function highestCount(arrNumbers) {
   let highest = highestValue(arrNumbers);
   let count = 0;
@@ -77,6 +76,7 @@ function fizzBuzz(arrNumbers) {
 }
 
 // Desafio 9
+//tentar fazer com objetos
 function encode(decodeMessage) {
   let arrMessage = decodeMessage.split('');
   for (let index = 0; index < arrMessage.length; index += 1) {
