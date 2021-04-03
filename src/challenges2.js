@@ -43,20 +43,12 @@ function generatePhoneNumber(arrNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let sumABCompareC = (lineA + lineB) > lineC;
-  let sumACCompareB = (lineA + lineC) > lineB;
-  let sumBCCompareA = (lineB + lineC) > lineA;
-  let diffABCompareC = Math.abs(lineA - lineB) < lineC;
-  let diffACCompareB = Math.abs(lineA - lineC) < lineB;
-  let diffBCCompareA = Math.abs(lineB - lineC) < lineA;
-  let isTriangle;
-
-  if (!sumABCompareC || !sumACCompareB || !sumBCCompareA) isTriangle = false;
-  else if (!diffABCompareC || !diffACCompareB || !diffBCCompareA) isTriangle = false;
-  else isTriangle = true;
-  return isTriangle;
+  // const myTri = new Triangle();
+  const isZeroOrLess = (lineA <= 0 || lineB <= 0 || lineC <= 0);
+  const isNotTriangle = (lineA + lineB <= lineC) || (lineA + lineC <= lineB) || (lineB + lineC <= lineA);
+  return !((isZeroOrLess || isNotTriangle));
 }
-
+triangleCheck(3, 6, 8);
 // Desafio 13
 /*
 *Consultei o freeCodeCamp para saber como encontrar números em uma expressão regular.
