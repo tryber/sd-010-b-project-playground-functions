@@ -33,6 +33,9 @@ function concatName(arrayNames) {
   return fullName;
 }
 
+
+concatName(['huggo','parcelly']);
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui

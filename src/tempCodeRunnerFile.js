@@ -1,17 +1,10 @@
-function hydrate(drinks) {
+function concatName(arrayNames) {
   // seu código aqui
-  let num = drinks.match(/\d+/g);
-  let sum = 0;
-  let resp = ''
-  for (n in num) {
-    sum += parseInt(num[n]);
-  }
-  if (sum === 1) {
-    resp = sum + ' copo de água';
-  } else {
-    resp = sum + ' copos de água';
-  }
-  return resp;
-};
+  let firstName = arrayNames[0];
+  let lastName = arrayNames[arrayNames.length - 1];
+  let fullName = lastName + ', ' + firstName;
+  return fullName;
+}
 
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+
+concatName(['huggo','parcelly']);
