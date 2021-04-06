@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techArray, yourName) {
   const checkEmptyArray = techArray.some((item) => item === '' || item.match(/^\W+/g));
-  if (checkEmptyArray) {
+  if (checkEmptyArray || techArray.length === 0) {
     return 'Vazio!';
   }
   const newTechArr = techArray.sort().map((techItem) => ({ tech: techItem, name: yourName }));
