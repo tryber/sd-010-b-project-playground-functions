@@ -73,7 +73,7 @@ function encode(decodeMessage) {
     o: 4,
     u: 5,
   };
-  const decodeMessageChars = decodeMessage.toLowerCase().split('');
+  const decodeMessageChars = decodeMessage.split('');
   const encodeMessageChars = decodeMessageChars.map((char) => {
     if (vowels[char]) {
       char = vowels[char];
@@ -91,7 +91,7 @@ function decode(encodeMessage) {
     4: 'o',
     5: 'u',
   };
-  const encodeMessageChars = encodeMessage.toLowerCase().split('');
+  const encodeMessageChars = encodeMessage.split('');
   const decodeMessageChars = encodeMessageChars.map((char) => {
     if (numbers[char]) {
       char = numbers[char];
