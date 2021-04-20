@@ -138,6 +138,8 @@ function encode(sentence) {
   return returnSentece;
 }
 
+console.log(encode('aeiou'));
+
 function attributeLettersInNumbers(letters, letterOrNumber) {
   for (let letter in letters) {
     if (letterOrNumber === letter) {
