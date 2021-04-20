@@ -12,3 +12,8 @@ describe('1.1 - Ferificar se as funções encode() e decode() são do tipo funct
 test('1.2 - Para a função encode teste se as vogais a, e, i, o, u são convertidas em 1, 2, 3, 4 e 5, respectivamente;', () => {
   expect(encode('aeiou')).toBe('12345');
 });
+
+test(`1.3 - Para a função decode teste se os números 1, 2, 3, 4 e 5
+são convertido nas vogais a, e, i, o, u , respectivamente;`, () => {
+  expect(decode('12345')).toBe('aeiou');
+});
