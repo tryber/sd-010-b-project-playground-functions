@@ -9,7 +9,7 @@
     "jest": "26.1.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx"
   },
   "dependencies": {

@@ -138,7 +138,7 @@ function encode(sentence) {
   return returnSentece;
 }
 
-console.log(encode('aeiou'));
+console.log(encode('aeiouv'));
 
 function attributeLettersInNumbers(letters, letterOrNumber) {
   for (let letter in letters) {
