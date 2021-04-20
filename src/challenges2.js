@@ -1,22 +1,14 @@
 // Desafio 10
-function techList(array, nameUser) {
-  array.sort();
+function techList(techs, nameUser) {
+  techs.sort();
   let messege = null;
-  let arrayReturn = [];
-  if (array.length === 0) {
+  if (techs.length === 0) {
     messege = 'Vazio!';
   } else {
-    for (let index = 0; index < array.length; index += 1) {
-      arrayReturn.push({ tech: array[index], name: nameUser });
-    }
-
-    messege = arrayReturn;
+    messege = techs.map((tech) => ({ tech, name: nameUser }));
   }
   return messege;
 }
-
-/* console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas")); */
 
 // Desafio 11
 function verifyNumbersLessThenZeroAndBiggerThenNine(numbers) {
@@ -123,17 +115,18 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(frase) {
   let messege = null;
+
   let numbers = (frase.match(/\d+/g));
 
   let sum = 0;
 
-  for (let index = 0; index < numbers.length; index += 1) {
-    sum += parseInt(numbers[index], 10);
-  }
+  sum = numbers.reduce((accumulator, currentValue) => accumulator + parseInt(currentValue, 10), 0);
   
   messege = sum === 1 ? `${sum} copo de água` : `${sum} copos de água`;
   return messege;
 }
+
+/* console.log(hydrate('1 cerveja, 2 shots e 1 catuaba')); */
 
 module.exports = {
   generatePhoneNumber,
