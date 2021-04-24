@@ -66,6 +66,7 @@ function highestCount(array) {
   let total = 0;
   let maior = 0;
   array.sort();
+  // console.log(array.sort())
   for (let index = array.length - 1; index >= 0; index -= 1) {
     if (array[index] > maior || array[index] === maior) {
       maior = array[index];
