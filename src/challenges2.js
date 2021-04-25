@@ -1,21 +1,16 @@
 // Desafio 10
-function techList(tech, nome) {
-  if (tech.length !== 0) {
-    let techOrdem = tech.sort();
-    let objetosArray = [];
-    for (let index = 0; index < techOrdem.length; index += 1) {
-      let objeto = {
-        tech: techOrdem[index],
-        name: nome,
-      };
-      objetosArray.push(objeto);
-    }
-    return objetosArray;
-  } else {
-    return 'Vazio!';
+const techList = (arrayTech, name) => {
+  if (arrayTech.length !== 0) {
+    const listTech = arrayTech.sort()
+      .map((technology) => ({
+        tech: technology,
+        name,
+      }));
+    return listTech;
   }
-}
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lara'));
+  return 'Vazio!';
+};
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lara'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -28,13 +23,20 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+// const hydrate = (drinks) => {
+//   const numberArr = [];
+//   const drinksSplit = drinks.split(' ');
+//   console.log(drinksSplit);
+//   const numberDrinks = drinksSplit.forEach(numbers => {
+//     if(typeof drinksSplit[i] === 'number')
+// });
+//   return drinksSplit;
+// };
+// console.log(hydrate('12 cerveja, 5 cachaças'));
 
 module.exports = {
   generatePhoneNumber,
   techList,
-  hydrate,
+  // hydrate,
   triangleCheck,
 };

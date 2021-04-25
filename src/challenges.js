@@ -25,7 +25,7 @@ console.log(splitSentence('Lara Capila'));
 function concatName(array) {
   let primeiro = array[0];
   let ultimo = array[array.length - 1];
-  return ultimo + ', ' + primeiro;
+  return `${ultimo}, ${primeiro}`;
 }
 console.log(concatName(['Lara', 'Karoline', 'De', 'Oliveira', 'Capila']));
 
@@ -40,21 +40,16 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(numbers) {
-  let maxNumber = 0;
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > maxNumber) { 
-      maxNumber = numbers[index];
-    }
-  }
+  let maxNumber = Math.max(...numbers);
   let cont = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === maxNumber) { 
-      cont ++;
+    if (numbers[index] === maxNumber) {
+      cont += 1;
     }
   }
   return cont;
 }
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 4, 4, 4, 2, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -72,82 +67,62 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(2, 5, 7));
 // Desafio 8
-function fizzBuzz(array) {
-  let arrayReturn = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      arrayReturn[index] = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      arrayReturn[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      arrayReturn[index] = 'buzz';
-    } else {
-      arrayReturn[index] = 'bug!';
-    }
-  }
-  return arrayReturn;
-}
-console.log(fizzBuzz([7, 9]));
+// function fizzBuzz(array) {
+//   let arrayReturn = [];
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+//       arrayReturn[index] = 'fizzBuzz';
+//     } else if (array[index] % 3 === 0) {
+//       arrayReturn[index] = 'fizz';
+//     } else if (array[index] % 5 === 0) {
+//       arrayReturn[index] = 'buzz';
+//     } else {
+//       arrayReturn[index] = 'bug!';
+//     }
+//   }
+//   return arrayReturn;
+// }
+// console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
-function encode(string) {
-  let text = string.split(' ');
-  let textCopie = text;
-  for (let index = 0; index < text.length; index += 1) {
-    if (text[index] === 'a') {
-      textCopie[index] = 1;
-    }
-    if (text[index] === 'e') {
-      textCopie[index] = 2;
-    }
-    if (text[index] === 'i') {
-      textCopie[index] = 3;
-    }
-    if (text[index] === 'o') {
-      textCopie[index] = 4;
-    }
-    if (text[index] === 'u') {
-      textCopie[index] = 5;
-    }
-  }
-  let convert = textCopie.join(' ');
-  return convert;
-}
-console.log(encode('hi there!'));
+// const encode = (string) => {
+//   const arrayText = string.split('');
+//   const objEncode = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+//   for (let i = 0; i < arrayText.length; i += 1) {
+//     for (let key in objEncode) {
+//       if (arrayText[i] === key) {
+//         arrayText[i] = objEncode[key];
+//       }
+//     }
+//   }
+//   const textSplit = arrayText.join('');
+//   return textSplit;
+// };
+// console.log(encode('Hi there'));
 
-function decode(string) {
-  let text = string.split(' ');
-  let textCopie = text;
-  for (let index = 0; index < text.length; index += 1) {
-    if (text[index] === 1) {
-      textCopie[index] = 'a';
-    }
-    if (text[index] === 2) {
-      textCopie[index] = 'e';
-    }
-    if (text[index] === 3) {
-      textCopie[index] = 'i';
-    }
-    if (text[index] === 4) {
-      textCopie[index] = 'o';
-    }
-    if (text[index] === 5) {
-      textCopie[index] = 'u';
-    }
-  }
-  let convert = textCopie.join(' ');
-  return convert;
-}
-console.log(decode('h3 th2r2!'));
+// const decode = (string) => {
+//   const arrayText = string.split('');
+//   const objEncode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+//   for (let i = 0; i < arrayText.length; i += 1) {
+//     for (let key in objEncode) {
+//       if (arrayText[i] === key) {
+//         arrayText[i] = objEncode[key];
+//       }
+//     }
+//   }
+//   const textSplit = arrayText.join('');
+//   return textSplit;
+// };
+// console.log(decode('H3 th2r2'));
 
 module.exports = {
   calcArea,
   catAndMouse,
   compareTrue,
   concatName,
-  decode,
-  encode,
-  fizzBuzz,
+  // decode,
+  // encode,
+  // fizzBuzz,
   footballPoints,
   highestCount,
   splitSentence,
