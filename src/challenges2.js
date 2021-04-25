@@ -23,20 +23,22 @@ function triangleCheck() {
 }
 
 // Desafio 13
-// const hydrate = (drinks) => {
-//   const numberArr = [];
-//   const drinksSplit = drinks.split(' ');
-//   console.log(drinksSplit);
-//   const numberDrinks = drinksSplit.forEach(numbers => {
-//     if(typeof drinksSplit[i] === 'number')
-// });
-//   return drinksSplit;
-// };
-// console.log(hydrate('12 cerveja, 5 cachaças'));
+const hydrate = (drinks) => {
+  const numberArr = [];
+  const drinksSplit = drinks.split(' ');
+  console.log(drinksSplit);
+  const numberDrinks = drinksSplit.forEach((numbers) => {
+    if(typeof drinksSplit[i] === 'number') {
+      
+    }
+});
+  return drinksSplit;
+};
+console.log(hydrate('12 cerveja, 5 cachaças'));
 
 module.exports = {
   generatePhoneNumber,
   techList,
-  // hydrate,
+  hydrate,
   triangleCheck,
 };
