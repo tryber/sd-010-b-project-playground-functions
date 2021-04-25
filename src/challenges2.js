@@ -10,7 +10,7 @@ const techList = (arrayTech, name) => {
   }
   return 'Vazio!';
 };
-// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lara'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lara'));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -23,18 +23,17 @@ function triangleCheck() {
 }
 
 // Desafio 13
-const hydrate = (drinks) => {
-  const numberArr = [];
-  const drinksSplit = drinks.split(' ');
-  console.log(drinksSplit);
-  const numberDrinks = drinksSplit.forEach((numbers) => {
-    if(typeof drinksSplit[i] === 'number') {
-      
-    }
-});
-  return drinksSplit;
+const hydrate = () => {
+//   const numberArr = [];
+//   const drinksSplit = drinks.split(' ');
+//   console.log(drinksSplit);
+//   const numberDrinks = drinksSplit.forEach((numbers) => {
+//     if(typeof drinksSplit[i] === 'number') {
+//     }
+// });
+//   return drinksSplit;
 };
-console.log(hydrate('12 cerveja, 5 cachaças'));
+// console.log(hydrate('12 cerveja, 5 cachaças'));
 
 module.exports = {
   generatePhoneNumber,
