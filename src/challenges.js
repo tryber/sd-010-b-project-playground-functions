@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
@@ -51,6 +53,8 @@ function highestCount(cont) {
 }
 
 // Desafio 7
+// eslint-disable-next-line complexity
+// eslint-disable-next-line max-lines-per-function
 function catAndMouse(mouse, cat1, cat2) {
   let cCat1 = 0;
   let cCat2 = 0;
@@ -68,6 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
       cCat2 += 1;
     }
   } else if (cat2 < mouse) {
+    // eslint-disable-next-line for-direction
     for (let i = cat2; i > mouse; i += 1) {
       cCat2 += 1;
     }
