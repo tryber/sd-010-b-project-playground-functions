@@ -21,15 +21,15 @@ function rejectTelephoneOne(numero) {
   if (numero > 9) return 1;
   return 0;
 }
-
+let arrayComparativa = [];
 function rejectTelephoneTwo(numero) {
-  let arrayComparativa = [];
-  let contadorDeLetras = 0;
+  let contadorDeNumeros = 0;
   arrayComparativa.push(numero);
   for (let i = 0; i < arrayComparativa.length; i += 1) {
-    if (numero === arrayComparativa[i]) contadorDeLetras += 1;
+    if (numero === arrayComparativa[i]) contadorDeNumeros += 1;
+    console.log(arrayComparativa);
   }
-  if (contadorDeLetras >= 3) return 1;
+  if (contadorDeNumeros >= 3) return 1;
   return 0;
 }
 
@@ -51,7 +51,7 @@ function generatePhoneNumber(telefone) {
   return telefonizadorDeNumeros(telefone);
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lado1, lado2, lado3) {
