@@ -30,7 +30,7 @@ function containsThree(numbers) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  if (numbers.length < 11) {
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   const biggerOrSmaller = numbers.some((number) => (number < 0 || number > 9));
