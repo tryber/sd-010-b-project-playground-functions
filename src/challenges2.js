@@ -51,12 +51,10 @@ function returnMathAbs(a, b) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let boolean = false;
-  if (returnMathAbs(lineA, lineB) < lineC) {
-    if (returnMathAbs(lineA, lineC) < lineB) {
-      if (returnMathAbs(lineB, lineC) < lineA) {
-        boolean = true;
-      }
-    }
+  if (returnMathAbs(lineA, lineB) < lineC
+    || returnMathAbs(lineA, lineC) < lineB
+    || returnMathAbs(lineB, lineC) < lineA) {
+    boolean = true;
   }
   return boolean;
 }

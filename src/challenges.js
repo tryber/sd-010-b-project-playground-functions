@@ -1,5 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
@@ -34,16 +32,8 @@ function footballPoints(wins, ties) {
   let pontos = (wins * 3) + (ties * 1);
   return pontos;
 }
-
-// Desafio 6
-function highestCount(cont) {
-  let maiorNumero = cont[0];
+function countBiggerNumber(cont, maiorNumero) {
   let vezesMaiorNumero = 0;
-  for (let i = 1; i < cont.length; i += 1) {
-    if (cont[i] > maiorNumero[0]) {
-      maiorNumero = cont[i];
-    }
-  }
   for (let i = 0; i < cont.length; i += 1) {
     if (cont[i] === maiorNumero) {
       vezesMaiorNumero += 1;
@@ -51,35 +41,56 @@ function highestCount(cont) {
   }
   return vezesMaiorNumero;
 }
+function biggerNumber(cont) {
+  let maiorNumero = cont[0];
+  cont.forEach((number) => {
+    if (number > maiorNumero[0]) {
+      maiorNumero = number;
+    }
+  });
+  return maiorNumero;
+}
+// Desafio 6
+function highestCount(cont) {
+  const maiorNumero = biggerNumber(cont);
+  const vezesMaiorNumero = countBiggerNumber(cont, maiorNumero);
+  return vezesMaiorNumero;
+}
+
+function CatBigger(cat, mouse) {
+  let contCat = 0;
+  for (let i = cat; i > mouse; i -= 1) {
+    contCat += 1;
+  }
+  return contCat;
+}
+
+function mouseBigger(cat, mouse) {
+  let contCat = 0;
+  for (let i = cat; i < mouse; i += 1) {
+    contCat += 1;
+  }
+  return contCat;
+}
+
+function checkCat(cat, mouse) {
+  let countCat = 0;
+  if (cat > mouse) {
+    countCat = CatBigger(cat, mouse);
+  } else if (cat < mouse) {
+    countCat = mouseBigger(cat, mouse);
+  }
+  return countCat;
+}
 
 // Desafio 7
-// eslint-disable-next-line complexity
-// eslint-disable-next-line max-lines-per-function
 function catAndMouse(mouse, cat1, cat2) {
-  let cCat1 = 0;
-  let cCat2 = 0;
-  if (cat1 > mouse) {
-    for (let i = cat1; i > mouse; i -= 1) {
-      cCat1 += 1;
-    }
-  } else if (cat1 < mouse) {
-    for (let i = cat1; i < mouse; i += 1) {
-      cCat1 += 1;
-    }
-  }
-  if (cat2 > mouse) {
-    for (let i = cat2; i > mouse; i -= 1) {
-      cCat2 += 1;
-    }
-  } else if (cat2 < mouse) {
-    // eslint-disable-next-line for-direction
-    for (let i = cat2; i > mouse; i += 1) {
-      cCat2 += 1;
-    }
-  }
-  if (cCat1 > cCat2) {
+  const countCat1 = checkCat(cat1, mouse);
+  const countCat2 = checkCat(cat2, mouse);
+
+  if (countCat1 > countCat2) {
     return ('cat2');
-  } if (cCat1 < cCat2) {
+  } if (countCat1 < countCat2) {
     return ('cat1');
   }
   return ('os gatos trombam e o rato foge');
@@ -106,7 +117,7 @@ function fizzBuzz(ary) {
   }
   return novoArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode(text) {
   const textArray = Array.from(text);
