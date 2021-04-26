@@ -45,12 +45,21 @@ function generatePhoneNumber(numbers) {
   const partThr = textPhone.slice(7, 11);
   return `(${partOne}) ${partSec}-${partThr}`;
 }
-
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function returnMathAbs(a, b) {
+  return Math.abs(a - b);
 }
-
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  if (returnMathAbs(lineA, lineB) < lineC) {
+    return true;
+  } if (returnMathAbs(lineA, lineC) < lineB) {
+    return true;
+  } if (returnMathAbs(lineB, lineC) < lineA) {
+    return true;
+  }
+  return false;
+}
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
