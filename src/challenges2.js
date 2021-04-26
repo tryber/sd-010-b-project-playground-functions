@@ -66,7 +66,7 @@ function hydrate(string) {
   const arrNumbersInString = numbers.split('');
   const arrNumbersInNumber = arrNumbersInString.map((number) => Number(number));
   const sumNumbers = arrNumbersInNumber.reduce((acc, curr) => {
-    acc += Number(parseInt(curr, 10));
+    acc += curr;
     return acc;
   });
   return sumNumbers;
