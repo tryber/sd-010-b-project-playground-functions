@@ -51,9 +51,6 @@ function generatePhoneNumber(telefone) {
   return telefonizadorDeNumeros(telefone);
 }
 
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
 function triangleCheck(lado1, lado2, lado3) {
   // seu código aqui
@@ -63,8 +60,11 @@ function triangleCheck(lado1, lado2, lado3) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  const numbers = string.match(/\d+/g).map(Number);
+  const totalAgua = numbers.reduce((acc, value) => acc + value, 0);
+  return `${totalAgua} copos de água`;
 }
 
 module.exports = {
