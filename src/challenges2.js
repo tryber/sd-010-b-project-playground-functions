@@ -50,16 +50,17 @@ function returnMathAbs(a, b) {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let boolean = false;
   if (returnMathAbs(lineA, lineB) < lineC) {
-    return true;
-  } if (returnMathAbs(lineA, lineC) < lineB) {
-    return true;
-  } if (returnMathAbs(lineB, lineC) < lineA) {
-    return true;
+    if (returnMathAbs(lineA, lineC) < lineB) {
+      if (returnMathAbs(lineB, lineC) < lineA) {
+        boolean = true;
+      }
+    }
   }
-  return false;
+  return boolean;
 }
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 14, 2));
 // Desafio 13
 function hydrate() {
   // seu código aqui
