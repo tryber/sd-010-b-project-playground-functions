@@ -1,5 +1,8 @@
 // Desafio 10
 function techList(tec, name) {
+  if (tec.length === 0) {
+    return 'Vazio!';
+  }
   const tecOrder = tec.sort();
   const arrayTec = [];
   tecOrder.forEach((tech) => {
@@ -52,8 +55,8 @@ function returnMathAbs(a, b) {
 function triangleCheck(lineA, lineB, lineC) {
   let boolean = false;
   if (returnMathAbs(lineA, lineB) < lineC
-    || returnMathAbs(lineA, lineC) < lineB
-    || returnMathAbs(lineB, lineC) < lineA) {
+    && returnMathAbs(lineA, lineC) < lineB
+    && returnMathAbs(lineB, lineC) < lineA) {
     boolean = true;
   }
   return boolean;
@@ -69,7 +72,10 @@ function hydrate(string) {
     acc += curr;
     return acc;
   });
-  return sumNumbers;
+  if (sumNumbers === 1) {
+    return `${sumNumbers} copo de água`;
+  }
+  return `${sumNumbers} copos de água`;
 }
 
 module.exports = {
