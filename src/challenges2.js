@@ -60,8 +60,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // codigo para retirar os numeros da string veio de referencia do https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript#:~:text=A%20alternativa%20seria%20simplesmentar%20retornar,fazer%20o%20parse%20para%20inteiro.&text=N%C3%A3o%20sei%20se%20minha%20solu%C3%A7%C3%A3o,(%2F%5Cd%2Fg).
+  const numbers = string.split('').filter((n) => (Number(n) || n === 0)).join('');
+  const arrNumbersInString = numbers.split('');
+  const arrNumbersInNumber = arrNumbersInString.map((number) => Number(number));
+  const sumNumbers = arrNumbersInNumber.reduce((acc, curr) => {
+    acc += Number(parseInt(curr, 10));
+    return acc;
+  });
+  return sumNumbers;
 }
 
 module.exports = {
