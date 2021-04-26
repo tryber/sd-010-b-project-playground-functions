@@ -11,6 +11,23 @@ function techList(tec, name) {
   return arrayTec;
 }
 
+function containsThree(numbers) {
+  let contador = 0;
+  let boolean = false;
+  numbers.forEach((number1) => {
+    numbers.forEach((number2) => {
+      if (number1 === number2) {
+        contador += 1;
+        if (contador === 3) {
+          boolean = true;
+        }
+      }
+    });
+    contador = 0;
+  });
+  return boolean;
+}
+
 // Desafio 11
 function generatePhoneNumber(numbers) {
   if (numbers.length < 11) {
@@ -18,7 +35,7 @@ function generatePhoneNumber(numbers) {
   }
   const biggerOrSmaller = numbers.some((number) => (number < 0 || number > 9));
 
-  if (biggerOrSmaller) {
+  if (biggerOrSmaller || containsThree(numbers)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
@@ -28,7 +45,7 @@ function generatePhoneNumber(numbers) {
   const partThr = textPhone.slice(7, 11);
   return `(${partOne}) ${partSec}-${partThr}`;
 }
-console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
