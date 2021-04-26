@@ -34,7 +34,7 @@ function rejectTelephoneTwo(numero) {
 }
 
 function telefonizadorDeNumeros(telefone) {
-  const telefoneConvertido = `(${telefone[0]}${telefone[1]})${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
+  const telefoneConvertido = `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
   return telefoneConvertido;
 }
 
@@ -54,9 +54,9 @@ function generatePhoneNumber(telefone) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lado1, lado2, lado3) {
   // seu código aqui
-
+  if (lado1 < lado2 + lado3)
 }
 
 // Desafio 13
