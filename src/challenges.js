@@ -23,7 +23,7 @@ function splitSentence(text) {
 // Desafio 4
 function concatName(array) {
   let ultimoArray = array.length - 1;
-  let primeiroUltimo = array[ultimoArray] + ', ' + array[0];
+  let primeiroUltimo = `${array[ultimoArray]}, ${array[0]}`;
   return primeiroUltimo;
 }
 
@@ -37,12 +37,12 @@ function footballPoints(wins, ties) {
 function highestCount(cont) {
   let maiorNumero = cont[0];
   let vezesMaiorNumero = 0;
-  for (let i = 1; i < cont.length; i+= 1) {
+  for (let i = 1; i < cont.length; i += 1) {
     if (cont[i] > maiorNumero[0]) {
       maiorNumero = cont[i];
     }
   }
-  for (let i = 0; i < cont.length; i+= 1) {
+  for (let i = 0; i < cont.length; i += 1) {
     if (cont[i] === maiorNumero) {
       vezesMaiorNumero += 1;
     }
@@ -55,85 +55,80 @@ function catAndMouse(mouse, cat1, cat2) {
   let cCat1 = 0;
   let cCat2 = 0;
   if (cat1 > mouse) {
-    for (let i = cat1; i > mouse; i-= 1) {
+    for (let i = cat1; i > mouse; i -= 1) {
       cCat1 += 1;
     }
   } else if (cat1 < mouse) {
-    for (let i = cat1; i < mouse; i+= 1) {
+    for (let i = cat1; i < mouse; i += 1) {
       cCat1 += 1;
-    }    
+    }
   }
   if (cat2 > mouse) {
-    for (let i = cat2; i > mouse; i-= 1) {
+    for (let i = cat2; i > mouse; i -= 1) {
       cCat2 += 1;
     }
   } else if (cat2 < mouse) {
-    for (let i = cat2; i > mouse; i+= 1) {
+    for (let i = cat2; i > mouse; i += 1) {
       cCat2 += 1;
-    }    
+    }
   }
   if (cCat1 > cCat2) {
     return ('cat2');
-  } else if (cCat1 < cCat2) {
+  } if (cCat1 < cCat2) {
     return ('cat1');
   }
-  return ('os gatos trombam e o rato foge')
+  return ('os gatos trombam e o rato foge');
 }
 
-// Desafio 8
-function fizzBuzz (ary) {
-  let novaArray = [];  
-  for (let i = 0; i < ary.length; i+= 1) {
-    if (ary[i] % 3 === 0 && ary[i] % 5 === 0) {
-      novaArray.push('fizzBuzz');     
-    } else if (ary[i] % 3 === 0) {
-      novaArray.push('fizz');
-    } else if (ary[i] % 5 === 0) {
-      novaArray.push('buzz');
-    } else {
-       novaArray.push('bug!');
-    }    
+function check(ary, i) {
+  const novaArray = [];
+  if (ary[i] % 3 === 0 && ary[i] % 5 === 0) {
+    novaArray.push('fizzBuzz');
+  } else if (ary[i] % 3 === 0) {
+    novaArray.push('fizz');
+  } else if (ary[i] % 5 === 0) {
+    novaArray.push('buzz');
+  } else {
+    novaArray.push('bug!');
   }
   return novaArray;
 }
+// Desafio 8
+function fizzBuzz(ary) {
+  let novoArray;
+  for (let i = 0; i < ary.length; i += 1) {
+    novoArray = check(ary, i);
+  }
+  return novoArray;
+}
 
 // Desafio 9
-function encode() {
-//   /* fonte de conhecimento
-//   developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace */
-//   let pegaLetra = [];
-//   let trocaLetra = '';
-//   for (let i = 0; i < string.length; i++) {    
-//     if (string[i] == 'a') {
-//       pegaLetra.push(string[i]);
-//     } else if (string[i] == 'e') {
-//       pegaLetra.push(string[i]);
-//     } else if (string[i] == 'i') {
-//       pegaLetra.push(string[i]);
-//     } else if (string[i] == 'o') {
-//       pegaLetra.push(string[i]);
-//     } else if (string[i] == 'u') {
-//       pegaLetra.push(string[i]);
-//     }
-//   }
-//   for (let i = 0; i < string.length; i++) {
-//     if (string[i] == 'a') {      
-//     } else if (string[i] == 'e') {
-//       pegaLetra.push(string[i]);
-//     } else if (string[i] == 'i') {
-//       pegaLetra.push(string[i]);
-//     } else if (string[i] == 'o') {
-//       pegaLetra.push(string[i]);
-//     } else if (string[i] == 'u') {
-//       pegaLetra.push(string[i]);
-//     }
-//   }
-
-  
-//   return stringFinal;
+function encode(text) {
+  const textArray = Array.from(text);
+  const arrCode = [['a', 1], ['e', 2], ['i', 3], ['o', 4], ['u', 5]];
+  arrCode.forEach(([string, number]) => {
+    textArray.forEach((letter, index) => {
+      if (letter === string) {
+        textArray[index] = number;
+      }
+    });
+  });
+  const newPhrase = textArray.join('');
+  return newPhrase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(text) {
+  const textArray = Array.from(text);
+  const arrCode = [['a', '1'], ['e', '2'], ['i', '3'], ['o', '4'], ['u', '5']];
+  arrCode.forEach(([string, number]) => {
+    textArray.forEach((letter, index) => {
+      if (letter === number) {
+        textArray[index] = string;
+      }
+    });
+  });
+  const newPhrase = textArray.join('');
+  return newPhrase;
 }
 
 module.exports = {
