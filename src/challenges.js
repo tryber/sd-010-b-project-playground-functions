@@ -100,13 +100,13 @@ function check(ary, i) {
 }
 // Desafio 8
 function fizzBuzz(ary) {
-  let novoArray;
+  const novoArray = [];
   for (let i = 0; i < ary.length; i += 1) {
-    novoArray = check(ary, i);
+    novoArray.push(...check(ary, i));
   }
   return novoArray;
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode(text) {
   const textArray = Array.from(text);
