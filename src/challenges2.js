@@ -64,7 +64,9 @@ function hydrate(string) {
   // seu código aqui
   const numbers = string.match(/\d+/g).map(Number);
   const totalAgua = numbers.reduce((acc, value) => acc + value, 0);
-  return `${totalAgua} copos de água`;
+  const respostaSingular = `${totalAgua} copo de água`;
+  const respostaPlural = `${totalAgua} copos de água`;
+  return totalAgua === 1 ? respostaSingular : respostaPlural;
 }
 
 module.exports = {
