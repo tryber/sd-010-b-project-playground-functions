@@ -27,7 +27,6 @@ function rejectTelephoneTwo(numero) {
   arrayComparativa.push(numero);
   for (let i = 0; i < arrayComparativa.length; i += 1) {
     if (numero === arrayComparativa[i]) contadorDeNumeros += 1;
-    console.log(arrayComparativa);
   }
   if (contadorDeNumeros >= 3) return 1;
   return 0;
