@@ -62,11 +62,9 @@ function generatePhoneNumber(array) {
   for (let index = 7; index <= 10; index += 1) {
     inputNumber2 += array[index];
   }
-  return `(${array[0]}${array[1]})${inputNumber}-${inputNumber2}`;
+  return `(${array[0]}${array[1]}) ${inputNumber}-${inputNumber2}`;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1]));
-console.log(generatePhoneNumber([4, 6, 7, 6, 9, 7, 9, 8, 2,1, 0]));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
