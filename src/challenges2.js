@@ -21,15 +21,26 @@ function generatePhoneNumber(arr) {
   const result = `(${ddd})${firstFiveNumbs}-${forNumbsEnd}`;
   const errorMessage = 'não é possível gerar um número de telefone com esses valores';
   const errorMessage2 = 'Array com tamanho incorreto';
-  for (let key in arr) {
-    if (arr.length !== 11) {
-      console.log(errorMessage2); 
-    } else if ((arr[key] < 0) || (arr[key] > 9)) {
-      console.log(errorMessage);
-    } return result;
+  if (arr.length !== 11) {
+    return errorMessage2;
+  }
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] < 0 || arr[index] > 9) {
+      return errorMessage;
+    }
+    let repeaterCounter = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[index] === arr[i]) {
+      repeaterCounter += 1;
+    }
+    if (repeaterCounter >= 3) {
+      return errorMessage;
+    }
   }
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]));
+  return result
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 20]));
 
 // Desafio 12
 function triangleCheck() {
