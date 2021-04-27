@@ -2,7 +2,7 @@
 function techList(array, name) {
   let newArray = [];
   if (array.length === 0) {
-    return 'Vazio';
+    return 'Vazio!';
   }
   array.sort();
   for (let index = 0; index < array.length; index += 1) {
@@ -16,9 +16,59 @@ function techList(array, name) {
 }
 
 // Desafio 11
+// function compare3(arr3, cont1, total) {
+//   if (arr3[cont1] < 0 || arr3[cont1] > 9 || total >= 3) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// function compareArr2(cont, arr2) {
+//   let total = 0;
+//   for (let cont2 = 0; cont2 < arr2.length; cont2 += 1) {
+//     if (arr2[cont] === arr2[cont2]) {
+//       total += 1;
+//     }
+//     let resp = compare3(arr2, cont, total);
+//     if (resp) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// function compareArr(arr) {
+//   for (let cont = 0; cont < arr.length; cont += 1) {
+//     const resp = compareArr2(cont, arr);
+//     if (resp) {
+//       return resp;
+//     }
+//   }
+//   return false;
+// }
+
 function generatePhoneNumber() {
-  // seu código aqui
+//   let firstPart = [], secondPart = [];
+//   let inputNumber = '', inputNumber2 = '';
+//   if (array.length !== 11) {
+//     return 'Array com tamanho incorreto.'
+//   }
+//   if (compareArr(array)) {
+//     return `não é possível gerar um número de telefone com esses valores`;
+//   }
+//   for (let index = 2; index <= 6; index += 1) {
+//     firstPart.push(array[index]);
+//     inputNumber = inputNumber + firstPart[index-2]
+//   }
+//   for (let index = 7; index <= 10; index += 1) {
+//     secondPart.push(array[index]);
+//     inputNumber2 = inputNumber2 + secondPart[index-7];
+//   }
+//   return `(${array[0]}${array[1]})${inputNumber}-${inputNumber2}`
 }
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1]))
+// console.log(generatePhoneNumber([1, 6, 7, 6, 9, 7, 9, 8, 2, 1, 0]))
 
 // Desafio 12
 function triangleCheck() {
