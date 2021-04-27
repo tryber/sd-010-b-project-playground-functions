@@ -22,7 +22,7 @@ const countRepeats = (arr, element) => {
 };
 
 const validateNumber = (numbers, number) => {
-  if (countRepeats(numbers, number) > 3 || number < 0 || number > 9) {
+  if (countRepeats(numbers, number) >= 3 || number < 0 || number > 9) {
     return true;
   }
 };
@@ -40,8 +40,6 @@ function generatePhoneNumber(numbers) {
   const n78910 = `${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
   return `(${n01}) ${n23456}-${n78910}`;
 }
-
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 // Desafio 12
 
