@@ -46,8 +46,6 @@ function triangleCheck(lineA, lineB, lineC) {
   return (check1 || check2 || check3);
 }
 
-console.log(triangleCheck(10, 37, 8));
-
 // Desafio 13
 // A utilização da função replace() foi feita após consulta ao stackoverflow
 // link: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
