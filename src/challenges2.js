@@ -20,11 +20,11 @@ function generatePhoneNumber(arr) {
   const forNumbsEnd = transformString.substring(7, 11);
   const result = `(${ddd}) ${firstFiveNumbs}-${forNumbsEnd}`;
   if (arr.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] < 0 || arr[index] > 9) {
-      return 'Array com tamanho incorreto';
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let repeaterCounter = 0;
     for (let i = 0; i < arr.length; i += 1) {
@@ -38,7 +38,7 @@ function generatePhoneNumber(arr) {
   }
   return result;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, -7, 8, 9, 1, 20]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
 
 // Desafio 12
 function triangleCheck() {
