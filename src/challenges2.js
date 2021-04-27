@@ -18,27 +18,25 @@ function generatePhoneNumber(arr) {
   const ddd = transformString.substring(0, 2);
   const firstFiveNumbs = transformString.substring(2, 7);
   const forNumbsEnd = transformString.substring(7, 11);
-  const result = `(${ddd})${firstFiveNumbs}-${forNumbsEnd}`;
-  const errorMessage = 'não é possível gerar um número de telefone com esses valores';
-  const errorMessage2 = 'Array com tamanho incorreto';
+  const result = `(${ddd}) ${firstFiveNumbs}-${forNumbsEnd}`;
   if (arr.length !== 11) {
-    return errorMessage2;
+    return 'Array com tamanho incorreto';
   }
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] < 0 || arr[index] > 9) {
-      return errorMessage;
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let repeaterCounter = 0;
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[index] === arr[i]) {
-      repeaterCounter += 1;
-    }
-    if (repeaterCounter >= 3) {
-      return errorMessage;
+    for (let i = 0; i < arr.length; i += 1) {
+      if (arr[index] === arr[i]) {
+        repeaterCounter += 1;
+      }
+      if (repeaterCounter >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
     }
   }
-}
-  return result
+  return result;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 20]));
 
