@@ -21,19 +21,27 @@ const countRepeats = (arr, element) => {
   return elementsIntheArray.length;
 };
 
+const validateNumber = (numbers, number) => {
+  if (countRepeats(numbers, number) > 3 || number < 0 || number > 9) {
+    return true;
+  }
+};
+
 // Desafio 11
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) return 'Array com tamanho incorreto.';
-  numbers.forEach((number) => {
-    if (countRepeats(numbers, number) > 3 || number < 0 || number > 9) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (validateNumber(numbers, numbers[i])) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-  });
+  }
   const n01 = `${numbers[0]}${numbers[1]}`;
   const n23456 = `${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}`;
   const n78910 = `${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
   return `(${n01}) ${n23456}-${n78910}`;
 }
+
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1]));
 
 // Desafio 12
 
