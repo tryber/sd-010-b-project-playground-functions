@@ -35,20 +35,18 @@ function generatePhoneNumber(numbers) {
   return `(${n01}) ${n23456}-${n78910}`;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
+
+const lnCcker = (line1, line2, line3) => (line1 < line2 + line3 && line1 > Math.abs(line3 - line2));
+
 function triangleCheck(lineA, lineB, lineC) {
-  let check = false;
-  if (
-    (lineA < lineB + lineC && lineA > Math.abs(lineC - lineB))
-    || (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA))
-    || (lineC < lineB + lineA && lineC > Math.abs(lineA - lineB))
-  ) {
-    check = true;
-  }
-  return check;
+  const check1 = lnCcker(lineA, lineB, lineC);
+  const check2 = lnCcker(lineB, lineA, lineC);
+  const check3 = lnCcker(lineC, lineA, lineB);
+  return (check1 || check2 || check3);
 }
+
+console.log(triangleCheck(10, 37, 8));
 
 // Desafio 13
 // A utilização da função replace() foi feita após consulta ao stackoverflow
