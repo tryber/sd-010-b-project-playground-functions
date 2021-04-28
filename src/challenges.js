@@ -1,14 +1,11 @@
-// Desafio 1 Playgroynd Functions
+// Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 && value2) {
-    return true;
-  }
-  return false;
+  value1 && value2 ? true : false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  const areaTriangulo = (base * height) / 2;
+  let areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
@@ -20,7 +17,7 @@ function splitSentence(stringRecebida) {
 
 // Desafio 4
 function concatName(stringRecebida) {
-  let nomeConcatenado = `${stringRecebida[stringRecebida.length - 1]}, ${stringRecebida[0]}`;
+  let nomeConcatenado = stringRecebida[(stringRecebida.length) - 1] + ', ' + stringRecebida[0];
   return nomeConcatenado;
 }
 
@@ -31,18 +28,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
-const acharMaiorNumero = (arr) => {
-  let maiorNumero = arr[0];
-  for (let index = 0; index < arr.length; index += 1) {
-    if (maiorNumero < arr[index]) maiorNumero = arr[index];
-  }
-  return maiorNumero;
-};
-
 function highestCount(arrayNumeros) {
-  let maiorNumero = acharMaiorNumero(arrayNumeros);
+  let maiorNumero = arrayNumeros[0];
   let quantidadeAparicoes = 0;
+  for (let index = 0; index < arrayNumeros.length; index += 1) {
+    if (maiorNumero < arrayNumeros[index]) {
+      maiorNumero = arrayNumeros[index];
+    }
+  }
 
   for (let index = 0; index < arrayNumeros.length; index += 1) {
     if (maiorNumero === arrayNumeros[index]) {
@@ -63,11 +56,16 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1s < cat2s) {
     phrase = 'cat1';
     return phrase;
-  } else if (cat1s > cat2s) {
+  }
+
+  else if (cat1s > cat2s) {
     phrase = 'cat2';
     return phrase;
   }
-  return distIgual;
+
+  else {
+    return distIgual;
+  }
 }
 
 // Desafio 8
@@ -76,11 +74,14 @@ function fizzBuzz(numerosRecebidos) {
   for (let index = 0; index < numerosRecebidos.length; index += 1) {
     if ((numerosRecebidos[index] % 3) === 0 && (numerosRecebidos[index] % 5) === 0) {
       arrayResultado.push('fizzBuzz');
-    } else if ((numerosRecebidos[index] % 3) === 0) {
-      arrayResultado.push('fizz');
-    } else if ((numerosRecebidos[index] % 5) === 0) {
-      arrayResultado.push('buzz');
-    } else {
+    }
+    else if ((numerosRecebidos[index] % 3) === 0) {
+      arrayResultado.push('fizz')
+    }
+    else if ((numerosRecebidos[index] % 5) === 0) {
+      arrayResultado.push('buzz')
+    }
+    else {
       arrayResultado.push('bug!');
     }
   }
