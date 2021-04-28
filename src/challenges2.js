@@ -27,11 +27,11 @@ function generatePhoneNumber(numeroRecebido) {
   if (numeroRecebido.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  numeroRecebido.forEach((num) => {
-    if (num < 0 || num > 9) return 'não é possível gerar um número de telefone com esses valores';
-  });
+  const frase = 'não é possível gerar um número de telefone com esses valores';
+  if (numeroRecebido.find((num) => (num < 0 || num > 9))) return frase;
+
   if (checkRepeat(numeroRecebido)) {
-    return 'não é possível gerar um número de telefone com esses valores';
+    return frase;
   }
 
   numeroRecebido.splice(0, 0, '(');
