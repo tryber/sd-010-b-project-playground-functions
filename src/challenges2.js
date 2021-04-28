@@ -46,17 +46,22 @@ function triangleCheck() {
 }
 
 // Desafio 13
-const hydrate = () => {
-//   const numberArr = [];
-//   const drinksSplit = drinks.split(' ');
-//   console.log(drinksSplit);
-//   const numberDrinks = drinksSplit.forEach((numbers) => {
-//     if(typeof drinksSplit[i] === 'number') {
-//     }
-// });
-//   return drinksSplit;
+const hydrate = (drinks) => {
+  const regex = /\d+/g;
+  const string = drinks;
+  const numberInString = string.match(regex);
+
+  let accum = 0;
+  for (let index = 0; index < numberInString.length; index += 1) {
+    accum += parseInt(numberInString[index], 10);
+  }
+  if (accum === 1) {
+    return '1 copo de água';
+  }
+  return `${accum} copos de água`;
 };
-// console.log(hydrate('12 cerveja, 5 cachaças'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
