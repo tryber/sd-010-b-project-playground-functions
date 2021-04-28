@@ -3,7 +3,7 @@ function techList(nomesTecnologias, name) {
   let listaTecnologias = [];
   if (nomesTecnologias.length > 0) {
     nomesTecnologias.sort();
-    Object.keys(nomesTecnologias).forEach((materia) => {
+    nomesTecnologias.forEach((materia) => {
       listaTecnologias.push({ tech: materia, name });
     });
     return listaTecnologias;
@@ -12,14 +12,15 @@ function techList(nomesTecnologias, name) {
 
 // Desafio 11
 function checkRepeat(number) {
+  let testNumber = false;
   number.forEach((number1) => {
     let cont = 0;
     number.forEach((number2) => {
       if (number1 === number2) cont += 1;
-      if (cont >= 3) return true;
+      if (cont >= 3) testNumber = true;
     });
   });
-  return false;
+  return testNumber;
 }
 
 function generatePhoneNumber(numeroRecebido) {
@@ -46,13 +47,14 @@ function generatePhoneNumber(numeroRecebido) {
 function checkValues(a, b, c) {
   if (a > (b + c)
   && (a > Math.abs(b - c) || a > Math.abs(c - b))) {
-    return false;
+    return true;
   }
+  return false;
 }
 function triangleCheck(lineA, lineB, lineC) {
   if (checkValues(lineA, lineB, lineC)
-  && checkValues(lineB, lineA, lineC)
-  && checkValues(lineC, lineB, lineA)) return false;
+  || checkValues(lineB, lineA, lineC)
+  || checkValues(lineC, lineB, lineA)) return false;
   return true;
 }
 
@@ -61,7 +63,8 @@ function hydrate(stringRecebida) {
   let numerosRecebidos = stringRecebida.replace(/\D/g, '');
   let coposDeAgua = 0;
   let mensagem = '';
-  numerosRecebidos.forEach((num) => {
+
+  (numerosRecebidos.split('')).forEach((num) => {
     coposDeAgua += parseInt(num, 10);
   });
   if (coposDeAgua === 1) mensagem = '1 copo de água';
