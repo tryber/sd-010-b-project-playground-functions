@@ -41,6 +41,7 @@ function generatePhoneNumber(arr) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
 
 // Desafio 12
+// referência https://www.youtube.com/watch?v=KG22Fl3klgM&ab_channel=tecgrub
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
     return true;
