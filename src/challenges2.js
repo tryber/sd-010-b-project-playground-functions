@@ -87,11 +87,17 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-console.log(triangleCheck(10, 14, 8)); // deve retornar true
-
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let re = /\d+/g;
+  let arrStr = string.match(re);
+  let total = 0;
+  for (let index = 0; index < arrStr.length; index += 1) {
+    let number = parseInt(arrStr[index], 10);
+    total += number;
+  }
+  return `${total} copo de água`;
 }
 
 module.exports = {
