@@ -97,7 +97,10 @@ function hydrate(string) {
     let number = parseInt(arrStr[index], 10);
     total += number;
   }
-  return `${total} copo de água`;
+  if (total === 1) {
+    return `${total} copo de água`;
+  }
+  return `${total} copos de água`;
 }
 
 module.exports = {
