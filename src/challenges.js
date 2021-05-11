@@ -22,7 +22,7 @@ function splitSentence(words) {
 function concatName(name) {
   let first = name.shift();
   let last = name.pop();
-  let junction = last + ", " + first;
+  let junction = `${last}, ${first}`;
   return junction;
 }
 
@@ -56,11 +56,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaA = Math.abs(cat1 - mouse);
   let distanciaB = Math.abs(cat2 - mouse);
   if (distanciaB < distanciaA) {
-    return "cat2";
-  } else if (distanciaA < distanciaB) {
-    return "cat1";
-  } else if (distanciaB === distanciaA) {
-    return "os gatos trombam e o rato foge";
+    return 'cat2';
+  } if (distanciaA < distanciaB) {
+    return 'cat1';
+  } if (distanciaB === distanciaA) {
+    return 'os gatos trombam e o rato foge';
   }
 }
 
