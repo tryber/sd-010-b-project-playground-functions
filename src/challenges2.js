@@ -63,3 +63,5 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+// Agradecimentos a Lara Capila Turma 10 - Tribo B
