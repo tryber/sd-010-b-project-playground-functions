@@ -36,21 +36,16 @@ function footballPoints(wins, ties) {
 // Desafio 6
 // Agradecimentos a Daniel Roberto Turma 10 - Tribo B, por ter me orientado aonde eu estava errando (for dentro de for ).
 function highestCount(numbers) {
-  let max = 0;
+  let max = Math.max(...numbers);
   let acc = 0;
   for (index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > max) {
-      max = numbers[index];
-    }
-  }
-  for (let key in numbers) {
-    if (numbers[key] === max) {
+    if (numbers[index] === max) {
       acc += 1;
     }
   }
   return acc;
 }
-
+console.log(highestCount([-2, -2, -1]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaA = Math.abs(cat1 - mouse);
