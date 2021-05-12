@@ -37,18 +37,18 @@ function footballPoints(wins, ties) {
 // Agradecimentos a Daniel Roberto Turma 10 - Tribo B, por ter me orientado aonde eu estava errando (for dentro de for ).
 function highestCount(numbers) {
   let max = 0;
-  let repete = 0;
+  let acc = 0;
   for (index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > max) {
       max = numbers[index];
     }
   }
   for (let key in numbers) {
-    if (max === numbers[key]) {
-      repete += 1;
+    if (numbers[key] === max) {
+      acc += 1;
     }
   }
-  return repete;
+  return acc;
 }
 
 // Desafio 7
