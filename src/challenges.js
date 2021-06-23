@@ -26,7 +26,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(fullName) {
   // seu código aqui
-  let firstLastName = fullName[fullName.length - 1] + ', ' + fullName[0];
+  let firstLastName = `${fullName[fullName.length - 1]}, ${fullName[0]}`;
   return firstLastName;
 }
 
@@ -56,35 +56,34 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui /* Fonte da função Math.abs: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs> */                
+  // seu código aqui /* Fonte da função Math.abs: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs> */
   let posMouse1 = Math.abs(mouse - cat1);
   let posMouse2 = Math.abs(mouse - cat2);
 
   if (posMouse1 < posMouse2) {
     return 'cat1';
-  } else if (posMouse2 < posMouse1) {
+  } if (posMouse2 < posMouse1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-let result = [];
-for(let key in array  ){
-  switch(true){
-    case ((array[key]%3 == 0) && (array[key]%5 != 0)):
+  let result = [];
+  for (let key in array) {
+    switch (true) {
+    case ((array[key] % 3 == 0) && (array[key] % 5 != 0)):
       result.push('fizz');
       break;
-    case ((array[key]%3 != 0) && (array[key]%5 == 0)):
+    case ((array[key] % 3 != 0) && (array[key] % 5 == 0)):
       result.push('buzz');
       break;
-    case ((array[key]%3 == 0) && (array[key]%5 == 0)):
+    case ((array[key] % 3 == 0) && (array[key] % 5 == 0)):
       result.push('fizzBuzz');
       break;
-    case ((array[key]%3 != 0) && (array[key]%5 != 0)):
+    case ((array[key] % 3 != 0) && (array[key] % 5 != 0)):
       result.push('bug!');
       break;
     }
@@ -101,7 +100,7 @@ function encode() {
     3: 'i',
     4: 'o',
     5: 'u',
-  };  
+  };
   let array = str.split('');
   for (let i = 0; i < array.length; i += 1) {
     for (let key in code) {
@@ -123,7 +122,7 @@ function decode(str) {
     5: 'u',
   };
   let array = str.split('');
-  
+
   for (let i = 0; i < array.length; i += 1) {
     for (let key in code) {
       if (array[i] === key) {
